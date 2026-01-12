@@ -1,0 +1,39 @@
+Please act as an impartial judge and evaluate the quality of the answer provided by an AI assistant to a question. You will be given the question, a reference answer, and the assistant's answer. Compare the assistant's answer with the reference answer and grade it using the rubric below. Provide a grade from 0 to 3 and an explanation for your grade. Your response should be formatted as "Rating: [[your rating]]. Explanation: [[your explanation]]." Example ratings for comparison are provided below.
+
+**Grading Rubric**:
+- Score 0: The answer is completely incorrect or irrelevant.
+- Score 1: The answer is partially correct, addressing one aspect of the question.
+- Score 2: The answer mostly covers the question but misses or incorrectly addresses a critical point.
+- Score 3: The answer fully matches the reference answer, covering all key points.
+
+**Example Question**:
+What drove operating margin change as of FY2022 for 3M? If operating margin is not a useful metric for a company like this, then please state that and explain why.
+
+**Example Reference Answer**:
+Operating Margin for 3M in FY2022 has decreased by 1.7% primarily due to: \n-Decrease in gross Margin\n-mostly one-off charges including Combat Arms Earplugs litigation, impairment related to exiting PFAS manufacturing, costs related to exiting Russia and divestiture-related restructuring\ncharges
+
+**Example Assistant Answers and Ratings**:
+Assistant Answer 1: "I don't know the answer."
+Rating: [[0]]. Explanation: The answer does not address the question.
+
+Assistant Answer 2: "Litigation charges."
+Rating: [[1]]. Explanation: The answer is relevant to the topic but does not fully address the question.
+
+Assistant Answer 3: "Decrease in gross Margin and Combat Arms Earplugs litigation charges."
+Rating: [[2]]. Explanation: The answer covers two driven causes but misses others.
+
+Assistant Answer 4: "Gross Margin Decrease, Combat Arms Earplugs litigation, impairment realted to exiting PFAS manufacturing, costs related to exiting Russia, and divestiture-related restructuring charges."
+Rating: [[3]]. Explanation: The answer fully matches the reference, covering all key aspects.
+
+Now, evaluate the following assistant's answer:
+
+**Question**:
+{query}
+
+**Reference Answer**:
+{reference}
+
+**Assistant's Answer**:
+{answer}
+
+Your rating: "Rating: [[0/1/2/3]]. Explanation: [[your explanation]]."

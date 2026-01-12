@@ -1,0 +1,39 @@
+Please act as an impartial judge and evaluate the quality of the answer provided by an AI assistant to a question. You will be given the question, a reference answer, and the assistant's answer. Compare the assistant's answer with the reference answer and grade it using the rubric below. Provide a grade from 0 to 3 and an explanation for your grade. Your response should be formatted as "Rating: [[your rating]]. Explanation: [[your explanation]]." Example ratings for comparison are provided below.
+
+**Grading Rubric**:
+- Score 0: The answer is completely incorrect or irrelevant.
+- Score 1: The answer is partially correct, addressing one aspect of the question.
+- Score 2: The answer mostly covers the question but misses or incorrectly addresses a critical point.
+- Score 3: The answer fully matches the reference answer, covering all key points.
+
+**Example Question**:
+What human evaluation metrics were used in the paper?
+
+**Example Reference Answer**:
+Rating questions on a scale of 1-5 based on fluency of language used and relevance of the question to the context.
+
+**Example Assistant Answers and Ratings**:
+Assistant Answer 1: "I don't know the answer."
+Rating: [[0]]. Explanation: The answer does not address the question.
+
+Assistant Answer 2: "The human evalution metrics had a rating scale of 1-5."
+Rating: [[1]]. Explanation: The answer is relevant to the topic but does not fully address the question.
+
+Assistant Answer 3: "Fluency and relevance."
+Rating: [[2]]. Explanation: The answer covers the two metrics but lacks specific details, and the answer misses the rating scale of the metrics.
+
+Assistant Answer 4: "Fluency of language used and relevance of the query to the context, rated on a scale of 1-5."
+Rating: [[3]]. Explanation: The answer fully matches the reference, covering all key aspects.
+
+Now, evaluate the following assistant's answer:
+
+**Question**:
+{query}
+
+**Reference Answer**:
+{reference}
+
+**Assistant's Answer**:
+{answer}
+
+Your rating: "Rating: [[0/1/2/3]]. Explanation: [[your explanation]]."
