@@ -6,17 +6,19 @@ from .SHTIndexer import SHTIndexerConfig, SHTIndexer
 from .SHTGenerator import SHTGeneratorConfig, SHTGenerator
 import os
 import logging
-logging.basicConfig(format="%(asctime)s - %(message)s", level=logging.INFO)
+from .utils import get_context_len
 
 def _write_to_file(dest_path, contents, is_json=False, is_append=False):
     os.makedirs(os.path.dirname(dest_path), exist_ok=True)
     if is_json:
+        # print(f"write_to_file: {dest_path}")
         assert is_append == False
         assert dest_path.endswith(".json")
         with open(dest_path, 'w') as file:
             json.dump(contents, file, indent=4)
         return
     if is_append:
+        # print(f"append_to_file: {dest_path}")
         assert is_json == False
         with open(dest_path, 'a') as file:
             file.write(contents)
@@ -47,7 +49,7 @@ class StructuredRAG:
         sub_sub_root_dir = os.path.join(sub_root_dir, f"{query_embedding_model}.{distance_metric}.h{int(embed_hierarchy)}")
         self.index_path = os.path.join(sub_sub_root_dir, "index.jsonl")
 
-        sub_sub_sub_root_dir = os.path.join(sub_sub_root_dir, f"{context_len}.l{int(context_raw)}.h{int(context_hierarchy)}")
+        sub_sub_sub_root_dir = os.path.join(sub_sub_root_dir, f"l{int(context_raw)}.h{int(context_hierarchy)}", f"context{context_len}")
         self.context_path = os.path.join(sub_sub_sub_root_dir, "context.jsonl")
 
         os.makedirs(self.node_clustering_dir, exist_ok=True)
@@ -87,9 +89,11 @@ class StructuredRAG:
         assert os.path.exists(pdf_path)
         heading_identification_path = os.path.join(self.heading_identification_dir, name+".json")
         if os.path.exists(heading_identification_path):
+            logging.debug(f"Heading identification already existed: {heading_identification_path}!")
             with open(heading_identification_path, 'r') as file:
                 result = json.load(file)
             return result
+        logging.debug(f"Doing heading identification: {heading_identification_path}...")
         curl_command = f'''curl -X POST -F 'file=@{pdf_path}' localhost:5060'''
         result = subprocess.run(curl_command, shell=True, capture_output=True, text=True)
         _write_to_file(
@@ -102,10 +106,12 @@ class StructuredRAG:
     def node_clustering(self, name):
         node_clustering_path = os.path.join(self.node_clustering_dir, name+".json")
         if os.path.exists(node_clustering_path):
+            logging.debug(f"Node clustering already existed: {node_clustering_path}!")
             with open(node_clustering_path, 'r') as file:
                 new_object_dicts_list = json.load(file)
                 return new_object_dicts_list
-            
+        
+        logging.debug(f"Doing node clustering: {node_clustering_path}...")
         object_dicts_list = self.heading_indentification(name)
 
         clustering_oracle = ClusteringOracle(
@@ -120,10 +126,12 @@ class StructuredRAG:
     def build_sht(self, name):
         sht_path = os.path.join(self.sht_dir, name+".json")
         if os.path.exists(sht_path):
+            logging.debug(f"SHT already existed: {sht_path}!")
             with open(sht_path, 'r') as file:
                 sht = json.load(file)
                 return sht
         else:
+            logging.debug(f"Building SHT: {sht_path}...")
             sht_load_path = None
             assert sht_path.count(self.node_embedding_model) == 1
             candid_embedding_models = ["sbert", "dpr", "te3small"]
@@ -179,8 +187,10 @@ class StructuredRAG:
                 for l in file:
                     index_info = json.loads(l)
                     if int(index_info["id"]) == int(query_id):
+                        logging.debug(f"Index already existed: {self.index_path}, {query_id}!")
                         return index_info
-            
+        
+        logging.debug(f"Indexing: {self.index_path}...")
         indexer = SHTIndexer(
             config=SHTIndexerConfig(
                 use_hierarchy=self.embed_hierarchy,
@@ -212,19 +222,42 @@ class StructuredRAG:
                 for l in file:
                     context_info = json.loads(l)
                     if int(context_info["id"]) == int(query_id):
+                        logging.debug(f"Context already existed: {self.context_path}, {query_id}!")
                         return context_info
-                
+        
+        dataset = None
+        for ds in ["civic", "contract", "qasper", "finance"]:
+            if ds in self.pdf_dir:
+                assert dataset == None
+                dataset = ds
+        assert dataset != None
+        true_context_len = get_context_len(
+            context_ratio=self.context_len,
+            # dataset=os.path.basename(os.path.dirname(self.pdf_dir)),
+            dataset = dataset,
+            sht_json_filename=name,
+            min_context_len=round(max(self.chunk_size, self.summary_len) * 1.5),
+        )
+        logging.debug(f"Generating context: {self.context_path} (len={true_context_len})...")
+
         generator = SHTGenerator(
             config=SHTGeneratorConfig(
                 use_hierarchy=self.context_hierarchy,
                 use_raw_chunks=self.context_raw,
-                context_len=self.context_len,
+                context_len=true_context_len,
             )
         )
 
         index_info = self.index(name, query, query_id)
 
         sht = self.build_sht(name)
+
+        # print(index_info["indexes"][:10])#########################delete this
+        # print(name, self.sht_dir)
+        # print("sht nodes # = ", len(sht["nodes"]))
+        # for i in index_info["indexes"]:
+        #     print(i)
+        #     assert sht['nodes'][i['node_id']]['is_dummy'] == False
 
         context = generator.generate(
             candid_indexes=index_info["indexes"],
@@ -244,7 +277,7 @@ class StructuredRAG:
             "id": query_id,
             "context": context
         }
-
+        print(f"Appending context (len={len(context)}) {self.context_path}...")
         _write_to_file(
             dest_path=self.context_path,
             contents=json.dumps(context_info) + "\n",

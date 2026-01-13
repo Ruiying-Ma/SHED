@@ -212,7 +212,7 @@ class SHTBuilder:
         children.append(node_id)
         assert all([c <= node_id for c in children])
 
-    def _place_node(self, pre_node: Dict, rpath: List[int], m_cluster_to_height: Dict, nodes: List) -> int:
+    def _place_node(self, pre_node: Dict, rpath: List[int], m_cluster_to_height: Dict, nodes: List, mode=None) -> int:
         '''
         SHTgen. Determine where to place a node. 
 
@@ -226,7 +226,7 @@ class SHTBuilder:
         - the id of the placed node
         '''
         assert pre_node["type"] in ["head", "list"]
-        if len(rpath) > 1:
+        if mode == None and len(rpath) > 1:
             assert set([nodes[i]["type"] for i in rpath[1:] if not nodes[i]["is_dummy"]]) == set([pre_node["type"]])
         assert len(rpath) > 0
         assert sorted(rpath) == rpath
@@ -276,12 +276,13 @@ class SHTBuilder:
 
         return node["id"]
 
-    def build(self, object_dicts_list: List[Dict]):
+    def build(self, object_dicts_list: List[Dict], mode=None):
         '''
         SHTgen. Build the SHT.
 
         Args:
             - object_dicts_list (List[Dict]): the objects returned by `ClusteringOracle`
+            - mode: None, wide, deep
 
         Store the sht (Dict):
             - stored in self.tree
@@ -291,6 +292,7 @@ class SHTBuilder:
             - full_text (str): joined by \\n\\n
             - estimated_cost (Dict): input_tokens, output_tokens
         '''
+        assert mode in [None, 'wide', 'deep']
         
         # preprocess the objects, such that only three types of object exists: "text", "head", "list"
         self.reset()
@@ -391,6 +393,7 @@ class SHTBuilder:
                     rpath=rpath_global,
                     m_cluster_to_height=m_cluster_to_height_global,
                     nodes=nodes,
+                    mode=mode,
                 )
                 prev_head_or_list_id = new_node_id
                 # reset local info
@@ -398,12 +401,22 @@ class SHTBuilder:
                 rpath_local = [new_node_id]
             elif pre_node_type == "list":
                 # place the node, update local info
-                new_node_id = self._place_node(
-                    pre_node=pre_node,
-                    rpath=rpath_local,
-                    m_cluster_to_height=m_cluster_to_height_local,
-                    nodes=nodes,
-                )
+                if mode == None:
+                    new_node_id = self._place_node(
+                        pre_node=pre_node,
+                        rpath=rpath_local,
+                        m_cluster_to_height=m_cluster_to_height_local,
+                        nodes=nodes,
+                        mode=mode,
+                    )
+                else:
+                    new_node_id = self._place_node(
+                        pre_node=pre_node,
+                        rpath=rpath_global,
+                        m_cluster_to_height=m_cluster_to_height_global,
+                        nodes=nodes,
+                        mode=mode
+                    )
                 prev_head_or_list_id = new_node_id
             else:
                 assert pre_node_type == "text"
@@ -482,7 +495,7 @@ class SHTBuilder:
                     text += node["heading"]
             vis_node[node["id"]] = AnyNode(text=text, id=node["id"], parent=vis_node[node["parent"]])
         id = -1
-        for pre, _, node in RenderTree(root):
+        for pre, _, node in RenderTree(node=root, maxlevel=900):
             assert node.id == id
             id += 1
         # check children
@@ -785,8 +798,16 @@ class SHTBuilder:
                                 cur_text += "\n\n"
                         if cur_text != "":
                             text_for_summarization += cur_text
-
-                    summary_info = self.summarizer.summarize(text_for_summarization, self.summary_len)
+                    try:
+                        summary_info = self.summarizer.summarize(text_for_summarization, self.summary_len)
+                    except Exception:
+                        true_sum_len = min(len(text_for_summarization), self.summary_len)
+                        summary_info = {
+                            "summary": text_for_summarization[:true_sum_len],
+                            "input_tokens": 0,
+                            "output_tokens": 0,
+                            "time": 0.0
+                        }
                     # summary_info = {
                     #     "summary": "",
                     #     "input_tokens": 0,
@@ -939,7 +960,7 @@ class SHTBuilder:
 
         with open(vis_path, 'w') as file:
             vis_tree_str = ""
-            for pre, _, node in RenderTree(root):
+            for pre, _, node in RenderTree(node=root, maxlevel=900):
                 vis_tree_str += f"{pre}{node.id}: {node.text}\n"
             file.write(vis_tree_str)
 

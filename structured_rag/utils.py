@@ -1,5 +1,8 @@
 import re
 from typing import Dict, List
+import os
+import json
+import tiktoken
 
 def max_min(list: List[int], thresh: int):
     '''
@@ -114,7 +117,7 @@ def get_nondummy_ancestors(nodes: List[Dict], node_id: int) -> List[int]:
         raise ValueError(f"node_{node_id} is dummy")
 
     if "nondummy_parent" not in node:
-        raise ValueError("Must execute self._add_nondummy_parent() in advance")
+        raise ValueError(f"node {node['id']} doesn't have nondummy_parent: {node['is_dummy']}, {node['type']}")
 
     cur_parent_id = node["nondummy_parent"]
     ancestors = []
@@ -128,3 +131,30 @@ def get_nondummy_ancestors(nodes: List[Dict], node_id: int) -> List[int]:
     if len(ancestors) > 0:
         assert ancestors[0] == node["nondummy_parent"]
     return ancestors[::-1]
+
+
+def get_context_len(context_ratio, dataset, sht_json_filename: str, min_context_len):
+    assert dataset in ["civic", "contract", "qasper", "finance"], dataset
+    if context_ratio > 1:
+        return max(min_context_len, context_ratio)
+    
+    sht_path = os.path.join(
+        os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+        "data",
+        dataset,
+        "sbert.gpt-4o-mini.c100.s100", 
+        "sht", 
+        sht_json_filename + ".json"
+    )
+
+
+    with open(sht_path, 'r') as file:
+        sht = json.load(file)
+
+    assert "full_text" in sht
+    full_text: str = sht["full_text"]
+    context_n_chars = min(int(round(len(full_text) * context_ratio)), len(full_text))
+    context_len = len(tiktoken.get_encoding("cl100k_base").encode(full_text[:context_n_chars]))
+    if context_len < min_context_len:
+        context_len = min_context_len
+    return context_len

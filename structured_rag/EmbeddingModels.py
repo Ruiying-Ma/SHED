@@ -2,7 +2,8 @@ import logging
 from abc import ABC, abstractmethod
 from typing import Dict
 import time
-from openai import OpenAI
+from openai import OpenAI, AzureOpenAI
+from azure.core.credentials import AzureKeyCredential
 from sentence_transformers import SentenceTransformer
 from transformers import DPRContextEncoder, DPRContextEncoderTokenizer, DPRQuestionEncoder, DPRQuestionEncoderTokenizer
 from dotenv import load_dotenv
@@ -71,12 +72,26 @@ class DPRQueryEmbeddingModel(BaseEmbeddingModel):
 
 class TextEmbedding3SmallModel(BaseEmbeddingModel):
     def __init__(self, openai_key_path: str, model_name="text-embedding-3-small"):
+
+        ###############OPENAI API#################
+        # self.model_name = model_name
+        # self.client = None
+        # load_dotenv(openai_key_path)
+        # self.client = OpenAI(api_key=os.getenv("API_KEY"))
+        ##########################################
+
+        ###############AZURE OPENAI API#################
         self.model_name = model_name
         self.client = None
-        # with open(openai_key_path, 'r') as file:
-        #     self.client = OpenAI(api_key=file.read().replace("\n", "").strip())
+        openai_key_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), ".env")
+        assert os.path.exists(openai_key_path)
         load_dotenv(openai_key_path)
-        self.client = OpenAI(api_key=os.getenv("API_KEY"))
+        self.client = AzureOpenAI(
+            azure_endpoint=os.getenv("AZURE_ENDPOINT"),
+            api_version=os.getenv("AZURE_API_VERSION"),
+            api_key=os.getenv("AZURE_API_KEY"),
+        )
+        ############################################
 
     @retry(wait=wait_random_exponential(min=1, max=20), stop=stop_after_attempt(6))
     def create_embedding(self, text) -> Dict:

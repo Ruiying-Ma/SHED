@@ -4,7 +4,7 @@ import os
 import time
 from typing import Dict
 
-from openai import OpenAI
+from openai import OpenAI, AzureOpenAI
 from tenacity import retry, stop_after_attempt, wait_random_exponential
 
 import tiktoken
@@ -73,6 +73,7 @@ class BaseGPTSummarizationModel(BaseSummarizationModel):
         user_prompt = self.user_prompt_template.format(text=text)
 
         start_time = time.time()
+
         response = self.client.chat.completions.create(
             model=self.model_name,
             messages=[{
@@ -99,13 +100,32 @@ class BaseGPTSummarizationModel(BaseSummarizationModel):
 
 
 class GPT4oMiniSummarizationModel(BaseGPTSummarizationModel):
-    def __init__(self, openai_key_path: str):
-        if (not isinstance(openai_key_path, str)) or (not os.path.exists(openai_key_path)):
-            raise ValueError("openai_key_path should be a path to a .env file storing openai key")
 
+
+    ################## OPENAI API ##################
+    # def __init__(self, openai_key_path: str):
+    #     if (not isinstance(openai_key_path, str)) or (not os.path.exists(openai_key_path)):
+    #         raise ValueError("openai_key_path should be a path to a .env file storing openai key")
+
+    #     super().__init__()
+    #     self.model_name = "gpt-4o-mini"
+    #     # with open(openai_key_path, 'r') as file:
+    #     #     self.client = OpenAI(api_key=file.read().replace("\n", "").strip())
+    #     load_dotenv(openai_key_path)
+    #     self.client = OpenAI(api_key=os.getenv("API_KEY"))
+    ###############################################
+
+
+    ################### AZURE OPENAI API ##################
+    def __init__(self, openai_key_path: str):
         super().__init__()
         self.model_name = "gpt-4o-mini"
-        # with open(openai_key_path, 'r') as file:
-        #     self.client = OpenAI(api_key=file.read().replace("\n", "").strip())
+        openai_key_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), ".env")
+        assert os.path.exists(openai_key_path)
         load_dotenv(openai_key_path)
-        self.client = OpenAI(api_key=os.getenv("API_KEY"))
+        self.client = AzureOpenAI(
+            azure_endpoint=os.getenv("AZURE_ENDPOINT"),
+            api_version=os.getenv("AZURE_API_VERSION"),
+            api_key=os.getenv("AZURE_API_KEY"),
+        )
+    ###################################################
