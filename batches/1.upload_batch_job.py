@@ -91,7 +91,8 @@ def create_batch_job(batch_path, descrip):
         completion_window="24h",
         metadata={
             "description": descrip,
-        }
+        },
+        timeout=30000,
     )
     batch_id = batch_job.id
     write_to_log(
@@ -112,7 +113,7 @@ if __name__ == "__main__":
     SAFETY_CHECK = bool(args.safety_check)
 
     if args.job == "llmjudge":
-        assert args.dataset == "qasper", "Only Qasper need LLM judge."
+        assert args.dataset in ["qasper", "finance"], "Only Qasper/Financebench need LLM judge."
 
     job_num = 0
     check_context_list = input(f"Check the context configures in config.py before continue (dataset={args.dataset}, job={args.job}, safety_check={SAFETY_CHECK})... [y/n]")
@@ -123,10 +124,13 @@ if __name__ == "__main__":
         print("Continue...")
     
     for context_config in config.CONTEXT_CONFIG_LIST:
-        context_jsonl_path = config.get_config_jsonl_path(args.dataset, context_config)
-        assert os.path.exists(context_jsonl_path)
-        logging.info(f"Uploading {args.job} jobs for {context_jsonl_path}...")
-        assert os.path.exists(context_jsonl_path), context_jsonl_path
+        if context_config[0] != "graphrag":
+            context_jsonl_path = config.get_config_jsonl_path(args.dataset, context_config)
+            logging.info(f"Uploading {args.job} jobs for {context_jsonl_path}...")
+            assert os.path.exists(context_jsonl_path), context_jsonl_path
+        else:
+            context_jsonl_path = os.path.join(config.DATA_ROOT_FOLDER, args.dataset, "baselines", "graphrag", "context.jsonl")
+            assert not os.path.exists(context_jsonl_path), context_jsonl_path
         
         job_name = "qa" if args.job == "qa" else "rating"
         job_path = context_jsonl_path.replace("context.jsonl", f"{job_name}_job.jsonl")

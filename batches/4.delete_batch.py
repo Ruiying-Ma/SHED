@@ -92,12 +92,8 @@ def delete_all_batch_response():
             job_path = os.path.join("/home/ruiying/SHTRAG/data/", descrip)
         assert os.path.exists(job_path)
         
-        ####################################################CHANGE TODO
-        assert os.path.basename(job_path) in ["qa_job.jsonl", "rating_job.jsonl"], job_path
-        # assert os.path.basename(job_path) in ["context.jsonl", "qa_job.jsonl"], job_path
+        assert os.path.basename(job_path) in ["qa_job.jsonl", "rating_job.jsonl", "sht_job.jsonl"], job_path
         result_path = job_path.replace("_job.jsonl", "_result.jsonl")
-        # result_path = job_path.replace("context.jsonl", f"qa_result.jsonl").replace("_job.jsonl", "_result.jsonl")
-        #####################################################
 
         if not os.path.exists(result_path):
             print(f"⚠️ {result_path} does not exist, skipping...")

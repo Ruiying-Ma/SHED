@@ -84,14 +84,15 @@ def create_qa_jobs(
     return flag    
 
 def create_llmjudge_jobs(
+    dataset,
     answer_path, # path to the generated answer
     max_answer_tokens=100, 
-    model="gpt-4o-mini"
+    model="gpt-4o-mini",
 ):
     '''
     Create llm_judge jobs for Qasper
     '''
-    dataset = "qasper"
+    assert dataset in ["qasper", "finance"]
     assert dataset in answer_path
     data_root_dir = os.path.dirname(os.path.abspath(__file__)).replace("batches", "data")
     queries_path = os.path.join(data_root_dir, dataset, "queries.json")
@@ -101,7 +102,7 @@ def create_llmjudge_jobs(
     assert not os.path.exists(dst), dst
     assert os.path.exists(os.path.dirname(dst)), dst
 
-    with open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "llm_judge_prompt.txt"), 'r') as file:
+    with open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "llm_judge_prompt", f"{dataset}.txt"), 'r') as file:
         prompt_template = file.read().strip()
 
     assert prompt_template.count("{query}") == 1
@@ -184,7 +185,7 @@ if __name__ == "__main__":
     SAFETY_CHECK = bool(args.safety_check)
 
     if args.job == "llmjudge":
-        assert args.dataset == "qasper", "Only Qasper need LLM judge."
+        assert args.dataset in ["qasper", "finance"], "Only Qasper/FinanceBench need LLM judge."
 
     job_num = 0
     check_context_list = input(f"Check the context configures in config.py before continue (dataset={args.dataset}, job={args.job}, safety_check={SAFETY_CHECK})... [y/n]")
@@ -195,9 +196,13 @@ if __name__ == "__main__":
         print("Continue...")
     
     for context_config in config.CONTEXT_CONFIG_LIST:
-        context_jsonl_path = config.get_config_jsonl_path(args.dataset, context_config)
-        assert os.path.exists(context_jsonl_path)
-        logging.info(f"Creating {args.job} jobs for {context_jsonl_path}...")
+        if context_config[0] != "graphrag":
+            context_jsonl_path = config.get_config_jsonl_path(args.dataset, context_config)
+            logging.info(f"Creating {args.job} jobs for {context_jsonl_path}...")
+            assert os.path.exists(context_jsonl_path)
+        else:
+            context_jsonl_path = os.path.join(config.DATA_ROOT_FOLDER, args.dataset, "baselines", "graphrag", "context.jsonl")
+            assert not os.path.exists(context_jsonl_path)
         job_num += 1
         if args.job == "qa":
             create_qa_jobs(
@@ -211,6 +216,7 @@ if __name__ == "__main__":
             answer_path = context_jsonl_path.replace("context.jsonl", "answer.jsonl")
             assert os.path.exists(answer_path), answer_path
             create_llmjudge_jobs(
+                dataset=args.dataset,
                 answer_path=answer_path,
                 max_answer_tokens=100,
                 model="gpt-4o-mini"
