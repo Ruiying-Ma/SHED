@@ -48,7 +48,7 @@ def qasper_eval_answer_f1(
     return round(f1 * 100 / n_answer, 3)
 
 
-def qasper_eval_answer_llm(
+def qasper_eval_answer_llm_list(
         context_config
 ):
     def extract_rating_from_gpt_response(s: str):
@@ -75,18 +75,23 @@ def qasper_eval_answer_llm(
 
     assert len(ratings) == 1451
     
-    tot_rating = 0.0
-    n_answer = 0
+    rating_list = []
     for rating_info in ratings:
         candid_ratings = [extract_rating_from_gpt_response(r) for r in rating_info["rating"]]
         if len(candid_ratings) == 0:
             rating = 0
         else:
             rating = max(candid_ratings)
-        tot_rating += rating
-        n_answer += 1
+        rating_list.append(rating)
+    assert len(rating_list) == 1451
+    return rating_list
 
 
+def qasper_eval_answer_llm(context_config):
+    rating_list = qasper_eval_answer_llm_list(context_config)
+    assert len(rating_list) == 1451
+    tot_rating = sum(rating_list)
+    n_answer = len(rating_list)
     print(f"Qasper: among {n_answer} queries\n\trating={round(tot_rating * 100 / (3 * n_answer), 3)}")
 
     return round(tot_rating * 100 / (3 * n_answer), 3)

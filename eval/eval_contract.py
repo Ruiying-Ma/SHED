@@ -3,7 +3,7 @@ import os
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import eval.utils as eval_utils
 
-def contract_eval_answer(
+def contract_eval_answer_list(
     context_config
 ):
     '''
@@ -40,18 +40,29 @@ def contract_eval_answer(
     assert len(gold_answers) == len(my_answers)
     assert len(gold_answers) == 1241
 
-    n_correct = 0
-    n_ans = 0
+    accuracy_list = []
+    answer_id_list = []
     for gold_answer, my_answer in zip(gold_answers, my_answers):
         assert gold_answer["id"] == my_answer["id"]
         if gold_answer["answer"] == "NotMentioned":
             continue
-
+        answer_id_list.append(gold_answer["id"])
         if is_correct_answer(my_answer=normalize_answer(my_answer["answer"]), gold_answer=normalize_answer(gold_answer["answer"])):
-            n_correct += 1
-        n_ans += 1
+            accuracy_list.append(1)
+        else:
+            accuracy_list.append(0)
+    assert len(accuracy_list) == len(answer_id_list) == 669
+    return accuracy_list, answer_id_list
 
-    assert n_ans == 669
+    
+
+def contract_eval_answer(
+    context_config
+):
+    accuracy_list, answer_id_list = contract_eval_answer_list(context_config)
+    assert len(accuracy_list) == len(answer_id_list) == 669
+    n_correct = sum(accuracy_list)
+    n_ans = len(accuracy_list)
 
     print(f"ContractNLI: {n_correct} correct answers among {n_ans} queries\n\taccuracy={round(n_correct * 100 / n_ans, 3)}")
 

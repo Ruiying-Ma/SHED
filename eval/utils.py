@@ -52,42 +52,23 @@ def get_gold_answers(dataset):
 def get_answers(
         dataset,
         context_config,
-        # chunk_size,
-        # summary_len,
-        # node_embedding_model,
-        # query_embedding_model,
-        # summarization_model,
-        # embed_hierarchy,
-        # distance_metric,
-        # context_hierarchy,
-        # context_raw,
-        # context_len,
-        # is_intrinsic,
-        # is_baseline,
-        # is_raptor,
-        # is_ordered,
-        # is_grobid,
 ):
-    context_jsonl_path = config.get_config_jsonl_path(dataset, context_config)
-    assert os.path.exists(context_jsonl_path), context_jsonl_path
-    answer_path = context_jsonl_path.replace("context.jsonl", "answer.jsonl")
-    assert os.path.exists(os.path.dirname(answer_path)), answer_path
+    if context_config[0] != "graphrag":
+        context_jsonl_path = config.get_config_jsonl_path(dataset, context_config)
+        # assert "l1.h1" in context_jsonl_path, context_jsonl_path
+        # context_jsonl_path = context_jsonl_path.replace("l1.h1", "exclude_h_for_token_count")
+        if dataset == "finance" and context_config[0] not in ['graphrag', 'hipporag'] and context_config[1] != "grobid":
+            context_jsonl_path = context_jsonl_path.replace("context.jsonl", "reform_table_context.jsonl")
+        assert os.path.exists(context_jsonl_path), context_jsonl_path
+        if dataset == "finance" and context_config[-1] == 0.4:
+            assert False
+        answer_path = context_jsonl_path.replace("context.jsonl", "answer.jsonl")
+        assert os.path.exists(os.path.dirname(answer_path)), answer_path
+    else:
+        answer_path = os.path.join(config.DATA_ROOT_FOLDER, dataset, "baselines", "graphrag", "answer.jsonl")
+        assert os.path.exists(answer_path), answer_path
 
-    # root_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)).replace("eval", "data"), dataset)
-    # if is_intrinsic:
-    #     root_dir = os.path.join(root_dir, "intrinsic")
-    # if is_baseline:
-    #     root_dir = os.path.join(root_dir, "baselines")
-    # if is_grobid:
-    #     root_dir = os.path.join(root_dir, "grobid")
-    # if not is_baseline:
-    #     answer_dir = os.path.join(root_dir, f"{node_embedding_model}.{summarization_model}.c{chunk_size}.s{summary_len}", f"{query_embedding_model}.{distance_metric}.h{int(embed_hierarchy)}", f"{context_len}.l{int(context_raw)}.h{int(context_hierarchy)}")
-    # else:
-    #     answer_dir = os.path.join(root_dir, f"{node_embedding_model}.{summarization_model}.c{chunk_size}.s{summary_len}", f"{query_embedding_model}.{distance_metric}.raptor{int(is_raptor)}", f"{context_len}.o{int(is_ordered)}")
-    # print(answer_dir)
-    # assert os.path.exists(answer_dir)
-
-    # answer_path = os.path.join(answer_dir, "answer.jsonl")
+    logging.info(f"Loading answers from {answer_path}...")
 
     if not os.path.exists(answer_path):
         logging.info(f"LLM Response has not been processed to answers yet, processing {context_jsonl_path}...")
@@ -110,7 +91,7 @@ def get_answers(
             "civic": 418,
             "contract": 1241,
             "qasper": 1451,
-            "finance": 0, # TODO: set finance #queries
+            "finance": 150,
         }
         
         missed_answer_id = []
@@ -153,40 +134,26 @@ def get_answers(
 def get_ratings(
         dataset,
         context_config,
-        # chunk_size,
-        # summary_len,
-        # node_embedding_model,
-        # query_embedding_model,
-        # summarization_model,
-        # embed_hierarchy,
-        # distance_metric,
-        # context_hierarchy,
-        # context_raw,
-        # context_len,
-        # is_intrinsic,
-        # is_baseline,
-        # is_raptor,
-        # is_ordered,
-        # is_grobid
+        rating_path = None,
 ):
-    
-    context_jsonl_path = config.get_config_jsonl_path(dataset, context_config)
-    assert os.path.exists(context_jsonl_path), context_jsonl_path
-    rating_path = context_jsonl_path.replace("context.jsonl", "rating.jsonl")
-    assert os.path.exists(os.path.dirname(rating_path)), rating_path
-    # root_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)).replace("eval", "data"), dataset)
-    # if is_intrinsic:
-    #     root_dir = os.path.join(root_dir, "intrinsic")
-    # if is_baseline:
-    #     root_dir = os.path.join(root_dir, "baselines")
-    # if is_grobid:
-    #     root_dir = os.path.join(root_dir, "grobid")
-    # if not is_baseline:
-    #     rating_dir = os.path.join(root_dir, f"{node_embedding_model}.{summarization_model}.c{chunk_size}.s{summary_len}", f"{query_embedding_model}.{distance_metric}.h{int(embed_hierarchy)}", f"{context_len}.l{int(context_raw)}.h{int(context_hierarchy)}")
-    # else:
-    #     rating_dir = os.path.join(root_dir, f"{node_embedding_model}.{summarization_model}.c{chunk_size}.s{summary_len}", f"{query_embedding_model}.{distance_metric}.raptor{int(is_raptor)}", f"{context_len}.o{int(is_ordered)}")
-    # print(rating_dir)
-    # assert os.path.exists(rating_dir)
+    if rating_path == None:
+        if context_config[0] != "graphrag":
+            context_jsonl_path = config.get_config_jsonl_path(dataset, context_config)
+            # assert "l1.h1" in context_jsonl_path, context_jsonl_path
+            # context_jsonl_path = context_jsonl_path.replace("l1.h1", "exclude_h_for_token_count")
+            if dataset == "finance" and context_config[0] not in ['graphrag', 'hipporag'] and context_config[1] != "grobid":
+                context_jsonl_path = context_jsonl_path.replace("context.jsonl", "reform_table_context.jsonl")
+            assert os.path.exists(context_jsonl_path), context_jsonl_path
+            if dataset == "finance" and context_config[0] not in ['graphrag', 'hipporag'] and context_config[1] != "grobid" and context_config[-1] == 0.4:
+                rating_path = context_jsonl_path.replace("context.jsonl", "truncation_rating.jsonl")
+            else:
+                rating_path = context_jsonl_path.replace("context.jsonl", "rating.jsonl")
+            assert os.path.exists(os.path.dirname(rating_path)), rating_path
+        else:
+            rating_path = os.path.join(config.DATA_ROOT_FOLDER, dataset, "baselines", "graphrag", "rating.jsonl")
+            assert os.path.exists(os.path.dirname(rating_path)), rating_path
+
+    logging.info(f"Loading ratings from {rating_path}...")
 
     if not os.path.exists(rating_path):
         logging.info(f"LLM Response has not been processed to ratings yet, processing {rating_path}...")
@@ -215,7 +182,7 @@ def get_ratings(
             "civic": 418,
             "contract": 1241,
             "qasper": 1451,
-            "finance": 0, # TODO: set finance #queries
+            "finance": 150,
         }
 
         if len(m_qid_aid_ratings) != M_DATASET_NUM_QUERIES[dataset]:
@@ -256,30 +223,31 @@ def get_ratings(
                 rating_list.append(json.loads(l))
         return rating_list
         
-if __name__ == "__main__":
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--safety-check", action='store_true', help="Whether to check the context configures in config.py before continue")
-    parser.add_argument("--eval_type", type=str, required=True, choices=["answer", "rating"])
-    args = parser.parse_args()
-    SAFETY_CHECK = bool(args.safety_check)
-    check_context_list = input(f"Check context configure first. Collecting results of qasper {args.eval_type} (safety_check={SAFETY_CHECK}). Do you wanna continue?... [y/n]")
-    if check_context_list.lower() != 'y':
-        print("Exit")
-        exit(0)
-    else:
-        print("Continue...")
+# if __name__ == "__main__":
+#     parser = argparse.ArgumentParser()
+#     parser.add_argument("--safety-check", action='store_true', help="Whether to check the context configures in config.py before continue")
+#     parser.add_argument("--eval_type", type=str, required=True, choices=["answer", "rating"])
+#     parser.add_argument("--dataset", type=str, required=True, choices=["qasper", "finance"])
+#     args = parser.parse_args()
+#     SAFETY_CHECK = bool(args.safety_check)
+#     check_context_list = input(f"Check context configure first. Collecting results of {args.dataset} {args.eval_type} (safety_check={SAFETY_CHECK}). Do you wanna continue?... [y/n]")
+#     if check_context_list.lower() != 'y':
+#         print("Exit")
+#         exit(0)
+#     else:
+#         print("Continue...")
 
-    for context_config in config.CONTEXT_CONFIG_LIST:
-        print(context_config)
-        if args.eval_type == "answer":
-            ratings = get_answers(
-                dataset="qasper",
-                context_config=context_config,
-            )
-        else:
-            assert args.eval_type == "rating"
-            ratings = get_ratings(
-                dataset="qasper",
-                context_config=context_config,
-            )
+#     for context_config in config.CONTEXT_CONFIG_LIST:
+#         print(context_config)
+#         if args.eval_type == "answer":
+#             ratings = get_answers(
+#                 dataset=args.dataset,
+#                 context_config=context_config,
+#             )
+#         else:
+#             assert args.eval_type == "rating"
+#             ratings = get_ratings(
+#                 dataset=args.dataset,
+#                 context_config=context_config,
+#             )
         

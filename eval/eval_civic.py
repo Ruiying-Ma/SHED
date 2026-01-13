@@ -7,7 +7,7 @@ import json
 import re
 import config
 
-def civic_q1_eval_answer(
+def civic_q1_eval_answer_list(
     context_config
 ):
     '''
@@ -37,18 +37,23 @@ def civic_q1_eval_answer(
     assert len(gold_answers) == len(my_answers)
     assert len(gold_answers) == 380 + 38
 
-    n_correct = 0
-    for my_answer, gold_answer in zip(my_answers[:380], gold_answers[:380]):
-        assert my_answer["id"] == gold_answer["id"]
-        if is_correct_answer(my_answer=my_answer["answer"], gold_answer=gold_answer["answer"]):
-            n_correct += 1
+    accuracy_list = [
+        1 if is_correct_answer(my_answer=my_answer["answer"], gold_answer=gold_answer["answer"]) == True else 0
+        for my_answer, gold_answer in zip(my_answers[:380], gold_answers[:380])
+    ]
+    assert len(accuracy_list) == 380
+    return accuracy_list
 
 
+def civic_q1_eval_answer(context_config):
+    answer_accuracy = civic_q1_eval_answer_list(context_config)
+    assert len(answer_accuracy) == 380
+    n_correct = sum(answer_accuracy)
     print(f"Civic q1: {n_correct} correct answers among 380 queries\n\taccuracy={round(n_correct * 100 / 380, 3)}")
-
     return round(n_correct * 100 / 380, 3)
 
-def civic_q2_eval_answer(
+
+def civic_q2_eval_answer_list(
     context_config
 ):
     '''
@@ -110,9 +115,9 @@ def civic_q2_eval_answer(
     with open(projects_path, 'r') as file:
         m_file_projects = json.load(file)
 
-    tot_recall = 0.0
-    tot_precision = 0.0
-    tot_f1 = 0.0
+    recall_list = []
+    precision_list = []
+    f1_list = []
     for my_answer, gold_answer in zip(my_answers[380:], gold_answers[380:]):
         assert my_answer["id"] == int(gold_answer["id"])
 
@@ -120,14 +125,24 @@ def civic_q2_eval_answer(
         projects_list = list([normalize_project(p) for p in m_file_projects[file_name].keys()])
 
         recall, precision, f1 = eval(my_answer=my_projects(my_answer["answer"], projects_list), gold_answer=gold_projects(gold_answer["answer"]))
-        tot_recall += recall
-        tot_precision += precision
-        tot_f1 += f1
+        recall_list.append(recall)
+        precision_list.append(precision)
+        f1_list.append(f1)
 
+    assert len(recall_list) == len(precision_list) == len(f1_list) == 38
+
+    return recall_list, precision_list, f1_list
+    
+
+def civic_q2_eval_answer(context_config):
+    recall_list, precision_list, f1_list = civic_q2_eval_answer_list(context_config)
+    assert len(recall_list) == len(precision_list) == len(f1_list) == 38
+    tot_recall = sum(recall_list)
+    tot_precision = sum(precision_list)
+    tot_f1 = sum(f1_list)
     print(f"Civic q2: among 38 queries\n\tavg_recall={round(tot_recall * 100/ 38, 3)}\n\tavg_precision={round(tot_precision * 100/ 38, 3)}\n\tavg_f1={round(tot_f1 * 100/ 38, 3)}")
 
     return round(tot_recall * 100/ 38, 3), round(tot_precision * 100 / 38, 3), round(tot_f1 * 100/ 38, 3)
-
 
 if __name__ == "__main__":
 
