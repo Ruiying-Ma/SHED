@@ -3,16 +3,17 @@ import os
 import sys
 from typing import Dict 
 from raptor import RetrievalAugmentationConfig, RetrievalAugmentation, BaseSummarizationModel, BaseEmbeddingModel, BaseQAModel, Node
-from openai import OpenAI
+from openai import OpenAI, AzureOpenAI
 from tenacity import retry, stop_after_attempt, wait_random_exponential
 import logging
+import logging_config
 import time
 import tiktoken
 from dotenv import load_dotenv
 from sentence_transformers import SentenceTransformer
 from transformers import DPRContextEncoder, DPRContextEncoderTokenizer, DPRQuestionEncoderTokenizer, DPRQuestionEncoder
-
-logging.basicConfig(format="%(asctime)s - %(message)s", level=logging.INFO)
+from structured_rag import get_context_len
+from dotenv import load_dotenv
 
 class CustomQAModel(BaseQAModel):
     def __init__(self):
@@ -46,10 +47,15 @@ class GPT4oMiniSummarizationModel(BaseSummarizationModel):
         try:
             logging.info(f"{self.model} summarizing (in {max_tokens} tokens) text: {context[0:min(10, len(context))]}...")
             
-            openai_key_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), ".env")
+            openai_key_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "raptor", ".env")
             assert os.path.exists(openai_key_path)
             load_dotenv(openai_key_path)
-            client = OpenAI(api_key=os.getenv("API_KEY"))
+            # client = OpenAI(api_key=os.getenv("API_KEY"))
+            client = AzureOpenAI(
+                azure_endpoint=os.getenv("AZURE_ENDPOINT"),
+                api_version=os.getenv("AZURE_API_VERSION"),
+                api_key=os.getenv("AZURE_API_KEY"),
+            )
 
 
             user_prompt = self.user_prompt_template.format(text=context)
@@ -131,8 +137,13 @@ class MyTE3SmallEmbeddingModel(BaseEmbeddingModel):
     def __init__(self, model_name="text-embedding-3-small"):
         self.model_name = model_name
         self.client = None
-        load_dotenv(os.path.join(os.path.dirname(os.path.abspath(__file__)), '.env'))
-        self.client = OpenAI(api_key=os.getenv("API_KEY"))
+        load_dotenv(os.path.join(os.path.dirname(os.path.abspath(__file__)), "raptor", '.env'))
+        # self.client = OpenAI(api_key=os.getenv("API_KEY"))
+        self.client = AzureOpenAI(
+            api_version=os.getenv("AZURE_API_VERSION"),
+            azure_endpoint=os.getenv("AZURE_ENDPOINT"),
+            api_key=os.getenv("AZURE_API_KEY")
+        )
         self.time = 0.0
 
     @retry(wait=wait_random_exponential(min=1, max=20), stop=stop_after_attempt(6))
@@ -196,6 +207,8 @@ def build(
         )
         RA = RetrievalAugmentation(config=custom_RAConfig, tree=raptor_tree_path)
         raptor_tree_nodes = RA.tree.all_nodes # Dict: index -> Node
+        logging.info(f"Loaded existing raptor tree from {raptor_tree_path}.")
+        logging.info(f"Existed embeddings are {list(list(raptor_tree_nodes.values())[0].embeddings.keys())}.")
         for node_index, node in raptor_tree_nodes.items():
             assert isinstance(node_index, int)
             assert isinstance(node, Node)
@@ -210,7 +223,7 @@ def build(
                 if embedding_model == "te3small":
                     assert 'dpr' in node.embeddings
                 node.embeddings[embedding_model] = custom_embedder.create_embedding(node.text)
-        
+        logging.info(f"Added {embedding_model} embeddings to raptor tree.")
         RA.save(raptor_tree_path)
 
 
@@ -237,7 +250,7 @@ def index(
     query_id: int
 ):
     raptor_tree_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", dataset, "baselines", "raptor_tree", name+".pkl")
-    assert os.path.exists(raptor_tree_path)
+    assert os.path.exists(raptor_tree_path), f"Raptor tree doesn't exist: {raptor_tree_path}"
 
     node_embedding_model = query_embedding_model
     summarization_model = "gpt-4o-mini"
@@ -294,7 +307,8 @@ def generate_context(
     dataset: str,
     query_embedding_model: str,
     is_ordered: bool,
-    is_raptor: bool
+    is_raptor: bool,
+    context_len,
 ):
     queries_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", dataset, "queries.json")
     with open(queries_path, 'r') as file:
@@ -312,15 +326,37 @@ def generate_context(
         for l in file:
             indexes.append(json.loads(l))
 
-    context_len = 1000
-    context_path = os.path.join(os.path.dirname(index_path), f'{context_len}.o{int(is_ordered)}', "context.jsonl")
+    context_path = os.path.join(os.path.dirname(index_path), f'o{int(is_ordered)}', f"context{context_len}", "context.jsonl")
     os.makedirs(os.path.dirname(context_path), exist_ok=True)
 
     assert len(queries) == len(indexes)
 
+    existing_query_ids = list()
+    if os.path.exists(context_path):
+        with open(context_path, 'r') as file:
+            for l in file:
+                context_info = json.loads(l)
+                query_id = context_info["id"]
+                assert query_id not in existing_query_ids
+                existing_query_ids.append(context_info["id"])
+
     for query, index_info in zip(queries, indexes):
+        
         assert query["id"] == index_info["id"]
+
+        if query["id"] in existing_query_ids:
+            print(f"\tquery_id {query_id} already has context, skip!")
+            continue
+
+
         name = query["file_name"]
+
+        true_context_len = get_context_len(
+            context_ratio=context_len,
+            dataset=dataset,
+            sht_json_filename=name,
+            min_context_len=round(max(chunk_size, summary_len) * 1.5)
+        )
 
         raptor_tree_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", dataset, "baselines", "raptor_tree", name+".pkl")
         assert os.path.exists(raptor_tree_path)
@@ -349,7 +385,7 @@ def generate_context(
                 assert text != ""
                 text += "\n\n"
                 text_token_count = len(tokenizer.encode(text))
-                if context_token_count + text_token_count <= context_len:
+                if context_token_count + text_token_count <= true_context_len:
                     context += text
                     context_token_count += text_token_count
                 else:
@@ -364,7 +400,7 @@ def generate_context(
                 assert text != ""
                 text += "\n\n"
                 text_token_count = len(tokenizer.encode(text))
-                if context_token_count + text_token_count <= context_len:
+                if context_token_count + text_token_count <= true_context_len:
                     context_node_id.append(node_index)
                     context_token_count += text_token_count
                 else:
@@ -386,7 +422,8 @@ def generate_context(
             "id": query["id"],
             "context": context,
         }
-
+        assert query["id"] not in existing_query_ids
+        existing_query_ids.append(query["id"])
         with open(context_path, 'a') as file:
             file.write(json.dumps(context_info) + "\n")
    
@@ -414,29 +451,95 @@ def raptor_num_nodes(dataset):
 
 
 if __name__ == "__main__":
-    queries_path = "/home/v-ruiyingma/SHTRAG/data/qasper/queries.json"
+    # queries_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", "qasper", "queries.json")
 
-    with open(queries_path, 'r') as file:
-        queries = json.load(file)
+    # with open(queries_path, 'r') as file:
+    #     queries = json.load(file)
     
-    for query_embedding_model in ["sbert", "dpr", "te3small"]:
-        for query_info in queries:
-            index(
-                dataset="qasper",
-                name=query_info["file_name"],
-                query_embedding_model=query_embedding_model,
-                query=query_info["query"],
-                query_id=query_info["id"]
-            )
+    # for query_embedding_model in ["sbert", "dpr", "te3small"]:
+    #     for query_info in queries:
+    #         index(
+    #             dataset="qasper",
+    #             name=query_info["file_name"],
+    #             query_embedding_model=query_embedding_model,
+    #             query=query_info["query"],
+    #             query_id=query_info["id"]
+    #         )
             
-    for query_embedding_model in ["sbert", "dpr", "te3small"]:
-        for is_ordered in [True, False]:
-            generate_context(
-                dataset="qasper",
-                query_embedding_model=query_embedding_model,
-                is_ordered=is_ordered,
-                is_raptor=False
-            )
+    # for query_embedding_model in ["sbert", "dpr", "te3small"]:
+    #     for is_ordered in [True, False]:
+    #         generate_context(
+    #             dataset="qasper",
+    #             query_embedding_model=query_embedding_model,
+    #             is_ordered=is_ordered,
+    #             is_raptor=False
+    #         )
 
             
-            
+    ############################### raptor build tree
+    # import config
+    # from datetime import datetime
+    # dataset = "finance"
+    # root_dir = os.path.join(config.DATA_ROOT_FOLDER, dataset)
+    # assert os.path.exists(root_dir)
+    # logging.disable(logging.DEBUG)
+
+    # for pdf_filename in sorted(os.listdir(os.path.join(root_dir, "pdf"))):
+    #     pdf_path = os.path.join(root_dir, "pdf", pdf_filename)
+    #     assert os.path.exists(pdf_path)
+    #     cur_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    #     print(f"[{cur_time}] Processing {pdf_filename}...")
+    #     try:
+    #         for node_embedding_model in ["sbert", "sbert", "dpr", "te3small"]:
+    #             build(
+    #                 dataset=dataset,
+    #                 name=pdf_filename.replace(".pdf", ""),
+    #                 embedding_model=node_embedding_model
+    #             )
+    #             cur_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    #             print(f"\t[{cur_time}]✅ Finished processing {pdf_filename} with {node_embedding_model}")
+    #     except Exception as e:
+    #         cur_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    #         print(f"\t[{cur_time}]❌ Error processing {pdf_filename} with {node_embedding_model}: {str(e)}")
+    #         continue
+
+
+
+
+
+
+
+    ######################### raptor index
+    import config
+    from datetime import datetime
+    dataset = "finance"
+    root_dir = os.path.join(config.DATA_ROOT_FOLDER, dataset)
+    assert os.path.exists(root_dir)
+    logging.disable(logging.DEBUG)
+
+    with open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", dataset, "queries.json"), 'r') as file:
+        qinfo_list = json.load(file)
+
+
+    for qinfo in qinfo_list[1:]:
+        filename = qinfo["file_name"]
+        cur_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        print(f"[{cur_time}] Processing {qinfo['id']}...")
+        try:
+            for node_embedding_model in ["sbert", "dpr", "te3small"]:
+                raptor_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", dataset, "baselines", "raptor_tree", f"{filename}.pkl")
+                assert os.path.exists(raptor_path), f"No SHT: {raptor_path} doesn't exist"
+                index(
+                    dataset=dataset,
+                    name=filename,
+                    query_embedding_model=node_embedding_model,
+                    query=qinfo["query"],
+                    query_id=qinfo["id"],
+                )
+                cur_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+                print(f"\t[{cur_time}]✅ Finished processing {qinfo['id']} with {node_embedding_model}")
+        except Exception as e:
+            cur_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            print(f"\t[{cur_time}]❌ Error processing {qinfo['id']} with {node_embedding_model}: {str(e)}")
+            continue
+
