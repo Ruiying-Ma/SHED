@@ -2,6 +2,10 @@ import re
 from structured_rag import SHTBuilderConfig, SHTBuilder, StructuredRAG
 import os
 import json
+from datetime import datetime
+import logging
+import logging_config
+import traceback
 
 def concat(list_of_str, concatenator) -> str:
     return concatenator.join([s.strip() for s in list_of_str if len(s.strip()) > 0])
@@ -337,92 +341,128 @@ def grobid2sht(dataset):
     assert os.path.exists(grobid_extraction_dir)
     grobid_clustering_dir = os.path.join(grobid_dir, "node_clustering")
     os.makedirs(grobid_clustering_dir, exist_ok=True)
+    sht_skeleton_dir = os.path.join(grobid_dir, "sbert.gpt-4o-mini.c100.s100", "sht_skeleton")
     sht_dir = os.path.join(grobid_dir, "sbert.gpt-4o-mini.c100.s100", "sht")
     sht_vis_dir = os.path.join(grobid_dir, "sbert.gpt-4o-mini.c100.s100", "sht_vis")
+    os.makedirs(sht_skeleton_dir, exist_ok=True)
     os.makedirs(sht_dir, exist_ok=True)
     os.makedirs(sht_vis_dir, exist_ok=True)
 
-    # build_tree_skeleton
-    for json_name in os.listdir(grobid_extraction_dir):
-        if os.path.exists(os.path.join(sht_dir, json_name)):
-            print(f"SHT skeleton for {json_name} is already existed.")
-            continue
-        print("Building SHT skeleton for", json_name)
-        assert json_name.endswith(".json")
-        grobid_extraction_path = os.path.join(grobid_extraction_dir, json_name)
-        assert os.path.exists(grobid_extraction_path)
-        with open(grobid_extraction_path, 'r') as file:
-            grobid = json.load(file)
+    # # build_tree_skeleton
+    # for json_name in os.listdir(grobid_extraction_dir):
+    #     if os.path.exists(os.path.join(sht_skeleton_dir, json_name)):
+    #         print(f"SHT skeleton for {json_name} is already existed.")
+    #         continue
+    #     print("Building SHT skeleton for", json_name)
+    #     assert json_name.endswith(".json")
+    #     grobid_extraction_path = os.path.join(grobid_extraction_dir, json_name)
+    #     assert os.path.exists(grobid_extraction_path)
+    #     with open(grobid_extraction_path, 'r') as file:
+    #         grobid = json.load(file)
     
-        objects = parse_grobid(grobid)
-        # store to node_clustering/
-        with open(os.path.join(grobid_clustering_dir, json_name), 'w') as file:
-            json.dump(objects, file, indent=4)
+    #     objects = parse_grobid(grobid)
+    #     # store to node_clustering/
+    #     with open(os.path.join(grobid_clustering_dir, json_name), 'w') as file:
+    #         json.dump(objects, file, indent=4)
 
-        sht_builder = SHTBuilder(
-            config=SHTBuilderConfig(
-                store_json=os.path.join(sht_dir, json_name),
-                load_json=None,
-                chunk_size=100,
-                summary_len=100,
-                embedding_model_name="sbert",
-                summarization_model_name="gpt-4o-mini",
-            )
-        )
-        sht_builder.build(objects)
-        sht_builder.check()
-        sht_builder.store2json()
-        sht_builder.visualize(vis_path=os.path.join(sht_vis_dir, json_name.replace(".json", ".vis")))
+    #     sht_builder = SHTBuilder(
+    #         config=SHTBuilderConfig(
+    #             store_json=os.path.join(sht_skeleton_dir, json_name),
+    #             load_json=None,
+    #             chunk_size=100,
+    #             summary_len=100,
+    #             embedding_model_name="sbert",
+    #             summarization_model_name="gpt-4o-mini",
+    #         )
+    #     )
+    #     logging.info(f"Built SHT skeleton for {json_name}")
+    #     sht_builder.build(objects)
+    #     sht_builder.check()
+    #     sht_builder.store2json()
+    #     sht_builder.visualize(vis_path=os.path.join(sht_vis_dir, json_name.replace(".json", ".vis")))
 
-    # add summaries and embeddings
-    for json_name in os.listdir(grobid_extraction_dir):
-        assert json_name.endswith(".json")
-        sht_path = os.path.join(sht_dir, json_name)
-        sht_builder = SHTBuilder(
-            config=SHTBuilderConfig(
-                store_json=sht_path,
-                load_json=sht_path,
-                chunk_size=100,
-                summary_len=100,
-                embedding_model_name="sbert",
-                summarization_model_name="gpt-4o-mini",
-            )
-        )
-        sht_builder.build(None)
-        sht_builder.check()
-        sht_builder.add_summaries()
-        sht_builder.check()
-        node_ids = list(range(len(sht_builder.tree["nodes"])))
-        sht_builder.add_embeddings(node_ids)
-        # sht_builder.store2json()
-        with open(sht_builder.store_json, 'w') as file:
-            json.dump(sht_builder.tree, file, indent=4)
+    # # add summaries and embeddings
+    # for json_name in os.listdir(grobid_extraction_dir):
+    #     try:
+    #         assert json_name.endswith(".json")
+    #         sht_skeleton_path = os.path.join(sht_skeleton_dir, json_name)
+    #         sht_path = os.path.join(sht_dir, json_name)
+    #         sht_builder = SHTBuilder(
+    #             config=SHTBuilderConfig(
+    #                 store_json=sht_path,
+    #                 load_json=sht_skeleton_path,
+    #                 chunk_size=100,
+    #                 summary_len=100,
+    #                 embedding_model_name="sbert",
+    #                 summarization_model_name="gpt-4o-mini",
+    #             )
+    #         )
+    #         logging.info(f"Processing {json_name} with sbert")
+    #         sht_builder.build(None)
+    #         sht_builder.check()
+    #         logging.info(f"\tAdding summaries for {json_name}")
+    #         sht_builder.add_summaries()
+    #         sht_builder.check()
+    #         node_ids = list(range(len(sht_builder.tree["nodes"])))
+    #         logging.info(f"\tAdding embeddings for {json_name}")
+    #         sht_builder.add_embeddings(node_ids)
+    #         sht_builder.store2json()
+    #         with open(sht_builder.store_json, 'w') as file:
+    #             json.dump(sht_builder.tree, file, indent=4)
+
+    #         cur_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    #         print(f"\t[{cur_time}]✅ Finished processing {json_name} with sbert")
+    #     except Exception as e:
+    #         cur_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    #         print(f"\t[{cur_time}]❌ Error processing {json_name} with sbert: {str(e)}")
+    #         continue
 
 
+    # index / generate context for queries
     root_dir = os.path.dirname(grobid_dir)
     queries_path = os.path.join(root_dir, "queries.json")
     with open(queries_path, 'r') as file:
         queries_info = json.load(file)
 
     for qid, query_info in enumerate(queries_info):
-        rag = StructuredRAG(
-            root_dir=grobid_dir,
-            chunk_size=100,
-            summary_len=100,
-            node_embedding_model="sbert",
-            query_embedding_model="sbert",
-            summarization_model="gpt-4o-mini",
-            embed_hierarchy=True,
-            distance_metric="cosine",
-            context_hierarchy=True,
-            context_raw=True,
-            context_len=1000
-        )
-        rag.generate_context(
-            name=query_info["file_name"],
-            query=query_info["query"],
-            query_id=qid,
-        )
+        file_name = query_info["file_name"]
+        cur_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        print(f"[{cur_time}] Processing {qid}...")
+        try:
+            sht_path = f"/home/ruiying/SHTRAG/data/{dataset}/grobid/sbert.gpt-4o-mini.c100.s100/sht/{file_name}.json"
+            assert os.path.exists(sht_path), f"No SHT: {sht_path} doesn't exist"
+            rag = StructuredRAG(
+                root_dir=grobid_dir,
+                chunk_size=100,
+                summary_len=100,
+                node_embedding_model="sbert",
+                query_embedding_model="sbert",
+                summarization_model="gpt-4o-mini",
+                embed_hierarchy=True,
+                distance_metric="cosine",
+                context_hierarchy=True,
+                context_raw=True,
+                context_len=1000
+            )
+            ### index
+            rag.index(
+                name=query_info["file_name"],
+                query=query_info["query"],
+                query_id=qid,
+            )
+            ### generate context
+            # rag.generate_context(
+            #     name=query_info["file_name"],
+            #     query=query_info["query"],
+            #     query_id=qid,
+            # )
+            cur_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            print(f"\t[{cur_time}]✅ Finished processing {qid} with sbert")
+        except Exception as e:
+            cur_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            print(f"\t[{cur_time}]❌ Error processing {qid}: {e}\n{traceback.print_exc()}")
+            continue
+            
 
 if __name__ == "__main__": 
-    grobid2sht("qasper")
+    grobid2sht("finance")
