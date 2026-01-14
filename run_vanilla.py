@@ -8,7 +8,9 @@ from scipy import spatial
 import numpy as np
 from transformers import DPRQuestionEncoderTokenizer, DPRQuestionEncoder
 from dotenv import load_dotenv
-from openai import OpenAI
+from openai import AzureOpenAI
+from datetime import datetime
+import logging_config
 
 class CustomQAModel(BaseQAModel):
     def __init__(self):
@@ -64,8 +66,13 @@ class MyTE3SmallEmbeddingModel(BaseEmbeddingModel):
     def __init__(self, model_name="text-embedding-3-small"):
         self.model_name = model_name
         self.client = None
-        load_dotenv(os.path.join(os.path.dirname(os.path.abspath(__file__)), '.env'))
-        self.client = OpenAI(api_key=os.getenv("API_KEY"))
+        load_dotenv(os.path.join(os.path.dirname(os.path.abspath(__file__)), "raptor", '.env'))
+        # self.client = OpenAI(api_key=os.getenv("API_KEY"))
+        self.client = AzureOpenAI(
+            api_version=os.getenv("AZURE_API_VERSION"),
+            azure_endpoint=os.getenv("AZURE_ENDPOINT"),
+            api_key=os.getenv("AZURE_API_KEY")
+        )
         self.time = 0.0
 
     @retry(wait=wait_random_exponential(min=1, max=20), stop=stop_after_attempt(6))
@@ -97,6 +104,14 @@ def index(
     index_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", dataset, "baselines", f"{node_embedding_model}.{summarization_model}.c{chunk_size}.s{summary_len}/{query_embedding_model}.{distance_metric}.raptor{int(is_raptor)}", "index.jsonl")
     os.makedirs(os.path.dirname(index_path), exist_ok=True)
 
+    existed_index_ids = list()
+    if os.path.exists(index_path):
+        with open(index_path, 'r') as file:
+            for l in file:
+                index_id = json.loads(l)["id"]
+                assert f"Duplicate index id: {index_id}"
+            existed_index_ids.append(index_id)
+
     custom_summarizer = CustomSummarizationModel()
     if query_embedding_model == "sbert":
         custom_embedder = MySBertEmbeddingModel()
@@ -115,45 +130,68 @@ def index(
         tb_cluster_embedding_model="empty"
     )
 
-    for query_info in queries:
+    for query_info in queries[1:]:
+        cur_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        print(f"[{cur_time}] Processing {query_info['id']}...")
+        
+        if query_info["id"] in existed_index_ids:
+            cur_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            print(f"\t[{cur_time}]⚠️ Skipping {query_info['id']}")
+            continue
+
         pickle_name = query_info["file_name"] + ".pkl"
         
-        RA = RetrievalAugmentation(config=custom_RAConfig, tree=os.path.join(raptor_tree_dir, pickle_name))
+        
+        try:
+            raptor_path = os.path.join(raptor_tree_dir, pickle_name)
+            assert os.path.exists(raptor_path), f"No SHT: {raptor_path} doesn't exist"
+        
+            RA = RetrievalAugmentation(config=custom_RAConfig, tree=os.path.join(raptor_tree_dir, pickle_name))
 
-        leaf_node_keys = RA.tree.leaf_nodes.keys() # Dict[int, Node]
+            leaf_node_keys = RA.tree.leaf_nodes.keys() # Dict[int, Node]
 
-        leaf_nodes = sorted([l for l in RA.tree.all_nodes.values() if l.index in leaf_node_keys], key=lambda leaf: leaf.index) # List[Node]
+            leaf_nodes = sorted([l for l in RA.tree.all_nodes.values() if l.index in leaf_node_keys], key=lambda leaf: leaf.index) # List[Node]
 
-        assert list(range(len(leaf_nodes))) == [l.index for l in leaf_nodes]
+            assert list(range(len(leaf_nodes))) == [l.index for l in leaf_nodes]
 
-        print(query_embedding_model, leaf_nodes[0].embeddings.keys())
-        assert all([query_embedding_model in l.embeddings.keys() for l in leaf_nodes])
+            print(query_embedding_model, leaf_nodes[0].embeddings.keys())
+            assert all([query_embedding_model in l.embeddings.keys() for l in leaf_nodes])
 
-        embeddings = [l.embeddings[query_embedding_model] for l in leaf_nodes]
+            embeddings = [l.embeddings[query_embedding_model] for l in leaf_nodes]
 
-        query_embedding = custom_embedder.create_embedding(query_info["query"])
+            query_embedding = custom_embedder.create_embedding(query_info["query"])
 
-        distance_metric = spatial.distance.cosine
+            distance_metric = spatial.distance.cosine
 
-        distances = [distance_metric(query_embedding, embedding) for embedding in embeddings]
+            distances = [distance_metric(query_embedding, embedding) for embedding in embeddings]
 
-        indexes = np.argsort(distances)
+            indexes = np.argsort(distances)
 
-        assert len(indexes) == len(leaf_nodes)
-        assert set(indexes) == set(range(len(leaf_nodes)))
+            assert len(indexes) == len(leaf_nodes)
+            assert set(indexes) == set(range(len(leaf_nodes)))
 
-        index_info = {
-            "id": query_info["id"],
-            "indexes": [int(i) for i in indexes]
-        }
-        with open(index_path, 'a') as file:
-            file.write(json.dumps(index_info) + "\n")
+            index_info = {
+                "id": query_info["id"],
+                "indexes": [int(i) for i in indexes]
+            }
+            with open(index_path, 'a') as file:
+                file.write(json.dumps(index_info) + "\n")
+
+            existed_index_ids.append(query_info['id'])
+
+            cur_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            print(f"\t[{cur_time}]✅ Finished processing {query_info['id']} with {node_embedding_model}")
+
+        except Exception as e:
+            cur_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            print(f"\t[{cur_time}]❌ Error processing {query_info['id']} with {node_embedding_model}: {str(e)}")
+            continue
 
 
 
 if __name__ == "__main__":
     for query_embedding_model in ["sbert", "dpr", "te3small"]:
         index(
-            dataset='qasper',
+            dataset='finance',
             query_embedding_model=query_embedding_model
         )
