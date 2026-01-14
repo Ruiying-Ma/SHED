@@ -5,10 +5,12 @@ from rank_bm25 import BM25Okapi
 from raptor import RetrievalAugmentationConfig, RetrievalAugmentation, BaseSummarizationModel, BaseEmbeddingModel, BaseQAModel
 import os
 from structured_rag.utils import get_nondummy_ancestors
-from structured_rag import SHTGenerator, SHTGeneratorConfig
+from structured_rag import SHTGenerator, SHTGeneratorConfig, get_context_len
 from run_raptor import generate_context as raptor_generate_context
 import logging
-logging.disable(logging.CRITICAL)
+import logging_config
+logging.disable(logging.INFO)
+from datetime import datetime
 
 def bm25_indexer(chunks: List[str], query: str) -> List[int]:
     '''
@@ -110,9 +112,9 @@ def get_context_path(
         is_raptor,
     )
     if not is_baseline:
-        context_path = os.path.join(os.path.dirname(index_path), f"{context_len}.l{int(context_raw)}.h{int(context_hierarchy)}", "context.jsonl")
+        context_path = os.path.join(os.path.dirname(index_path), f"l{int(context_raw)}.h{int(context_hierarchy)}", f"context{context_len}", "context.jsonl")
     else:
-        context_path = os.path.join(os.path.dirname(index_path), f"{context_len}.o{int(is_ordered)}", "context.jsonl")
+        context_path = os.path.join(os.path.dirname(index_path), f"o{int(is_ordered)}", f"context{context_len}", "context.jsonl")
 
     os.makedirs(os.path.dirname(context_path), exist_ok=True)
     return context_path
@@ -254,6 +256,7 @@ def index(
     is_raptor,
     is_ordered,
 ):  
+    print("Indexing")
     index_path = get_index_path(
         dataset,
         chunk_size,
@@ -266,32 +269,58 @@ def index(
         is_raptor,
     )
 
-    if os.path.exists(index_path):
-        return
+    os.makedirs(os.path.dirname(index_path), exist_ok=True)
+
     
     queries_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", dataset, "queries.json")
     with open(queries_path, 'r') as file:
         queries = json.load(file)
 
+
+    existing_query_ids = list()
+    if os.path.exists(index_path):
+        with open(index_path, 'r') as file:
+            for l in file:
+                index_id = (json.loads(l))["id"]
+                assert index_id not in existing_query_ids, f"Duplicate query id: {index_id}"
+                existing_query_ids.append(index_id)
+    
+
     for query_info in queries:
         query = query_info["query"]
         query_id = query_info["id"]
         name = query_info["file_name"]
-        tree = get_tree(
-            dataset,
-            name,
-            chunk_size,
-            summary_len,
-            summarization_model,
-            is_intrinsic,
-            is_baseline,
-        )
-        if not is_baseline:
-            index_info = index_sht(query, query_id, tree, embed_hierarchy)
-        else:
-            index_info = index_raptor(query, query_id, tree, is_raptor) 
-        with open(index_path, 'a') as file:
-            file.write(json.dumps(index_info) + "\n")
+        if query_id in existing_query_ids:
+            cur_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            print(f"\t[{cur_time}]⚠️ Skipping {query_info['id']}")
+            continue
+
+        cur_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        print(f"[{cur_time}] Processing {query_info['id']}...")
+        try:
+            tree = get_tree(
+                dataset,
+                name,
+                chunk_size,
+                summary_len,
+                summarization_model,
+                is_intrinsic,
+                is_baseline,
+            )
+            if not is_baseline:
+                index_info = index_sht(query, query_id, tree, embed_hierarchy)
+            else:
+                index_info = index_raptor(query, query_id, tree, is_raptor) 
+            with open(index_path, 'a') as file:
+                file.write(json.dumps(index_info) + "\n")
+            existing_query_ids.append(query_id)
+            cur_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            print(f"\t[{cur_time}]✅ Finished processing {query_info['id']} with is_baseline={is_baseline} is_raptor={is_raptor}")
+        except Exception as e:
+            cur_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            print(f"\t[{cur_time}]✅ Finished processing {query_info['id']} with is_baseline={is_baseline} is_raptor={is_raptor}")
+            continue
+
 
 def generate_context(
     dataset,
@@ -324,9 +353,18 @@ def generate_context(
         is_ordered,
     )
 
+    # if os.path.exists(context_path):
+    #     logging.debug(f"Context file already existed: {context_path}!")
+    #     return
 
+    existing_query_ids = list()
     if os.path.exists(context_path):
-        return
+        with open(context_path, 'r') as file:
+            for l in file:
+                context_info = json.loads(l)
+                query_id = context_info["id"]
+                assert query_id not in existing_query_ids
+                existing_query_ids.append(context_info["id"])
 
     if not is_baseline:
         queries_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", dataset, "queries.json")
@@ -353,13 +391,24 @@ def generate_context(
 
         for index_info, query_info in zip(indexes, queries):
             assert index_info["id"] == query_info["id"]
+            
+            if query_info["id"] in existing_query_ids:
+                print(f"\tquery_id {query_id} already has context, skip!")
+                continue
+
             query = query_info["query"]
             query_id = query_info["id"]
             name = query_info["file_name"]
+            true_context_len = get_context_len(
+                context_ratio=context_len,
+                dataset=dataset,
+                sht_json_filename=name,
+                min_context_len=round(max(chunk_size, summary_len) * 1.5)
+            )
             generator_config = SHTGeneratorConfig(
                 use_hierarchy=context_hierarchy,
                 use_raw_chunks=context_raw,
-                context_len=context_len
+                context_len=true_context_len
             )
             generator = SHTGenerator(config=generator_config)
             sht = get_tree(
@@ -379,6 +428,8 @@ def generate_context(
                 "id": query_id,
                 "context": context
             }
+            assert query_id not in existing_query_ids
+            existing_query_ids.append(query_id)
             with open(context_path, 'a') as file:
                 file.write(json.dumps(context_info) + "\n")
     else:
@@ -386,7 +437,8 @@ def generate_context(
             dataset=dataset,
             query_embedding_model="bm25",
             is_ordered=is_ordered,
-            is_raptor=is_raptor
+            is_raptor=is_raptor,
+            context_len=context_len,
         )
 
 
@@ -401,26 +453,13 @@ if __name__ == "__main__":
     context_raw = True
     context_len = 1000
     is_intrinsic = False
-    is_baseline = True
-    for is_raptor in [True, False]:
-        dataset = "qasper"
-        index(
-            dataset,
-            chunk_size,
-            summary_len,
-            summarization_model,
-            embed_hierarchy,
-            distance_metric,
-            context_hierarchy,
-            context_raw,
-            context_len,
-            is_intrinsic,
-            is_baseline,
-            is_raptor,
-            is_ordered=None,
-        )
-        for is_ordered in [False, True]:
-            generate_context(
+    for is_baseline in [True, False]:
+        for is_raptor in [True, False]:
+            print(is_baseline, is_raptor)
+            if (is_baseline == False and is_raptor == False):
+                continue
+            dataset = "finance"
+            index(
                 dataset,
                 chunk_size,
                 summary_len,
@@ -433,5 +472,21 @@ if __name__ == "__main__":
                 is_intrinsic,
                 is_baseline,
                 is_raptor,
-                is_ordered,
+                is_ordered=None,
             )
+            # for is_ordered in [False, True]:
+            #     generate_context(
+            #         dataset,
+            #         chunk_size,
+            #         summary_len,
+            #         summarization_model,
+            #         embed_hierarchy,
+            #         distance_metric,
+            #         context_hierarchy,
+            #         context_raw,
+            #         context_len,
+            #         is_intrinsic,
+            #         is_baseline,
+            #         is_raptor,
+            #         is_ordered,
+            #     )
