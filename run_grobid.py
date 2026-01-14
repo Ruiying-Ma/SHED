@@ -429,7 +429,7 @@ def grobid2sht(dataset):
         cur_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         print(f"[{cur_time}] Processing {qid}...")
         try:
-            sht_path = f"/home/ruiying/SHTRAG/data/{dataset}/grobid/sbert.gpt-4o-mini.c100.s100/sht/{file_name}.json"
+            sht_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", dataset, "grobid", "sbert.gpt-4o-mini.c100.s100", "sht", f"{file_name}.json")
             assert os.path.exists(sht_path), f"No SHT: {sht_path} doesn't exist"
             rag = StructuredRAG(
                 root_dir=grobid_dir,
