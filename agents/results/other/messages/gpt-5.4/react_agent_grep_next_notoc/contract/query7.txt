@@ -1,0 +1,68 @@
+================================ Human Message =================================
+
+HYPOTHESIS:
+Permissible development of similar information: Receiving Party may independently develop information similar to Confidential Information.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_ekcX9xAmgUXuwpb15VlX7Exd)
+ Call ID: call_ekcX9xAmgUXuwpb15VlX7Exd
+  Args:
+    pattern: independently develop|independent(ly)? develop|similar information|Confidential Information|residuals|develop
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+b. N i h a di g  he  f eg i g,he  a ie   d h ld  i   c fide ce Confidential Information that was disclosed during term shall remain in effect indefinitely.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_gNIHOtDLFOMvuBVwmk7Y59qt)
+ Call ID: call_gNIHOtDLFOMvuBVwmk7Y59qt
+  Args:
+    pattern: independently develop|independent(ly)? develop|similar information|Confidential Information|residuals|develop
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+b. Therefore,the  Parties  shall  be  entitled  to  injunctive  relief  preventing  the  dissemination  of any Confidential Information in violation of the terms hereof.  Such injunctive relief shall be in addition to any other remedies available hereunder, whether at law or in equity.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_3bnMC3ZHYR0vMDWkw6eNfe0z)
+ Call ID: call_3bnMC3ZHYR0vMDWkw6eNfe0z
+  Args:
+    pattern: exceptions|public domain|already known|independently developed|developed independently|third party|no obligation
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+a.The Recipient can demonstrate was already known to the Recipient prior to the disclosure by the Discloser; or,
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_VuC7Bdv6v34PTJ85fQdkFvlr)
+ Call ID: call_VuC7Bdv6v34PTJ85fQdkFvlr
+  Args:
+    pattern: exceptions|public domain|already known|independently developed|developed independently|third party|no obligation
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+c.was received by the Recipient without breach of this Agreement from a third party without restriction as to the use and disclosure of the Di cl e Confidential Information; or,
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_9DQ25vaUWmbYk5HGSqZJTrQe)
+ Call ID: call_9DQ25vaUWmbYk5HGSqZJTrQe
+  Args:
+    pattern: exceptions|public domain|already known|independently developed|developed independently|third party|no obligation
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+d. was independently developed by the Recipient without use of the Di cl e Confidential Information;or
+
+================================== Ai Message ==================================
+
+Entailment

@@ -1,0 +1,102 @@
+================================ Human Message =================================
+
+QUERY:
+what future work is described?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_Zy9mvDyyb7hLpU3AQeyMgbjE)
+ Call ID: call_Zy9mvDyyb7hLpU3AQeyMgbjE
+  Args:
+    pattern: future work|future|in the future|we plan|plans for future|directions for future work|next step|next steps
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Automatically predicting the level of non- native English speakers given their written essays is an interesting machine learning problem. In this work I present the system balikasg that achieved the state-of-the- art performance in the CAp 2018 data sci- ence challenge among 14 systems. I detail the feature extraction, feature engineering and model selection steps and I evaluate how these decisions impact the system’s performance. The paper concludes with remarks for future work.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_OgcHL7Nn7ue222aFiRQlrxCH)
+ Call ID: call_OgcHL7Nn7ue222aFiRQlrxCH
+  Args:
+    pattern: future work|future|in the future|we plan|plans for future|directions for future work|next step|next steps
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1 Introduction
+Automatically predicting the level of English of non-native speakers from their written text is an interesting text mining task. Systems that per- form well in the task can be useful components for online, second-language learning platforms as well as for organisations that tutor students for this purpose. In this paper I present the system balikasg that achieved the state-of-the-art per- formance in the CAp 2018 data science challenge among 14 systems.  1 In order to achieve the best performance in the challenge, I decided to use a variety of features that describe an essay’s read- ability and syntactic complexity as well as its con- tent. For the prediction step, I found Gradient Boosted Trees, whose efficiency is proven in sev- eral data science challenges, to be the most effi- cient across a variety of classifiers. The rest of the paper is organized as follows: in Section 2 I frame the problem of language level as an ordinal classification problem and describe the available data. Section 3 presents the feature extaction and engineering techniques used. Sec- tion 4 describes the machine learning algorithms
+for prediction as well as the achieved results. Fi- nally, Section 5 concludes with discussion and av- enues for future research.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_YS6vSuNQlr56cJFMIXs5alsX)
+ Call ID: call_YS6vSuNQlr56cJFMIXs5alsX
+  Args:
+    pattern: future work|future|in the future|we plan|plans for future|directions for future work|next step|next steps
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_iIcW8pU8nsNzaiigP84eKgRG)
+ Call ID: call_iIcW8pU8nsNzaiigP84eKgRG
+  Args:
+    pattern: conclusion|conclusions|avenues for future research|discussion
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1 Introduction
+Automatically predicting the level of English of non-native speakers from their written text is an interesting text mining task. Systems that per- form well in the task can be useful components for online, second-language learning platforms as well as for organisations that tutor students for this purpose. In this paper I present the system balikasg that achieved the state-of-the-art per- formance in the CAp 2018 data science challenge among 14 systems.  1 In order to achieve the best performance in the challenge, I decided to use a variety of features that describe an essay’s read- ability and syntactic complexity as well as its con- tent. For the prediction step, I found Gradient Boosted Trees, whose efficiency is proven in sev- eral data science challenges, to be the most effi- cient across a variety of classifiers. The rest of the paper is organized as follows: in Section 2 I frame the problem of language level as an ordinal classification problem and describe the available data. Section 3 presents the feature extaction and engineering techniques used. Sec- tion 4 describes the machine learning algorithms
+for prediction as well as the achieved results. Fi- nally, Section 5 concludes with discussion and av- enues for future research.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_XvdUWc55lPW9uWcKXBL6171H)
+ Call ID: call_XvdUWc55lPW9uWcKXBL6171H
+  Args:
+    pattern: Section 5|5 .*
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1 Introduction
+Automatically predicting the level of English of non-native speakers from their written text is an interesting text mining task. Systems that per- form well in the task can be useful components for online, second-language learning platforms as well as for organisations that tutor students for this purpose. In this paper I present the system balikasg that achieved the state-of-the-art per- formance in the CAp 2018 data science challenge among 14 systems.  1 In order to achieve the best performance in the challenge, I decided to use a variety of features that describe an essay’s read- ability and syntactic complexity as well as its con- tent. For the prediction step, I found Gradient Boosted Trees, whose efficiency is proven in sev- eral data science challenges, to be the most effi- cient across a variety of classifiers. The rest of the paper is organized as follows: in Section 2 I frame the problem of language level as an ordinal classification problem and describe the available data. Section 3 presents the feature extaction and engineering techniques used. Sec- tion 4 describes the machine learning algorithms
+for prediction as well as the achieved results. Fi- nally, Section 5 concludes with discussion and av- enues for future research.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_zfuwKelwzpPvVZs4Uw1dMaMG)
+ Call ID: call_zfuwKelwzpPvVZs4Uw1dMaMG
+  Args:
+    pattern: concludes with discussion and av- enues for future research|avenues for future research|Section 5 concludes
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1 Introduction
+Automatically predicting the level of English of non-native speakers from their written text is an interesting text mining task. Systems that per- form well in the task can be useful components for online, second-language learning platforms as well as for organisations that tutor students for this purpose. In this paper I present the system balikasg that achieved the state-of-the-art per- formance in the CAp 2018 data science challenge among 14 systems.  1 In order to achieve the best performance in the challenge, I decided to use a variety of features that describe an essay’s read- ability and syntactic complexity as well as its con- tent. For the prediction step, I found Gradient Boosted Trees, whose efficiency is proven in sev- eral data science challenges, to be the most effi- cient across a variety of classifiers. The rest of the paper is organized as follows: in Section 2 I frame the problem of language level as an ordinal classification problem and describe the available data. Section 3 presents the feature extaction and engineering techniques used. Sec- tion 4 describes the machine learning algorithms
+for prediction as well as the achieved results. Fi- nally, Section 5 concludes with discussion and av- enues for future research.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_n1EnBAsd5bhEXYeneHZOLdDB)
+ Call ID: call_n1EnBAsd5bhEXYeneHZOLdDB
+  Args:
+    pattern: 5 Conclusion|5 Conclusions|Conclusion and future work|Conclusions and future work
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+5 Conclusion
+In this work I presented the feature extraction, feature engineering and model evaluation steps I followed while developing balikasg for CAp 2018 that was ranked first among 14 other sys- tems. I evaluated the efficiency of the different feature groups and found that readbility and com- plexity scores as well as topic models to be effec- tive predictors.  Further, I evaluated the the effec- tiveness of different classification algorithms and found that Gradient Boosted Trees outperform the rest of the models in this problem.While in terms of accuracy the system per- formed excellent achieving 98.2% in the test data, the question raised is whether there are any types of biases in the process. For instance, topic distri- butions learned with LDA were valuable features.  One, however, needs to deeply investigate whether this is due to the expressiveness and modeling power of LDA or an artifact of the dataset used. In the latter case, given that the candidates are asked to write an essay given a subject ( Geertzen et al. , 2013 ) that depends on their level, the hypothesis that needs be studied is whether LDA was just a clever way to model this information leak in the given data or not.  I believe that further analy- sis and validation can answer this question if the topics of the essays are released so that validation splits can be done on the basis of these topics.
+
+================================== Ai Message ==================================
+
+Future work is to investigate possible biases in the process, especially whether the usefulness of LDA topic features comes from LDA’s modeling power or from information leakage in the dataset because essay subjects depend on learner level. The paper suggests further analysis and validation, using released essay topics so that validation splits can be done based on topics, to answer this question.

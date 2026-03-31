@@ -1,0 +1,79 @@
+================================ Human Message =================================
+
+QUERY:
+Did they pre-train on existing sentiment corpora?
+
+TABLE OF CONTENTS (TOC):
+1 | A system for the 2019 Sentiment, Emotion and Cognitive State Task of DARPA’s LORELEI project
+1.1 | I. I NTRODUCTION
+1.2 | II. P REVIOUS W ORK
+1.3 | III. P ROBLEM D EFINITION
+1.3.1 | A. The Sentiment, Emotion and Cognitive State (SEC) Task
+1.3.2 | B. Data
+1.3.3 | C. Evaluation
+1.4 | IV. M ETHOD
+1.4.1 | A. Machine Translation
+1.4.2 | B. Linguistic Features
+1.4.3 | C. Models
+1.5 | V. R ESULTS
+1.6 | VI. C ONCLUSION
+1.7 | R EFERENCES
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_all (call_bymtNj6q765UQwsFENENqi0W)
+ Call ID: call_bymtNj6q765UQwsFENENqi0W
+  Args:
+    pattern: pre-?train|sentiment corpora|existing sentiment|corpus|corpora
+
+================================= Tool Message =================================
+Name: grep_search_all
+
+1.4.2
+1.4.3
+1.5
+1.7
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_M89VibpFIG9zDVI9ZxXhF6Lb)
+ Call ID: call_M89VibpFIG9zDVI9ZxXhF6Lb
+  Args:
+    section_id: 1.4.2
+  read_section (call_IY9d9c4wCnniMGxOFQZ6demA)
+ Call ID: call_IY9d9c4wCnniMGxOFQZ6demA
+  Args:
+    section_id: 1.4.3
+  read_section (call_LcxelOtD6BgSyIPsbaVcq6RA)
+ Call ID: call_LcxelOtD6BgSyIPsbaVcq6RA
+  Args:
+    section_id: 1.5
+
+================================= Tool Message =================================
+Name: read_section
+
+B. Linguistic Features
+1) N-grams: We extract word unigrams and bigrams. These features were then transformed using term frequencies (TF) and Inverse document-frequency (IDF).2) Distributed Semantics: Word embeddings pretrained on large corpora allow models to efficiently leverage word seman- tics as well as similarities between words. This can help with vocabulary generalization as models can adapt to words not previously seen in training data.  In our feature set we include a 300-dimensional word2vec word representation trained on a large news corpus [37]. We obtain a representation for each segment by averaging the embedding of each word in the segment. We also experimented with the use of GloVe [38], and Sent2Vec [39], an extension of word2vec for sentences.3) Sentiment Features: We use two sources of sentiment features: manually constructed lexica, and pre-trained sen- timent embeddings.  When available, manually constructed lexica are a useful resource for identifying expressions of sentiment [22]. We obtained word percentages across 192 lexical categories using Empath [40], which extends popular tools such as the Linguistic Inquiry and Word Count (LIWC) [23] and General Inquirer (GI) [41] by adding a wider range of lexical categories. These categories include emotion classes such as surprise or disgust. Neural networks have been shown to capture specific task related subtleties which can complement the manually con- structed sentiment lexica described in the previous subsection. For this work, we learn sentiment representations using a bilateral Long Short-Term Memory model [42] trained on the Stanford Sentiment Treebank [43].  This model was selected because it provided a good trade off between simplicity and performance on a fine-grained sentiment task, and has been shown to achieve competitive results to the state-of-the-art [44].
+
+================================= Tool Message =================================
+Name: read_section
+
+C. Models
+We now describe the models used for this work. Our models can be broken down into two groups: our first approach explores state-of-the-art models in targeted and untargeted sentiment analysis to evaluate their performance in the context of the SEC task. These models were pre-trained on larger corpora and evaluated directly on the task without any further adaptation. In a second approach we explore a data augmenta- tion technique based on a proposed simplification of the task.  In this approach, traditional machine learning classifiers were trained to identify which segments contain sentiment towards a SF regardless of sentiment polarity. For the classifiers, we explored the use of Support Vector Machines and Random Forests. Model performance was estimated through 10-fold cross validation on the train set. Hyper-parameters, such as of regularization, were selected based on the performance on grid-search using an 10-fold inner-cross validation loop. After choosing the parameters, models were re-trained on all the available data. 1) Baselines : We consider some of the most popular base- line models in the literature: (i) minority class baseline (due to the heavily imbalanced dataset), (ii) Support Vector Machines trained on TF-IDF bi-gram language model, (iii) and Support Vector Machines trained on word2vec representations. These models were trained using English documents only. 2) Model I: Pretrained Sentiment Classifiers : Two types of targeted sentiment are evaluated for the task: those ex- pressed towards either a situation frame or those towards an entity. To identify sentiment expressed towards an SF, we use the pretrained model described in [45], in which a multiplica- tive LSTM cell is trained at the character level on a corpus of 82 million Amazon reviews. The model representation is then fed to a logistic regression classifier to predict sentiment.  This model (which we will refer to as OpenAI) was chosen since at the time of our system submission it was one of the top three performers on the binary sentiment classification task on the Stanford Sentiment Treebank. In our approach, we first map the text associated with the SF annotation with a segment from the document and pass the full segment to the pretrained OpenAI model identify the sentiment polarity for that segment. To identify sentiment targeted towards an entity, we use the recently released Target-Based Sentiment Analysis (TBSA) model from [46]. In TBSA, two stacked LSTM cells are trained to predict both sentiment and target boundary tags (e.g., predicting S-POS to indicate the start of the target towards which the author is expressing positive sentiment, I-POS and E-POS to indicate intermediate and end of the target).  In our submission, since input text documents can be arbitrarily long, we only consider sentences which include a known and relevant entity; these segments are then fed to the TBSA model to predict targeted sentiment. If the target predicted by this model matched with any of the known entities, the system would output the polarity and the target.3) Model IIa: Simplifying the Task : In this model we limit our focus on the task of correctly identifying those segments with sentiment towards a SF.  That is, given a pair of SF and segment, we train models to identify if this segment contains any sentiment towards that SF. This allows us to expand our dataset from 123 documents into one with P d | SF d | × | d | number of samples, where | d | is the length of the document (i.e., number of segments) and | SF d | is the number of SF annotations for document d .  Summary of the training dataset after augmentation is given in Table III.Given the highly skewed label distribution in the training data, a majority of the constructed pairs do not have any sentiment towards a SF. Hence, our resulting dataset has a highly imbalanced distribution which we address by training our models after setting the class weights to be the inverse class frequency. To predict polarity, we assume the majority class of negative sentiment.  We base this assumption on the fact that the domain we are working with doesn’t seem to support the presence of positive sentiment, as made evident by the highly imbalanced dataset.4) Model IIb: Domain-specific models : Owing to the nature of the problem domain, there is considerable variance
+ TABLE III F REQUENCY STATISTICS FOR THE TRAIN DATASET AFTER AUGMENTATION #(SF × Segments) With Sentiment Total English 5751 285 6030 Spanish 1232 132 1364 TABLE IV T RAIN DATASET DOMAIN BREAK - DOWN English Neg Pos Tweet 85 16 Others 204 43 Total 289 59 Spanish Neg Pos Tweet 47 1 Others 98 12 Total 145 13
+ in the source of the text documents and their structure. For example, tweets only have one segment per sample whereas news articles contain an average of 7 . 07 ± 4 . 96 and 6 . 31 ± 4 . 93 segments for English and Spanish documents respectively. Moreover, studies suggest that sentiments expressed in social media tend to differ significantly from those in the news [27].  Table IV presents a breakdown of the train set for each sentiment across domains, as is evident tweets form a sizeable group of the training set. Motivated by this, we train different models for tweets and non-tweet documents in order to capture the underlying differences between the data sources.5) Model IIc: Twitter-only model : Initial experiments showed that our main source of error was not being able to correctly identify the supporting segment.  Even if polar- ity, source and target were correctly identified, missing the correct segment was considered an error, and thus lowered our models’ precision. To address this, we decided to use a model which only produced results for tweets given that these only contain one segment, making the segment identification sub-task trivial.
+
+================================= Tool Message =================================
+Name: read_section
+
+V. R ESULTS
+Model performance during train is presented in Table V. While all the models outperformed the baselines, not all of them did so with a significant margin due to the robustness of the baselines selected. The ones found to be significantly better than the baselines were models IIb (Domain-specific) and IIc (Twitter-only) (permutation test, n = 10 5 both p < 0 . 05 ).  The difference in precision between model IIb and IIc points out to the former making the wrong predictions for news articles. These errors are most likely in selecting the wrong supporting segment. Moreover, even though models IIa-c only produce negative labels, they still achieve improved performance over the state-of-the-art systems, highlighting the highly skewed nature of the training dataset.Table VI present the official evaluation results for English and Spanish.  Some information is missing since at the time of submission only partial score had been made public. As previously mentioned, the pre-trained state-of-the-art mod- els (model I) were directly applied to the evaluation data without any adaptation. These performed reasonably well for the English data. Among the submissions of the SEC Task
+TABLE V M ODEL PERFORMANCE ON E NGLISH TRAIN DATA ESTIMATED USING 10- FOLD CV
+Model Prec Recall F1 Minority 0.04 1. 00 0.08 SVM tfidf 0.69 0.12 0.21 SVM W2V 0.10 0.38 0.16 Model IIa 0.42 0.17 0.24 Model IIb 0.92 0.22 0.36 Model IIc 1.00 0.22 0.36
+ TABLE VI O FFICIAL E VALUATION R ESULTS FOR E NGLISH AND S PANISH . D ASHES DENOTE MISSING INFORMATION ( NOT REPORTED )
+Polarity Eng Spa Team 1 0.33 0.02 Team 2 0.03 0.04 Model I 0.20 - Model IIa 0.03 0.05 Model IIb 0.32 0.35 Model IIc 0.36 0. 39
+pilot, our systems outperformed the other competitors for both languages.
+
+================================== Ai Message ==================================
+
+Yes. They used pre-trained sentiment models, including a BiLSTM trained on the Stanford Sentiment Treebank and a character-level multiplicative LSTM trained on 82 million Amazon reviews, and these larger-corpus models were applied without further adaptation.

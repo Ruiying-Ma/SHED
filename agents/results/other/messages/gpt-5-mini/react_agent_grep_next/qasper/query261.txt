@@ -1,0 +1,57 @@
+================================ Human Message =================================
+
+QUERY:
+How slow is the unparallelizable ART model in the first place?  
+
+TABLE OF CONTENTS (TOC):
+1 | Hint-Based Training for Non-Autoregressive Machine Translation Zhuohan Li 1 Zi Lin 2,3 Di He 2 Fei Tian 4 Tao Qin 5 Liwei Wang 2 Tie-Yan Liu 5 1 UC Berkeley 2 Peking University 3 Google AI 4 Facebook 5 Microsoft Research zhuohan@cs.berkeley.edu { zi.lin, di he, wanglw } @pku.edu.cn feitia@fb.com { taoqin, tyliu } @microsoft.com
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2 Approach
+1.3.1 | 2.1 Observation: Illed States and Attentions
+1.3.2 | 2.2 Hints from the ART teacher Model
+1.4 | 3 Experiments
+1.4.1 | 3.1 Experimental Settings
+1.4.2 | 3.2 Inference
+1.4.3 | 3.3 Experimental Results
+1.5 | 4 Conclusion
+1.6 | Acknowledgment
+1.7 | References
+1.8 | Appendix
+1.8.1 | A Related Works
+1.8.1.1 | A.1 AutoRegressive Translation
+1.8.1.2 | A.2 Non-AutoRegressive Translation
+1.8.1.3 | A.3 Knowledge Distillation and Hint-Based Training
+1.8.2 | B Network Architecture
+1.8.3 | C Extra Experimental Settings
+1.8.4 | D Case Study
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_gJth9m7XuR8ad7qolJHRt7H2)
+ Call ID: call_gJth9m7XuR8ad7qolJHRt7H2
+  Args:
+    pattern: unparallelizable
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1 | Abstract
+Due to the unparallelizable nature of the autoregressive factorization, AutoRegressive Translation (ART) models have to generate tokens sequentially during decoding and thus suffer from high inference latency. Non- AutoRegressive Translation (NART) models were proposed to reduce the inference time, but could only achieve inferior translation ac- curacy. In this paper, we proposed a novel approach to leveraging the hints from hidden states and word alignments to help the training of NART models.  The results achieve signif- icant improvement over previous NART mod- els for the WMT14 En-De and De-En datasets and are even comparable to a strong LSTM- based ART baseline but one order of magni- tude faster in inference.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_0Tr5zAGE7fu1Kox4oTGJwgfz)
+ Call ID: call_0Tr5zAGE7fu1Kox4oTGJwgfz
+  Args:
+    pattern: order of magnitude
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.5 | 4 Conclusion
+In this paper, we proposed to use hints from a well-trained ART model to enhance the training of NART models. Our results on WMT14 En-De and De-En significantly outperform previous NART baselines, with one order of magnitude faster in inference than ART models. In the future, we will focus on designing new architectures and training methods for NART models to achieve comparable accuracy as ART models.
+
+================================== Ai Message ==================================
+
+It must generate tokens sequentially during decoding and thus suffers from high inference latency.

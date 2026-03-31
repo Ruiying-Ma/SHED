@@ -1,0 +1,90 @@
+================================ Human Message =================================
+
+QUERY:
+What is the machine learning method used to make the predictions?
+
+TABLE OF CONTENTS (TOC):
+1 | Event Representation Learning Enhanced with External Commonsense Knowledge
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2 Commonsense Knowledge Enhanced Event Representations
+1.3.1 | 2.1 Low-Rank Tensors for Event Embedding
+1.3.2 | 2.2 Intent Embedding
+1.3.3 | 2.3 Sentiment Embedding
+1.3.4 | 2.4 Joint Event, Intent and Sentiment Embedding
+1.4 | 3 Experiments
+1.4.1 | 3.1 Baselines
+1.4.2 | 3.2 Event Similarity Evaluation
+1.4.2.1 | 3.2.1 Hard Similarity Task
+1.4.2.2 | 3.2.2 Transitive Sentence Similarity
+1.4.2.3 | 3.2.3 Results
+1.4.2.4 | 3.2.4 Case Study
+1.4.3 | 3.3 Script Event Prediction
+1.4.4 | 3.4 Stock Market Prediction
+1.5 | 4 Related Work
+1.6 | 5 Conclusion
+1.7 | Acknowledgments
+1.8 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_73I9pBpEsxw34dhN97B1txst)
+ Call ID: call_73I9pBpEsxw34dhN97B1txst
+  Args:
+    pattern: predict|prediction|predictions|classifier|regression|SVM|logistic|neural|random forest
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1 | Abstract
+Prior work has proposed effective methods to learn event representations that can capture syntactic and semantic information over text corpus, demonstrating their effectiveness for downstream tasks such as script event predic- tion. On the other hand, events extracted from raw texts lacks of commonsense knowledge, such as the intents and emotions of the event participants, which are useful for distinguish- ing event pairs when there are only subtle dif- ferences in their surface realizations.  To ad- dress this issue, this paper proposes to leverage external commonsense knowledge about the intent and sentiment of the event. Experiments on three event-related tasks, i.e. , event simi- larity, script event prediction and stock mar- ket prediction, show that our model obtains much better event embeddings for the tasks, achieving 78% improvements on hard similar- ity task, yielding more precise inferences on subsequent events under given contexts, and better accuracies in predicting the volatilities of the stock market 1 .
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_bQ2CoBVMIX7DSLrQNUvUoM7I)
+ Call ID: call_bQ2CoBVMIX7DSLrQNUvUoM7I
+  Args:
+    section_id: 1.4.4
+
+================================= Tool Message =================================
+Name: read_section
+
+3.4 Stock Market Prediction
+It has been shown that news events influence the trends of stock price movements ( Luss and d’Aspremont , 2012 ). As news events affect hu- man decisions and the volatility of stock prices is influenced by human trading, it is reasonable to
+say that events can influence the stock market. In this section, we compare with several event- driven stock market prediction baseline methods: (1) Word , Luss and d’Aspremont ( 2012 ) use bag- of-words represent news events for stock predic- tion; (2) Event , Ding et al. ( 2014 ) represent events by subject-predicate-object triples for stock pre- diction; (3) NTN , Ding et al.  ( 2015 ) learn contin- ues event vectors for stock prediction; (4) KGEB , Ding et al. ( 2016 ) incorporate knowledge graph into event vectors for stock prediction.Experimental results are shown in Figure 5 . We find that knowledge-driven event embedding is a competitive baseline method, which incorporates world knowledge to improve the performances of event embeddings on the stock prediction.  Sen- timent is often discussed in predicting stock mar- ket, as positive or negative news can affect peo- ple’s trading decision, which in turn influences the movement of stock market. In this study, we em- pirically show that event emotions are effective for improving the performance of stock prediction (+2.4%).
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_v2FazDP1cAGjngOUev0BCk2o)
+ Call ID: call_v2FazDP1cAGjngOUev0BCk2o
+  Args:
+    section_id: 1.4.3
+
+================================= Tool Message =================================
+Name: read_section
+
+3.3 Script Event Prediction
+Event is a kind of important real-world knowl- edge. Learning effective event representations can be benefit for numerous applications. Script event prediction ( Chambers and Jurafsky , 2008 ) is a challenging event-based commonsense reasoning task, which is defined as giving an existing event context, one needs to choose the most reasonable subsequent event from a candidate list.Following Li et al.  ( 2018a ), we evaluate on the standard multiple choice narrative cloze (MCNC) dataset ( Granroth-Wilding and Clark , 2016 ). As SGNN proposed by Li et al. ( 2018a ) achieved state-of-the-art performances for this task, we
+Figure 5: Experimental results on S&P 500 index pre- diction. “+Int” means that we encode the intent infor- mation into the original event embeddings. use the framework of SGNN, and only replace their input event embeddings with our intent and sentiment-enhanced event embeddings.Wang et al. ( 2017 ) and Li et al. ( 2018a ) showed that script event prediction is a challenging prob- lem, and even 1% of accuracy improvement is very difficult. Experimental results shown in Ta- ble 3 demonstrate that we can achieve more than 1. 5% improvements in single model comparison and more than 1.4% improvements in multi-model integration comparison, just by replacing the in- put embeddings, which confirms that better event understanding can lead to better inference results. An interesting result is that the event embeddings only incorporated with intents achieved the best result against other baselines. This confirms that capturing people’s intents is helpful to infer their next plan.  In addition, we notice that the event embeddings only incorporated with sentiment also achieve better performance than SGNN. This is mainly because the emotional consistency does also contribute to predicate the subsequent event.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_DDBvLRi96o0TSNvRCNA1OGh7)
+ Call ID: call_DDBvLRi96o0TSNvRCNA1OGh7
+  Args:
+    pattern: use the framework|baseline methods|stock prediction|SGNN|multiple choice narrative cloze
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.4.1 | 3.1 Baselines
+We compare the performance of our approach against a variety of event embedding models de-
+veloped in recent years. These models can be cat- egorized into three groups:
+• Averaging Baseline (Avg) This represents each event as the average of the constituent word vectors using pre-trained GloVe embed- dings ( Pennington et al., 2014 ).
+• Compositional Neural Network (Comp.NN) The distributed event representations are learned by concatenating the subject, predi- cate, and object embeddings into a two layer neural network ( Modi and Titov , 2013 ; Modi , 2016 ; Granroth-Wilding and Clark , 2016 ).
+• Element-wise Multiplicative Composition (EM Comp.) This method simply concate- nates the element-wise multiplications be- tween the verb and its subject/object.
+• Neural Tensor Network This line of work use tensors to learn the interactions between the predicate and its subject/object ( Ding et al., 2015 ; Weber et al. , 2018 ). Accord- ing to the different usage of tensors, we have three baseline methods: Role Factor Ten- sor ( Weber et al. , 2018 ) which represents the predicate as a tensor, Predicate Tensor ( Weber et al. , 2018 ) which uses two tensors learning the interactions between the predi- cate and its subject, and the predicate and its object, respectively, NTN ( Ding et al.  , 2015 ), which we used as the baseline event embed- ding model in this paper, and KGEB ( Ding et al. , 2016 ), which incorporates knowledge graph information in NTN.
+
+================================== Ai Message ==================================
+
+SGNN is used for script event prediction, with the paper using the framework of SGNN and replacing only its input event embeddings. For stock market prediction, the document does not specify a separate machine learning method beyond comparing event-driven baseline methods.

@@ -1,0 +1,71 @@
+================================ Human Message =================================
+
+QUERY:
+Is this more effective for low-resource than high-resource languages?
+
+TABLE OF CONTENTS (TOC):
+1 | Evaluating the Cross-Lingual Effectiveness of Massively Multilingual Neural Machine Translation
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2 Massively Multilingual Neural Machine Translation Model
+1.3.1 | 2.1 Model Architecture
+1.3.2 | 2.2 Pre-training
+1.3.3 | 2.3 Fine-tuning mNMT Encoder
+1.3.4 | 2.4 Differences with mBERT
+1.4 | 3 Experiments and Results
+1.4.1 | 3.1 XNLI: Cross-lingual NLI
+1.4.2 | 3.2 MLDoc: Document Classification
+1.4.3 | 3.3 Cross-lingual Intent Classification
+1.4.4 | 3.4 POS Tagging
+1.4.5 | 3.5 Named Entity Recognition
+1.5 | 4 Analysis
+1.6 | 5 Related Work
+1.7 | 6 Conclusion and Future Work
+1.8 | References
+1.9 | A Supplementary Material
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_PtTHjONFXdB7zXpUTOkdrE1P)
+ Call ID: call_PtTHjONFXdB7zXpUTOkdrE1P
+  Args:
+    pattern: low-resource|high-resource|low resource|high resource|more effective
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1 | Abstract
+The recently proposed massively multilin- gual neural machine translation (NMT) sys- tem has been shown to be capable of trans- lating over 100 languages to and from En- glish within a single model ( Aharoni et al. , 2019 ). Its improved translation performance on low resource languages hints at poten- tial cross-lingual transfer capability for down- stream tasks.  In this paper, we evaluate the cross-lingual effectiveness of representations from the encoder of a massively multilingual NMT model on 5 downstream classification and sequence labeling tasks covering a di- verse set of over 50 languages. We compare against a strong baseline, multilingual BERT (mBERT) ( Devlin et al. , 2018 ), in different cross-lingual transfer learning scenarios and show gains in zero-shot transfer in 4 out of these 5 tasks.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_3laEGkg26v7n1owhrNxaSoPZ)
+ Call ID: call_3laEGkg26v7n1owhrNxaSoPZ
+  Args:
+    pattern: low-resource|low resource
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1 | Abstract
+The recently proposed massively multilin- gual neural machine translation (NMT) sys- tem has been shown to be capable of trans- lating over 100 languages to and from En- glish within a single model ( Aharoni et al. , 2019 ). Its improved translation performance on low resource languages hints at poten- tial cross-lingual transfer capability for down- stream tasks.  In this paper, we evaluate the cross-lingual effectiveness of representations from the encoder of a massively multilingual NMT model on 5 downstream classification and sequence labeling tasks covering a di- verse set of over 50 languages. We compare against a strong baseline, multilingual BERT (mBERT) ( Devlin et al. , 2018 ), in different cross-lingual transfer learning scenarios and show gains in zero-shot transfer in 4 out of these 5 tasks.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_YfJRCHGQ8Z8tYpPS1a6Aj0cS)
+ Call ID: call_YfJRCHGQ8Z8tYpPS1a6Aj0cS
+  Args:
+    pattern: high-resource|high resource|high-resource languages|high resource languages
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.3.2 | 2.2 Pre-training
+Objective We train a massively multilingual NMT system which is capable of translating be- tween a large number of language pairs at the same time by optimizing the translation objective be- tween language pairs. To train such a multilingual system within a single model, we use the strat- egy proposed in ( Johnson et al. , 2017 ) which sug- gests prepending a target language token to every source sequence to be translated.  This simple and effective strategy enables us to share the encoder, decoder, and attention mechanisms across all lan- guage pairs.Data We train our multilingual NMT system on a massive scale, using an in-house corpus gener- ated by crawling and extracting parallel sentences from the web ( Uszkoreit et al. , 2010 ). This corpus contains parallel documents for 102 languages, to and from English, comprising a total of 25 billion sentence pairs.  The number of parallel sentences per language in our corpus ranges from around 35 thousand to almost 2 billion. Figure 1 illus- trates the data distribution for all 204 language pairs used to train the NMT model. Language ids for all the languages are also provided in supple- mentary material.Data sampling policy Given the wide distribu- tion of data across language pairs, we used a tem-
+1 https://github.com/google/sentencepiece
+ 2 The shorthand form (3.0, 40k) corresponds to a learning rate of 3.0, with 40k warm-up steps for the schedule, which is decayed with the inverse square root of the number of training steps after warm-up.baseline* mNMT baseline* mNMT ur-en 27.84 27.24 en-bg 31.31 29.36 mr-en 27.81 28.61 en-es 35. 23 34.35 be-en 24.23 24.66 en-sw 18.73 19.79 ru-en 26.54 26.56 en-pt 37.19 37.41 fr-en 37.49 34.02 en-hi 16.46 16.63
+Table 1: BLEU scores on ten language pairs with mNMT.  *baseline refers to a transformer based bilin- gual NMT model trained on only one language pair.perature based data balancing strategy. For a given language pair, l , let D l be the size of the available parallel corpus. Then if we adopt a naive strat- egy and sample from the union of the datasets, the probability of the sample being from language pair l will be p l = D l Σ l D l .  However, this strategy would starve low resource language pairs. To control for the ratio of samples from different language pairs, we sample a fixed number of sentences from the training data, with the probability of a sentence belonging to language pair l being proportional to p 1 T l , where T is the sampling temperature.  As a result, T = 1 would correspond to a true data dis- tribution, and, T = 100 yields an (almost) equal number of samples for each language pair (close to a uniform distribution with over-sampling for low-resource language-pairs). We set T = 5 for a balanced sampling strategy. To control the con- tribution of each language pair when constructing the vocabulary, we use the same temperature based sampling strategy with T = 5 .  Our SPM vocabu- lary has a character coverage of 0 . 999995 .Model quality We use BLEU score ( Papineni et al. , 2002 ) to evaluate the quality of our transla- tion model(s). Our mNMT model performs worse than the bilingual baseline on high resource lan- guage pairs but improves upon it on low resource language pairs.  The average drop in BLEU score on 204 language pairs as compared to bilingual baselines is just 0.25 BLEU. This is impressive considering we are comparing one multilingual model to 204 different bilingual models. Table 1 compares the BLEU scores achieved by mNMT to that of the bilingual baselines on 10 representative language pairs. 3 These scores are obtained on an internal evaluation set which contains around 5k examples per language pair.
+
+================================== Ai Message ==================================
+
+Yes: the mNMT model improves upon bilingual baselines for low-resource language pairs but performs worse than bilingual baselines on high-resource language pairs.

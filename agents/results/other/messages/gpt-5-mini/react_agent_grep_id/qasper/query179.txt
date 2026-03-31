@@ -1,0 +1,136 @@
+================================ Human Message =================================
+
+QUERY:
+What is the performance improvement of their method over state-of-the-art models on the used datasets? 
+
+TABLE OF CONTENTS (TOC):
+1 | Mitigating Annotation Artifacts in Natural Language Inference Datasets to Improve Cross-dataset Generalization Ability Guanhua Zhang 1 , 2 ∗ , Bing Bai 1 ∗ , Junqi Zhang 1 , Kun Bai 1 ,Conghui Zhu 2 , Tiejun Zhao 2 1 Cloud and Smart Industries Group, Tencent, China 2 Harbin Institute of Technology, China { guanhzhang,icebai,benjqzhang,kunbai } @tencent.com , { chzhu,tjzhao } @hit-mtlab.net
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2 Related Work
+1.4 | 3 Making Artifacts Unpredictable
+1.5 | 4 Experimental Results
+1.5.1 | 4.1 Evaluation Scheme
+1.5.2 | 4.2 Experiment Setup
+1.5.3 | 4.3 Can Artifacts Generalize Across Datasets?
+1.5.4 | 4.4 Debiasing Results
+1.6 | 5 Conclusion
+1.7 | References
+1.8 | A Detailed Assumptions and Proof of Theorem 1
+1.9 | B Experiment Setting
+1.9.1 | B.1 Hard-Easy Datasets Setting
+1.9.2 | B.2 Experiment Setup
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_all (call_W2JnxfoTFBwA3Xbiqkt3ToRj)
+ Call ID: call_W2JnxfoTFBwA3Xbiqkt3ToRj
+  Args:
+    pattern: state-?of-?the-?art|performance improvement|improvement over|over state-?of-?the-?art|% improvement|improve.*over|outperforms state-?of-?the-?art|our method.*state-?of-?the-?art
+
+================================= Tool Message =================================
+Name: grep_search_all
+
+1.4
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_tNHuki0pr8rmb0uPlQyaosqf)
+ Call ID: call_tNHuki0pr8rmb0uPlQyaosqf
+  Args:
+    section_id: 1.4
+
+================================= Tool Message =================================
+Name: read_section
+
+3 Making Artifacts Unpredictable
+Essentially speaking, the problem of the bias pat- tern is that the artifacts in hypotheses are dis- tributed differently among labels, so balancing them across labels may be a good solution to al- leviate the impacts ( Gururangan et al. , 2018 ).Based on the idea proposed by Zhang et al. ( 2019 ), we demonstrate that we can make artifacts in biased datasets balanced across different classes by assigning specific weights for every sample.  We refer the distribution of the acquired weighted dataset as artifact-balanced distribution . We con- sider a supervised NLI task, which is to predict the relationship label y given a sentence pair x , and we denote the hypothesis in x as h . Without loss of generality, we assume that the prior probability of different labels is equal, and then we have the following theorem.Theorem 1.  For any classifier f = f ( x, h ) , and for any loss function ∆( f ( x, h ) , y ) , if we use w = 1 P ( y | h ) as weight for every sample during train- ing, it’s equivalent to training with the artifact- balanced distribution.Detailed assumptions and the proof of the theo- rem is presented in Appendix A .  With the theorem, we can simply use cross predictions to estimate P ( y | h ) in origin datasets and use them as sample weights during training. The step-by-step proce-
+Algorithm 1: Artifact-balanced Learning Input : The dataset { x, h, y } and the number of fold K for cross prediction. Procedure : 01 Estimate P ( y | h ) for every sample by training classifiers and using K -fold cross-predicting strategy.  02 Obtain the weights w = 1 (1 − ǫ ) P ( y | h )+ ǫ for all samples and normalize the sum of the weights. 03 Train and validate models using w as the sample weights.dure for artifact-balanced learning is presented in Algorithm 1.However, it is difficult to precisely estimate the probability P ( y | h ) .  A minor error might lead to a significant difference to the weight, especially when the probability is close to zero. Thus, in practice, we use w = 1 (1 − ǫ ) P ( y | h )+ ǫ as sample weights during training in order to improve the robustness. We can find that as ǫ increases, the weights tend to be uniform, indicating that the de- biasing effect decreases as the smooth term grows.  Moreover, in order to keep the prior probabil- ity P ( Y ) unchanged, we normalize the sum of weights of the three labels to the same.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_all (call_pr0NJOI5rQtZACYzH9011mio)
+ Call ID: call_pr0NJOI5rQtZACYzH9011mio
+  Args:
+    pattern: state.?of.?the.?art|SOTA|state.?of.?art|outperforms|improv|improvement|better than|increase|gain|%|outperform|our method.*over|over.*state.?of.?the.?art
+
+================================= Tool Message =================================
+Name: grep_search_all
+
+1.1
+1.2
+1.3
+1.4
+1.5.1
+1.5.4
+1.6
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_chHDmyU1EM0wecVYjonNsC3B)
+ Call ID: call_chHDmyU1EM0wecVYjonNsC3B
+  Args:
+    section_id: 1.5.4
+
+================================= Tool Message =================================
+Name: read_section
+
+4.4 Debiasing Results
+Effectiveness of Debiasing Focusing on the re- sults when smooth equals 0 . 01 for SNLI and smooth equals 0 . 02 for MultiNLI, we observe that the AUC of Hyp for all testing sets are ap- proximately 0 . 5 , indicating Hyp ’s predictions are approximately equivalent to randomly guessing. Also, the gap between Hard and Easy for Norm significantly decreases comparing with the base- line.  With the smooth, we can conclude that our method effectively alleviates the bias pattern.With other smooth terms, our method still has more or less debiasing abilities. In those testing sets which are not neutral to the bias pattern, the AUC of Hyp always come closer to 0 . 5 compar- ing with the baseline with whatever smooth val- ues. Performances of Norm on Hard and Easy also come closer comparing with the baseline.  Norm trained with SNLI even exceed baseline in Hard with most smooth terms.From the results of Hyp , we can find a trend that the larger the smooth value is, the lower the level of debiasing is, while with a very small or even no smooth value, the AUC may be lower than 0 . 5 .  As mentioned before, we owe this to the imperfect estimation of P ( y | h ) , and we can conclude that a proper smooth value is a prerequisite for the best debiasing effect.Benefits of Debiasing Debiasing may improve models’ generalization ability from two aspects:
+(1) Mitigate the misleading effect of annotation artifacts. (2) Improve models’ semantic learning ability. When the annotation artifacts of the training set cannot be generalized to the testing set, which should be more common in the real-world, pre- dicting by artifacts may hurt models’ performance. Centering on the results of JOCI, in which the bias pattern of MultiNLI is misleading, we find that Norm trained with MultiNLI outperforms baseline after debiasing with all smooth values tested. Furthermore, debiasing can reduce models’ de- pendence on the bias pattern during training, thus force models to better learn semantic information to make predictions. Norm trained with SNLI exceed baseline in JOCI with smooth terms 0 . 01 and 0 . 1 . With larger smooth terms, Norm trained with both SNLI and MultiNLI exceeds baseline in SICK.  Given the fact that JOCI is almost neutral to artifacts in SNLI, and the bias pattern of both SNLI and MultiNLI are even predictive in SICK, we owe these promotions to that our method im- proves models’ semantic learning ability.As to other testing sets like SNLI, MMatch and MMismatch , we notice that the performance of Norm always decreases compared with the baseline.  As mentioned before, both SNLI and MultiNLI are prepared by Huamn Elicited , and their artifacts can be generalized across each other. We owe the drop to that the detrimental effect of mitigating the predictable bias pattern exceeds the beneficial effect of the improvement of semantic learning ability.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_zMTGr615aKzNLE5oWsLSNw9Y)
+ Call ID: call_zMTGr615aKzNLE5oWsLSNw9Y
+  Args:
+    section_id: 1.5.1
+
+================================= Tool Message =================================
+Name: read_section
+
+4.1 Evaluation Scheme
+Cross-dataset Testing We utilize SNLI ( Bowman et al. , 2015 ), MultiNLI ( Williams et al. , 2018 ), JOCI ( Zhang et al. , 2017 ) and SICK ( Marelli et al. , 2014 ) for cross-dataset testing.SNLI and MultiNLI are prepared by Human Elicited , in which workers are given a context and asked to produce hypotheses corresponding to labels.  SICK and JOCI are created by Human Judged , referring that hypotheses and premises are automatically paired while labels are generated by humans ( Poliak et al. , 2018 ). In order to maxi- mumly mitigate the impacts of annotation artifacts during evaluations, we train and validate models respectively on SNLI and MultiNLI and test on both SICK and JOCI. We also report models’ per-
+ Trainset Model Smooth Cross-dataset Testing Hard-Easy Testing Human Elicited Human Judged Hard Easy SNLI MMatch MMismatch SICK JOCI SNLI Hyp 0.000 0.4776 0.4968 0.5013 0.4923 0.5016 0.5190 0.4587 0.001 0.4779 0.4952 0.4924 0.4934 0. 5044 0.5242 0.4568 0.010 0.5318 0.5092 0.5097 0.5036 0.4961 0.5225 0.5375 0.100 0.7749 0.6009 0.6124 0.6060 0.5304 0.5179 0.8811 Baseline 0.8496 0. 6305 0.6399 0.6250 0.5080 0.4793 0.9755 Norm 0.000 76.61% 50.51% 51.50% 52.63% ∗ 44.15% 74.36% ∗ 77.72% 0.001 72.75% 45.05% 46.24% 48.25% 39. 68% 72.95% 72.65% 0.010 78.94% 54.53% 55.97% 52.68% ∗ 46.19% ∗ 75.38% ∗ 80.71% 0.100 83.57% 57.77% 60.37% 53.45% ∗ 47.84% ∗ 76.02% ∗ 87. 32% Baseline 86.98% 61.95% 64.00% 52.07% 45.63% 73.81% 93.52% MultiNLI Hyp 0.000 0.4647 0.4427 0.4429 0.4685 0.4874 0.4957 0.3998 0.001 0.4433 0.4174 0. 4152 0.4583 0.4933 0.4969 0.3534 0.010 0.4560 0.4562 0.4590 0.4723 0.4970 0.4992 0.4201 0.020 0.4741 0.4850 0.4957 0.5003 0.4969 0.5006 0. 4703 0.100 0.5711 0.6482 0.6596 0.5944 0.5208 0.5023 0.7619 Baseline 0.6483 0.7252 0.7253 0.6079 0.4587 0.4998 0.8915 Norm 0.000 52.06% 58.92% 60. 63% 52.99% 48.27% ∗ 56.80% 60.78% 0.001 53.90% 59.48% 60.50% 52.70% 45.67% ∗ 58.19% 60.61% 0.010 58.13% 62.82% 64.35% 54.17% 45.78% ∗ 61. 27% 64.18% 0.020 61.37% 66.68% 68.18% 57.20% ∗ 48.59% ∗ 62.21% 70.60% 0.100 64.16% 71.54% 72.77% 58.35% ∗ 48.81% ∗ 66.14% 76.28% Baseline 68. 49% 76.20% 76.38% 56.74% 41.18% 66.24% 84.92%
+Table 1: Evaluation Results of Hyp and Norm . Baseline refers to the model trained and validated without using weights. Hard , Easy refers to the Hard-Easy Testing generated from the testing set corresponding to the Trainset column. Results of Hyp are the average numbers of five runs with different random initialization.  We report AUC for Hyp and ACC for Norm . “*” indicates where normal-model are better than the baseline.formances on SNLI and MultiNLI.As to SNLI, we use the same partition as Bowman et al. ( 2015 ). For MultiNLI, we sepa- rately use two origin validation sets ( Matched and Mismatched ) as the testing sets for convenience, and refer them as MMatch and MMismatch .  We randomly select 10000 samples out of the origin training set for validation and use the rest for train- ing. As to JOCI, we use the whole “B” subsets for testing, whose premises are from SNLI-train while hypotheses are generated based on world knowl- edge ( Zhang et al. , 2017 ), and convert the score to NLI labels following Poliak et al. ( 2018 ).  As to SICK, we use the whole dataset for testing.Hard-Easy Testing To determine how biased the models are, we partition the testing set of SNLI and MMatch into two subsets: examples that the hypothesis-only model can be correctly classified as Easy and the rest as Hard as seen in Gururangan et al. ( 2018 ). More detailed informa- tion is presented in Appendix B.1 .
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_all (call_5pZeB04yUi8AFUyeUSOuA392)
+ Call ID: call_5pZeB04yUi8AFUyeUSOuA392
+  Args:
+    pattern: state-of-the-art
+
+================================= Tool Message =================================
+Name: grep_search_all
+
+No matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_all (call_lnZ6WjJO35VjY29ND4DaOjJD)
+ Call ID: call_lnZ6WjJO35VjY29ND4DaOjJD
+  Args:
+    pattern: state|state-?of|state.?of.?the.?art|SOTA|state of the art|stateoftheart|stateoftheart
+
+================================= Tool Message =================================
+Name: grep_search_all
+
+No matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_DDL6axSfeZVqb9ns5qwwG5rL)
+ Call ID: call_DDL6axSfeZVqb9ns5qwwG5rL
+  Args:
+    section_id: 1.6
+
+================================= Tool Message =================================
+Name: read_section
+
+5 Conclusion
+In this paper, we take a close look at the annota- tion artifacts in NLI datasets. We find that the bias pattern could be predictive or misleading in cross- dataset testing. Furthermore, we propose a debias- ing framework and experiments demonstrate that it can effectively mitigate the impacts of the bias pattern and improve the cross-dataset generaliza- tion ability of models. However, it remains an open problem that how we should treat the an- notation artifacts .  We cannot assert whether the bias pattern should not exist at all or it is actually some kind of nature. We hope that our findings will encourage more explorations on reliable eval- uation protocols for NLI models.
+
+================================== Ai Message ==================================
+
+Unanswerable

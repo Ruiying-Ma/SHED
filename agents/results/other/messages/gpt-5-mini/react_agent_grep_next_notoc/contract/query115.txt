@@ -1,0 +1,92 @@
+================================ Human Message =================================
+
+HYPOTHESIS:
+Notice on compelled disclosure: Receiving Party shall notify Disclosing Party in case Receiving Party is required by law, regulation or judicial process to disclose any Confidential Information.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_QI1qnBAShmXGIuhQKt1eVPp2)
+ Call ID: call_QI1qnBAShmXGIuhQKt1eVPp2
+  Args:
+    pattern: required by law
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_MggA81jO7uhmhot1mRN0Eb0a)
+ Call ID: call_MggA81jO7uhmhot1mRN0Eb0a
+  Args:
+    pattern: compel|compelled|compel*|judicial|court|process|required by law|required by|subpoena|legal process
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.  Confidential Information.The term “ Confidential Information ” means any and all tangible and intangible information disclosed to Receiver in oral, written, graphic, recorded, photographic, any machine-readable or in any other medium or form relating to the intellectual property, management, operations, products, inventions, suppliers, customers, financials of VIDAR or any present or contemplated project, contract or relationship between VIDAR and Receiver, including without limitation, any and all plans, Intellectual Property (defined below), know-how, computer programs, software (source and object code), algorithms, computer processing systems, techniques, methodologies, formulae, compilations of information, designs, drawings, schematics, analyses, evaluations, formulations, ingredients, samples, processes, machines, prototypes, mock-ups, product performance data, proposals, job notes, reports, records, specifications, manuals, supplier and customer lists and information, licenses, the prices it obtains or has obtained for the licensing of its software products and services, purchase and sales records, marketing information or any other information concerning the business and goodwill of VIDAR and any information which is identified as being of a confidential or proprietary nature or should be considered confidential under the circumstances.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_0KFu8mxvLQoR65NUgHqumvyv)
+ Call ID: call_0KFu8mxvLQoR65NUgHqumvyv
+  Args:
+    pattern: notify Disclosing|notify.*Disclos|notify.*VIDAR|notice.*disclos|notice.*VIDAR|notice.*Receiving|notify.*Receiving|Receiving Party shall notify
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_kInWuLpUz8vecvX0Ew56dVFg)
+ Call ID: call_kInWuLpUz8vecvX0Ew56dVFg
+  Args:
+    pattern: law, regulation|regulation or|by law, regulation|by law or regulation|by law|regulation
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+8.  Injunction.  Receiver acknowledges and agrees that:(i) the Confidential Information is proprietary to and valuable information of VIDAR; (ii) VIDAR derives economic value from the Confidential Information not being generally known to other persons who can obtain economic value from its disclosure or use; (iii) any disclosure or unauthorized use of the Confidential Information could cause irreparable harm and loss to VIDAR; and (iv) if this Agreement is breached, VIDAR can not be made whole by monetary damages.   Accordingly, VIDAR, in addition to any other remedy to which it may be entitled by law or in equity, shall be entitled to an injunction to prevent further breaches of this Agreement and to an order compelling specific performance of this Agreement.  Receiver shall reimburse VIDAR for all costs and expenses, including attorney’s fees, incurred by VIDAR in enforcing the obligations of Receiver.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_9a34nvnElTkrN9UpZkxECkoM)
+ Call ID: call_9a34nvnElTkrN9UpZkxECkoM
+  Args:
+    pattern: Disclosure required|required to disclose|required to disclose any Confidential Information|compelled to disclose|compelled
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_DMx1vfT8LbMrEh5OolyPxHHZ)
+ Call ID: call_DMx1vfT8LbMrEh5OolyPxHHZ
+  Args:
+    pattern: Disclosure by law|Disclosure pursuant|pursuant to law|court order|subpoena|governmental|government|legal process
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+(f)  is disclosed pursuant to the order or requirement of a court; administrative agency,or other government body, provided Receiver takes all reasonable steps to keep the Confidential Information from becoming part of public records; or
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_Mn7QzpWi5071ejw8ALhFhqAq)
+ Call ID: call_Mn7QzpWi5071ejw8ALhFhqAq
+  Args:
+    pattern: take all reasonable steps|reasonable steps|keep the Confidential Information from becoming part of public records|notify
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+(f)  is disclosed pursuant to the order or requirement of a court; administrative agency,or other government body, provided Receiver takes all reasonable steps to keep the Confidential Information from becoming part of public records; or
+
+================================== Ai Message ==================================
+
+NotMentioned

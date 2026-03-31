@@ -1,0 +1,80 @@
+================================ Human Message =================================
+
+QUERY:
+What type of morphological features are used?
+
+TABLE OF CONTENTS (TOC):
+1 | Character-Level Models versus Morphology in Semantic Role Labeling
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2 Related Work
+1.4 | 3 Method
+1.4.1 | 3.1 Subword Units
+1.5 | 4 Experiments
+1.5.1 | 4.1 Experimental Setup
+1.6 | 5 Results and Analysis
+1.6.1 | 5.1 Similarity between models
+1.7 | 6 Limitations and Strengths
+1.7.1 | 6.1 Long Range Dependencies
+1.7.2 | 6.2 Training Data Size
+1.7.3 | 6.3 Out-of-Domain (OOD) Data
+1.7.4 | 6.4 Model Size
+1.7.5 | 6.5 Predicted Morphological Tags
+1.8 | 7 Conclusion
+1.9 | 8 Acknowledgements
+1.10 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_Kf2k8AJicot0YiuQ3scxTIJ7)
+ Call ID: call_Kf2k8AJicot0YiuQ3scxTIJ7
+  Args:
+    section_id: 1.7.5
+
+================================= Tool Message =================================
+Name: read_section
+
+6.5 Predicted Morphological Tags
+Although models with access to gold morpho- logical tags achieve better F1 scores than char- acter models, they can be less useful a in real- life scenario since they require gold tags at test time. To predict the performance of morphology- level models in such a scenario, we train the same models with the same parameters with pre- dicted morphological features. Predicted tags
+ Figure 5: F1 scores for best-char (best of the CLMs) and model with predicted ( predicted- morph ) and gold morphological tags ( gold- morph ).were only available for German, Spanish, Catalan and Czech. Our results given in Fig. 5 , show that (except for Czech), predicted morphological tags are not as useful as characters alone.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_all (call_V2G7Z6hpix2DjE8TKhA5vpq5)
+ Call ID: call_V2G7Z6hpix2DjE8TKhA5vpq5
+  Args:
+    pattern: morpholog
+
+================================= Tool Message =================================
+Name: grep_search_all
+
+1.1 | Abstract
+Character-level models have become a popular approach specially for their acces- sibility and ability to handle unseen data. However, little is known on their ability to reveal the underlying morphological struc- ture of a word, which is a crucial skill for high-level semantic analysis tasks, such as semantic role labeling (SRL).  In this work, we train various types of SRL models that use word, character and morphology level information and analyze how performance of characters compare to words and mor- phology for several languages. We con- duct an in-depth error analysis for each morphological typology and analyze the strengths and limitations of character-level models that relate to out-of-domain data, training data size, long range dependen- cies and model complexity.  Our exhaus- tive analyses shed light on important char- acteristics of character-level models and their semantic capability.
+
+1.2 | 1 Introduction
+Encoding of words is perhaps the most impor- tant step towards a successful end-to-end natural language processing application. Although word embeddings have been shown to provide bene- fit to such models, they commonly treat words as the smallest meaning bearing unit and assume that each word type has its own vector repre- sentation.  This assumption has two major short- comings especially for languages with rich mor- phology: (1) inability to handle unseen or out-of- vocabulary (OOV) word-forms (2) inability to ex- ploit the regularities among word parts.The limitations of word embeddings are par- ticularly pronounced in sentence-level semantic
+tasks, especially in languages where word parts play a crucial role.  Consider the Turkish sen- tences “ K¨oy+ l ¨u-ler (villagers) s¸ehr+ e (to town) geldi (came) ” and “ Sendika+ lı-lar (union mem- bers) meclis+ e (to council) geldi (came) ”.  Here the stems k¨oy (village) and sendika (union) func- tion similarly in semantic terms with respect to the verb come (as the origin of the agents of the verb ), where s¸ehir (town) and meclis (council) both func- tion as the end point . These semantic similar- ities are determined by the common word parts shown in bold . However ortographic similarity does not always correspond to semantic similar- ity.  For instance the ortographically similar words knight and night have large semantic differences. Therefore, for a successful semantic application, the model should be able to capture both the regu- larities, i.e, morphological tags and the irregulari- ties, i.e, lemmas of the word.Morphological analysis already provides the aforementioned information about the words.  However access to useful morphological features may be problematic due to software licensing issues, lack of robust morphological analyzers and high ambiguity among analyses. Character- level models (CLM), being a cheaper and acces- sible alternative to morphology, have been re- ported as performing competitively on various NLP tasks ( Ling et al. , 2015 ; Plank et al. , 2016 ; Lee et al. , 2017 ).  However the extent to which these tasks depend on morphology is small; and their relation to semantics is weak. Hence, little is known on their true ability to reveal the underly- ing morphological structure of a word and their se- mantic capabilities. Furthermore, their behaviour across languages from different families; and their limitations and strengths such as handling of long- range dependencies, reaction to model complex- ity or performance on out-of-domain data are un- known.  Analyzing such issues is a key to fully
+understanding the character-level models.To achieve this, we perform a case study on semantic role labeling (SRL), a sentence- level semantic analysis task that aims to identify predicate-argument structures and assign mean- ingful labels to them as follows:
+[ Villagers ] comers came [ to town ] end point
+ We use a simple method based on bidirectional LSTMs to train three types of base semantic role labelers that employ (1) words (2) characters and character sequences and (3) gold morphological analysis. The gold morphology serves as the up- per bound for us to compare and analyze the per- formances of character-level models on languages of varying morphological typologies.  We carry out an exhaustive error analysis for each language type and analyze the strengths and limitations of character-level models compared to morphology. In regard to the diversity hypothesis which states that diversity of systems in ensembles lead to further improvement, we combine character and morphology-level models and measure the perfor- mance of the ensemble to better understand how similar they are. We experiment with several languages with varying degrees of morphological richness and ty- pology: Turkish, Finnish, Czech, German, Span- ish, Catalan and English. Our experiments and analysis reveal insights such as:
+• CLMs provide great improvements over whole-word-level models despite not be- ing able to match the performance of morphology-level models (MLMs) for in- domain datasets.However their performance surpass all MLMs on out-of-domain data,
+• Limitations and strengths differ by morpho- logical typology.Their limitations for agglu- tinative languages are related to rich deriva- tional morphology and high contextual am- biguity ; whereas for fusional languages they are related to number of morphological tags (morpheme ambiguity) ,
+• CLMs can handle long-range dependencies equally well as MLMs,
+• In presence of more training data,CLM’s performance is expected to improve faster than of MLM.
+
+1.3 | 2 Related Work
+Neural SRL Methods: Neural networks have been first introduced to the SRL scene by Col- lobert et al. ( 2011 ), where they use a unified end-to-end convolutional network to perform vari- ous NLP tasks. Later, the combination of neural networks (LSTMs in particular) with traditional SRL features (categorical and binary) has been in- troduced ( FitzGerald et al. , 2015 ).  Recently, it has been shown that careful design and tuning of deep models can achieve state-of-the-art with no or minimal syntactic knowledge for English and Chinese SRL. Although the architectures vary slightly, they are mostly based on a variation of bi-LSTMs. Zhou and Xu ( 2015 ); He et al. ( 2017 ) connect the layers of LSTM in an interleaving pat- tern where in ( Wang et al. , 2015 ; Marcheggiani et al.  , 2017 ) regular bi-LSTM layers are used. Commonly used features for the encoding layer are: pretrained word embeddings; distance from the predicate; predicate context; predicate region mark or flag; POS tag; and predicate lemma em- bedding. Only a few of the models ( Marcheg- giani et al. , 2017 ; Marcheggiani and Titov , 2017 ) perform dependency-based SRL.  Furthermore, all methods focus on languages with rich resources and less morphological complexity like English and Chinese.Character-level Models: Character-level mod- els have proven themselves useful for many NLP tasks such as language modeling ( Ling et al. , 2015 ; Kim et al. , 2016 ), POS tagging ( Santos and Zadrozny , 2014 ; Plank et al. , 2016 ), dependency parsing ( Dozat et al.  , 2017 ) and machine trans- lation ( Lee et al. , 2017 ). However the number of comparative studies that analyze their relation to morphology are rather limited. Recently, Va- nia and Lopez ( 2017 ) presented a unified frame- work, where they investigated the performances of different subword units, namely characters, mor- phemes and morphological analysis on language modeling task.  They experimented with lan- guages of varying morphological typologies and concluded that the performance of character mod- els can not yet match the morphological models, albeit very close. Similarly, Belinkov et al. ( 2017 ) analyzed how different word representations help learn better morphology and model rare words on a neural MT task and concluded that character- based representations are much better for learning
+morphology.
+
+1.4.1 | 3.1 Subword Units
+We use three types of units: (1) words (2) char- acters and character sequences and (3) outputs of morphological analysis. Words serve as a lower bound; while morphology is used as an upper bound for comparison. Table 1 shows sample out- puts of various ρ functions. Here, char function
+ ρ word output char available < -a-v-a-i-l-a-b-l-e- > char3 available < av-ava-vai-ail-ila-lab-abl-ble-le > morph-DEU pr¨achtiger [ pr¨achtig ;Pos;Nom;Sg;Masc] morph-SPA las [ el ;postype=article;gen=f;num=p] morph-CAT la [ el ;postype=article;gen=f;num=s] morph-TUR boyundaki [ boy ;N OUN ;A3sg;P3sg;Loc;DB;A DJ ] morph-FIN tyhjyytt¨a [ tyhjyys ;Case=Par;Number=Sing] morph-CZE si [ se ;SubPOS=7;Num=X;Cas=3]
+ Table 1: Sample outputs of different ρ functions
+simply splits the token into its characters. Similar to n-gram language models, char3 slides a char- acter window of width n = 3 over the token. Finally, gold morphological features are used as outputs of morph-language . Throughout this pa- per, we use morph and oracle interchangably, i.e., morphology-level models (MLM) have access to gold tags unless otherwise is stated.  For all lan- guages, morph outputs the lemma of the token fol- lowed by language specific morphological tags. As an exception, it outputs additional information for some languages, such as parts-of-speech tags for Turkish. Word segmenters such as Morfes- sor and Byte Pair Encoding (BPE) are other com- monly used subword units.  Due to low scores ob- tained from our preliminary experiments and un- satisfactory results from previous studies ( Vania and Lopez , 2017 ), we excluded these units.
+
+1.5 | 4 Experiments
+We use the datasets distributed by LDC for Cata- lan (CAT), Spanish (SPA), German (DEU), Czech (CZE) and English (ENG) ( Hajiˇc et al. , 2012b , a ); and datasets made available by Haverinen et al. ( 2015 ); S¸ahin and Adalı ( 2017 ) for Finnish (FIN) and Turkish (TUR) re...(truncated)
+
+================================== Ai Message ==================================
+
+Gold morphological features: the token lemma followed by language-specific morphological tags (e.g., POS, case, number, gender, person, locative, derivational markers); Turkish additionally includes POS.

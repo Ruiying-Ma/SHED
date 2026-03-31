@@ -1,0 +1,117 @@
+================================ Human Message =================================
+
+QUERY:
+what was their result?
+
+TABLE OF CONTENTS (TOC):
+1 | EmoAtt at EmoInt-2017: Inner attention sentence embedding for Emotion Intensity
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2 Proposed Approach
+1.4 | 3 Experimental Setup
+1.5 | 4 Results and Discussion
+1.5.1 | 4.1 Anger Dataset
+1.5.2 | 4.2 Joy Dataset
+1.5.3 | 4.3 Fear Dataset
+1.5.4 | 4.4 Sadness Dataset
+1.6 | 5 Conclusions
+1.7 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_all (call_86od0tlU5iQvGKGhmq8lXd5I)
+ Call ID: call_86od0tlU5iQvGKGhmq8lXd5I
+  Args:
+    pattern: result|Results|RESULT|results
+
+================================= Tool Message =================================
+Name: grep_search_all
+
+1.1
+1.2
+1.4
+1.5.1
+1.5.3
+1.5.4
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_vnXmY7P5JowOA02OwQ24A8t1)
+ Call ID: call_vnXmY7P5JowOA02OwQ24A8t1
+  Args:
+    section_id: 1.1
+
+================================= Tool Message =================================
+Name: read_section
+
+Abstract
+In this paper we describe a deep learning system that has been designed and built for the WASSA 2017 Emotion Intensity Shared Task. We introduce a representa- tion learning approach based on inner at- tention on top of an RNN. Results show that our model offers good capabilities and is able to successfully identify emotion- bearing words to predict intensity without leveraging on lexicons, obtaining the 13 th place among 22 shared task competitors.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_2RvTEXzfbIw9pfxZscAmlT6m)
+ Call ID: call_2RvTEXzfbIw9pfxZscAmlT6m
+  Args:
+    section_id: 1.5.1
+
+================================= Tool Message =================================
+Name: read_section
+
+4.1 Anger Dataset
+For the anger dataset, our experiments showed that GloVe embeddings of dimension 50 outperformed others, obtaining an average gain of 0.066 corre- lation over embeddings of size 25 and of 0.021
+2 github.com/epochx/emoatt
+Corpus Dropout Embeddings λ h EmoAtt Baseline ρ dev ρ test ρ dev ρ test Sadness 0.8 GloVe Twitter 50 0. 20 50 0.586 0.520 0.562 0.648 Joy 0.8 GloVe Twitter 50 0.20 100 0.790 0.537 0.703 0.654 Anger 0.5 GloVe Twitter 50 0.01 100 0.734 0.470 0.605 0.639 Fear 0.9 GloVe Twitter 50 0. 05 100 0.644 0.561 0.574 0.652 Average 0.689 0.522 0.611 0.648
+Table 2: Summary of the best results.Dataset w/features w/o features Sadness 0.586 0.543 Joy 0.790 0.781 Anger 0.734 0.662 Fear 0.644 0.561
+ Table 3: Impact of adding our binary features.Figure 1: Example of attention weights for the Joy dataset. White denotes more weight.for embeddings of size 100. However on ly the first of these values was significant, with a p-value of 3 . 86 × 10 − 5 . Regarding the hidden size of the RNN, we could not find statistical difference across the tested sizes. Dropout also had inconsis- tent effects, but was generally useful.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_xkjAp2V6R8bPEicit7sy4Lyz)
+ Call ID: call_xkjAp2V6R8bPEicit7sy4Lyz
+  Args:
+    section_id: 1.4
+
+================================= Tool Message =================================
+Name: read_section
+
+3 Experimental Setup
+To test our model, we experiment using the train- ing, validation and test datasets provided for the shared task ( Mohammad and Bravo-Marquez , 2017a ), which include tweets for four emotions: joy, sadness, fear, and anger. These were anno- tated using Best-Worst Scaling (BWS) to obtain very reliable scores ( Kiritchenko and Mohammad , 2016 ).Dataset Tweet Length (tokens) Vocab. in GloVe Mean Min Max Fear 17. 849 2 37 60.8 % Joy 17.480 2 42 65.0 % Sadness 18.285 2 38 65.5 % Anger 17.438 1 41 65.8 % Average 17.776 1.75 39.5 64.3 %
+Table 1: Data summary.We experimented with GloVe 1 ( Pennington et al.  , 2014 ) as pre-trained word embedding vec- tors, for sizes 25, 50 and 100. These are vec- tors trained on a dataset of 2B tweets, with a to- tal vocabulary of 1.2 M. To pre-process the data, we used Twokenizer ( Gimpel et al. , 2011 ), which basically provides a set of curated rules to split the tweets into tokens.  We also use Tweeboparser ( Owoputi et al. , 2013 ) to get the POS-tags for each tweet.Table 1 summarizes the average, maximum and minimum sentence lengths for each dataset af- ter we processed them with Twokenizer. We can see the four corpora offer similar characteristics in terms of length, with a cross dataset maximum length of 41 tokens.  We also see there is an im- portant vocabulary gap between the dataset and GloVe, with an average coverage of only 64.3 %. To tackle this issue, we used a set of binary fea- tures derived from POS tags to capture some of the semantics of the words that are not covered by the GloVe embeddings. We also include features for member mentions and hashtags as well as a feature to capture word elongation, based on regu- lar expressions.  Word elongation is very common in tweets, and is usually associated to strong senti- ment. The following are the POS tag-derived rules we used to generate our binary features.
+• If the token is an adjective (POS tag = A)
+• If the token is an interjection (POS tag = !)
+• If the token is a hashtag (POS tag = #)
+• If the token is an emoji (POS tag = E)
+• If the token is an at-mention,indicating a user as a recipient of a tweet (POS tag = @)
+• If the token is a verb (POS tag = V)
+• If the token is a numeral (POS tag = $) 1 nlp.stanford.edu/projects/glove
+• if the token is a personal pronoun (POS tag = O)While the structure of our introduced model allows us to easily include more linguistic fea- tures that could potentially improve our predictive power, such as lexicons, since our focus is to study sentence representation for emotion intensity, we do not experiment adding any additional sources of information as input.In this paper we also only report results for LSTMs, which outperformed regular RNNs as well as GRUs and a batch normalized version of the LSTM in on preliminary experiments.  The hidden size of the attentional component is set to match the size of the augmented hidden vectors on each case. Given this setting, we explored dif- ferent hyper-parameter configurations, including context window sizes of 1 , 3 and 5 as well as RNN hidden state sizes of 100 , 200 and 300 . We exper- imented with unidirectional and bidirectional ver- sions of the RNNs. To avoid over-fitting, we used dropout regular- ization, experimenting with keep probabilities of 0 . 5 and 0 . 8 . We also added a weighed L2 regu- larization term to our loss function. We experi- mented with different values for weight λ , with a minimum value of 0.01 and a maximum of 0.2. To evaluate our model, we wrapped the pro- vided scripts for the shared task and calculated the Pearson correlation coefficient and the Spearman rank coefficient with the gold standard in the vali- dation set, as well as the same values over a subset of the same data formed by taking every instance with a gold emotion intensity score greater than or equal to 0.5. For training, we used mini-batch stochastic gra- dient descent with a batch size of 16 and padded sequences to a maximum size of 50 tokens, given the nature of the data. We used exponential decay of ratio 0 . 9 and early stopping on the validation when there was no improvement after 1000 steps. Our code is available for download on GitHub 2 .
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_77aWRfE760Zf9OU8HFaQwQcX)
+ Call ID: call_77aWRfE760Zf9OU8HFaQwQcX
+  Args:
+    section_id: 1.5.3
+
+================================= Tool Message =================================
+Name: read_section
+
+4.3 Fear Dataset
+On the fear dataset, again we observed that em- beddings of size 50 provided the best results, of- fering average gains of 0.12 ( p = 7 × 10 − 4 ) and 0.11 ( p = 1 . 9 × 10 − 3 ) for sizes 25 and 100, re- spectively.  When it comes to the size of the RNN hidden state, our experiments showed that using 100 hidden units offered the best results, with av- erage absolute gains of 0.117 ( p = 9 × 10 − 4 ) and 0.108 ( p = 0 . 002 . 4 × 10 − 3 ) over sizes 50 and 200.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_Qh5138NyDg8MGdLFieCLJqaI)
+ Call ID: call_Qh5138NyDg8MGdLFieCLJqaI
+  Args:
+    section_id: 1.5.4
+
+================================= Tool Message =================================
+Name: read_section
+
+4.4 Sadness Dataset
+Finally, on the sadness datasets again we exper- imentally observed that using embeddings of 50 offered the best results, with a statistically sig- nificant average gain of 0.092 correlation points ( p = 1 . 3 × 10 − 3 ) over size 25. Results were sta- tistically equivalent for size 100.  We also observed that using 50 or 100 hidden units for the RNN of- fered statistically equivalent results, while both of these offered better performance than when using a hidden size of 200.
+
+================================== Ai Message ==================================
+
+They obtained the 13th place among 22 shared task competitors.

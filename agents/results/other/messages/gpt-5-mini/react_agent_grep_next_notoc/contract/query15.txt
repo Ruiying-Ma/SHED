@@ -1,0 +1,68 @@
+================================ Human Message =================================
+
+HYPOTHESIS:
+Sharing with employees: Receiving Party may share some Confidential Information with some of Receiving Party's employees.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_7D4huoaBTQ6DsVMj8qvmaHfO)
+ Call ID: call_7D4huoaBTQ6DsVMj8qvmaHfO
+  Args:
+    pattern: employee
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+a. limit disclosure of any Confidential Information to its directors, officers, employees,age e e e a i e  (c llec i el   Re e e a i e )  h o have a need to know such Confidential Information in connection with the Transaction, and only for that purpose;
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_od4dbZ8eODvT55Zw5NA2fwRc)
+ Call ID: call_od4dbZ8eODvT55Zw5NA2fwRc
+  Args:
+    pattern: employees
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+a. limit disclosure of any Confidential Information to its directors, officers, employees,age e e e a i e  (c llec i el   Re e e a i e )  h o have a need to know such Confidential Information in connection with the Transaction, and only for that purpose;
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_LhbJwTY5JG6kmEIARJkwDexa)
+ Call ID: call_LhbJwTY5JG6kmEIARJkwDexa
+  Args:
+    pattern: Receiving Party
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+a. No Use.The Receiving Party agrees not to use the Confidential Information in any way, or to  manufacture  or  test  any  product  embodying  Confidential  Information,  except  for  the purpose set forth above.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_JO7mZWJ6SiTFOz4ASbePRDku)
+ Call ID: call_JO7mZWJ6SiTFOz4ASbePRDku
+  Args:
+    pattern: disclosure to its directors
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_7AQBU0WDQpP6GTgNw6wFxAmV)
+ Call ID: call_7AQBU0WDQpP6GTgNw6wFxAmV
+  Args:
+    pattern: limit disclosure of any Confidential Information to its directors
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+a. limit disclosure of any Confidential Information to its directors, officers, employees,age e e e a i e  (c llec i el   Re e e a i e )  h o have a need to know such Confidential Information in connection with the Transaction, and only for that purpose;
+
+================================== Ai Message ==================================
+
+Entailment

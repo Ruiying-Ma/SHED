@@ -1,0 +1,34 @@
+================================ Human Message =================================
+
+QUERY:
+How can an existing bot detection system by customized for health-related research?
+
+TABLE OF CONTENTS (TOC):
+1 | Towards Automatic Bot Detection in Twitter for Health-related Tasks Anahita Davoudi, PhD 1 , Ari Z. Klein, PhD 1 , Abeed Sarker, PhD 2 , Graciela Gonzalez-Hernandez, PhD 1 1 Department of Biostatistics, Epidemiology and Informatics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA 19104 2 Department of Biomedical Informatics, School of Medicine, Emory University, Atlanta, GA 30322
+1.1 | Abstract
+1.2 | Introduction
+1.3 | 1 Methods
+1.3.1 | 1.1 Corpus
+1.3.2 | 1.2 Classification
+1.4 | 2 Results
+1.5 | 3 Discussion
+1.6 | 4 Conclusion
+1.7 | Acknowledgments
+1.8 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_1SeSF4wBEwCLrfQxWXwCg5GO)
+ Call ID: call_1SeSF4wBEwCLrfQxWXwCg5GO
+  Args:
+    pattern: bot
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1 | Abstract
+With the increasing use of social media data for health-related research, the credibility of the information from this source has been questioned as the posts may originate from automated accounts or ”bots”. While automatic bot detection approaches have been proposed, there are none that have been evaluated on users posting health-related information. In this paper, we extend an existing bot detection system and customize it for health-related research.  Using a dataset of Twitter users, we first show that the system, which was designed for political bot detection, un- derperforms when applied to health-related Twitter users. We then incorporate additional features and a statistical machine learning classifier to significantly improve bot detection performance. Our approach obtains F 1 -scores of 0 . 7 for the ”bot” class, representing improvements of 0 . 339 .  Our approach is customizable and generalizable for bot detection in other health-related social media cohorts.
+
+================================== Ai Message ==================================
+
+By incorporating additional features and a statistical machine learning classifier into the existing system (originally designed for political bot detection) to improve performance on health-related Twitter users.

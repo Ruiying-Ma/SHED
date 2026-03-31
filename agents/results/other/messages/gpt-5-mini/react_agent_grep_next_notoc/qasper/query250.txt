@@ -1,0 +1,34 @@
+================================ Human Message =================================
+
+QUERY:
+What baseline is used for this task?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_fwUN7OsDsq39BvTno9sXXuPc)
+ Call ID: call_fwUN7OsDsq39BvTno9sXXuPc
+  Args:
+    pattern: baseline
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Baseline: FirstPhrase
+Position is a strong feature for keyphrase extrac- tion, simply because texts are usually written so that the most important ideas go first ( Marcu , 1997 ). In news summarization for example, the lead baseline –that is, the first sentences from the document–, while incredibly simple, is still a com- petitive baseline ( Kedzie et al. , 2018 ).  Similar to the lead baseline, we compute the FirstPhrases baseline that extracts the first N keyphrase candi- dates 8 from a document.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_UPBPs1cG4rK2DYqQFPJ0Hp34)
+ Call ID: call_UPBPs1cG4rK2DYqQFPJ0Hp34
+  Args:
+    pattern: FirstPhrase
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Baseline: FirstPhrase
+Position is a strong feature for keyphrase extrac- tion, simply because texts are usually written so that the most important ideas go first ( Marcu , 1997 ). In news summarization for example, the lead baseline –that is, the first sentences from the document–, while incredibly simple, is still a com- petitive baseline ( Kedzie et al. , 2018 ).  Similar to the lead baseline, we compute the FirstPhrases baseline that extracts the first N keyphrase candi- dates 8 from a document.
+
+================================== Ai Message ==================================
+
+FirstPhrase

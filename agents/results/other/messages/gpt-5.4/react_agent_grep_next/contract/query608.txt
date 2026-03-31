@@ -1,0 +1,209 @@
+================================ Human Message =================================
+
+HYPOTHESIS:
+Notice on compelled disclosure: Receiving Party shall notify Disclosing Party in case Receiving Party is required by law, regulation or judicial process to disclose any Confidential Information.
+
+TABLE OF CONTENTS (TOC):
+1 | THIS AGREEMENT IS ENTERED INTO BY AND BETWEEN:
+2 | WITNESSES
+3 | NOW, THEREFORE, THE PARTIES AGREE AS FOLLOWS:
+3.1 | 1.  As used in this Agreement the term "Proprietary Information" shall mean any inf...
+3.2 | 2.  Nothing in this Agreement may be construed as compelling any Party hereto to di...
+3.3 | 3. Each Party, to the extent of its right to do so,
+3.4 | 4. The receiving Party hereby covenants that,
+3.4.1 | (a) be protected and kept in strict confidence by the receiving Party which must use the same degree of precaution and safegu ards as it uses to protect its own proprietary information of like importance,
+3.4.2 | (b) be only disclosed to and used by those persons who have a need to know and solely for the purpose specified in this Agreement,
+3.4.3 | (c) not be used in whole or in part for any purpose other than the purpose of this Agreement as specified in the preamble and for the Project above without the prior written consent of the disclosing Party,
+3.4.4 | (d) neither be disclosed nor caused to be disclosed whether directly or indirectly to any third Party or persons other than t hose mentioned in subparagraph b) or the Buyer Clients or its co -contractors for the Project,
+3.4.5 | (e) neither be copied,
+3.5 | 5.  Any Proprietary Information and copies thereof disclosed by either Party to the...
+3.6 | 6. Except as aforementioned,
+3.6.1 | (a) has come into the public domain prior to,
+3.6.2 | (b) is already known to the receiving Party,
+3.6.3 | (c) has been lawfully received from a third party without restrictions or breach of this Agreement,
+3.6.4 | (d) has been or is published without violation of this Agreement, or
+3.6.5 | (e) is independently developed in good faith by an employee or employees of that receiving Party who did not have access to t he Proprietary Information,
+3.6.6 | (f) is approved for release or use by written authorization of the disclosing Party.
+3.7 | 8. Except as provided under clause 12.2 of the General Purchase Conditions,
+3.8 | 9.  This Agreement shall enter into force on the date of its signature and shall be...
+3.9 | 10. The execution,
+3.10 | 11.  The end or termination of this Agreement shall not relieve the receiving Party ...
+3.11 | 12. This Contract shall be governed by Buyer country laws and its appropriate courts of Paris.
+3.12 | 13.  The effective date of this Agreement shall be the date on which it is executed ...
+4 | FOR SUPPLIER Name Title Signature
+5 | FOR BUYER
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_KHslfHAACC0FrJ99BAiiJFQj)
+ Call ID: call_KHslfHAACC0FrJ99BAiiJFQj
+  Args:
+    pattern: required by law|judicial process|court order|regulation|notify|notice|compelled|disclose
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+2 | WITNESSES
+WHEREAS, the Parties wish to pursue exploratory discussions concerning possible collaborations between them in relation to project XXX .WHEREAS, during the performance of this Purchasing Frame Contract, it will become necessary for the Parties hereto to disclose to each other certain technical, financial or business information of a proprietary or confidential nature, hereinafter referred to as “Proprietary Information”; and
+ WHEREAS, the Parties hereto are willing to provide for the conditions of such disclosure of Proprietary Information and the rules governing the use and the protection there of;
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_qwxBMwPYRsWzFP1t3XQT76Ew)
+ Call ID: call_qwxBMwPYRsWzFP1t3XQT76Ew
+  Args:
+    section_id: 3.4
+
+================================= Tool Message =================================
+Name: read_section
+
+4. The receiving Party hereby covenants that,during the validity period of this Agreement and for a period of five (5) years after its end or its termination, the Proprietary Information received from the disclosing Party shall:
+(a) be protected and kept in strict confidence by the receiving Party which must use the same degree of precaution and safegu ards as it uses to protect its own proprietary information of like importance,but in no case any less than reasonable care,
+(b) be only disclosed to and used by those persons who have a need to know and solely for the purpose specified in this Agreement,within the receiving Party's organisation and to its professional advisors, provided that in this latter case the  disclosing Party so notifies the other Party and obtains the authorization from the other Party to make such disclosure, such authorizat ion not being unreasonably withheld, and provided that such advisor(s) agree(s) to be bound by the terms and conditions of this Agreement.  (Buyer shall be entitled to freely disclose such information to its affiliated companies, to its co -contractors for a project and to its final customer).
+(c) not be used in whole or in part for any purpose other than the purpose of this Agreement as specified in the preamble and for the Project above without the prior written consent of the disclosing Party,
+(d) neither be disclosed nor caused to be disclosed whether directly or indirectly to any third Party or persons other than t hose mentioned in subparagraph b) or the Buyer Clients or its co -contractors for the Project,
+(e) neither be copied,nor otherwise reproduced nor duplicated in whole or in part where such copying, reproduction or duplic ation have not been specifically authorized in writing by the disclosing Party.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_7YzqAzNwAllEFbh9Ix7ZqJRV)
+ Call ID: call_7YzqAzNwAllEFbh9Ix7ZqJRV
+  Args:
+    section_id: 3.7
+
+================================= Tool Message =================================
+Name: read_section
+
+8. Except as provided under clause 12.2 of the General Purchase Conditions,it is expressly understood and agreed by the Par ties hereto that the disclosure and provision of Proprietary Information under this Agreement by a Party to the other Party shall  not be construed as granting to the receiving Party under the laws of any country any rights whether expressed or implied by licence or otherwise on the matters, inventions or discoveries to which such Proprietary Information pertains or any copyright, trademar k or trade secret rights. The property in all information and/or data disclosed by the Buyer to the Supplier pursuant to this Agreement shall subject t o any right of any other owner, rest with the Buyer.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_7vCM943PafMmrVdYXyviKyFB)
+ Call ID: call_7vCM943PafMmrVdYXyviKyFB
+  Args:
+    section_id: 3.6
+
+================================= Tool Message =================================
+Name: read_section
+
+6. Except as aforementioned,the receiving Party shall have no obligations or restrictions with respect to any Proprietary Information which that receiving Party can prove:
+DEFTA Purchasing department 2016
+ANNEX 2 - Non Disclosure Agreement
+(a) has come into the public domain prior to,or after the disclosure thereof and in such case through no wrongful act of tha t receiving Party, or
+(b) is already known to the receiving Party,as evidenced by written documentation in the files of the receiving Party, or
+(c) has been lawfully received from a third party without restrictions or breach of this Agreement,or
+(d) has been or is published without violation of this Agreement, oris published without violation of this Agreement, or
+(e) is independently developed in good faith by an employee or employees of that receiving Party who did not have access to t he Proprietary Information,or
+(f) is approved for release or use by written authorization of the disclosing Party.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_3rxxl9aAJJwV0vQjQFtWOUQC)
+ Call ID: call_3rxxl9aAJJwV0vQjQFtWOUQC
+  Args:
+    pattern: required by law|judicial process|court order|regulation|notify|notice|compelled|disclose
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+3.1 | 1.As used in this Agreement the term "Proprietary Information" shall mean any information or data disclosed by any Party to  the other, pursuant to this Agreement, either in writing or orally, subject to the conditions set forth hereafter, and including  without limitation any written or printed documents (plans, drawings, photographs, etc…), samples prototypes, models, technology, kno w- how, specifications, software, commercial or financial information or any means of disclosing such Proprietary Information th at each Party may elect to use during the life of this Agreement.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_3RGB4utegduBW95vn0UExV1H)
+ Call ID: call_3RGB4utegduBW95vn0UExV1H
+  Args:
+    pattern: required by law|judicial process|court order|regulation|notify|notice|compelled|disclose
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+3.2 | 2.Nothing in this Agreement may be construed as compelling any Party hereto to disclose any Proprietary Information to the o ther, or to enter into any further contractual relationships.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_Gxe5uSyUusCKmqcdZ9YfVxiv)
+ Call ID: call_Gxe5uSyUusCKmqcdZ9YfVxiv
+  Args:
+    pattern: required by law|judicial process|court order|regulation|notify|notice|compelled|disclose
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+3.3 | 3. Each Party, to the extent of its right to do so,shall disclose to the other Party the Proprietary Information which are a ppropriate to fulfil the objectives of this Agreement as set up in the recitals. The Parties hereby represent that the disclosure of Propri etary Information by and between themselves is not contrary to the laws and regulations of their respective countries.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_qhfPsfHVqdL0RYX2gm7OuvEl)
+ Call ID: call_qhfPsfHVqdL0RYX2gm7OuvEl
+  Args:
+    pattern: required by law|judicial process|court order|regulation|notify|notice|compelled|disclose
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+3.4.2 | (b) be only disclosed to and used by those persons who have a need to know and solely for the purpose specified in this Agreement,within the receiving Party's organisation and to its professional advisors, provided that in this latter case the  disclosing Party so notifies the other Party and obtains the authorization from the other Party to make such disclosure, such authorizat ion not being unreasonably withheld, and provided that such advisor(s) agree(s) to be bound by the terms and conditions of this Agreement.  (Buyer shall be entitled to freely disclose such information to its affiliated companies, to its co -contractors for a project and to its final customer).
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_pAxFiDpVILXYwH8xQhs8buoZ)
+ Call ID: call_pAxFiDpVILXYwH8xQhs8buoZ
+  Args:
+    pattern: required by law|judicial process|court order|regulation|notify|notice|compelled|disclose
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+3.4.4 | (d) neither be disclosed nor caused to be disclosed whether directly or indirectly to any third Party or persons other than t hose mentioned in subparagraph b) or the Buyer Clients or its co -contractors for the Project,
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_gv7jNJ44Lk1RJmaW7ROvfqeL)
+ Call ID: call_gv7jNJ44Lk1RJmaW7ROvfqeL
+  Args:
+    pattern: required by law|judicial process|court order|regulation|notify|notice|compelled|disclose
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+3.5 | 5.Any Proprietary Information and copies thereof disclosed by either Party to the other shall remain the property of the dis closing Party and shall be returned by the receiving Party immediately upon request.The above provisions shall not apply to the Proprietary Information disclosed by the Supplier to the Buyer and which fall und er clause 12.2 of the General Purchase Conditions.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_EO6IocFEDpMnN64tUSiu7Ee7)
+ Call ID: call_EO6IocFEDpMnN64tUSiu7Ee7
+  Args:
+    pattern: required by law|judicial process|court order|regulation|notify|notice|compelled|disclose
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+3.7 | 8. Except as provided under clause 12.2 of the General Purchase Conditions,it is expressly understood and agreed by the Par ties hereto that the disclosure and provision of Proprietary Information under this Agreement by a Party to the other Party shall  not be construed as granting to the receiving Party under the laws of any country any rights whether expressed or implied by licence or otherwise on the matters, inventions or discoveries to which such Proprietary Information pertains or any copyright, trademar k or trade secret rights. The property in all information and/or data disclosed by the Buyer to the Supplier pursuant to this Agreement shall subject t o any right of any other owner, rest with the Buyer.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_H8OU6PIyum1OQNczISVuU8oX)
+ Call ID: call_H8OU6PIyum1OQNczISVuU8oX
+  Args:
+    pattern: required by law|judicial process|court order|regulation|notify|notice|compelled|disclose
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+3.9 | 10. The execution,existence and performance of this Agreement shall be kept confidential by the Parties hereto and shall not be disclosed by either Party without the prior written consent of the other.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_PlyuTVdkUencsJiN73IS7qc1)
+ Call ID: call_PlyuTVdkUencsJiN73IS7qc1
+  Args:
+    pattern: required by law|judicial process|court order|regulation|notify|notice|compelled|disclose
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+
+NotMentioned

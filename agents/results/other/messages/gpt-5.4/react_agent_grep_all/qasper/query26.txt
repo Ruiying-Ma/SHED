@@ -1,0 +1,88 @@
+================================ Human Message =================================
+
+QUERY:
+How do data-driven models usually respond to abuse?
+
+TABLE OF CONTENTS (TOC):
+1 | A Crowd-based Evaluation of Abuse Response Strategies in Conversational Agents
+1.1 | Verena Rieser
+1.2 | Abstract
+1.3 | 1 Introduction
+1.4 | 2 Data Collection
+1.5 | 3 Human Evaluation
+1.6 | 4 Results
+1.6.1 | 4.1 Demographic Factors
+1.6.2 | 4.2 Prompt context
+1.6.3 | 4.3 Systems
+1.7 | 5 Related and Future Work
+1.8 | 6 Conclusion
+1.9 | Acknowledgements
+1.10 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_all (call_IiijQsn992El2ehAoD7QWsxx)
+ Call ID: call_IiijQsn992El2ehAoD7QWsxx
+  Args:
+    pattern: data-driven models|usually respond to abuse|respond to abuse|abuse
+
+================================= Tool Message =================================
+Name: grep_search_all
+
+1.10 | References
+Annabelle lee - chatbot at the personality forge . https://www.personalityforge.com/ chatbot-chat.php?botID=106996 . Ac- cessed: June 2018.Capt howdy - chatbot at the personality forge . https://www.personalityforge.com/ chatbot-chat.php?botID=72094 . Ac- cessed: June 2018.Dr love - chatbot at the personality forge . https://www. personalityforge.com/ chatbot-chat.php?botID=60418 . Ac- cessed: June 2018.Laurel sweet - chatbot at the personality forge . https://www.personalityforge.com/ chatbot-chat.php?botID=71367 . Ac- cessed: June 2018.Sophia69 - chatbot at the personality forge . https://www.personalityforge.com/ chatbot-chat.php? botID=102231 . Ac- cessed: June 2018.
+Antonella De Angeli and Sheryl Brahnam. 2008.I hate you! Disinhibition with virtual partners . Interacting with Computers , 20(3):302 – 310. Special Issue: On the Abuse and Misuse of Social Agents.
+Antonella De Angeli and Rollo Carpenter. 2006. Stupid computer!Abuse and social identities. In Proc. of the CHI 2006: Misuse and Abuse of Inter- active Technologies Workshop Papers .4 Available for download from https://github. com/amandacurry/metoo_corpus
+5 Note that, due to legal restrictions, we cannot release the “prototypical” prompt stimuli, but only the prompt type an- notations.
+Richard A Armstrong. 2014. When to use the Bonfer- roni correction.Ophthalmic and Physiological Op- tics , 34(5):502–508.
+Ondˇrej Bojar, Yvette Graham, Amir Kamran,and Miloˇs Stanojevi´c. 2016. Results of the WMT16 Metrics Shared Task . In Proceedings of the First Conference on Machine Translation , pages 199– 231, Berlin, Germany. Association for Computa- tional Linguistics.
+Sheryl Brahnam. 2005.Strategies for handling cus- tomer abuse of ECAs. Abuse: The darker side of humancomputer interaction , pages 62–67.
+Rollo Carpenter. 1997. Cleverbot . http://www. cleverbot.com/ . Accessed: June 2018.
+Amanda Cercas Curry and Verena Rieser. 2018.#MeToo: How conversational systems respond to sexual harassment . In Proceedings of the Second ACL Workshop on Ethics in Natural Language Pro- cessing , pages 7–14. Association for Computational Linguistics.
+Julien Chaumond and Clement Delangue. 2016.Neu- ralconvo chat with a deep learning brain . http: //neuralconvo.huggingface.co/ . Ac- cessed: June 2018.
+Hyojin Chin and Mun Yong Yi. 2019.Should an agent be ignoring it?: A study of verbal abuse types and conversational agents’ response styles. In Extended Abstracts of the 2019 CHI Conference on Human Factors in Computing Systems , page LBW2422. ACM.
+Kenneth Colby. 2016. Parry chat room . https://www.botlibre.com/livechat? id=12055206 . Accessed: June 2018.
+Paul A Crook, Simon Keizer, Zhuoran Wang, Wenshuo Tang,and Oliver Lemon. 2014. Real user evaluation of a pomdp spoken dialogue system using automatic belief compression. Computer Speech & Language , 28(4):873–887.
+Barbara A Gutek. 1992. Understanding sexual harass- ment at work.Notre Dame JL Ethics & Pub. Pol’y , 6:335.
+Peter Henderson, Koustuv Sinha, Nicolas Angelard- Gontier,Nan Rosemary Ke, Genevieve Fried, Ryan Lowe, and Joelle Pineau. 2018. Ethical challenges in data-driven dialogue systems . In AAAI/ACM AI Ethics and Society Conference .
+Ralf Herbrich, Tom Minka, and Thore Graepel.2007. Trueskill: a bayesian skill rating system. In Ad- vances in neural information processing systems , pages 569–576.
+Ilker Koksal. 2018. Who’s the Amazon Alexa target market, anyway?Forbes Magazine .
+Learn English Network. 2014. Alley . https:// www.botlibre.com/browse?id=132686 . Accessed: June 2018.
+Linguistic Society of America. Sexual harass- ment . https://www.linguisticsociety. org/content/sexual-harassment .
+Xiaojuan Ma, Emily Yang, and Pascale Fung. 2019.Exploring perceived emotional intelligence of personality-driven virtual agents in handling user challenges . In The World Wide Web Conference , WWW ’19, pages 1222–1233, New York, NY, USA. ACM.
+Jekaterina Novikova, Ondˇrej Duˇsek,and Verena Rieser. 2018. Rankme: Reliable human ratings for nat- ural language generation. In Proc. of the 16th Annual Conference of the North American Chap- ter of the Association for Computational Linguistics (NAACL) .
+Ioannis Papaioannou, Amanda Cercas Curry, Jose L. Part,Igor Shalyminov, Xinnuo Xu, Yanchao Yu, Ondrej Dusek, Verena Rieser, and Oliver Lemon. 2017. An ensemble model with ranking for social dialogue. In NIPS workshop on Conversational AI .
+Alan Ritter, Colin Cherry, and Bill Dolan. 2010.Un- supervised modeling of Twitter conversations . In Human Language Technologies: The 2010 An- nual Conference of the North American Chapter of the Association for Computational Linguistics , HLT ’10, pages 172–180.
+Matthias Scheutz and Thomas Arnold. 2017. Intimacy, bonding,and sex robots: Examining empirical re- sults and exploring ethical ramifications. Robot Sex: Social and Ethical Implications .
+Oriol Vinyals and Quoc V. Le. 2015.A neural conver- sational model . In ICML Deep Learning Workshop .
+Michael Wallace and George Dunlop. ELIZA, computer therapist . http://www.manifestation.com/neurotoys/eliza. php3 . Accessed: June 2018.
+Richard Wallace. 2014. A.L.I.C.E. https://www.botlibre.com/browse?id=20873 . Ac- cessed: June 2018.
+Mark West, Rebecca Kraut, and Han Ei Chew. 2019.I’d blush if i could: closing gender divides in dig- ital skills through education . Technical Report GEN/2019/EQUALS/1 REV, UNESCO.
+Steve Worswick. The curse of the chatbot users. https:// medium.com/@steve.worswick/ the-curse-of-the-chatbot-users-b8af9e186d2e . Accessed: 10 March 2019.
+
+1.2 | Abstract
+How should conversational agents respond to verbal abuse through the user? To answer this question, we conduct a large-scale crowd- sourced evaluation of abuse response strate- gies employed by current state-of-the-art sys- tems.  Our results show that some strategies, such as “polite refusal” score highly across the board, while for other strategies demographic factors, such as age, as well as the severity of the preceding abuse influence the user’s per- ception of which response is appropriate. In addition, we find that most data-driven models lag behind rule-based or commercial systems in terms of their perceived appropriateness.
+
+1.3 | 1 Introduction
+Ethical challenges related to dialogue systems and conversational agents raise novel research ques- tions, such as learning from biased data sets ( Hen- derson et al. , 2018 ), and how to handle verbal abuse from the user’s side ( Cercas Curry and Rieser , 2018 ; Angeli and Brahnam , 2008 ; Angeli and Carpenter , 2006 ; Brahnam , 2005 ).  As high- lighted by a recent UNESCO report ( West et al. , 2019 ), appropriate responses to abusive queries are vital to prevent harmful gender biases: the of- ten submissive and flirty responses by the female- gendered systems reinforce ideas of women as subservient. In this paper, we investigate the appropriateness of possible strategies by gather- ing responses from current state-of-the-art systems and ask crowd-workers to rate them.
+
+1.4 | 2 Data Collection
+We first gather abusive utterances from 600K con- versations with US-based customers. We search for relevant utterances by simple keyword spot- ting and find that about 5% of the corpus includes abuse, with mostly sexually explicit utterances.Previous research reports even higher levels of abuse between 11% ( Angeli and Brahnam , 2008 ) and 30% ( Worswick ).  Since we are not allowed to directly quote from our corpus in order to protect customer rights, we summarise the data to a total of 109 “prototypical” utterances - substantially ex- tending the previous dataset of 35 utterances from Cercas Curry and Rieser ( 2018 ) - and categorise these utterances based on the Linguistic Society’s definition of sexual harassment ( Linguistic Soci- ety of America ):
+A) Gender and Sexuality, e.g. “Are you gay?”,“How do you have sex?”
+B) Sexualised Comments, e.g. “I love watching porn.”,“I’m horny.” C) Sexualised Insults, e.g. “Stupid bitch.”, “Whore”
+D) Sexual Requests and Demands, e.g. “Will you have sex with me?”, “Talk dirty to me.”
+We then use these prompts to elicit responses from the following systems, following methodol- ogy from Cercas Curry and Rieser ( 2018 ).
+• 4 Commercial : Amazon Alexa, Apple Siri, Google Home, Microsoft’s Cortana.
+• 4 Non-commercial rule-based : E.L.I.Z.A.( Wallace and Dunlop ), Parry ( Colby , 2016 ), A.L.I.C.E. ( Wallace , 2014 ), Alley ( Learn En- glish Network , 2014 ).
+• 4 Data-driven approaches:- Cleverbot ( Carpenter , 1997 );
+- NeuralConvo ( Chaumond and Delangue , 2016 ),a re-implementation of ( Vinyals and Le , 2015 );
+- an implementation of ( Ritter et al. ,2010 )’s Information Retrieval approach;
+- a vanilla Seq2Seq model trained on clean Reddit data ( Cercas Curry and Rieser ,2018 ).
+• Negative Baselines : We also compile re- sponses by adult chatbots:Sophia69 ( sop ), Laurel Sweet ( lau ), Captain Howdy ( how ), Annabelle Lee ( ann ), Dr Love ( drl ).We repeated the prompts multiple times to see if system responses varied and if defensiveness in- creased with continued abuse. If this was the case, we included all responses in the study. 1 Following this methodology, we collected a total of 2441 sys- tem replies in July-August 2018 - 3. 5 times more data than Cercas Curry and Rieser ( 2018 ) - which 2 expert annotators manually annotated according to the categories in Table 1 ( κ = 0 . 66 ).
+
+1.6.2 | 4.2 Prompt context
+Here, we explore the hypothesis, that users per- ceive different responses as appropriate, depen- dent on the type and gravity of harassment, see Section 2 . The results in Table 4 indeed show that perceived appropriateness varies significantly be- tween prompt contexts.  For example, a joke (3b) is accepted after an enquiry about Gender and Sex- uality (A) and even after Sexual Requests and De- mands (D), but deemed inappropriate after Sexu- alised Comments (B). Note that non...(truncated)
+
+================================== Ai Message ==================================
+
+They usually lag behind rule-based or commercial systems in perceived appropriateness. The paper also notes that current state-of-the-art systems do not adapt their responses sufficiently.

@@ -1,0 +1,73 @@
+================================ Human Message =================================
+
+QUERY:
+What dialects of Chinese are explored?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_tgIpzwXdpiSl5qaGRIIhf5Dc)
+ Call ID: call_tgIpzwXdpiSl5qaGRIIhf5Dc
+  Args:
+    pattern: dialect
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_CMdNnaoeMXuazDrwTIRHc7xJ)
+ Call ID: call_CMdNnaoeMXuazDrwTIRHc7xJ
+  Args:
+    pattern: Chinese
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Recent studies have consistently given posi- tive hints that morphology is helpful in enrich- ing word embeddings. In this paper, we ar- gue that Chinese word embeddings can be sub- stantially enriched by the morphological infor- mation hidden in characters which is reflected not only in strokes order sequentially, but also in character glyphs spatially.  Then, we pro- pose a novel Dual-channel Word Embedding (DWE) model to realize the joint learning of sequential and spatial information of charac- ters. Through the evaluation on both word similarity and word analogy tasks, our model shows its rationality and superiority in mod- elling the morphology of Chinese.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_8E5TF6tzVlYUenT1GCmjZcW8)
+ Call ID: call_8E5TF6tzVlYUenT1GCmjZcW8
+  Args:
+    pattern: dialects|dialect|Mandarin|Cantonese|Min|Wu|Hakka|Jin|Gan|Xiang|dialectal
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+2.2 Embedding for Chinese Language
+The complexity of Chinese itself has given birth to a lot of research on Chinese embedding, in- cluding the utilization of character features ( Chen et al. , 2015 ) and radicals ( Sun et al. , 2014 ; Yin et al. , 2016 ; Yu et al. , 2017 ). Considering the 2- D graphic structure of Chinese characters, Su and Lee ( 2017 ) creatively proposed to enhance word representations by character glyphs.  Lately, Cao et al. ( 2018 ) proposed that a Chinese word can be decomposed into a sequence of strokes which correspond to subwords in English, and Wu et
+al. ( 2019 ) designed a Tianzige-CNN to model the spatial structure of Chinese characters from the perspective of image processing. However, their methods are either somewhat loose for the stroke criteria or unable to capture the interactions be- tween strokes and character glyphs.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_kbnPaR4RKZMQgInCtawagvUY)
+ Call ID: call_kbnPaR4RKZMQgInCtawagvUY
+  Args:
+    pattern: Mandarin
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_Jvz9iDY0JwSfbuMf4cQ0ywho)
+ Call ID: call_Jvz9iDY0JwSfbuMf4cQ0ywho
+  Args:
+    pattern: Cantonese|Hakka|Min|Wu|Hokkien|Taiwanese|Xiang|Gan|Jin|Yue|dialectal|dialects|dialect
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+2.2 Embedding for Chinese Language
+The complexity of Chinese itself has given birth to a lot of research on Chinese embedding, in- cluding the utilization of character features ( Chen et al. , 2015 ) and radicals ( Sun et al. , 2014 ; Yin et al. , 2016 ; Yu et al. , 2017 ). Considering the 2- D graphic structure of Chinese characters, Su and Lee ( 2017 ) creatively proposed to enhance word representations by character glyphs.  Lately, Cao et al. ( 2018 ) proposed that a Chinese word can be decomposed into a sequence of strokes which correspond to subwords in English, and Wu et
+al. ( 2019 ) designed a Tianzige-CNN to model the spatial structure of Chinese characters from the perspective of image processing. However, their methods are either somewhat loose for the stroke criteria or unable to capture the interactions be- tween strokes and character glyphs.
+
+================================== Ai Message ==================================
+
+Unanswerable

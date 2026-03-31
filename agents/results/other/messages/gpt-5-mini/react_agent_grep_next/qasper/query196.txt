@@ -1,0 +1,98 @@
+================================ Human Message =================================
+
+QUERY:
+Do the authors report results on only English datasets?
+
+TABLE OF CONTENTS (TOC):
+1 | Towards Automatic Bot Detection in Twitter for Health-related Tasks Anahita Davoudi, PhD 1 , Ari Z. Klein, PhD 1 , Abeed Sarker, PhD 2 , Graciela Gonzalez-Hernandez, PhD 1 1 Department of Biostatistics, Epidemiology and Informatics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA 19104 2 Department of Biomedical Informatics, School of Medicine, Emory University, Atlanta, GA 30322
+1.1 | Abstract
+1.2 | Introduction
+1.3 | 1 Methods
+1.3.1 | 1.1 Corpus
+1.3.2 | 1.2 Classification
+1.4 | 2 Results
+1.5 | 3 Discussion
+1.6 | 4 Conclusion
+1.7 | Acknowledgments
+1.8 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_HBh6Y71k0XlfSe2rKCPpgiTG)
+ Call ID: call_HBh6Y71k0XlfSe2rKCPpgiTG
+  Args:
+    pattern: English
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_306EhSMJ9KqnEHtvN2ecsRDv)
+ Call ID: call_306EhSMJ9KqnEHtvN2ecsRDv
+  Args:
+    section_id: 1.3.1
+
+================================= Tool Message =================================
+Name: read_section
+
+1.1 Corpus
+To identify bots in health-related social media data, we retrieved a sample of 10 , 417 users from a database containing more than 400 million publicly available tweets posted by more than 100 , 000 users who have announced their preg- nancy on Twitter 5 . This sample is based on related work for detecting users who have mentioned various pregnancy outcomes in their tweets.  Two professional annotators manually categorized the 10 , 417 users as ”bot,” ”non-bot,” or ”unavailable,” based on their publicly available Twitter sites. Users were annotated broadly as ”bot” if, in contrast to users annotated as ”non-bot,” they do not appear to be posting personal information.  Users were annotated as ”un- available” if their Twitter sites could not be viewed at the time of annotation, due to modifying their privacy settings or being removed or suspended from Twitter. Based on 1000 overlapping annotations, their inter-annotator agreement (IAA) was κ = 0 . 93 (Cohens kappa 22 ), considered ”almost perfect agreement” 23 .  Their IAA does not include disagree- ments resulting from the change of a user’s status to or from ”unavailable” in the time between the first and second annotations. Upon resolving the disagreements, 413 (4%) users were annotated as ”bot,” 7849 (75 . 35%) as ”non-bot,” and 20 . 69 (19 . 9%) as ”unavailable”.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_9EAAEYHDi7wYYjYanAu4LSFf)
+ Call ID: call_9EAAEYHDi7wYYjYanAu4LSFf
+  Args:
+    section_id: 1.4
+
+================================= Tool Message =================================
+Name: read_section
+
+2 Results
+Table 1 presents the precision, recall, and F 1 -scores for the three bot detection systems evaluated on the held-out test set. The F 1 -score for the ”bot” class indicates that Botometer ( 0 . 361 ), designed for political bot detection, does not generalize well for detecting ”bot” users in health-related data. Although the classifier with only the Botometer score as a feature ( 0 .  286 ) performs even worse than the default Botometer system, our extended feature set significantly improves performance ( 0 . 700 ). For imbalanced data, a higher F 1 -score for the majority class is typical; in this case, it reflects that we have modeled the detection of ”bot” users based on their natural distribution in health-related data.Classifier Precision (NB, B, Avg.) Recall (NB, B, Avg. ) F 1 -Score (NB, B, Avg.) Botometer Default 0.974, 0.276, 0.625 0.919, 0.542, 0.730 0.945, 0.361, 0.653 GB Classifier Botometerscore 0.963, 0.285, 0.624 0.962, 0.288, 0.625 0.962, 0. 286, 0.624 GB Classifier Botometerscore + F eatures 0.985, 0.678, 0.831 0.982, 0.724, 0.853 0.984, 0.700 , 0.842
+Table 1: Precision, recall, and F 1 -score for three bot detection systems evaluated on a held-out test set of 1652 users.  Precision, recall, and F 1 -scores are reported for the ”non-bot” class (NB), the ”bot” class (B), and an average of the two classes (avg.).
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_7qAPbxHxiv5JNpWJVZvpCZyc)
+ Call ID: call_7qAPbxHxiv5JNpWJVZvpCZyc
+  Args:
+    section_id: 1.2
+
+================================= Tool Message =================================
+Name: read_section
+
+Introduction
+In recent years, social media has evolved into an important source of information for various types of health-related research. Social networks encapsulate large volumes of data associated with diverse health topics, generated by active user bases in continuous growth. Twitter, for example, has 330 million monthly active users worldwide that generate almost 500 million micro-blogs (tweets) per day.  i For some years, the use of the platform to share personal health information has been growing, particularly amongst people living with one or more chronic conditions and those living with disability. Twenty percent of social network site users living with chronic conditions gather and share health information on the sites, compared with 12% of social network site users who report no chronic conditions.  ii Social media data is thus being widely used for health-related research, for tasks such as adverse drug reaction detection 1 , syndromic surveillance 2 , subject recruitment for cancer trials 3 , and characterizing drug abuse 4 , to name a few. Twitter is particularly popular in research due to the availability of the public streaming API, iii which releases a sample of publicly posted data in real time.  While early health-related research from social media focused almost exclusively on population-level studies, some very recent research tasks have focused on performing longitudinal data analysis at the user level, such as mining health-related information from cohorts of pregnant women 5 .When conducting user-level studies from social media, one challenge is to ascertain the credibility of the information posted.  Particularly, it is important to verify, when deriving statistical estimates from user cohorts, that the user ac- counts represent humans and not bots (accounts that can be controlled to automatically produce content and interact with other profiles) 6, 7 . Bots may spread false information by automatically retweeting posts without a human verifying the facts or to influence public opinions on particular topics on purpose 6, 8, 9 .  For example, a recent study 10 showed that the highest proportion of anti-vaccine content is generated by accounts with unknown or intermediate bot scores, meaning that the existing methods were not able to fully determine if they were indeed bots. Automatic bot detection techniques mostly rely on extracting features from users’ profiles and their social networks 11, 12 .  Some studies have used Honeypot profiles on Twitter to identify and analyze bots 13 , while other studies have analyzed social proximity 14 or both social and content proximities 12 , tweet timing intervals 15 , or user-level content-based and graph-based fea- tures 16 . However, in response to efforts towards keeping Twitter bot-free, bots have evolved and changed to overcome the detection techniques 17 .i https://www.internetlivestats. com/twitter-statistics/ . Accessed: 05/06/2019. ii https://www.pewinternet.org/2011/05/12/the-social-life-of-health-information-2011/ . Accessed: 08/15/2019.iii https://developer.twitter.com/en/docs/tutorials/consuming-streaming-data.html . Accessed: 05/06/2019. The objectives of this study are to (i) evaluate an existing bot detection system on user-level datasets selected for their health-related content, and (ii) extend the bot detection system for effective application within the health realm. Bot detection approaches have been published in the past few years, but most of the code and data necessary for reproducing the published results were not made available 18–20 .  The only system for which we found both operational code and data available, Botometer 21 (formerly BotOrNot), was chosen as the benchmark system for this study. To the best of our knowledge, this paper presents the first study on health-related bot detection. We have made the classification code and training set of annotated users available at (we will provide a URL with the camera-ready version of the paper).
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_0WxIgwYfOkPlR7OnQL5wA62u)
+ Call ID: call_0WxIgwYfOkPlR7OnQL5wA62u
+  Args:
+    section_id: 1.1
+
+================================= Tool Message =================================
+Name: read_section
+
+Abstract
+With the increasing use of social media data for health-related research, the credibility of the information from this source has been questioned as the posts may originate from automated accounts or ”bots”. While automatic bot detection approaches have been proposed, there are none that have been evaluated on users posting health-related information. In this paper, we extend an existing bot detection system and customize it for health-related research.  Using a dataset of Twitter users, we first show that the system, which was designed for political bot detection, un- derperforms when applied to health-related Twitter users. We then incorporate additional features and a statistical machine learning classifier to significantly improve bot detection performance. Our approach obtains F 1 -scores of 0 . 7 for the ”bot” class, representing improvements of 0 . 339 .  Our approach is customizable and generalizable for bot detection in other health-related social media cohorts.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_6VSVzGk844uLsAvuR7mRNKOo)
+ Call ID: call_6VSVzGk844uLsAvuR7mRNKOo
+  Args:
+    pattern: language
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+
+Unanswerable

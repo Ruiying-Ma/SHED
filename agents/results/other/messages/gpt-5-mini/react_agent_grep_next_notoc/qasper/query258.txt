@@ -1,0 +1,72 @@
+================================ Human Message =================================
+
+QUERY:
+what was their model's f1 score?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_5s8qQIBpPjZJZesYqCk7I3a4)
+ Call ID: call_5s8qQIBpPjZJZesYqCk7I3a4
+  Args:
+    pattern: F1
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Keyphrase is an efficient representation of the main idea of documents. While background knowledge can provide valuable information about documents, they are rarely incorporated in keyphrase extraction methods. In this paper, we propose WikiRank, an unsupervised method for keyphrase extraction based on the background knowledge from Wikipedia. Firstly, we construct a semantic graph for the document. Then we transform the keyphrase extraction problem into an optimization problem on the graph. Finally, we get the optimal keyphrase set to be the output.  Our method obtains improvements over other state-of-art models by more than 2% in F1-score.Keywords: Keyphrase Extraction, Knowledge Graph, Semantic Graph
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_XlPSMx3ZOXzBCPHExKv62iBu)
+ Call ID: call_XlPSMx3ZOXzBCPHExKv62iBu
+  Args:
+    pattern: F1-score
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Keyphrase is an efficient representation of the main idea of documents. While background knowledge can provide valuable information about documents, they are rarely incorporated in keyphrase extraction methods. In this paper, we propose WikiRank, an unsupervised method for keyphrase extraction based on the background knowledge from Wikipedia. Firstly, we construct a semantic graph for the document. Then we transform the keyphrase extraction problem into an optimization problem on the graph. Finally, we get the optimal keyphrase set to be the output.  Our method obtains improvements over other state-of-art models by more than 2% in F1-score.Keywords: Keyphrase Extraction, Knowledge Graph, Semantic Graph
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_6a9UNLHzm5cKUrlr93SJwX45)
+ Call ID: call_6a9UNLHzm5cKUrlr93SJwX45
+  Args:
+    pattern: F1
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_7dSmiAQbzAgBXvduxrQWOoOM)
+ Call ID: call_7dSmiAQbzAgBXvduxrQWOoOM
+  Args:
+    pattern: WikiRank
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Keyphrase is an efficient representation of the main idea of documents. While background knowledge can provide valuable information about documents, they are rarely incorporated in keyphrase extraction methods. In this paper, we propose WikiRank, an unsupervised method for keyphrase extraction based on the background knowledge from Wikipedia. Firstly, we construct a semantic graph for the document. Then we transform the keyphrase extraction problem into an optimization problem on the graph. Finally, we get the optimal keyphrase set to be the output.  Our method obtains improvements over other state-of-art models by more than 2% in F1-score.Keywords: Keyphrase Extraction, Knowledge Graph, Semantic Graph
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_3u9DpgmheBWKBzOMj0dNHqaa)
+ Call ID: call_3u9DpgmheBWKBzOMj0dNHqaa
+  Args:
+    pattern: score
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Keyphrase is an efficient representation of the main idea of documents. While background knowledge can provide valuable information about documents, they are rarely incorporated in keyphrase extraction methods. In this paper, we propose WikiRank, an unsupervised method for keyphrase extraction based on the background knowledge from Wikipedia. Firstly, we construct a semantic graph for the document. Then we transform the keyphrase extraction problem into an optimization problem on the graph. Finally, we get the optimal keyphrase set to be the output.  Our method obtains improvements over other state-of-art models by more than 2% in F1-score.Keywords: Keyphrase Extraction, Knowledge Graph, Semantic Graph
+
+================================== Ai Message ==================================
+
+Unanswerable

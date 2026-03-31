@@ -1,0 +1,98 @@
+================================ Human Message =================================
+
+QUERY:
+Are answers in this dataset guaranteed to be substrings of the text? If not, what is the coverage of answers being substrings?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_4QXptGPEyXB74iS71gGHHsga)
+ Call ID: call_4QXptGPEyXB74iS71gGHHsga
+  Args:
+    pattern: substring
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+This paper describes our submission to the 2017 BioASQ challenge. We participated in Task B, Phase B which is concerned with biomedical question answering (QA). We focus on factoid and list question, us- ing an extractive QA model, that is, we restrict our system to output substrings of the provided text snippets. At the core of our system, we use FastQA, a state-of- the-art neural QA system.  We extended it with biomedical word embeddings and changed its answer layer to be able to answer list questions in addition to fac- toid questions. We pre-trained the model on a large-scale open-domain QA dataset, SQuAD, and then fine-tuned the parame- ters on the BioASQ training set. With our approach, we achieve state-of-the-art re- sults on factoid questions and competitive results on list questions.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_nDFJEwqCQBLqoIspKK3RvT0L)
+ Call ID: call_nDFJEwqCQBLqoIspKK3RvT0L
+  Args:
+    pattern: substring|substrings|coverage|answer is|answers are substrings|guarantee|guaranteed|coverage
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+This paper describes our submission to the 2017 BioASQ challenge. We participated in Task B, Phase B which is concerned with biomedical question answering (QA). We focus on factoid and list question, us- ing an extractive QA model, that is, we restrict our system to output substrings of the provided text snippets. At the core of our system, we use FastQA, a state-of- the-art neural QA system.  We extended it with biomedical word embeddings and changed its answer layer to be able to answer list questions in addition to fac- toid questions. We pre-trained the model on a large-scale open-domain QA dataset, SQuAD, and then fine-tuned the parame- ters on the BioASQ training set. With our approach, we achieve state-of-the-art re- sults on factoid questions and competitive results on list questions.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_R0x4zdTd8Bxy2Vo3TPaPfiOC)
+ Call ID: call_R0x4zdTd8Bxy2Vo3TPaPfiOC
+  Args:
+    pattern: BioASQ|answers|coverage|substring|substring of|annotat|gold|exact|contain|percentage|percent|overlap|match
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+This paper describes our submission to the 2017 BioASQ challenge. We participated in Task B, Phase B which is concerned with biomedical question answering (QA). We focus on factoid and list question, us- ing an extractive QA model, that is, we restrict our system to output substrings of the provided text snippets. At the core of our system, we use FastQA, a state-of- the-art neural QA system.  We extended it with biomedical word embeddings and changed its answer layer to be able to answer list questions in addition to fac- toid questions. We pre-trained the model on a large-scale open-domain QA dataset, SQuAD, and then fine-tuned the parame- ters on the BioASQ training set. With our approach, we achieve state-of-the-art re- sults on factoid questions and competitive results on list questions.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_Cnn3H3SSSg9TAQLWkUFxs563)
+ Call ID: call_Cnn3H3SSSg9TAQLWkUFxs563
+  Args:
+    pattern: BioASQ [0-9]{4}|BioASQ|snippets|snippe|training set|SQuAD|list question|factoid|answers|answer(s?)|substring(s?)|exact match|annotat|gold standard|coverage|overlap|contain|extractive
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+This paper describes our submission to the 2017 BioASQ challenge. We participated in Task B, Phase B which is concerned with biomedical question answering (QA). We focus on factoid and list question, us- ing an extractive QA model, that is, we restrict our system to output substrings of the provided text snippets. At the core of our system, we use FastQA, a state-of- the-art neural QA system.  We extended it with biomedical word embeddings and changed its answer layer to be able to answer list questions in addition to fac- toid questions. We pre-trained the model on a large-scale open-domain QA dataset, SQuAD, and then fine-tuned the parame- ters on the BioASQ training set. With our approach, we achieve state-of-the-art re- sults on factoid questions and competitive results on list questions.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_asMkRW9fe7aCrlytKhuXYbKv)
+ Call ID: call_asMkRW9fe7aCrlytKhuXYbKv
+  Args:
+    pattern: snipp|snippet|provided text|contained|occur(s|red)? in|present in|occur in|answer (is|are) (a )?substring|coverage|coverage of answers|percent|percentage|\b%\b|contained in the|present in the|found in the
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+This paper describes our submission to the 2017 BioASQ challenge. We participated in Task B, Phase B which is concerned with biomedical question answering (QA). We focus on factoid and list question, us- ing an extractive QA model, that is, we restrict our system to output substrings of the provided text snippets. At the core of our system, we use FastQA, a state-of- the-art neural QA system.  We extended it with biomedical word embeddings and changed its answer layer to be able to answer list questions in addition to fac- toid questions. We pre-trained the model on a large-scale open-domain QA dataset, SQuAD, and then fine-tuned the parame- ters on the BioASQ training set. With our approach, we achieve state-of-the-art re- sults on factoid questions and competitive results on list questions.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_7vIyN7OcQ5I5gQxGjg5zGftq)
+ Call ID: call_7vIyN7OcQ5I5gQxGjg5zGftq
+  Args:
+    pattern: coverage
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_gW19uqWxlEFQ6XvgWzktExEr)
+ Call ID: call_gW19uqWxlEFQ6XvgWzktExEr
+  Args:
+    pattern: Dataset|Data set|BioASQ training set|BioASQ dataset|BioASQ dataset|train|training|gold|answers in the dataset|annotation|annotations|questions and answers|gold standard
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+This paper describes our submission to the 2017 BioASQ challenge. We participated in Task B, Phase B which is concerned with biomedical question answering (QA). We focus on factoid and list question, us- ing an extractive QA model, that is, we restrict our system to output substrings of the provided text snippets. At the core of our system, we use FastQA, a state-of- the-art neural QA system.  We extended it with biomedical word embeddings and changed its answer layer to be able to answer list questions in addition to fac- toid questions. We pre-trained the model on a large-scale open-domain QA dataset, SQuAD, and then fine-tuned the parame- ters on the BioASQ training set. With our approach, we achieve state-of-the-art re- sults on factoid questions and competitive results on list questions.
+
+================================== Ai Message ==================================
+
+Unanswerable

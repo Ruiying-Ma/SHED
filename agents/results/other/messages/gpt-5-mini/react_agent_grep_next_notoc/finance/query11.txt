@@ -1,0 +1,55 @@
+================================ Human Message =================================
+
+QUERY:
+What is Adobe's year-over-year change in unadjusted operating income from FY2015 to FY2016 (in units of percents and round to one decimal place)? Give a solution to the question by using the income statement.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_TyySnkvaGPUgsM66TPxbItX1)
+ Call ID: call_TyySnkvaGPUgsM66TPxbItX1
+  Args:
+    pattern: Unadjusted operating income|Unadjusted operating|operating income\b
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Non-Operating Income (Expense), Net (dollars in millions)
+Fiscal 2016 Fiscal 2015 Fiscal 2014 % Change 2016-2015 % Change 2015-2014 Interest and other income (expense), net $ 13.5 $ 33.9 $ 7.3 (60)% * Percentage of total revenue ** ** ** Interest expense (70.4) (64.2) (59. 7) 10 % 8 % Percentage of total revenue (1)% (1)% (1)% Investment gains (losses), net (1.6) 1.0 1.1 * * Percentage of total revenue ** ** ** Total non-operating income (expense), net $ (58.5) $ (29.3) $ (51.3) 100 % (43)% _________________________________________
+(*) Percentage is not meaningful. (**) Percentage is less than 1%.Interest and Other Income (Expense), Net
+Interest and other income (expense), net consists primarily of interest earned on cash, cash equivalents and short-term fixed income investments. Interest and other income (expense), net also includes gains and losses on fixed income investments and foreign exchange gains and losses other than any gains recorded to revenue from our hedging programs. Interest and other income (expense), net decreased in fiscal 2016 as compared to fiscal 2015 due to the gain on the sale of certain property assets that occurred in fiscal 2015 and the increase in foreign exchange hedging costs, offset by the increase in interest income due to increased average investment balance and interest rates. Interest and other income (expense), net increased in fiscal 2015 as compared to fiscal 2014 primarily due to the gain on the sale of certain property assets and, to a lesser extent, an increased average investment balance and average interest rate. See Note 6 of our Notes to Consolidated Financial Statements for further details regarding the sale of our property assets.Interest Expense
+Interest expense primarily represents interest associated with our senior notes and interest rate swaps.  Interest on our senior notes is payable semi-annually, in arrears, on February 1 and August 1. Floating interest payments on the interest rate swaps are paid monthly. The fixed-rate interest receivable on the swaps is received semi-annually concurrent with the senior notes interest payments.  See Notes 5 and 15 of our Notes to Consolidated Financial Statements for further details regarding our interest rate swaps. Interest expense increased during fiscal 2016 as compared to fiscal 2015 primarily due to the increase in floating rate on interest rate swap and higher average debt balances.Interest expense increased during fiscal 2015 as compared to fiscal 2014 primarily due to the increase in total debt, partially offset by the favorable impact of the interest rate swaps.Investment Gains (Losses), Net
+ Investment gains (losses), net consists principally of realized gains or losses from the sale of marketable equity investments, other-than-temporary declines in the value of marketable and non-marketable equity securities and unrealized holding gains and losses associated with our deferred compensation plan assets (classified as trading securities) and gains and losses associated with our direct and indirect investments in privately held companies.Table of Contents
+52
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_ZhwdTx1kZjJgOTcWzji562pq)
+ Call ID: call_ZhwdTx1kZjJgOTcWzji562pq
+  Args:
+    pattern: Unadjusted operating income
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_9VCfCZFDjogTa04Lwvi6mrW7)
+ Call ID: call_9VCfCZFDjogTa04Lwvi6mrW7
+  Args:
+    pattern: Operating income|Total operating income|Operating income (loss)
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+CONSOLIDATED STATEMENTS OF INCOME
+(In thousands, except per share data)
+ Years Ended December 2, 2016 November 27, 2015 November 28, 2014 Revenue: Subscription $ 4,584,833 $ 3,223,904 $ 2,076,584 Product 800,498 1,125,146 1,627,803 Services and support 469,099 446,461 442,678 Total revenue 5,854,430 4,795,511 4,147,065 Cost of revenue: Subscription 461,860 409,194 335,432 Product 68,917 90,035 97,099 Services and support 289,131 245,088 189,549 Total cost of revenue 819,908 744,317 622,080 Gross profit 5,034,522 4,051,194 3,524,985 Operating expenses: Research and development 975,987 862,730 844,353 Sales and marketing 1,910,197 1,683,242 1,652,308 General and administrative 577,710 531,919 543,332 Restructuring and other charges (1,508) 1,559 19,883 Amortization of purchased intangibles 78,534 68,649 52,424 Total operating expenses 3,540,920 3,148,099 3,112,300 Operating income 1,493,602 903,095 412,685 Non-operating income (expense): Interest and other income (expense), net 13,548 33,909 7,267 Interest expense (70,442) (64,184) (59,732) Investment gains (losses), net (1,570) 961 1,156 Total non-operating income (expense), net (58,464) (29,314) (51,309) Income before income taxes 1,435,138 873,781 361,376 Provision for income taxes 266,356 244,230 92,981 Net income $ 1,168,782 $ 629,551 $ 268,395 Basic net income per share $ 2. 35 $ 1.26 $ 0.54 Shares used to compute basic net income per share 498,345 498,764 497,867 Diluted net income per share $ 2.32 $ 1.24 $ 0.53 Shares used to compute diluted net income per share 504,299 507,164 508,480
+See accompanying Notes to Consolidated Financial Statements.Table of Contents
+63
+ADOBE SYSTEMS INCORPORATED
+
+================================== Ai Message ==================================
+
+65.4%

@@ -1,0 +1,99 @@
+================================ Human Message =================================
+
+QUERY:
+Which subsystem outperformed the others?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_0j09zy6DJuvzy42LAV9ihwJw)
+ Call ID: call_0j09zy6DJuvzy42LAV9ihwJw
+  Args:
+    pattern: outperformed|subsystem|systems|performed best|best system
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+ABSTRACT
+This paper describes the systems submitted by the department of electronic engineering, institute of microelectronics of Tsinghua university and TsingMicro Co. Ltd. (THUEE) to the NIST 2019 speaker recognition evaluation CTS challenge. Six subsystems, including etdnn/ams, ftdnn/as, eftdnn/ams, resnet, multitask and c-vector are developed in this evaluation. Index Terms — NIST 2019 SRE CTS challenge, eftdnn, multi- task, c-vector, additive margin
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_cRDJ7itIO8TQzNFlk8iPzrma)
+ Call ID: call_cRDJ7itIO8TQzNFlk8iPzrma
+  Args:
+    pattern: outperformed|subsystem|systems|performed best|best system
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1. INTRODUCTION
+This paper describes the systems developed by the department of electronic engineering, institute of microelectronics of Tsinghua uni- versity and TsingMicro Co. Ltd. (THUEE) for the NIST 2019 speaker recognition evaluation (SRE) CTS challenge [1]. Six sub- systems, including etdnn/ams, ftdnn/as, eftdnn/ams, resnet, multi- task and c-vector are developed in this evaluation.  All the subsys- tems consists of a deep neural network followed by dimension de- duction, score normalization and calibration. For each system, we begin with a summary of the data usage, followed by a description of the system setup along with their hyperparameters. Finally, we report experimental results obtained by each subsystem and fusion system on the SRE18 development and SRE18 evaluation datasets.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_zA3STluolM5lqiHhxbqulBPp)
+ Call ID: call_zA3STluolM5lqiHhxbqulBPp
+  Args:
+    pattern: experimental results|results obtained by each subsystem|fusion system|EER|minDCF
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1. INTRODUCTION
+This paper describes the systems developed by the department of electronic engineering, institute of microelectronics of Tsinghua uni- versity and TsingMicro Co. Ltd. (THUEE) for the NIST 2019 speaker recognition evaluation (SRE) CTS challenge [1]. Six sub- systems, including etdnn/ams, ftdnn/as, eftdnn/ams, resnet, multi- task and c-vector are developed in this evaluation.  All the subsys- tems consists of a deep neural network followed by dimension de- duction, score normalization and calibration. For each system, we begin with a summary of the data usage, followed by a description of the system setup along with their hyperparameters. Finally, we report experimental results obtained by each subsystem and fusion system on the SRE18 development and SRE18 evaluation datasets.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_9XwaRJwdla9bkdfvbC3jrXto)
+ Call ID: call_9XwaRJwdla9bkdfvbC3jrXto
+  Args:
+    pattern: Table|EER|minDCF|dev|eval
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+ABSTRACT
+This paper describes the systems submitted by the department of electronic engineering, institute of microelectronics of Tsinghua university and TsingMicro Co. Ltd. (THUEE) to the NIST 2019 speaker recognition evaluation CTS challenge. Six subsystems, including etdnn/ams, ftdnn/as, eftdnn/ams, resnet, multitask and c-vector are developed in this evaluation. Index Terms — NIST 2019 SRE CTS challenge, eftdnn, multi- task, c-vector, additive margin
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_A7NGZJR6T3WiGePviKGN70zs)
+ Call ID: call_A7NGZJR6T3WiGePviKGN70zs
+  Args:
+    pattern: 6\.|5\.|results
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1. INTRODUCTION
+This paper describes the systems developed by the department of electronic engineering, institute of microelectronics of Tsinghua uni- versity and TsingMicro Co. Ltd. (THUEE) for the NIST 2019 speaker recognition evaluation (SRE) CTS challenge [1]. Six sub- systems, including etdnn/ams, ftdnn/as, eftdnn/ams, resnet, multi- task and c-vector are developed in this evaluation.  All the subsys- tems consists of a deep neural network followed by dimension de- duction, score normalization and calibration. For each system, we begin with a summary of the data usage, followed by a description of the system setup along with their hyperparameters. Finally, we report experimental results obtained by each subsystem and fusion system on the SRE18 development and SRE18 evaluation datasets.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_RpbTw5wNJrZ6ZYJeLCSwbVB2)
+ Call ID: call_RpbTw5wNJrZ6ZYJeLCSwbVB2
+  Args:
+    pattern: SRE18 development|SRE18 evaluation|Table 1|Table 2|subsystem
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+ABSTRACT
+This paper describes the systems submitted by the department of electronic engineering, institute of microelectronics of Tsinghua university and TsingMicro Co. Ltd. (THUEE) to the NIST 2019 speaker recognition evaluation CTS challenge. Six subsystems, including etdnn/ams, ftdnn/as, eftdnn/ams, resnet, multitask and c-vector are developed in this evaluation. Index Terms — NIST 2019 SRE CTS challenge, eftdnn, multi- task, c-vector, additive margin
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_lkNVfi4eCkmv1Z5hwT1PLOzn)
+ Call ID: call_lkNVfi4eCkmv1Z5hwT1PLOzn
+  Args:
+    pattern: c-vector|multitask|resnet|eftdnn/ams|ftdnn/as|etdnn/ams
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+ABSTRACT
+This paper describes the systems submitted by the department of electronic engineering, institute of microelectronics of Tsinghua university and TsingMicro Co. Ltd. (THUEE) to the NIST 2019 speaker recognition evaluation CTS challenge. Six subsystems, including etdnn/ams, ftdnn/as, eftdnn/ams, resnet, multitask and c-vector are developed in this evaluation. Index Terms — NIST 2019 SRE CTS challenge, eftdnn, multi- task, c-vector, additive margin
+
+================================== Ai Message ==================================
+
+Unanswerable

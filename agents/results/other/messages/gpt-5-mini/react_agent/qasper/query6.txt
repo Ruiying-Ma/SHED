@@ -1,0 +1,46 @@
+================================ Human Message =================================
+
+QUERY:
+What is their evaluation metric?
+
+TABLE OF CONTENTS (TOC):
+1 | Spotting Rumors via Novelty Detection Yumeng Qin International School of Software Wuhan University yumeng.qin@whu.edu.cn Dominik Wurzer School of Informatics University of Edinburgh s1157979@sms.ed.ac.uk
+1.1 | Abstract
+1.2 | 1 Introduction
+1.2.1 | Novelty based Features
+1.2.2 | Pseudo Feedback for Detection/Classification
+1.2.3 | 1.1 Related Work
+1.3 | 2 Rumour Detection
+1.3.1 | 2.1 Problem Statement
+1.3.2 | 2.2 Novelty-based Features
+1.3.3 | 2.3 Novelty Feature Construction
+1.3.4 | 2.4 Pseudo Feedback
+1.3.4.1 | Training Pseudo Feedback Features
+1.4 | 3 Experiments
+1.4.1 | 3.1 Evaluation metrics
+1.4.2 | 3.2 Data set
+1.4.3 | 3.3 Rumour detection effectiveness
+1.4.4 | 3.4 Feature analysis
+1.4.4.1 | Novelty based Features
+1.4.4.2 | Pseudo Feedbaack
+1.4.5 | 3.5 Detecting unpopular rumours
+1.4.6 | 3.6 Efficiency and Scalability
+1.5 | 4 Conclusion
+1.6 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_vRBJvtib1Rwdo3Dd2Pqo3v3w)
+ Call ID: call_vRBJvtib1Rwdo3Dd2Pqo3v3w
+  Args:
+    section_id: 1.4.1
+
+================================= Tool Message =================================
+Name: read_section
+
+3.1 Evaluation metrics
+We report accuracy to evaluate effectiveness, as is usual in the literature (Zhou et. al, 2015). Addi- tionally we use the standard TDT evaluation pro- cedure (Allan et. al, 2000; NIST, 2008) with the official TDT3 evaluation scripts (NIST, 2008) us- ing standard settings.  This procedure evaluates detection tasks using Detection Error Trade-off (DET) curves, which show the trade-off between miss and false alarm probability. By visualizing the full range of thresholds, DET plots provide a more comprehensive illustration of effectiveness than single value metrics (Allan et. al, 2000). We also evaluate the efficiency of computing the pro- posed features, measured by the throughput per second, when applied to a high number of mes- sages.
+
+================================== Ai Message ==================================
+
+They report accuracy and also use the standard TDT evaluation procedure with DET (Detection Error Trade-off) curves (trade-off between miss and false alarm probability); efficiency is measured as throughput per second.

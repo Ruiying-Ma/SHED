@@ -1,0 +1,36 @@
+================================ Human Message =================================
+
+QUERY:
+What is the FY2018 capital expenditure amount (in USD millions) for 3M? Give a response to the question by relying on the details shown in the cash flow statement.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_dRedyG8v1G91VCFLBmRdCTAX)
+ Call ID: call_dRedyG8v1G91VCFLBmRdCTAX
+  Args:
+    pattern: capital expenditure|capital expenditures|cash flow statement|purchases of property, plant and equipment|property, plant and equipment
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Environmental Law Compliance
+3M’s manufacturing operations are affected by national, state and local environmental laws around the world. 3M has made, and plans to continue making, necessary expenditures for compliance with applicable laws. 3M is also involved in remediation actions relating to environmental matters from past operations at certain sites (refer to “Environmental Matters and Litigation” in Note 16, Commitments and Contingencies). Environmental expenditures relating to existing conditions caused by past operations that do not contribute to current or future revenues are expensed. Reserves for liabilities for anticipated remediation costs are recorded on an undiscounted basis when they are probable and reasonably estimable, generally no later than the completion of feasibility studies, the Company’s commitment to a plan of action, or approval by regulatory agencies. Environmental expenditures for capital projects that contribute to current or future operations generally are capitalized and depreciated over their estimated useful lives. In 2018, 3M expended approximately $27 million for capital projects related to protecting the environment. This amount excludes expenditures for remediation actions relating to existing matters caused by past operations that do not contribute to current or future revenues, which are expensed. Capital expenditures for environmental purposes have included pollution control devices — such as wastewater treatment plant improvements, scrubbers, containment structures, solvent recovery units and thermal oxidizers — at new and existing facilities constructed or upgraded in the normal course of business.  Consistent with the Company’s emphasis on environmental responsibility, capital expenditures (other than for remediation projects) for known projects are presently expected to be approximately $75 million over the next two years for new or expanded programs to build facilities or modify manufacturing processes to minimize waste and reduce emissions.7
+Table of Contents
+ While the Company cannot predict with certainty the future costs of such cleanup activities, capital expenditures or operating costs for environmental compliance, the Company does not believe they will have a material effect on its capital expenditures, earnings or competitive position.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_ZK5SUfh3p42FFspJO12VTWhQ)
+ Call ID: call_ZK5SUfh3p42FFspJO12VTWhQ
+  Args:
+    pattern: Consolidated Statement of Cash Flows|Statement of Cash Flows|Purchases of property, plant and equipment
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Free Cash Flow (non-GAAP measure):
+Free cash flow and free cash flow conversion are not defined under U.S. generally accepted accounting principles (GAAP). Therefore, they should not be considered a substitute for income or cash flow data prepared in accordance with U.S. GAAP and may not be comparable to similarly titled measures used by other companies. The Company defines free cash flow as net cash provided by operating activities less purchases of property, plant and equipment.  It should not be inferred that the entire free cash flow amount is available for discretionary expenditures. The Company defines free cash flow conversion as free cash flow divided by net income attributable to 3M. The Company believes free cash flow and free cash flow conversion are meaningful to investors as they are useful measures of performance and the Company uses these measures as an indication of the strength of the company and its ability to generate cash.  The first quarter of each year is typically 3M’s seasonal low for free cash flow and free cash flow conversion. Below find a recap of free cash flow and free cash flow conversion for 2018, 2017 and 2016. In 2018, free cash flow conversion was impacted by the $176 million measurement period adjustment to the tax expense recorded in December 2017 from the enactment of the TCJA, the $897 million pre-tax impact related to the resolution of the Minnesota natural resource damages (NRD), and the $381 million pre-tax impact from the gain on sale of the Communication Markets Division, net of restructuring actions related to addressing corporate functional costs following the divestiture.  On a combined basis, these items reduced free cash flow conversion by 2 percentage points.In 2017, free cash flow conversion was impacted by enactment of the TCJA, along with an additional U.S. pension contribution of $600 million that 3M made following the signing of tax reform. On a combined basis, these items benefited free cash flow conversion by 3 percentage points.  Refer to the preceding “Cash Flows from Operating Activities” section for discussion of additional items that impacted operating cash flow. Refer to the preceding “Cash Flows from Investing Activities” section for discussion on capital spending for property, plant and equipment. Years ended December 31 (Millions) 2018 2017 2016 Major GAAP Cash Flow Categories Net cash provided by operating activities $ 6,439 $ 6,240   $ 6,662 Net cash provided by (used in) investing activities 222 (3,086) (1,403) Net cash used in financing activities (6,701) (2,655) (4,626) Free Cash Flow (non-GAAP measure) Net cash provided by operating activities $ 6,439 $ 6,240   $ 6,662 Purchases of property, plant and equipment (PP&E) (1,577) (1,373) (1,420) Free cash flow $ 4,862 $ 4,867   $ 5,242 Net income attributable to 3M $ 5,349 $ 4,858   $ 5,050 Free cash flow conversion 91 % 100 % 104 %
+
+================================== Ai Message ==================================
+
+$1,577 million.

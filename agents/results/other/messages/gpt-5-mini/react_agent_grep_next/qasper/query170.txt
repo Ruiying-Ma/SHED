@@ -1,0 +1,170 @@
+================================ Human Message =================================
+
+QUERY:
+Do they reduce language variation of text by enhancing frequencies?
+
+TABLE OF CONTENTS (TOC):
+1 | Combining Thesaurus Knowledge and Probabilistic Topic Models
+1.1 | 1 Introduction
+1.2 | 2 Related Work
+1.3 | 3 Approach to Integration Whole Thesauri into Topic Models
+1.4 | 4 Automatic Measures to Estimate the Quality of Topic Models
+1.5 | 5 Use of Automatic Measures to Assess Combined Models
+1.6 | 6 Manual Evaluation of Combined Topic Models
+1.7 | 7 Conclusion
+1.8 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_cXgwxNpr5iaRRzkpFtIRDzPo)
+ Call ID: call_cXgwxNpr5iaRRzkpFtIRDzPo
+  Args:
+    pattern: language variation
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_VZgctIQhL9T0vh2QwlStm9cb)
+ Call ID: call_VZgctIQhL9T0vh2QwlStm9cb
+  Args:
+    pattern: variation
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_qUyBX3q0HYWEyGYkDZ2NVnRF)
+ Call ID: call_qUyBX3q0HYWEyGYkDZ2NVnRF
+  Args:
+    pattern: frequency
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.4 | 4 Automatic Measures to Estimate the Quality of Topic Models
+To estimate the quality of topic models, we use two main automatic measures: topic coherence and kernel uniqueness. For human content analysis, measures of topic co- herence and kernel uniqueness are both important and complement each other. Topics can be coherent but have a lot of repetitions. On the other hand, generated topics can be very diverse, but incoherent within each topic.Topic coherence is an automatic metric of interpretability.  It was shown that the co- herence measure has a high correlation with the expert estimates of topic interpretability [10,19]. Mimno [10] described an experiment comparing expert evaluation of LDA- generated topics and automatic topic coherence measures. It was found that most "bad" topics consisted of words without clear relations between each other.4 Loukachevitch et al.Algorithm 1: LDA-SIM algorithm
+ Input: collection D , vocabulary W , number of topics | T | , initial { p ( w | t ) } and { p ( t | d ) } , sets of similar expressions S , hyperparameters { α t } and { β w } , n dw is the frequency of w in the document d Output: distributions { p ( w | t ) } and { p ( t | d ) } 1 while not meet the stop criterion do 2 for d ∈ D, w ∈ W, t ∈ T do 3 p ( t | d, w ) = p ( w | t ) p ( t | d ) P u ∈ T p ( w | u ) p ( u | d ) 4 for d ∈ D, w ∈ W, t ∈ T do 5 n ′ dw = n dw + P s ∈ S w n ds 6 p ( w | t ) = P d ∈ D n ′ dw p ( t | d,w )+ β w P d ∈ D P w ∈ d n ′ dw p ( t | d,w )+ P w ∈ W β w 7 p ( t | d ) = P w ∈ d n ′ dw p ( t | d,w )+ α t P w ∈ W P t ∈ T n ′ dw p ( t | d,w )+ P t ∈ T α t
+ Newman et al. [7] asked users to score topics on a 3-point scale, where 3=“useful” (coherent) and 1=“useless” (less coherent). They instructed the users that one indica- tor of usefulness is the ease by which one could think of a short label to describe a topic. Then several automatic measures, including WordNet-based measures and cor- pus co-occurrence measures, were compared.  It was found that the best automatic mea- sure having the largest correlation with human evaluation is word co-occurrence cal- culated as point-wise mutual information (PMI) on Wikipedia articles. Later Lau et al. [19] showed that normalized poinwise mutual information (NPMI) [20] calculated on Wikipedia articles correlates even more strongly with human scores.We calculate automatic topic coherence using two measure variants.  The coherence of a topic is the median PMI (NPMI) of word pairs representing the topic, usually it is calculated for n most probable elements (in our study ten elements) in the topic. The coherence of the model is the median of the topic coherence. To make this measure more objective, it should be calculated on an external corpus [19]. In our case, we use Wikipedia dumps. P M I ( w i , w j ) = log p ( w i , w j ) p ( w i ) p ( w j ) N P M I ( w i , w j ) = P M I ( w i , w j ) − log ( p ( w i , w j )) (1)
+Human-constructed topics usually have unique main words.  The measure of kernel uniqueness shows to what extent topics are different from each other and is calculated as the number of unique elements among most probable elements of topics (kernels) in relation to the whole number of elements in kernels.U ( Φ ) = | ∪ t kernel ( T i ) | P t ∈ T | kernel ( T i ) | (2)
+Combining Thesaurus Knowledge and Probabilistic Topic Models 5
+ If uniqueness of the topic kernels is closer to zero then many topics are similar to each other, contain the same words in their kernels. In this paper the kernel of a topic means the ten most probable words in the topic. We also calculated perplexity as the measure of language models. We use it for additional checking the model quality.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_ovFN9VLhYmAfDvHQwcVux2BV)
+ Call ID: call_ovFN9VLhYmAfDvHQwcVux2BV
+  Args:
+    pattern: n ' dw =
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_hYGynLMEIJEEc7M52L4JhT8v)
+ Call ID: call_hYGynLMEIJEEc7M52L4JhT8v
+  Args:
+    pattern: similar
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.2 | 2 Related Work
+Topic modeling approaches are unsupervised statistical algorithms that usually consid- ers each document as a "bag of words". There were several attempts to enrich word- based topic models (=unigram topic models) with additional prior knowledge or multi- word expressions.Andrzejewski et al. [6] incorporated knowledge by Must-Link and Cannot-Link primitives represented by a Dirichlet Forest prior.  These primitives were then used in [7], where similar words are encouraged to have similar topic distributions. However, all such methods incorporate knowledge in a hard and topic-independent way, which is a simplification since two words that are similar in one topic are not necessarily of equal importance for another topic.Xie et al.  [8] proposed a Markov Random Field regularized LDA model (MRF- LDA), which utilizes the external knowledge to improve the coherence of topic mod- eling. Within a document, if two words are labeled as similar according to the external knowledge, their latent topic nodes are connected by an undirected edge and a binary potential function is defined to encourage them to share the same topic label. Distribu- tional similarity of words is calculated beforehand on a large text corpus. In [9], the authors gather so-called lexical relation sets (LR-sets) for word senses described in WordNet. The LR-sets include synonyms, antonyms and adjective-attribute related words. To adapt LR-sets to a specific domain corpus and to remove inappropriate lexical relations, the correlation matrix for word pairs in each LR-set is calculated.  This matrix at the first step is used for filtrating inappropriate senses, then it is used to modify the initial LDA topic model according to the generalized Polya urn model described in [10]. The generalized Polya urn model boosts probabilities of related words in word- topic distributions. Gao and Wen [11] presented Semantic Similarity-Enhanced Topic Model that ac- counts for corpus-specific word co-occurrence and word semantic similarity calcu- lated on WordNet paths between corresponding synsets using the generalized Polya urn model. They apply their topic model for categorizing short texts.All above-mentioned approaches on adding knowledge to topic models are limited to single words. Approaches using ngrams in topic models can be subdivided into two groups.  The first group of methods tries to create a unified probabilistic model account- ing unigrams and phrases. Bigram-based approaches include the Bigram Topic Model [12] and LDA Collocation Model [13]. In [14] the Topical N-Gram Model was proposed to allow the generation of ngrams based on the context. However, all these models are enough complex and hard to compute on real datasets. The second group of methods is based on preliminary extraction of ngrams and their further use in topics generation. Initial studies of this approach used only bigrams
+Combining Thesaurus Knowledge and Probabilistic Topic Models 3
+[15,16].  Nokel and Loukachevitch [17] proposed the LDA-SIM algorithm, which inte- grates top-ranked ngrams and terms of information-retrieval thesauri into topic models (thesaurus relations were not utilized). They create similarity sets of expressions having the same word components and sum up frequencies of similarity set members if they co-occur in the same text. In this paper we describe the approach to integrate whole manual thesauri into topic models together with multiword expressions.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_a5DUMQQ2zKBUYKanemlZd4SU)
+ Call ID: call_a5DUMQQ2zKBUYKanemlZd4SU
+  Args:
+    pattern: reduce language
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_N38LOHPTZM6CSxxrhlROAjTB)
+ Call ID: call_N38LOHPTZM6CSxxrhlROAjTB
+  Args:
+    pattern: reduce
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_Lzj16I2Nc1dgcVO3v04cknx2)
+ Call ID: call_Lzj16I2Nc1dgcVO3v04cknx2
+  Args:
+    section_id: 1.3
+
+================================= Tool Message =================================
+Name: read_section
+
+3 Approach to Integration Whole Thesauri into Topic Models
+In our approach we develop the idea of [17] that proposed to construct similarity sets between ngram phrases between each other and single words. Phrases and words are included in the same similarity set if they have the same component word, for example, weapon – nuclear weapon – weapon of mass destruction; discrimination – racial dis- crimination .  It was supposed that if expressions from the same similarity set co-occur in the same document then their contribution into the document’s topics is really more than it is presented with their frequencies, therefore their frequencies should be increased. In such an approach, the algorithm can "see" similarities between different multiword expressions with the same component word. In our approach, at first, we include related single words and phrases from a the- saurus such as WordNet or EuroVoc in these similarity sets. Then, we add preliminarily extracted ngrams into these sets and, this way, we use two different sources of external knowledge. We use the same LDA-SIM algorithm as described in [17] but study what types of semantic relations can be introduced into such similarity sets and be useful for improving topic models.  The pseudocode of LDA-SIM algorithm is presented in Algo- rithm 1, where S = { S w } is a similarity set, expressions in similarity sets can comprise single words, thesaurus phrases or generated noun compounds.We can compare this approach with the approaches applying the generalized Polya urn model [9,10,11]. To add prior knowledge, those approaches change topic distri- butions for related words globally in the collection.  We modify topic probabilities for related words and phrases locally, in specific texts, only when related words (phrases) co-occur in these texts.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_W20a6p2DZYc0FYacB1mt6dXW)
+ Call ID: call_W20a6p2DZYc0FYacB1mt6dXW
+  Args:
+    pattern: sum up
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.2 | 2 Related Work
+Topic modeling approaches are unsupervised statistical algorithms that usually consid- ers each document as a "bag of words". There were several attempts to enrich word- based topic models (=unigram topic models) with additional prior knowledge or multi- word expressions.Andrzejewski et al. [6] incorporated knowledge by Must-Link and Cannot-Link primitives represented by a Dirichlet Forest prior.  These primitives were then used in [7], where similar words are encouraged to have similar topic distributions. However, all such methods incorporate knowledge in a hard and topic-independent way, which is a simplification since two words that are similar in one topic are not necessarily of equal importance for another topic.Xie et al.  [8] proposed a Markov Random Field regularized LDA model (MRF- LDA), which utilizes the external knowledge to improve the coherence of topic mod- eling. Within a document, if two words are labeled as similar according to the external knowledge, their latent topic nodes are connected by an undirected edge and a binary potential function is defined to encourage them to share the same topic label. Distribu- tional similarity of words is calculated beforehand on a large text corpus. In [9], the authors gather so-called lexical relation sets (LR-sets) for word senses described in WordNet. The LR-sets include synonyms, antonyms and adjective-attribute related words. To adapt LR-sets to a specific domain corpus and to remove inappropriate lexical relations, the correlation matrix for word pairs in each LR-set is calculated.  This matrix at the first step is used for filtrating inappropriate senses, then it is used to modify the initial LDA topic model according to the generalized Polya urn model described in [10]. The generalized Polya urn model boosts probabilities of related words in word- topic distributions. Gao and Wen [11] presented Semantic Similarity-Enhanced Topic Model that ac- counts for corpus-specific word co-occurrence and word semantic similarity calcu- lated on WordNet paths between corresponding synsets using the generalized Polya urn model. They apply their topic model for categorizing short texts.All above-mentioned approaches on adding knowledge to topic models are limited to single words. Approaches using ngrams in topic models can be subdivided into two groups.  The first group of methods tries to create a unified probabilistic model account- ing unigrams and phrases. Bigram-based approaches include the Bigram Topic Model [12] and LDA Collocation Model [13]. In [14] the Topical N-Gram Model was proposed to allow the generation of ngrams based on the context. However, all these models are enough complex and hard to compute on real datasets. The second group of methods is based on preliminary extraction of ngrams and their further use in topics generation. Initial studies of this approach used only bigrams
+Combining Thesaurus Knowledge and Probabilistic Topic Models 3
+[15,16].  Nokel and Loukachevitch [17] proposed the LDA-SIM algorithm, which inte- grates top-ranked ngrams and terms of information-retrieval thesauri into topic models (thesaurus relations were not utilized). They create similarity sets of expressions having the same word components and sum up frequencies of similarity set members if they co-occur in the same text. In this paper we describe the approach to integrate whole manual thesauri into topic models together with multiword expressions.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_bEugJyA8beAYf5e5Eo6yjXR0)
+ Call ID: call_bEugJyA8beAYf5e5Eo6yjXR0
+  Args:
+    pattern: language
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.4 | 4 Automatic Measures to Estimate the Quality of Topic Models
+To estimate the quality of topic models, we use two main automatic measures: topic coherence and kernel uniqueness. For human content analysis, measures of topic co- herence and kernel uniqueness are both important and complement each other. Topics can be coherent but have a lot of repetitions. On the other hand, generated topics can be very diverse, but incoherent within each topic.Topic coherence is an automatic metric of interpretability.  It was shown that the co- herence measure has a high correlation with the expert estimates of topic interpretability [10,19]. Mimno [10] described an experiment comparing expert evaluation of LDA- generated topics and automatic topic coherence measures. It was found that most "bad" topics consisted of words without clear relations between each other.4 Loukachevitch et al.Algorithm 1: LDA-SIM algorithm
+ Input: collection D , vocabulary W , number of topics | T | , initial { p ( w | t ) } and { p ( t | d ) } , sets of similar expressions S , hyperparameters { α t } and { β w } , n dw is the frequency of w in the document d Output: distributions { p ( w | t ) } and { p ( t | d ) } 1 while not meet the stop criterion do 2 for d ∈ D, w ∈ W, t ∈ T do 3 p ( t | d, w ) = p ( w | t ) p ( t | d ) P u ∈ T p ( w | u ) p ( u | d ) 4 for d ∈ D, w ∈ W, t ∈ T do 5 n ′ dw = n dw + P s ∈ S w n ds 6 p ( w | t ) = P d ∈ D n ′ dw p ( t | d,w )+ β w P d ∈ D P w ∈ d n ′ dw p ( t | d,w )+ P w ∈ W β w 7 p ( t | d ) = P w ∈ d n ′ dw p ( t | d,w )+ α t P w ∈ W P t ∈ T n ′ dw p ( t | d,w )+ P t ∈ T α t
+ Newman et al. [7] asked users to score topics on a 3-point scale, where 3=“useful” (coherent) and 1=“useless” (less coherent). They instructed the users that one indica- tor of usefulness is the ease by which one could think of a short label to describe a topic. Then several automatic measures, including WordNet-based measures and cor- pus co-occurrence measures, were compared.  It was found that the best automatic mea- sure having the largest correlation with human evaluation is word co-occurrence cal- culated as point-wise mutual information (PMI) on Wikipedia articles. Later Lau et al. [19] showed that normalized poinwise mutual information (NPMI) [20] calculated on Wikipedia articles correlates even more strongly with human scores.We calculate automatic topic coherence using two measure variants.  The coherence of a topic is the median PMI (NPMI) of word pairs representing the topic, usually it is calculated for n most probable elements (in our study ten elements) in the topic. The coherence of the model is the median of the topic coherence. To make this measure more objective, it should be calculated on an external corpus [19]. In our case, we use Wikipedia dumps. P M I ( w i , w j ) = log p ( w i , w j ) p ( w i ) p ( w j ) N P M I ( w i , w j ) = P M I ( w i , w j ) − log ( p ( w i , w j )) (1)
+Human-constructed topics usually have unique main words.  The measure of kernel uniqueness shows to what extent topics are different from each other and is calculated as the number of unique elements among most probable elements of topics (kernels) in relation to the whole number of elements in kernels.U ( Φ ) = | ∪ t kernel ( T i ) | P t ∈ T | kernel ( T i ) | (2)
+Combining Thesaurus Knowledge and Probabilistic Topic Models 5
+ If uniqueness of the topic kernels is closer to zero then many topics are similar to each other, contain the same words in their kernels. In this paper the kernel of a topic means the ten most probable words in the topic. We also calculated perplexity as the measure of language models. We use it for additional checking the model quality.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_E69sv37reOQJhDfvk0RavyrG)
+ Call ID: call_E69sv37reOQJhDfvk0RavyrG
+  Args:
+    pattern: language variation of text
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+
+Unanswerable

@@ -1,0 +1,90 @@
+================================ Human Message =================================
+
+QUERY:
+What are strong baselines authors used?
+
+TABLE OF CONTENTS (TOC):
+1 | Automatically Inferring Gender Associations from Language
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2 Related Work
+1.4 | 3 Data Collection
+1.5 | 4 Inferring Word-Level Associations
+1.5.1 | 4.1 Methods
+1.5.2 | 4.2 Findings
+1.6 | 5 Clustering & Cluster Labeling
+1.6.1 | 5.1 Methods
+1.6.2 | 5.2 Findings
+1.7 | 6 Human Evaluations
+1.8 | 7 Conclusion
+1.9 | References
+1.10 | A Appendix
+1.10.1 | A.1 Word-Level Results
+1.10.2 | A.2 Clustering and Cluster Labeling Results
+1.10.3 | A.3 Human Evaluation Results
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_Zc9bfLWpcjMVYIYP6FkluiF8)
+ Call ID: call_Zc9bfLWpcjMVYIYP6FkluiF8
+  Args:
+    section_id: 1.5.1
+
+================================= Tool Message =================================
+Name: read_section
+
+4.1 Methods
+First, to operationalize, we say that term i is as- sociated with gender j if, when discussing indi- viduals of gender j , i is used with unusual fre- quency – which we can check with statistical hy- pothesis tests. Let f i represent the likelihood of i appearing when discussing women or men. f i is unknown, but we can model the distribution of all possible f i using the corpus of texts that we have from the domain.  We construct a gender- balanced version of the corpus by randomly un- dersampling the more prevalent gender until the proportions of each gender are equal. Assuming a non-informative prior distribution on f i , the pos-
+ Female-Associated Male-Associated girl, cover, husband, wedding, gown, fash- ion, mom, pregnancy, photo, top, hair, look movie, president, wife, dad, death, film, host, assault, claim, miscon- duct, action, director respond, email, rec- ommend, help, love, accept, need, send, re- ply, communicate learn, teach, know, write, lecture, chal- lenge, solve, ramble, push, joke, bore easy, rude, wonder- ful, kind, caring, hot, strict, timely, mean, disorganized, beautiful knowledgeable, real, challenging, bril- liant, arrogant, hard, passionate, practical
+ Table 2: Top : Sample from the top-25 most gender- associated nouns in the celebrity domain. Middle : pro- fessor domain, sample from top-25 verbs . Bottom : professor domain, sample from top-25 adjectives . All associations listed are p ≤ 0 . 05 , with Bonferroni cor- rection. See Appendix for all top-25 nouns, verbs, and adjectives for both genders in both domains. terior distribution is Beta( k i , N − k i ), where k i is the count of i in the gender-balanced corpus and N is the total count of words in that corpus.As Bamman et al. 2014 discuss, “the distri- bution of the gender-specific counts can be de- scribed by an integral over all possible f i . This integral defines the Beta-Binomial distribution ( Gelman et al.  , 2004 ), and has a closed form so- lution.” We say that term i is significantly asso- ciated with gender j if the cumulative distribu- tion at k ij (the count of i in the j portion of the gender-balanced corpus) is p ≤ 0 . 05 .  As in the original work, we apply the Bonferroni correction ( Dunn , 1961 ) for multiple comparisons because we are computing statistical tests for thousands of hypotheses.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_Abw80R5PeMrwgAOnNZd5WZBY)
+ Call ID: call_Abw80R5PeMrwgAOnNZd5WZBY
+  Args:
+    section_id: 1.2
+
+================================= Tool Message =================================
+Name: read_section
+
+1 Introduction
+It is well-established that gender bias exists in language – for example, we see evidence of this given the prevalence of sexism in abu- sive language datasets ( Waseem and Hovy , 2016 ; Jha and Mamidi , 2017 ). However, these are ex- treme cases of gender norms in language, and only encompass a small proportion of speakers or texts. Less studied in NLP is how gender norms man- ifest in everyday language – do people talk about women and men in different ways? These types of differences are far subtler than abusive language, but they can provide valuable insight into the roots of more extreme acts of discrimination. Subtle dif- ferences are difficult to observe because each case on its own could be attributed to circumstance, a passing comment or an accidental word.  How- ever, at the level of hundreds of thousands of data points, these patterns, if they do exist, become un- deniable. Thus, in this work, we introduce new datasets and methods so that we can study subtle gender associations in language at the large-scale.Our contributions include:
+• Two datasets for studying language and gen- der,each consisting of over 300K sentences.
+• Methods to infer gender-associated words and labeled clusters in any domain.
+• Novel findings that demonstrate in both do- mains that people do talk about women and men in different ways.Each contribution brings us closer to modeling how gender associations appear in everyday lan- guage. In the remainder of the paper, we present related work, our data collection, methods and findings, and human evaluations of our system. 1
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_k87dji3zGEZ3fOBJgLr1dY18)
+ Call ID: call_k87dji3zGEZ3fOBJgLr1dY18
+  Args:
+    section_id: 1.6.1
+
+================================= Tool Message =================================
+Name: read_section
+
+5.1 Methods
+First, we trained domain-specific word embed- dings using the Word2Vec ( Mikolov et al. , 2013 ) CBOW model ( w ∈ R 100 ). Then, we used k- means clustering to cluster the embeddings of the gender-associated words. Since k-means may con- verge at local optima, we ran the algorithm 50 times and kept the model with the lowest sum of squared errors. To automatically label the clusters, we com- bined the grounded knowledge of WordNet ( Miller , 1995 ) and context-sensitive strengths of domain-specific word embeddings. Our algo-
+rithm is similar to Poostchi and Piccardi 2018 ’s approach, but we extend their method by introduc- ing domain-specific word embeddings for cluster- ing as well as a new technique for sense disam- biguation.  Given a cluster, our algorithm proceeds with the following three steps:
+1. Sense disambiguation :The goal is to as- sign each cluster word to one of its WordNet synsets; let S represent the collection of cho- sen synsets. We know that these words have been clustered in domain-specific embedding space, which means that in the context of the domain, these words are very close semanti- cally. Thus, we choose S ∗ that minimizes the total distance between its synsets.
+2. Candidate label generation : In this step, we generate L ,the set of possible cluster labels. Our approach is simple: we take the union of all hypernyms of the synsets in S ∗ .
+3. Candidate label ranking : Here, we rank the synsets in L .We want labels that are as close to all of the synsets in S ∗ as possible; thus, we score the candidate labels by the sum of their distances to each synset in S ∗ and we rank them from least to most distance.In steps 1 and 3, we use WordNet pathwise dis- tance, but we encourage the exploration of other distance representations as well.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_ezrGAqEaQSPZ3hB9qM4NfG5u)
+ Call ID: call_ezrGAqEaQSPZ3hB9qM4NfG5u
+  Args:
+    section_id: 1.7
+
+================================= Tool Message =================================
+Name: read_section
+
+6 Human Evaluations
+To test our clusters, we employed the Word In- trusion task ( Chang et al. , 2009 ). We present the annotator with five words – four drawn from one cluster and one drawn randomly from the domain vocabulary – and we ask them to pick out the in- truder. The intuition is that if the cluster is co- herent, then an observer should be able to identify the out-of-cluster word as the intruder.  For both domains, we report results on all clusters and on the top 8, ranked by ascending normalized sum of squared errors, which can be seen as a prediction of coherence. In the celebrity domain, annotators identified the out-of-cluster word 73% of the time in the top-8 and 53% overall. In the professor do- main, annotators identified it 60% of the time in the top-8 and 49% overall.  As expected, top-8 per- formance in both domains does considerably bet- ter than overall, but at all levels the precision is significantly above the random baseline of 20%.To test cluster labels, we present the annota- tor with a label and a word, and we ask them
+whether the word falls under the concept. The concept is a potential cluster label and the word is either a word from that cluster or drawn ran- domly from the domain vocabulary.  For a good label, the rate at which in-cluster words fall un- der the label should be much higher than the rate at which out-of-cluster words fall under. In our experiments, we tested the top 4 predicted labels and the centroid of the cluster as a strong base- line label. The centroid achieved an in-cluster rate of .60 and out-of-cluster rate of .18 (difference of .42). Our best performing predicted label achieved an in-cluster rate of . 65 and an out-of-cluster rate of .04 (difference of .61), thus outperforming the centroid on both rates and increasing the gap be- tween rates by nearly 20 points. In the Appendix, we include more detailed results on both tasks.
+
+================================== Ai Message ==================================
+
+The centroid of the cluster (as a strong baseline label) and a random baseline of 20% (for the Word Intrusion task).

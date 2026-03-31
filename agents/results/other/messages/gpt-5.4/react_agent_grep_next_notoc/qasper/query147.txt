@@ -1,0 +1,127 @@
+================================ Human Message =================================
+
+QUERY:
+what models did they compare with?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_DWgwWOi9jJYaxqGGvNBL6rn3)
+ Call ID: call_DWgwWOi9jJYaxqGGvNBL6rn3
+  Args:
+    pattern: compare|compared|comparison|baseline|baselines
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1 Introduction
+The introduction of pre-trained language models, such as BERT [2] and Open-GPT [3], among many others, has brought tremendous progress to the NLP research and industrial communities. The contribution of these models can be categorized into two aspects. First, pre-trained language models allow modelers to achieve reasonable accuracy without the need an excessive amount of manually labeled data. This strategy is in contrast with the classical deep learning methods, which requires a multitude more data to reach comparable results.  Second, for many NLP tasks, including but not limited to, SQuAD [4], CoQA [5], named entity recognition [6], Glue [7], machine translation [8], pre-trained model allows the creation of new state-of-art, given a reasonable amount of labelled data.In the post pre-trained language model era, to pursue new state-of-art, two directions can be followed.  The first method, is to improve the pre-training process, such as in the work of ERNIE [9], GPT2.0 [3] and MT-DNN [10]. The second method is to stand on the shoulder of the pre-trained language models. Among the many possibilities, one of them is to build new neural network structures on top of pre-trained language models. In principles, there are three ways to train the networks with stacked neural networks on top of pre-trained language models, as shown in Table 1. In Peters et al . [1], the authors compare the possibility of option stack-only and finetune-only , and conclude that option finetune-only is better than option stack-only . More specifically, Peter et al. [1]
+To Tune or Not To Tune? How About the Best of Both Worlds?A PREPRINT
+ Fine-tune pretrained model Do not fine-tune pretrained model Train the model on top Stack-and-finetune Stack-only Do not train the model on top Finetune-only Not reasonable
+Table 1: Methods to Stack Neural Networks on Top of Pre-trained Language Models
+argue that it is better to add a task-specific head on top of BERT than to freeze the weights of BERT and add more complex network structures. However, Peters et al.  [1] did not compare option stack-and-finetune and finetune-only . On the other hand, before pre-trained deep language models became popular, researchers often use a strategy analog to option stack-and-finetune . That is, modelers first train the model until convergence, and then fine-tune the word embeddings with a few epochs.  If pre-trained language models can be understood as at least partially resemblance of word embeddings, then it will be imprudent not to consider the possibility of option stack-and-finetune .In this study, we aim to compare the strategy stack-and-finetune and strategy finetune-only . More specifically, we perform three NLP tasks, sequence labeling, text classification, and question similarity.  In the first tasks, we demonstrate that even without modifying the network structures, building networks on top of pre-trained language models might improve accuracy. In the second tasks, we show that by ensembling different neural networks, one can even improve the accuracy of fine-tuning only methods even further. Finally, in the last task, we demonstrate that if one can tailor-made a neural network that specifically fit the characteristics of the pre-trained language models, one can improve the accuracy even further.  All the results indicate the strategy stack-and-finetune is superior to strategy finetune-only . This leads us to conclude that, at least, by overlooking the possibility strategy stack-and-finetune is imprudent.The contribution of this paper is two-fold. First, we propose a new strategy to improve the fine-tune-only strategy proposed by Peter et al. [1], this allows us to achieve better results, at least on the selected tasks.  More importantly, the results of this study demonstrate the importance of neural networks design, even in the presence of all-powerful pre-trained language models. Second, during the experiment, we have found that although simply using the proposed training strategy can result in higher accuracies compared to that of Peter et al. [1], it is still a challenging task to find the appropriate methods to design and to utilize pre-trained networks.  In this regard, we find that pre-trained models differ significantly from word embeddings in terms of their training strategies. Especially, since word embeddings can be viewed as shallow transfer learning, while pre-trained model should be viewed as deep transfer learning, one must try to combat over-fitting problems with more care due to the enormous number of parameters presented in the pre-trained models.  Besides, we also find that in order to achieve the maximal performance in the post-pre-trained language model era, one must design, either manually or via Auto ML, networks that best fit the structure, especially the depth of the pre-trained language models.The rest of the paper is organized as follows. First, we review the relevant literature on pre-trained deep neural networks, the argument in Peter et al. [1] as well as fine-tuning strategies with word embeddings.  Second, we present three experiments and showed the superiority of strategy stack-and-finetune compared to strategy finetune-only . Finally, we conclude with some remarks and future research possibilities.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_kBkJPXfmG294FQUzU6JXDcpc)
+ Call ID: call_kBkJPXfmG294FQUzU6JXDcpc
+  Args:
+    pattern: BERT|ELMo|ULMFiT|MT-DNN|ERNIE|GPT|RoBERTa|XLNet|baseline
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+A BSTRACT
+The introduction of pre-trained language models has revolutionized natural language research com- munities. However, researchers still know relatively little regarding their theoretical and empirical properties. In this regard, Peters et al.[1] performs several experiments which demonstrate that it is better to adapt BERT with a light-weight task-specific head, rather than building a complex one on top of the pre-trained language model, and freeze the parameters in the said language model. However, there is another option to adopt.  In this paper, we propose a new adaptation method which we first train the task model with the BERT parameters frozen and then fine-tune the entire model together. Our experimental results show that our model adaptation method can achieve 4.7% accuracy improvement in semantic similarity task, 0.99% accuracy improvement in sequence labeling task and 0.72% accuracy improvement in the text classification task.K eywords Transfer Learning · Pre-trained Language Model
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_4oBLSbZjqXC7vLoXbaLQIZoE)
+ Call ID: call_4oBLSbZjqXC7vLoXbaLQIZoE
+  Args:
+    pattern: Peters|Peter et al|stack-and-finetune|finetune-only|stack-only
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+A BSTRACT
+The introduction of pre-trained language models has revolutionized natural language research com- munities. However, researchers still know relatively little regarding their theoretical and empirical properties. In this regard, Peters et al.[1] performs several experiments which demonstrate that it is better to adapt BERT with a light-weight task-specific head, rather than building a complex one on top of the pre-trained language model, and freeze the parameters in the said language model. However, there is another option to adopt.  In this paper, we propose a new adaptation method which we first train the task model with the BERT parameters frozen and then fine-tune the entire model together. Our experimental results show that our model adaptation method can achieve 4.7% accuracy improvement in semantic similarity task, 0.99% accuracy improvement in sequence labeling task and 0.72% accuracy improvement in the text classification task.K eywords Transfer Learning · Pre-trained Language Model
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_odfNNSRaXyBEFWplIoii1ebx)
+ Call ID: call_odfNNSRaXyBEFWplIoii1ebx
+  Args:
+    pattern: Table 2|Table 3|Table 4|BiLSTM|CNN|DPCNN|LSTM|CRF|RCNN|DAN|SAN|DenseNet
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+2 Related Studies
+Before the introduction of deep neural networks, researchers in the field of NLP have been using pre-trained models. Among all of them, one of the most famous is the word embeddings, which maps each word into a continuous vector, instead of one-hot encodings [11]. By doing so, not only are we able to reduce the dimensionality of the input features, which helps to avoid over-fitting, but also capture, at least partially, the internal meaning of each word. However, since each word is only endowed with a fixed numerical vector in the methodology of word embeddings, word embeddings are unable to capture the contextual meaning in the text. For example, consider the word ”bank” sentences “I am walking on the bank of the river.” with “I am going to rob the bank”. It is obvious that the word “bank” represents completely different meaning, which the word embeddings techniques fail to capture. The aforementioned deficiencies prompt researchers to propose deep neural networks that are able to be trained in an unsupervised fashion while being able to capture the contextual meaning of the words presented in the texts. Some early attempts include pre-trained models includes, CoVe [12], CVT [13, 14], ELMo [15] and ULMFiT [16]. However, the most successful ones are BERT [2] and Open-GPT [3].  Unlike standard NLP deep learning model, BERT and Open-GPT are built on top of transformer [17] structures, instead of LSTM [18] or GRU [19]. The difference between
+2
+To Tune or Not To Tune? How About the Best of Both Worlds?A PREPRINT
+Figure 1: The Difference Between BERT and Open-GPT, extracted from Devlin et al. [2], Figure 1
+ BERT and Open-GPT is that BERT uses bi-directional self-attentions while Open-GPT uses only unidirectional ones, as shown in Figure 2. The transformer structures differ from the LSTM’s in the two important aspects. First, it allows for stacking of multiple layers with residual connections and batch normalizations, which allows for free gradient flow. Second, the core computational unit is matrix multiplications, which allows researchers to utilize the full computational potential of TPU [20].  After training on a large corpus, both BERT and Open-GPT are able to renew the SOTA of many important natural language tasks, such as such as SQuAD [4], CoQA [5], named entity recognition [6], Glue [7], machine translation [8].In the presence of the success of pre-trained language models, especially BERT [2], it is natural to ask how to best utilize the pre-trained language models to achieve new state-of-the-art results.  In this line of work, Liu et al. [21] investigated the linguistic knowledge and transferability of contextual representations by comparing BERT [2] with ELMo [15], and concluded that while the higher levels of LSTM’s are more task-specific, this trend does not exhibit in transformer based models.  Stickland and Murray [22] invented projected attention layer for multi-task learning using BERT, which results in an improvement in various state-of-the-art results compared to the original work of Devlin et al. [2]. Xu et al.  [23] propose a “post-training” algorithms, which does not directly fine-tune BERT, but rather first “post-train” BERT on the task related corpus using the masked language prediction task next sentence prediction task, which helps to reduce the bias in the training corpus. Finally, Sun et al. [24] added additional fine-tuning tasks based on multi-task training, which further improves the prediction power of BERT in the tasks of text classification. In this aspect, however, there is a simple yet crucial question that needs to be addressed. That is, whether it is possible to top BERT with the commonly used or task specific layers, and if this is possible, how to best utilize the pre-trained language models in this situation. In this regards, Peters et al.  [1] investigated how to best adapt the pre-trained model to a specific task, and focused on two different adaptation method,feature extraction and directly fine-tuning the pre-trained model, which corresponding to the strategy finetune-only and the strategy stack-only in Table 1. On this regard, Peters et al.  [1] performs five experiments, including: (1) named entity recognition [6]; (2) sentiment analysis [25]; (3) natural language inference [26]; (4) paraphrase detection [27]; (5) semantic textual similarity [28]. By the results of these tasks, Peters et al. [1] concludes that adding a light task-specific head and performing fine-tuning on BERT is better than building a complex network on top without BERT fine-tuning.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_dMnSRg006HP9IWKaBXHbjiCI)
+ Call ID: call_dMnSRg006HP9IWKaBXHbjiCI
+  Args:
+    pattern: Table [0-9]|compare.*with|we compare|compared with|models? are|architecture|BiLSTM|CNN|DPCNN|RCNN|CRF
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1 Introduction
+The introduction of pre-trained language models, such as BERT [2] and Open-GPT [3], among many others, has brought tremendous progress to the NLP research and industrial communities. The contribution of these models can be categorized into two aspects. First, pre-trained language models allow modelers to achieve reasonable accuracy without the need an excessive amount of manually labeled data. This strategy is in contrast with the classical deep learning methods, which requires a multitude more data to reach comparable results.  Second, for many NLP tasks, including but not limited to, SQuAD [4], CoQA [5], named entity recognition [6], Glue [7], machine translation [8], pre-trained model allows the creation of new state-of-art, given a reasonable amount of labelled data.In the post pre-trained language model era, to pursue new state-of-art, two directions can be followed.  The first method, is to improve the pre-training process, such as in the work of ERNIE [9], GPT2.0 [3] and MT-DNN [10]. The second method is to stand on the shoulder of the pre-trained language models. Among the many possibilities, one of them is to build new neural network structures on top of pre-trained language models. In principles, there are three ways to train the networks with stacked neural networks on top of pre-trained language models, as shown in Table 1. In Peters et al . [1], the authors compare the possibility of option stack-only and finetune-only , and conclude that option finetune-only is better than option stack-only . More specifically, Peter et al. [1]
+To Tune or Not To Tune? How About the Best of Both Worlds?A PREPRINT
+ Fine-tune pretrained model Do not fine-tune pretrained model Train the model on top Stack-and-finetune Stack-only Do not train the model on top Finetune-only Not reasonable
+Table 1: Methods to Stack Neural Networks on Top of Pre-trained Language Models
+argue that it is better to add a task-specific head on top of BERT than to freeze the weights of BERT and add more complex network structures. However, Peters et al.  [1] did not compare option stack-and-finetune and finetune-only . On the other hand, before pre-trained deep language models became popular, researchers often use a strategy analog to option stack-and-finetune . That is, modelers first train the model until convergence, and then fine-tune the word embeddings with a few epochs.  If pre-trained language models can be understood as at least partially resemblance of word embeddings, then it will be imprudent not to consider the possibility of option stack-and-finetune .In this study, we aim to compare the strategy stack-and-finetune and strategy finetune-only . More specifically, we perform three NLP tasks, sequence labeling, text classification, and question similarity.  In the first tasks, we demonstrate that even without modifying the network structures, building networks on top of pre-trained language models might improve accuracy. In the second tasks, we show that by ensembling different neural networks, one can even improve the accuracy of fine-tuning only methods even further. Finally, in the last task, we demonstrate that if one can tailor-made a neural network that specifically fit the characteristics of the pre-trained language models, one can improve the accuracy even further.  All the results indicate the strategy stack-and-finetune is superior to strategy finetune-only . This leads us to conclude that, at least, by overlooking the possibility strategy stack-and-finetune is imprudent.The contribution of this paper is two-fold. First, we propose a new strategy to improve the fine-tune-only strategy proposed by Peter et al. [1], this allows us to achieve better results, at least on the selected tasks.  More importantly, the results of this study demonstrate the importance of neural networks design, even in the presence of all-powerful pre-trained language models. Second, during the experiment, we have found that although simply using the proposed training strategy can result in higher accuracies compared to that of Peter et al. [1], it is still a challenging task to find the appropriate methods to design and to utilize pre-trained networks.  In this regard, we find that pre-trained models differ significantly from word embeddings in terms of their training strategies. Especially, since word embeddings can be viewed as shallow transfer learning, while pre-trained model should be viewed as deep transfer learning, one must try to combat over-fitting problems with more care due to the enormous number of parameters presented in the pre-trained models.  Besides, we also find that in order to achieve the maximal performance in the post-pre-trained language model era, one must design, either manually or via Auto ML, networks that best fit the structure, especially the depth of the pre-trained language models.The rest of the paper is organized as follows. First, we review the relevant literature on pre-trained deep neural networks, the argument in Peter et al. [1] as well as fine-tuning strategies with word embeddings.  Second, we present three experiments and showed the superiority of strategy stack-and-finetune compared to strategy finetune-only . Finally, we conclude with some remarks and future research possibilities.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_fFQRq1LDxymUEXpV310Tb9uU)
+ Call ID: call_fFQRq1LDxymUEXpV310Tb9uU
+  Args:
+    pattern: sequence labeling|text classification|question similarity|experimental setup|experiment|BiLSTM|CNN|DPCNN|RCNN|DenseNet|CRF|self-attention
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+A BSTRACT
+The introduction of pre-trained language models has revolutionized natural language research com- munities. However, researchers still know relatively little regarding their theoretical and empirical properties. In this regard, Peters et al.[1] performs several experiments which demonstrate that it is better to adapt BERT with a light-weight task-specific head, rather than building a complex one on top of the pre-trained language model, and freeze the parameters in the said language model. However, there is another option to adopt.  In this paper, we propose a new adaptation method which we first train the task model with the BERT parameters frozen and then fine-tune the entire model together. Our experimental results show that our model adaptation method can achieve 4.7% accuracy improvement in semantic similarity task, 0.99% accuracy improvement in sequence labeling task and 0.72% accuracy improvement in the text classification task.K eywords Transfer Learning · Pre-trained Language Model
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_CU5axMDPuKPUHmTvVKZdv81b)
+ Call ID: call_CU5axMDPuKPUHmTvVKZdv81b
+  Args:
+    pattern: 3 |3\.|Experiment 1|Experiment 2|Experiment 3|Sequence Labeling|Text Classification|Question Similarity
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+3 Methodology
+Under our strategy stack-and-finetune , the model training process is divided into two phases, which are described in detail below. In the first phase, the parameters of the pre-training model are fixed, and only the upper-level models added for a specific task is learned. In the second phase, we fine-tune the upper-level models together with the pre-trained language models. We choose this strategy for the following reasons.  Pre-training models have been used to obtain more effective word representations through the study of a large number of corpora. In the paradigm proposed in the original work by Devlin et al. [2], the author directly trained BERT along with with a light-weighted task-specific head. In our case though, we top BERT with a more complex network structure, using Kaiming initialization [29].  If one would fine-tune directly the top models along with the weights in BERT, one is faced with the following dilemma: on the one hand, if the learning rate is too large, it is likely to disturb the structure innate to the pre-trained language models; on the other hand, if the learning rate is too small, since we top BERT with relatively complex models, the convergence of
+3
+To Tune or Not To Tune? How About the Best of Both Worlds? A PREPRINT
+the top models might be impeded. Therefore, in the first phase we fix the weights in the pre-training language models, and only train the model on top of it.Another aspect that is worth commenting in the first phase is that it is most beneficial that one does not train the top model until it reaches the highest accuracy on the training or validation data sets, but rather only up to a point where the prediction accuracy of the training and validation data sets do not differ much.  This is intuitively reasonable for the following reasons. Unlike word embeddings, the pre-trained language models possess a large number of parameters compared to the task-specific models we build on top them. Therefore, if one were to train the top models until they reach the highest prediction accuracy in the training or validation data sets, it would likely cause the models to over-fit. Therefore, in our experiment, we found that this leads to the highest performance increase in the fine-tuning stage.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_XvBRWuFIL56jKVTS3Edp0s18)
+ Call ID: call_XvBRWuFIL56jKVTS3Edp0s18
+  Args:
+    pattern: 4 |4\.|Results|dataset|CoNLL|SST|QQP|MRPC|Quora|TREC|architecture
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+A BSTRACT
+The introduction of pre-trained language models has revolutionized natural language research com- munities. However, researchers still know relatively little regarding their theoretical and empirical properties. In this regard, Peters et al.[1] performs several experiments which demonstrate that it is better to adapt BERT with a light-weight task-specific head, rather than building a complex one on top of the pre-trained language model, and freeze the parameters in the said language model. However, there is another option to adopt.  In this paper, we propose a new adaptation method which we first train the task model with the BERT parameters frozen and then fine-tune the entire model together. Our experimental results show that our model adaptation method can achieve 4.7% accuracy improvement in semantic similarity task, 0.99% accuracy improvement in sequence labeling task and 0.72% accuracy improvement in the text classification task.K eywords Transfer Learning · Pre-trained Language Model
+
+================================== Ai Message ==================================
+
+They compared the stack-and-finetune strategy with the finetune-only strategy, and discussed Peters et al.’s comparison of finetune-only versus stack-only. The pre-trained language models explicitly mentioned in these comparisons are BERT and Open-GPT, and related prior comparisons also mention BERT versus ELMo.

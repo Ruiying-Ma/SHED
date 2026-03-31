@@ -1,0 +1,64 @@
+================================ Human Message =================================
+
+QUERY:
+what chinese dialects are explored?
+
+TABLE OF CONTENTS (TOC):
+1 | Two-stage Training for Chinese Dialect Recognition
+1.1 | Abstract
+1.2 | 1. Introduction
+1.3 | 2. Related works
+1.4 | 3. Two-stage system overview
+1.4.1 | 3.1. Network structure
+1.4.2 | 3.2. Loss function
+1.4.3 | 3.3. Two-stage system
+1.4.4 | 3.4. Three-stage system
+1.5 | 4. Experiments
+1.5.1 | 4.1. Data description
+1.5.2 | 4.2. Experimental setup
+1.6 | 5. Results
+1.6.1 | 5.1. Comparison of different stage systems
+1.6.2 | 5.2. Comparison of different RNN structures
+1.7 | 6. Conclusions
+1.8 | 7. References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_all (call_O8oHlV8EUzXewY5i1bgUISsS)
+ Call ID: call_O8oHlV8EUzXewY5i1bgUISsS
+  Args:
+    pattern: dialect|Mandarin|Cantonese|Hakka|Min|Wu|Xiang|Gan|Jin
+
+================================= Tool Message =================================
+Name: grep_search_all
+
+1.1 | Abstract
+In this paper, we present a two-stage language identification (LID) system based on a shallow ResNet14 followed by a sim- ple 2-layer recurrent neural network (RNN) architecture, which was used for Xunfei (iFlyTek) Chinese Dialect Recognition Challenge 1 and won the first place among 110 teams.  The sys- tem trains an acoustic model (AM) firstly with connectionist temporal classification (CTC) to recognize the given phonetic sequence annotation and then train another RNN to classify di- alect category by utilizing the intermediate features as inputs from the AM. Compared with a three-stage system we further explore, our results show that the two-stage system can achieve high accuracy for Chinese dialects recognition under both short utterance and long utterance conditions with less training time.  Index Terms : dialect recognition, convolutional recurrent neu- ral network, acoustic model
+
+1.2 | 1. Introduction
+The aim of language identification (LID) is to determine the lan- guage of an utterance and can be defined as a variable-length se- quence classification task on the utterance-level. The task intro- duced in this paper is more challenging than general LID tasks cause we use a dialect database which contains 10 dialects in China.  The dialects’ regions are close to each other and they all belong to Chinese, so they have the same characters and similar pronunciations.Recently, the use of deep neural network (DNN) has been explored in LID tasks. The DNN is trained to discriminate in- dividual physical states of a tied-state triphone and then extract the bottleneck features to a back-end system for classification [1, 2, 3, 4].  End-to-end frameworks based on DNN later are trained for LID [5]. Other network architectures are success- fully applied to LID task, example for convolutional neural net- work (CNN) [6, 7], time delay neural network (TDNN) [8], RNN [9, 10, 11], and [12] has a CNN followed by an RNN structure, which is similar to ours.  They predict the final cate- gory of an utterance directly by the last fully connected layer, or derive the results by averaging the the frame-level posteri- ors. These frameworks just trained end-to-end to recognize lan- guages, but they do not consider the phonetic information con- cretely. On the other hand, in many utterance analyzing tasks such as acoustic speech recognition (ASR), speaker verification (SV) and our LID, only a simple task or a specific aim is focused on. However, an utterance always has multi-dimensional informa- tion such as content, emotion, speaker and language and there are some certain correlations between them.  Although the LID task is text-independent, which means the content of each utter- ance is totally different, different languages may have its own
+pronunciations or tones. Thus acoustic and language are two components in the LID task, [13, 14, 15, 16] use the bottleneck features from an ASR system and feed to another neural net- work for recognition.  Nevertheless, these ASR DNNs consti- tuted by fully connected layers adds significant computational complexity and also require labels of physical states of a tied- state triphone.Inspired by all this, we assume that the high-dim features extracted from the network will contain information of pronun- ciation and language category, so we combine the ASR method with our LID task and here are our main contributions:
+1.We explore a new Chinese dialect database by a two- stage LID system and achieve high accuracy of 89%. Our system won the first place in Xunfei (iFlyTek) Chi- nese Dialect Recognition Challenge, which attracted 110 teams joining in.
+2. Compared with other methods which recognize physical states or triphones,we train an AM end-to-end and use CTC [17] to recognize the phoneme sequence of an ut- terance directly.
+3.We use a specially designed ResNet14 followed by an RNN instead of using fully connected layers to develop the two-stage LID system. We train an AM in the first stage and then use the intermediate features from the AM as inputs to train an RNN to compute posteriors for LID in the second stage.
+4. We further investigate a three-stage system,we first train an AM to align the phoneme label and then train an- other AM to predict the phoneme of each frame, finally we use the intermediate features from the second-stage’s network to train an RNN. The results show that the per- formance is slightly worse than the two-stage system.The remainder of the paper is organized as follows.  Section 2 introduces some related works about ASR and section 3 intro- duces the ResNet14 structure and gives processing of the two multi-stage systems. We present details of the database and ini- tialization methods of the network in Section 4. The results of experiments and analysis are shown in Section 5. Lastly we give the conclusion and some future work in Section 6.
+
+1.4.1 | 3.1. Network structure
+The major network structure we use in the two-stage system can be divided to the CNN part and the RNN part, as described in Table 1. Given the input data of shape T × 40 , where T is the frame length of an utterance, we finally get 512-dimensional frame-level representation and N is the number of phonemes or dialect categories. Compared with other DNN based systems, we design the CNN part based on ResNet-18 [26] structure, named ResNet14, as the main part, which decreases the parameters a lot. The first conv layer is with kernel size k = 7 × 7 and stride size s = 2 , followed by a maxpool layer with stride size s = 2 for downsampling.  Then the residual blocks extract high-dim features from the input sequences and keep the low-rank infor- mation. There are 6 res-blocks in all for decreasing parameters, the kernel size of each block is k = 3 × 3 and the features are downsampled while adding channels.We use 2-layer bidirectional long-short term memory (BLSTM) [27] as the RNN part following ResNet14.  BLSTM extends original LSTM by introducing a backward direction layer so it considers the future context. The output of the net- work will be linked to different loss functions and different la- bels in different stages.
+
+1.4.3 | 3.3. Two-stage system
+Figure 1 shows the architecture of the two-stage system. The input is the sound feature of each utterance. We firstly train the AM with the ResNet14 followed by an RNN architecture, then the intermediate results computed by res-blocks are feed to the second stage as the input. The framework does not need to compress the feature sequence so it keeps all the informa- tion from the ResNet14 part. The network of second stage is 2-layer BLSTM.  The final pooling strategy is average pooling on time-dimension so we can get the utterance-level category results from frame-level, and the output is the prediction of di- alect category. We use CTC loss to train the AM so the network outputs can align with the phoneme sequences automatically and use cross-entropy loss to discriminate between dialects. Compared with multi-task training [28, 29] in SV tasks, it should be emphasized that these stages should be trained step by step instead of multi-task learning with shared layers, that is to say we backpropagate the whole network while training AM, and only backpropagate the RNN part in the second stage, or the network will be degenerated and lost the information of acoustic knowledge.
+
+1.5.1 | 4.1. Data description
+We use a database covering 10 most widespread Chinese di- alects, the dialects are Ningxia, Hefei, Sichuan, Shanxi, Chang- sha, Hebei, Nanchang, Shanghai, Kekka and Fujian. Each di- alect has 6-hour audio data.  For the training set, there will be 6000 audio files in each dialect with variable length (Figure 3), we can see that most files are longer than 3 seconds. The test set has 500 audio files in each dialect and the set is divided into two categories according to the duration of the audio file ( ≤ 3s for the first task and > 3s for the second task). The phonetic sequence annotation of the corresponding text to each speech is also provided in the training set. There are 27 initials and 39 finals with 148 tones in the whole database.
+
+1.5.2 | 4.2. Experimental setup
+We convert the raw audio to 40-dimensional log Mel-filterbank coefficients with a frame-length of 25 ms, mean-normalized over the whole utterance. Then we stack all the log-mel fil- terbank features and feed it into the neural network, which is implemented in PyTorch. No voice activity detection (VAD) or other data augmentation approaches are applied.  During the training process, we use Adam as the optimization method and set different learning rates and weight decay in different stages. We do not set dropout while training AM but set the dropout value=0.5 while training the LID network (the last stage).Figure 3: Data distribution of time
+ The baseline we use for comparison is a one-stage RNN system, the RNN structure is the same as the last stage con- taining 2-layer BLSTM and directly trained to recognize dialect category. In the process of evaluation, we compute the accuracy of the two sub-tasks and the whole test set to evaluate the per- formance of each system.
+
+1.6.1 | 5.1. Comparison of different stage systems
+First of all, we compare the two-stage system and the three- stage system trained with phonetic sequence annotation and dialect category label with the baseline trained only with di- alect category label. The two multi-stage system have the same ResNet14 architecture and use 2-layer BLSTM as the RNN part with 256 nodes.  From the results in the Table 2, we can see that the relative accuracy (ACC) of the two multi-stage systems in- creases by 10% on every task relative to the baseline and the two-stage system performs best. We also observe that both two multi-stage systems perform excellently in long duration ( > 3s) task and the two-stage system illustrates its advan...(truncated)
+
+================================== Ai Message ==================================
+
+Ningxia, Hefei, Sichuan, Shanxi, Changsha, Hebei, Nanchang, Shanghai, Kekka, and Fujian.

@@ -1,0 +1,38 @@
+================================ Human Message =================================
+
+QUERY:
+How do they incorporate expert knowledge into their topic model?
+
+TABLE OF CONTENTS (TOC):
+1 | Toward Interpretable Topic Discovery via Anchored Correlation Explanation
+1.1 | Abstract
+1.2 | 1. Introduction
+1.3 | 2. Methods
+1.4 | 3. Related Work
+1.5 | 4. Results and Discussion
+1.5.1 | 4.1. 20 Newsgroups
+1.5.2 | 4.2. i2b2 Obesity Challenge 2008
+1.5.3 | 4.3. Anchored CorEx for Discriminative Tasks
+1.6 | 5. Conclusion
+1.7 | Acknowledgements
+1.8 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_a4p6fQgDGA3R6mI0J8fvXOHG)
+ Call ID: call_a4p6fQgDGA3R6mI0J8fvXOHG
+  Args:
+    section_id: 1.3
+
+================================= Tool Message =================================
+Name: read_section
+
+2. Methods
+Anchored Correlation Explanation can be understood as a combination of Total Correlation Explanation (CorEx) ( Ver Steeg & Galstyan , 2014 ; 2015 ) and the multivariate in- formation bottleneck ( Tishby et al. , 2000 ; Slonim et al. , 2006 ). We search for a set of probabilistic functions of the inputs p ( y j | x ) for j = 1 , . . .  , m that optimize the following information theoretic objective:
+max p ( y j | x ) ,j =1 ,...,m T C ( X ; Y ) + β X i,j ∈R I ( X i ; Y j )
+The first term is the CorEx objective T C ( X ; Y ) ≡ T C ( X ) − T C ( X | Y ) , which aims to construct latent variables Y that best explain multivariate dependencies in the data X .  Here the data consist of n -dimensional binary vectors [ X 1 , . . . , X n ] . Total correlation, or multivariate mutual information ( Watanabe , 1960 ), is specified as T C ( X 1 , . . . , X n ) = D KL ( p ( x 1 , . . . , x n ) || Q i p ( x i )) where D KL is the KL divergence.  Maximizing T C ( X ; Y ) over latent factors { Y j } m j =1 amounts to minimizing T C ( X | Y ) , which measures how much dependence in X is explained by Y . At the global optimum, T C ( X | Y ) is zero and the observations are independent conditioned on the latent factors. Several papers have explored CorEx for unsupervised hierarchical topic modeling ( Ver Steeg & Galstyan , 2014 ; Chen et al.  , 2015 ; Hodas et al. , 2015 ).The second term involves the mutual information between pairs of latent factors Y j ) and anchor variables X i spec- ified in the set R = { ( i, j ) } . This is inspired by the information bottleneck ( Tishby et al. , 2000 ; Slonim et al. , 2006 ), a supervised information-theoretic approach to discovering latent factors.  The bottleneck objective max p ( y | x ) − I ( X ; Y ) + βI ( Z ; Y ) constructs latent factors Y that trade off compression of X against preserving information about relevance variables Z .Anchored CorEx preserves information about anchors while also explaining as much multivariate dependence between observations in X as possible. This framework is flexible: we can attach multiple anchors to one factor or one anchor to multiple factors.  We have found empirically that β = 1 works well and does not need to be tuned.Anchors allow us to both seed CorEx and impose semantics on latent factors: when analyzing medical documents, for example, we can anchor a diabetes latent factor to the word “diabetes.” The T C objective then discovers other words associated with “diabetes” and includes them in this topic. While there is not space here for a full description of the optimization, it is similar in principle to the approaches in Ver Steeg & Galstyan ( 2014 ; 2015 ). Two points are worth noting: first, the TC objective is replaced by a lower bound to make optimization feasible ( Ver Steeg &
+Galstyan , 2015 ). Second, we impose a sparse connection constraint (each word appears in only one topic) to speed up computation.  Open source code implementing CorEx is available on github ( Ver Steeg , 2016 ).
+
+================================== Ai Message ==================================
+
+They incorporate expert knowledge by adding anchor variables—typically expert-chosen words—into the objective via a mutual-information term between anchors and latent factors. This lets experts seed topics and impose semantics on them, e.g., anchoring a diabetes topic to the word “diabetes,” after which the model discovers other associated words and includes them in that topic.

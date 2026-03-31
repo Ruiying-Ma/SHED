@@ -1,0 +1,166 @@
+================================ Human Message =================================
+
+QUERY:
+What language are the captions in?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_d5uDTXWyR0oW2aYlpksMkUMw)
+ Call ID: call_d5uDTXWyR0oW2aYlpksMkUMw
+  Args:
+    pattern: captions
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Compared to natural images, understanding sci- entific figures is particularly hard for machines. However, there is a valuable source of informa- tion in scientific literature that until now has re- mained untapped: the correspondence between a figure and its caption. In this paper we investi- gate what can be learnt by looking at a large num- ber of figures and reading their captions, and in- troduce a figure-caption correspondence learning task that makes use of our observations.  Train- ing visual and language networks without super- vision other than pairs of unconstrained figures and captions is shown to successfully solve this task. We also show that transferring lexical and semantic knowledge from a knowledge graph sig- nificantly enriches the resulting features. Finally, we demonstrate the positive impact of such features in other tasks involving scientific text and figures, like multi-modal classification and machine com- prehension for question answering, outperforming supervised baselines and ad-hoc approaches.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_qHI0qT66N697fMhb7LaXqwxS)
+ Call ID: call_qHI0qT66N697fMhb7LaXqwxS
+  Args:
+    pattern: language
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Compared to natural images, understanding sci- entific figures is particularly hard for machines. However, there is a valuable source of informa- tion in scientific literature that until now has re- mained untapped: the correspondence between a figure and its caption. In this paper we investi- gate what can be learnt by looking at a large num- ber of figures and reading their captions, and in- troduce a figure-caption correspondence learning task that makes use of our observations.  Train- ing visual and language networks without super- vision other than pairs of unconstrained figures and captions is shown to successfully solve this task. We also show that transferring lexical and semantic knowledge from a knowledge graph sig- nificantly enriches the resulting features. Finally, we demonstrate the positive impact of such features in other tasks involving scientific text and figures, like multi-modal classification and machine com- prehension for question answering, outperforming supervised baselines and ad-hoc approaches.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_xkRnVMfEptoHvQH1oHduZ7Ec)
+ Call ID: call_xkRnVMfEptoHvQH1oHduZ7Ec
+  Args:
+    pattern: captions in
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+5 Qualitative Analysis
+We inspect the features learnt by our FCC task to gain a deeper understanding of the syntactic and semantic patterns captured for figure and caption representation. The findings reported herein are qualitatively consistent for all the FCC variations in table 1.Vision features. The analysis was carried out on an un- constrained variety of charts, diagrams and natural images from SciGraph, without filtering by figure type or scientific field.  To obtain a representative sample of what the FCC net- work learns, we focus on the 512-D vector resulting from the last convolutional block before the fusion subnetwork. We pick the features with the most significant activation over the whole dataset and select the figures that activate them most. To this purpose, we prioritize those with higher maximum ac- tivation against the average activation.Model Text Visual Word representation Figure rep.  Inspired by MC text MC diag Random x x n/a n/a Random 22.7 25.0 BiDAF X x ~ w k n/a BiDAF [Seo et al. , 2017] 32.2 30.1 T QA 1 X x ~ w k n/a MemoryNet [Weston et al. , 2014] 32.9 29. 9 T QA 2 X X VGG19 VQA [Antol et al. , 2015] n/a 29.9 T QA 3 X X DPG DSDP-NET [Kembhavi et al. , 2017] n/a 31.3 T QA 4 X X F CC 6 FCC 33.89 34.27 T QA 5 X X F CC 7 33.73 33. 52 T QA 6 X x [ ~ w k + ~l k sem + ~ c k sem ] n/a MemoryNet [Weston et al. , 2014] 35.41 34.57 T QA 7 X X VGG19 VQA [Antol et al. , 2015] 36.26 32.58 T QA 8 X X DPG DSDP-NET [Kembhavi et al.  , 2017] n/a n/a T QA 9 X X F CC 6 FCC 36.56 35.30 T QA 10 X X F CC 7 35.84 33.94
+Table 6: TQA results (% accuracy). FCC vs. random, BiDAF, MemoryNet, VQA and DSDP-NET baselines. Figure 2 shows a selection of 6 visual features with the 4 figures that activate each feature more significantly and their activation heatmaps. Only figures are used as input, no text.  As can be seen, the vision subnetwork has automat- ically learnt, without explicit supervision, to recognize dif- ferent types of diagrams, charts and content, such as (from left to right) whisker plots, western blots (a technique used to identify proteins in a tissue sample), multi-image comparison diagrams, multi-modal data visualization charts (e.g. western plots vs. bar charts), line plots, and text within the figures.  Furthermore, as shown by the heatmaps, our model discrimi- nates the key elements associated to the figures that most ac- tivate each feature: the actual whiskers, the blots, the borders of each image under comparison, the blots and their comple- mentary bar charts, as well as the line plots and the correspon- dence between them and the values in the x and y axes.  Also, see (right-most column) how a feature discriminates text in- serted in the figure, regardless of the remaining elements that may appear and the connections between them. This shows evidence of how the visual features learnt by the FCC task support the parsing of complex scientific diagrams.We also estimated a notion of semantic specificity based on the concepts of a KG.  For each visual feature, we aggre- gated the captions of the figures that most activate it and used Cogito to disambiguate the Sensigrafo concepts that appear in them. Then, we estimated how important each concept is to each feature by calculating its tf-idf. Finally, we averaged the resulting values to obtain a consolidated semantic specificity score per feature.The scores of the features in figure 2 range between 0.42 and 0. 65, which is consistently higher than average (0.4). This seems to indicate a correlation between activation and the semantic specificity of each visual feature. For example, the heatmaps of the figures related to the feature with the low- est tf-idf (left-most column) highlights a particular visual pat- tern, i.e. the whiskers , that may spread over many, possibly unrelated domains.  On the other hand, the feature with the highest score (second column) focuses on a type of diagrams, western blots, almost exclusive of protein and genetic studies. Others, like the feature illustrated by the figures in the fifth column, capture the semantics of a specific type of 2D charts relating two magnitudes x and y . Analyzing their captions
+with Cogito, we see that concepts like e.g. isochronal and ex- ponential functions are mentioned.  If we look at the second and four top-most figures in the column, we can see that such concepts are also visually depicted in the figures, suggesting that the FCC task has learnt to recognize them both from the text and visually.Text features. Similar to the visual case, we selected the features from the last block of the language subnetwork with the highest activation. For visualization purposes, we picked the figures corresponding to the captions in SciGraph that most activate such features (figure 3).  No visual information is used.Several distinct patterns emerge from the text. The text fea- ture in the first column seems to focus on genetics and histo- chemistry, including terms like western blots or immunostain- ing and variations like immunoblot-s/ted/ting . Interestingly, it also seems to have learnt some type of is-a relations (western blot is a type of immunoblot). The second feature focuses on variations of the term radiograph , e.g.  radiograph-y/s . The third feature specializes in text related to curve plots involv- ing several statistic analysis, e.g. Real-time PCR, one-way ANOVA or Gaussian distribution . Sometimes (fourth figure from top) the caption does not mention the plot directly, but focuses on the analysis instead, e.g. ”the data presented here are mean values of duplicate experiments”, indicating transfer of knowledge from the visual part during training.  The fourth feature extracts citations and models named after prominent scientists, e.g. Evans function (first and fourth figure), Man- ley (1992) (second), and Aliev-Panfilov model (third). The fifth feature extracts chromatography terminology, e.g. 3D surface plot, photomicrograph or color map and, finally, the right-most feature focuses on different types of named dia- grams, like flow charts and state diagrams, e.g.  phylogenetic trees .All the captions show a strong semantic correspondence with their associated figures. Figure 4 shows the activation heatmaps for two sample captions, calculated on the em- beddings layer of the language subnetwork. The upper one corresponds to the fourth column left-right and third figure top-down in figure 3. Its caption reads: ”The Aliev-Panfilov model with α = 0 . 01 . . .  The phase portrait depicts trajecto- ries for distinct initial values ϕ 0 and r 0 . . . ”. Below, (first
+Figure 2: Selected visual features and activation heatmaps. The top row labels the dominant pattern for each feature.column, fourth figure in figure 3): ”Relative protein levels of ubiquitin-protein conjugates in M. quadriceps. . . A repre- sentative immunoblot specific to ubiquitin. . . ”.  Consistently with our analysis, activation focuses on the most relevant to- kens for each text feature: ”Aliev-Panfilov model” and ”im- munoblot”, respectively.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_0UapXFqBgrOBEhPEnBcUUy15)
+ Call ID: call_0UapXFqBgrOBEhPEnBcUUy15
+  Args:
+    pattern: SciGraph
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1 Introduction
+Scientific knowledge is heterogeneous and can present itself in many forms, including text, mathematical equations, fig- ures and tables. Like many other manifestations of human thought, the scientific discourse usually adopts the form of a narrative, a scientific publication where related knowledge is presented in mutually supportive ways over different modal- ities. In the case of scientific figures, like charts, images and diagrams, these are usually accompanied by a text paragraph, a caption, that elaborates on the analysis otherwise visually represented. In this paper, we make use of this observation and tap on the potential of learning from the enormous source of free su- pervision available in the scientific literature, with millions of figures and their captions. We build models that learn from the scientific discourse both visually and textually by simply looking at the figures and reading their explanatory captions, inspired in how humans learn by reading a scientific publica- tion. To this purpose, we explore how multi-modal scientific
+ knowledge can be learnt from the correspondence between figures and captions.The main contributions of this paper are the following:
+• An unsupervised Figure-Caption Correspondence task (FCC) that jointly learns text and visual features useful to address a range of tasks involving scientific text and figures.
+• A method to enrich such features with seman- tic knowledge transferred from structured knowledge graphs (KG).
+• A study of the complexity of figure-caption cor- respondence compared to classical image-sentence matching.
+• A qualitative and quantitative analysis of the learnt text and visual features through transfer learning tasks.
+• A corpus of scientific figures and captions extracted from SN SciGraph and AI2 Semantic Scholar.We present the FCC task in section 3, including the net- work architecture, training protocol, and how adding pre- trained word and semantic embeddings can enrich the result- ing text and visual features. In section 4, we first introduce our datasets and evaluate the performance of our method in the task it was trained to solve, the correspondence between scientific figures and captions.  Then, we relate our work to the state of the art in image-sentence matching and evaluate our approach in two challenging transfer learning tasks: cap- tion and figure classification and multi-modal machine com- prehension. In section 5 we perform a qualitative study that illustrates how the FCC task leads to detailed textual and vi- sual discrimination. Finally, in section 6 we conclude the pa- per and advance future work.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_K5WzvOVAGmLReaFtAiyFrf6i)
+ Call ID: call_K5WzvOVAGmLReaFtAiyFrf6i
+  Args:
+    pattern: English
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+4.1 Datasets
+We have used the following datasets for training and evalua- tion:
+The Semantic Scholar corpus [Ammar et al. , 2018] (SemScholar) is a large dataset of scientific publications made available by AI2. From its 39M articles, we downloaded 3,3M PDFs (the rest were behind paywalls, did not have a link or it was broken) and extracted 12. 5M figures and cap- tions through PDFFigures2 [Clark and Divvala, 2016]. We randomly selected 500K papers to train the FCC task on their figures and captions and another 500K to train Vecsigrafo on the text of their titles and abstracts.Springer Nature’s SciGraph 3 contains 7M scientific pub- lications organized in 22 scientific fields or categories.  Since SciGraph does not provide a link to the PDF of the publica- tion, we selected the intersection with SemScholar, producing a smaller corpus of 80K papers (in addition to the 1M papers from SemScholar mentioned above) and 82K figures that we used for training certain FCC configurations and supervised baselines (section 4.2).The Textbook Question Answering corpus [Kembhavi et al.  , 2017] includes 1,076 lessons and 26,260 multi-modal test questions from middle school science curricula. Its complex- ity and scope make it a challenging textual and visual ques- tion answering dataset.Wikipedia. We used the January 2018 English Wikipedia dataset as one of the corpora on which to train Vecsigrafo. As opposed to SciGraph or SemScholar, specific of the scientific
+ 1 All the code and data, including the corpora extracted from Sci- Graph and Semantic Scholar, are available through https://github. com/hybridNLP/look read and enrich
+2 See our tutorial on hybrid NLP at http://expertsystemlab.com/ hybridNLP18
+3 https://www.springernature.com/gp/researchers/scigraph
+Corpus Word rep. Acc vgg . Acc. Direct SciGraph ~ w k 60. 30 Pre-train ~ w k 68.40 F CC 1 SciGraph ~ w k 78.09 78.48 F CC 2 [ ~ w k ; ~ w 0 k sem ] 79.75 80.35 F CC 3 [ ~ w k ; ~l k holE ; ~ c k holE ] 78.64 78. 08 F CC 4 [ ~ w k ; ~l k wiki ; ~ c k wiki ] 79.71 80.50 F CC 5 [ ~ w k ; ~l k sem ; ~ c k sem ] 80.50 81.97 F CC 6 SemScholar ~ w k 80.42 81.44 F CC 7 [ ~ w k ; ~l k sem ; ~ c k sem ] 82.21 84. 34
+Table 1: FCC and supervised baselines results (% accuracy).domain, Wikipedia is a source of general-purpose informa- tion.Flickr30K and COCO , as image-sentence matching benchmarks.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_iJqm7MV4m2vkJAXvTQbHNYVL)
+ Call ID: call_iJqm7MV4m2vkJAXvTQbHNYVL
+  Args:
+    pattern: captions are
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_I5IvvPWMbP7lifQQSXEiDKU9)
+ Call ID: call_I5IvvPWMbP7lifQQSXEiDKU9
+  Args:
+    pattern: caption
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Compared to natural images, understanding sci- entific figures is particularly hard for machines. However, there is a valuable source of informa- tion in scientific literature that until now has re- mained untapped: the correspondence between a figure and its caption. In this paper we investi- gate what can be learnt by looking at a large num- ber of figures and reading their captions, and in- troduce a figure-caption correspondence learning task that makes use of our observations.  Train- ing visual and language networks without super- vision other than pairs of unconstrained figures and captions is shown to successfully solve this task. We also show that transferring lexical and semantic knowledge from a knowledge graph sig- nificantly enriches the resulting features. Finally, we demonstrate the positive impact of such features in other tasks involving scientific text and figures, like multi-modal classification and machine com- prehension for question answering, outperforming supervised baselines and ad-hoc approaches.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_OdNfwrqDvmxF275Vni757Rmw)
+ Call ID: call_OdNfwrqDvmxF275Vni757Rmw
+  Args:
+    pattern: English captions|captions in English|language of the captions|captions are in English|captions (English)
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_ZMOjaojdfmzvzJjrh28Hkvqd)
+ Call ID: call_ZMOjaojdfmzvzJjrh28Hkvqd
+  Args:
+    pattern: English
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_B3ZeXAnRx3yNduPOvRSuzv3D)
+ Call ID: call_B3ZeXAnRx3yNduPOvRSuzv3D
+  Args:
+    pattern: captions in SciGraph|SciGraph captions|captions extracted from SciGraph
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+5 Qualitative Analysis
+We inspect the features learnt by our FCC task to gain a deeper understanding of the syntactic and semantic patterns captured for figure and caption representation. The findings reported herein are qualitatively consistent for all the FCC variations in table 1.Vision features. The analysis was carried out on an un- constrained variety of charts, diagrams and natural images from SciGraph, without filtering by figure type or scientific field.  To obtain a representative sample of what the FCC net- work learns, we focus on the 512-D vector resulting from the last convolutional block before the fusion subnetwork. We pick the features with the most significant activation over the whole dataset and select the figures that activate them most. To this purpose, we prioritize those with higher maximum ac- tivation against the average activation.Model Text Visual Word representation Figure rep.  Inspired by MC text MC diag Random x x n/a n/a Random 22.7 25.0 BiDAF X x ~ w k n/a BiDAF [Seo et al. , 2017] 32.2 30.1 T QA 1 X x ~ w k n/a MemoryNet [Weston et al. , 2014] 32.9 29. 9 T QA 2 X X VGG19 VQA [Antol et al. , 2015] n/a 29.9 T QA 3 X X DPG DSDP-NET [Kembhavi et al. , 2017] n/a 31.3 T QA 4 X X F CC 6 FCC 33.89 34.27 T QA 5 X X F CC 7 33.73 33. 52 T QA 6 X x [ ~ w k + ~l k sem + ~ c k sem ] n/a MemoryNet [Weston et al. , 2014] 35.41 34.57 T QA 7 X X VGG19 VQA [Antol et al. , 2015] 36.26 32.58 T QA 8 X X DPG DSDP-NET [Kembhavi et al.  , 2017] n/a n/a T QA 9 X X F CC 6 FCC 36.56 35.30 T QA 10 X X F CC 7 35.84 33.94
+Table 6: TQA results (% accuracy). FCC vs. random, BiDAF, MemoryNet, VQA and DSDP-NET baselines. Figure 2 shows a selection of 6 visual features with the 4 figures that activate each feature more significantly and their activation heatmaps. Only figures are used as input, no text.  As can be seen, the vision subnetwork has automat- ically learnt, without explicit supervision, to recognize dif- ferent types of diagrams, charts and content, such as (from left to right) whisker plots, western blots (a technique used to identify proteins in a tissue sample), multi-image comparison diagrams, multi-modal data visualization charts (e.g. western plots vs. bar charts), line plots, and text within the figures.  Furthermore, as shown by the heatmaps, our model discrimi- nates the key elements associated to the figures that most ac- tivate each feature: the actual whiskers, the blots, the borders of each image under comparison, the blots and their comple- mentary bar charts, as well as the line plots and the correspon- dence between them and the values in the x and y axes.  Also, see (right-most column) how a feature discriminates text in- serted in the figure, regardless of the remaining elements that may appear and the connections between them. This shows evidence of how the visual features learnt by the FCC task support the parsing of complex scientific diagrams.We also estimated a notion of semantic specificity based on the concepts of a KG.  For each visual feature, we aggre- gated the captions of the figures that most activate it and used Cogito to disambiguate the Sensigrafo concepts that appear in them. Then, we estimated how important each concept is to each feature by calculating its tf-idf. Finally, we averaged the resulting values to obtain a consolidated semantic specificity score per feature.The scores of the features in figure 2 range between 0.42 and 0. 65, which is consistently higher than average (0.4). This seems to indicate a correlation between activation and the semantic specificity of each visual feature. For example, the heatmaps of the figures related to the feature with the low- est tf-idf (left-most column) highlights a particular visual pat- tern, i.e. the whiskers , that may spread over many, possibly unrelated domains.  On the other hand, the feature with the highest score (second column) focuses on a type of diagrams, western blots, almost exclusive of protein and genetic studies. Others, like the feature illustrated by the figures in the fifth column, capture the semantics of a specific type of 2D charts relating two magnitudes x and y . Analyzing their captions
+with Cogito, we see that concepts like e.g. isochronal and ex- ponential functions are mentioned.  If we look at the second and four top-most figures in the column, we can see that such concepts are also visually depicted in the figures, suggesting that the FCC task has learnt to recognize them both from the text and visually.Text features. Similar to the visual case, we selected the features from the last block of the language subnetwork with the highest activation. For visualization purposes, we picked the figures corresponding to the captions in SciGraph that most activate such features (figure 3).  No visual information is used.Several distinct patterns emerge from the text. The text fea- ture in the first column seems to focus on genetics and histo- chemistry, including terms like western blots or immunostain- ing and variations like immunoblot-s/ted/ting . Interestingly, it also seems to have learnt some type of is-a relations (western blot is a type of immunoblot). The second feature focuses on variations of the term radiograph , e.g.  radiograph-y/s . The third feature specializes in text related to curve plots involv- ing several statistic analysis, e.g. Real-time PCR, one-way ANOVA or Gaussian distribution . Sometimes (fourth figure from top) the caption does not mention the plot directly, but focuses on the analysis instead, e.g. ”the data presented here are mean values of duplicate experiments”, indicating transfer of knowledge from the visual part during training.  The fourth feature extracts citations and models named after prominent scientists, e.g. Evans function (first and fourth figure), Man- ley (1992) (second), and Aliev-Panfilov model (third). The fifth feature extracts chromatography terminology, e.g. 3D surface plot, photomicrograph or color map and, finally, the right-most feature focuses on different types of named dia- grams, like flow charts and state diagrams, e.g.  phylogenetic trees .All the captions show a strong semantic correspondence with their associated figures. Figure 4 shows the activation heatmaps for two sample captions, calculated on the em- beddings layer of the language subnetwork. The upper one corresponds to the fourth column left-right and third figure top-down in figure 3. Its caption reads: ”The Aliev-Panfilov model with α = 0 . 01 . . .  The phase portrait depicts trajecto- ries for distinct initial values ϕ 0 and r 0 . . . ”. Below, (first
+Figure 2: Selected visual features and activation heatmaps. The top row labels the dominant pattern for each feature.column, fourth figure in figure 3): ”Relative protein levels of ubiquitin-protein conjugates in M. quadriceps. . . A repre- sentative immunoblot specific to ubiquitin. . . ”.  Consistently with our analysis, activation focuses on the most relevant to- kens for each text feature: ”Aliev-Panfilov model” and ”im- munoblot”, respectively.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_o5RjalRteX9odfzkhTdQoqlH)
+ Call ID: call_o5RjalRteX9odfzkhTdQoqlH
+  Args:
+    pattern: language subnetwork|language network|language networks|language features
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Compared to natural images, understanding sci- entific figures is particularly hard for machines. However, there is a valuable source of informa- tion in scientific literature that until now has re- mained untapped: the correspondence between a figure and its caption. In this paper we investi- gate what can be learnt by looking at a large num- ber of figures and reading their captions, and in- troduce a figure-caption correspondence learning task that makes use of our observations.  Train- ing visual and language networks without super- vision other than pairs of unconstrained figures and captions is shown to successfully solve this task. We also show that transferring lexical and semantic knowledge from a knowledge graph sig- nificantly enriches the resulting features. Finally, we demonstrate the positive impact of such features in other tasks involving scientific text and figures, like multi-modal classification and machine com- prehension for question answering, outperforming supervised baselines and ad-hoc approaches.
+
+================================== Ai Message ==================================
+
+English

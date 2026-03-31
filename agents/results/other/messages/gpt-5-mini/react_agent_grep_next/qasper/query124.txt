@@ -1,0 +1,152 @@
+================================ Human Message =================================
+
+QUERY:
+What is their baseline?
+
+TABLE OF CONTENTS (TOC):
+1 | Cross-Lingual Natural Language Generation via Pre-Training
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2 Related Work
+1.4 | 3 Methods
+1.4.1 | 3.1 Pre-Training Tasks
+1.4.2 | 3.2 Pre-Training Protocol
+1.4.3 | 3.3 Fine-Tuning on Downstream NLG Tasks
+1.5 | 4 Experiments
+1.5.1 | 4.1 Training Details
+1.5.2 | 4.2 Question Generation
+1.5.3 | 4.3 Abstractive Summarization
+1.5.4 | 4.4 Ablation Studies
+1.5.5 | 4.5 Case Studies
+1.6 | 5 Conclusion
+1.7 | Acknowledgements
+1.8 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_iYolzNLkGGZlXQ3ZoLh4p2rv)
+ Call ID: call_iYolzNLkGGZlXQ3ZoLh4p2rv
+  Args:
+    pattern: baseline
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.5.2 | 4.2 Question Generation
+We evaluate our model on zero-shot cross-lingual answer- aware question generation (QG). The goal is to generate a
+1 https://github.com/moses-smt/mosesdecoder
+Models Rel Flu Corr X LM 1.00 1.20 0.40 P IPELINE (X LM ) 0.85 0.98 0.28 X NLG 1.24 * 1.47 * 0.76 *
+ Table 5: Human evaluation results of zero-shot Chinese- English question generation. “*”: the improvements are sig- nificant at p < 0 . 05 . Same shorthands apply as in Table 3.Data Models RG-1 RG-2 RG-L En-AS X LM 48.15 26.35 45.04 X NLG 48.76 26.82 45.57 Fr-AS X LM 56.27 39. 20 52.84 X NLG 57.84 40.81 54.24 Zh-AS X LM 55.30 42.57 52.95 X NLG 57.65 44.93 54.95
+Table 6: Evaluation results of supervised monolingual sum- marization. Same shorthands apply as in Table 1.question that asks towards the answer with the given pas- sage and the expected answer.  In the following experiments, we extend the QG task to the cross-lingual setting. By only using English QG training data, our goal is to generate ques- tions in English or Chinese with the given passage-answer pair in English or Chinese.We use SQuAD 1.1 (Rajpurkar et al. 2016) as the En- glish QG dataset.  It is a popular English question answering dataset containing over 100,000 questions and their corre- sponding annotated passages. Following (Zhao et al. 2018), we regard the original development set as the test set, and sample 5000 examples from the training data of two datasets as the development sets. For Chinese QG, we follow the de- fault data splits of WebQA (Li et al. 2016).  We regard the provided annotated evidence sentences as the input passages instead of entire documents. To construct the input sequence, we view the whole input passage as a single sentence, and concatenate the passage and the answer into one sequence with a special token [S] between them. During decoding Chinese, we utilize a subset of vocabulary, which is obtained from the passage sentences of the WebQA dataset.English-English Question Generation We first conduct experiments on the supervised English-English QG setting.  We compare our model to the following baselines:
+• C OREF N QG (Du and Cardie 2018) An attentional sequence-to-sequence model with a feature-rich encoder.
+• M P -G SN (Zhao et al.2018) A sequence-to-sequence model with self-attention and maxout pointer mechanism.
+• X LM (Lample and Conneau 2019) State-of-the-art cross-lingual pre-trained Transformer.We initialize the sequence-to-sequence model with pre-trained XLM.We evaluate models with BLEU-4 (BL-4), ROUGE (RG) and METEOR (MTR) metrics. As shown in Table 1, X NLG
+Models RG-1 RG-2 RG-L X LM 14.53 1.80 13.43 P IPELINE (X LM ) 30.58 12.01 27. 44 w/ Google Translator 38.48 18.86 34.98 X NLG 39.98 20.31 36.31
+Table 7: Evaluation results of zero-shot French abstractive summarization. Same shorthands apply as in Table 1.Models RG-1 RG-2 RG-L X LM 0.71 0.28 0.70 P IPELINE (X LM ) 26.39 13. 11 23.98 w/ Google Translator 36.96 22.03 33.99 X NLG 41.66 28.70 38.91
+Table 8: Evaluation results of zero-shot Chinese abstractive summarization. Same shorthands apply as in Table 1.outperforms the baselines, which demonstrates that our pre- trained model provides a good initialization for NLG. Chinese-Chinese Question Generation We conduct ex- periments on zero-shot Chinese-Chinese QG to evaluate the cross-lingual transfer ability. In this task, models are trained with English QG data but evaluated with Chinese QG exam- ples. We include the following models as our baselines:
+• X LM Fine-tuning XLM with the English QG data.
+• P IPELINE (X LM ) The pipeline of translating input Chi- nese sentences into English first,then performing En-En- QG with the XLM model, and finally translating back to the Chinese. We use the Transformer as the translator, which is also trained on the MultiUN dataset.
+• P IPELINE (X LM ) with Google Translator Utilizing Google Translator in P IPELINE (X LM ) for translation.We evaluate models by both automatic evaluation metrics and human experts. The automatic metrics scores are com- puted by regarding each Chinese character as a token. For human evaluation, we consider three metrics: relatedness, fluency, and correctness, which are represented as integers ranged from 1 to 3. We randomly select 100 passage-answer pairs from the English QG test set, and use the models to generate questions. Then we present these examples to three experts to ask for the above scores.  In Table 2 and Table 3, we present the results for the zero-shot Zh-Zh-QG. The re- sults of monolingual supervised models are also reported in Table 1 as reference. In the automatic evaluation, our model consistently performs better than baselines in both zero-shot and monolingual supervised setting. In the human evalu- ation, our model also obtains significant improvements in terms of relatedness and correctness. English-Chinese Question Generation In the zero- shot English-Chinese question generation experiments, we use X LM and P IPELINE (X LM ) as our baselines. P IPELINE (X LM ) is a pipeline method that uses En-En-QG
+Models BL-4 MTR RG-L X LM 0.25 0.62 2.56 X NLG 16.37 18.74 34.93 − XAE 13. 71 15.88 31.43 − DAE 0.38 1.79 3.79
+Table 9: Ablations for pre-training objectives, where models are evaluated on zero-shot Chinese-Chinese question gener- ation. Same shorthands apply as in Table 1.with X LM to generate questions, and then translates the re- sults to Chinese.  Because there are no annotations for En- Zh-QG, we perform human evaluation studies for this set- ting. Table 4 shows the human evaluation results, where our model surpasses all the baselines especially in terms of re- latedness and correctness.Chinese-English Question Generation We also conduct experiments for zero-shot Chinese-English question genera- tion, and adopt the same evaluation procedure to En-Zh-QG.  P IPELINE (X LM ) first translates Chinese input to English, and then conduct En-En-QG with X LM . As shown in Ta- ble 5, human evaluation results indicate that X NLG achieves significant improvements on the three metrics.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_btSHbO7xdejaENpo0qqxHLVV)
+ Call ID: call_btSHbO7xdejaENpo0qqxHLVV
+  Args:
+    pattern: We compare our model to the following baselines
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.5.2 | 4.2 Question Generation
+We evaluate our model on zero-shot cross-lingual answer- aware question generation (QG). The goal is to generate a
+1 https://github.com/moses-smt/mosesdecoder
+Models Rel Flu Corr X LM 1.00 1.20 0.40 P IPELINE (X LM ) 0.85 0.98 0.28 X NLG 1.24 * 1.47 * 0.76 *
+ Table 5: Human evaluation results of zero-shot Chinese- English question generation. “*”: the improvements are sig- nificant at p < 0 . 05 . Same shorthands apply as in Table 3.Data Models RG-1 RG-2 RG-L En-AS X LM 48.15 26.35 45.04 X NLG 48.76 26.82 45.57 Fr-AS X LM 56.27 39. 20 52.84 X NLG 57.84 40.81 54.24 Zh-AS X LM 55.30 42.57 52.95 X NLG 57.65 44.93 54.95
+Table 6: Evaluation results of supervised monolingual sum- marization. Same shorthands apply as in Table 1.question that asks towards the answer with the given pas- sage and the expected answer.  In the following experiments, we extend the QG task to the cross-lingual setting. By only using English QG training data, our goal is to generate ques- tions in English or Chinese with the given passage-answer pair in English or Chinese.We use SQuAD 1.1 (Rajpurkar et al. 2016) as the En- glish QG dataset.  It is a popular English question answering dataset containing over 100,000 questions and their corre- sponding annotated passages. Following (Zhao et al. 2018), we regard the original development set as the test set, and sample 5000 examples from the training data of two datasets as the development sets. For Chinese QG, we follow the de- fault data splits of WebQA (Li et al. 2016).  We regard the provided annotated evidence sentences as the input passages instead of entire documents. To construct the input sequence, we view the whole input passage as a single sentence, and concatenate the passage and the answer into one sequence with a special token [S] between them. During decoding Chinese, we utilize a subset of vocabulary, which is obtained from the passage sentences of the WebQA dataset.English-English Question Generation We first conduct experiments on the supervised English-English QG setting.  We compare our model to the following baselines:
+• C OREF N QG (Du and Cardie 2018) An attentional sequence-to-sequence model with a feature-rich encoder.
+• M P -G SN (Zhao et al.2018) A sequence-to-sequence model with self-attention and maxout pointer mechanism.
+• X LM (Lample and Conneau 2019) State-of-the-art cross-lingual pre-trained Transformer.We initialize the sequence-to-sequence model with pre-trained XLM.We evaluate models with BLEU-4 (BL-4), ROUGE (RG) and METEOR (MTR) metrics. As shown in Table 1, X NLG
+Models RG-1 RG-2 RG-L X LM 14.53 1.80 13.43 P IPELINE (X LM ) 30.58 12.01 27. 44 w/ Google Translator 38.48 18.86 34.98 X NLG 39.98 20.31 36.31
+Table 7: Evaluation results of zero-shot French abstractive summarization. Same shorthands apply as in Table 1.Models RG-1 RG-2 RG-L X LM 0.71 0.28 0.70 P IPELINE (X LM ) 26.39 13. 11 23.98 w/ Google Translator 36.96 22.03 33.99 X NLG 41.66 28.70 38.91
+Table 8: Evaluation results of zero-shot Chinese abstractive summarization. Same shorthands apply as in Table 1.outperforms the baselines, which demonstrates that our pre- trained model provides a good initialization for NLG. Chinese-Chinese Question Generation We conduct ex- periments on zero-shot Chinese-Chinese QG to evaluate the cross-lingual transfer ability. In this task, models are trained with English QG data but evaluated with Chinese QG exam- ples. We include the following models as our baselines:
+• X LM Fine-tuning XLM with the English QG data.
+• P IPELINE (X LM ) The pipeline of translating input Chi- nese sentences into English first,then performing En-En- QG with the XLM model, and finally translating back to the Chinese. We use the Transformer as the translator, which is also trained on the MultiUN dataset.
+• P IPELINE (X LM ) with Google Translator Utilizing Google Translator in P IPELINE (X LM ) for translation.We evaluate models by both automatic evaluation metrics and human experts. The automatic metrics scores are com- puted by regarding each Chinese character as a token. For human evaluation, we consider three metrics: relatedness, fluency, and correctness, which are represented as integers ranged from 1 to 3. We randomly select 100 passage-answer pairs from the English QG test set, and use the models to generate questions. Then we present these examples to three experts to ask for the above scores.  In Table 2 and Table 3, we present the results for the zero-shot Zh-Zh-QG. The re- sults of monolingual supervised models are also reported in Table 1 as reference. In the automatic evaluation, our model consistently performs better than baselines in both zero-shot and monolingual supervised setting. In the human evalu- ation, our model also obtains significant improvements in terms of relatedness and correctness. English-Chinese Question Generation In the zero- shot English-Chinese question generation experiments, we use X LM and P IPELINE (X LM ) as our baselines. P IPELINE (X LM ) is a pipeline method that uses En-En-QG
+Models BL-4 MTR RG-L X LM 0.25 0.62 2.56 X NLG 16.37 18.74 34.93 − XAE 13. 71 15.88 31.43 − DAE 0.38 1.79 3.79
+Table 9: Ablations for pre-training objectives, where models are evaluated on zero-shot Chinese-Chinese question gener- ation. Same shorthands apply as in Table 1.with X LM to generate questions, and then translates the re- sults to Chinese.  Because there are no annotations for En- Zh-QG, we perform human evaluation studies for this set- ting. Table 4 shows the human evaluation results, where our model surpasses all the baselines especially in terms of re- latedness and correctness.Chinese-English Question Generation We also conduct experiments for zero-shot Chinese-English question genera- tion, and adopt the same evaluation procedure to En-Zh-QG.  P IPELINE (X LM ) first translates Chinese input to English, and then conduct En-En-QG with X LM . As shown in Ta- ble 5, human evaluation results indicate that X NLG achieves significant improvements on the three metrics.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_UaQORQSHhugQT2NRhJlbiGWV)
+ Call ID: call_UaQORQSHhugQT2NRhJlbiGWV
+  Args:
+    pattern: baseline
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.5.3 | 4.3 Abstractive Summarization
+We conduct experiments on cross-lingual abstractive sum- marization (AS). AS is the task of converting the input sentences into summaries while preserving the key mean- ings. For evaluation, we use English/French/Chinese Gi- gaword 2 to extract the first sentence and the headline of each article, and regard them as input document and pre- dicted summaries, respectively.  For each language, we sam- ple 500k/5k/5k examples for training/validation/test.Zero-Shot Summarization In the zero-shot setting, we only use English data for training, and directly evaluate the model on other languages. In Table 7 and Table 8, we present the results for French/Chinese AS, which are evaluated by the ROUGE-1, ROUGE-2 and ROUGE-L metrics.  We also report the results of supervised AS in Table 6 for reference. We find that X NLG outperforms all the baseline models on both French and Chinese AS. Comparing with French, there is a larger gap between baselines and our model on zero-shot Chinese AS, which indicates that the error propagation issue is more serious on distant language pairs.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_wmJU9mZDfrDCkC7DOCrPBsFJ)
+ Call ID: call_wmJU9mZDfrDCkC7DOCrPBsFJ
+  Args:
+    pattern: baseline(s|\b)
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.5.2 | 4.2 Question Generation
+We evaluate our model on zero-shot cross-lingual answer- aware question generation (QG). The goal is to generate a
+1 https://github.com/moses-smt/mosesdecoder
+Models Rel Flu Corr X LM 1.00 1.20 0.40 P IPELINE (X LM ) 0.85 0.98 0.28 X NLG 1.24 * 1.47 * 0.76 *
+ Table 5: Human evaluation results of zero-shot Chinese- English question generation. “*”: the improvements are sig- nificant at p < 0 . 05 . Same shorthands apply as in Table 3.Data Models RG-1 RG-2 RG-L En-AS X LM 48.15 26.35 45.04 X NLG 48.76 26.82 45.57 Fr-AS X LM 56.27 39. 20 52.84 X NLG 57.84 40.81 54.24 Zh-AS X LM 55.30 42.57 52.95 X NLG 57.65 44.93 54.95
+Table 6: Evaluation results of supervised monolingual sum- marization. Same shorthands apply as in Table 1.question that asks towards the answer with the given pas- sage and the expected answer.  In the following experiments, we extend the QG task to the cross-lingual setting. By only using English QG training data, our goal is to generate ques- tions in English or Chinese with the given passage-answer pair in English or Chinese.We use SQuAD 1.1 (Rajpurkar et al. 2016) as the En- glish QG dataset.  It is a popular English question answering dataset containing over 100,000 questions and their corre- sponding annotated passages. Following (Zhao et al. 2018), we regard the original development set as the test set, and sample 5000 examples from the training data of two datasets as the development sets. For Chinese QG, we follow the de- fault data splits of WebQA (Li et al. 2016).  We regard the provided annotated evidence sentences as the input passages instead of entire documents. To construct the input sequence, we view the whole input passage as a single sentence, and concatenate the passage and the answer into one sequence with a special token [S] between them. During decoding Chinese, we utilize a subset of vocabulary, which is obtained from the passage sentences of the WebQA dataset.English-English Question Generation We first conduct experiments on the supervised English-English QG setting.  We compare our model to the following baselines:
+• C OREF N QG (Du and Cardie 2018) An attentional sequence-to-sequence model with a feature-rich encoder.
+• M P -G SN (Zhao et al.2018) A sequence-to-sequence model with self-attention and maxout pointer mechanism.
+• X LM (Lample and Conneau 2019) State-of-the-art cross-lingual pre-trained Transformer.We initialize the sequence-to-sequence model with pre-trained XLM.We evaluate models with BLEU-4 (BL-4), ROUGE (RG) and METEOR (MTR) metrics. As shown in Table 1, X NLG
+Models RG-1 RG-2 RG-L X LM 14.53 1.80 13.43 P IPELINE (X LM ) 30.58 12.01 27. 44 w/ Google Translator 38.48 18.86 34.98 X NLG 39.98 20.31 36.31
+Table 7: Evaluation results of zero-shot French abstractive summarization. Same shorthands apply as in Table 1.Models RG-1 RG-2 RG-L X LM 0.71 0.28 0.70 P IPELINE (X LM ) 26.39 13. 11 23.98 w/ Google Translator 36.96 22.03 33.99 X NLG 41.66 28.70 38.91
+Table 8: Evaluation results of zero-shot Chinese abstractive summarization. Same shorthands apply as in Table 1.outperforms the baselines, which demonstrates that our pre- trained model provides a good initialization for NLG. Chinese-Chinese Question Generation We conduct ex- periments on zero-shot Chinese-Chinese QG to evaluate the cross-lingual transfer ability. In this task, models are trained with English QG data but evaluated with Chinese QG exam- ples. We include the following models as our baselines:
+• X LM Fine-tuning XLM with the English QG data.
+• P IPELINE (X LM ) The pipeline of translating input Chi- nese sentences into English first,then performing En-En- QG with the XLM model, and finally translating back to the Chinese. We use the Transformer as the translator, which is also trained on the MultiUN dataset.
+• P IPELINE (X LM ) with Google Translator Utilizing Google Translator in P IPELINE (X LM ) for translation.We evaluate models by both automatic evaluation metrics and human experts. The automatic metrics scores are com- puted by regarding each Chinese character as a token. For human evaluation, we consider three metrics: relatedness, fluency, and correctness, which are represented as integers ranged from 1 to 3. We randomly select 100 passage-answer pairs from the English QG test set, and use the models to generate questions. Then we present these examples to three experts to ask for the above scores.  In Table 2 and Table 3, we present the results for the zero-shot Zh-Zh-QG. The re- sults of monolingual supervised models are also reported in Table 1 as reference. In the automatic evaluation, our model consistently performs better than baselines in both zero-shot and monolingual supervised setting. In the human evalu- ation, our model also obtains significant improvements in terms of relatedness and correctness. English-Chinese Question Generation In the zero- shot English-Chinese question generation experiments, we use X LM and P IPELINE (X LM ) as our baselines. P IPELINE (X LM ) is a pipeline method that uses En-En-QG
+Models BL-4 MTR RG-L X LM 0.25 0.62 2.56 X NLG 16.37 18.74 34.93 − XAE 13. 71 15.88 31.43 − DAE 0.38 1.79 3.79
+Table 9: Ablations for pre-training objectives, where models are evaluated on zero-shot Chinese-Chinese question gener- ation. Same shorthands apply as in Table 1.with X LM to generate questions, and then translates the re- sults to Chinese.  Because there are no annotations for En- Zh-QG, we perform human evaluation studies for this set- ting. Table 4 shows the human evaluation results, where our model surpasses all the baselines especially in terms of re- latedness and correctness.Chinese-English Question Generation We also conduct experiments for zero-shot Chinese-English question genera- tion, and adopt the same evaluation procedure to En-Zh-QG.  P IPELINE (X LM ) first translates Chinese input to English, and then conduct En-En-QG with X LM . As shown in Ta- ble 5, human evaluation results indicate that X NLG achieves significant improvements on the three metrics.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_CC0hUDFMJHU4TqrqBwGjApaq)
+ Call ID: call_CC0hUDFMJHU4TqrqBwGjApaq
+  Args:
+    pattern: baseline model|the baseline|their baseline|as baseline
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.5.2 | 4.2 Question Generation
+We evaluate our model on zero-shot cross-lingual answer- aware question generation (QG). The goal is to generate a
+1 https://github.com/moses-smt/mosesdecoder
+Models Rel Flu Corr X LM 1.00 1.20 0.40 P IPELINE (X LM ) 0.85 0.98 0.28 X NLG 1.24 * 1.47 * 0.76 *
+ Table 5: Human evaluation results of zero-shot Chinese- English question generation. “*”: the improvements are sig- nificant at p < 0 . 05 . Same shorthands apply as in Table 3.Data Models RG-1 RG-2 RG-L En-AS X LM 48.15 26.35 45.04 X NLG 48.76 26.82 45.57 Fr-AS X LM 56.27 39. 20 52.84 X NLG 57.84 40.81 54.24 Zh-AS X LM 55.30 42.57 52.95 X NLG 57.65 44.93 54.95
+Table 6: Evaluation results of supervised monolingual sum- marization. Same shorthands apply as in Table 1.question that asks towards the answer with the given pas- sage and the expected answer.  In the following experiments, we extend the QG task to the cross-lingual setting. By only using English QG training data, our goal is to generate ques- tions in English or Chinese with the given passage-answer pair in English or Chinese.We use SQuAD 1.1 (Rajpurkar et al. 2016) as the En- glish QG dataset.  It is a popular English question answering dataset containing over 100,000 questions and their corre- sponding annotated passages. Following (Zhao et al. 2018), we regard the original development set as the test set, and sample 5000 examples from the training data of two datasets as the development sets. For Chinese QG, we follow the de- fault data splits of WebQA (Li et al. 2016).  We regard the provided annotated evidence sentences as the input passages instead of entire documents. To construct the input sequence, we view the whole input passage as a single sentence, and concatenate the passage and the answer into one sequence with a special token [S] between them. During decoding Chinese, we utilize a subset of vocabulary, which is obtained from the passage sentences of the WebQA dataset.English-English Question Generation We first conduct experiments on the supervised English-English QG setting.  We compare our model to the following baselines:
+• C OREF N QG (Du and Cardie 2018) An attentional sequence-to-sequence model with a feature-rich encoder.
+• M P -G SN (Zhao et al.2018) A sequence-to-sequence model with self-attention and maxout pointer mechanism.
+• X LM (Lample and Conneau 2019) State-of-the-art cross-lingual pre-trained Transformer.We initialize the sequence-to-sequence model with pre-trained XLM.We evaluate models with BLEU-4 (BL-4), ROUGE (RG) and METEOR (MTR) metrics. As shown in Table 1, X NLG
+Models RG-1 RG-2 RG-L X LM 14.53 1.80 13.43 P IPELINE (X LM ) 30.58 12.01 27. 44 w/ Google Translator 38.48 18.86 34.98 X NLG 39.98 20.31 36.31
+Table 7: Evaluation results of zero-shot French abstractive summarization. Same shorthands apply as in Table 1.Models RG-1 RG-2 RG-L X LM 0.71 0.28 0.70 P IPELINE (X LM ) 26.39 13. 11 23.98 w/ Google Translator 36.96 22.03 33.99 X NLG 41.66 28.70 38.91
+Table 8: Evaluation results of zero-shot Chinese abstractive summarization. Same shorthands apply as in Table 1.outperforms the baselines, which demonstrates that our pre- trained model provides a good initialization for NLG. Chinese-Chinese Question Generation We conduct ex- periments on zero-shot Chinese-Chinese QG to evaluate the cross-lingual transfer ability. In this task, models are trained with English QG data but evaluated with Chinese QG exam- ples. We include the following models as our baselines:
+• X LM Fine-tuning XLM with the English QG data.
+• P IPELINE (X LM ) The pipeline of translating input Chi- nese sentences into English first,then performing En-En- QG with the XLM model, and finally translating back to the Chinese. We use the Transformer as the translator, which is also trained on the MultiUN dataset.
+• P IPELINE (X LM ) with Google Translator Utilizing Google Translator in P IPELINE (X LM ) for translation.We evaluate models by both automatic evaluation metrics and human experts. The automatic metrics scores are com- puted by regarding each Chinese character as a token. For human evaluation, we consider three metrics: relatedness, fluency, and correctness, which are represented as integers ranged from 1 to 3. We randomly select 100 passage-answer pairs from the English QG test set, and use the models to generate questions. Then we present these examples to three experts to ask for the above scores.  In Table 2 and Table 3, we present the results for the zero-shot Zh-Zh-QG. The re- sults of monolingual supervised models are also reported in Table 1 as reference. In the automatic evaluation, our model consistently performs better than baselines in both zero-shot and monolingual supervised setting. In the human evalu- ation, our model also obtains significant improvements in terms of relatedness and correctness. English-Chinese Question Generation In the zero- shot English-Chinese question generation experiments, we use X LM and P IPELINE (X LM ) as our baselines. P IPELINE (X LM ) is a pipeline method that uses En-En-QG
+Models BL-4 MTR RG-L X LM 0.25 0.62 2.56 X NLG 16.37 18.74 34.93 − XAE 13. 71 15.88 31.43 − DAE 0.38 1.79 3.79
+Table 9: Ablations for pre-training objectives, where models are evaluated on zero-shot Chinese-Chinese question gener- ation. Same shorthands apply as in Table 1.with X LM to generate questions, and then translates the re- sults to Chinese.  Because there are no annotations for En- Zh-QG, we perform human evaluation studies for this set- ting. Table 4 shows the human evaluation results, where our model surpasses all the baselines especially in terms of re- latedness and correctness.Chinese-English Question Generation We also conduct experiments for zero-shot Chinese-English question genera- tion, and adopt the same evaluation procedure to En-Zh-QG.  P IPELINE (X LM ) first translates Chinese input to English, and then conduct En-En-QG with X LM . As shown in Ta- ble 5, human evaluation results indicate that X NLG achieves significant improvements on the three metrics.
+
+================================== Ai Message ==================================
+
+XLM (Lample and Conneau 2019), a state-of-the-art cross-lingual pre-trained Transformer.

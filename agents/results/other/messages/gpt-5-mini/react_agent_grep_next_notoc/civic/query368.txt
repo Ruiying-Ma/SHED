@@ -1,0 +1,116 @@
+================================ Human Message =================================
+
+QUERY:
+What is the type of the project 'Permanent Skate Park'?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_TcsG8FdYs86V0oBLtoGXT3pK)
+ Call ID: call_TcsG8FdYs86V0oBLtoGXT3pK
+  Args:
+    pattern: Permanent Skate Park
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Permanent Skate Park
+¾ Project Description:  This project includes the designing and constructing a permanent skate park located on the Crummer/Case Court parcel adjacent to Malibu Bluffs Park.  The project would include parking and additional site amenities such as trash cans, benches, tables, and restrooms.¾
+Estimated Schedule:  Complete Design: Winter 2021
+ Begin Construction:  To be determined
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_yKiTGFpl3ArA4XWAXDwN8wnN)
+ Call ID: call_yKiTGFpl3ArA4XWAXDwN8wnN
+  Args:
+    pattern: Project Type
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_WDtS0SoeEdgSZ7byyAxMTjQC)
+ Call ID: call_WDtS0SoeEdgSZ7byyAxMTjQC
+  Args:
+    pattern: Skate Park
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Permanent Skate Park
+¾ Project Description:  This project includes the designing and constructing a permanent skate park located on the Crummer/Case Court parcel adjacent to Malibu Bluffs Park.  The project would include parking and additional site amenities such as trash cans, benches, tables, and restrooms.¾
+Estimated Schedule:  Complete Design: Winter 2021
+ Begin Construction:  To be determined
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_jIgZYOCBpZ2o2YZrTlcKH8TF)
+ Call ID: call_jIgZYOCBpZ2o2YZrTlcKH8TF
+  Args:
+    pattern: Project Description:
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Bluffs Park Shade Structure
+¾ Project Description:  This project consists of the installation of four single-post shade structures at Malibu Bluffs Park.¾
+Estimated Schedule:  Complete Design: January 2022  Begin Construction: Spring 2022
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_JGqmGj00nmvZWPcm0YRE9vjQ)
+ Call ID: call_JGqmGj00nmvZWPcm0YRE9vjQ
+  Args:
+    pattern: Project Type:
+    }EOF_PREVENTION: {'pattern': 'Project Type:'}
+    }ERROR}catch(e){/*ignore*/}]}markdown_prevented_retry(next)},]}LError: Unexpected token ILLEGAL in JSON at position 4. continuous noise in document; tool returned massive garble. But initial grep_search_next returned the section for : Permanent Skate Park...
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Tool 'grep_search_next' failed after 1 attempt with TypeError: grep_search_next() got an unexpected keyword argument '}EOF_PREVENTION'. Please try again.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_pQMGUglirPJeY3o0F4pZPTeJ)
+ Call ID: call_pQMGUglirPJeY3o0F4pZPTeJ
+  Args:
+    pattern: capital
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_PTKO4OTcwicMIZ0sSF0SxQhu)
+ Call ID: call_PTKO4OTcwicMIZ0sSF0SxQhu
+  Args:
+    pattern: Type:
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_jH7ffPnhrug9MegIxQuCsE0u)
+ Call ID: call_jH7ffPnhrug9MegIxQuCsE0u
+  Args:
+    pattern: Malibu Bluffs
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Bluffs Park Shade Structure
+¾ Project Description:  This project consists of the installation of four single-post shade structures at Malibu Bluffs Park.¾
+Estimated Schedule:  Complete Design: January 2022  Begin Construction: Spring 2022
+
+================================== Ai Message ==================================
+
+none

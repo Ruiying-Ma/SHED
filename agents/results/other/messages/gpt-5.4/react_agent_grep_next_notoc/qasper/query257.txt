@@ -1,0 +1,50 @@
+================================ Human Message =================================
+
+QUERY:
+what dataset did they use?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_sWiiDt8DyR92G6FzcZUxi363)
+ Call ID: call_sWiiDt8DyR92G6FzcZUxi363
+  Args:
+    pattern: [Dd]ataset|corpus|data set|benchmarks?
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+2. Existing Error Illustration with Example
+Figure 1 shows part of an example document 1 . In this fig- ure, the gold keyphrases are marked with bold, and the keyphrases extracted by the TextRank system are marked with parentheses. We are going to illustrate the errors exist in most of present keyphrase extraction systems using this example. Overgeneration errors occur when a system correctly predicts a candidate as a keyphrase because it contains a word that frequently appears in the associated docu- ment, but at the same time erroneously outputs other candidates as keyphrases because they contain the same word(Hasan and Ng, 2014).  It is not easy to reject a non- keyphrase containing a word with a high term frequency: many unsupervised systems score a candidate by summing the score of each of its component words, and many su- pervised systems use unigrams as features to represent a candidate. To be more concrete, consider the news arti- cle in Figure 1. The word Cattle has a significant presence in the document.  Consequently, the system not only cor- rectly predict British cattle as a keyphrase, but also erro- neously predict cattle industry , cattle feed , and cattle brain as keyphrases, yielding overgeneration errors.1 Document from DUC-2001 Dataset AP900322-0200 Govern- ment Boosts Spending to Combat Cattle Plague 2 Prefix “wiki” represents the namespace “https://en.wikipedia.org/wiki/”
+ Redundancy errors occur when a system correctly iden- tifies a candidate as a keyphrase, but at the same time out- puts a semantically equivalent candidate (e.g., its alias) as a keyphrase. This type of error can be attributed to the failure of a system to determine that two candidates are semanti- cally equivalent.  Nevertheless, some researchers may argue that a system should not be penalized for redundancy errors because the extracted candidates are in fact keyphrases. In our example, bovine spongiform encephalopathy and bse refer to the same concept. If a system predicts both of them as keyphrases, it commits a redundancy error.Infrequency errors occur when a system fails to identify a keyphrase owing to its infrequent presence in the associ- ated document.  Handling infrequency errors is a challenge because state-of-the-art keyphrase extractors rarely predict candidates that appear only once or twice in a document. In the Mad cow disease example, the keyphrase extractor fails to identify export and scrapie as keyphrases, resulting in infrequency errors.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_HM7KprVOBNqXOt3D7rjbKmp2)
+ Call ID: call_HM7KprVOBNqXOt3D7rjbKmp2
+  Args:
+    pattern: DUC|dataset|corpus|experiments|evaluation
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+2. Existing Error Illustration with Example
+Figure 1 shows part of an example document 1 . In this fig- ure, the gold keyphrases are marked with bold, and the keyphrases extracted by the TextRank system are marked with parentheses. We are going to illustrate the errors exist in most of present keyphrase extraction systems using this example. Overgeneration errors occur when a system correctly predicts a candidate as a keyphrase because it contains a word that frequently appears in the associated docu- ment, but at the same time erroneously outputs other candidates as keyphrases because they contain the same word(Hasan and Ng, 2014).  It is not easy to reject a non- keyphrase containing a word with a high term frequency: many unsupervised systems score a candidate by summing the score of each of its component words, and many su- pervised systems use unigrams as features to represent a candidate. To be more concrete, consider the news arti- cle in Figure 1. The word Cattle has a significant presence in the document.  Consequently, the system not only cor- rectly predict British cattle as a keyphrase, but also erro- neously predict cattle industry , cattle feed , and cattle brain as keyphrases, yielding overgeneration errors.1 Document from DUC-2001 Dataset AP900322-0200 Govern- ment Boosts Spending to Combat Cattle Plague 2 Prefix “wiki” represents the namespace “https://en.wikipedia.org/wiki/”
+ Redundancy errors occur when a system correctly iden- tifies a candidate as a keyphrase, but at the same time out- puts a semantically equivalent candidate (e.g., its alias) as a keyphrase. This type of error can be attributed to the failure of a system to determine that two candidates are semanti- cally equivalent.  Nevertheless, some researchers may argue that a system should not be penalized for redundancy errors because the extracted candidates are in fact keyphrases. In our example, bovine spongiform encephalopathy and bse refer to the same concept. If a system predicts both of them as keyphrases, it commits a redundancy error.Infrequency errors occur when a system fails to identify a keyphrase owing to its infrequent presence in the associ- ated document.  Handling infrequency errors is a challenge because state-of-the-art keyphrase extractors rarely predict candidates that appear only once or twice in a document. In the Mad cow disease example, the keyphrase extractor fails to identify export and scrapie as keyphrases, resulting in infrequency errors.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_Sw4cuoeMH1Rdv6sWFtFt3YoA)
+ Call ID: call_Sw4cuoeMH1Rdv6sWFtFt3YoA
+  Args:
+    pattern: DUC-2001|DUC
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+2. Existing Error Illustration with Example
+Figure 1 shows part of an example document 1 . In this fig- ure, the gold keyphrases are marked with bold, and the keyphrases extracted by the TextRank system are marked with parentheses. We are going to illustrate the errors exist in most of present keyphrase extraction systems using this example. Overgeneration errors occur when a system correctly predicts a candidate as a keyphrase because it contains a word that frequently appears in the associated docu- ment, but at the same time erroneously outputs other candidates as keyphrases because they contain the same word(Hasan and Ng, 2014).  It is not easy to reject a non- keyphrase containing a word with a high term frequency: many unsupervised systems score a candidate by summing the score of each of its component words, and many su- pervised systems use unigrams as features to represent a candidate. To be more concrete, consider the news arti- cle in Figure 1. The word Cattle has a significant presence in the document.  Consequently, the system not only cor- rectly predict British cattle as a keyphrase, but also erro- neously predict cattle industry , cattle feed , and cattle brain as keyphrases, yielding overgeneration errors.1 Document from DUC-2001 Dataset AP900322-0200 Govern- ment Boosts Spending to Combat Cattle Plague 2 Prefix “wiki” represents the namespace “https://en.wikipedia.org/wiki/”
+ Redundancy errors occur when a system correctly iden- tifies a candidate as a keyphrase, but at the same time out- puts a semantically equivalent candidate (e.g., its alias) as a keyphrase. This type of error can be attributed to the failure of a system to determine that two candidates are semanti- cally equivalent.  Nevertheless, some researchers may argue that a system should not be penalized for redundancy errors because the extracted candidates are in fact keyphrases. In our example, bovine spongiform encephalopathy and bse refer to the same concept. If a system predicts both of them as keyphrases, it commits a redundancy error.Infrequency errors occur when a system fails to identify a keyphrase owing to its infrequent presence in the associ- ated document.  Handling infrequency errors is a challenge because state-of-the-art keyphrase extractors rarely predict candidates that appear only once or twice in a document. In the Mad cow disease example, the keyphrase extractor fails to identify export and scrapie as keyphrases, resulting in infrequency errors.
+
+================================== Ai Message ==================================
+
+DUC-2001 Dataset.

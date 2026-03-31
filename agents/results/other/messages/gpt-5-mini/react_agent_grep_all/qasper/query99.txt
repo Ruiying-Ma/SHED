@@ -1,0 +1,46 @@
+================================ Human Message =================================
+
+QUERY:
+what context aware models were experimented?
+
+TABLE OF CONTENTS (TOC):
+1 | A Large-Scale Test Set for the Evaluation of Context-Aware Pronoun Translation in Neural Machine Translation Mathias Müller 1 , 2 Annette Rios 1 Elena Voita 3 , 4 Rico Sennrich 1 , 5
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2 Related Work
+1.3.1 | 2.1 Context-Aware NMT Models
+1.3.2 | 2.2 Evaluation of Pronoun Translation
+1.4 | 3 Test set with contrastive examples
+1.4.1 | 3.1 Automatic extraction of contrastive examples from corpora
+1.4.2 | 3.2 Evaluation by scoring
+1.5 | 4 Context-Aware NMT Models
+1.5.1 | 4.1 Recurrent Models
+1.5.2 | 4.2 Transformer Models
+1.6 | 5 Experiments
+1.7 | 6 Evaluation
+1.8 | 7 Conclusions
+1.9 | Acknowledgements
+1.10 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_l9vRKlU88ZJkf5D7vSeGht0O)
+ Call ID: call_l9vRKlU88ZJkf5D7vSeGht0O
+  Args:
+    section_id: 1.5
+
+================================= Tool Message =================================
+Name: read_section
+
+4 Context-Aware NMT Models
+This section describes several context-aware NMT models that we use in our experiments. They fall into two major categories: models based on RNNs and models based on the Transformer architecture ( Vaswani et al. , 2017 ). We experiment with addi- tional context on the source side and target side.
+4.1 Recurrent Models
+We consider the following recurrent baselines:
+baseline Our baseline model is a standard bidi- rectional RNN model with attention, trained with Nematus. It operates on the sentence level and does not see any additional context. The input and output embeddings of the decoder are tied, en- coder embeddings are not.concat22 We concatenate each sentence with one preceding sentence, for both the source and target side of the corpus.  Then we train on this new data set without any changes to the model ar- chitecture. This very simple method is inspired by Tiedemann and Scherrer ( 2017 ).The following models are taken, or slightly adapted, from Bawden et al. ( 2018 ). For this rea- son, we give only a very short description of them here and the reader is referred to their work for details. s-hier A multi-encoder architecture with hier- archical attention. This model has access to one additional context: the previous source sentence. It is read by a separate encoder, and attended to by an additional attention network. The output of the resulting two attention vectors is combined with yet another attention network.s-t-hier Identical to s-hier , except that it consid- ers two additional contexts: the previous source
+sentence and previous target sentence.  Both are read by separate encoders, and sequences from all encoders are combined with hierarchical attention.s-hier-to-2 The model has an additional en- coder for source context, whereas the target side of the corpus is concatenated, in the same way as for concat22 . This model achieved the best results in Bawden et al. ( 2018 ). For each variant, we also introduce and test weight tying: we share the parameters of embed- ding matrices between encoders that read the same kind of text (source or target side).
+4.2 Transformer Models
+All remaining models are based on the Trans- former architecture ( Vaswani et al. , 2017 ). A Transformer avoids recurrence completely: it follows an encoder-decoder architecture using stacked self-attention and fully connected layers for both the encoder and decoder.baseline A standard context-agnostic Trans- former. All model parameters are identical to a Transformer-base in Vaswani et al. ( 2017 ). concat22 A simple concatentation model where only the training data is modified, in the same way as for the recurrent concat22 model.concat21 Trained on data where the preceding sentence is concatenated to the current one only on the source side. This model is also taken from Tiedemann and Scherrer ( 2017 ).Voita et al. ( 2018 ) A more sophisticated context-aware Transformer that uses source context only.  It has a separate encoder for source context, but all layers except the last one are shared between encoders. A source and context sentence are first encoded independently, and then a single attention layer and a gating function are used to produce a context-aware representation of the source sentence. Such restricted interaction with context is shown to be beneficial for analysis of contextual phenomena captured by the model. For details the reader is referred to their work.
+
+================================== Ai Message ==================================
+
+They experimented with recurrent context-aware models: concat22, s-hier, s-t-hier, s-hier-to-2 (with weight-tying variants), and Transformer-based context-aware models: concat22, concat21, and the Voita et al. (2018) source-context Transformer.

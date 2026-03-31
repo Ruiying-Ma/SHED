@@ -1,0 +1,271 @@
+================================ Human Message =================================
+
+QUERY:
+Which works better according to human evaluation, the concurrent or the modular system?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_2Js7MuQCD9nivor5tjxwR8gW)
+ Call ID: call_2Js7MuQCD9nivor5tjxwR8gW
+  Args:
+    pattern: human evaluation|human eval|human-evaluation|human evaluations|according to human|concurrent|modular|modular system|concurrent system
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Texts like news, encyclopedias, and some social media strive for objectivity. Yet bias in the form of inappropriate subjectiv- ity — introducing attitudes via framing, presupposing truth, and casting doubt — remains ubiquitous. This kind of bias erodes our collective trust and fuels social conflict. To address this issue, we introduce a novel testbed for natural language generation: automatically bringing inappropriately subjective text into a neutral point of view (“neutralizing” biased text).  We also offer the first parallel corpus of biased language. The corpus contains 180,000 sentence pairs and originates from Wikipedia edits that removed various framings, presupposi- tions, and attitudes from biased sentences. Last, we propose two strong encoder-decoder baselines for the task. A straight- forward yet opaque CONCURRENT system uses a BERT en- coder to identify subjective words as part of the generation process.  An interpretable and controllable MODULAR algo- rithm separates these steps, using (1) a BERT-based classifier to identify problematic words and (2) a novel join embed- ding through which the classifier can edit the hidden states of the encoder. Large-scale human evaluation across four do- mains (encyclopedias, news headlines, books, and political speeches) suggests that these algorithms are a first step to- wards the automatic identification and reduction of bias.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_DjAKta3iF3jpTEB3OLvomQcv)
+ Call ID: call_DjAKta3iF3jpTEB3OLvomQcv
+  Args:
+    pattern: Concurrent|CONCURRENT|Modular|MODULAR|human evaluation|human eval|human-evaluation|human evaluations|human
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Texts like news, encyclopedias, and some social media strive for objectivity. Yet bias in the form of inappropriate subjectiv- ity — introducing attitudes via framing, presupposing truth, and casting doubt — remains ubiquitous. This kind of bias erodes our collective trust and fuels social conflict. To address this issue, we introduce a novel testbed for natural language generation: automatically bringing inappropriately subjective text into a neutral point of view (“neutralizing” biased text).  We also offer the first parallel corpus of biased language. The corpus contains 180,000 sentence pairs and originates from Wikipedia edits that removed various framings, presupposi- tions, and attitudes from biased sentences. Last, we propose two strong encoder-decoder baselines for the task. A straight- forward yet opaque CONCURRENT system uses a BERT en- coder to identify subjective words as part of the generation process.  An interpretable and controllable MODULAR algo- rithm separates these steps, using (1) a BERT-based classifier to identify problematic words and (2) a novel join embed- ding through which the classifier can edit the hidden states of the encoder. Large-scale human evaluation across four do- mains (encyclopedias, news headlines, books, and political speeches) suggests that these algorithms are a first step to- wards the automatic identification and reduction of bias.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_69wKyrVYS2Eac11aqejB15Rq)
+ Call ID: call_69wKyrVYS2Eac11aqejB15Rq
+  Args:
+    pattern: human evaluation across|Large-scale human evaluation|human evaluation suggests|According to human evaluation|human evaluators|human evaluation results
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Texts like news, encyclopedias, and some social media strive for objectivity. Yet bias in the form of inappropriate subjectiv- ity — introducing attitudes via framing, presupposing truth, and casting doubt — remains ubiquitous. This kind of bias erodes our collective trust and fuels social conflict. To address this issue, we introduce a novel testbed for natural language generation: automatically bringing inappropriately subjective text into a neutral point of view (“neutralizing” biased text).  We also offer the first parallel corpus of biased language. The corpus contains 180,000 sentence pairs and originates from Wikipedia edits that removed various framings, presupposi- tions, and attitudes from biased sentences. Last, we propose two strong encoder-decoder baselines for the task. A straight- forward yet opaque CONCURRENT system uses a BERT en- coder to identify subjective words as part of the generation process.  An interpretable and controllable MODULAR algo- rithm separates these steps, using (1) a BERT-based classifier to identify problematic words and (2) a novel join embed- ding through which the classifier can edit the hidden states of the encoder. Large-scale human evaluation across four do- mains (encyclopedias, news headlines, books, and political speeches) suggests that these algorithms are a first step to- wards the automatic identification and reduction of bias.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_TOYWBtqHfVzyqeDSUeG2eI7k)
+ Call ID: call_TOYWBtqHfVzyqeDSUeG2eI7k
+  Args:
+    pattern: human preference|prefer|better|outperform|wins|win|higher|more|score|human judges|annotators
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1 Introduction
+Writers and editors of texts like encyclopedias, news, and textbooks strive to avoid biased language. Yet bias remains ubiquitous. 62% of Americans believe their news is biased (Gallup 2018) and bias is the single largest source of distrust in the media (Foundation 2018).This work presents data and algorithms for automati- cally reducing bias in text. We focus on a particular kind of bias: inappropriate subjectivity (“subjective bias”).  Subjec- tive bias occurs when language that should be neutral and fair is skewed by feeling, opinion, or taste (whether con- sciously or unconsciously). In practice, we identify subjec- tive bias via the method of Recasens, Danescu-Niculescu- Mizil, and Jurafsky (2013): using Wikipedia’s neutral point
+Figure 1: Example output from our MODULAR algorithm.  “Exposed” is a factive verb that presupposes the truth of its complement (that McCain is unprincipled). Replacing “ex- posed” with “described” neutralizes the headline because it conveys a similar main clause proposition (someone is as- serting McCain is unprincipled), but no longer introduces the authors subjective bias via presupposition.of view (NPOV) policy.  1 This policy is a set of principles which includes “avoiding stating opinions as facts” and “preferring nonjudgemental language”.For example a news headline like “John McCain exposed as an unprincipled politician” (Figure 1) is biased because the verb expose is a factive verb that presupposes the truth of its complement; a non-biased sentence would use a verb like describe so as not to presuppose the subjective opinion of the writer.  “Pilfered” in “the gameplay is pilfered from DDR” (Table 1) subjectively frames the shared gameplay as a kind of theft. “His” in “a lead programmer usually spends his career” again introduces a biased and subjective view- point (that all programmers are men) through presupposi- tion.We aim to debias text by suggesting edits that would make it more neutral.  This contrasts with prior research which has debiased representations of text by removing dimensions of prejudice from word embeddings (Bolukbasi et al. 2016; Gonen and Goldberg 2019; Ethayarajh, Duvenaud, and Hirst 2019) and the hidden states of predictive models (Zhao et al. 2018; Das, Dantcheva, and Bremond 2018).  To avoid over- loading the definition of “debias,” we refer to our kind of text debiasing as neutralizing that text. Figure 1 gives an ex- ample.To appear at the 34th AAAI Conference on Artificial Intellegence (AAAI 2020).1 https://en.wikipedia.org/wiki/Wikipedia:Neutral point of view
+ Source Target Subcategory A new downtown is being developed which A new downtown is being developed which Epistemological will bring back... which its promoters hope will bring back.. The authors’ expos´e on nutrition studies The authors’ statements on nutrition studies Epistemological He started writing books revealing a vast world conspiracy He started writing books alleging a vast world conspiracy Epistemological Go is the deepest game in the world. Go is one of the deepest games in the world.  Framing Most of the gameplay is pilfered from DDR. Most of the gameplay is based on DDR. Framing Jewish forces overcome Arab militants . Jewish forces overcome Arab forces . Framing A lead programmer usually spends Lead programmers often spend Demographic his career mired in obscurity. their careers mired in obscurity. The lyrics are about mankind ’s perceived idea of hell. The lyrics are about humanity ’s perceived idea of hell. Demographic Marriage is a holy union of individuals.  Marriage is a personal union of individuals. Demographic
+Table 1: Samples from our new corpus. 500 sentence pairs are annotated with “subcategory” information (Column 3).We introduce the Wiki Neutrality Corpus (WNC). This is a new parallel corpus of 180,000 biased and neutralized sen- tence pairs along with contextual sentences and metadata. The corpus was harvested from Wikipedia edits that were designed to ensure texts had a neutral point of view.  WNC is the first parallel corpus of biased language.We also define the task of neutralizing subjectively biased text.  This task shares many properties with tasks like de- tecting framing or epistemological bias (Recasens, Danescu- Niculescu-Mizil, and Jurafsky 2013), or veridicality as- sessment/factuality prediction (Saur´ı and Pustejovsky 2009; Marneffe, Manning, and Potts 2012; Rudinger, White, and Van Durme 2018; White et al.  2018). Our new task ex- tends these detection/classification problems into a gener- ation task: generating more neutral text with otherwise sim- ilar meaning.Finally, we propose a pair of novel sequence-to-sequence algorithms for this neutralization task. Both methods lever- age denoising autoencoders and a token-weighted loss func- tion.  An interpretable and controllable MODULAR algorithm breaks the problem into (1) detection and (2) editing, using (1) a BERT-based detector to explicitly identify problematic words, and (2) a novel join embedding through which the detector can modify an editors’ hidden states. This paradigm advances an important human-in-the-loop approach to bias understanding and generative language modeling.  Second, an easy to train and use but more opaque CONCURRENT sys- tem uses a BERT encoder to identify subjectivity as part of the generation process.Large-scale human evaluation suggests that while not without flaws, our algorithms can identify and reduce bias in encyclopedias, news, books, and political speeches, and do so better than state-of-the-art style transfer and machine translation systems. This work represents an important first step towards automatically managing bias in the real world.  We release data and code to the public. 2
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_HS9UPu9gQkRgEMHHALKjdgYs)
+ Call ID: call_HS9UPu9gQkRgEMHHALKjdgYs
+  Args:
+    pattern: human evaluation|human evaluators|preference|which (system|method) (is )?better|concurrent vs modular|modular vs concurrent|human
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Texts like news, encyclopedias, and some social media strive for objectivity. Yet bias in the form of inappropriate subjectiv- ity — introducing attitudes via framing, presupposing truth, and casting doubt — remains ubiquitous. This kind of bias erodes our collective trust and fuels social conflict. To address this issue, we introduce a novel testbed for natural language generation: automatically bringing inappropriately subjective text into a neutral point of view (“neutralizing” biased text).  We also offer the first parallel corpus of biased language. The corpus contains 180,000 sentence pairs and originates from Wikipedia edits that removed various framings, presupposi- tions, and attitudes from biased sentences. Last, we propose two strong encoder-decoder baselines for the task. A straight- forward yet opaque CONCURRENT system uses a BERT en- coder to identify subjective words as part of the generation process.  An interpretable and controllable MODULAR algo- rithm separates these steps, using (1) a BERT-based classifier to identify problematic words and (2) a novel join embed- ding through which the classifier can edit the hidden states of the encoder. Large-scale human evaluation across four do- mains (encyclopedias, news headlines, books, and political speeches) suggests that these algorithms are a first step to- wards the automatic identification and reduction of bias.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_8QrOeco8F4V0uaLGouqrJRm8)
+ Call ID: call_8QrOeco8F4V0uaLGouqrJRm8
+  Args:
+    pattern: Table|Results|Human|Evaluation|preference|better than|preferred|ranking|Table 2|Table 3|human study
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+References
+[Asthana and Halfaker 2018] Asthana, S., and Halfaker,A. 2018. With few eyes, all hoaxes are deep. Proceedings of the ACM on Human-Computer Interaction 2(CSCW):21.
+[Bengio et al. 2007] Bengio, Y.; Lamblin,P.; Popovici, D.; and Larochelle, H. 2007. Greedy layer-wise training of deep networks. In Advances in neural information processing sys- tems , 153–160.
+[Bolukbasi et al. 2016] Bolukbasi, T.;Chang, K.-W.; Zou, J. Y.; Saligrama, V.; and Kalai, A. T. 2016. Man is to com- puter programmer as woman is to homemaker? debiasing word embeddings. In Advances in neural information pro- cessing systems , 4349–4357.
+[Bordia and Bowman 2019] Bordia, S., and Bowman, S., and Bowman, S. R. 2019. Identifying and reducing gender bias in word-level language models. In NAACL 2019 Student Research Work- shop .
+[Bruce and Wiebe 1999] Bruce, R. F.,R. F., and Wiebe, J. M. 1999. Recognizing subjectivity: a case study in manual tag- ging. Natural Language Engineering 5(2):187–205.
+[Callison-Burch 2009] Callison-Burch, C.2009. Fast, cheap, and creative: Evaluating translation quality using amazon’s mechanical turk. In Proceedings of EMNLP , 286–295.
+[Chaganty, Mussman,and Liang 2018] Chaganty, A. T.; Mussman, S.; and Liang, P. 2018. The price of debiasing automatic metrics in natural language evaluation. In Proceedings of ACL .
+[Das, Dantcheva, and Bremond 2018] Das, A.;Dantcheva, A.; and Bremond, F. 2018. Mitigating bias in gender, age and ethnicity classification: a multi-task convolution neural network approach. In Proceedings of the European Confer- ence on Computer Vision (ECCV) , 0–0.
+[Devlin et al. 2019] Devlin, J.; Chang, M.-W.; Lee, K.; and Toutanova, K. 2019. Bert: Pre-training of deep bidirectional transformers for language understanding.
+[Dun, Zhu, and Zhao 2019] Dun, P.; Zhu, L.;Zhu, L.; and Zhao, D. 2019. Extending answer prediction for deep bi-directional transformers. 32nd Conference on Neural Information Pro- cessing Systems (NIPS) .
+[Efron and Tibshirani 1994] Efron, B.,B., and Tibshirani, R. J. 1994. An introduction to the bootstrap . CRC press.
+[Ethayarajh, Duvenaud,and Hirst 2019] Ethayarajh, K.; Du- venaud, D.; and Hirst, G. 2019. Understanding undesirable word embedding associations. Proceedings of the Associa- tion for Computational Linguistics (ACL) .
+[Faruqui et al. 2018] Faruqui, M.; Pavlick,E.; Tenney, I.; and Das, D. 2018. Wikiatomicedits: A multilingual corpus of wikipedia edits for modeling language and discourse. Pro- ceedings of the 2018 Conference on Empirical Methods in Natural Language Processing .
+[Foundation 2018] Foundation, O. S. 2018.Indicators of news media trust. https://kf-site-production.s3.amazonaws. com/media elements/files/000/000/216/original/
+KnightFoundation Panel4 Trust Indicators FINAL.pdf.
+[Gallup 2018] Gallup. 2018. Americans: Much misinformation,bias, inaccuracy in news. https:
+//news.gallup.com/opinion/gallup/235796/ \ americans- misinformation-bias- \ inaccuracy-news.aspx.
+[Gonen and Goldberg 2019] Gonen, H., and Goldberg, Y.2019. Lipstick on a pig: Debiasing methods cover up sys- tematic gender biases in word embeddings but do not re- move them. North American Chapter of the Association for Computational Linguistics (NAACL) .
+[Guu et al. 2018] Guu, K.; Hashimoto,T. B.; Oren, Y.; and Liang, P. 2018. Generating sentences by editing prototypes. Transactions of the Association of Computational Linguis- tics 6:437–450.
+[Gwet 2011] Gwet, K. L. 2011.On the krippendorffs alpha coefficient. Manuscript submitted for publication. Retrieved October 2(2011):2011.
+[Hatzivassiloglou and Wiebe 2000] Hatzivassiloglou,V., and Wiebe, J. M. 2000. Effects of adjective orientation and gradability on sentence subjectivity. In Proceedings of COLING 2000 , 299–305.
+[Hill, Cho, and Korhonen 2016] Hill, F.; Cho,and Korhonen 2016] Hill, F.; Cho, K.; and Ko- rhonen, A. 2016. Learning distributed representa- tions of sentences from unlabelled data. arXiv preprint arXiv:1602.03483 .
+[Hochreiter and Schmidhuber 1997] Hochreiter, S.,S., and Schmidhuber, J. 1997. Long short-term memory. Neural computation 9(8):1735–1780.
+[Hube and Fetahu 2018] Hube, C., and Fetahu,B. 2018. De- tecting biased statements in wikipedia. In The Web Confer- ence , 1779–1786. International World Wide Web Confer- ences Steering Committee.
+[Hube and Fetahu 2019] Hube, C., and Fetahu,B. 2019. Neural based statement classification for biased language. In Proceedings of the Twelfth ACM International Confer- ence on Web Search and Data Mining , 195–203. ACM.
+[Iyyer et al. 2014] Iyyer, M.; Enns,P.; Boyd-Graber, J.; and Resnik, P. 2014. Political ideology detection using recursive neural networks. In Proceedings of ACL , 1113–1122.
+[Junczys-Dowmunt et al.2018] Junczys-Dowmunt, M.; Grundkiewicz, R.; Guha, S.; and Heafield, K. 2018. Approaching neural grammatical error correction as a low-resource machine translation task. In Proceedings of NAACL .
+[Kingma and Ba 2014] Kingma, D. P., and Ba,J. 2014. Adam: A method for stochastic optimization. International Conference for Learning Representations (ICLR) .
+[Koehn 2004] Koehn, P. 2004.Statistical significance tests for machine translation evaluation. In Conference on Empir- ical Methods in Natural Language Processing .
+[Lample et al. 2018] Lample, G.; Ott, M.;Ott, M.; Conneau, A.; De- noyer, L.; and Ranzato, M. 2018. Phrase-based & neural unsupervised machine translation.
+[Leeftink and Spanakis 2019] Leeftink, W.,W., and Spanakis, G. 2019. Towards controlled transformation of sentiment in sentences. International Conference on Agents and Artifi- cial Intelligence (ICAART) .[Li et al. 2018] Li, J.; Jia, R.; He, H.; and Liang, P. 2018.Delete, retrieve, generate: A simple approach to sentiment and style transfer. In Proceedings of NAACL .
+[Luong, Pham, and Manning 2015] Luong, M.-T.; Pham, H.; and Manning, C. D. 2015. Effective approaches to attention-based neural machine translation. In Proceedings of EMNLP .
+[Manzini et al. 2019] Manzini, T.; Lim,Y. C.; Tsvetkov, Y.; and Black, A. W. 2019. Black is to criminal as caucasian is to police: Detecting and removing multiclass bias in word embeddings. In NAACL 2019 .
+[Marneffe, Manning, and Potts 2012] Marneffe,M.-C. d.; Manning, C. D.; and Potts, C. 2012. Did it happen? the pragmatic complexity of veridicality assessment. Computa- tional Linguistics 38(2):301–333.
+[Mihaylova et al. 2018] Mihaylova,T.; Nakov, P.; Marquez, L.; Barron-Cedeno, A.; Mohtarami, M.; Karadzhov, G.; and Glass, J. 2018. Fact checking in community forums. In Thirty-Second AAAI Conference on Artificial Intelligence .
+[Mir et al. 2019] Mir, R.; Felbo, B.;Felbo, B.; Obradovich, N.; and Rahwan, I. 2019. Evaluating style transfer for text. In Pro- ceedings of NAACL .
+[Morstatter et al. 2018] Morstatter, F.; Wu,L.; Yavanoglu, U.; Corman, S. R.; and Liu, H. 2018. Identifying framing bias in online news. ACM Transactions on Social Comput- ing 1(2):5.
+[Papineni et al. 2002] Papineni, K.;Roukos, S.; Ward, T.; and Zhu, W.-J. 2002. Bleu: a method for automatic eval- uation of machine translation. In Proceedings of ACL , 311– 318.
+[Paszke et al. 2017] Paszke, A.; Gross,S.; Chintala, S.; Chanan, G.; Yang, E.; DeVito, Z.; Lin, Z.; Desmaison, A.; Antiga, L.; and Lerer, A. 2017. Automatic differentiation in pytorch.
+[Prabhumoye et al. 2018] Prabhumoye,S.; Tsvetkov, Y.; Salakhutdinov, R.; and Black, A. W. 2018. Style trans- fer through back-translation. Association for Computational Linguistics (ACL) .
+[Pryzant et al. 2017] Pryzant, R.; Chung,Y.; Jurafsky, D.; and Britz, D. 2017. Jesc: Japanese-english subtitle cor- pus. 11th edition of the Language Resources and Evaluation Conference (LREC) .
+[Rashkin et al. 2017] Rashkin, H.; Choi, E.;Choi, E.; Jang, J. Y.; Volkova, S.; and Choi, Y. 2017. Truth of varying shades: An- alyzing language in fake news and political fact-checking. In Proceedings of EMNLP , 2931–2937.
+[Recasens, Danescu-Niculescu-Mizil,and Jurafsky 2013] Recasens, M.; Danescu-Niculescu-Mizil, C.; and Jurafsky, D. 2013. Linguistic models for analyzing and detecting biased language. In Proceedings of ACL , 1650–1659.
+[Rudinger, White, and Van Durme 2018] Rudinger, R.;White, A. S.; and Van Durme, B. 2018. Neural models of factuality. In Proceedings of the 2018 Conference of the North American Chapter of the Association for Computa- tional Linguistics: Human Language Technologies, Volume 1 (Long Papers) , 731–744.
+[Saur´ı and Pustejovsky 2009] Saur´ı,R., and Pustejovsky, J. 2009. Factbank: a corpus annotated with event factuality. Language resources and evaluation 43(3):227.
+[See, Liu, and Manning 2017] See, A.; Liu, P.J.; and Man- ning, C. D. 2017. Get to the point: Summarization with pointer-generator networks. Proceedings of ACL .
+[Sim et al. 2013] Sim, Y.; Acree, B.D.; Gross, J. H.; and Smith, N. A. 2013. Measuring ideological proportions in political speeches. In Proceedings of EMNLP , 91–101.
+[Srivastava et al. 2014] Srivastava, N.;Hinton, G.; Krizhevsky, A.; Sutskever, I.; and Salakhutdinov, R. 2014. Dropout: a simple way to prevent neural networks from overfitting. The Journal of Machine Learning Research 15(1):1929–1958.
+[Tiedemann 2008] Tiedemann, J. 2008.Synchronizing trans- lated movie subtitles. In Language Resources and Evalua- tion Conference (LREC) .
+[Tsur, Calacci, and Lazer 2015] Tsur, O.;Calacci, D.; and Lazer, D. 2015. A frame of mind: Using statistical mod- els for detection of framing and agenda setting campaigns. In Proceedings of ACL , 1629–1638.
+[Vaswani et al. 2017] Vaswani, A.;Shazeer, N.; Parmar, N.; Uszkoreit, J.; Jones, L.; Gomez, A. N.; Kaiser, Ł.; and Polo- sukhin, I. 2017. Attention is all you need. In Advances in Neural Information Processing Systems , 5998–6008.
+[Wang et al. 2018] Wang, T.; Zhao, J.; Chang,K.-W.; Yatskar, M.; and Ordonez, V. 2018. Adversarial removal of gender from deep image representations. arXiv preprint arXiv:1811.08489 ....(truncated)
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_hEAbkIyyE3CdUK33tqFRM6Fu)
+ Call ID: call_hEAbkIyyE3CdUK33tqFRM6Fu
+  Args:
+    pattern: CONCURRENT|concurrent|MODULAR|modular
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Texts like news, encyclopedias, and some social media strive for objectivity. Yet bias in the form of inappropriate subjectiv- ity — introducing attitudes via framing, presupposing truth, and casting doubt — remains ubiquitous. This kind of bias erodes our collective trust and fuels social conflict. To address this issue, we introduce a novel testbed for natural language generation: automatically bringing inappropriately subjective text into a neutral point of view (“neutralizing” biased text).  We also offer the first parallel corpus of biased language. The corpus contains 180,000 sentence pairs and originates from Wikipedia edits that removed various framings, presupposi- tions, and attitudes from biased sentences. Last, we propose two strong encoder-decoder baselines for the task. A straight- forward yet opaque CONCURRENT system uses a BERT en- coder to identify subjective words as part of the generation process.  An interpretable and controllable MODULAR algo- rithm separates these steps, using (1) a BERT-based classifier to identify problematic words and (2) a novel join embed- ding through which the classifier can edit the hidden states of the encoder. Large-scale human evaluation across four do- mains (encyclopedias, news headlines, books, and political speeches) suggests that these algorithms are a first step to- wards the automatic identification and reduction of bias.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_GdbIFEbNhJhWYLPEIZ65B3DW)
+ Call ID: call_GdbIFEbNhJhWYLPEIZ65B3DW
+  Args:
+    pattern: human evaluation|human evaluators|human study|Mechanical Turk|MTurk|annotators|judges|preference|prefer|which (is )?better|concurrent vs modular|modular vs concurrent
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Texts like news, encyclopedias, and some social media strive for objectivity. Yet bias in the form of inappropriate subjectiv- ity — introducing attitudes via framing, presupposing truth, and casting doubt — remains ubiquitous. This kind of bias erodes our collective trust and fuels social conflict. To address this issue, we introduce a novel testbed for natural language generation: automatically bringing inappropriately subjective text into a neutral point of view (“neutralizing” biased text).  We also offer the first parallel corpus of biased language. The corpus contains 180,000 sentence pairs and originates from Wikipedia edits that removed various framings, presupposi- tions, and attitudes from biased sentences. Last, we propose two strong encoder-decoder baselines for the task. A straight- forward yet opaque CONCURRENT system uses a BERT en- coder to identify subjective words as part of the generation process.  An interpretable and controllable MODULAR algo- rithm separates these steps, using (1) a BERT-based classifier to identify problematic words and (2) a novel join embed- ding through which the classifier can edit the hidden states of the encoder. Large-scale human evaluation across four do- mains (encyclopedias, news headlines, books, and political speeches) suggests that these algorithms are a first step to- wards the automatic identification and reduction of bias.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_1HofU8c3lW49FjGOFsCPGJvq)
+ Call ID: call_1HofU8c3lW49FjGOFsCPGJvq
+  Args:
+    pattern: Results|Evaluation|Human evaluation results|human study results|Table|Figure|preference|win rate|pairwise|MODULAR vs CONCURRENT|CONCURRENT vs MODULAR
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+References
+[Asthana and Halfaker 2018] Asthana, S., and Halfaker,A. 2018. With few eyes, all hoaxes are deep. Proceedings of the ACM on Human-Computer Interaction 2(CSCW):21.
+[Bengio et al. 2007] Bengio, Y.; Lamblin,P.; Popovici, D.; and Larochelle, H. 2007. Greedy layer-wise training of deep networks. In Advances in neural information processing sys- tems , 153–160.
+[Bolukbasi et al. 2016] Bolukbasi, T.;Chang, K.-W.; Zou, J. Y.; Saligrama, V.; and Kalai, A. T. 2016. Man is to com- puter programmer as woman is to homemaker? debiasing word embeddings. In Advances in neural information pro- cessing systems , 4349–4357.
+[Bordia and Bowman 2019] Bordia, S., and Bowman, S., and Bowman, S. R. 2019. Identifying and reducing gender bias in word-level language models. In NAACL 2019 Student Research Work- shop .
+[Bruce and Wiebe 1999] Bruce, R. F.,R. F., and Wiebe, J. M. 1999. Recognizing subjectivity: a case study in manual tag- ging. Natural Language Engineering 5(2):187–205.
+[Callison-Burch 2009] Callison-Burch, C.2009. Fast, cheap, and creative: Evaluating translation quality using amazon’s mechanical turk. In Proceedings of EMNLP , 286–295.
+[Chaganty, Mussman,and Liang 2018] Chaganty, A. T.; Mussman, S.; and Liang, P. 2018. The price of debiasing automatic metrics in natural language evaluation. In Proceedings of ACL .
+[Das, Dantcheva, and Bremond 2018] Das, A.;Dantcheva, A.; and Bremond, F. 2018. Mitigating bias in gender, age and ethnicity classification: a multi-task convolution neural network approach. In Proceedings of the European Confer- ence on Computer Vision (ECCV) , 0–0.
+[Devlin et al. 2019] Devlin, J.; Chang, M.-W.; Lee, K.; and Toutanova, K. 2019. Bert: Pre-training of deep bidirectional transformers for language understanding.
+[Dun, Zhu, and Zhao 2019] Dun, P.; Zhu, L.;Zhu, L.; and Zhao, D. 2019. Extending answer prediction for deep bi-directional transformers. 32nd Conference on Neural Information Pro- cessing Systems (NIPS) .
+[Efron and Tibshirani 1994] Efron, B.,B., and Tibshirani, R. J. 1994. An introduction to the bootstrap . CRC press.
+[Ethayarajh, Duvenaud,and Hirst 2019] Ethayarajh, K.; Du- venaud, D.; and Hirst, G. 2019. Understanding undesirable word embedding associations. Proceedings of the Associa- tion for Computational Linguistics (ACL) .
+[Faruqui et al. 2018] Faruqui, M.; Pavlick,E.; Tenney, I.; and Das, D. 2018. Wikiatomicedits: A multilingual corpus of wikipedia edits for modeling language and discourse. Pro- ceedings of the 2018 Conference on Empirical Methods in Natural Language Processing .
+[Foundation 2018] Foundation, O. S. 2018.Indicators of news media trust. https://kf-site-production.s3.amazonaws. com/media elements/files/000/000/216/original/
+KnightFoundation Panel4 Trust Indicators FINAL.pdf.
+[Gallup 2018] Gallup. 2018. Americans: Much misinformation,bias, inaccuracy in news. https:
+//news.gallup.com/opinion/gallup/235796/ \ americans- misinformation-bias- \ inaccuracy-news.aspx.
+[Gonen and Goldberg 2019] Gonen, H., and Goldberg, Y.2019. Lipstick on a pig: Debiasing methods cover up sys- tematic gender biases in word embeddings but do not re- move them. North American Chapter of the Association for Computational Linguistics (NAACL) .
+[Guu et al. 2018] Guu, K.; Hashimoto,T. B.; Oren, Y.; and Liang, P. 2018. Generating sentences by editing prototypes. Transactions of the Association of Computational Linguis- tics 6:437–450.
+[Gwet 2011] Gwet, K. L. 2011.On the krippendorffs alpha coefficient. Manuscript submitted for publication. Retrieved October 2(2011):2011.
+[Hatzivassiloglou and Wiebe 2000] Hatzivassiloglou,V., and Wiebe, J. M. 2000. Effects of adjective orientation and gradability on sentence subjectivity. In Proceedings of COLING 2000 , 299–305.
+[Hill, Cho, and Korhonen 2016] Hill, F.; Cho,and Korhonen 2016] Hill, F.; Cho, K.; and Ko- rhonen, A. 2016. Learning distributed representa- tions of sentences from unlabelled data. arXiv preprint arXiv:1602.03483 .
+[Hochreiter and Schmidhuber 1997] Hochreiter, S.,S., and Schmidhuber, J. 1997. Long short-term memory. Neural computation 9(8):1735–1780.
+[Hube and Fetahu 2018] Hube, C., and Fetahu,B. 2018. De- tecting biased statements in wikipedia. In The Web Confer- ence , 1779–1786. International World Wide Web Confer- ences Steering Committee.
+[Hube and Fetahu 2019] Hube, C., and Fetahu,B. 2019. Neural based statement classification for biased language. In Proceedings of the Twelfth ACM International Confer- ence on Web Search and Data Mining , 195–203. ACM.
+[Iyyer et al. 2014] Iyyer, M.; Enns,P.; Boyd-Graber, J.; and Resnik, P. 2014. Political ideology detection using recursive neural networks. In Proceedings of ACL , 1113–1122.
+[Junczys-Dowmunt et al.2018] Junczys-Dowmunt, M.; Grundkiewicz, R.; Guha, S.; and Heafield, K. 2018. Approaching neural grammatical error correction as a low-resource machine translation task. In Proceedings of NAACL .
+[Kingma and Ba 2014] Kingma, D. P., and Ba,J. 2014. Adam: A method for stochastic optimization. International Conference for Learning Representations (ICLR) .
+[Koehn 2004] Koehn, P. 2004.Statistical significance tests for machine translation evaluation. In Conference on Empir- ical Methods in Natural Language Processing .
+[Lample et al. 2018] Lample, G.; Ott, M.;Ott, M.; Conneau, A.; De- noyer, L.; and Ranzato, M. 2018. Phrase-based & neural unsupervised machine translation.
+[Leeftink and Spanakis 2019] Leeftink, W.,W., and Spanakis, G. 2019. Towards controlled transformation of sentiment in sentences. International Conference on Agents and Artifi- cial Intelligence (ICAART) .[Li et al. 2018] Li, J.; Jia, R.; He, H.; and Liang, P. 2018.Delete, retrieve, generate: A simple approach to sentiment and style transfer. In Proceedings of NAACL .
+[Luong, Pham, and Manning 2015] Luong, M.-T.; Pham, H.; and Manning, C. D. 2015. Effective approaches to attention-based neural machine translation. In Proceedings of EMNLP .
+[Manzini et al. 2019] Manzini, T.; Lim,Y. C.; Tsvetkov, Y.; and Black, A. W. 2019. Black is to criminal as caucasian is to police: Detecting and removing multiclass bias in word embeddings. In NAACL 2019 .
+[Marneffe, Manning, and Potts 2012] Marneffe,M.-C. d.; Manning, C. D.; and Potts, C. 2012. Did it happen? the pragmatic complexity of veridicality assessment. Computa- tional Linguistics 38(2):301–333.
+[Mihaylova et al. 2018] Mihaylova,T.; Nakov, P.; Marquez, L.; Barron-Cedeno, A.; Mohtarami, M.; Karadzhov, G.; and Glass, J. 2018. Fact checking in community forums. In Thirty-Second AAAI Conference on Artificial Intelligence .
+[Mir et al. 2019] Mir, R.; Felbo, B.;Felbo, B.; Obradovich, N.; and Rahwan, I. 2019. Evaluating style transfer for text. In Pro- ceedings of NAACL .
+[Morstatter et al. 2018] Morstatter, F.; Wu,L.; Yavanoglu, U.; Corman, S. R.; and Liu, H. 2018. Identifying framing bias in online news. ACM Transactions on Social Comput- ing 1(2):5.
+[Papineni et al. 2002] Papineni, K.;Roukos, S.; Ward, T.; and Zhu, W.-J. 2002. Bleu: a method for automatic eval- uation of machine translation. In Proceedings of ACL , 311– 318.
+[Paszke et al. 2017] Paszke, A.; Gross,S.; Chintala, S.; Chanan, G.; Yang, E.; DeVito, Z.; Lin, Z.; Desmaison, A.; Antiga, L.; and Lerer, A. 2017. Automatic differentiation in pytorch.
+[Prabhumoye et al. 2018] Prabhumoye,S.; Tsvetkov, Y.; Salakhutdinov, R.; and Black, A. W. 2018. Style trans- fer through back-translation. Association for Computational Linguistics (ACL) .
+[Pryzant et al. 2017] Pryzant, R.; Chung,Y.; Jurafsky, D.; and Britz, D. 2017. Jesc: Japanese-english subtitle cor- pus. 11th edition of the Language Resources and Evaluation Conference (LREC) .
+[Rashkin et al. 2017] Rashkin, H.; Choi, E.;Choi, E.; Jang, J. Y.; Volkova, S.; and Choi, Y. 2017. Truth of varying shades: An- alyzing language in fake news and political fact-checking. In Proceedings of EMNLP , 2931–2937.
+[Recasens, Danescu-Niculescu-Mizil,and Jurafsky 2013] Recasens, M.; Danescu-Niculescu-Mizil, C.; and Jurafsky, D. 2013. Linguistic models for analyzing and detecting biased language. In Proceedings of ACL , 1650–1659.
+[Rudinger, White, and Van Durme 2018] Rudinger, R.;White, A. S.; and Van Durme, B. 2018. Neural models of factuality. In Proceedings of the 2018 Conference of the North American Chapter of the Association for Computa- tional Linguistics: Human Language Technologies, Volume 1 (Long Papers) , 731–744.
+[Saur´ı and Pustejovsky 2009] Saur´ı,R., and Pustejovsky, J. 2009. Factbank: a corpus annotated with event factuality. Language resources and evaluation 43(3):227.
+[See, Liu, and Manning 2017] See, A.; Liu, P.J.; and Man- ning, C. D. 2017. Get to the point: Summarization with pointer-generator networks. Proceedings of ACL .
+[Sim et al. 2013] Sim, Y.; Acree, B.D.; Gross, J. H.; and Smith, N. A. 2013. Measuring ideological proportions in political speeches. In Proceedings of EMNLP , 91–101.
+[Srivastava et al. 2014] Srivastava, N.;Hinton, G.; Krizhevsky, A.; Sutskever, I.; and Salakhutdinov, R. 2014. Dropout: a simple way to prevent neural networks from overfitting. The Journal of Machine Learning Research 15(1):1929–1958.
+[Tiedemann 2008] Tiedemann, J. 2008.Synchronizing trans- lated movie subtitles. In Language Resources and Evalua- tion Conference (LREC) .
+[Tsur, Calacci, and Lazer 2015] Tsur, O.;Calacci, D.; and Lazer, D. 2015. A frame of mind: Using statistical mod- els for detection of framing and agenda setting campaigns. In Proceedings of ACL , 1629–1638.
+[Vaswani et al. 2017] Vaswani, A.;Shazeer, N.; Parmar, N.; Uszkoreit, J.; Jones, L.; Gomez, A. N.; Kaiser, Ł.; and Polo- sukhin, I. 2017. Attention is all you need. In Advances in Neural Information Processing Systems , 5998–6008.
+[Wang et al. 2018] Wang, T.; Zhao, J.; Chang,K.-W.; Yatskar, M.; and Ordonez, V. 2018. Adversarial removal of gender from deep image representations. arXiv preprint arXiv:1811.08489 ....(truncated)
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_vz2sj3ovpQrioKY1CvWMwnXP)
+ Call ID: call_vz2sj3ovpQrioKY1CvWMwnXP
+  Args:
+    pattern: MODULAR .* human|CONCURRENT .* human|MODULAR .* prefer|CONCURRENT .* prefer|MODULAR .* preferred|CONCURRENT .* preferred|MODULAR vs CONCURRENT|CONCURRENT vs MODULAR|modular vs concurrent|concurrent vs modular
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Texts like news, encyclopedias, and some social media strive for objectivity. Yet bias in the form of inappropriate subjectiv- ity — introducing attitudes via framing, presupposing truth, and casting doubt — remains ubiquitous. This kind of bias erodes our collective trust and fuels social conflict. To address this issue, we introduce a novel testbed for natural language generation: automatically bringing inappropriately subjective text into a neutral point of view (“neutralizing” biased text).  We also offer the first parallel corpus of biased language. The corpus contains 180,000 sentence pairs and originates from Wikipedia edits that removed various framings, presupposi- tions, and attitudes from biased sentences. Last, we propose two strong encoder-decoder baselines for the task. A straight- forward yet opaque CONCURRENT system uses a BERT en- coder to identify subjective words as part of the generation process.  An interpretable and controllable MODULAR algo- rithm separates these steps, using (1) a BERT-based classifier to identify problematic words and (2) a novel join embed- ding through which the classifier can edit the hidden states of the encoder. Large-scale human evaluation across four do- mains (encyclopedias, news headlines, books, and political speeches) suggests that these algorithms are a first step to- wards the automatic identification and reduction of bias.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_tnjIWpwoQavkuJDLm5gBd8mn)
+ Call ID: call_tnjIWpwoQavkuJDLm5gBd8mn
+  Args:
+    pattern: better than|outperform|outperforms|wins|preferred|preference|which .* better|more preferred|human evaluat.*(modular|concurrent)
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1 Introduction
+Writers and editors of texts like encyclopedias, news, and textbooks strive to avoid biased language. Yet bias remains ubiquitous. 62% of Americans believe their news is biased (Gallup 2018) and bias is the single largest source of distrust in the media (Foundation 2018).This work presents data and algorithms for automati- cally reducing bias in text. We focus on a particular kind of bias: inappropriate subjectivity (“subjective bias”).  Subjec- tive bias occurs when language that should be neutral and fair is skewed by feeling, opinion, or taste (whether con- sciously or unconsciously). In practice, we identify subjec- tive bias via the method of Recasens, Danescu-Niculescu- Mizil, and Jurafsky (2013): using Wikipedia’s neutral point
+Figure 1: Example output from our MODULAR algorithm.  “Exposed” is a factive verb that presupposes the truth of its complement (that McCain is unprincipled). Replacing “ex- posed” with “described” neutralizes the headline because it conveys a similar main clause proposition (someone is as- serting McCain is unprincipled), but no longer introduces the authors subjective bias via presupposition.of view (NPOV) policy.  1 This policy is a set of principles which includes “avoiding stating opinions as facts” and “preferring nonjudgemental language”.For example a news headline like “John McCain exposed as an unprincipled politician” (Figure 1) is biased because the verb expose is a factive verb that presupposes the truth of its complement; a non-biased sentence would use a verb like describe so as not to presuppose the subjective opinion of the writer.  “Pilfered” in “the gameplay is pilfered from DDR” (Table 1) subjectively frames the shared gameplay as a kind of theft. “His” in “a lead programmer usually spends his career” again introduces a biased and subjective view- point (that all programmers are men) through presupposi- tion.We aim to debias text by suggesting edits that would make it more neutral.  This contrasts with prior research which has debiased representations of text by removing dimensions of prejudice from word embeddings (Bolukbasi et al. 2016; Gonen and Goldberg 2019; Ethayarajh, Duvenaud, and Hirst 2019) and the hidden states of predictive models (Zhao et al. 2018; Das, Dantcheva, and Bremond 2018).  To avoid over- loading the definition of “debias,” we refer to our kind of text debiasing as neutralizing that text. Figure 1 gives an ex- ample.To appear at the 34th AAAI Conference on Artificial Intellegence (AAAI 2020).1 https://en.wikipedia.org/wiki/Wikipedia:Neutral point of view
+ Source Target Subcategory A new downtown is being developed which A new downtown is being developed which Epistemological will bring back... which its promoters hope will bring back.. The authors’ expos´e on nutrition studies The authors’ statements on nutrition studies Epistemological He started writing books revealing a vast world conspiracy He started writing books alleging a vast world conspiracy Epistemological Go is the deepest game in the world. Go is one of the deepest games in the world.  Framing Most of the gameplay is pilfered from DDR. Most of the gameplay is based on DDR. Framing Jewish forces overcome Arab militants . Jewish forces overcome Arab forces . Framing A lead programmer usually spends Lead programmers often spend Demographic his career mired in obscurity. their careers mired in obscurity. The lyrics are about mankind ’s perceived idea of hell. The lyrics are about humanity ’s perceived idea of hell. Demographic Marriage is a holy union of individuals.  Marriage is a personal union of individuals. Demographic
+Table 1: Samples from our new corpus. 500 sentence pairs are annotated with “subcategory” information (Column 3).We introduce the Wiki Neutrality Corpus (WNC). This is a new parallel corpus of 180,000 biased and neutralized sen- tence pairs along with contextual sentences and metadata. The corpus was harvested from Wikipedia edits that were designed to ensure texts had a neutral point of view.  WNC is the first parallel corpus of biased language.We also define the task of neutralizing subjectively biased text.  This task shares many properties with tasks like de- tecting framing or epistemological bias (Recasens, Danescu- Niculescu-Mizil, and Jurafsky 2013), or veridicality as- sessment/factuality prediction (Saur´ı and Pustejovsky 2009; Marneffe, Manning, and Potts 2012; Rudinger, White, and Van Durme 2018; White et al.  2018). Our new task ex- tends these detection/classification problems into a gener- ation task: generating more neutral text with otherwise sim- ilar meaning.Finally, we propose a pair of novel sequence-to-sequence algorithms for this neutralization task. Both methods lever- age denoising autoencoders and a token-weighted loss func- tion.  An interpretable and controllable MODULAR algorithm breaks the problem into (1) detection and (2) editing, using (1) a BERT-based detector to explicitly identify problematic words, and (2) a novel join embedding through which the detector can modify an editors’ hidden states. This paradigm advances an important human-in-the-loop approach to bias understanding and generative language modeling.  Second, an easy to train and use but more opaque CONCURRENT sys- tem uses a BERT encoder to identify subjectivity as part of the generation process.Large-scale human evaluation suggests that while not without flaws, our algorithms can identify and reduce bias in encyclopedias, news, books, and political speeches, and do so better than state-of-the-art style transfer and machine translation systems. This work represents an important first step towards automatically managing bias in the real world.  We release data and code to the public. 2
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_Fyc1aVjWYJF4FpQuRB71uAsp)
+ Call ID: call_Fyc1aVjWYJF4FpQuRB71uAsp
+  Args:
+    pattern: modular better|concurrent better|preferred the MODULAR|preferred the CONCURRENT|prefer MODULAR|prefer CONCURRENT|MODULAR preferred|CONCURRENT preferred
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+
+Unanswerable

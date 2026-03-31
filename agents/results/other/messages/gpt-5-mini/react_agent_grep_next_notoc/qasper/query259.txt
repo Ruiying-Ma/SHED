@@ -1,0 +1,128 @@
+================================ Human Message =================================
+
+QUERY:
+what are the state of the art models?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_Yp8KS6IQbtORk3DPBKt3YJDd)
+ Call ID: call_Yp8KS6IQbtORk3DPBKt3YJDd
+  Args:
+    pattern: state of the art
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+6. Bibliographical References
+Ferragina, P. and Scaiella, U. (2010).Tagme: On-the- fly annotation of short text fragments (by wikipedia en- tities). In Proceedings of the 19th ACM International Conference on Information and Knowledge Manage- ment , CIKM ’10, pages 1625–1628, New York, NY, USA. ACM.
+Hasan, K. S. and Ng, V. (2014).Automatic keyphrase ex- traction: A survey of the state of the art. In Proceedings of the 52nd Annual Meeting of the Association for Com- putational Linguistics (Volume 1: Long Papers) , pages 1262–1273, Baltimore, Maryland, June. Association for Computational Linguistics.
+Hulth, A. (2003).Improved automatic keyword extrac- tion given more linguistic knowledge. In Proceedings of the 2003 Conference on Empirical Methods in Natu- ral Language Processing , EMNLP ’03, pages 216–223, Stroudsburg, PA, USA. Association for Computational Linguistics.
+Liu, Z., Li, P., Zheng, Y., and Sun, M.(2009). Cluster- ing to find exemplar terms for keyphrase extraction. In Proceedings of the 2009 Conference on Empirical Meth- ods in Natural Language Processing: Volume 1 - Volume 1 , EMNLP ’09, pages 257–266, Stroudsburg, PA, USA. Association for Computational Linguistics.
+Liu, Z., Huang, W., Zheng, Y., and Sun, M.(2010). Auto- matic keyphrase extraction via topic decomposition. In Proceedings of the 2010 Conference on Empirical Meth- ods in Natural Language Processing , EMNLP ’10, pages 366–376, Stroudsburg, PA, USA. Association for Com- putational Linguistics.
+Mihalcea, R. and Tarau, P. (2004).Textrank: Bringing or- der into texts. In Proceedings of Empirical Methods for Natural Language Processing , pages 404–411.
+Nguyen, T. D. and Kan, M.-Y. (2007).Keyphrase ex- traction in scientific publications. In Proceedings of the 10th International Conference on Asian Digital Li- braries: Looking Back 10 Years and Forging New Fron- tiers , ICADL’07, pages 317–326, Berlin, Heidelberg. Springer-Verlag.
+Over, P. (2001). Introduction to DUC-2001:An intrinsic evaluation of generic news text summarization systems. In Proceedings of the 2001 Document Understanding Conference .
+Toutanova, K., Klein, D., Manning, C. D., and Singer,Y. (2003). Feature-rich part-of-speech tagging with a cyclic dependency network. In Proceedings of the 2003 Con- ference of the North American Chapter of the Associa- tion for Computational Linguistics on Human Language Technology - Volume 1 , NAACL ’03, pages 173–180, Stroudsburg, PA, USA. Association for Computational Linguistics.
+Wan, X. and Xiao, J. (2008a). Collabrank:Towards a collaborative approach to single-document keyphrase ex- traction. In Proceedings of the 22Nd International Con- ference on Computational Linguistics - Volume 1 , COL-
+ING ’08, pages 969–976, Stroudsburg, PA, USA. Asso- ciation for Computational Linguistics.
+Wan, X. and Xiao, J. (2008b).Single document keyphrase extraction using neighborhood knowledge. In Proceed- ings of the 23rd National Conference on Artificial In- telligence - Volume 2 , AAAI’08, pages 855–860. AAAI Press.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_TidiVrL76n5fGpyN5uzgWpCf)
+ Call ID: call_TidiVrL76n5fGpyN5uzgWpCf
+  Args:
+    pattern: state-of-the-art
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+2. Existing Error Illustration with Example
+Figure 1 shows part of an example document 1 . In this fig- ure, the gold keyphrases are marked with bold, and the keyphrases extracted by the TextRank system are marked with parentheses. We are going to illustrate the errors exist in most of present keyphrase extraction systems using this example. Overgeneration errors occur when a system correctly predicts a candidate as a keyphrase because it contains a word that frequently appears in the associated docu- ment, but at the same time erroneously outputs other candidates as keyphrases because they contain the same word(Hasan and Ng, 2014).  It is not easy to reject a non- keyphrase containing a word with a high term frequency: many unsupervised systems score a candidate by summing the score of each of its component words, and many su- pervised systems use unigrams as features to represent a candidate. To be more concrete, consider the news arti- cle in Figure 1. The word Cattle has a significant presence in the document.  Consequently, the system not only cor- rectly predict British cattle as a keyphrase, but also erro- neously predict cattle industry , cattle feed , and cattle brain as keyphrases, yielding overgeneration errors.1 Document from DUC-2001 Dataset AP900322-0200 Govern- ment Boosts Spending to Combat Cattle Plague 2 Prefix “wiki” represents the namespace “https://en.wikipedia.org/wiki/”
+ Redundancy errors occur when a system correctly iden- tifies a candidate as a keyphrase, but at the same time out- puts a semantically equivalent candidate (e.g., its alias) as a keyphrase. This type of error can be attributed to the failure of a system to determine that two candidates are semanti- cally equivalent.  Nevertheless, some researchers may argue that a system should not be penalized for redundancy errors because the extracted candidates are in fact keyphrases. In our example, bovine spongiform encephalopathy and bse refer to the same concept. If a system predicts both of them as keyphrases, it commits a redundancy error.Infrequency errors occur when a system fails to identify a keyphrase owing to its infrequent presence in the associ- ated document.  Handling infrequency errors is a challenge because state-of-the-art keyphrase extractors rarely predict candidates that appear only once or twice in a document. In the Mad cow disease example, the keyphrase extractor fails to identify export and scrapie as keyphrases, resulting in infrequency errors.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_DhMXHp27671f4cCNFbuSUHlS)
+ Call ID: call_DhMXHp27671f4cCNFbuSUHlS
+  Args:
+    pattern: state of the art models
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_etXI9JXIlSevhsLNXSyiYM0T)
+ Call ID: call_etXI9JXIlSevhsLNXSyiYM0T
+  Args:
+    pattern: TextRank
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+2. Existing Error Illustration with Example
+Figure 1 shows part of an example document 1 . In this fig- ure, the gold keyphrases are marked with bold, and the keyphrases extracted by the TextRank system are marked with parentheses. We are going to illustrate the errors exist in most of present keyphrase extraction systems using this example. Overgeneration errors occur when a system correctly predicts a candidate as a keyphrase because it contains a word that frequently appears in the associated docu- ment, but at the same time erroneously outputs other candidates as keyphrases because they contain the same word(Hasan and Ng, 2014).  It is not easy to reject a non- keyphrase containing a word with a high term frequency: many unsupervised systems score a candidate by summing the score of each of its component words, and many su- pervised systems use unigrams as features to represent a candidate. To be more concrete, consider the news arti- cle in Figure 1. The word Cattle has a significant presence in the document.  Consequently, the system not only cor- rectly predict British cattle as a keyphrase, but also erro- neously predict cattle industry , cattle feed , and cattle brain as keyphrases, yielding overgeneration errors.1 Document from DUC-2001 Dataset AP900322-0200 Govern- ment Boosts Spending to Combat Cattle Plague 2 Prefix “wiki” represents the namespace “https://en.wikipedia.org/wiki/”
+ Redundancy errors occur when a system correctly iden- tifies a candidate as a keyphrase, but at the same time out- puts a semantically equivalent candidate (e.g., its alias) as a keyphrase. This type of error can be attributed to the failure of a system to determine that two candidates are semanti- cally equivalent.  Nevertheless, some researchers may argue that a system should not be penalized for redundancy errors because the extracted candidates are in fact keyphrases. In our example, bovine spongiform encephalopathy and bse refer to the same concept. If a system predicts both of them as keyphrases, it commits a redundancy error.Infrequency errors occur when a system fails to identify a keyphrase owing to its infrequent presence in the associ- ated document.  Handling infrequency errors is a challenge because state-of-the-art keyphrase extractors rarely predict candidates that appear only once or twice in a document. In the Mad cow disease example, the keyphrase extractor fails to identify export and scrapie as keyphrases, resulting in infrequency errors.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_ew1phdIwA1yrPWZM7KKlZ3ZS)
+ Call ID: call_ew1phdIwA1yrPWZM7KKlZ3ZS
+  Args:
+    pattern: models
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Keyphrase is an efficient representation of the main idea of documents. While background knowledge can provide valuable information about documents, they are rarely incorporated in keyphrase extraction methods. In this paper, we propose WikiRank, an unsupervised method for keyphrase extraction based on the background knowledge from Wikipedia. Firstly, we construct a semantic graph for the document. Then we transform the keyphrase extraction problem into an optimization problem on the graph. Finally, we get the optimal keyphrase set to be the output.  Our method obtains improvements over other state-of-art models by more than 2% in F1-score.Keywords: Keyphrase Extraction, Knowledge Graph, Semantic Graph
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_OYobcaNsfKVEFtHiPHxyzemx)
+ Call ID: call_OYobcaNsfKVEFtHiPHxyzemx
+  Args:
+    pattern: Experiments
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+4. Experiments and Results 4.1. Corpora
+The DUC-2001 dataset (Over, 2001), which is a collection of 308 news articles, is annotated by (Wan and Xiao, 2008b). The Inspec dataset is a collection of 2,000 abstracts from journal papers including the paper title.  This is a relatively popular dataset for automatic keyphrase extraction, as it was first used by (Hulth, 2003) and later by Mihalcea and (Mihalcea and Tarau, 2004) and (Liu et al., 2009). The NUS Keyphrase Corpus (Nguyen and Kan, 2007) in- cludes 211 scientific conference papers with lengths be- tween 4 to 12 pages.  Each paper has one or more sets of keyphrases assigned by its authors and other annotators. The number of candidate keyphrases that can be extracted is potentially large, making this corpus the most challeng- ing of the four. Finally, the ICSI Meeting Corpus (Janin et al., 2003), which is annotated by Liu et al. (2009a), includes 161 meet- ing transcriptions.  Unlike the other three datasets, the gold standard keys for the ICSI corpus are mostly unigrams.
+4.2. Result
+For comparing with our system, we reimplemented Sin- gleRank and Topical PageRank. Table 2 shows the result of our reimplementation of SingleRank and Topical PageR- ank, as well as the result of our system. Note that we pre- dict the same number of phrase ( k = 10 ) for each document while testing all three methods.The result shows our result has guaranteed improvement over SingleRank and Topical PageRank on all four corpora.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_ibAlD3EFeYEdBbSy2pmJ6B0R)
+ Call ID: call_ibAlD3EFeYEdBbSy2pmJ6B0R
+  Args:
+    pattern: SingleRank|Topical PageRank|TextRank|Single Rank|TopicalPageRank
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1. Introduction
+As the amount of published material rapidly increases, the problem of managing information becomes more difficult. Keyphrase, as a concise representation of the main idea of the text, facilitates the management, categorization, and retrieval of information. Automatic keyphrase extraction concerns “the automatic selection of important and topical phrases from the body of a document”. Its goal is to extract a set of phrases that are related to the main topics discussed in a given document(Hasan and Ng, 2014). Existing methods of keyphrase extraction could be divided into two categories: supervised and unsupervised. While supervised approaches require human labeling, at the same time needs various kinds of training data to get better generalization performance, more and more researchers focus on unsupervised methods. Traditional methods of unsupervised keyphrase ex- traction mostly focus on getting information of document from word frequency and document structure(Hasan and Ng, 2014), however, after years of attempting, the performance seems very hard to be improved any more. Based on this observation, it is rea- sonable to suspect that the document itself possibly cannot provide enough information for keyphrase extraction task. To get good coverage of the main topics of the document, Topical PageRank (Liu et al., 2010) started to adopt topical information in automatic keyphrase extraction. The main idea of Topical PageRank is to extract the top topics of the document using LDA, then sum over the scores of a candidate phrase under each topic to be the final score. The main problems with Topical PageRank are: First, The topics are too general.  Second, since they are using LDA, they only classify the words to several topics, but don’t know what the topics exactly are. However, the topical information we need for keyphrase extraction should be precise. As shown in Figure 1, the difference between a correct keyphrase sheep disease and an incorrect keyphrase incurable disease could be small, which is hard to be captured by rough topical categorization approach. To overcome the limitations of aforementioned approaches, we propose WikiRank, an unsupervised automatic
+keyphrase extraction approach that links semantic meaning to text The key contribution of this paper could be summarized as follows:
+1.We leverage the topical information in knowledge bases to improve the performance of keyphrase extrac- tion.
+2. We model the keyphrase extraction as an optimization problem,and provide the corresponding solution as well as a pruning approach to reduce the complexity.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_xWjpKZR5DaFe5dMqbzh3YSvF)
+ Call ID: call_xWjpKZR5DaFe5dMqbzh3YSvF
+  Args:
+    pattern: compare|baseline|compared|comparison
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+
+SingleRank and Topical PageRank.

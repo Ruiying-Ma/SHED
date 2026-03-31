@@ -1,0 +1,85 @@
+================================ Human Message =================================
+
+QUERY:
+What is the performance improvement of their method over state-of-the-art models on the used datasets? 
+
+TABLE OF CONTENTS (TOC):
+1 | Mitigating Annotation Artifacts in Natural Language Inference Datasets to Improve Cross-dataset Generalization Ability Guanhua Zhang 1 , 2 ∗ , Bing Bai 1 ∗ , Junqi Zhang 1 , Kun Bai 1 ,Conghui Zhu 2 , Tiejun Zhao 2 1 Cloud and Smart Industries Group, Tencent, China 2 Harbin Institute of Technology, China { guanhzhang,icebai,benjqzhang,kunbai } @tencent.com , { chzhu,tjzhao } @hit-mtlab.net
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2 Related Work
+1.4 | 3 Making Artifacts Unpredictable
+1.5 | 4 Experimental Results
+1.5.1 | 4.1 Evaluation Scheme
+1.5.2 | 4.2 Experiment Setup
+1.5.3 | 4.3 Can Artifacts Generalize Across Datasets?
+1.5.4 | 4.4 Debiasing Results
+1.6 | 5 Conclusion
+1.7 | References
+1.8 | A Detailed Assumptions and Proof of Theorem 1
+1.9 | B Experiment Setting
+1.9.1 | B.1 Hard-Easy Datasets Setting
+1.9.2 | B.2 Experiment Setup
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_SO5X618vPjpjUZmIGTWPOQFK)
+ Call ID: call_SO5X618vPjpjUZmIGTWPOQFK
+  Args:
+    section_id: 1.1
+  read_section (call_npIT5sFR6RXJTQF21jUnLXoU)
+ Call ID: call_npIT5sFR6RXJTQF21jUnLXoU
+  Args:
+    section_id: 1.5.4
+
+================================= Tool Message =================================
+Name: read_section
+
+Abstract
+Natural language inference (NLI) aims at pre- dicting the relationship between a given pair of premise and hypothesis. However, several works have found that there widely exists a bias pattern called annotation artifacts in NLI datasets, making it possible to identify the la- bel only by looking at the hypothesis. This irregularity makes the evaluation results over- estimated and affects models’ generalization ability. In this paper, we consider a more trust- worthy setting, i.e.  , cross-dataset evaluation. We explore the impacts of annotation artifacts in cross-dataset testing. Furthermore, we pro- pose a training framework to mitigate the im- pacts of the bias pattern. Experimental results demonstrate that our methods can alleviate the negative effect of the artifacts and improve the generalization ability of models.
+
+================================= Tool Message =================================
+Name: read_section
+
+4.4 Debiasing Results
+Effectiveness of Debiasing Focusing on the re- sults when smooth equals 0 . 01 for SNLI and smooth equals 0 . 02 for MultiNLI, we observe that the AUC of Hyp for all testing sets are ap- proximately 0 . 5 , indicating Hyp ’s predictions are approximately equivalent to randomly guessing. Also, the gap between Hard and Easy for Norm significantly decreases comparing with the base- line.  With the smooth, we can conclude that our method effectively alleviates the bias pattern.With other smooth terms, our method still has more or less debiasing abilities. In those testing sets which are not neutral to the bias pattern, the AUC of Hyp always come closer to 0 . 5 compar- ing with the baseline with whatever smooth val- ues. Performances of Norm on Hard and Easy also come closer comparing with the baseline.  Norm trained with SNLI even exceed baseline in Hard with most smooth terms.From the results of Hyp , we can find a trend that the larger the smooth value is, the lower the level of debiasing is, while with a very small or even no smooth value, the AUC may be lower than 0 . 5 .  As mentioned before, we owe this to the imperfect estimation of P ( y | h ) , and we can conclude that a proper smooth value is a prerequisite for the best debiasing effect.Benefits of Debiasing Debiasing may improve models’ generalization ability from two aspects:
+(1) Mitigate the misleading effect of annotation artifacts. (2) Improve models’ semantic learning ability. When the annotation artifacts of the training set cannot be generalized to the testing set, which should be more common in the real-world, pre- dicting by artifacts may hurt models’ performance. Centering on the results of JOCI, in which the bias pattern of MultiNLI is misleading, we find that Norm trained with MultiNLI outperforms baseline after debiasing with all smooth values tested. Furthermore, debiasing can reduce models’ de- pendence on the bias pattern during training, thus force models to better learn semantic information to make predictions. Norm trained with SNLI exceed baseline in JOCI with smooth terms 0 . 01 and 0 . 1 . With larger smooth terms, Norm trained with both SNLI and MultiNLI exceeds baseline in SICK.  Given the fact that JOCI is almost neutral to artifacts in SNLI, and the bias pattern of both SNLI and MultiNLI are even predictive in SICK, we owe these promotions to that our method im- proves models’ semantic learning ability.As to other testing sets like SNLI, MMatch and MMismatch , we notice that the performance of Norm always decreases compared with the baseline.  As mentioned before, both SNLI and MultiNLI are prepared by Huamn Elicited , and their artifacts can be generalized across each other. We owe the drop to that the detrimental effect of mitigating the predictable bias pattern exceeds the beneficial effect of the improvement of semantic learning ability.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_all (call_C7YEufxAnsPs880Lq2zE6i3g)
+ Call ID: call_C7YEufxAnsPs880Lq2zE6i3g
+  Args:
+    pattern: state-of-the-art|SOTA|outperform|exceed baseline|improve(?:d|ment)?[^\n]*%|accuracy|AUC|Table
+
+================================= Tool Message =================================
+Name: grep_search_all
+
+1.2 | 1 Introduction
+Natural language inference (NLI) is a widely- studied problem in natural language processing. It aims at comparing a pair of sentences ( i.e. a premise and a hypothesis ), and inferring the relationship between them ( i.e. , entailment , neutral and contradiction ). Large-scaled datasets like SNLI ( Bowman et al. , 2015 ) and MultiNLI ( Williams et al.  , 2018 ) have been cre- ated by crowd-sourcing and fertilized NLI re- search substantially.However, several works ( Gururangan et al. , 2018 ; Tsuchiya , 2018 ; Wang et al. , 2018 ) have pointed out that crowd-sourcing workers have brought a bias pattern named annotation artifacts in these NLI datasets.  Such artifacts in hypotheses can reveal the labels and make it possible to pre- dict the labels solely by looking at the hypotheses. For example, models trained on SNLI with only the hypotheses can achieve an accuracy of 67.0%, despite the always predicting the majority-class baseline is only 34.3% ( Gururangan et al. , 2018 ).Classifiers trained on NLI datasets are supposed to make predictions by understanding the semantic relationships between given sentence pairs.  How- ever, it is shown that models are unintention- ally utilizing the annotation artifacts ( Wang et al. , 2018 ; Gururangan et al. , 2018 ). If the evaluation is conducted under a similar distribution as the train- ing data, e.g. , with the given testing set, models will enjoy additional advantages, making the eval- uation results over-estimated.  On the other hand, if the bias pattern cannot be generalized to the real- world, it may introduce noise to models, thus hurt- ing the generalization ability.In this paper, we use cross-dataset testing to better assess models’ generalization ability. We investigate the impacts of annotation artifacts in cross-dataset testing.  Furthermore, we propose an easy-adopting debiasing training framework, which doesn’t require any additional data or an- notations, and apply it to the high-performing Densely Interactive Inference Network (DIIN; Gong et al. , 2017 ). Experiments show that our method can effectively mitigate the bias pattern and improve the cross-dataset generalization abil- ity of models.  To the best of our knowledge, our work is the first attempt to alleviate the annotation artifacts without any extra resources.
+
+1.3 | 2 Related Work
+Frequently-used NLI datasets such as SNLI and MultiNLI are created by crowd- sourcing ( Bowman et al. , 2015 ; Williams et al. , 2018 ), during which they present workers a premise and ask them to produce three hypotheses corresponding to labels. As Gururangan et al. ( 2018 ) pointed out, workers may adopt some specific annotation strategies and heuristics when authoring hypotheses to save efforts, which produces certain patterns called annota-
+ tion artifacts in the data. Models’ trained on such datasets are heavily affected by the bias pattern ( Gururangan et al. , 2018 ).Wang et al. ( 2018 ) further investigate models’ robustness to the bias pattern using swapping op- erations. Poliak et al. ( 2018 ) demonstrate that the annotation artifacts widely exist among NLI datasets.  They show that hypothesis-only-model, which refers to models trained and predict only with hypotheses, outperforms always predicting the majority-class in six of ten NLI datasets.The emergence of the pattern can be due to selection bias ( Rosenbaum and Rubin , 1983 ; Zadrozny , 2004 ; d’Agostino , 1998 ) in the datasets preparing procedure. Several works ( Levy and Dagan , 2016 ; Rudinger et al.  , 2017 ) investigate the bias problem in relation inference datasest. Zhang et al. ( 2019 ) investigate the selection bias embodied in the comparing relationships in six natural language sentence matching datasets and propose a debiasing training and evaluation framework.
+
+1.5.1 | 4.1 Evaluation Scheme
+Cross-dataset Testing We utilize SNLI ( Bowman et al. , 2015 ), MultiNLI ( Williams et al. , 2018 ), JOCI ( Zhang et al. , 2017 ) and SICK ( Marelli et al. , 2014 ) for cross-dataset testing.SNLI and MultiNLI are prepared by Human Elicited , in which workers are given a context and asked to produce hypotheses corresponding to labels.  SICK and JOCI are created by Human Judged , referring that hypotheses and premises are automatically paired while labels are generated by humans ( Poliak et al. , 2018 ). In order to maxi- mumly mitigate the impacts of annotation artifacts during evaluations, we train and validate models respectively on SNLI and MultiNLI and test on both SICK and JOCI. We also report models’ per-
+ Trainset Model Smooth Cross-dataset Testing Hard-Easy Testing Human Elicited Human Judged Hard Easy SNLI MMatch MMismatch SICK JOCI SNLI Hyp 0.000 0.4776 0.4968 0.5013 0.4923 0.5016 0.5190 0.4587 0.001 0.4779 0.4952 0.4924 0.4934 0. 5044 0.5242 0.4568 0.010 0.5318 0.5092 0.5097 0.5036 0.4961 0.5225 0.5375 0.100 0.7749 0.6009 0.6124 0.6060 0.5304 0.5179 0.8811 Baseline 0.8496 0. 6305 0.6399 0.6250 0.5080 0.4793 0.9755 Norm 0.000 76.61% 50.51% 51.50% 52.63% ∗ 44.15% 74.36% ∗ 77.72% 0.001 72.75% 45.05% 46.24% 48.25% 39. 68% 72.95% 72.65% 0.010 78.94% 54.53% 55.97% 52.68% ∗ 46.19% ∗ 75.38% ∗ 80.71% 0.100 83.57% 57.77% 60.37% 53.45% ∗ 47.84% ∗ 76.02% ∗ 87. 32% Baseline 86.98% 61.95% 64.00% 52.07% 45.63% 73.81% 93.52% MultiNLI Hyp 0.000 0.4647 0.4427 0.4429 0.4685 0.4874 0.4957 0.3998 0.001 0.4433 0.4174 0. 4152 0.4583 0.4933 0.4969 0.3534 0.010 0.4560 0.4562 0.4590 0.4723 0.4970 0.4992 0.4201 0.020 0.4741 0.4850 0.4957 0.5003 0.4969 0.5006 0. 4703 0.100 0.5711 0.6482 0.6596 0.5944 0.5208 0.5023 0.7619 Baseline 0.6483 0.7252 0.7253 0.6079 0.4587 0.4998 0.8915 Norm 0.000 52.06% 58.92% 60. 63% 52.99% 48.27% ∗ 56.80% 60.78% 0.001 53.90% 59.48% 60.50% 52.70% 45.67% ∗ 58.19% 60.61% 0.010 58.13% 62.82% 64.35% 54.17% 45.78% ∗ 61. 27% 64.18% 0.020 61.37% 66.68% 68.18% 57.20% ∗ 48.59% ∗ 62.21% 70.60% 0.100 64.16% 71.54% 72.77% 58.35% ∗ 48.81% ∗ 66.14% 76.28% Baseline 68. 49% 76.20% 76.38% 56.74% 41.18% 66.24% 84.92%
+Table 1: Evaluation Results of Hyp and Norm . Baseline refers to the model trained and validated without using weights. Hard , Easy refers to the Hard-Easy Testing generated from the testing set corresponding to the Trainset column. Results of Hyp are the average numbers of five runs with different random initialization.  We report AUC for Hyp and ACC for Norm . “*” indicates where normal-model are better than the baseline.formances on SNLI and MultiNLI.As to SNLI, we use the same partition as Bowman et al. ( 2015 ). For MultiNLI, we sepa- rately use two origin validation sets ( Matched and Mismatched ) as the testing sets for convenience, and refer them as MMatch and MMismatch .  We randomly select 10000 samples out of the origin training set for validation and use the rest for train- ing. As to JOCI, we use the whole “B” subsets for testing, whose premises are from SNLI-train while hypotheses are generated based on world knowl- edge ( Zhang et al. , 2017 ), and convert the score to NLI labels following Poliak et al. ( 2018 ).  As to SICK, we use the whole dataset for testing.Hard-Easy Testing To determine how biased the models are, we partition the testing set of SNLI and MMatch into two subsets: examples that the hypothesis-only model can be correctly classified as Easy and the rest as Hard as seen in Gururangan et al. ( 2018 ). More detailed informa- tion is presented in Appendix B.1 .
+
+1.5.2 | 4.2 Experiment Setup
+We refer models trained only with hypotheses as hypothesis-only-model ( Hyp ), and models that
+utilize both premises and hypotheses as normal- model ( Norm ). We implement a simple LSTM model for Hyp and use DIIN ( Gong et al. , 2017 ) 1 as Norm . We report AUC 2 for Hyp and ACC for Norm . More details can be seen in Appendix B.2
+ We estimate P ( y | h ) for SNLI and MultiNLI re- spectively using BERT ( Devlin et al. , 2018 ) with 10-fold predictions. To investigate the impacts of smooth terms, we choose a series of smooth values and present the results.  Considering models may jiggle during the training phase due to the varied scale of weights, we sample examples with proba- bilities proportional to the weights for every mini- batch instead of adding weights to the loss directly.The evaluation results are reported in Table 1 .
+
+1.5.3 | 4.3 Can Artifacts Generalize Across Datasets?
+Anotation Artifacts can be generalized across Human Elicited datasets. From the AUC of Hyp baseline trained with SNLI, we can see that the bias pattern of SNLI has a strong predictive abil-
+1 https://github.com/YichenGong/Densely-Interactive- Inference-Network
+2 We calculate metrics for each label and report their mean.ity in itself and the other two testing sets of Hu- man Elicited .  The behavior of those trained with MultiNLI is similar.Anotation Artifacts of SNLI and MultiNLI can be generalized to SICK. Unexpectedly, it is shown that Hyp baseline can get 0 . 6250 (AUC) trained with SNLI and 0 . 6079 (AUC) with MultiNLI when tested on SICK, indicating that the bias pattern of SNLI and MultiNLI are predictive on SICK.  The results imply that the bias pattern can even be generalized across datasets prepared by different methods.Annotation Artifacts of SNLI are nearly neu- tral in JOCI, while MultiNLI is misleading. We find that AUC of Hyp baseline trained with SNLI is very close to 0 . 5 on JOCI, indicating that JOCI is nearly neutral to artifacts in SNLI.  However, when it comes to training with MultiNLI, the AUC of Hyp baseline is lower than 0 . 5 , indicating that the artifacts are misleading in JOCI.
+
+1.5.4 | 4.4 Debiasing Results
+Effectiveness of Debiasing Focusing on the re- sults when smooth equals 0 . 01 for SNLI and smooth equals 0 . 02 for MultiNLI, we observe that the AUC of Hyp for all testing sets are ap- proximately 0 . 5 , indicating Hyp ’s predictions are approximately equivalent to randomly guessing. Also, the gap...(truncated)
+
+================================== Ai Message ==================================
+
+Unanswerable

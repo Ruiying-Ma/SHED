@@ -1,0 +1,116 @@
+================================ Human Message =================================
+
+QUERY:
+Did they test the idea that the system reduces the time needed to encode ADR reports on real pharmacologists? 
+
+TABLE OF CONTENTS (TOC):
+1 | From narrative descriptions to MedDRA: automagically encoding adverse drug reactions
+1.1 | Abstract
+1.2 | 1. Introduction
+1.3 | 2. Background and related work
+1.3.1 | 2.1. Natural language processing and text mining in medicine
+1.3.2 | 2.2. MedDRA Dictionary
+1.4 | 3. MagiCoder : an NLP software for ADR automatic encoding
+1.4.1 | 3.1. MagiCoder : overview
+1.4.1.1 | 3.1.1. Definition of ad hoc data structures
+1.4.1.2 | 3.1.2. Preprocessing of the original ADR description
+1.4.1.3 | 3.1.3. Word-by-word linear scan of the description and voting task
+1.4.1.4 | 3.1.4. Weight calculation
+1.4.1.4.1 | Criterion one: Coverage
+1.4.1.4.2 | Criterion two: Type of Coverage
+1.4.1.4.3 | Criterion three: Coverage Distance
+1.4.1.4.4 | Criterion four: Coverage Density
+1.4.1.5 | 3.1.5. Selection, ordering and release of winning terms
+1.4.2 | 3.2. MagiCoder : structure of the algorithm
+1.4.3 | 3.3. MagiCoder complexity analysis
+1.5 | 4. Software implementation: the user interface
+1.6 | 5. Testing MagiCoder performances
+1.6.1 | 5.1. Experiment about MagiCoder performances
+1.6.1.1 | 5.1.1. Experiment: analysis of results
+1.6.2 | 5.2. Examples
+1.7 | 6. Discussion
+1.7.1 | 6.1. Stemming and performance of the NLP software
+1.7.2 | 6.2. Synonyms
+1.7.3 | 6.3. Connectives in the narrative descriptions
+1.7.4 | 6.4. On the selection of voted terms
+1.8 | 7. Conclusions and future work
+1.9 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_buOW7w9ovYveSmd5xwaOEwvF)
+ Call ID: call_buOW7w9ovYveSmd5xwaOEwvF
+  Args:
+    section_id: 1.6
+  read_section (call_GAkKu2ah7DTuQasnHuWmbZWy)
+ Call ID: call_GAkKu2ah7DTuQasnHuWmbZWy
+  Args:
+    section_id: 1.8
+  read_section (call_xWqhb9rxX9jC0J0tFHEjvsE2)
+ Call ID: call_xWqhb9rxX9jC0J0tFHEjvsE2
+  Args:
+    section_id: 1.5
+  read_section (call_sPhdYzgDUAIaEigVX0FfplaI)
+ Call ID: call_sPhdYzgDUAIaEigVX0FfplaI
+  Args:
+    section_id: 1.1
+
+================================= Tool Message =================================
+Name: read_section
+
+5. Testing MagiCoder performances
+In this section we describe the experiments we performed to evaluate Magi- Coder performances. The test exploits a large amount of manually revised re- ports we obtained from VigiSegn [4].18
+Figure 3: A partial screenshot of VigiFarmaco User Interface
+We briefly recall two metrics we used to evaluate MagiCoder : precision and recall . In statistical hypothesis and in particular in binary classification [29], two main kinds of errors are pointed out: false positive errors (FP) and false negative errors (FN). In our setting, these errors can be viewed as follows: a false positive error is the inopportune retrieval of a “wrong” LLT , i.e. , a term which does not correctly encode the textual description; a false negative error is the failure in the recognition of a “good” LLT , i.e., a term which effectively encode (a part of) the narrative description and that would have been selected by a human expert. As dual notions of false positive and false negative, one can define correct results, i.e. , true positive (TP) and true negative (TN): in our case, a true positive is a correctly returned LLT , and a true negative is an LLT which, correctly, has not been recognized as a solution.Following the information retrieval tradition, the standard approach to sys-
+19
+ Precision P = | RelS ∩ RetS | | RetS | = T P T P + F P Recall R = | RelS ∩ RetS | | RelS | = T P T P + F N
+Table 2: Performance and correctness measures
+tem evaluation revolves around the notion of relevant and non-relevant solution (in information retrieval, a solution is represented by a document [29]). We pro- vide here a straightforward definition of relevant solution .  A relevant solution is a MedDRA term which correctly encode the narrative description provided to MagiCoder . A retrieved solution is trivially defined as an output term, indepen- dently from its relevance. We dub the sets of relevant solutions and retrieved solutions as RelS and RetS , respectively. The evaluation of the false positive and the false negative rates, and in particular of the impact of relevant solutions among the whole set of retrieved solutions, are crucial measures in order to estimate the quality of the automatic encoding.The precision (P), also called positive predictive value, is the percentage of retrieved solutions that are relevant. The recall (R), also called sensitivity, is the percentage of all relevant solutions returned by the system.Table 2 summarizes formulas for precision and recall.  We provide formulas both in terms of relevant/retrieved solutions and false positives, true positives and false negatives.It is worth noting that the binary classification of solutions as relevant or non-relevant is referred to as the gold standard judgment of relevance. In our case, the gold standard has to be represented by a human encoding of a nar- rative description, i.e., a set of MedDRA terms choosen by a pharmacovigilance expert.  Such a set is assumed to be definitively correct (only correct solutions are returned) and complete (all correct solutions have been returned).
+5.1. Experiment about MagiCoder performances
+To evaluate MagiCoder performances, we developed a benchmark, which automatically compares MagiCoder behavior with human encoding on already manually revised and validated ADR reports.For this purpose, we exploited VigiSegn , a data warehouse and OLAP system that has been developed for the Italian Pharmacovigilance National Center [4]. This system is based on the open source business intelligence suite Pentaho 7 . VigiSegn offers a large number of encoded ADRs.  The encoding has been manu- ally performed and validated by experts working at pharmacovigilance centres. Encoding results have then been sent to the national regulatory authority, AIFA.We performed a test composed by the following steps.7 http://www.pentaho.com/
+20
+ Class # chars # reports Common PT FN FP R P 1 0-20 chars 459 86% 8% 7% 86% 88% 2 21-40 chars 1012 68% 18% 14% 72% 75% 3 41-100 chars 1993 51% 25% 24% 61% 62% 4 101-255 chars 970 42% 24% 34% 58% 52% 5 > 255 chars 11 33% 32% 35% 46% 45%
+ Table 3: First results of MagiCoder performances
+1. We launch an ETL procedure through Pentaho Data Integration.Reports are transferred from VigiSegn to an ad hoc database TestDB . The dataset covers all the 4445 reports received, revised and validated during the year 2014 for the Italian region Veneto.
+2. The ETL procedure extracts the narrative descriptions from reports stored in TestDB .For each description, the procedure calls MagiCoder from VigiFarmaco ; the output, i.e., a list of MedDRA terms, is stored in a table of TestDB .
+3. Manual and automatic encodings of each report are finally compared through an SQL query.In order to have two uniform data sets, we com- pared only those reports where MagiCoder recognized at most six terms, i.e., the maximum number of terms that human experts are allowed to select through the VigiFarmaco user interface. Moreover, we map each LLT term recognized by both the human experts and MagiCoder to its cor- responding preferred term. Results are discussed below in Section 5.1.1.
+5.1.1. Experiment: analysis of results
+Table 3 shows the results of this first performance test. We group narrative descriptions by increasing length (in terms of characters). We note that reported results are computed considering terms at PT level. By moving to PT level, instead of using the LLT level, we group together terms that represent the same medical concept (i.e., the same adverse reaction).  In this way, we do not consider an error when MagiCoder and the human expert use two different LLT s for representing the same adverse event. The use of the LLT level for reporting purpose and the PT level for analysis purpose is suggested also by MedDRA [6]. With common PT we mean the percentage of preferred terms retrieved by human reviewers that have been recognized also by MagiCoder . Reported performances are summarized also in Figure 4.  Note that, false positive and false negative errors are required to be as small as possible, while common PT , recall, and precision have to be as large as possible.MagiCoder behaves very well on very short descriptions (class 1) and on short ones (class 2). Recall and precision remain greater than 50% up to class 4.  Notice that very long descriptions (class 5), on which performances drastically decrease, represent a negligible percentage of the whole set (less than 0.3%).21
+Figure 4: Graphical representation of MagiCoder performances
+Some remarks are mandatory. It is worth noting that this test simply es- timates how much, for each report, the MagiCoder behavior is similar to the manual work, without considering the effective quality of the manual encoding.  Clearly, as a set of official reports, revised and sent to RNF, we assume to deal with an high-quality encoding: notwithstanding, some errors in the human en- coding possibly occur. Moreover, the query we perform to compare manual and automatic encoding is, obviously, quantitative. For each VigiSegn report, the query is able to detect common retrieved terms and terms returned either by the human expert or by MagiCoder .  It is not able to fairly test redundancy er- rors: human experts make some encoding choices in order to avoid repetitions. Thus, an LLT t returned by MagiCoder that has not been selected by the expert because redundant is not truly a false positive. As a significative counterpart, as previously said, we notice that some reports contain slightly human omis- sions/errors. This suggest the evidence that we are underestimating MagiCoder performances.  See the next section for some simple but significative examples.
+5.2. Examples
+Table 4 provides some examples of the behavior of MagiCoder . We propose some free-text ADR descriptions from TestDB and we provide both the manual and the automatic encodings into LLT terms. We also provide the English trans- lation of the natural language texts (we actually provide a quite straightforward literal translation).22
+ # Narrative Description LLT Human Encoding LLT MagiCoder Encoding D1 Shock anafilattico ( ipotensione + rash cutaneo) 1 h dopo assunzione x os del farmaco Shock anafilattico 1 Ipotensione , Shock anafilattico 1 D2 gonfiore in sede di vac- cinazione sx dal 5/11, febbre meno di 39,5 dal 21/11, vescicole, bolle presso la guancia dal 10/11 Piressia 2 , Vescicole 3 , Gonfiore in sede di vaccinazione 1 Bolle , Febbre 2 , Vescicole 3 , Gonfiore in sede di vaccinazione 1 D3 Reazione locale estesa, dolore locale; cefalea e febbre per due giorni Cefalea 1 , Febbre 2 , Reazione in sede di vaccinazione 3 Cefalea 1 , Dolore , Febbre 2 , Reazione locale 3
+ Table 4: Examples of MagiCoder behavior
+D1:anaphylactic shock (hypotension + cutaneous rash) 1 hour after taking the drug.
+D2: swelling in vaccination location left from 11/5;temperature less than 39,5 from 11/21; vesicles, blisters around the cheek from 11/10.
+D3: extended local reaction, local pain, headache, fever for two days.In Table 4 we use the following notations: t 1 n and t 2 n are two identical LLT s retrieved both by the human and the automatic encoding; t 1 n and t 2 n are two semantically equivalent or similar LLT s (i.e. , LLT s with the same PT ) retrieved by the human and the automatic encoding, respectively; we use bold type to denote terms that have been recognized by MagiCoder but that have not been encoded by the reviewer; we use italic type in D1, D2, D3 to denote text recog- nized only by MagiCoder .  For example, in description D3, “cefalea” (in English, “headache”) is retrieved and encoded both by the human reviewer and Magi- Coder ; in description D2, ADR “febbre” (in English, “fever’) has been encoded with the term itself by the algorithm, whereas the reviewer encoded it with its synonym “piressia”; in D1, ADR “ipotensione” (in English, “h...(truncated)
+
+================================= Tool Message =================================
+Name: read_section
+
+7. Conclusions and future work
+In this paper we proposed MagiCoder , a simple and efficient NLP software, able to provide a concrete support to the pharmacovigilance task, in the revision of ADR spontaneous reports. MagiCoder takes in input a narrative description of a suspected ADR and produces as outcome a list of MedDRA terms that “covers” the medical meaning of the free-text description.  Differently from other BioNLP software proposed in literature, we developed an original text processing proce- dure. Preliminary results about MagiCoder performances are encouraging. Let us sketch here some ongoing and future work.We are addressing the task to include ad hoc knowledges, as the MedDRA - thesaurus described in Section 6.2. We are also proving that MagiCoder is robust with respect to language (and dictionary) changes.  The way the algorithm has been developed suggests that MagiCoder can be a valid tool also for narrative descriptions written in English. Indeed, the algorithm retrieves a set of words, which covers an LLT t , from a free-text description, only slightly considering the order between words or the structure of the sentence. This way, we avoid the problem of “specializing” MagiCoder for any given language.  We plan to test MagiCoder on the English MedDRA and, moreover, we aim to test our procedure on different dictionaries (e.g., ICD-9 classification 12 , WHO-ART 13 , SNOMED CT 14 ). We are collecting several sources of manually annotated corpora, as po- tential testing platforms. Moreover, we plan to address the management of orthographical errors possibly contained in narrative ADR descriptions.  We did not take into account this issue in the current version of MagiCoder . A solution could include an ad hoc (medical term-oriented) spell checker in VigiFarmaco , to point out to the user that she/he is doing some error in writing the cur- rent word in the free description field. This should drastically reduce users’ orthographical errors without heavy side effects in MagiCoder development and performances.  Finally, we aim to apply MagiCoder (and its refinements) to dif- ferent sources for ADR detection, such as drug information leaflets and social media [17, 31].12 http://icd9cm.chrisendres.com/
+13 https://www.umc-products.com
+14 http://www.ihtsdo.org/snomed-ct/what-is-snomed-ct
+27
+
+================================= Tool Message =================================
+Name: read_section
+
+4. Software implementation: the user interface
+MagiCoder has been implemented as a VigiFarmaco plug-in: people respon- sible for pharmacovigilance can consider the results of the auto-encoding of the narrative description and then revise and validate it. Figure 3 shows a screenshot of VigiFarmaco during this task. In the top part of the screen it is possible to observe the five sections composing a report.  The screenshot actually shows the result of a human- MagiCoder interaction: by pressing the button “Autocodifica in MedDRA ” (in English, “ MedDRA auto-encoding”), the responsible for pharma- covigilance obtains a MedDRA encoding corresponding to the natural language ADR in the field “Descrizione” (in English, “Description”).  Up to six solutions are proposed as the best MedDRA term candidates returned by MagiCoder : the responsible can refuse a term (through the trash icon), change one or more terms (by an option menu), or simply validate the automatic encoding and switch to the next section “Farmaci” (in English, “Drugs”).  The maximum number of six terms to be shown has been chosen in order to supply pharmacovigilance experts with a set of terms extended enough to represent the described adverse drug reaction but not so large to be redundant or excessive.We are testing MagiCoder performances in the daily pharmacovigilance ac- tivities.  Preliminary qualitative results show that MagiCoder drastically reduces the amount of work required for the revision of a report, allowing the pharma- covigilance stakeholders to provide high quality data about suspected ADRs.
+
+================================= Tool Message =================================
+Name: read_section
+
+Abstract
+Context The collection of narrative spontaneous reports is an irreplaceable source for the prompt detection of suspected adverse drug reactions (ADRs): qualified domain experts manually revise a huge amount of narrative descrip- tions and then encode texts according to MedDRA standard terminology. The manual annotation of narrative documents with medical terminology is a subtle and expensive task, since the number of reports is growing up day-by-day.  Objectives Natural Language applications can support the work of people re- sponsible for pharmacovigilance. Our objective is to develop Natural Language Processing (NLP) algorithms and tools oriented to the healthcare domain, in particular to the detection of ADR clinical terminology.  Efficient applications can concretely improve the quality of the experts’ revisions: NLP software can quickly analyze narrative texts and offer a (as much as possible) correct solution (a list of MedDRA terms) that the expert has to revise and validate. Methods MagiCoder , a Natural Language Processing algorithm, is proposed for the automatic encoding of free-text descriptions into MedDRA terms.  MagiCoder procedure is efficient in terms of computational complexity (in particular, it is linear in the size of the narrative input and the terminology). We tested it on a large dataset of about 4500 manually revised reports, by performing an automated comparison between human and MagiCoder revisions.  Results For the current base version of MagiCoder , we measured: on short descriptions, an average recall of 86% and an average precision of 88%; on medium-long descriptions (up to 255 characters), an average recall of 64% and an average precision of 63%. Conclusions From a practical point of view, MagiCoder reduces the time re- quired for encoding ADR reports.  Pharmacologists have simply to review and validate the MedDRA terms proposed by the application, instead of choosing the right terms among the 70K low level terms of MedDRA . Such improvement in the efficiency of pharmacologists’ work has a relevant impact also on the quality of the subsequent data analysis. We developed MagiCoder for the Italian pharma-
+Email addresses: carlo.combi@univr.it (Carlo Combi), margherita. zorzi@univr.it (Margherita Zorzi), gabriele.pozzani@univr.it (Gabriele Pozzani), ugo.moretti@univr.it (Ugo Moretti)
+Preprint submitted to Elsevier
+January 22, 2018
+covigilance language. However, our proposal is based on a general approach, not depending on the considered language nor the term dictionary. Keywords: Natural Language Processing, Healthcare informatics, Pharmacovigilance, Adverse Drug Reactions, Term identification
+
+================================== Ai Message ==================================
+
+No. They report preliminary qualitative results from daily pharmacovigilance activities suggesting MagiCoder reduces the amount of work and state that it reduces the time required for encoding ADR reports, but they do not describe a test on real pharmacologists measuring encoding time.

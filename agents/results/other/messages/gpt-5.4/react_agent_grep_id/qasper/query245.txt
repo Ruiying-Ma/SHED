@@ -1,0 +1,81 @@
+================================ Human Message =================================
+
+QUERY:
+what is the previous work they are comparing to?
+
+TABLE OF CONTENTS (TOC):
+1 | Improved English to Russian Translation by Neural Suffix Prediction Kai Song 1,2 , Yue Zhang 3 , Min Zhang 1 , Weihua Luo 2 1 Soochow University, Suzhou, China
+1.1 | Abstract
+1.2 | Introduction
+1.3 | Related Work
+1.3.1 | Translation Granularity
+1.3.2 | Morphology and MT
+1.4 | Background
+1.4.1 | Russian Morphology and Stemming
+1.4.2 | Neural Machine Translation Baselines
+1.5 | Target-Side Suffix Prediction
+1.5.1 | Training
+1.5.2 | Decoding
+1.6 | Experiments
+1.6.1 | Data
+1.6.2 | Baselines
+1.6.3 | Our System
+1.6.4 | Distributed Training
+1.6.5 | Results and Analysis
+1.7 | Conclusion
+1.8 | Acknowledgments
+1.9 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_Xrzx9I97Q0g8jPr8zJj8dAVk)
+ Call ID: call_Xrzx9I97Q0g8jPr8zJj8dAVk
+  Args:
+    section_id: 1.3
+  read_section (call_E449c9BSwKfBNHpPHdPMWw3w)
+ Call ID: call_E449c9BSwKfBNHpPHdPMWw3w
+  Args:
+    section_id: 1.6.2
+  grep_search_all (call_1PJp0EKuctfcq95ehv4BJ8FX)
+ Call ID: call_1PJp0EKuctfcq95ehv4BJ8FX
+  Args:
+    pattern: previous work|compare|compared|baseline|state-of-the-art|Sennrich|Luong|BPE|character
+
+================================= Tool Message =================================
+Name: read_section
+
+Related Work
+Translation Granularity
+Subword based (Sennrich, Haddow, and Birch 2015b) and character-based (Lee, Cho, and Hofmann, 2016; Luong and Manning, 2016) NMT are the two directions of adjusting translation granularity, which can be helpful to our problem. In Sennrich, Haddow, and Birch (2015b)’s work, com- monly appearing words remain unchanged, while others are segmented into several subword units, which are from
+Copyright c 2018, Association for the Advancement of Artificial Intelligence (www.aaai.org). All rights reserved. Figure 1: Russian word sequence to stem sequence and suffix sequence, “N” is a special tag used in suffix sequence, which means “no suffix” for corresponding stem.Figure 2: Different forms of the word “ball”.a fixed set. Both source and target side sentences can be changed into subword sequences.  More specifically, some rare words are split into and represent as some more fre- quent units, base on a data compression technique, namely Byte Pair Encoding (BPE). The vocabulary built on common words and these frequent subword units can successfully im- prove the coverage of training data. In fact, a fixed size vo- cabulary can cover all the training data as long as the gran- ularity of subword units is small enough.  The main limita- tion of this method is the absence of morphology boundary. Some subword units may not be a word suffix which can rep- resent a morphological meaning, and the subword units are treated in the same way as complete words. Subword units and complete words are predicted during a same sequence generation procedure. This may lead to two problems:
+• The sequence length can increase, especially on a mor- phologically rich language, which can lead to low NMT performance. • A subword unit cannot represent a linguistic unit, and suf- fix is not modeled explicitly.Luong and Manning (2016) proposed a hybrid architec- ture to deal with the OOV words in source side and any generated unknown tag in the target side.  In their system, any OOV words on the source side are encoded at the char- acter level, and if an unknown tag is predicted during de- coding, another LSTM will be used to generate a sequence
+of target-side characters, which will be used as the replace- ment of the target side unknown word for the translation of a source OOV.  However, their model may not work well when the target side is morphologically rich and the source side is not, because their hybrid network on the target side will only be used when an unknown tag is generated, which is always corresponding to a source unknown word. If most of the source side tokens are covered by the source vocabulary, the hybrid network may not have advantage on a morpho- logically rich target side language. In Lee, Cho, and Hofmann (2016)’s work, source side and target side sequence are all character-based, which elimi- nates OOV on the source side, and can generate any target side word theoretically.  Character-based NMT may poten- tially improve the translation accuracy of morphologically rich language on the source side, but the training and de- coding latency increase linearly with the sequence length, which is several times to the original word based NMT. An- other disadvantage of character-based NMT is that charac- ter embedding lost the ability to represent a linguistic unit. Long-distance dependences are more difficult to be modeled in a character-based NMT.  Lee, Cho, and Hofmann (2016) use convolutional and pooling layers on the source side to make the source sequence shorter. However, the target side sequence remains much longer than the original word se- quence, and suffix boundary of the target side is not specif- ically considered in their model.  This work may more help- ful if a morphologically rich language is on the source side, but it is not designed to overcome the problem brought by a morphologically rich target side language.There is another way which can effectively reduce target- side OOV. Both Jean et al. (2014) and Mi, Wang, and Itty- cheriah (2016) use a large target-side vocabulary.  To over- come the problem of GPU memory limitation and increas- ing computational complexity, instead of the original vo- cabulary, a selected subset is actually used both during the training and decoding time. Their model can generate any of the words in the large vocabulary, but data sparsity still remains, the low frequent words in the training data is not
+fully trained.
+Morphology and MT
+Previous work considered morphological information for both SMT and NMT. Koehn and Hoang (2007) proposed an effective way to integrate word-level annotation in SMT, which can be morphological, syntactic, or semantic. Mor- phological information can be utilized not only on source side, but also the target side. Although these annotation can help to improve the translation procedure, data sparsity still exists. Chahuneau et al.  (2013) decompose the process of translating a word into two steps. Firstly a stem is produced, then a feature-rich discriminative model selects an appropri- ate inflection for the stem. Target-side morphological fea- tures and source-side context features are utilized in their inflection prediction model. Tran, Bisazza, and Monz (2015) use distributed represen- tations for words and soft morphological tags in their neural inflection model, which can effectively reduce lexical spar- sity, leading to less morphological ambiguity. This is the first try of modeling inflection through a neural method, in- tegrated in a SMT architecture. For NMT, Sennrich and Haddow (2016) make use of var- ious source side features (such as morphological features, part-of-speech tags, and syntactic dependency labels) to en- hance encoding in NMT. This is the first time morpholog- ical information is leveraged in NMT architecture. Target- side morphology is not considered in their work.  Tamchyna, Marco, and Fraser (2017) predict a sequence of interleav- ing morphological tags and lemmas, followed by a morpho- logical generator. They used a external model to synthesize words given tags and lemmas. Our method is the first to explicitly consider the generation of morphological suffixes within a neural translation model.  Our work is motivated by a line of work that generates morphology during text gen- eration (Toutanova, Suzuki, and Ruopp, 2010; Song et al., 2014; Tran, Bisazza, and Monz, 2015).
+
+================================= Tool Message =================================
+Name: read_section
+
+Baselines
+Our RNN and Transformer baseline systems utilize BPE (Sennrich, Haddow, and Birch 2015b) to transfer the origi- nal word sequence to subword sequence on both the source and the target sides, since the subword method had a stable improvement compared with word based system, especially on morphologically rich languages. Besides, we compared our system with a fully character- based baseline system, which is an implementation of Lee, Cho, and Hofmann (2016)’s work, and is available on github 3 .We limit the source and target vocabularies to the most frequent 30K tokens for both English and Russian. For news domain, about 99.7% tokens are covered by the source side
+vocabulary, about 97. 0% target tokens are covered by the target side vocabulary.
+
+================================= Tool Message =================================
+Name: grep_search_all
+
+1.1
+1.2
+1.3.1
+1.3.2
+1.6.1
+1.6.2
+1.6.3
+1.6.4
+1.6.5
+1.7
+1.9
+
+================================== Ai Message ==================================
+
+They compare mainly to subword-based NMT using BPE from Sennrich, Haddow, and Birch (2015b) and to a fully character-based baseline implementing Lee, Cho, and Hofmann (2016). In related work they also discuss Luong and Manning (2016)’s hybrid character-word model and prior morphology-aware MT work, but the explicit experimental baselines are BPE and the character-based system.

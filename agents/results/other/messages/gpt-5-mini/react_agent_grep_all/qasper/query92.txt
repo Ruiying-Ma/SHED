@@ -1,0 +1,95 @@
+================================ Human Message =================================
+
+QUERY:
+How did they select the 50 languages they test?
+
+TABLE OF CONTENTS (TOC):
+1 | Evaluating the Cross-Lingual Effectiveness of Massively Multilingual Neural Machine Translation
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2 Massively Multilingual Neural Machine Translation Model
+1.3.1 | 2.1 Model Architecture
+1.3.2 | 2.2 Pre-training
+1.3.3 | 2.3 Fine-tuning mNMT Encoder
+1.3.4 | 2.4 Differences with mBERT
+1.4 | 3 Experiments and Results
+1.4.1 | 3.1 XNLI: Cross-lingual NLI
+1.4.2 | 3.2 MLDoc: Document Classification
+1.4.3 | 3.3 Cross-lingual Intent Classification
+1.4.4 | 3.4 POS Tagging
+1.4.5 | 3.5 Named Entity Recognition
+1.5 | 4 Analysis
+1.6 | 5 Related Work
+1.7 | 6 Conclusion and Future Work
+1.8 | References
+1.9 | A Supplementary Material
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_all (call_sSZK06kpqoHVOt86Bmz0pkom)
+ Call ID: call_sSZK06kpqoHVOt86Bmz0pkom
+  Args:
+    pattern: 50 languages|50-language|fifty languages|selected the 50|select the 50|50 lang|50-language|50 languages they|choose 50
+
+================================= Tool Message =================================
+Name: grep_search_all
+
+1.1 | Abstract
+The recently proposed massively multilin- gual neural machine translation (NMT) sys- tem has been shown to be capable of trans- lating over 100 languages to and from En- glish within a single model ( Aharoni et al. , 2019 ). Its improved translation performance on low resource languages hints at poten- tial cross-lingual transfer capability for down- stream tasks.  In this paper, we evaluate the cross-lingual effectiveness of representations from the encoder of a massively multilingual NMT model on 5 downstream classification and sequence labeling tasks covering a di- verse set of over 50 languages. We compare against a strong baseline, multilingual BERT (mBERT) ( Devlin et al. , 2018 ), in different cross-lingual transfer learning scenarios and show gains in zero-shot transfer in 4 out of these 5 tasks.
+
+1.2 | 1 Introduction
+English has an abundance of labeled data that can be used for various Natural Language Process- ing (NLP) tasks, such as part-of-speech tagging (POS), named entity recognition (NER), and nat- ural language inference (NLI). This richness of labeled data manifests itself as a boost in accu- racy in the current era of data-hungry deep learn- ing algorithms.  However, the same is not true for many other languages where task specific data is scarce and expensive to acquire. This motivates the need for cross-lingual transfer learning – the ability to leverage the knowledge from task spe- cific data available in one or more languages to solve that task in languages with little or no task- specific data. Recent progress in NMT has enabled one to train multilingual systems that support transla- tion from multiple source languages into multi- ple target languages within a single model ( Firat
+et al. , 2016 ; Johnson et al. , 2017 ; Aharoni et al. , 2019 ). Such multilingual NMT (mNMT) systems often demonstrate large improvements in transla- tion quality on low resource languages.  This posi- tive transfer originates from the model’s ability to learn representations which are transferable across languages. Previous work has shown that these representations can then be used for cross-lingual transfer in other downstream NLP tasks - albeit on only a pair of language pairs ( Eriguchi et al. , 2018 ), or by limiting the decoder to use a pooled vector representation of the entire sentence from the encoder ( Artetxe and Schwenk , 2018 ). In this paper we scale up the number of trans- lation directions used in the NMT model to in- clude 102 languages to and from English. Un- like Artetxe and Schwenk ( 2018 ), we do not apply any restricting operations such as pooling while training mNMT which allows us to obtain token level representations making it possible to transfer them to sequence tagging tasks as well.  We find that mNMT models trained using plain translation losses can out of the box emerge as competitive alternatives to other methods at the forefront of cross-lingual transfer learning ( Devlin et al. , 2018 ; Artetxe and Schwenk , 2018 )
+Our contributions in this paper are threefold:
+• We use representations from a Massively Multilingual Translation Encoder (MMTE) that can handle 103 languages to achieve cross-lingual transfer on 5 classification and sequence tagging tasks spanning more than 50 languages.
+• We compare MMTE to mBERT in differ- ent cross-lingual transfer scenarios including zero-shot,few-shot, fine-tuning, and feature extraction scenarios.
+• We outperform the state-of-the-art on zero-shot cross-lingual POS tagging [Univer- sal Dependencies 2.3 dataset ( Nivre et al. , 2018 )], intent classification ( Schuster et al. , 2018 ), and achieve results comparable to state-of-the-art on document classification [ML-Doc dataset ( Schwenk and Li , 2018 )].The remainder of this paper is organized as fol- lows.  Section 2 describes our MMTE model in de- tail and points out its differences from mBERT. All experimental details, results and analysis are given in Sections 3 and 4 . This is followed by a discus- sion of related work. In Section 6 , we summarize our findings and present directions for future re- search.  We emphasize that the primary motivation of the paper is not to challenge the state-of-the- art but instead to investigate the effectiveness of representations learned from an mNMT model in various transfer-learning settings.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_all (call_B5Vjn1NfpIqkXwOTaaDS71YU)
+ Call ID: call_B5Vjn1NfpIqkXwOTaaDS71YU
+  Args:
+    pattern: select|selected|selection|choose|chosen|50 languages|over 50 languages|languages they|languages selected|test 50|50 test|languages tested|testing 50|the 50
+
+================================= Tool Message =================================
+Name: grep_search_all
+
+1.1 | Abstract
+The recently proposed massively multilin- gual neural machine translation (NMT) sys- tem has been shown to be capable of trans- lating over 100 languages to and from En- glish within a single model ( Aharoni et al. , 2019 ). Its improved translation performance on low resource languages hints at poten- tial cross-lingual transfer capability for down- stream tasks.  In this paper, we evaluate the cross-lingual effectiveness of representations from the encoder of a massively multilingual NMT model on 5 downstream classification and sequence labeling tasks covering a di- verse set of over 50 languages. We compare against a strong baseline, multilingual BERT (mBERT) ( Devlin et al. , 2018 ), in different cross-lingual transfer learning scenarios and show gains in zero-shot transfer in 4 out of these 5 tasks.
+
+1.2 | 1 Introduction
+English has an abundance of labeled data that can be used for various Natural Language Process- ing (NLP) tasks, such as part-of-speech tagging (POS), named entity recognition (NER), and nat- ural language inference (NLI). This richness of labeled data manifests itself as a boost in accu- racy in the current era of data-hungry deep learn- ing algorithms.  However, the same is not true for many other languages where task specific data is scarce and expensive to acquire. This motivates the need for cross-lingual transfer learning – the ability to leverage the knowledge from task spe- cific data available in one or more languages to solve that task in languages with little or no task- specific data. Recent progress in NMT has enabled one to train multilingual systems that support transla- tion from multiple source languages into multi- ple target languages within a single model ( Firat
+et al. , 2016 ; Johnson et al. , 2017 ; Aharoni et al. , 2019 ). Such multilingual NMT (mNMT) systems often demonstrate large improvements in transla- tion quality on low resource languages.  This posi- tive transfer originates from the model’s ability to learn representations which are transferable across languages. Previous work has shown that these representations can then be used for cross-lingual transfer in other downstream NLP tasks - albeit on only a pair of language pairs ( Eriguchi et al. , 2018 ), or by limiting the decoder to use a pooled vector representation of the entire sentence from the encoder ( Artetxe and Schwenk , 2018 ). In this paper we scale up the number of trans- lation directions used in the NMT model to in- clude 102 languages to and from English. Un- like Artetxe and Schwenk ( 2018 ), we do not apply any restricting operations such as pooling while training mNMT which allows us to obtain token level representations making it possible to transfer them to sequence tagging tasks as well.  We find that mNMT models trained using plain translation losses can out of the box emerge as competitive alternatives to other methods at the forefront of cross-lingual transfer learning ( Devlin et al. , 2018 ; Artetxe and Schwenk , 2018 )
+Our contributions in this paper are threefold:
+• We use representations from a Massively Multilingual Translation Encoder (MMTE) that can handle 103 languages to achieve cross-lingual transfer on 5 classification and sequence tagging tasks spanning more than 50 languages.
+• We compare MMTE to mBERT in differ- ent cross-lingual transfer scenarios including zero-shot,few-shot, fine-tuning, and feature extraction scenarios.
+• We outperform the state-of-the-art on zero-shot cross-lingual POS tagging [Univer- sal Dependencies 2.3 dataset ( Nivre et al. , 2018 )], intent classification ( Schuster et al. , 2018 ), and achieve results comparable to state-of-the-art on document classification [ML-Doc dataset ( Schwenk and Li , 2018 )].The remainder of this paper is organized as fol- lows.  Section 2 describes our MMTE model in de- tail and points out its differences from mBERT. All experimental details, results and analysis are given in Sections 3 and 4 . This is followed by a discus- sion of related work. In Section 6 , we summarize our findings and present directions for future re- search.  We emphasize that the primary motivation of the paper is not to challenge the state-of-the- art but instead to investigate the effectiveness of representations learned from an mNMT model in various transfer-learning settings.
+
+1.4.4 | 3.4 POS Tagging
+We use universal dependencies POS tagging data from the Universal Dependency v2.3 ( Nivre et al. , 2018 ; Zeman et al. , 2018 ). Gold segmentation is used for training, tuning and testing. The POS tagging task has 17 labels for all languages. We consider 48 different languages. These languages are chosen based on intersection of languages for which POS labels are available in the universal dependencies dataset and the languages supported by our mNMT model.  The task-specific network consists of a one layer feed-forward neural net- work with 784 units. Since MMTE operates on the subword-level, we only consider the represen- tation of the first subword token of each word. The optimizer used is Adafactor with learning rate schedule (0.1,40k). The evaluation metric used is F1-score, which is same as accuracy in our case since we use gold-segmented data.  Results of both in-language and zero-shot setting are reported in Table 5 .While mBERT outperforms MMTE on in- language training by a small margin of 0.16 points, MMTE beats mBERT by nearly 0.6 points in the zero-shot setting. Similar to results in XNLI, we see MMTE outperform mBERT on low resource languages.  Since mBERT is SOTA for zero-shot cross-lingual transfer on POS tagging task ( Wu and Dredze , 2019 ), we also establish state-of-the- art on this dataset by beating mBERT in this set- ting.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_all (call_wvUqQ8dB75LlnWaNOhBUGRZS)
+ Call ID: call_wvUqQ8dB75LlnWaNOhBUGRZS
+  Args:
+    pattern: chosen based|intersection of languages|intersection|chosen based on intersection|languages are chosen|chosen based on|covering a diverse set|span more than 50 languages|covering|selected based on
+
+================================= Tool Message =================================
+Name: grep_search_all
+
+1.1 | Abstract
+The recently proposed massively multilin- gual neural machine translation (NMT) sys- tem has been shown to be capable of trans- lating over 100 languages to and from En- glish within a single model ( Aharoni et al. , 2019 ). Its improved translation performance on low resource languages hints at poten- tial cross-lingual transfer capability for down- stream tasks.  In this paper, we evaluate the cross-lingual effectiveness of representations from the encoder of a massively multilingual NMT model on 5 downstream classification and sequence labeling tasks covering a di- verse set of over 50 languages. We compare against a strong baseline, multilingual BERT (mBERT) ( Devlin et al. , 2018 ), in different cross-lingual transfer learning scenarios and show gains in zero-shot transfer in 4 out of these 5 tasks.
+
+1.4.2 | 3.2 MLDoc: Document Classification
+MLDoc is a balanced subset of the Reuters cor- pus covering 8 languages for document classi- fication ( Schwenk and Li , 2018 ). This is a 4- way classification task of identifying topics be- tween CCAT (Corporate/Industrial), ECAT (Eco- nomics), GCAT (Government/Social), and MCAT (Markets). Performance is evaluated based on classification accuracy.  We split the document us- ing the sentence-piece model and feed the first 200 tokens into the encoder for classification. The task-specific network and the optimizer used is same as the one used for XNLI. Learning rate schedule is (0.2,5k). We perform both in-language and zero-shot evaluation. The in-language setting has training, development and test sets from the language.  In the zero-shot setting, the train and dev sets contain only English examples but we test on all the languages. The results of both the exper- iments are reported in Table 3 .MMTE performance is on par with mBERT for in-language training on all the languages. It slightly edges over mBERT on zero-shot transfer while lagging behind SOTA by 0.2 points. Inter-
+ In language Zero-shot mBERT* MMTE mBERT* MMTE SOTA † en 94.2 94.7 94.2 94.7 89.9 de 93.3 93.4 80.2 77.4 84.8 zh 89.3 90.0 76.9 73.4 71.9 es 95.7 95.6 72.6 73. 0 77.3 fr 93.4 92.7 72.6 77.2 78.0 it 88.0 87.6 68.9 64.2 69.4 ja 88.4 88.1 56.5 69.0 60.3 ru 87.5 87.4 73.7 68.9 67.8 avg 91.2 91. 2 74.5 74.7 74.9
+Table 3: Accuracies on the test set of the MLDoc dataset. *mBERT numbers have been taken from Wu and Dredze ( 2019 ). mBERT is also the state-of-the-art for in-language training. † For zero-shot SOTA refers to Artetxe and Schwenk ( 2018 ). estingly, MMTE beats SOTA on Japanese by more than 8 points. This may be due to the different na- ture and amount of data used for pre-training by these methods.
+
+1.4.4 | 3.4 POS Tagging
+We use universal dependencies POS tagging data from the Universal Dependency v2.3 ( Nivre et al. , 2018 ; Zeman et al. , 2018 ). Gold segmentation is used for training, tuning and testing. The POS tagging task has 17 labels for all languages. We consider 48 different languages. These languages are chosen based on intersection of languages for which POS labels are available in the universal dependencies dataset and the languages supported by our mNMT model.  The task-specific network consists of a one layer feed-forward neural net- work with 784 units. Since MMTE operates on the subword-level, we only consider the represen- tation of the first subword token of each word. The optimizer used is Adafactor with learning rate schedule (0.1,40k). The evaluation metric used is F1-score, which is same as accuracy in our case since we use gold-segmented data.  Results of both in-language and zero-shot setting are reported in Table 5 .While mBERT outperforms MMTE on in- language training by a small margin of 0.16 points, MMTE beats mBERT by nearly 0.6 points in the zero-shot setting. Similar to results in XNLI, we see MMTE outperform mBERT on low resource languages.  Since mBERT is SOTA for zero-shot cross-lingual transfer on POS tagging task ( Wu and Dredze , 2019 ), we also establish state-of-the- art on this dataset by beating mBERT in this set- ting.
+
+================================== Ai Message ==================================
+
+They selected them based on the intersection of languages for which task labels are available in the evaluation datasets and the languages supported by their mNMT model.

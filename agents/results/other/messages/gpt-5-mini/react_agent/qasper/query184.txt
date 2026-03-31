@@ -1,0 +1,52 @@
+================================ Human Message =================================
+
+QUERY:
+How large is their tweets dataset?
+
+TABLE OF CONTENTS (TOC):
+1 | Integrating Crowdsourcing and Active Learning for Classification of Work-Life Events from Tweets
+1.1 | 1 Introduction
+1.2 | 2 Methods
+1.2.1 | 2.1 Data Collection
+1.2.2 | 2.2 Data Preprocessing
+1.2.3 | 2.3 Classifier Selection
+1.2.4 | 2.4 Pool-based Active Learning
+1.3 | 3 Results
+1.3.1 | 3.1 Data Collection
+1.3.2 | 3.2 RQ1. How does (1) the amount of time that a human worker spends on and (2) the number of workers assigned to each annotation task impact the quality of annotation results?
+1.3.3 | 3.3 RQ2. Which active learning strategy is most efficient and cost-effective to build event classification models using Twitter data?
+1.4 | 4 Discussion
+1.5 | Acknowledgement
+1.6 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_lEujS99aT7tVwwYkfCF2HnXg)
+ Call ID: call_lEujS99aT7tVwwYkfCF2HnXg
+  Args:
+    section_id: 1.2.1
+
+================================= Tool Message =================================
+Name: read_section
+
+2.1 Data Collection
+Our data were collected from two data sources based on a list of job loss-related keywords. The keywords were developed using a snowball sampling process, where we started with an initial list of 8 keywords that indicates a job-loss event (e.g., got fired and lost my job). Using these keywords, we then queried (1) Twit- ters own search engine (i.e., https://twitter.com/search-home? lang=en), and (2) a database of public random tweets that we have collected using the Twitter steaming application programming interface (API) from January 1, 2013 to De- cember 30, 2017, to identify job loss-related tweets. We then manually reviewed a sample of randomly selected tweets to discover new job loss-related keywords. We repeated the search then review process iteratively until no new keywords
+4 Y. Zhao et al.were found.  Through this process, we found 33 keywords from the historical ran- dom tweet database and 57 keywords through Twitter web search. We then (1) not only collected tweets based on the over-all of 68 unique keywords from the historical random tweet database, but also (2) crawled new Twitter data using Twitter search API from December 10, 2018 to December 26, 2018 (17 days).
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_p3RgEwB6KhdwaZKOKeXQlLSe)
+ Call ID: call_p3RgEwB6KhdwaZKOKeXQlLSe
+  Args:
+    section_id: 1.3.1
+
+================================= Tool Message =================================
+Name: read_section
+
+3.1 Data Collection
+Our data came from two different sources as shown in Table 1 . First, we collected 2,803,164 tweets using the Twitter search API [28] from December 10, 2018 to December 26, 2018 base on a list of job loss-related keywords (n = 68). After filtering out duplicates and non-English tweets, 1,952,079 tweets were left.  Second, we used the same list of keywords to identify relevant tweets from a database of historical random public tweets we collected from January 1, 2013 to December 30, 2017. We found 1,733,905 relevant tweets from this database. Due to the different mechanisms behind the two Twitter APIs (i.e., streaming API vs. search API), the volumes of the tweets from the two data sources were significantly different.  For the Twitter search API, users can retrieve most of the public tweets related to the provided keywords within 10 to 14 days before the time of data collection; while the Twitter streaming API returns a random sample (i.e., roughly 1% to 20% varying across the years) of all public tweets at the time and covers a wide range of topics. After integrating the tweets from the two data sources, there were 3,685,984 unique tweets. Table 1: Descriptive statistics of job loss-related tweets from our two data sources.  Data source Year # of tweets # of English tweets Historical random public tweet database 2013 434,624 293,664 2014 468,432 279,876 2015 401,861 228,301 2016 591,948 322,459 2017 1,299,006 609,605 Collected through Twitter search API 2018 2,803,164 1,952,079 Total 5,999,035 3,685,984
+ 6 Y. Zhao et al.
+
+================================== Ai Message ==================================
+
+3,685,984 unique tweets.

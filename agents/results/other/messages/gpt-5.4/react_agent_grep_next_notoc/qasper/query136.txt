@@ -1,0 +1,51 @@
+================================ Human Message =================================
+
+QUERY:
+Do they report the annotation agreement?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_2noJ2KVY26FpnP4AMXYTqGET)
+ Call ID: call_2noJ2KVY26FpnP4AMXYTqGET
+  Args:
+    pattern: agreement|annotat
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Cyberbullying is a pervasive problem in online communi- ties. To identify cyberbullying cases in large-scale social net- works, content moderators depend on machine learning clas- sifiers for automatic cyberbullying detection. However, exist- ing models remain unfit for real-world applications, largely due to a shortage of publicly available training data and a lack of standard criteria for assigning ground truth labels. In this study, we address the need for reliable data using an original annotation framework.  Inspired by social sciences research into bullying behavior, we characterize the nuanced problem of cyberbullying using five explicit factors to represent its social and linguistic aspects. We model this behavior using social network and language-based features, which improve classifier performance. These results demonstrate the impor- tance of representing and modeling cyberbullying as a social phenomenon.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_rrEJbV8zWkAnuqx7ZCXgo0Lq)
+ Call ID: call_rrEJbV8zWkAnuqx7ZCXgo0Lq
+  Args:
+    pattern: agreement|annotat
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Appendix 1: Analysis of the Real-World Class Distribution for Cyberbullying Criteria
+To understand the real-world class distribution for the cy- berbullying criteria, we randomly selected 222 directed En- glish tweets from an unbiased sample of drawn from the
+Twitter Decahose stream across the entire month of Octo- ber 2016. Using the same methodology given in the paper, we had these tweets labeled three times each on Amazon Mechanical Turk. Again, ground truth was determined using 2 out of 3 majority vote.  Upon analysis, we found that the positive class balance was prohibitively small, especially for repetition , harmful intent , visibility among peers , and author power , which were all under 5%.Table 8: Analysis of Unfiltered Decahose Data
+Criterion Positive Balance Inter-annotator Agreement Cyberbullying Correlation aggression 6.3% 0.23 0.68 repetition 0.9% 0.04 0.46 harmful intent 1. 4% 0.31 0.75 visibility among peers 0.17% 0.51 0.11 target power 22.5% 0.23 0.11 author power 3.6% 0.04 0.06 equal power 64.7% 0.15 -0.14 cyberbullying 2.7% 0.25 -
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_uiXxBAPvuwHbM0oNzF5eyl9d)
+ Call ID: call_uiXxBAPvuwHbM0oNzF5eyl9d
+  Args:
+    pattern: Inter-annotator Agreement|Amazon Mechanical Turk|majority vote|labeled three times
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Appendix 1: Analysis of the Real-World Class Distribution for Cyberbullying Criteria
+To understand the real-world class distribution for the cy- berbullying criteria, we randomly selected 222 directed En- glish tweets from an unbiased sample of drawn from the
+Twitter Decahose stream across the entire month of Octo- ber 2016. Using the same methodology given in the paper, we had these tweets labeled three times each on Amazon Mechanical Turk. Again, ground truth was determined using 2 out of 3 majority vote.  Upon analysis, we found that the positive class balance was prohibitively small, especially for repetition , harmful intent , visibility among peers , and author power , which were all under 5%.Table 8: Analysis of Unfiltered Decahose Data
+Criterion Positive Balance Inter-annotator Agreement Cyberbullying Correlation aggression 6.3% 0.23 0.68 repetition 0.9% 0.04 0.46 harmful intent 1. 4% 0.31 0.75 visibility among peers 0.17% 0.51 0.11 target power 22.5% 0.23 0.11 author power 3.6% 0.04 0.06 equal power 64.7% 0.15 -0.14 cyberbullying 2.7% 0.25 -
+
+================================== Ai Message ==================================
+
+Yes. They report inter-annotator agreement in Appendix 1, with values for each criterion (e.g., aggression 0.23, repetition 0.04, harmful intent 0.31, visibility among peers 0.51, target power 0.23, author power 0.04, equal power 0.15, cyberbullying 0.25).

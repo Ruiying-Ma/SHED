@@ -1,0 +1,120 @@
+================================ Human Message =================================
+
+HYPOTHESIS:
+Sharing with employees: Receiving Party may share some Confidential Information with some of Receiving Party's employees.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_VZydNCVJxmqbZkjskSISgsZA)
+ Call ID: call_VZydNCVJxmqbZkjskSISgsZA
+  Args:
+    pattern: employee|employees|representative|Representatives|personnel|need to know|affiliates
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+15.1 encourage or entice or incite or persuade any employee of the other (or any employee of any member of each other's group of companies or any entity in which either is interested) to terminate their employment by the other of them (or any member of its group of companies or any entity in which either is interested); and/or
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_Sq9YsodVjwgQGNOyCZFjErkM)
+ Call ID: call_Sq9YsodVjwgQGNOyCZFjErkM
+  Args:
+    pattern: Receiving Party|recipient|disclos|Confidential Information.*employee|employees.*Confidential Information|need to know
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.2.2 “Confidential Information” means any confidential information,documentation or data of whatever nature relating to a Party or its subsidiaries which may have been or which may be obtained by or disclosed to the other Party during the course of its relationship with such Party, whether in writing, in electronic form or pursuant to discussions, including without limitation:
+ trade secrets, know-how, marketing and advertising strategies, strategic objectives, planning or  ideas, research, business activities, business relationships, products or proposed products, proposals, pricing details, strategies, customer and client details, schematics, software, computer programmes and technology, operating procedures and methodologies, designs, drawings, functional and technical requirements and specifications and any other technical, business, financial or market information or any other information which may reasonably be regarded as being confidential and of a proprietary nature to such Party or any of its subsidiaries or holding companies and;
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_wRdMxtpb2s5J3isV4BB6fD92)
+ Call ID: call_wRdMxtpb2s5J3isV4BB6fD92
+  Args:
+    pattern: disclose|disclosure|use of Confidential Information|third party|employee|employees|adviser|advisor|agent
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.2.2 “Confidential Information” means any confidential information,documentation or data of whatever nature relating to a Party or its subsidiaries which may have been or which may be obtained by or disclosed to the other Party during the course of its relationship with such Party, whether in writing, in electronic form or pursuant to discussions, including without limitation:
+ trade secrets, know-how, marketing and advertising strategies, strategic objectives, planning or  ideas, research, business activities, business relationships, products or proposed products, proposals, pricing details, strategies, customer and client details, schematics, software, computer programmes and technology, operating procedures and methodologies, designs, drawings, functional and technical requirements and specifications and any other technical, business, financial or market information or any other information which may reasonably be regarded as being confidential and of a proprietary nature to such Party or any of its subsidiaries or holding companies and;
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_wW41mpnPN7e3scrQusklu9yp)
+ Call ID: call_wW41mpnPN7e3scrQusklu9yp
+  Args:
+    pattern: shall not disclose|may disclose|permitted to disclose|authorised|authorized|need-to-know|necessary.*employee|employees.*necessary|officers|directors
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+13.1 In the event of any dispute or difference arising between the Parties relating to or arising out of this Agreement, including the implementation, execution, interpretation, rectification,  termination or cancellation of this Agreement, the chief executive officers of the Parties  or any of their designated officials shall upon request by any Party meet to attempt to settle such dispute or difference, and failing settlement within a period of  7 (seven) business days from such a request, the said dispute or difference shall on demand by any Party  be submitted to arbitration in Johannesburg in accordance with the Rules of the Arbitration Foundation of Southern Africa by an arbitrator or arbitrators appointed by the Foundation. 10
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_pAp6MapISiK1LI7UWdxuwW08)
+ Call ID: call_pAp6MapISiK1LI7UWdxuwW08
+  Args:
+    pattern: not disclose|disclose.*Confidential Information|Confidential Information.*disclose|divulge|publish|communicate
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.2.2 “Confidential Information” means any confidential information,documentation or data of whatever nature relating to a Party or its subsidiaries which may have been or which may be obtained by or disclosed to the other Party during the course of its relationship with such Party, whether in writing, in electronic form or pursuant to discussions, including without limitation:
+ trade secrets, know-how, marketing and advertising strategies, strategic objectives, planning or  ideas, research, business activities, business relationships, products or proposed products, proposals, pricing details, strategies, customer and client details, schematics, software, computer programmes and technology, operating procedures and methodologies, designs, drawings, functional and technical requirements and specifications and any other technical, business, financial or market information or any other information which may reasonably be regarded as being confidential and of a proprietary nature to such Party or any of its subsidiaries or holding companies and;
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_R9ANeZxHO8MpAQwggbeukAeN)
+ Call ID: call_R9ANeZxHO8MpAQwggbeukAeN
+  Args:
+    pattern: 4\.|5\.|6\.|7\.|8\.|9\.|10\.|11\.|12\.
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+11.1 it has the legal capacity and has taken all necessary corporate action required to empower and authorise it to enter into and implement this Agreement on the terms and conditions herein set out;
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_zA3i7X83JzYfIxIvMd6Go0d5)
+ Call ID: call_zA3i7X83JzYfIxIvMd6Go0d5
+  Args:
+    pattern: confidentiality|undertak|receiving party|recipient|party shall|keep.*confidential
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+10 CO-OPERATION
+The Parties undertake at all times to co-operate with each other in good faith in order to carry out this Agreement and to  implement all transactions and steps contemplated herein.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_FC5NNIzoZXk7vxpNFIKhKbv6)
+ Call ID: call_FC5NNIzoZXk7vxpNFIKhKbv6
+  Args:
+    pattern: keep confidential|strictly confidential|hold.*confidence|use.*Confidential Information|non-disclosure|secrecy
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+3.3 The Receiving Party agrees that it will,during or after the course of their relationship and/or the term of this Agreement as described in clause 9, keep the Confidential Information in the strictest confidence and will not disclose it to any third party for any reason or purpose whatsoever without the prior written consent of the Disclosing Party, save in accordance with the provisions of this Agreement, and the Parties undertake to each other that their holding and subsidiary companies or agents shall be bound by the provisions of this Agreement.  For avoidance of doubt, in this Agreement “third party” means any party other than Client and AfriGIS and their holding and subsidiary companies or agents.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_D1StEF4fz20uIXxnYazv4ZMv)
+ Call ID: call_D1StEF4fz20uIXxnYazv4ZMv
+  Args:
+    pattern: 3\.[0-9]
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+13.1 In the event of any dispute or difference arising between the Parties relating to or arising out of this Agreement, including the implementation, execution, interpretation, rectification,  termination or cancellation of this Agreement, the chief executive officers of the Parties  or any of their designated officials shall upon request by any Party meet to attempt to settle such dispute or difference, and failing settlement within a period of  7 (seven) business days from such a request, the said dispute or difference shall on demand by any Party  be submitted to arbitration in Johannesburg in accordance with the Rules of the Arbitration Foundation of Southern Africa by an arbitrator or arbitrators appointed by the Foundation. 10
+
+================================== Ai Message ==================================
+
+NotMentioned

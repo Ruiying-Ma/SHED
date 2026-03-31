@@ -1,0 +1,34 @@
+================================ Human Message =================================
+
+QUERY:
+did they experiment with lexicons?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_ENW64WNlztIYg0uQ3dznAq9X)
+ Call ID: call_ENW64WNlztIYg0uQ3dznAq9X
+  Args:
+    pattern: lexicon|lexicons|lexical
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+In this paper we describe a deep learning system that has been designed and built for the WASSA 2017 Emotion Intensity Shared Task. We introduce a representa- tion learning approach based on inner at- tention on top of an RNN. Results show that our model offers good capabilities and is able to successfully identify emotion- bearing words to predict intensity without leveraging on lexicons, obtaining the 13 th place among 22 shared task competitors.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_5rGjfI6J4UcaFBJgfUsZfER7)
+ Call ID: call_5rGjfI6J4UcaFBJgfUsZfER7
+  Args:
+    pattern: without leveraging on lexicons|lexicons
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+In this paper we describe a deep learning system that has been designed and built for the WASSA 2017 Emotion Intensity Shared Task. We introduce a representa- tion learning approach based on inner at- tention on top of an RNN. Results show that our model offers good capabilities and is able to successfully identify emotion- bearing words to predict intensity without leveraging on lexicons, obtaining the 13 th place among 22 shared task competitors.
+
+================================== Ai Message ==================================
+
+No, they did not experiment with lexicons; the paper states their model predicts intensity without leveraging on lexicons.

@@ -1,0 +1,55 @@
+================================ Human Message =================================
+
+QUERY:
+What language are the captions in?
+
+TABLE OF CONTENTS (TOC):
+1 | Look, Read and Enrich Learning from Scientific Figures and their Captions Jose Manuel Gomez-Perez , Raul Ortega Expert System Cogito Labs { jmgomez,rortega } @expertsystem.com
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2 Related work
+1.4 | 3 Figure-Caption Correspondence
+1.4.1 | 3.1 FCC Architecture and Model
+1.4.2 | 3.2 Semantic Embeddings
+1.5 | 4 Results and Discussion
+1.5.1 | 4.1 Datasets
+1.5.2 | 4.2 Figure-Caption Correspondence
+1.5.3 | 4.3 Image-Sentence Matching
+1.5.4 | 4.4 Caption and Figure Classification
+1.5.5 | 4.5 Textbook Question Answering (TQA) for Multi-Modal Machine Comprehension
+1.6 | 5 Qualitative Analysis
+1.7 | 6 Conclusions
+1.8 | Acknowledgments
+1.9 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_all (call_A1VZxhSCjDUd0b19ouMsYrhr)
+ Call ID: call_A1VZxhSCjDUd0b19ouMsYrhr
+  Args:
+    pattern: caption[s]?[^\n]{0,80}(English|language|Spanish|German|French|Chinese|Portuguese)
+
+================================= Tool Message =================================
+Name: grep_search_all
+
+1.6
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_6UgqGk4cY06uQ0JMDXOzCwqp)
+ Call ID: call_6UgqGk4cY06uQ0JMDXOzCwqp
+  Args:
+    section_id: 1.6
+
+================================= Tool Message =================================
+Name: read_section
+
+5 Qualitative Analysis
+We inspect the features learnt by our FCC task to gain a deeper understanding of the syntactic and semantic patterns captured for figure and caption representation. The findings reported herein are qualitatively consistent for all the FCC variations in table 1.Vision features. The analysis was carried out on an un- constrained variety of charts, diagrams and natural images from SciGraph, without filtering by figure type or scientific field.  To obtain a representative sample of what the FCC net- work learns, we focus on the 512-D vector resulting from the last convolutional block before the fusion subnetwork. We pick the features with the most significant activation over the whole dataset and select the figures that activate them most. To this purpose, we prioritize those with higher maximum ac- tivation against the average activation.Model Text Visual Word representation Figure rep.  Inspired by MC text MC diag Random x x n/a n/a Random 22.7 25.0 BiDAF X x ~ w k n/a BiDAF [Seo et al. , 2017] 32.2 30.1 T QA 1 X x ~ w k n/a MemoryNet [Weston et al. , 2014] 32.9 29. 9 T QA 2 X X VGG19 VQA [Antol et al. , 2015] n/a 29.9 T QA 3 X X DPG DSDP-NET [Kembhavi et al. , 2017] n/a 31.3 T QA 4 X X F CC 6 FCC 33.89 34.27 T QA 5 X X F CC 7 33.73 33. 52 T QA 6 X x [ ~ w k + ~l k sem + ~ c k sem ] n/a MemoryNet [Weston et al. , 2014] 35.41 34.57 T QA 7 X X VGG19 VQA [Antol et al. , 2015] 36.26 32.58 T QA 8 X X DPG DSDP-NET [Kembhavi et al.  , 2017] n/a n/a T QA 9 X X F CC 6 FCC 36.56 35.30 T QA 10 X X F CC 7 35.84 33.94
+Table 6: TQA results (% accuracy). FCC vs. random, BiDAF, MemoryNet, VQA and DSDP-NET baselines. Figure 2 shows a selection of 6 visual features with the 4 figures that activate each feature more significantly and their activation heatmaps. Only figures are used as input, no text.  As can be seen, the vision subnetwork has automat- ically learnt, without explicit supervision, to recognize dif- ferent types of diagrams, charts and content, such as (from left to right) whisker plots, western blots (a technique used to identify proteins in a tissue sample), multi-image comparison diagrams, multi-modal data visualization charts (e.g. western plots vs. bar charts), line plots, and text within the figures.  Furthermore, as shown by the heatmaps, our model discrimi- nates the key elements associated to the figures that most ac- tivate each feature: the actual whiskers, the blots, the borders of each image under comparison, the blots and their comple- mentary bar charts, as well as the line plots and the correspon- dence between them and the values in the x and y axes.  Also, see (right-most column) how a feature discriminates text in- serted in the figure, regardless of the remaining elements that may appear and the connections between them. This shows evidence of how the visual features learnt by the FCC task support the parsing of complex scientific diagrams.We also estimated a notion of semantic specificity based on the concepts of a KG.  For each visual feature, we aggre- gated the captions of the figures that most activate it and used Cogito to disambiguate the Sensigrafo concepts that appear in them. Then, we estimated how important each concept is to each feature by calculating its tf-idf. Finally, we averaged the resulting values to obtain a consolidated semantic specificity score per feature.The scores of the features in figure 2 range between 0.42 and 0. 65, which is consistently higher than average (0.4). This seems to indicate a correlation between activation and the semantic specificity of each visual feature. For example, the heatmaps of the figures related to the feature with the low- est tf-idf (left-most column) highlights a particular visual pat- tern, i.e. the whiskers , that may spread over many, possibly unrelated domains.  On the other hand, the feature with the highest score (second column) focuses on a type of diagrams, western blots, almost exclusive of protein and genetic studies. Others, like the feature illustrated by the figures in the fifth column, capture the semantics of a specific type of 2D charts relating two magnitudes x and y . Analyzing their captions
+with Cogito, we see that concepts like e.g. isochronal and ex- ponential functions are mentioned.  If we look at the second and four top-most figures in the column, we can see that such concepts are also visually depicted in the figures, suggesting that the FCC task has learnt to recognize them both from the text and visually.Text features. Similar to the visual case, we selected the features from the last block of the language subnetwork with the highest activation. For visualization purposes, we picked the figures corresponding to the captions in SciGraph that most activate such features (figure 3).  No visual information is used.Several distinct patterns emerge from the text. The text fea- ture in the first column seems to focus on genetics and histo- chemistry, including terms like western blots or immunostain- ing and variations like immunoblot-s/ted/ting . Interestingly, it also seems to have learnt some type of is-a relations (western blot is a type of immunoblot). The second feature focuses on variations of the term radiograph , e.g.  radiograph-y/s . The third feature specializes in text related to curve plots involv- ing several statistic analysis, e.g. Real-time PCR, one-way ANOVA or Gaussian distribution . Sometimes (fourth figure from top) the caption does not mention the plot directly, but focuses on the analysis instead, e.g. ”the data presented here are mean values of duplicate experiments”, indicating transfer of knowledge from the visual part during training.  The fourth feature extracts citations and models named after prominent scientists, e.g. Evans function (first and fourth figure), Man- ley (1992) (second), and Aliev-Panfilov model (third). The fifth feature extracts chromatography terminology, e.g. 3D surface plot, photomicrograph or color map and, finally, the right-most feature focuses on different types of named dia- grams, like flow charts and state diagrams, e.g.  phylogenetic trees .All the captions show a strong semantic correspondence with their associated figures. Figure 4 shows the activation heatmaps for two sample captions, calculated on the em- beddings layer of the language subnetwork. The upper one corresponds to the fourth column left-right and third figure top-down in figure 3. Its caption reads: ”The Aliev-Panfilov model with α = 0 . 01 . . .  The phase portrait depicts trajecto- ries for distinct initial values ϕ 0 and r 0 . . . ”. Below, (first
+Figure 2: Selected visual features and activation heatmaps. The top row labels the dominant pattern for each feature.column, fourth figure in figure 3): ”Relative protein levels of ubiquitin-protein conjugates in M. quadriceps. . . A repre- sentative immunoblot specific to ubiquitin. . . ”.  Consistently with our analysis, activation focuses on the most relevant to- kens for each text feature: ”Aliev-Panfilov model” and ”im- munoblot”, respectively.
+
+================================== Ai Message ==================================
+
+Unanswerable

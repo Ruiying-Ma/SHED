@@ -1,0 +1,76 @@
+================================ Human Message =================================
+
+QUERY:
+What morphological typologies are considered?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_sEGTJ5ZGwn53FkprwinuzqzV)
+ Call ID: call_sEGTJ5ZGwn53FkprwinuzqzV
+  Args:
+    pattern: morphological typolog
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Character-level models have become a popular approach specially for their acces- sibility and ability to handle unseen data. However, little is known on their ability to reveal the underlying morphological struc- ture of a word, which is a crucial skill for high-level semantic analysis tasks, such as semantic role labeling (SRL).  In this work, we train various types of SRL models that use word, character and morphology level information and analyze how performance of characters compare to words and mor- phology for several languages. We con- duct an in-depth error analysis for each morphological typology and analyze the strengths and limitations of character-level models that relate to out-of-domain data, training data size, long range dependen- cies and model complexity.  Our exhaus- tive analyses shed light on important char- acteristics of character-level models and their semantic capability.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_84GQP3vUTe69zZAJR9HUzmjR)
+ Call ID: call_84GQP3vUTe69zZAJR9HUzmjR
+  Args:
+    pattern: typolog
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Character-level models have become a popular approach specially for their acces- sibility and ability to handle unseen data. However, little is known on their ability to reveal the underlying morphological struc- ture of a word, which is a crucial skill for high-level semantic analysis tasks, such as semantic role labeling (SRL).  In this work, we train various types of SRL models that use word, character and morphology level information and analyze how performance of characters compare to words and mor- phology for several languages. We con- duct an in-depth error analysis for each morphological typology and analyze the strengths and limitations of character-level models that relate to out-of-domain data, training data size, long range dependen- cies and model complexity.  Our exhaus- tive analyses shed light on important char- acteristics of character-level models and their semantic capability.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_A6ijyyaiv1mxQKWyannM2Z9R)
+ Call ID: call_A6ijyyaiv1mxQKWyannM2Z9R
+  Args:
+    pattern: agglutinative|fusional|introflexive|templatic|isolating|polysynthetic
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1 Introduction
+Encoding of words is perhaps the most impor- tant step towards a successful end-to-end natural language processing application. Although word embeddings have been shown to provide bene- fit to such models, they commonly treat words as the smallest meaning bearing unit and assume that each word type has its own vector repre- sentation.  This assumption has two major short- comings especially for languages with rich mor- phology: (1) inability to handle unseen or out-of- vocabulary (OOV) word-forms (2) inability to ex- ploit the regularities among word parts.The limitations of word embeddings are par- ticularly pronounced in sentence-level semantic
+tasks, especially in languages where word parts play a crucial role.  Consider the Turkish sen- tences “ K¨oy+ l ¨u-ler (villagers) s¸ehr+ e (to town) geldi (came) ” and “ Sendika+ lı-lar (union mem- bers) meclis+ e (to council) geldi (came) ”.  Here the stems k¨oy (village) and sendika (union) func- tion similarly in semantic terms with respect to the verb come (as the origin of the agents of the verb ), where s¸ehir (town) and meclis (council) both func- tion as the end point . These semantic similar- ities are determined by the common word parts shown in bold . However ortographic similarity does not always correspond to semantic similar- ity.  For instance the ortographically similar words knight and night have large semantic differences. Therefore, for a successful semantic application, the model should be able to capture both the regu- larities, i.e, morphological tags and the irregulari- ties, i.e, lemmas of the word.Morphological analysis already provides the aforementioned information about the words.  However access to useful morphological features may be problematic due to software licensing issues, lack of robust morphological analyzers and high ambiguity among analyses. Character- level models (CLM), being a cheaper and acces- sible alternative to morphology, have been re- ported as performing competitively on various NLP tasks ( Ling et al. , 2015 ; Plank et al. , 2016 ; Lee et al. , 2017 ).  However the extent to which these tasks depend on morphology is small; and their relation to semantics is weak. Hence, little is known on their true ability to reveal the underly- ing morphological structure of a word and their se- mantic capabilities. Furthermore, their behaviour across languages from different families; and their limitations and strengths such as handling of long- range dependencies, reaction to model complex- ity or performance on out-of-domain data are un- known.  Analyzing such issues is a key to fully
+understanding the character-level models.To achieve this, we perform a case study on semantic role labeling (SRL), a sentence- level semantic analysis task that aims to identify predicate-argument structures and assign mean- ingful labels to them as follows:
+[ Villagers ] comers came [ to town ] end point
+ We use a simple method based on bidirectional LSTMs to train three types of base semantic role labelers that employ (1) words (2) characters and character sequences and (3) gold morphological analysis. The gold morphology serves as the up- per bound for us to compare and analyze the per- formances of character-level models on languages of varying morphological typologies.  We carry out an exhaustive error analysis for each language type and analyze the strengths and limitations of character-level models compared to morphology. In regard to the diversity hypothesis which states that diversity of systems in ensembles lead to further improvement, we combine character and morphology-level models and measure the perfor- mance of the ensemble to better understand how similar they are. We experiment with several languages with varying degrees of morphological richness and ty- pology: Turkish, Finnish, Czech, German, Span- ish, Catalan and English. Our experiments and analysis reveal insights such as:
+• CLMs provide great improvements over whole-word-level models despite not be- ing able to match the performance of morphology-level models (MLMs) for in- domain datasets.However their performance surpass all MLMs on out-of-domain data,
+• Limitations and strengths differ by morpho- logical typology.Their limitations for agglu- tinative languages are related to rich deriva- tional morphology and high contextual am- biguity ; whereas for fusional languages they are related to number of morphological tags (morpheme ambiguity) ,
+• CLMs can handle long-range dependencies equally well as MLMs,
+• In presence of more training data,CLM’s performance is expected to improve faster than of MLM.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_nc4z0nnPUs5ecWBP6VsZR1ze)
+ Call ID: call_nc4z0nnPUs5ecWBP6VsZR1ze
+  Args:
+    pattern: agglutinative|fusional
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1 Introduction
+Encoding of words is perhaps the most impor- tant step towards a successful end-to-end natural language processing application. Although word embeddings have been shown to provide bene- fit to such models, they commonly treat words as the smallest meaning bearing unit and assume that each word type has its own vector repre- sentation.  This assumption has two major short- comings especially for languages with rich mor- phology: (1) inability to handle unseen or out-of- vocabulary (OOV) word-forms (2) inability to ex- ploit the regularities among word parts.The limitations of word embeddings are par- ticularly pronounced in sentence-level semantic
+tasks, especially in languages where word parts play a crucial role.  Consider the Turkish sen- tences “ K¨oy+ l ¨u-ler (villagers) s¸ehr+ e (to town) geldi (came) ” and “ Sendika+ lı-lar (union mem- bers) meclis+ e (to council) geldi (came) ”.  Here the stems k¨oy (village) and sendika (union) func- tion similarly in semantic terms with respect to the verb come (as the origin of the agents of the verb ), where s¸ehir (town) and meclis (council) both func- tion as the end point . These semantic similar- ities are determined by the common word parts shown in bold . However ortographic similarity does not always correspond to semantic similar- ity.  For instance the ortographically similar words knight and night have large semantic differences. Therefore, for a successful semantic application, the model should be able to capture both the regu- larities, i.e, morphological tags and the irregulari- ties, i.e, lemmas of the word.Morphological analysis already provides the aforementioned information about the words.  However access to useful morphological features may be problematic due to software licensing issues, lack of robust morphological analyzers and high ambiguity among analyses. Character- level models (CLM), being a cheaper and acces- sible alternative to morphology, have been re- ported as performing competitively on various NLP tasks ( Ling et al. , 2015 ; Plank et al. , 2016 ; Lee et al. , 2017 ).  However the extent to which these tasks depend on morphology is small; and their relation to semantics is weak. Hence, little is known on their true ability to reveal the underly- ing morphological structure of a word and their se- mantic capabilities. Furthermore, their behaviour across languages from different families; and their limitations and strengths such as handling of long- range dependencies, reaction to model complex- ity or performance on out-of-domain data are un- known.  Analyzing such issues is a key to fully
+understanding the character-level models.To achieve this, we perform a case study on semantic role labeling (SRL), a sentence- level semantic analysis task that aims to identify predicate-argument structures and assign mean- ingful labels to them as follows:
+[ Villagers ] comers came [ to town ] end point
+ We use a simple method based on bidirectional LSTMs to train three types of base semantic role labelers that employ (1) words (2) characters and character sequences and (3) gold morphological analysis. The gold morphology serves as the up- per bound for us to compare and analyze the per- formances of character-level models on languages of varying morphological typologies.  We carry out an exhaustive error analysis for each language type and analyze the strengths and limitations of character-level models compared to morphology. In regard to the diversity hypothesis which states that diversity of systems in ensembles lead to further improvement, we combine character and morphology-level models and measure the perfor- mance of the ensemble to better understand how similar they are. We experiment with several languages with varying degrees of morphological richness and ty- pology: Turkish, Finnish, Czech, German, Span- ish, Catalan and English. Our experiments and analysis reveal insights such as:
+• CLMs provide great improvements over whole-word-level models despite not be- ing able to match the performance of morphology-level models (MLMs) for in- domain datasets.However their performance surpass all MLMs on out-of-domain data,
+• Limitations and strengths differ by morpho- logical typology.Their limitations for agglu- tinative languages are related to rich deriva- tional morphology and high contextual am- biguity ; whereas for fusional languages they are related to number of morphological tags (morpheme ambiguity) ,
+• CLMs can handle long-range dependencies equally well as MLMs,
+• In presence of more training data,CLM’s performance is expected to improve faster than of MLM.
+
+================================== Ai Message ==================================
+
+Agglutinative and fusional.

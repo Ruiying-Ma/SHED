@@ -1,0 +1,123 @@
+================================ Human Message =================================
+
+QUERY:
+What is the type of the project 'Latigo Canyon Road Roadway/Retaining Wall Improvements (FEMA Project)'?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_eqKQZ5PQ0q3hNeOMhJaHCG9c)
+ Call ID: call_eqKQZ5PQ0q3hNeOMhJaHCG9c
+  Args:
+    pattern: Latigo Canyon Road Roadway/Retaining Wall Improvements \(FEMA Project\)
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Latigo Canyon Road Roadway/Retaining Wall Improvements (FEMA Project)
+¾
+Updates:  Staff is finalizing the design of this project.  Staff  is  also  working  with  FEMA/CalOES  to  substitute  the  existing timber with non-combustible materials.¾
+Project Schedule  Complete Design: Spring 2021  Begin Construction: Summer 2021
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_Cz2gIoNkqnA80wBdpMfVgsq9)
+ Call ID: call_Cz2gIoNkqnA80wBdpMfVgsq9
+  Args:
+    pattern: Latigo Canyon Road
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Latigo Canyon Road Roadway/Retaining Wall Improvements (FEMA Project)
+¾
+Updates:  Staff is finalizing the design of this project.  Staff  is  also  working  with  FEMA/CalOES  to  substitute  the  existing timber with non-combustible materials.¾
+Project Schedule  Complete Design: Spring 2021  Begin Construction: Summer 2021
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_nmnYmTGVRQqHiJtNqLZldnfR)
+ Call ID: call_nmnYmTGVRQqHiJtNqLZldnfR
+  Args:
+    pattern: FEMA Project\)
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Latigo Canyon Road Roadway/Retaining Wall Improvements (FEMA Project)
+¾
+Updates:  Staff is finalizing the design of this project.  Staff  is  also  working  with  FEMA/CalOES  to  substitute  the  existing timber with non-combustible materials.¾
+Project Schedule  Complete Design: Spring 2021  Begin Construction: Summer 2021
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_XyJzzCYHombITTcbHNcaOdXP)
+ Call ID: call_XyJzzCYHombITTcbHNcaOdXP
+  Args:
+    pattern: Type[: ]
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+2021 Annual Street Maintenance
+¾ Project  Description:    This  project  provides  for  the  reconstruction  and maintenance  of  City  streets.  Including  asphalt  pavement  repairs,  Type  II slurry seal, speed humps and new thermoplastic striping.¾ Updates:  City  Council  awarded  the  contract  at  the  July  12th  meeting  to Pavement  Coatings  Co.   City  staff  will  work  with  the  contractor  on  project related submittals.¾ Project Schedule: Begin Construction: August/September 2021
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_sbGOmtNw0ordBm8y2g8Ko4YW)
+ Call ID: call_sbGOmtNw0ordBm8y2g8Ko4YW
+  Args:
+    pattern: FEMA
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Latigo Canyon Road Roadway/Retaining Wall Improvements (FEMA Project)
+¾
+Updates:  Staff is finalizing the design of this project.  Staff  is  also  working  with  FEMA/CalOES  to  substitute  the  existing timber with non-combustible materials.¾
+Project Schedule  Complete Design: Spring 2021  Begin Construction: Summer 2021
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_dsr59Xh44hYXu99QYLEiR8H5)
+ Call ID: call_dsr59Xh44hYXu99QYLEiR8H5
+  Args:
+    pattern: \(FEMA Project\)
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Latigo Canyon Road Roadway/Retaining Wall Improvements (FEMA Project)
+¾
+Updates:  Staff is finalizing the design of this project.  Staff  is  also  working  with  FEMA/CalOES  to  substitute  the  existing timber with non-combustible materials.¾
+Project Schedule  Complete Design: Spring 2021  Begin Construction: Summer 2021
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_964JT2ijFOVToWk5KNrNzPh6)
+ Call ID: call_964JT2ijFOVToWk5KNrNzPh6
+  Args:
+    pattern: Retaining Wall Improvements
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Latigo Canyon Road Roadway/Retaining Wall Improvements (FEMA Project)
+¾
+Updates:  Staff is finalizing the design of this project.  Staff  is  also  working  with  FEMA/CalOES  to  substitute  the  existing timber with non-combustible materials.¾
+Project Schedule  Complete Design: Spring 2021  Begin Construction: Summer 2021
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_4oqZ8QyzwAKkRMLBOremWbyw)
+ Call ID: call_4oqZ8QyzwAKkRMLBOremWbyw
+  Args:
+    pattern: disaster
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+
+none

@@ -1,0 +1,33 @@
+================================ Human Message =================================
+
+QUERY:
+What is the type of the project 'Guardrail Replacement Citywide (FEMA Project)'?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_anXqIO6atODPDYOT85vaPiLH)
+ Call ID: call_anXqIO6atODPDYOT85vaPiLH
+  Args:
+    pattern: Guardrail Replacement Citywide \(FEMA Project\)
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_rwnMCQoKLGXiSrY9iQRTK3Ks)
+ Call ID: call_rwnMCQoKLGXiSrY9iQRTK3Ks
+  Args:
+    pattern: Guardrail|FEMA Project|Citywide
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Guardrail  Replacement  Citywide (FEMA  Project)
+¾ Project  Description:    This  project  consisted  of  replacing  the  damaged guardrail throughout  the City as a result of the Woolsey Fire.
+
+================================== Ai Message ==================================
+
+disaster

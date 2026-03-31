@@ -1,0 +1,47 @@
+================================ Human Message =================================
+
+QUERY:
+How slow is the unparallelizable ART model in the first place?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_z7jub9TwLSIsui5Ef79DVdrH)
+ Call ID: call_z7jub9TwLSIsui5Ef79DVdrH
+  Args:
+    pattern: unparallelizable|ART model|slow
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Due to the unparallelizable nature of the autoregressive factorization, AutoRegressive Translation (ART) models have to generate tokens sequentially during decoding and thus suffer from high inference latency. Non- AutoRegressive Translation (NART) models were proposed to reduce the inference time, but could only achieve inferior translation ac- curacy. In this paper, we proposed a novel approach to leveraging the hints from hidden states and word alignments to help the training of NART models.  The results achieve signif- icant improvement over previous NART mod- els for the WMT14 En-De and De-En datasets and are even comparable to a strong LSTM- based ART baseline but one order of magni- tude faster in inference.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_G7WOIsJ6Bz9ZsikshY51FDXB)
+ Call ID: call_G7WOIsJ6Bz9ZsikshY51FDXB
+  Args:
+    pattern: first place|how slow|latency|inference
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Due to the unparallelizable nature of the autoregressive factorization, AutoRegressive Translation (ART) models have to generate tokens sequentially during decoding and thus suffer from high inference latency. Non- AutoRegressive Translation (NART) models were proposed to reduce the inference time, but could only achieve inferior translation ac- curacy. In this paper, we proposed a novel approach to leveraging the hints from hidden states and word alignments to help the training of NART models.  The results achieve signif- icant improvement over previous NART mod- els for the WMT14 En-De and De-En datasets and are even comparable to a strong LSTM- based ART baseline but one order of magni- tude faster in inference.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_VdiHCgeScpeTX80gdYW3Inkj)
+ Call ID: call_VdiHCgeScpeTX80gdYW3Inkj
+  Args:
+    pattern: one order of magni.*faster|times faster|speedup|latency
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Due to the unparallelizable nature of the autoregressive factorization, AutoRegressive Translation (ART) models have to generate tokens sequentially during decoding and thus suffer from high inference latency. Non- AutoRegressive Translation (NART) models were proposed to reduce the inference time, but could only achieve inferior translation ac- curacy. In this paper, we proposed a novel approach to leveraging the hints from hidden states and word alignments to help the training of NART models.  The results achieve signif- icant improvement over previous NART mod- els for the WMT14 En-De and De-En datasets and are even comparable to a strong LSTM- based ART baseline but one order of magni- tude faster in inference.
+
+================================== Ai Message ==================================
+
+The paper says the ART baseline is one order of magnitude slower in inference than the proposed NART model.

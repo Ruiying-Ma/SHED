@@ -1,0 +1,22 @@
+================================ Human Message =================================
+
+HYPOTHESIS:
+Permissible development of similar information: Receiving Party may independently develop information similar to Confidential Information.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_YO7fIxKQzABzGXE8Btq4CJl5)
+ Call ID: call_YO7fIxKQzABzGXE8Btq4CJl5
+  Args:
+    pattern: independently develop|similar to Confidential Information|similar information|develop information|independent development|public domain|already known|third party
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+4.Borrower shall maintain the Information in confidence and shall not disclose the information to any third party without the consent of Lending Agent; provided, however, that Borrower may disclose the Information to the extent required by
+Sample 2
+subpoena, court order, request from a regulatory body with jurisdiction over Borrower, or as otherwise required by law or regulation.  Borrower shall not be required to keep the Information confidential to the extent that the Information (a) becomes publicly known through means other than a breach of this Agreement by Borrower; (b) was in the possession of Borrower prior to receipt thereof from the Lending Agent; or (c) is independently learned, obtained or developed by Borrower without violating the terms of this Agreement.
+
+================================== Ai Message ==================================
+
+Entailment

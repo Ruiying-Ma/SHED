@@ -1,0 +1,119 @@
+================================ Human Message =================================
+
+QUERY:
+What is the accuracy of this model compared to sota?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_ORHeNifregDOtL4oAWUgWbay)
+ Call ID: call_ORHeNifregDOtL4oAWUgWbay
+  Args:
+    pattern: sota|state-of-the-art|state of the art|SOTA|accuracy|compared to|compared|baseline|best|performance
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+6 Conclusion
+The surface forms curated by Wikidata editors are sufficient to reach honourable re- call, without the need to expand them with mentions extracted from Wikipedia. Our restriction to people, locations and organizations probably helps in this regard and we anticipate worse performance for broader domains. Our approach works best for sci- entific affiliations, where spelling is more canonical than in newswire. The availability
+5 This is the case of Julie Pace (Q34666768) in Figure 1. 6 We built the nifconverter tool to do this conversion for any NIF dataset.7 The original data is available under an Etalab license at https://www.istex.fr/
+8 The full details can be found at http://w3id.org/gerbil/experiment?id=201904110006
+8 Antonin Delpeuch
+AIDA-CoNLL Microposts 2016 Micro Macro Micro Macro AIDA 0.725 0. 684 0.056 0.729 Babelfy 0.481 0.421 0.031 0.526 DBP Spotlight 0.528 0.456 0.053 0.306 FREME NER 0.382 0.237 0.037 0.790 OpenTapioca 0.482 0.399 0.087 0. 515 ISTEX-1000 RSS-500 Micro Macro Micro Macro AIDA 0.531 0.494 0.455 0.447 Babelfy 0.461 0.447 0.314 0.304 DBP Spotlight 0.574 0.575 0.281 0.261 FREME NER 0.422 0.321 0.307 0.274 OpenTapioca 0.870 0. 858 0.335 0.310
+Fig. 2. F1 scores on test datasets
+of Twitter identifiers directly in Wikidata helps us to reach acceptable performance in this domain. The accuracy degrades on longer texts which require relying more on the ambiant topical context. In future work, we would like to explore the use of entity em- beddings to improve our approach in this regard.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_sPn5sBlxUIlffkEx1ak4iit4)
+ Call ID: call_sPn5sBlxUIlffkEx1ak4iit4
+  Args:
+    pattern: sota|state-of-the-art|state of the art|best|compared to sota|compared to state|compared to the|better than|outperform|outperforms|accuracy of this model
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+6 Conclusion
+The surface forms curated by Wikidata editors are sufficient to reach honourable re- call, without the need to expand them with mentions extracted from Wikipedia. Our restriction to people, locations and organizations probably helps in this regard and we anticipate worse performance for broader domains. Our approach works best for sci- entific affiliations, where spelling is more canonical than in newswire. The availability
+5 This is the case of Julie Pace (Q34666768) in Figure 1. 6 We built the nifconverter tool to do this conversion for any NIF dataset.7 The original data is available under an Etalab license at https://www.istex.fr/
+8 The full details can be found at http://w3id.org/gerbil/experiment?id=201904110006
+8 Antonin Delpeuch
+AIDA-CoNLL Microposts 2016 Micro Macro Micro Macro AIDA 0.725 0. 684 0.056 0.729 Babelfy 0.481 0.421 0.031 0.526 DBP Spotlight 0.528 0.456 0.053 0.306 FREME NER 0.382 0.237 0.037 0.790 OpenTapioca 0.482 0.399 0.087 0. 515 ISTEX-1000 RSS-500 Micro Macro Micro Macro AIDA 0.531 0.494 0.455 0.447 Babelfy 0.461 0.447 0.314 0.304 DBP Spotlight 0.574 0.575 0.281 0.261 FREME NER 0.422 0.321 0.307 0.274 OpenTapioca 0.870 0. 858 0.335 0.310
+Fig. 2. F1 scores on test datasets
+of Twitter identifiers directly in Wikidata helps us to reach acceptable performance in this domain. The accuracy degrades on longer texts which require relying more on the ambiant topical context. In future work, we would like to explore the use of entity em- beddings to improve our approach in this regard.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_4gmBZPZoY36ST6tFfUWtNan8)
+ Call ID: call_4gmBZPZoY36ST6tFfUWtNan8
+  Args:
+    pattern: state|SOTA|state-of-the-art|state of the art|so ta
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+2 Particularities of Wikidata
+Wikidata is a wiki itself, meaning that it can be edited by anyone, but differs from usual wikis by its data model: information about an entity can only be input as structured data, in a format that is similar to RDF.Wikidata stores information about the world in a collection of items , which are structured wiki pages. Items are identified by ther Q-id, such as Q40469, and they are made of several data fields. The label stores the preferred name for the entity.  It is supported by a description , a short phrase describing the item to disambiguate it from namesakes, and aliases are alternate names for the entity. These three fields are stored separately for each language supported by Wikidata. Items also hold a collection of statements : these are RDF-style claims which have the item as subject. They can be backed by references and be made more precise with qualifiers , which all rely on a controlled vocabulary of properties (similar to RDF predicates).  Finally, items can have site links , connecting them to the corresponding page for the entity in other Wikimedia projects (such as Wikipedia). Note that Wikidata items to not need to be associated with any Wikipedia page: in fact, Wikidata’s policy on the notability of the subjects it covers is much more permissive than in Wikipedia.  For a more detailed introduction to Wikidata’s data model we refer the reader to Vrandeˇci´c and Kr¨otzsch (2014); Geiß et al. (2017).Our goal is to evaluate the usefulness of this crowdsourced structured data for en- tity linking. We will therefore refrain from augmenting it with any external data (such as phrases and topical information extracted from Wikipedia pages), as is generally done when working with DBpedia or YAGO.  By avoiding a complex mash-up of data coming from disparate sources, our entity linking system is also simpler and easier to reproduce. Finally, it is possible keep OpenTapioca in real-time synchronization with the live version of Wikidata, with a lag of a few seconds only. This means that users are able to fix or improve the knowledge graph, for instance by adding a missing alias on an item, and immediately see the benefits on their entity linking task.  This constrasts with all other systems we are aware of, where the user either cannot directly intervene on the underlying data, or there is a significant delay in propagating these updates to the entity linking system.OpenTapioca: Lightweight Entity Linking for Wikidata 3
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_GnqUYnmry1GIYzX8V8RqHAFp)
+ Call ID: call_GnqUYnmry1GIYzX8V8RqHAFp
+  Args:
+    pattern: accuracy
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+6 Conclusion
+The surface forms curated by Wikidata editors are sufficient to reach honourable re- call, without the need to expand them with mentions extracted from Wikipedia. Our restriction to people, locations and organizations probably helps in this regard and we anticipate worse performance for broader domains. Our approach works best for sci- entific affiliations, where spelling is more canonical than in newswire. The availability
+5 This is the case of Julie Pace (Q34666768) in Figure 1. 6 We built the nifconverter tool to do this conversion for any NIF dataset.7 The original data is available under an Etalab license at https://www.istex.fr/
+8 The full details can be found at http://w3id.org/gerbil/experiment?id=201904110006
+8 Antonin Delpeuch
+AIDA-CoNLL Microposts 2016 Micro Macro Micro Macro AIDA 0.725 0. 684 0.056 0.729 Babelfy 0.481 0.421 0.031 0.526 DBP Spotlight 0.528 0.456 0.053 0.306 FREME NER 0.382 0.237 0.037 0.790 OpenTapioca 0.482 0.399 0.087 0. 515 ISTEX-1000 RSS-500 Micro Macro Micro Macro AIDA 0.531 0.494 0.455 0.447 Babelfy 0.461 0.447 0.314 0.304 DBP Spotlight 0.574 0.575 0.281 0.261 FREME NER 0.422 0.321 0.307 0.274 OpenTapioca 0.870 0. 858 0.335 0.310
+Fig. 2. F1 scores on test datasets
+of Twitter identifiers directly in Wikidata helps us to reach acceptable performance in this domain. The accuracy degrades on longer texts which require relying more on the ambiant topical context. In future work, we would like to explore the use of entity em- beddings to improve our approach in this regard.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_a5mRsGsfgo9a3YKsxRCdX4FO)
+ Call ID: call_a5mRsGsfgo9a3YKsxRCdX4FO
+  Args:
+    pattern: state-of-the-art|state of the art|SOTA|sota
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_IpTcSKZ9Z04SdHry5yFJru1x)
+ Call ID: call_IpTcSKZ9Z04SdHry5yFJru1x
+  Args:
+    pattern: compared|compare|compares|compared to
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+3.1 Local compatibility
+These features compare the phrase to annotate with the known surface forms for the en- tity. Collecting such forms is often done by extracting mentions from Wikipedia (Cucerzan, 2007). Link labels, redirects, disambiguation pages and bold text in abstracts can all be useful to discover alternate names for an entity.  It is also possible to crawl the web for Wikipedia links to improve the coverage, often at the expense of data qual- ity (Spitkovsky and Chang, 2012).Beyond collecting a set of possible surface forms, these approaches count the num- ber of times an entity e was mentioned by a phrase w .  This makes it possible to use a Bayesian methodology: the compatibility of a candidate entity e with a given mention w is P ( e | w ) = P ( e,w ) P ( w ) , which can be estimated from the statistics collected.In Wikidata, items have labels and aliases in multiple languages. As this information is directly curated by editors, these phrases tend to be of high quality. However, they do not come with occurence counts.  As items link to each other using their Wikidata identifiers only, it is not possible to compare the number of times USA was used to refer United States of America (Q30) or to United States Army (Q9212) inside Wikidata. Unlike Wikipedia’s page titles which must be unique in a given language, two Wiki- data items can have the same label in the same language.  For instance Curry is the English label of both the item about the Curry programming language (Q2368856) and the item about the village in Alaska (Q5195194), and the description field is used to disambiguate them.Manual curation of surface forms implies a fairly narrow coverage, which can be an issue for general purpose entity linking. For instance, people are commonly refered
+4 Antonin Delpeuch
+ to with their given or family name only, and these names are not systematically added as aliases: at the time of writing, Trump is an alias for Donald Trump (Q22686), but Cameron is not an alias for David Cameron (Q192). As a Wikidata editor, the main incentive to add aliases to an item is to make it easier to find the item with Wikidata’s auto-suggest field, so that it can be edited or linked to more easily.  Aliases are not designed to offer a complete set of possible surface forms found in text: for instance, adding common mispellings of a name is discouraged. 2
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_gIcPGWed3lcoWRneLUWyxX0w)
+ Call ID: call_gIcPGWed3lcoWRneLUWyxX0w
+  Args:
+    pattern: OpenTapioca|Open Tapioca|our approach|we achieve|accuracy compared|outperform|outperforms|better|competitive
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1 Introduction
+Named Entity Linking is the task of detecting mentions of entities from a knowledge base in free text, as illustrated in Figure 1.Most of the entity linking literature focuses on target knowledge bases which are derived from Wikipedia, such as DBpedia (Auer et al., 2007) or YAGO Suchanek et al. (2007). These bases are curated automatically by harvesting information from the info- boxes and categories on each Wikipedia page and are therefore not editable directly. Wikidata Vrandeˇci´c and Kr¨otzsch (2014) is an editable, multilingual knowledge base which has recently gained popularity as a target database for entity linking (Klang and Nugues, 2014; Weichselbraun et al., 2018; Sorokin and Gurevych, 2018; Raiman and Raiman, 2018).  As these new approaches to entity linking also introduce novel learning meth- ods, it is hard to tell apart the benefits that come from the new models and those which come from the choice of knowledge graph and the quality of its data.We review the main differences between Wikidata and static knowledge bases ex- tracted from Wikipedia, and analyze their implactions for entity linking.  We illustrate these differences by building a simple entity linker, OpenTapioca 1 , which only uses data from Wikidata, and show that it is competitive with other systems with access to larger data sources for some tasks. OpenTapioca can be trained easily from a Wikidata dump only, and can be efficiently kept up to date in real time as Wikidata evolves.  We also propose tools to adapt existing entity linking datasets to Wikidata, and offer a new entity linking dataset, consisting of affiliation strings extracted from research articles.1 The implementation and datasets are available at https://github.com/wetneb/opentapioca and the demo can be found at https://opentapioca.org/ .2 Antonin Delpeuch
+Fig. 1. Example of an annotated sentence
+
+================================== Ai Message ==================================
+
+It is competitive with other systems with access to larger data sources for some tasks.

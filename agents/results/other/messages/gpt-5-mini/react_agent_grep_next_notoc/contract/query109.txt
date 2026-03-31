@@ -1,0 +1,59 @@
+================================ Human Message =================================
+
+HYPOTHESIS:
+Permissible development of similar information: Receiving Party may independently develop information similar to Confidential Information.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_XIAIdfES7MRqnGCsmAxEHI0A)
+ Call ID: call_XIAIdfES7MRqnGCsmAxEHI0A
+  Args:
+    pattern: independent
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+(g) is hereafter independently developed by Receiver without the aid,application or use of any Confidential Information;
+provided for each that: (i) Receiver promptly notifies VIDAR of such action; and (ii) in any action to enforce or remedy a breach of this Agreement, Receiver shall have the burden of establishing the applicability of the subsection on which it relies.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_f1KsS28INsatjg7AJD2o8BOi)
+ Call ID: call_f1KsS28INsatjg7AJD2o8BOi
+  Args:
+    pattern: Confidential Information
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.  Confidential Information.The term “ Confidential Information ” means any and all tangible and intangible information disclosed to Receiver in oral, written, graphic, recorded, photographic, any machine-readable or in any other medium or form relating to the intellectual property, management, operations, products, inventions, suppliers, customers, financials of VIDAR or any present or contemplated project, contract or relationship between VIDAR and Receiver, including without limitation, any and all plans, Intellectual Property (defined below), know-how, computer programs, software (source and object code), algorithms, computer processing systems, techniques, methodologies, formulae, compilations of information, designs, drawings, schematics, analyses, evaluations, formulations, ingredients, samples, processes, machines, prototypes, mock-ups, product performance data, proposals, job notes, reports, records, specifications, manuals, supplier and customer lists and information, licenses, the prices it obtains or has obtained for the licensing of its software products and services, purchase and sales records, marketing information or any other information concerning the business and goodwill of VIDAR and any information which is identified as being of a confidential or proprietary nature or should be considered confidential under the circumstances.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_gwQMGtvMM8Vf0MjdVksIGlda)
+ Call ID: call_gwQMGtvMM8Vf0MjdVksIGlda
+  Args:
+    pattern: independently develop
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+(g) is hereafter independently developed by Receiver without the aid,application or use of any Confidential Information;
+provided for each that: (i) Receiver promptly notifies VIDAR of such action; and (ii) in any action to enforce or remedy a breach of this Agreement, Receiver shall have the burden of establishing the applicability of the subsection on which it relies.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_hEgJcokKlABaFbt17Fujnh9y)
+ Call ID: call_hEgJcokKlABaFbt17Fujnh9y
+  Args:
+    pattern: \(g\)
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+(g) is hereafter independently developed by Receiver without the aid,application or use of any Confidential Information;
+provided for each that: (i) Receiver promptly notifies VIDAR of such action; and (ii) in any action to enforce or remedy a breach of this Agreement, Receiver shall have the burden of establishing the applicability of the subsection on which it relies.
+
+================================== Ai Message ==================================
+
+Entailment

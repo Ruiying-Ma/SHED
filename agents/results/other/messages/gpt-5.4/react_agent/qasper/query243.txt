@@ -1,0 +1,99 @@
+================================ Human Message =================================
+
+QUERY:
+What is the source of the training/testing data?
+
+TABLE OF CONTENTS (TOC):
+1 | Generating Major Types of Chinese Classical Poetry in a Uniformed Framework
+1.1 | Abstract
+1.2 | 1. Introduction
+1.2.1 | 1.1. SHI
+1.2.2 | 1.2. CI
+1.3 | 2. Related Work
+1.4 | 3. Model
+1.4.1 | 3.1. Pre-processing
+1.4.2 | 3.2. Basic Model
+1.4.3 | 3.3. Enhanced Model
+1.5 | 4. Experiment
+1.5.1 | 4.1. Experiment Setup
+1.5.2 | 4.2. Performance Comparison of the Two Models in Form
+1.5.3 | 4.3. Effect of the Stanza Separation
+1.5.4 | 4.4. Case Observation
+1.6 | 5. Conclusion and Future Works
+1.7 | 6. Acknowledgements
+1.8 | 7. References
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_zMF3NregyP8VaA6zbK87Vtxq)
+ Call ID: call_zMF3NregyP8VaA6zbK87Vtxq
+  Args:
+    section_id: 1.5.1
+  read_section (call_iaMsgAIJpVZyOuCpNFLGuqVO)
+ Call ID: call_iaMsgAIJpVZyOuCpNFLGuqVO
+  Args:
+    section_id: 1.4.1
+
+================================= Tool Message =================================
+Name: read_section
+
+4.1. Experiment Setup
+We implement the GPT-2 model based on the transform- ers library (Wolf et al., 2019). The model configuration is 8 attention heads per layer, 8 layers, 512 embedding di- mensions, and 1024 feed-forward layer dimensions. We employ the OpenAIAdam optimizer and train the model with 400,000 steps in total on 4 NVIDIA 1080Ti GPUs. The characters with frequency less than 3 in CCPC1. 0 are treated as UNK and a vocabulary with 11259 tokens (char- acters) is finally built up.
+
+================================= Tool Message =================================
+Name: read_section
+
+3.1. Pre-processing
+We present a unified format for formulating all types of training samples of SHI and CI by extending the format given in Liao et al. (2019). First, we change various punc- tuations between lines into the comma ‘,’, serving as a uni- form separation label between two lines. Second, we utilize
+ three separation labels, [ label 1 ] and [ label 2 ] to separate be- tween form, title, and body of the poem respectively, and [ label 3 ] to separate two stanzas of CI if needed. Third, we enclose [ EOS ] at the end of the body. Thus, the format for SHI is as follows:
+ [ CLS ] f orm [ label 1 ] title [ label 2 ] body [ EOS ] body : line 1 , line 2 , ..., line n
+where n is the number of lines in the poem.The format of CI will be enriched with [ label 3 ] if it has two stanzas in the body:
+ [ CLS ] f orm [ label 1 ] title [ label 2 ] body [ EOS ] body : stanza 1 [ label 3 ] stanza 2 stanza 1 : line 1 , line 2 , ..., line m stanza 2 : line m +1 , line m +2 , ..., line n
+ Here, [ label 1 ] , [ label 2 ] and [ label 3 ] are set as ‘ # ’, ‘ ∗ ’ and ‘ & ’.After pre-processing, all the formatted poem samples will be sent to the poetry generation model for training, as illus- trated in Figure 3.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_i1VAPD5lyQmUgtL1NXBES2IP)
+ Call ID: call_i1VAPD5lyQmUgtL1NXBES2IP
+  Args:
+    section_id: 1.5
+
+================================= Tool Message =================================
+Name: read_section
+
+4. Experiment
+4.1. Experiment Setup
+We implement the GPT-2 model based on the transform- ers library (Wolf et al., 2019). The model configuration is 8 attention heads per layer, 8 layers, 512 embedding di- mensions, and 1024 feed-forward layer dimensions. We employ the OpenAIAdam optimizer and train the model with 400,000 steps in total on 4 NVIDIA 1080Ti GPUs. The characters with frequency less than 3 in CCPC1. 0 are treated as UNK and a vocabulary with 11259 tokens (char- acters) is finally built up.
+4.2. Performance Comparison of the Two Models in Form
+For Jueju and Lvshi of SHI, because of their simplicity in form, the two models hardly make form errors. We generate 500 poems for each type using the two models accordingly. All of these poems are in the right form. This demonstrates that both models are all very powerful in generating Jueju and Lvshi with almost perfect performance in form. For CI, we select 6 Cipais, with the body length varying from 33 to 114 characters and with relatively sufficient training samples in CPCC, as our observation target. We
+generate 300 poems with the two models accordingly. Ta- ble 1 summarizes the correct rates of the two models un- der these 6 Cipais (a generated poem is considered to be correct in form if and only if its form fully matches the ex- pected form).  As can be seen, a tendency is the longer the body of CI, the worse the performance of the two models in form and, the more significant the gain in the form correct rate for the enhanced model (an extreme is in the case of Qinyuanchun where the correct rate is raised from 12.0% to 55.0%).
+4.3. Effect of the Stanza Separation
+The preliminary observation on the generated poems sug- gests that the inclusion of the stanza separation into the uni- fied format of training samples is beneficial in some degree for meeting the form requirement. For instance, we input the same title to the enhanced model and to a model trained under the same condition except without the stanza separa- tion, asking them to generate a number of CIs with Cipai of Busuanzi , a task similar to that in Figure 4.  We find that about 20% of CIs generated by the latter suffer from some errors in form, as illustrated in Figure 5, meanwhile all the CIs generated by the former ideally match the ex- pected form.
+4.4. Case Observation
+According to our observation, the enhanced model is likely to generate poems with both high quality and diversity. We present two examples generated by the model and give some comments on the meaning of each poem. 七 律 · 远 望 江 上 微 茫 一 叶 舟 ， 天 涯 芳 草 满 汀 洲 数 声 渔 唱 隔 船 过 ， 几 点 人 家 落 帆 游 春 色 不从 莺 语 到 ， 夕 阳 空 度 客 心 愁 何 时 重 向 长 桥 饮 ， 同 泛 溪 光共 白 头
+ The example above is a Qiyan Lvshi . The title of this poem means “look far around”. In this poem, the first four lines depict a view seen from the river bank-misty and rolling waters, a drifting boat, lush vanillas, melodies from pass- ing boats and cottages on the bank, creating a tranquil and halcyon atmosphere. However, the poet is still overcome
+ Cipai Length of Body Number of Training Samples Correct Rate in Form of Basic model Correct Rate in Form of Enhanced model Rumengling 33 682 86.0% 90.0% Jianzimulanhua 44 866 87.3% 95.7% Qingpingyue 46 1236 84.0% 96.0% Dielianhua 60 1578 89.7% 91. 3% Manjianghong 93 1398 42.1% 83.3% Qinyuanchun 114 1061 12.0% 55.0%
+Table 1: Comparison between two models on the control to the form of CI.Figure 5: Two example poems generated by the model without considering the stanza separation. Both have errors in form. Refer to Figure 4(b) for comparison. by solitude and nostalgia because of the lonely trip, which is vividly revealed in the second four sentences. The poem adopts a typical semantic structure of Qiyan Lvshi with its first-half delineating a view and then conveying the poet’s feeling in the second-half (the contrast between the view and the feeling is one of the appreciated artistic methods in Chinese classical poems).  In addition, for Lvshi , the pairs of < the third line, the fourth line > and < the fifth line, the sixth line > must satisfy the requirement of Duizhang , a cor- respondence in both part-of-speech(POS) and word sense between two parallel lines. This point is perfectly reflected in the generated poem, as shown in Table 2. The example above is a CI in the form of Manjianghong and the title means “beyond the Great Wall”. It vividly depicts a typical view of the Northwestern China howling wind, clouds of dust, crying crows and lugubrious sound of flutes. The poem is saturated with nostalgia, solitude and
+desolate feelings of life, which is not only embodied in the bleak scenery but also overtly revealed in the last three sen- tences.  The combination of visual and audio feelings and of reality and imagination is tactfully employed in the poem and makes it even more impressive and resonating.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_s8BCK0KQSCbBNlvEhmKIqSae)
+ Call ID: call_s8BCK0KQSCbBNlvEhmKIqSae
+  Args:
+    section_id: 1.2
+
+================================= Tool Message =================================
+Name: read_section
+
+1. Introduction
+Chinese poetry is a rich treasure in Chinese traditional cul- ture. For thousands of years, poetry is always considered as the crystallization of human wisdom and erudition by Chi- nese people and deeply influences the Chinese history from the mental and cultural perspective.In general, a Chinese classical poem is a perfect combi- nation of three aspects, i.e., form, sound, and meaning.  Firstly, it must strictly obey a particular form which spec- ifies the number of lines (i.e., sentences) in the poem and the number of characters in each line. Secondly, it must strictly obey a particular sound pattern which specifies the sound requirement for each character in every position of the poem. Lastly, it must be meaningful, i.e., with gram- matical and semantic well-formedness for each line and, with thematic coherence and integrity throughout the poem.  These three points form the universal principles for human poets to create Chinese classical poems.Chinese Classical poetry can be classified into two primary categories, SHI and CI. According to the statistical data from CCPC1.0, a Chinese Classical Poetry Corpus consist- ing of 834,902 poems in total (We believe it is almost a full collection of Chinese Classical poems). 92.87% poems in CCPC1.0 fall into the category of SHI and 7. 13% fall into the category of CI. SHI and CI can be further divided into many different types in terms of their forms. We briefly introduce the related background knowledge as follows.
+1.1. SHI
+The majority of SHI has a fixed number of lines and a fixed and identical number of characters for all lines. Two major forms of SHI are Jueju and Lvshi with four lines and eight lines accordingly. Jueju and Lvshi are further divided into Wuyan Jueju and Qiyan Jueju as well as Wuyan Lvshi and Qiyan Lvshi where Wuyan means five characters each line and Qiyan means seven characters.  Figure 1 is a famous
+Figure 1: An example of SHI with Wuyan Jueju as its form. The array of small boxes, usually each surrounds a Chinese character, illustrates the form requirement in the number of lines and the number of characters per line for a poem. A full correspondence between character and box, no more and no less, indicates this basic form requirement is satis- fied by the given poem. classical poem of Wuyan Jueju . In addition, Lvshi has a strict requirement for the two-sentence pairs composed of < the third line, the fourth line > and < the fifth line, the sixth line > : they must satisfy the requirement of Duizhang , this is, a strict parallel matching for both part of speech and sense of every character in two lines. This obviously increases the difficulty of poem composition.According to CCPC1. 0, Wuyan Jueju , Qiyan Jueju , Wuyan Lvshi , and Qiyan Lvshi constitute 67.96% of SHI, with 4.26%, 22.57%, 15.99%, and 25.14% respectively.∗ Corresponding author
+1.2. CI
+CI is another primary type of Chinese poetry. In contrast to SHI, CI has nearly one thousand forms. Each form of CI (it is called Cipai scholarly) is defined by a fixed number of lines for the poem and, a fixed number of characters for a particular line which usually varies for different lines.  The above settings for different Cipai are very distinct, for in- stance, the Cipai of Busuanzi contains 8 lines and 44 char- acters, as shown in Figure 2, whereas the Cipai of Man- jianghong contains 22 lines and 94 characters. The high diversity regarding the forms of CI further significantly in- creases the difficulty of poem composition. We observe the statistical distribution of all the forms (Cipai) of CI over CCPC1.0. It roughly follows Zipf’s law (Zipf, 1949). There exists a long tail in the distribution where a lot of Cipai only has a few instances which are far less enough for a computational model (algorithm) to learn its forms. So we choose the top frequent 121 forms of CI, constituting 80% of CCPC1. 0, as the focus for CI in this research.As can be seen from the above analysis, the greatest chal- lenge for machine generation of Chinese classical poems lies in how to make machine capable of following the uni- versal principles underlying the writing of Chinese classical poems. The to-date research cannot deal with this chal- lenge well.  Most of the work so far mainly targeted at automatic generation of Jueju (including Wuyan Jueju and Qiyan Jueju ), for an obvious reason that it is much easier for an algorithm to handle the requirements of form, the- matic coherence and integrity in the scenario of four lines than that in the scenario of Lvshi with eight lines, let alone much more complicated scenarios, i.e., CI, are taken into account.  In fact, the research on the automatic generation of CI is just at the very beginning stage.In this paper, we propose a uniformed computational frame- work that tries to generate major types of Chinese classi- cal poems with two major forms of SHI, Jueju , and Lvshi , as well as 121 major forms (Cipai) of CI using a single model. Preliminary experimental results validate the ef- fectiveness of the proposed framework.  The implemented model has been incorporated into Jiuge (Guo et al., 2019), the most influential Chinese classical poetry generation sys- tem developed by Tsinghua University (refer to http: //jiuge.thunlp.cn/ ).
+
+================================== Ai Message ==================================
+
+The training/testing data comes from CCPC1.0, a Chinese Classical Poetry Corpus. The paper states CCPC1.0 consists of 834,902 poems in total.

@@ -1,0 +1,60 @@
+================================ Human Message =================================
+
+QUERY:
+How is the speech alignment quality evaluated?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_7zaSgMkjUIMo5iOJLGcoVYNm)
+ Call ID: call_7zaSgMkjUIMo5iOJLGcoVYNm
+  Args:
+    pattern: alignment quality|speech alignment|evaluate|evaluation
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+We present a corpus of sentence-aligned triples of German audio, German text, and English translation, based on German audio books. The speech translation data consist of 110 hours of audio material aligned to over 50k parallel sentences. An even larger dataset comprising 547 hours of German speech aligned to German text is available for speech recognition. The audio data is read speech and thus low in disfluencies.  The quality of audio and sentence alignments has been checked by a manual evaluation, showing that speech alignment quality is in general very high. The sentence alignment quality is comparable to well-used parallel translation data and can be adjusted by cutoffs on the automatic alignment score. To our knowledge, this corpus is to date the largest resource for German speech recognition and for end-to-end German-to-English speech translation.Keywords: Spoken Language Translation, Speech Recognition, German Audiobooks
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_ugS3M6U3F7jmH3u0PYDnXxng)
+ Call ID: call_ugS3M6U3F7jmH3u0PYDnXxng
+  Args:
+    pattern: manual evaluation|checked by a manual evaluation|speech alignment quality
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+We present a corpus of sentence-aligned triples of German audio, German text, and English translation, based on German audio books. The speech translation data consist of 110 hours of audio material aligned to over 50k parallel sentences. An even larger dataset comprising 547 hours of German speech aligned to German text is available for speech recognition. The audio data is read speech and thus low in disfluencies.  The quality of audio and sentence alignments has been checked by a manual evaluation, showing that speech alignment quality is in general very high. The sentence alignment quality is comparable to well-used parallel translation data and can be adjusted by cutoffs on the automatic alignment score. To our knowledge, this corpus is to date the largest resource for German speech recognition and for end-to-end German-to-English speech translation.Keywords: Spoken Language Translation, Speech Recognition, German Audiobooks
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_ntwrIyjyEzmT6LQauisJ1BO1)
+ Call ID: call_ntwrIyjyEzmT6LQauisJ1BO1
+  Args:
+    pattern: audio alignment|speech alignment|manual
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+We present a corpus of sentence-aligned triples of German audio, German text, and English translation, based on German audio books. The speech translation data consist of 110 hours of audio material aligned to over 50k parallel sentences. An even larger dataset comprising 547 hours of German speech aligned to German text is available for speech recognition. The audio data is read speech and thus low in disfluencies.  The quality of audio and sentence alignments has been checked by a manual evaluation, showing that speech alignment quality is in general very high. The sentence alignment quality is comparable to well-used parallel translation data and can be adjusted by cutoffs on the automatic alignment score. To our knowledge, this corpus is to date the largest resource for German speech recognition and for end-to-end German-to-English speech translation.Keywords: Spoken Language Translation, Speech Recognition, German Audiobooks
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_M3dEUl1RxtWtdkiCHm5yCu3G)
+ Call ID: call_M3dEUl1RxtWtdkiCHm5yCu3G
+  Args:
+    pattern: manual evaluation.*alignment|alignment.*manual evaluation|evaluated
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+We present a corpus of sentence-aligned triples of German audio, German text, and English translation, based on German audio books. The speech translation data consist of 110 hours of audio material aligned to over 50k parallel sentences. An even larger dataset comprising 547 hours of German speech aligned to German text is available for speech recognition. The audio data is read speech and thus low in disfluencies.  The quality of audio and sentence alignments has been checked by a manual evaluation, showing that speech alignment quality is in general very high. The sentence alignment quality is comparable to well-used parallel translation data and can be adjusted by cutoffs on the automatic alignment score. To our knowledge, this corpus is to date the largest resource for German speech recognition and for end-to-end German-to-English speech translation.Keywords: Spoken Language Translation, Speech Recognition, German Audiobooks
+
+================================== Ai Message ==================================
+
+By a manual evaluation of the audio and sentence alignments. This evaluation showed that speech alignment quality is in general very high.

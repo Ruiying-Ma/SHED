@@ -1,0 +1,40 @@
+================================ Human Message =================================
+
+QUERY:
+What type of quotes is this system trying to generate?
+
+TABLE OF CONTENTS (TOC):
+1 | Knowledge Amalgam: Generating Jokes and Quotes Together ∗ Bhargav Chippada, Shubajit Saha Microsoft R&D bhargav.chippada@microsoft.com, shubajit.saha@microsoft.com
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2 Related Work
+1.3.1 | 2.1 Recurrent Neural Networks
+1.3.2 | 2.2 Humor Generation
+1.4 | 3 Approach
+1.4.1 | 3.1 Dataset
+1.4.2 | 3.2 Controlled LSTM Architecture
+1.4.3 | 3.3 Model Parameters
+1.5 | 4 Experiments
+1.5.1 | 4.1 Just Jokes
+1.5.2 | 4.2 Forward and Reverse Jokes
+1.5.3 | 4.3 Jokes, Quotes, and Tweets
+1.6 | 5 Evaluation
+1.7 | 6 Conclusion
+1.8 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_aODMlydIEttvcx8JG7XRaYTC)
+ Call ID: call_aODMlydIEttvcx8JG7XRaYTC
+  Args:
+    pattern: quotes
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1 | Abstract
+Generating humor and quotes are very challeng- ing problems in the field of computational linguis- tics and are often tackled separately. In this paper, we present a controlled Long Short-Term Memory (LSTM) architecture which is trained with categor- ical data like jokes and quotes together by pass- ing category as an input along with the sequence of words.  The idea is that a single neural net will learn the structure of both jokes and quotes to gen- erate them on demand according to input category. Importantly, we believe the neural net has more knowledge as it’s trained on different datasets and hence will enable it to generate more creative jokes or quotes from the mixture of information. May the network generate a funny inspirational joke!
+
+================================== Ai Message ==================================
+
+Inspirational quotes.

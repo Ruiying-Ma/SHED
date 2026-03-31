@@ -1,0 +1,56 @@
+================================ Human Message =================================
+
+QUERY:
+Which morphological features are extracted?
+
+TABLE OF CONTENTS (TOC):
+1 | D ESIGN AND IMPLEMENTATION OF AN OPEN SOURCE G REEK POS T AGGER AND E NTITY R ECOGNIZER USING SPA C Y
+1.1 | A BSTRACT
+1.2 | 1. Introduction
+1.3 | 2. SpaCy’s deep learning model for POS tagging and Named Entity Recognition
+1.4 | 3. Creating a Greek POS Tagger using spaCy
+1.4.1 | 3.1. Dataset evaluation and selection
+1.4.2 | 3.2. Creation of the Tag Map with reference to Universal Dependencies
+1.4.3 | 3.3. POS Tagger training
+1.4.4 | 3.4. Evaluation and comparison of results
+1.5 | 4. Creating a state of the art Named Entity Recognizer using spaCy
+1.5.1 | 4.1. Dataset evaluation and selection
+1.5.2 | 4.2. Usage of Wikipedia dataset for training
+1.5.3 | 4.3. Evaluation and comparison of results
+1.6 | 5. Conclusions
+1.7 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_all (call_dS4ukQvg2AoW6LX65pFQDR9w)
+ Call ID: call_dS4ukQvg2AoW6LX65pFQDR9w
+  Args:
+    pattern: morpholog|morphological|features are extracted|extracted features|morphological features are extracted|Morphological features
+
+================================= Tool Message =================================
+Name: grep_search_all
+
+1.1
+1.2
+1.3
+1.4.1
+1.4.2
+1.4.3
+1.4.4
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_RG2VoU2deLRgtVlr918mu7VU)
+ Call ID: call_RG2VoU2deLRgtVlr918mu7VU
+  Args:
+    section_id: 1.4.2
+
+================================= Tool Message =================================
+Name: read_section
+
+3.2. Creation of the Tag Map with reference to Universal Dependencies
+Different labels were found at the dataset and were matched to a label map, where for each label the part of the speech and their morphology are analyzed. In more detail, the first two characters refer to the part of speech and accordingly extend to more information about it.  The label map supports 16 standard part of speech tags: Adjective, Adposition, Adverb, Coordinating Conjuction, Determiner, Interjection, Noun, Numeral, Particle, Pronoun, Proper Noun, Punctuation, Subordinating Conjuction, Symbol, Verb and Other. Each tag describes morphological features of the word, depending on the part of the speech to which it refers like the gender, the number, and the case [7].  It must be mentioned that the extraction of morphological rules and the matching with the tags was done using the Greek version of the Universal Dependencies [8].
+
+================================== Ai Message ==================================
+
+Gender, number, and case.

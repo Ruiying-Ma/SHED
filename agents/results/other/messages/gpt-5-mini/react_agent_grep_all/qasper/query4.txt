@@ -1,0 +1,115 @@
+================================ Human Message =================================
+
+QUERY:
+What is the accuracy of this model compared to sota?
+
+TABLE OF CONTENTS (TOC):
+1 | OpenTapioca: Lightweight Entity Linking for Wikidata
+1.1 | 1 Introduction
+1.2 | 2 Particularities of Wikidata
+1.3 | 3 Related work
+1.3.1 | 3.1 Local compatibility
+1.3.2 | 3.2 Topic similarity
+1.3.3 | 3.3 Mapping coherence
+1.4 | 4 OpenTapioca: an entity linking model for Wikidata
+1.4.1 | 4.1 Local compatibility
+1.4.2 | 4.2 Semantic similarity
+1.4.3 | 4.3 Classifying entities in context
+1.5 | 5 Experimental setup
+1.6 | 6 Conclusion
+1.7 | Bibliography
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_all (call_7LfwEprV9PdEG42XVrqp7bFH)
+ Call ID: call_7LfwEprV9PdEG42XVrqp7bFH
+  Args:
+    pattern: (state|sota|state-of-the-art|accuracy|accurac)
+
+================================= Tool Message =================================
+Name: grep_search_all
+
+1.2 | 2 Particularities of Wikidata
+Wikidata is a wiki itself, meaning that it can be edited by anyone, but differs from usual wikis by its data model: information about an entity can only be input as structured data, in a format that is similar to RDF.Wikidata stores information about the world in a collection of items , which are structured wiki pages. Items are identified by ther Q-id, such as Q40469, and they are made of several data fields. The label stores the preferred name for the entity.  It is supported by a description , a short phrase describing the item to disambiguate it from namesakes, and aliases are alternate names for the entity. These three fields are stored separately for each language supported by Wikidata. Items also hold a collection of statements : these are RDF-style claims which have the item as subject. They can be backed by references and be made more precise with qualifiers , which all rely on a controlled vocabulary of properties (similar to RDF predicates).  Finally, items can have site links , connecting them to the corresponding page for the entity in other Wikimedia projects (such as Wikipedia). Note that Wikidata items to not need to be associated with any Wikipedia page: in fact, Wikidata’s policy on the notability of the subjects it covers is much more permissive than in Wikipedia.  For a more detailed introduction to Wikidata’s data model we refer the reader to Vrandeˇci´c and Kr¨otzsch (2014); Geiß et al. (2017).Our goal is to evaluate the usefulness of this crowdsourced structured data for en- tity linking. We will therefore refrain from augmenting it with any external data (such as phrases and topical information extracted from Wikipedia pages), as is generally done when working with DBpedia or YAGO.  By avoiding a complex mash-up of data coming from disparate sources, our entity linking system is also simpler and easier to reproduce. Finally, it is possible keep OpenTapioca in real-time synchronization with the live version of Wikidata, with a lag of a few seconds only. This means that users are able to fix or improve the knowledge graph, for instance by adding a missing alias on an item, and immediately see the benefits on their entity linking task.  This constrasts with all other systems we are aware of, where the user either cannot directly intervene on the underlying data, or there is a significant delay in propagating these updates to the entity linking system.OpenTapioca: Lightweight Entity Linking for Wikidata 3
+
+1.3.3 | 3.3 Mapping coherence
+Entities mentioned in the same context are often topically related, therefore it is useful not to treat linking decisions in isolation but rather to try to maximize topical coherence in the chosen items. This is the issue on which entity linking systems differ the most as it is harder to model.First, we need to estimate the topical coherence of a sequence of linking decisions. This is often done by first defining a pairwise relatedness score between the target enti- ties.  For instance, a popular metric introduced by Witten and Milne (2008) considers the set of wiki links | a | , | b | made from or to two entities a , b and computes their relatedness:
+rel ( a, b ) = 1 − log(max( | a | , | b | )) − log( | a | ∩ | b | ) log( | K | ) − log(min( | a | , | b | ))
+ where | K | is the number of entities in the knowledge base.When linking to Wikidata instead of Wikipedia, it is tempting to reuse these heuris- tics, replacing wikilinks by statements. However, Wikidata’s linking structure is quite different from Wikipedia: statements are generally a lot sparser than links and they have
+2 The guidelines are available at https://www.wikidata.org/wiki/Help:Aliases
+ OpenTapioca: Lightweight Entity Linking for Wikidata 5
+a precise semantic meaning, as editors are restricted by the available properties when creating new statements. We propose in the next section a similarity measure that we find to perform well experimentally.Once a notion of semantic similarity is chosen, we need to integrate it in the infer- ence process.  Most approaches build a graph of candidate entities, where edges indicate semantic relatedness: the difference between the heuristics lie in the way this graph is used for the matching decisions. Moro et al. (2014) use an approximate algorithm to find the densest subgraph of the semantic graph. This determines choices of entities for each mention.  In other approaches, the initial evidence given by the local compatibil- ity score is propagated along the edges of the semantic graph (Mihalcea and Csomai, 2007; Han et al., 2011) or aggregated at a global level with a Conditional Random Field (Ganea and Hofmann, 2017).
+
+1.4.1 | 4.1 Local compatibility
+Although Wikidata makes it impossible to count how often a particular label or alias is used to refer to an entity, these surface forms are carefully curated by the community. They are therefore fairly reliable.Given an entity e and a phrase d [ s ] , we need to compute p ( e | d [ s ]) .  Having no ac- cess to such a probability distribution, we choose to approximate this quantity by p ( e ) p ( d [ s ]) , where p ( e ) is the probability that e is linked to, and p ( d [ s ]) is the probability that d [ s ] occurs in a text. In other words, we estimate the popularity of the entity and the com- monness of the phrase separately. We estimate the popularity of an entity e by a log-linear combination of its number of statements n e , site links s e and its PageRank r ( e ) . The PageRank is computed on the entire Wikidata using statement values and qualifiers as edges.The probability p ( d [ s ]) is estimated by a simple unigram language model that can be trained either on any large unannotated dataset 3 . The local compatibility is therefore represented by a vector of features F ( e, w ) and the local compatibility is computed as follows, where λ is a weights vector:
+F ( e, w ) = ( − log p ( d [ s ]) , log p ( e ) , n e , s e , 1) p ( e | d [ s ]) ∝ e F ( e,w ) · λ
+ 3 For the sake of respecting our constraint to use Wikidata only, we train this language model from Wikidata item labels.6 Antonin Delpeuch
+
+1.4.2 | 4.2 Semantic similarity
+The issue with the features above is that they ignore the context in which a mention in found. To make it context-sensitive, we adapt the approach of Han et al. (2011) to our setup. The general idea is to define a graph on the candidate entities, linking candidate entities which are semantically related, and then find a combination of candidate entities which have both high local compatibility and which are densely related in the graph. For each pair of entities e, e ′ we define a similarity metric s ( e, e ′ ) . Let l ( e ) be the set of items that e links to in its statements. Consider a one-step random walks starting on e , with probability β to stay on e and probability 1 − β | l ( e ) | to reach one of the linked items.  We define s ( e, e ′ ) as the probability that two such one-step random walks starting from e and e ′ end up on the same item. This can be computed explicitly as
+ s ( e, e ′ ) = β 2 δ e = e ′ + β (1 − β )( δ e ∈ l ( e ′ ) | l ( e ′ ) | + δ e ′ ∈ l ( e ) | l ( e ) | ) + (1 − β ) 2 | l ( e ) ∩ l ( e ′ ) | | l ( e ) || l ( e ′ ) |
+ In this formula, δ P stands for 1 when P is true and 0 otherwise.We then build a weighted graph G d whose vertices are pairs ( s ∈ d, e ∈ E [ s ]) . In other words, we add a vertex for each candidate entity at a given spot.  We fix a maximum distance D for edges: vertices ( s, e ) and ( s ′ , e ′ ) can only be linked if | s − s ′ | ≤ D and s 6 = s ′ . In this case, we define the weight of such an edge as ( η + s ( e, e ′ )) D −| s − s ′ | D , where η is a smoothing parameter.  In other words, the edge weight is proportional to the smoothed similarity between the entities, discounted by the distance between the mentions.The weighted graph G d can be represented as an adjacency matrix. We transform it into a column-stochastic matrix M d by normalizing its columns to sum to one. This defines a Markov chain on the candidate entities, that we will use to propagate the local evidence.
+
+1.6 | 6 Conclusion
+The surface forms curated by Wikidata editors are sufficient to reach honourable re- call, without the need to expand them with mentions extracted from Wikipedia. Our restriction to people, locations and organizations probably helps in this regard and we anticipate worse performance for broader domains. Our approach works best for sci- entific affiliations, where spelling is more canonical than in newswire. The availability
+5 This is the case of Julie Pace (Q34666768) in Figure 1. 6 We built the nifconverter tool to do this conversion for any NIF dataset.7 The original data is available under an Etalab license at https://www.istex.fr/
+8 The full details can be found at http://w3id.org/gerbil/experiment?id=201904110006
+8 Antonin Delpeuch
+AIDA-CoNLL Microposts 2016 Micro Macro Micro Macro AIDA 0.725 0. 684 0.056 0.729 Babelfy 0.481 0.421 0.031 0.526 DBP Spotlight 0.528 0.456 0.053 0.306 FREME NER 0.382 0.237 0.037 0.790 OpenTapioca 0.482 0.399 0.087 0. 515 ISTEX-1000 RSS-500 Micro Macro Micro Macro AIDA 0.531 0.494 0.455 0.447 Babelfy 0.461 0.447 0.314 0.304 DBP Spotlight 0.574 0.575 0.281 0.261 FREME NER 0.422 0.321 0.307 0.274 OpenTapioca 0.870 0. 858 0.335 0.310
+Fig. 2. F1 scores on test datasets
+of Twitter identifiers directly in Wikidata helps us to reach acceptable performance in this domain. The accuracy degrades on longer texts which require relying more on the ambiant topical context. In future work, we would like to explore the use of entity em- beddings to improve our approach in this regard.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_all (call_abiE8iv50mW4GP1N7GIihjmu)
+ Call ID: call_abiE8iv50mW4GP1N7GIihjmu
+  Args:
+    pattern: sota|state-of-the-art|state of the art
+
+================================= Tool Message =================================
+Name: grep_search_all
+
+No matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_all (call_1vOcomv6thG1efbbu5K7xgW1)
+ Call ID: call_1vOcomv6thG1efbbu5K7xgW1
+  Args:
+    pattern: OpenTapioca
+
+================================= Tool Message =================================
+Name: grep_search_all
+
+1.1 | 1 Introduction
+Named Entity Linking is the task of detecting mentions of entities from a knowledge base in free text, as illustrated in Figure 1.Most of the entity linking literature focuses on target knowledge bases which are derived from Wikipedia, such as DBpedia (Auer et al., 2007) or YAGO Suchanek et al. (2007). These bases are curated automatically by harvesting information from the info- boxes and categories on each Wikipedia page and are therefore not editable directly. Wikidata Vrandeˇci´c and Kr¨otzsch (2014) is an editable, multilingual knowledge base which has recently gained popularity as a target database for entity linking (Klang and Nugues, 2014; Weichselbraun et al., 2018; Sorokin and Gurevych, 2018; Raiman and Raiman, 2018).  As these new approaches to entity linking also introduce novel learning meth- ods, it is hard to tell apart the benefits that come from the new models and those which come from the choice of knowledge graph and the quality of its data.We review the main differences between Wikidata and static knowledge bases ex- tracted from Wikipedia, and analyze their implactions for entity linking.  We illustrate these differences by building a simple entity linker, OpenTapioca 1 , which only uses data from Wikidata, and show that it is competitive with other systems with access to larger data sources for some tasks. OpenTapioca can be trained easily from a Wikidata dump only, and can be efficiently kept up to date in real time as Wikidata evolves.  We also propose tools to adapt existing entity linking datasets to Wikidata, and offer a new entity linking dataset, consisting of affiliation strings extracted from research articles.1 The implementation and datasets are available at https://github.com/wetneb/opentapioca and the demo can be found at https://opentapioca.org/ .2 Antonin Delpeuch
+Fig. 1. Example of an annotated sentence
+
+1.2 | 2 Particularities of Wikidata
+Wikidata is a wiki itself, meaning that it can be edited by anyone, but differs from usual wikis by its data model: information about an entity can only be input as structured data, in a format that is similar to RDF.Wikidata stores information about the world in a collection of items , which are structured wiki pages. Items are identified by ther Q-id, such as Q40469, and they are made of several data fields. The label stores the preferred name for the entity.  It is supported by a description , a short phrase describing the item to disambiguate it from namesakes, and aliases are alternate names for the entity. These three fields are stored separately for each language supported by Wikidata. Items also hold a collection of statements : these are RDF-style claims which have the item as subject. They can be backed by references and be made more precise with qualifiers , which all rely on a controlled vocabulary of properties (similar to RDF predicates).  Finally, items can have site links , connecting them to the corresponding page for the entity in other Wikimedia projects (such as Wikipedia). Note that Wikidata items to not need to be associated with any Wikipedia page: in fact, Wikidata’s policy on the notability of the subjects it covers is much more permissive than in Wikipedia.  For a more detailed introduction to Wikidata’s data model we refer the reader to Vrandeˇci´c and Kr¨otzsch (2014); Geiß et al. (2017).Our goal is to evaluate the usefulness of this crowdsourced structured data for en- tity linking. We will therefore refrain from augmenting it with any external data (such as phrases and topical information extracted from Wikipedia pages), as is generally done when working with DBpedia or YAGO.  By avoiding a complex mash-up of data coming from disparate sources, our entity linking system is also simpler and easier to reproduce. Finally, it is possible keep OpenTapioca in real-time synchronization with the live version of Wikidata, with a lag of a few seconds only. This means that users are able to fix or improve the knowledge graph, for instance by adding a missing alias on an item, and immediately see the benefits on their entity linking task.  This constrasts with all other systems we are aware of, where the user either cannot directly intervene on the underlying data, or there is a significant delay in propagating these updates to the entity linking system.OpenTapioca: Lightweight Entity Linking for Wikidata 3
+
+1.3.3 | 3.3 Mapping coherence
+Entities mentioned in the same context are often topically related, therefore it is useful not to treat linking decisions in isolation but rather to try to maximize topical coherence in the chosen items. This is the issue on which entity linking systems differ the most as it is harder to model.First, we need to estimate the topical coherence of a sequence of linking decisions. This is often done by first defining a pairwise relatedness score between the target enti- ties.  For instance, a popular metric introduced by Witten and Milne (2008) considers the set of wiki links | a | , | b | made from or to two entities a , b and computes their relatedness:
+rel ( a, b ) = 1 − log(max( | a | , | b | )) − log( | a | ∩ | b | ) log( | K | ) − log(min( | a | , | b | ))
+ where | K | is the number of entities in the knowledge base.When linking to Wikidata instead of Wikipedia, it is tempting to reuse these heuris- tics, replacing wikilinks by statements. However, Wikidata’s linking structure is quite different from Wikipedia: statements are generally a lot sparser than links and they have
+2 The guidelines are available at https://www.wikidata.org/wiki/Help:Aliases
+ OpenTapioca: Lightweight Entity Linking for Wikidata 5
+a precise semantic meaning, as editors are restricted by the available properties when creating new statements. We propose in the next section a similarity measure that we find to perform well experimentally.Once a notion of semantic similarity is chosen, we need to integrate it in the infer- ence process.  Most approaches build a graph of candidate entities, where edges indicate semantic relatedness: the difference between the heuristics lie in the way this graph is used for the matching decisions. Moro et al. (2014) use an approximate algorithm to find the densest subgraph of the semantic graph. This determines choices of entities for each mention.  In other approaches, the initial evidence given by the local compatibil- ity score is propagated along the edges of the semantic graph (Mihalcea and Csomai, 2007; Han et al., 2011) or aggregated at a global level with a Conditional Random Field (Ganea and Hofmann, 2017).
+
+1.4.3 | 4.3 Classifying entities in context
+Han et al. (2011) first combine the local features into a local evidence score, and then spread this local evidence using the Markov chain:
+G ( d ) = ( αI + (1 − α ) M d ) k · LC ( d ) (1)
+We propose a variant of this approach, where each individual local compatibility fea- ture is propagated independently along the Markov chain.  4 Let F be the matrix of all local features for each candidate entity: F = ( F ( e 1 , d [ s 1 ]) , . . . , F ( e n , d [ s n ])) . After k iterations in the Markov chain, this defines features M k d F . Rather than relying on these features for a fixed number of steps k , we record the features at each step, which defines the vector
+ ( F, M d · F, M 2 d · F, . . . , M k d · F )
+4 It is important for this purpose that features are initially scaled to the unit interval.OpenTapioca: Lightweight Entity Linking for Wikidata 7
+This alleviates the need for an α parameter while keeping the number of features small. We train a linear support vector classifier on these features and this defines the final score of each candidate entity.  For each spot, our system picks the highest-scoring can- didate entity that the classifier predicts as a match, if any.
+
+1.5 | 5 Experimental setup
+Most entity linking datasets are annotated against DBpedia or YAGO. Wikidata contains items which do not have any corresponding Wikipedia article (in any language), so these items do not have any DBpedia or YAGO URI either. 5 Therefore, converting an entity linking dataset from DBpedia to Wikidata requires more effort than simply following owl:sameAs links: we also need to annotate mentions of Wikidata items which do not have a corresponding DBpedia URI. We used the RSS-500 dataset of news excerpts annotated against DBpedia and en- coded in NIF format (Usbeck et al., 2015). We first translated all DBpedia URIs to Wikidata items 6 . Then, we used OpenRefine (Huynh et al., 2019) to extract the entities marked not covered by DBpedia and matched them against Wikidata.  After human re- view, this added 63 new links to the 524 converted from DBpedia (out of 476 out-of-KB entities).We also annotated a new dataset from scratch. The ISTEX dataset consists of one thousand author affiliation strings extracted from research articles and exposed by the ISTEX text and data mining service 7 . In this dataset, only 64 of the 2,624 Wikidata mentions do not have a corresponding DBpedia URI. We use the Wikidata JSON dump of 2018-02-24 for our experiments, indexed with Solr (Lucene). We restrict the index to humans, organizations and locations, by selecting only items whose type was a subclass of (P279) human (Q5), organization (Q43229) or geographical object (Q618123). Labels and aliases in all languages are added to a case- sensitive FST index. We trained our classifier and its hyper-parameters by five-fold cross-validation on the training sets of the ISTEX and RSS datasets. We used GERBIL (Usbeck et al., 2015) to evaluate OpenTapioca against other approaches. We report the InKB micro and macro F1 scores on test sets, with GERBIL’s weak annotation match method. 8
+
+1.6 | 6 Conclusion
+The surface forms curated by Wikidata editors are sufficient to reach honourable re- call, without the need to expand them with mentions extracte...(truncated)
+
+================================== Ai Message ==================================
+
+Unanswerable

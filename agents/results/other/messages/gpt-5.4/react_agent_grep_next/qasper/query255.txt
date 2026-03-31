@@ -1,0 +1,92 @@
+================================ Human Message =================================
+
+QUERY:
+How many layers does their model have?
+
+TABLE OF CONTENTS (TOC):
+1 | One Single Deep Bidirectional LSTM Network for Word Sense Disambiguation of Text Data
+1.1 | 1 Introduction
+1.2 | 2 Background and Related Work
+1.2.1 | 2.1 Neural Embeddings for WSD
+1.2.2 | 2.2 Bidirectional LSTM
+1.3 | 3 One Single BLSTM network for WSD
+1.3.1 | 3.1 Model Definition
+1.3.2 | 3.2 Validation for Selection of Hyper-parameters
+1.3.3 | 3.3 Dropout and Dropword
+1.4 | 4 Experiments
+1.4.1 | 4.1 Experimental Settings
+1.4.2 | 4.2 Results
+1.4.3 | 4.3 Discussion
+1.5 | 5 Conclusion
+1.6 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_3D0yejXRlE0sGBWTvewkxpC6)
+ Call ID: call_3D0yejXRlE0sGBWTvewkxpC6
+  Args:
+    pattern: layer|layers|single deep|BLSTM network
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.2.1 | 2.1 Neural Embeddings for WSD
+In the past few years, there has been an increasing interest in training neural word embeddings from large unlabeled corpora using neural networks [10][11]. Word embeddings are typically represented as a dense real-valued low dimen- sional matrix W (i.e. a lookup table ) of size d × v , where d is the predefined embedding dimension and v is the vocabulary size.  Each column of the matrix is an embedding vector associated with a word in the vocabulary and each row of the matrix represents a latent feature. These vectors can subsequently be used to initialize the input layer of a neural network or some other NLP model. GloVe
+4 https://www.nlm.nih.gov/research/umls/
+ [3] is one of the existing unsupervised learning algorithms for obtaining these vector representations of the words in which training is performed on aggregated global word-word co-occurrence statistics from a corpus.Besides word embeddings, recently, computation of sense embeddings has gained the attention of numerous studies as well. For example, Chen et al. [12] adapted neural word embeddings to compute different sense embeddings (of the same word) and showed competitive performance on the SemEval-2007 data [13].
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_nzjSBrxhM40vyDsaJg1KOiQI)
+ Call ID: call_nzjSBrxhM40vyDsaJg1KOiQI
+  Args:
+    section_id: 1.3.1
+
+================================= Tool Message =================================
+Name: read_section
+
+3.1 Model Definition
+For one instance (or one document), the input of the network consists of a sense and a list of context words (left and right) which paired together form a list of context components. For the context D which encompasses the ambiguous term T , that takes the set of predefined candidate senses { s 1 , ..., s n } , the input for the sense s i for which we are interested in to find out whether the context is a proper match will be determined by Eq.  (1). Then, this input is copied (next) to | D | positions of the context to form the first pair of the context components.l i = W l s · v v v s ( s i ) , i ∈ { 1 , ..., n } . (1)
+Here, v v v s ( s i ) is the one-hot representation of the sense corresponding to s i ∈ { s 1 , ..., s n } .  A one-hot representation is a vector with dimension V s consisting of | V s |− 1 zeros and a single one which index indicates the sense. The V s size is equal to the number of all senses in the language (or the domain of interest). Eq. (1) will have the effect of picking the column (i.e. sense embeddings) from W l s corresponding to that sense.  The W l s (stored in the sense embeddings lookup table) is initialized randomly since no sense embedding is computed a priori.Regarding the context words inputs that form the second pairs of context components, at position m in the same context D the input is determined by:
+x m = W x w · v v v w ( w m ) , m ∈ { −| D | / 2 , ..., − 2 , − 1 , 1 , 2 , . .., | D | / 2 } . (2)
+Here, v v v w ( w m ) is the one-hot representation of the word corresponding to w m ∈ D . Similar to a sense one-hot representation ( V s ), this one-hot representation is a vector with dimension V w consisting of | V w |− 1 zeros and a single one which index indicates the word in the context.  The V w size is equal to the number of words in the language (or the domain of interest). Eq. (2) will choose the column (i.e. word embeddings) from W x w corresponding to that word. The W x w (stored in the word embeddings lookup table) can be initialized using pre-trained word embeddings; in this work, GloVe vectors are used.On the other hand, the output of the network that is examining sense s i is
+ ˆ y s i = σ ( W out · h cl + b out ) , s i ∈ { s 1 , ..., s n } (3)
+where W out ∈ R 1 × 50 and b out ∈ R are the weights and the bias of the classifi- cation layer (sigmoid), and h cl is the result of the merge layer (concatenation). When we train the network, for an instance with the correct sense and the given context as inputs, ˆ y s i is set to be 1.0 , and for incorrect senses they are set to be 0.0 .  During testing, however, among all the senses, the output of the network for a sense that gives the highest value of ˆ y s i will be considered as the true sense of the ambiguous term, in other words, the correct sense would be:
+arg max s i { ˆ y s 1 , ..., ˆ y s n } , s i ∈ { s 1 , ..., s n } . (4)
+ By applying softmax to the result of estimated classification values, { ˆ y s 1 , ..., ˆ y s n } , we can show them as probabilities; this facilitates interpretation of the results.Further, the hidden layer h cl is computed as
+h cl = ReLU ( W h · [ h L C − 1 ; h R C +1 ] + b h ) (5)
+ where ReLU means rectified linear unit; [ h L C − 1 ; h R C +1 ] is the concatenated out- puts of the right and left traversing LSTMs of the BLSTM when the last context components are met. W h and b h are the weights and bias for the hidden layer.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_eWZ0grW8WPlsyPBfAjC2kxr6)
+ Call ID: call_eWZ0grW8WPlsyPBfAjC2kxr6
+  Args:
+    section_id: 1.3
+
+================================= Tool Message =================================
+Name: read_section
+
+3 One Single BLSTM network for WSD
+Given a document and the position of a target word, our model computes a prob- ability distribution over possible senses related to that word. The architecture of our model, depicted in Fig. 1, consist of 6 layers which are a sigmoid layer (at the top), a fully-connected layer, a concatenation layer, a BLSTM layer, a cosine layer, and a sense and word embeddings layer (on the bottom). In contrast to other supervised neural WSD networks in which generally a softmax layer - with a cross entropy or hinge loss - is parameterized by the context words and selects the corresponding weight matrix and bias vector for each ambiguous word’s senses [16][17], our network shares parameters over all words’ senses. While remaining computationally efficient, this structure aims to encode statistical information across different words enabling the network to select the true sense (or even a proper word) in a blank space within a context. Due to the replacement of their softmax layers with a sigmoid layer in our network, we need to impose a modification in the input of the model. For this purpose, not only the contextual features are going to make the input of the network, but also, the sense for which we are interested to find out whether that given context makes sense or not (no pun intended) would be provided to the network.  Next, the context words would be transferred to a sequence of word embeddings while the sense would be represented as a sense embedding (the shaded embeddings in Fig. 1). For a set of candidate senses (i.e. { s 1 , ... , s n } ) for an ambiguous term, after computing cosine similarities of each sense embedding with the word embeddings of the context words, we expect the sequence result of similarities between the true sense and the surrounding context communicate a pattern-like information that can be encoded through our BLSTM network;
+Fig. 1: The single mo del of deep Bidirectional LSTM for W ord Sense Disam biguation of text data.  A series of (left and righ t) con text comp onen ts are cen tered around the am biguous w ord. The cosine similarit ie s b et w een the c on text w ords and th e examined sense as the outputs of the first tw o la y ers are fed to tw o LSTM net w orks with di ff eren t directions.  Then, the concatenated outputs of LSTMs is fed to a (bi nary) neural net w ork sense classifier consisting of one fully-connected la y er and a sigmoid unit. Finally , an argmax o v er the outputs of all the sigmoids for the set of candid ate senses selects the true sense, confirming this sequence of cosine similarities is the b est matc h for the correct sense based on the learned cosine similarities patterns during training of the net w ork. Si n gl e -c la ssif ie r B LS T M a rc h it e ct u re f o r W SD
+for the incorrect senses this premise does not hold. Several WSD studies already incorporated the idea of sense-context cosine similarities in their models [18][19].
+3.1 Model Definition
+For one instance (or one document), the input of the network consists of a sense and a list of context words (left and right) which paired together form a list of context components. For the context D which encompasses the ambiguous term T , that takes the set of predefined candidate senses { s 1 , ..., s n } , the input for the sense s i for which we are interested in to find out whether the context is a proper match will be determined by Eq.  (1). Then, this input is copied (next) to | D | positions of the context to form the first pair of the context components.l i = W l s · v v v s ( s i ) , i ∈ { 1 , ..., n } . (1)
+Here, v v v s ( s i ) is the one-hot representation of the sense corresponding to s i ∈ { s 1 , ..., s n } .  A one-hot representation is a vector with dimension V s consisting of | V s |− 1 zeros and a single one which index indicates the sense. The V s size is equal to the number of all senses in the language (or the domain of interest). Eq. (1) will have the effect of picking the column (i.e. sense embeddings) from W l s corresponding to that sense.  The W l s (stored in the sense embeddings lookup table) is initialized randomly since no sense embedding is computed a priori.Regarding the context words inputs that form the second pairs of context components, at position m in the same context D the input is determined by:
+x m = W x w · v v v w ( w m ) , m ∈ { −| D | / 2 , ..., − 2 , − 1 , 1 , 2 , . .., | D | / 2 } . (2)
+Here, v v v w ( w m ) is the one-hot representation of the word corresponding to w m ∈ D . Similar to a sense one-hot representation ( V s ), this one-hot representation is a vector with dimension V w consisting of | V w |− 1 zeros and a single one which index indicates the word in the context.  The V w size is equal to the number of words in the language (or the domain of interest). Eq. (2) will choose the column (i.e. word embeddings) from W x w corresponding to that word. The W x w (stored in the word embeddings lookup table) can be initialized using pre-trained word embeddings; in this work, GloVe vectors are used.On the other hand, the output of the network that is examining sense s i is
+ ˆ y s i = σ ( W out · h cl + b out ) , s i ∈ { s 1 , ..., s n } (3)
+where W out ∈ R 1 × 50 and b out ∈ R are the weights and the bias of the classifi- cation layer (sigmoid), and h cl is the result of the merge layer (concatenation). When we train the network, for an instance with the correct sense and the given context as inputs, ˆ y s i is set to be 1.0 , and for incorrect senses they are set to be 0.0 .  During testing, however, among all the senses, the output of the network for a sense that gives the highest value of ˆ y s i will be considered as the true sense of the ambiguous term, in other words, the correct sense would be:
+arg max s i { ˆ y s 1 , ..., ˆ y s n } , s i ∈ { s 1 , ..., s n } . (4)
+ By applying softmax to the result of estimated classification values, { ˆ y s 1 , ..., ˆ y s n } , we can show them as probabilities; this facilitates interpretation of the results.Further, the hidden layer h cl is computed as
+h cl = ReLU ( W h · [ h L C − 1 ; h R C +1 ] + b h ) (5)
+ where ReLU means rectified linear unit; [ h L C − 1 ; h R C +1 ] is the concatenated out- puts of the right and left traversing LSTMs of the BLSTM when the last context components are met. W h and b h are the weights and bias for the hidden layer.
+3.2 Validation for Selection of Hyper-parameters
+SensEval-3 data [4] on which the network is evaluated, consist of separate train- ing and test samples. In order to find hyper-parameters of the network 5% of the training samples were used for the validation in advance. Once the hyper- parameters are selected, the whole network is trained on all training samples prior to testing.  As to the loss function employed for the network, even though is it common to use (binary) cross entropy loss function when the last unit is a sigmoidal classification, we observed that mean square error led to better results for the final argmax classification (Eq. (4)) that we used. Regarding parameter optimization, RMSprop [20] is employed. Also, all weights including embeddings are updated during training.
+3.3 Dropout and Dropword
+Dropout [21] is a regularization technique for neural network models where ran- domly selected neurons are ignored during training. This means that their con- tribution to the activation of downstream neurons is temporally removed on the forward pass, and any weight updates are not applied to the neuron on the back- ward pass.  The effect is that the network becomes less sensitive to the specific weights of neurons, resulting in better generalization, and a network that is less likely to overfit the training data. In our network, dropout is applied to the embeddings as well as the outputs of the merge and fully-connected layers.Following the dropout logic, dropword [22] is the word level generalizations of it, but in word dropout the word is set to zero while in dropword it is replaced with a specific tag.  The tag is subsequently treated just like one word in the vocabulary. The motivation for doing dropword and word dropout is to decrease the dependency on individual words in the training context. Since by replacing word dropout with dropword we observed no change in the results, only word dropout was applied to the sequence of context words during training.
+
+================================== Ai Message ==================================
+
+6 layers.

@@ -1,0 +1,67 @@
+================================ Human Message =================================
+
+QUERY:
+Which weak signal data do they use?
+
+TABLE OF CONTENTS (TOC):
+1 | Improved and Robust Controversy Detection in General Web Pages Using Semantic Approaches under Large Scale Conditions
+1.1 | ABSTRACT
+1.2 | ACM Reference Format:
+1.3 | 1 INTRODUCTION & PRIOR WORK
+1.4 | 2 METHODS
+1.5 | 3 EXPERIMENTAL SETUP
+1.5.1 | 3.1 Datasets and evaluation
+1.5.2 | 3.2 Baseline models
+1.6 | 4 RESULTS
+1.6.1 | 4.1 Comparison of results with previous work
+1.6.2 | 4.2 Robustness of the model across time
+1.6.3 | 4.3 Robustness of the model across topics
+1.6.4 | 4.4 Robustness of the model across domains
+1.6.5 | 4.5 Human agreement
+1.7 | 5 CONCLUSION
+1.8 | REFERENCES
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_all (call_06SyAiXYfF2fFl5q7s6tqXDH)
+ Call ID: call_06SyAiXYfF2fFl5q7s6tqXDH
+  Args:
+    pattern: weak signal|weak signals|weak-signal|weak-signal data|weak signal data
+
+================================= Tool Message =================================
+Name: grep_search_all
+
+1.1 | ABSTRACT
+Detecting controversy in general web pages is a daunting task, but increasingly essential to efficiently moderate discussions and effec- tively filter problematic content. Unfortunately, controversies occur across many topics and domains, with great changes over time. This paper investigates neural classifiers as a more robust methodology for controversy detection in general web pages. Current models have often cast controversy detection on general web pages as Wikipedia linking, or exact lexical matching tasks.  The diverse and changing nature of controversies suggest that semantic approaches are better able to detect controversy. We train neural networks that can capture semantic information from texts using weak signal data. By leveraging the semantic properties of word embeddings we robustly improve on existing controversy detection methods. To evaluate model stability over time and to unseen topics, we asses model performance under varying training conditions to test cross- temporal, cross-topic, cross-domain performance and annotator congruence.  In doing so, we demonstrate that weak-signal based neural approaches are closer to human estimates of controversy and are more robust to the inherent variability of controversies.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_all (call_VOoluO136rqW4YWSjQO62nYi)
+ Call ID: call_VOoluO136rqW4YWSjQO62nYi
+  Args:
+    pattern: Wikipedia|weak|signal|distant|labels|training|silver|noisy|heuristic|annotation|Crowd|controversy|linking
+
+================================= Tool Message =================================
+Name: grep_search_all
+
+1.1 | ABSTRACT
+Detecting controversy in general web pages is a daunting task, but increasingly essential to efficiently moderate discussions and effec- tively filter problematic content. Unfortunately, controversies occur across many topics and domains, with great changes over time. This paper investigates neural classifiers as a more robust methodology for controversy detection in general web pages. Current models have often cast controversy detection on general web pages as Wikipedia linking, or exact lexical matching tasks.  The diverse and changing nature of controversies suggest that semantic approaches are better able to detect controversy. We train neural networks that can capture semantic information from texts using weak signal data. By leveraging the semantic properties of word embeddings we robustly improve on existing controversy detection methods. To evaluate model stability over time and to unseen topics, we asses model performance under varying training conditions to test cross- temporal, cross-topic, cross-domain performance and annotator congruence.  In doing so, we demonstrate that weak-signal based neural approaches are closer to human estimates of controversy and are more robust to the inherent variability of controversies.
+
+1.3 | 1 INTRODUCTION & PRIOR WORK
+Controversy detection is an increasingly important task. Controver- sial content can signal the need for moderation on social platforms, either to prevent conflict between users or limit the spread of mis- information. More generally, controversies provide insight into societies [4]. Often, the controversial content is outside the direct control of a platform on which it is shared, mentioned or discussed. This raises the requirement of generally applicable methods to gauge controversial content on the web for moderation purposes.  Unfortunately, what is controversial changes, and may lie more in
+the way topics are discussed rather than what is discussed, making it difficult to detect controversies in a robust fashion. We take the task of controversy detection and evaluate robustness of different methodologies with respect to the varying nature of controversies. Prior work on detecting controversies has taken three kinds of approaches: 1) lexical approaches , which seek to detect contro- versies through signal terms , either through bag-of-word classifiers, lexicons, or lexicon based language models [6]. 2) explicit mod- eling of controversy through platform-specific features, often in Wikipedia or social-media settings.  Features such as mutual reverts [14], user-provided flags [2], interaction networks [12] or stance- distributions [7] have been used as platform-specific indicators of controversies. The downside of these approaches is the lack of generalizability due to their platform-specific nature. 3) matching models that combine lexical and explicit modelling approaches by looking at lexical similarities between a given text and a set of texts in a domain that provides explicit features [3, 6, 8]. Controversy detection is a difficult task because 1) controversies are latent , like ideology, meaning they are often not directly men- tioned as controversial in text. 2) Controversies occur across a vast range of topics with varying topic-specific vocabularies. 3) Contro- versies change over time, with some topics and actors becoming controversial whereas others stop to be so. Previous approaches lack the power to deal with such changes.  Matching and explicit ap- proaches are problematic when the source corpus (e.g. Wikipedia) lags after real-world changes [5]. Furthermore, lexical methods trained on common (e.g. fulltext) features are likely to memorize the controversial topics in the training set rather than the ‘language of controversy’. Alleviating dependence on platform specific fea- tures and reducing sensitivity to an exact lexical representation is paramount to robust controversy detection.  To this end, we focus only on fulltext features and suggest to leverage the semantic rep- resentations of word embeddings to reduce the vocabulary-gap for unseen topics and exact lexical representations.The majority of NLP-task related neural architectures rely on word embeddings, popularized by Mikolov et al [11] to represent texts. In essence these embeddings are latent-vector representations that aim to capture the underlying meaning of words.  Distances between such latent-vectors are taken to express semantic related- ness, despite having different surface forms. By using embeddings, neural architectures are also able to leverage features learned on other texts (e.g. pretrained word embeddings) and create higher level representations of input (e.g. convolutional feature maps or hidden-states). These properties suggest that neural approaches are better able to generalize to unseen examples that poorly match the training set.  We use two often applied network architectures adopt- ing word embeddings, to classify controversy: Recurrent Neural Networks [13] and Convolutional Neural Networks [9] to answer
+Permission to make digital or hard copies of all or part of this work for personal or classroom use is granted without fee provided that copies are not made or distributed for profit or commercial advantage and that copies bear this notice and the full citation on the first page.  Copyrights for components of this work owned by others than the author(s) must be honored. Abstracting with credit is permitted. To copy otherwise, or republish, to post on servers or to redistribute to lists, requires prior specific permission and/or a fee. Request permissions from permissions@acm.org.CIKM ’18, October 22–26, 2018, Torino, Italy
+© 2018 Copyright held by the owner/author(s).  Publication rights licensed to the Association for Computing Machinery.ACM ISBN 978-1-4503-6014-2/18/10. . . $15.00
+https://doi.org/10.1145/3269206.3269301
+the following research question. RQ: Can we increase robustness of controversy detection using neural methods? Currently, there is no open large-size controversy detection dataset that lends itself to test cross-temporal and cross-topic stabil- ity. Thus we generate a Wikipedia crawl-based dataset that includes general web pages and is sufficiently large to train and test high capacity models such as neural networks.
+
+1.4 | 2 METHODS
+A proven approach in modelling text with neural networks is to use Recurrent Neural Networks (RNNs) which enjoy weight sharing ca- pabilities to model words irrespective of their sequence location. A specific type, the Hierarchical Attention Network (HAN) proposed by [13] makes use of attention to build document representations in a hierarchical manner. It uses bi-directional Gated Recurrent Units (GRUs) [1] to selectively update representations of both words and sentences.  This allows the network to both capture the hierarchy from words to sentences to documents and to explicitly weigh all parts of the document relevant during inference.Recently, Convolutional Neural Networks (CNNs) have enjoyed increasing success in text classification. One such network intro- duced by [9] looks at patterns in words within a window, such as "Scientology [...] brainwashes people".  The occurrences of these patterns are then summarized to their ’strongest’ observation (max- pooling) and used for classification. Since pooling is applied after each convolution, the output size of each convolutional operation itself is irrelevant. Therefore, filters of different sizes can be used, each capturing patterns in different sized word windows.We explore the potential of RNNs and CNNs for controversy detection using both the HAN [13] and the CNN [9] model 1 .  Sim- ilar to [13], each bi-directional GRU cell is set to a dimension of 50, resulting in a word/sentence representation of size 100 after concatenation. The word/sentence attention vectors similarly con- tain 100 dimensions, all randomly initialized. The word windows defined in the CNN model are set to sizes: 2, 3 and 4 with 128 fea- ture maps each.  Each model is trained using mini batches of size 64 and uses both dropout (0.5) and l 2 regularization (1e-3) at the dense prediction layer. Both networks use pre-trained embeddings, trained on 100 billion words of a Google News corpus 2 , which are further fine-tuned during training on the controversy dataset. The optimization algorithm used is Adam[10] (learning rate: 1e-3).
+
+1.5.1 | 3.1 Datasets and evaluation
+We use the Clueweb09 derived dataset of [4] for baseline compari- son. For cross-temporal, cross-topic and cross-domain training & evaluation, we generate a new dataset based on Wikipedia crawl data 3 . This dataset is gathered by using Wikipedia’s ‘List of Con- toversial articles’ overview page of 2018 (time of writing) and 2009 (for comparison with baselines) 4 .  Using this as a ‘seed’ set of con- troversial articles, we iteratively crawl the ‘See also’, ‘References’ and ‘External links’ hyperlinks up to two hops from the seed list.The negative seed pages (i.e. non controversial) are gathered by using the random article endpoint 5 . The snowball-sample approach includes general, non-Wikipedia, pages that are referred to from Wikipedia pages.  The dataset thus extends beyond just the ency- clopedia genre of texts. Labels are assumed to propagate: a page linked from a controversial issue is assumed to be controversial. The resulting dataset statistics are summarized in Table 1.Table 1: Wikipedia derived dataset statistics. Including the percentages of controversial (i.e. positive labelled) and general (i.e. non-Wikipedia) web pages from the total amount of pages per dataset split. Set Seeds Total Controversial General Web Train 5600 23.703 7.233 (31%) 15.449 (65%) Validation 200 988 651 (66%) 688 (70%) Test 200 1.024 654 (64%) 723 (71%)
+To be useful as a flagging mechanism for moderation, a contro- vers...(truncated)
+
+================================== Ai Message ==================================
+
+They use Wikipedia-derived weak-signal data generated by crawling pages linked (via "See also", "References" and "External links") up to two hops from Wikipedia’s "List of Controversial articles", assuming labels propagate (a page linked from a controversial issue is assumed controversial). Negative seeds are random Wikipedia articles gathered via the Special:Random endpoint.

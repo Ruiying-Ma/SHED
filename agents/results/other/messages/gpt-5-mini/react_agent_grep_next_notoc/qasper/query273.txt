@@ -1,0 +1,49 @@
+================================ Human Message =================================
+
+QUERY:
+Is there a difference between the model's performance for morphologically impoverished and morphologically complex languages?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_lSg7tEIK7MEy9ibQRCrTQqEW)
+ Call ID: call_lSg7tEIK7MEy9ibQRCrTQqEW
+  Args:
+    pattern: morphologically impoverished|morphologically complex|morphologically
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+2.1 Morphemic analysis and semantics
+As word semantics is compositional, one might ask whether it is possible to learn morpheme representations, and compose them to obtain good word representations. Lazaridou et al. (2013) demonstrated precisely this: one can de- rive good representations of morphemes distribu- tionally, and apply tools from compositional dis- tributional semantics to obtain good word repre- sentations. Luong et al.  (2013) also trained a morphological composition model based on recur- sive neural networks. Botha and Blunsom (2014) built a language model incorporating morphemes, and demonstrated improvements in language mod- elling and in machine translation. All of these
+approaches incorporated external morphological knowledge, either in the form of gold standard morphological analyses such as CELEX (Baayen et al. , 1995) or an external morphological analyzer such as Morfessor (Creutz and Lagus, 2007).Unsupervised morphology induction aims to decide whether two words are morphologically re- lated or to generate a morphological analysis for a word (Goldwater et al., 2005; Goldsmith, 2001).  While they may use semantic insights to perform the morphological analysis (Soricut and Ochs, 2015), they typically are not concerned with ob- taining a semantic representation for morphemes, nor of the resulting word.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_ZXugK4NUrPG5iZsQQoQtEYIv)
+ Call ID: call_ZXugK4NUrPG5iZsQQoQtEYIv
+  Args:
+    pattern: morphologically complex|morphologically impoverished|rich morphology|poor morphology|morphological complexity|performance for|performance|languages|language
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+2.1 Morphemic analysis and semantics
+As word semantics is compositional, one might ask whether it is possible to learn morpheme representations, and compose them to obtain good word representations. Lazaridou et al. (2013) demonstrated precisely this: one can de- rive good representations of morphemes distribu- tionally, and apply tools from compositional dis- tributional semantics to obtain good word repre- sentations. Luong et al.  (2013) also trained a morphological composition model based on recur- sive neural networks. Botha and Blunsom (2014) built a language model incorporating morphemes, and demonstrated improvements in language mod- elling and in machine translation. All of these
+approaches incorporated external morphological knowledge, either in the form of gold standard morphological analyses such as CELEX (Baayen et al. , 1995) or an external morphological analyzer such as Morfessor (Creutz and Lagus, 2007).Unsupervised morphology induction aims to decide whether two words are morphologically re- lated or to generate a morphological analysis for a word (Goldwater et al., 2005; Goldsmith, 2001).  While they may use semantic insights to perform the morphological analysis (Soricut and Ochs, 2015), they typically are not concerned with ob- taining a semantic representation for morphemes, nor of the resulting word.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_bPz5Pzejl2tNiqEFGxvS0Lsk)
+ Call ID: call_bPz5Pzejl2tNiqEFGxvS0Lsk
+  Args:
+    pattern: impoverished
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+5 Discussion
+We only report results for English. However, En- glish is a morphologically impoverished language, with little inflection and relatively few productive patterns of derivation. Our morphology test set re- flects this, with over half the words consisting of a simple morpheme, and over 90% having at most 2 morphemes.This is unfortunate for our model, as it performs better on words with richer morphology.  It gives consistently more accurate morphological analy- ses for these words compared to standard base- lines, and matches word-level models for seman- tic similarity on rare words with rich morphol- ogy. In addition, it seems to learn morphosyntactic features to help solve the syntactic analogy task. Most of all, it is language-agnostic, and easy to port across different languages.  We thus expect our model to perform even better for languages with a richer morphology than English, such as Turkish and German.
+
+================================== Ai Message ==================================
+
+Yes — the model performs better on words and languages with richer morphology and is expected to do even better for morphologically rich languages (e.g., Turkish and German), whereas English is morphologically impoverished and limits the observed benefits.

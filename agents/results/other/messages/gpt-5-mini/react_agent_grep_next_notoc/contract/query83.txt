@@ -1,0 +1,279 @@
+================================ Human Message =================================
+
+HYPOTHESIS:
+Sharing with employees: Receiving Party may share some Confidential Information with some of Receiving Party's employees.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_G3ILSJR68DjAVdGdPbuXIrCc)
+ Call ID: call_G3ILSJR68DjAVdGdPbuXIrCc
+  Args:
+    pattern: employee
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+(d) independently developed by employees, agents or consultants of the Receiving Party; orconsultants of the Receiving Party; or
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_1mfhcwE9morcfEPvIosQlvm0)
+ Call ID: call_1mfhcwE9morcfEPvIosQlvm0
+  Args:
+    pattern: Receiving Party may share
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_ALzO1kNj3s0e4izuUtvES9LF)
+ Call ID: call_ALzO1kNj3s0e4izuUtvES9LF
+  Args:
+    pattern: employees of the Receiving Party
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_IyEeSPnQ8ITpScL4nic77Y8O)
+ Call ID: call_IyEeSPnQ8ITpScL4nic77Y8O
+  Args:
+    pattern: share.*employees
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_i7c7MWNVREMylLrhDF4eEzZ7)
+ Call ID: call_i7c7MWNVREMylLrhDF4eEzZ7
+  Args:
+    pattern: Disclosure to.*employees
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_wviVRuuAMJyxR0XxTWdrHYWY)
+ Call ID: call_wviVRuuAMJyxR0XxTWdrHYWY
+  Args:
+    pattern: disclos*.*employee
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+3.The  Receiving  Party  agrees  that  Confidential  Information  shall  be  used  only  for  the  purposes  of facilitating  the  business  relationship  between  the  Parties.     Additionally,  subject  to  section  4  below, the  Receiving  Party  shall  not  disclose  Confidential  Information  to  any  third  party  without  the  prior written  approval  of  the  Disclosing  Party.     The  Receiving  Party  shall  maintain  the  Confidential Information  with  at  least  the  same  degree  of  care  that  the  Receiving  Party  uses  to  protect  its  own similar categories of confidential and proprietary information, but no less than a reasonable degree of  care  under  the  circumstances.     The  Receiving  Party  shall  not  make  any  copies  of  Confidential Information  except  as  necessary  to  perform  hereunder.    Each  Party  shall  be  responsible  for  any breach  of  this  Agreement  by  such  Party,  its  employees,  agents,  officials,  representatives  or consultants acting within the scope of their engagement or employment.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_wwytJqp4zn2AwggxlfAslbtQ)
+ Call ID: call_wwytJqp4zn2AwggxlfAslbtQ
+  Args:
+    pattern: Section 4|4\.
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Item No.  14.1 Halifax Regional Council August 6, 2013
+TO: Mayor Savage and Members of Halifax Regional Council SUBMITTED BY: ___________________________________________________________ Richard Butts, Chief Administrative Officer __________________________________________________________ Mike Labrecque, Deputy Chief Administrative Officer DATE: July 31, 2013 SUBJECT: Non-Disclosure Agreement with the Province of Nova Scotia
+ORIGIN
+On June 25, 2013, Regional Council authorized the CAO to negotiate and execute an agreement for SAP support services with the Province of Nova Scotia.
+LEGISLATIVE AUTHORITY
+Under section 58(5) of the HRM Charter, Regional Council has the power to make and carry out a  contract.    Under  section  10(3)  of  the  HRM  Charter,  the  Mayor  and  Clerk  may  sign  any document to which the Municipality is a party on behalf of the Municipality.
+RECOMMENDATION
+It  is  recommended  that  Regional  Council  authorize  the  Mayor  and  Clerk  to  sign  a  Non- Disclosure Agreement with the Province of Nova Scotia with terms and conditions substantially similar to the draft agreement attached hereto as Attachment “A”.Non-Disclosure Agreement with the Province of NS - 2 - Council Report
+August 6, 2013
+BACKGROUND
+In furtherance of the June 25, 2013 directive of Regional Council, staff entered into negotiations with the Province of Nova Scotia  (“PNS”) on those terms and conditions that were not  already agreed to during transition planning.
+DISCUSSION
+It became apparent during these negotiations that HRM staff needed to be made aware of certain key terms of the PNS’ agreement with its SAP service provider in order to understand and be in a position to negotiate for appropriate service level standards.  The PNS has taken the position that it  cannot  disclose  this  and  other  information  to  HRM  unless  HRM  and  the  PNS  enter  into  a mutual Non-Disclosure Agreement. On July 26, 2013, the PNS forwarded a proposed Non-Disclosure Agreement to staff.  This Non- Disclosure  Agreement  permits  the  PNS  and  HRM  to  disclose  confidential  information  to  each other during the period of negotiations.   Any confidential information exchanged between HRM and the PNS “shall only be used for the purposes of facilitating the business relationship between the Parties” and once the agreement terminates each party must “promptly return or destroy” all confidential information received from the other party.It is the intention of HRM and the PNS to execute an agreement for the provision of SAP support services  before  September  9,  2013.     As  a  result,  staff  is  seeking  direction  on  this  matter  from Regional  Council  on  August  6,  2013,  rather  than  waiting  for  the  next  scheduled  meeting  of Regional Council on September 10, 2013.
+FINANCIAL IMPLICATIONS
+N/A
+COMMUNITY ENGAGEMENT
+N/A
+ENVIRONMENTAL IMPLICATIONS
+N/A
+Non-Disclosure Agreement with the Province of NS - 3 - Council Report
+August 6, 2013
+ALTERNATIVES
+Regional  Council  could  decline  to  authorize  execution  of  the  Non-Disclosure  Agreement,  in which  case  staff  will,  in  accordance  with  the  June  25,  2013  directive  of  Regional  Council, request  that the  PNS  continue to  negotiate with  HRM  with  the goal  of executing an agreement for  SAP  support  services,  notwithstanding  HRM’s  refusal  to  sign  the  Non-Disclosure Agreement. If  negotiations  are  permitted  to  continue  despite  HRM’s  refusal  to  sign  the  Non-Disclosure Agreement, it is  anticipated that the  PNS will refuse to  provide HRM  with  certain  confidential information  that  might  assist  HRM  in  formulating  and  pursuing  an  appropriate  negotiation position.
+ATTACHMENTS
+Attachment “A”: Draft Non-Disclosure Agreement
+______________________________________________________________________________ A copy of this report can be obtained online at http://www.halifax.ca/council/agendasc/cagenda.html then choose the appropriate meeting date, or by contacting the Office of the Municipal Clerk at 490-4210, or Fax 490-4208.  Report Prepared by: David Greener, Senior Solicitor, Legal Services, 490-3960 Report Approved by: ________________________________________________ Martin Ward, Q.C., Acting Director, Legal Services, 490-3960 ______________________________________________________________________________
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_ScJZVAQjlf38zqxsBaNSzDSo)
+ Call ID: call_ScJZVAQjlf38zqxsBaNSzDSo
+  Args:
+    pattern: 4\.
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Item No.  14.1 Halifax Regional Council August 6, 2013
+TO: Mayor Savage and Members of Halifax Regional Council SUBMITTED BY: ___________________________________________________________ Richard Butts, Chief Administrative Officer __________________________________________________________ Mike Labrecque, Deputy Chief Administrative Officer DATE: July 31, 2013 SUBJECT: Non-Disclosure Agreement with the Province of Nova Scotia
+ORIGIN
+On June 25, 2013, Regional Council authorized the CAO to negotiate and execute an agreement for SAP support services with the Province of Nova Scotia.
+LEGISLATIVE AUTHORITY
+Under section 58(5) of the HRM Charter, Regional Council has the power to make and carry out a  contract.    Under  section  10(3)  of  the  HRM  Charter,  the  Mayor  and  Clerk  may  sign  any document to which the Municipality is a party on behalf of the Municipality.
+RECOMMENDATION
+It  is  recommended  that  Regional  Council  authorize  the  Mayor  and  Clerk  to  sign  a  Non- Disclosure Agreement with the Province of Nova Scotia with terms and conditions substantially similar to the draft agreement attached hereto as Attachment “A”.Non-Disclosure Agreement with the Province of NS - 2 - Council Report
+August 6, 2013
+BACKGROUND
+In furtherance of the June 25, 2013 directive of Regional Council, staff entered into negotiations with the Province of Nova Scotia  (“PNS”) on those terms and conditions that were not  already agreed to during transition planning.
+DISCUSSION
+It became apparent during these negotiations that HRM staff needed to be made aware of certain key terms of the PNS’ agreement with its SAP service provider in order to understand and be in a position to negotiate for appropriate service level standards.  The PNS has taken the position that it  cannot  disclose  this  and  other  information  to  HRM  unless  HRM  and  the  PNS  enter  into  a mutual Non-Disclosure Agreement. On July 26, 2013, the PNS forwarded a proposed Non-Disclosure Agreement to staff.  This Non- Disclosure  Agreement  permits  the  PNS  and  HRM  to  disclose  confidential  information  to  each other during the period of negotiations.   Any confidential information exchanged between HRM and the PNS “shall only be used for the purposes of facilitating the business relationship between the Parties” and once the agreement terminates each party must “promptly return or destroy” all confidential information received from the other party.It is the intention of HRM and the PNS to execute an agreement for the provision of SAP support services  before  September  9,  2013.     As  a  result,  staff  is  seeking  direction  on  this  matter  from Regional  Council  on  August  6,  2013,  rather  than  waiting  for  the  next  scheduled  meeting  of Regional Council on September 10, 2013.
+FINANCIAL IMPLICATIONS
+N/A
+COMMUNITY ENGAGEMENT
+N/A
+ENVIRONMENTAL IMPLICATIONS
+N/A
+Non-Disclosure Agreement with the Province of NS - 3 - Council Report
+August 6, 2013
+ALTERNATIVES
+Regional  Council  could  decline  to  authorize  execution  of  the  Non-Disclosure  Agreement,  in which  case  staff  will,  in  accordance  with  the  June  25,  2013  directive  of  Regional  Council, request  that the  PNS  continue to  negotiate with  HRM  with  the goal  of executing an agreement for  SAP  support  services,  notwithstanding  HRM’s  refusal  to  sign  the  Non-Disclosure Agreement. If  negotiations  are  permitted  to  continue  despite  HRM’s  refusal  to  sign  the  Non-Disclosure Agreement, it is  anticipated that the  PNS will refuse to  provide HRM  with  certain  confidential information  that  might  assist  HRM  in  formulating  and  pursuing  an  appropriate  negotiation position.
+ATTACHMENTS
+Attachment “A”: Draft Non-Disclosure Agreement
+______________________________________________________________________________ A copy of this report can be obtained online at http://www.halifax.ca/council/agendasc/cagenda.html then choose the appropriate meeting date, or by contacting the Office of the Municipal Clerk at 490-4210, or Fax 490-4208.  Report Prepared by: David Greener, Senior Solicitor, Legal Services, 490-3960 Report Approved by: ________________________________________________ Martin Ward, Q.C., Acting Director, Legal Services, 490-3960 ______________________________________________________________________________
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_N7nu7W86o0cCKUrhkiOSmxXy)
+ Call ID: call_N7nu7W86o0cCKUrhkiOSmxXy
+  Args:
+    pattern: third party|third-party|third party without|without the prior written approval
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+(b) rightfully received from a third party with no duty of confidentiality; or
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_lyEjIpF6g2CL97hI77kvCBJp)
+ Call ID: call_lyEjIpF6g2CL97hI77kvCBJp
+  Args:
+    pattern: shall not disclose Confidential Information to any third party without the prior written approval of the Disclosing Party
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_1mRrV1qrw43sGfF7anMLhjUq)
+ Call ID: call_1mRrV1qrw43sGfF7anMLhjUq
+  Args:
+    pattern: Each  Party  shall  be  responsible  for  any breach  of  this  Agreement  by  such  Party,  its  employees,  agents,  officials,  representatives  or consultants
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+3.The  Receiving  Party  agrees  that  Confidential  Information  shall  be  used  only  for  the  purposes  of facilitating  the  business  relationship  between  the  Parties.     Additionally,  subject  to  section  4  below, the  Receiving  Party  shall  not  disclose  Confidential  Information  to  any  third  party  without  the  prior written  approval  of  the  Disclosing  Party.     The  Receiving  Party  shall  maintain  the  Confidential Information  with  at  least  the  same  degree  of  care  that  the  Receiving  Party  uses  to  protect  its  own similar categories of confidential and proprietary information, but no less than a reasonable degree of  care  under  the  circumstances.     The  Receiving  Party  shall  not  make  any  copies  of  Confidential Information  except  as  necessary  to  perform  hereunder.    Each  Party  shall  be  responsible  for  any breach  of  this  Agreement  by  such  Party,  its  employees,  agents,  officials,  representatives  or consultants acting within the scope of their engagement or employment.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_Hq4FNSJhzMdvVGE1MWyZ2EXv)
+ Call ID: call_Hq4FNSJhzMdvVGE1MWyZ2EXv
+  Args:
+    pattern: (a)
+    cursor: 0
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Tool 'grep_search_next' failed after 1 attempt with TypeError: grep_search_next() got an unexpected keyword argument 'cursor'. Please try again.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_948NtwdEmcr79ANViiYSfoHu)
+ Call ID: call_948NtwdEmcr79ANViiYSfoHu
+  Args:
+    pattern: \(a\)
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+(a) in the public domain other than by a breach of this Agreement by the Receiving Party;or
+2
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_l2Ywg0w1e4OZs2aGBxaTQzLD)
+ Call ID: call_l2Ywg0w1e4OZs2aGBxaTQzLD
+  Args:
+    pattern: 4 below|section 4|Section 4
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_aHMAMqjXAPk3qSMGkkoOKeYo)
+ Call ID: call_aHMAMqjXAPk3qSMGkkoOKeYo
+  Args:
+    pattern: Confidential Information shall mean|Confidential Information means|Confidential Information:|Confidential Information shall include
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_K2RQIJkRQ4qW6NfInjhCFzId)
+ Call ID: call_K2RQIJkRQ4qW6NfInjhCFzId
+  Args:
+    pattern: Confidential
+    cursor: 0
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Tool 'grep_search_next' failed after 1 attempt with TypeError: grep_search_next() got an unexpected keyword argument 'cursor'. Please try again.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_3FnJ3RmDle1XObm5dqUxLI0h)
+ Call ID: call_3FnJ3RmDle1XObm5dqUxLI0h
+  Args:
+    pattern: Draft Non-Disclosure Agreement|Draft Non-Disclosure|Attachment "A"|Attachment A
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+ATTACHMENTS
+Attachment “A”: Draft Non-Disclosure Agreement
+______________________________________________________________________________ A copy of this report can be obtained online at http://www.halifax.ca/council/agendasc/cagenda.html then choose the appropriate meeting date, or by contacting the Office of the Municipal Clerk at 490-4210, or Fax 490-4208.  Report Prepared by: David Greener, Senior Solicitor, Legal Services, 490-3960 Report Approved by: ________________________________________________ Martin Ward, Q.C., Acting Director, Legal Services, 490-3960 ______________________________________________________________________________
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_uERW9P5uhJWRUAAeQixog09d)
+ Call ID: call_uERW9P5uhJWRUAAeQixog09d
+  Args:
+    pattern: agents|consultant|consultants
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+(d) independently developed by employees, agents or consultants of the Receiving Party; orconsultants of the Receiving Party; or
+
+================================== Ai Message ==================================
+
+Entailment

@@ -1,0 +1,20 @@
+================================ Human Message =================================
+
+HYPOTHESIS:
+Survival of obligations: Some obligations of Agreement may survive termination of Agreement.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_bvxHtmfwllRazzovlAjZ1EOs)
+ Call ID: call_bvxHtmfwllRazzovlAjZ1EOs
+  Args:
+    pattern: surviv
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+9.This  Agreement  will  terminate  on  the  date  and  time  the  Agreement  between  the  Parties  over  the provision  of  SAP  Services  is  terminated.     In  the  event  this  Agreement  is  terminated,  and  the Disclosing  Party  so  requests,  the  Receiving  Party  shall  promptly  return  or  destroy  (and  certify destruction of) all Confidential Information which it received from the  Disclosing Party along with all copies.   The obligations of the Receiving Party under this Agreement shall survive the termination of this Agreement or the return of the Confidential Information to the Disclosing Party.
+
+================================== Ai Message ==================================
+
+Entailment

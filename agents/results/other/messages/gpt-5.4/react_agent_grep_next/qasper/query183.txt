@@ -1,0 +1,42 @@
+================================ Human Message =================================
+
+QUERY:
+Which was the most helpful strategy?
+
+TABLE OF CONTENTS (TOC):
+1 | Integrating Crowdsourcing and Active Learning for Classification of Work-Life Events from Tweets
+1.1 | 1 Introduction
+1.2 | 2 Methods
+1.2.1 | 2.1 Data Collection
+1.2.2 | 2.2 Data Preprocessing
+1.2.3 | 2.3 Classifier Selection
+1.2.4 | 2.4 Pool-based Active Learning
+1.3 | 3 Results
+1.3.1 | 3.1 Data Collection
+1.3.2 | 3.2 RQ1. How does (1) the amount of time that a human worker spends on and (2) the number of workers assigned to each annotation task impact the quality of annotation results?
+1.3.3 | 3.3 RQ2. Which active learning strategy is most efficient and cost-effective to build event classification models using Twitter data?
+1.4 | 4 Discussion
+1.5 | Acknowledgement
+1.6 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_mQEeHhUsV8tKeqqLt2nHdYxh)
+ Call ID: call_mQEeHhUsV8tKeqqLt2nHdYxh
+  Args:
+    section_id: 1.3.3
+
+================================= Tool Message =================================
+Name: read_section
+
+3.3 RQ2. Which active learning strategy is most efficient and cost-effective to build event classification models using Twitter data?
+We randomly selected 3,000 tweets from the 7,220 MTurk annotated dataset to build the initial classifiers. Two thousands out of 3,000 tweets were used to train the clas-sifiers and the rest 1,000 tweets were used as independent test dataset to benchmark their performance. We explored 4 machine learning classifiers (i.e. , Logistic Regression [LR], Nave Bayes [NB], Random Forest [RF], and Support Vector Machine [SVM]) and 4 deep learning classifiers (i.e., Convolutional Neural Network [CNN], Recurrent Neural Network [RNN], Long Short-Term Memory [LSTM], and Gated Recurrent Unit [GRU]). Each classifier was trained 10 times. The performance was measured in terms of precision, recall, and F-score.  95% confidence intervals (CIs) of the mean F-score across the ten runs were also reported. Table 2 shows the perfor-mance of classifiers. We chose logistic re- gression as the baseline model. RF and CNN were chosen for subsequent active learning experiments, since they outperformed other machine learning and deep learning classifiers.Table 2: The performance of machine learning and deep learning classifiers.  Feature Model name Precision Recall F-score 95% CIs of F-score N-gram Baseline LR 0.75 0.75 0.74 (0.74, 0.75) Machine learning NB 0.73 0.73 0.72 (0.72, 0.73) RF 0.74 0.74 0.74 (0.74, 0.75) SVM 0.73 0. 73 0.72 (0.71, 0.73) Deep learning CNN 0.71 0.71 0.72 (0.71, 0.73) Word- embedding CNN 0.79 0.79 0.79 (0.77, 0.80) RNN 0.75 0.75 0.74 (0.74, 0.75) LSTM 0.72 0. 72 0.71 (0.69, 0.72) LSTM (GRU) 0.75 0.75 0.74 (0.72, 0.76)
+We implemented a pool-based active learning pipeline to test which classifier and active learning strategy is most efficient to build up an event classification classifier of Twitter data. We queried the top 300 most informative tweets from the rest of the pool (i.e. , excluding the tweets used for training the classifiers)
+8 Y. Zhao et al.at each iteration. Table 3 shows the active learning and classifier combinations that we evaluated. The performance of the classifiers was measured by F-score. Fig 3 shows the results of the different active learning strategies combined with LR (i.e., the baseline), RF (i.e., the best performed machine learning model), and CNN (i.e., the best performed deep learning model).  For both machine learn- ing models (i.e., LR and RF), using the entropy strategy can reach the optimal performance the quickest (i.e., the least amount of tweets). While, the least confident algorithm does not have any clear advantages compared with random selection. For deep learning model (i.e., CNN), none of the active learning strate- gies tested are useful to improve the CNN classifiers performance.  Fig 4 shows the results of query-by-committee algorithms (i.e., vote entropy and KL diver- gence) combined with machine learning and deep learning ensemble classifiers. Query-by-committee algorithms are slightly better than random selection when it applied to machine learning ensemble classifier. However, query-by-committee algorithms are not useful for the deep learning ensemble classifier.Table 3: The active learning strategy and classifier combinations tested.  Model Query strategies LR Random query, least confident, entropy RF Random query, least confident, entropy CNN Random query, least confident, entropy Ensemble 1 Vote entropy, KL divergence 1 machine learning ensemble classifier: LR, RF, and SVM.,Deep learning ensemble classifier: CNN, RNN, and LSTM
+Fig. 3: The performance of active learning strategies combined with linear regression, random forest, and convolutional neural network.Crowdsourcing with Active Learning in Life Events Classification
+ 9
+Fig. 4: The performance of active learning strategies combined with machine learning and deep learning ensemble classifiers.
+
+================================== Ai Message ==================================
+
+The entropy strategy was the most helpful, as it reached optimal performance the quickest for both logistic regression and random forest.

@@ -1,0 +1,209 @@
+================================ Human Message =================================
+
+QUERY:
+Do they compare to other models that include subword information such as fastText?
+
+TABLE OF CONTENTS (TOC):
+1 | A Joint Model for Word Embedding and Word Morphology Kris Cao and Marek Rei Computer Lab University of Cambridge United Kingdom kc391@cam.ac.uk
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2 Related Work
+1.3.1 | 2.1 Morphemic analysis and semantics
+1.3.2 | 2.2 Character-level models
+1.4 | 3 The Char2Vec model
+1.4.1 | 3.1 Capturing morphology via attention
+1.5 | 4 Experiments
+1.5.1 | 4.1 Morphological awareness
+1.5.2 | 4.2 Capturing semantic similarity
+1.5.3 | 4.3 Capturing syntactic and semantic regularity
+1.6 | 5 Discussion
+1.7 | 6 Conclusion
+1.8 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_all (call_u6MUabIpjddmfjLuTAIPXmEw)
+ Call ID: call_u6MUabIpjddmfjLuTAIPXmEw
+  Args:
+    pattern: fastText|fasttext|subword|sub-word|sub word|Mikolov|Bojanowski
+
+================================= Tool Message =================================
+Name: grep_search_all
+
+1.2
+1.3.2
+1.4
+1.5.3
+1.8
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_V1bGTJHPxtD21IgO3gOvven9)
+ Call ID: call_V1bGTJHPxtD21IgO3gOvven9
+  Args:
+    section_id: 1.2
+
+================================= Tool Message =================================
+Name: read_section
+
+1 Introduction
+Word embedding models associate each word in a corpus with a vector in a semantic space. These vectors can either be learnt to optimize perfor- mance in a downstream task (Bengio et al., 2003; Collobert et al., 2011) or learnt via the distri- butional hypothesis: words with similar contexts have similar meanings (Harris, 1954; Mikolov et al., 2013a).  Current word embedding models treat words as atomic. However, words follow a power law distribution (Zipf, 1935), and word embed- ding models suffer from the problem of sparsity: a word like ‘unbelievableness’ does not appear at all in the first 17 million words of Wikipedia, even though it is derived from common morphemes. This leads to three problems:
+1. word representations decline in quality forrarely observed words (Bullinaria and Levy, 2007).
+2. word embedding models handle out-of- vocabulary words badly,typically as a single ‘OOV’ token.
+3. the word distribution has a long tail,and many parameters are needed to capture all of the words in a corpus (for an embedding size of 300 with a vocabulary of 10k words, 3 mil- lion parameters are needed)
+One approach to smooth word distributions is to operate on the smallest meaningful semantic unit, the morpheme (Lazaridou et al., 2013; Botha and Blunsom, 2014).  However, previous work on the morpheme level has all used external morpho- logical analyzers. These require a separate pre- processing step, and cannot be adapted to suit the problem at hand.Another is to operate on the smallest ortho- graphic unit, the character (Ling et al., 2015; Kim et al., 2016).  However, the link between shape and meaning is often complicated (de Saussure, 1916), as alphabetic characters carry no inherent semantic meaning. To account for this, the model has to learn complicated dependencies between strings of characters to accurately capture word meaning. We hypothesize that explicitly introduc- ing morphology into character-level models can help them learn morphological features, and hence word meaning.In this paper, we introduce a word embedding model that jointly learns word morphology and word embeddings.  To the best of our knowledge, this is the first word embedding model that learns morphology as part of the model. Our guiding in- tuition is that the words with the same stem have similar contexts. Thus, when considering word segments in terms of context-predictive power, the
+segment corresponding to the stem will have the most weight.Our model ‘reads’ the word and outputs a se- quence of word segments.  We weight each seg- ment, and then combine the segments to obtain the final word representation. These represen- tations are trained to predict context words, as this has been shown to give word representations which capture word semantics well (Mikolov et al., 2013b). As the root morpheme has the most context-predictive power, we expect our model to assign high weight to this segment, thereby learn- ing to separate root+affix structures. One exciting feature of character-level models is their ability to represent open-vocabulary words. After training, they can predict a vector for any word, not just words that they have seen before. Our model has an advantage in that it can split unknown words into known and unknown compo- nents. Hence, it can potentially generalise better over seen morphemes and words and apply exist- ing knowledge to new cases. To evaluate our model, we evaluate its use as a morphological analyzer ( § 4.1), test how well it learns word semantics, including for unseen words ( § 4.2), and examine the structure of the embedding space ( § 4.3).
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_nyZwcqV6yNH1Y81JJsGVQxR2)
+ Call ID: call_nyZwcqV6yNH1Y81JJsGVQxR2
+  Args:
+    section_id: 1.3.2
+
+================================= Tool Message =================================
+Name: read_section
+
+2.2 Character-level models
+Another approach to go beyond words is based on on character-level neural network models. Both recurrent and convolutional architectures for de- riving word representations from characters have been used, and results in downstream tasks such as language modelling and POS tagging have been promising, with reductions in word perplexity for language modelling and state-of-the-art English POS tagging accuracy (Ling et al., 2015; Kim et al., 2016). Ballesteros et al.  (2015) train a character-level model for parsing. Zhang et al. (2015) do away with words completely, and train a convolutional neural network to do text classifi- cation directly from characters.Excitingly, character-level models seem to cap- ture morphological effects. Examining nearest neighbours of morphologically complex words in character-aware models often shows other words with the same morphology (Ling et al., 2015; Kim et al. , 2016). Furthermore, morphosyntactic fea- tures such as capitalization and suffix information have long been used in tasks such as POS tagging (Xu et al., 2015; Toutanova et al., 2003). By ex- plicitly modelling these features, one might expect good performance gains in many NLP tasks.What is less clear is how well these models learn word semantics.  Classical word embedding models seem to capture word semantics, and the nearest neighbours of a given word are typically semantically related words (Mikolov et al., 2013a; Mnih and Kavukcuoglu, 2013). In addition, the correlation between model word similarity scores and human similarity judgments is typically high (Levy et al., 2015). However, no previous work (to our knowledge) evaluates the similarity judgments
+ Figure 1: A graphical illustration of SGNS. The target vector for ‘dog’ is learned to have high inner product with the context vectors for words seen in the context of ‘dog’ (no shading), while having low inner product with random negatively sampled words (shaded)
+of character-level models against human annota- tors.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_NFkC8x3XbmCYXd4tPvzoILjx)
+ Call ID: call_NFkC8x3XbmCYXd4tPvzoILjx
+  Args:
+    section_id: 1.4
+
+================================= Tool Message =================================
+Name: read_section
+
+3 The Char2Vec model
+We hypothesize that by incorporating morpho- logical knowledge directly into a character-level model, one can improve the ability of character- level models to learn compositional word seman- tics. In addition, we hypothesize that incorporat- ing morphological knowledge helps structure the embedding space in such a way that affixation cor- responds to a regular shift in the embedding space. We test both hypotheses directly in § 4.2 and § 4.3 respectively. The starting point for our model is the skip- gram with negative sampling (SGNS) objective of Mikolov et al. (2013b). For a vocabulary V of size | V | and embedding size N , SGNS learns two embedding tables W, C ∈ R N ×| V | , the target and context vectors. Every time a word w is seen in the corpus with a context word c , the tables are updated to maximize
+ log σ ( w · c ) + k X i =1 E ˜ c i ∼ P ( w ) [log σ ( − w · ˜ c i )] (1)
+where P ( w ) is a noise distribution from which we draw k negative samples. In the end, the target
+ vector for a word w should have high inner prod- uct with context vectors for words with which it is typically seen, and low inner products with con- text vectors for words it is not typically seen with. Figure 1 illustrates this for a particular example. In Mikolov et al. (2013b), the noise distribution P ( w ) is proportional to the unigram probability of a word raised to the 3/4th power (Mikolov et al. , 2013b).Our innovation is to replace W with a trainable function f that accepts a sequence of characters and returns a vector of length N (i.e. f : A <ω → R N , where A is the alphabet we are considering and A <ω denotes the finite length strings over the alphabet A ). We still keep the table of context embeddings C , and our model objective is still to minimize
+ log σ ( f ( w ) · c ) + k X i =1 E ˜ c i ∼ P ( w ) [log σ ( − f ( w ) · ˜ c i )] (2)
+where we now treat w as a sequence of characters. After training, f can be used to produce an em- bedding for any sequence of characters, even if it was not previously seen in training. The process of calculating f on a word is il- lustrated in Figure 2. We first pad the word with beginning and end of word tokens, and then pass the characters of the word into a character lookup table.  As the link between characters and mor- phemes is non-compositional and requires essen- tially memorizing a sequence of characters, we use LSTMs (Hochreiter and Schmidhuber, 1997) to encode the letters in the word, as they have been shown to capture non-local and non-linear dependencies. We run a forward and a backward LSTM over the character embeddings.  The for- ward LSTM reads the beginning of word symbol, but not the end of word symbol, and the backward LSTM reads the end of word symbol but not the beginning of word symbol. This is necessary to align the resulting embeddings, so that the LSTM hidden states taken together correspond to a parti- tion of the word into two without overlap.The LSTMs output two sequences of vectors h f 0 , . . . , h f n and h b n , . . .  , h b 0 . We then concate- nate the resulting vectors, and pass them through a shared feed-forward layer to obtain a final se- quence of vectors h i . Each vector corresponds to two half-words: one half read by the forward LSTM, and the other by the backward LSTM.We then learn an attention model over these hid-
+Figure 2: An illustration of Char2Vec.  A bidirec- tional LSTM reads the word (start and end of word symbols represented by ˆ and $ respectively), out- putting a sequence of hidden states. These are then passed through a feed-forward layer (not shown), weighted by an attention model (the square box in the diagram) and summed to obtain the final word representation. den states: given a hidden state h i , we calculate a weight α i = a ( h i ) such that P α i = 1 , and then calculate the resulting vector for the word w as f ( w ) = P α i h i . Following Bahdanau et al. (2014), we calculate a as
+ a ( h i ) = exp( v T tanh( W h i )) P j exp( v T tanh( W h j )) (3)
+i.e. a softmax over the hidden states.
+3.1 Capturing morphology via attention
+Previous work on bidirectional LSTM character- level models used both LSTMs to read the entire word (Ling et al., 2015; Ballesteros et al., 2015). This can lead to redundancy, as both LSTMs are used to capture the full word. In contrast, our model is capable of splitting the words and op- timizing the two LSTMs for modelling different halves.  This means one of the LSTMs can spe- cialize on word prefixes and roots, while the other memorizes possible suffixes. In addition, when dealing with an unknown word, it can be split into
+Figure 3: An illustration of the attention model (start and end of word symbols omitted). The root morpheme contributes the most to predicting the context, and is upweighted. In contrast, another potential split is inaccurate, and predicts the wrong context words.  This is downweighted.known and unknown components. The model can then use the semantic knowledge it has learnt for a known component to predict a representation for the unknown word as a whole.We hypothesize that the natural place to split words is on morpheme boundaries, as morphemes are the smallest unit of language which carry se- mantic meaning. We test the splitting capabilities of our model in § 4.1.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_FVNjUSv1TUSLwyt4P7dTtFeu)
+ Call ID: call_FVNjUSv1TUSLwyt4P7dTtFeu
+  Args:
+    section_id: 1.5.3
+
+================================= Tool Message =================================
+Name: read_section
+
+4.3 Capturing syntactic and semantic regularity
+Finally, we evaluate the structure of the embed- ding space of our various models. In particular, we test whether affixation corresponds to regular linear shifts in the embedding space.To do this, we use the Google analogy dataset (Mikolov et al., 2013a). This consists of 19544 questions of the form “ A is to B as C is to X ”. We split this collection into semantic and syntactic
+Model All Acc Sem. Acc Syn.  Acc PPMI-SVD 0.365 0.444 0.341 SGNS 0.436 0.339 0.513 C2V-NO-ATT 0.316 0.016 0.472 CHAR2VEC 0.355 0.025 0.525
+Table 6: Results on the Google analogy task
+sections, based on whether the analogies between the words are driven by morphological changes or deeper semantic shifts.  Example semantic ques- tions are on capital-country relationships (“ Paris is to France as Berlin is to X ) and currency- country relationships. Example syntactic ques- tions are adjective-adverb relationships (“ amazing is to amazingly as apparent is to X ”) and opposites formed by prefixing a negation particle (“ accept- able is to unacceptable as aware is to X ”). This results in 5537 semantic analogies and 10411 syn- tactic analogies. We use the method of Mikolov et al. (2013a) to answer these questions. We first ` 2 -normalize all of our word vectors. Then, to answer a question of the form “ A is to B as C is to X ”, we find the word w which satisfies
+w = argmax w ∈ V −{ a,b,c } cos( w, b − a + c ) (4)
+ where a, b, c are the word vectors for the words A , B and C respectively.We report the results in Table 6. The most in- triguing result is that character-level models are competitive with word-level models for syntactic analogy, with our Char2Vec model holding the
+best result for syntactic analogy answering. This suggests that incorporating morphological knowl- edge explicitly rather than latently helps the model learn morphological features.  However, on the se- mantic analogies, the character-based models do much worse than the word-based models. This is perhaps unsurprising in light of the previous sec- tion, where we demonstrate that character-based models do worse at the semantic similarity task than word-level models.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_DNyAHGWSOQNYEIGOM661Tuxr)
+ Call ID: call_DNyAHGWSOQNYEIGOM661Tuxr
+  Args:
+    section_id: 1.8
+
+================================= Tool Message =================================
+Name: read_section
+
+References
+[Baayen et al.1995] Harald R. Baayen,Richard Piepen- brock, and Leon Gulikers. 1995. The CELEX Lexical Database. Release 2 (CD-ROM) . Linguis- tic Data Consortium, University of Pennsylvania, Philadelphia, Pennsylvania.
+[Bahdanau et al.2014] Dzmitry Bahdanau,Kyunghyun Cho, and Yoshua Bengio. 2014. Neural machine translation by jointly learning to align and translate. ICLR .
+[Ballesteros et al.2015] Miguel Ballesteros,Chris Dyer, and Noah A Smith. 2015. Improved transition- based parsing by modeling characters instead of words with LSTMs. EMNLP .
+[Balota et al.2007] David A. Balota, Melvin J.Yap, Keith A. Hutchison, Michael J. Cortese, Brett Kessler, Bjorn Loftis, James H. Neely, Douglas L. Nelson, Greg B. Simpson, and Rebecca Treiman. 2007. The english lexicon project. Behavior Re- search Methods .
+[Bastien et al.2012] Fr´ed´eric Bastien,Pascal Lamblin, Razvan Pascanu, James Bergstra, Ian J. Goodfellow, Arnaud Bergeron, Nicolas Bouchard, and Yoshua Bengio. 2012. Theano: new features and speed im- provements. Deep Learning and Unsupervised Fea- ture Learning NIPS 2012 Workshop.
+[Bengio et al.2003] Yoshua Bengio,R´ejean Ducharme, Pascal Vincent, and Christian Janvin. 2003. A neu- ral probabilistic language model. J. Mach. Learn. Res. , 3:1137–1155, March.
+[Bergstra et al.2010] James Bergstra, Olivier Breuleux,Fr´ed´eric Bastien, Pascal Lamblin, Razvan Pascanu, Guillaume Desjardins, Joseph Turian, David Warde- Farley, and Yoshua Bengio. 2010. Theano: a CPU and GPU math expression compiler. In Proceedings of the Python for Scientific Computing Conference (SciPy) , June.
+[Botha and Blunsom2014] Jan A.Botha and Phil Blun- som. 2014. Compositional Morphology for Word Representations and Language Modelling. In ICML , Beijing, China, jun. *Award for best application pa- per*.
+[Bruni et al.2014] Elia Bruni, Nam Khanh Tran,and Marco Baroni. 2014. Multimodal distributional se- mantics. J. Artif. Int. Res.
+[Bullinaria and Levy2007] John A. Bullinaria and Joseph P.Levy. 2007. Extracting semantic repre- sentations from word co-occurrence statistics: A computational study. Behavior Research Methods .
+[Chollet2015] Franois Chollet. 2015.Keras. https: //github.com/fchollet/keras .
+[Collobert et al.2011] Ronan Collobert, Jason Weston,L´eon Bottou, Michael Karlen, Koray Kavukcuoglu, and Pavel Kuksa. 2011. Natural language process- ing (almost) from scratch. JMLR , 12:2493–2537, November.
+[Cotterell et al.2016] Ryan Cotterell, Tim Vieira,and Hinrich Sch¨utze. 2016. A joint model of orthog- raphy and word segmentation. In NAACL .
+[Creutz and Lagus2007] Mathias Creutz and Krista La- gus.2007. Unsupervised models for morpheme segmentation and morphology learning. ACM Trans. Speech Lang. Process. , 4(1):3:1–3:34, Febru- ary.
+[de Saussure1916] Ferdinand de Saussure. 1916.Course in General Linguistics .
+[Finkelstein et al.2002] Lev Finkelstein,Evgeniy Gabrilovich, Yossi Matias, Ehud Rivlin, Zach Solan, Gadi Wolfman, and Eytan Ruppin. 2002. Placing search in context: The concept revisited. ACM Trans. Inf. Syst.
+[Goldsmith2001] John Goldsmith. 2001.Unsuper- vised learning of the morphology of a natural lan- guage. Computational Linguistics , 27(2):153–198, June.
+[Goldwater et al.2005] Sharon Goldwater, Mark John- son,and Thomas L. Griffiths. 2005. Interpolating between types and tokens by estimating power-law generators. In Y. Weiss, B. Schlkopf, and J. Platt, editors, NIPS , pages 459–466. MIT Press, Cam- bridge, MA.
+[Harris1954] Zelig S. Harris. 1954. Distributional structure.Word .
+[Hochreiter and Schmidhuber1997] Sepp Hochreiter and J¨urgen Schmidhuber.1997. Long short-term memory. Neural Computation , 9(8):1735–1780, November.
+[Kim et al.2016] Yoon Kim, Yacine Jernite,David Son- tag, and Alexander M. Rush. 2016. Character- aware neural language models. AAAI .
+[Kingma and Ba2015] Diederik P. Kingma and Jimmy Ba.2015. Adam: A method for stochastic opti- mization. ICLR .
+[Lazaridou et al.2013] Angeliki Lazaridou,Marco Marelli, Roberto Zamparelli, and Marco Baroni. 2013. Compositional-ly derived representations of morphologically complex words in distributional semantics. ACL .
+[Levy et al.2015] Omer Levy, Yoav Goldberg,and Ido Dagan. 2015. Improving distributional similarity with lessons learned from word embeddings. Trans- actions of the Association for Computational Lin- guistics , 3:211–225.
+[Ling et al.2015] Wang Ling, Tiago Lu´ıs,Lu´ıs Marujo, Ram´on Fernandez Astudillo, Silvio Amir, Chris Dyer, Alan W. Black, and Isabel Trancoso. 2015. Finding function in form: Compositional charac- ter models for open vocabulary word representation. EMNLP .
+[Luong et al.2013] Minh-Thang Luong, Richard Socher,and Christopher D. Manning. 2013. Better word representations with recursive neural networks for morphology. In CoNLL .
+[Mikolov et al.2013a] Tomas Mikolov, Kai Chen,Greg Corrado, and Jeffrey Dean. 2013a. Efficient estima- tion of word representations in vector space. ICLR Workshop .
+[Mikolov et al.2013b] Tomas Mikolov,Ilya Sutskever, Kai Chen, Greg Corrado, and Jeffrey Dean. 2013b. Distributed representations of words and phrases and their compositionality. NIPS .
+[Mnih and Kavukcuoglu2013] Andriy Mnih and Koray Kavukcuoglu.2013. Learning word embeddings efficiently with noise-contrastive estimation. In C. J. C. Burges, L. Bottou, M. Welling, Z. Ghahra- mani, and K. Q. Weinberger, editors, Advances in Neural Information Processing Systems 26 , pages 2265–2273. Curran Associates, Inc.
+[Soricut and Ochs2015] Radu Soricut and Franz Ochs.2015. Unsupervised morphology induction using word embeddings. NAACL .
+[Toutanova et al.2003] Kristina Toutanova, Dan Klein,Christopher D. Manning, and Yoram Singer. 2003. Feature-rich part-of-speech tagging with a cyclic de- pendency network. In In Proceedings of NAACL .
+[Xu et al.2015] Wenduan Xu, Michael Auli,and Stephen Clark. 2015. CCG supertagging with a re- current neural network. ACL .
+[Zhang et al.2015] Xiang Zhang, Junbo Zhao,and Yann LeCun. 2015. Character-level convolutional net- works for text classification. NIPS .
+[Zipf1935] George Kingsley Zipf. 1935.The psycho- biology of language .
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_all (call_NSRWYJlg5FENWMEGZMC7yw2z)
+ Call ID: call_NSRWYJlg5FENWMEGZMC7yw2z
+  Args:
+    pattern: C2V-NO-ATT|CHAR2VEC|PPMI-SVD|SGNS|fastText|subword
+
+================================= Tool Message =================================
+Name: grep_search_all
+
+1.3.2
+1.4
+1.5.2
+1.5.3
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_SXyvFv8MXGgeHZXpubeR7KKF)
+ Call ID: call_SXyvFv8MXGgeHZXpubeR7KKF
+  Args:
+    section_id: 1.5.2
+
+================================= Tool Message =================================
+Name: read_section
+
+4.2 Capturing semantic similarity
+Next, we tested our model similarity scores against human similarity judgments. For these datasets, human annotators are asked to judge how similar two words are on a fixed scale. Model word vectors are evaluated based on ranking the word pairs according to their cosine similarity, and then measuring the correlation (using Spearman’s ρ ) between model judgments and human judg- ments (Levy et al., 2015).We use the WordSim353 dataset (Finkelstein et al. , 2002), the test split of the MEN dataset (Bruni et al., 2014), and the Rare Word (RW) dataset (Lu- ong et al., 2013). The word pairs in the Word-
+Model WordSim353 MEN Test RW PPMI-SVD 0.607 0.601 0.293 SGNS 0.667 0.557 0.388 C2V-NO-ATT 0. 361 0.298 0.317 CHAR2VEC 0.345 0.322 0.282
+Table 3: Similarity correlations of in-vocabulary word pairs between the models and human anno- tators.Model WordSim353 MEN Test RW RW OOV C2V-NO-ATT 0.358 0.292 0.273 0.233 CHAR2VEC 0.340 0.318 0.264 0. 243
+Table 4: Similarity correlations of all word pairs between the character-level models and human an- notators. RW OOV indicates results specifically on pairs in the RW dataset with at least one word not seen in the training corpus.Sim353 and MEN datasets are typically simple, commonly occurring words denoting basic con- cepts, whereas the RW dataset contains many mor- phologically derived words which have low corpus frequencies.  This is reflected by how many of the test pairs in each dataset contain out of vocabu- lary (OOV) items: 3/353 and 6/1000 of the word pairs in WordSim353 and MEN, compared with 1083/2034 for the RW dataset.We report results for in-corpus word pairs in Ta- ble 3, and for all word pairs for those models able to predict vectors for unseen words in Table 4. Overall, word-based embedding models learn vectors that correlate better with human judg- ments, particularly for morphologically simple words. However, character-based models are competitive with word-based models on the RW dataset. While the words in this dataset appear rarely in our corpus (of the in-corpus words, over half appear fewer than 100 times), each morpheme may be common, and the character-level models can use this information.  We note that on the entire RW dataset (of which over half contain an OOV word), the character-based models still perform reasonably. We also note that on word pairs in the RW test containing at least one OOV word, the full Char2Vec model outperforms the C2V model without morphology.  This suggests that character- based embedding models are learning to morpho- logically analyse complex word forms, even on unseen words, and that giving the model the capa- bility to learn word segments independently helps
+ In-vocabulary Out-of-Vocabulary germany football bible foulness definately Char2Vec unfiltered germaine footballer bibles illness definitely germanies footballing testament seriousness indefinitely germain footballing librarianship sickness enthusiastically germano foosball literature loudness emphatically germaniae footballers librarian cuteness consistently Char2Vec filtered poland footballer testament illness definitely german basketball literature blindness consistently spain tennis hebrew consciousness drastically germans rugby judaism hardness theoretically france baseball biblical weakness infinitely
+ Table 5: Filtered and unfiltered model nearest neighbours for some in-vocabulary and out-of-vocabulary words
+this process.We also present some word nearest neighbours for our Char2Vec model in Table 5, both on the whole vocabulary and then filtering the nearest neighbours to only include words which appear 100 times or more in our corpus. This corresponds to keeping the top 10k words, which is common among language models (Ling et al. , 2015; Kim et al., 2016). We note that nearest neighbour pre- dictions include words that are orthographically distant but semantically similar, showing that our model has the capability to learn to compose char- acters into word meanings.We also note that word nearest neighbours seem to be more semantically coherent when rarely- observed words are filtered out of the vocabulary, and more based on orthographic overlap when the entire vocabulary is included.  This suggests that for rarely-observed words, the model is basing its predictions on orthographic analysis, whereas for more commonly observed words it can ‘memo- rize’ the mapping between the orthography and word semantics.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_all (call_YK7lbHtiMaiJd3yzyFMIrjIj)
+ Call ID: call_YK7lbHtiMaiJd3yzyFMIrjIj
+  Args:
+    pattern: fastText
+
+================================= Tool Message =================================
+Name: grep_search_all
+
+No matches found.
+
+================================== Ai Message ==================================
+
+Unanswerable

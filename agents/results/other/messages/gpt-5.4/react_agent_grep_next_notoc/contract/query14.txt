@@ -1,0 +1,32 @@
+================================ Human Message =================================
+
+HYPOTHESIS:
+Permissible acquirement of similar information: Receiving Party may acquire information similar to Confidential Information from a third party.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_oGliCNVQ6u59pJ5CWqkPtlwg)
+ Call ID: call_oGliCNVQ6u59pJ5CWqkPtlwg
+  Args:
+    pattern: third part|third-party|independent|similar information|public domain|rightfully|lawful|receive.*from.*third
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+c.was received by the Recipient without breach of this Agreement from a third party without restriction as to the use and disclosure of the Di cl e Confidential Information; or,
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_p5JylBZ9Io7uNUDA6rWVGVaX)
+ Call ID: call_p5JylBZ9Io7uNUDA6rWVGVaX
+  Args:
+    pattern: Confidential Information.*does not include|shall not include|exceptions|excluded|received by the Recipient without breach
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+c.was received by the Recipient without breach of this Agreement from a third party without restriction as to the use and disclosure of the Di cl e Confidential Information; or,
+
+================================== Ai Message ==================================
+
+Entailment

@@ -1,0 +1,60 @@
+================================ Human Message =================================
+
+QUERY:
+What dataset do they use?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_YLtfyw8TQaSgROhrCeQ2IIzR)
+ Call ID: call_YLtfyw8TQaSgROhrCeQ2IIzR
+  Args:
+    pattern: dataset|corpus|data set|data
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Traditional approaches to extractive summarization rely heavily on human- engineered features. In this work we propose a data-driven approach based on neural networks and continuous sentence features. We develop a general frame- work for single-document summarization composed of a hierarchical document encoder and an attention-based extractor. This architecture allows us to develop different classes of summarization models which can extract sentences or words. We train our models on large scale corpora containing hundreds of thousands of document-summary pairs 1 .  Experimental results on two summarization datasets demonstrate that our models obtain results comparable to the state of the art without any access to linguistic annotation.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_BJKoOme2Wq4dDrPuzttVxOOJ)
+ Call ID: call_BJKoOme2Wq4dDrPuzttVxOOJ
+  Args:
+    pattern: summarization datasets|document-summary pairs|CNN|Daily Mail|DUC|Gigaword
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Traditional approaches to extractive summarization rely heavily on human- engineered features. In this work we propose a data-driven approach based on neural networks and continuous sentence features. We develop a general frame- work for single-document summarization composed of a hierarchical document encoder and an attention-based extractor. This architecture allows us to develop different classes of summarization models which can extract sentences or words. We train our models on large scale corpora containing hundreds of thousands of document-summary pairs 1 .  Experimental results on two summarization datasets demonstrate that our models obtain results comparable to the state of the art without any access to linguistic annotation.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_E8ZuDIoudn52gCB6vPT4HJIh)
+ Call ID: call_E8ZuDIoudn52gCB6vPT4HJIh
+  Args:
+    pattern: Experiments|Dataset|Corpora|corpora|CNN|Daily Mail|DUC 2002|DUC
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Traditional approaches to extractive summarization rely heavily on human- engineered features. In this work we propose a data-driven approach based on neural networks and continuous sentence features. We develop a general frame- work for single-document summarization composed of a hierarchical document encoder and an attention-based extractor. This architecture allows us to develop different classes of summarization models which can extract sentences or words. We train our models on large scale corpora containing hundreds of thousands of document-summary pairs 1 .  Experimental results on two summarization datasets demonstrate that our models obtain results comparable to the state of the art without any access to linguistic annotation.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_BRfK3IjOQo2YdHHLLMSTcdpB)
+ Call ID: call_BRfK3IjOQo2YdHHLLMSTcdpB
+  Args:
+    pattern: 1 \.|footnote|hundreds of thousands|pairs
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Traditional approaches to extractive summarization rely heavily on human- engineered features. In this work we propose a data-driven approach based on neural networks and continuous sentence features. We develop a general frame- work for single-document summarization composed of a hierarchical document encoder and an attention-based extractor. This architecture allows us to develop different classes of summarization models which can extract sentences or words. We train our models on large scale corpora containing hundreds of thousands of document-summary pairs 1 .  Experimental results on two summarization datasets demonstrate that our models obtain results comparable to the state of the art without any access to linguistic annotation.
+
+================================== Ai Message ==================================
+
+Unanswerable

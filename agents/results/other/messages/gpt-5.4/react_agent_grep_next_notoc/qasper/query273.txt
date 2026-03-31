@@ -1,0 +1,92 @@
+================================ Human Message =================================
+
+QUERY:
+Is there a difference between the model's performance for morphologically impoverished and morphologically complex languages?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_7LO35oggBwj7JJv4OxsgVqeL)
+ Call ID: call_7LO35oggBwj7JJv4OxsgVqeL
+  Args:
+    pattern: morphologically|morphological|impoverished|complex languages
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+This paper presents a joint model for performing unsupervised morphologi- cal analysis on words, and learning a character-level composition function from morphemes to word embeddings. Our model splits individual words into segments, and weights each segment according to its ability to predict context words. Our morphological analysis is comparable to dedicated morphological analyzers at the task of morpheme bound- ary recovery, and also performs better than word-based embedding models at the task of syntactic analogy answering.  Finally, we show that incorporating morphology explicitly into character-level models help them produce embeddings for unseen words which correlate better with human judgments.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_2hiIbg6gkAYu18RJYRHUXqri)
+ Call ID: call_2hiIbg6gkAYu18RJYRHUXqri
+  Args:
+    pattern: morphologically
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+2.1 Morphemic analysis and semantics
+As word semantics is compositional, one might ask whether it is possible to learn morpheme representations, and compose them to obtain good word representations. Lazaridou et al. (2013) demonstrated precisely this: one can de- rive good representations of morphemes distribu- tionally, and apply tools from compositional dis- tributional semantics to obtain good word repre- sentations. Luong et al.  (2013) also trained a morphological composition model based on recur- sive neural networks. Botha and Blunsom (2014) built a language model incorporating morphemes, and demonstrated improvements in language mod- elling and in machine translation. All of these
+approaches incorporated external morphological knowledge, either in the form of gold standard morphological analyses such as CELEX (Baayen et al. , 1995) or an external morphological analyzer such as Morfessor (Creutz and Lagus, 2007).Unsupervised morphology induction aims to decide whether two words are morphologically re- lated or to generate a morphological analysis for a word (Goldwater et al., 2005; Goldsmith, 2001).  While they may use semantic insights to perform the morphological analysis (Soricut and Ochs, 2015), they typically are not concerned with ob- taining a semantic representation for morphemes, nor of the resulting word.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_y6xikHRvSL8RK8fA3VXTLN9b)
+ Call ID: call_y6xikHRvSL8RK8fA3VXTLN9b
+  Args:
+    pattern: language|languages
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+2.1 Morphemic analysis and semantics
+As word semantics is compositional, one might ask whether it is possible to learn morpheme representations, and compose them to obtain good word representations. Lazaridou et al. (2013) demonstrated precisely this: one can de- rive good representations of morphemes distribu- tionally, and apply tools from compositional dis- tributional semantics to obtain good word repre- sentations. Luong et al.  (2013) also trained a morphological composition model based on recur- sive neural networks. Botha and Blunsom (2014) built a language model incorporating morphemes, and demonstrated improvements in language mod- elling and in machine translation. All of these
+approaches incorporated external morphological knowledge, either in the form of gold standard morphological analyses such as CELEX (Baayen et al. , 1995) or an external morphological analyzer such as Morfessor (Creutz and Lagus, 2007).Unsupervised morphology induction aims to decide whether two words are morphologically re- lated or to generate a morphological analysis for a word (Goldwater et al., 2005; Goldsmith, 2001).  While they may use semantic insights to perform the morphological analysis (Soricut and Ochs, 2015), they typically are not concerned with ob- taining a semantic representation for morphemes, nor of the resulting word.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_ZbfimF1ZTfJaq5tBLSg5hAEn)
+ Call ID: call_ZbfimF1ZTfJaq5tBLSg5hAEn
+  Args:
+    pattern: German|English|Turkish|Finnish|Czech|Spanish|Arabic|Russian
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+2.2 Character-level models
+Another approach to go beyond words is based on on character-level neural network models. Both recurrent and convolutional architectures for de- riving word representations from characters have been used, and results in downstream tasks such as language modelling and POS tagging have been promising, with reductions in word perplexity for language modelling and state-of-the-art English POS tagging accuracy (Ling et al., 2015; Kim et al., 2016). Ballesteros et al.  (2015) train a character-level model for parsing. Zhang et al. (2015) do away with words completely, and train a convolutional neural network to do text classifi- cation directly from characters.Excitingly, character-level models seem to cap- ture morphological effects. Examining nearest neighbours of morphologically complex words in character-aware models often shows other words with the same morphology (Ling et al., 2015; Kim et al. , 2016). Furthermore, morphosyntactic fea- tures such as capitalization and suffix information have long been used in tasks such as POS tagging (Xu et al., 2015; Toutanova et al., 2003). By ex- plicitly modelling these features, one might expect good performance gains in many NLP tasks.What is less clear is how well these models learn word semantics.  Classical word embedding models seem to capture word semantics, and the nearest neighbours of a given word are typically semantically related words (Mikolov et al., 2013a; Mnih and Kavukcuoglu, 2013). In addition, the correlation between model word similarity scores and human similarity judgments is typically high (Levy et al., 2015). However, no previous work (to our knowledge) evaluates the similarity judgments
+ Figure 1: A graphical illustration of SGNS. The target vector for ‘dog’ is learned to have high inner product with the context vectors for words seen in the context of ‘dog’ (no shading), while having low inner product with random negatively sampled words (shaded)
+of character-level models against human annota- tors.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_9cpmmkb78TeGDZQ9Jov5fkC3)
+ Call ID: call_9cpmmkb78TeGDZQ9Jov5fkC3
+  Args:
+    pattern: Table|results|dataset|languages
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+2.2 Character-level models
+Another approach to go beyond words is based on on character-level neural network models. Both recurrent and convolutional architectures for de- riving word representations from characters have been used, and results in downstream tasks such as language modelling and POS tagging have been promising, with reductions in word perplexity for language modelling and state-of-the-art English POS tagging accuracy (Ling et al., 2015; Kim et al., 2016). Ballesteros et al.  (2015) train a character-level model for parsing. Zhang et al. (2015) do away with words completely, and train a convolutional neural network to do text classifi- cation directly from characters.Excitingly, character-level models seem to cap- ture morphological effects. Examining nearest neighbours of morphologically complex words in character-aware models often shows other words with the same morphology (Ling et al., 2015; Kim et al. , 2016). Furthermore, morphosyntactic fea- tures such as capitalization and suffix information have long been used in tasks such as POS tagging (Xu et al., 2015; Toutanova et al., 2003). By ex- plicitly modelling these features, one might expect good performance gains in many NLP tasks.What is less clear is how well these models learn word semantics.  Classical word embedding models seem to capture word semantics, and the nearest neighbours of a given word are typically semantically related words (Mikolov et al., 2013a; Mnih and Kavukcuoglu, 2013). In addition, the correlation between model word similarity scores and human similarity judgments is typically high (Levy et al., 2015). However, no previous work (to our knowledge) evaluates the similarity judgments
+ Figure 1: A graphical illustration of SGNS. The target vector for ‘dog’ is learned to have high inner product with the context vectors for words seen in the context of ‘dog’ (no shading), while having low inner product with random negatively sampled words (shaded)
+of character-level models against human annota- tors.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_YSKbezmYDXZMeqI4j1e9sreA)
+ Call ID: call_YSKbezmYDXZMeqI4j1e9sreA
+  Args:
+    pattern: analogy|similarity judgments|human judgments|English|German
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+This paper presents a joint model for performing unsupervised morphologi- cal analysis on words, and learning a character-level composition function from morphemes to word embeddings. Our model splits individual words into segments, and weights each segment according to its ability to predict context words. Our morphological analysis is comparable to dedicated morphological analyzers at the task of morpheme bound- ary recovery, and also performs better than word-based embedding models at the task of syntactic analogy answering.  Finally, we show that incorporating morphology explicitly into character-level models help them produce embeddings for unseen words which correlate better with human judgments.
+
+================================== Ai Message ==================================
+
+Unanswerable

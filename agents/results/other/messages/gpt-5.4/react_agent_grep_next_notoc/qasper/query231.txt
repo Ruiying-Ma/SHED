@@ -1,0 +1,47 @@
+================================ Human Message =================================
+
+QUERY:
+Do they explore how their word representations vary across languages?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_h6zYozNJ5VZOoXM9Sa3ynbIz)
+ Call ID: call_h6zYozNJ5VZOoXM9Sa3ynbIz
+  Args:
+    pattern: across languages|cross-ling|multilingual|word representations|representations vary|languages
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Most existing models for multilingual nat- ural language processing (NLP) treat lan- guage as a discrete category, and make predictions for either one language or the other. In contrast, we propose using continuous vector representations of lan- guage. We show that these can be learned efficiently with a character-based neural language model, and used to improve in- ference about language varieties not seen during training.  In experiments with 1303 Bible translations into 990 different lan- guages, we empirically explore the ca- pacity of multilingual language models, and also show that the language vectors capture genetic relationships between lan- guages.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_UcnUAeqj3tWfW9S3ohc7HZ9z)
+ Call ID: call_UcnUAeqj3tWfW9S3ohc7HZ9z
+  Args:
+    pattern: word representations|embedding|vector representations of language|language vectors capture|vary across languages
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Most existing models for multilingual nat- ural language processing (NLP) treat lan- guage as a discrete category, and make predictions for either one language or the other. In contrast, we propose using continuous vector representations of lan- guage. We show that these can be learned efficiently with a character-based neural language model, and used to improve in- ference about language varieties not seen during training.  In experiments with 1303 Bible translations into 990 different lan- guages, we empirically explore the ca- pacity of multilingual language models, and also show that the language vectors capture genetic relationships between lan- guages.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_02WYUlkpqrgTBN1V802g9IzG)
+ Call ID: call_02WYUlkpqrgTBN1V802g9IzG
+  Args:
+    pattern: genetic relationships|language vectors|capture genetic relationships|capacity of multilingual language models
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Most existing models for multilingual nat- ural language processing (NLP) treat lan- guage as a discrete category, and make predictions for either one language or the other. In contrast, we propose using continuous vector representations of lan- guage. We show that these can be learned efficiently with a character-based neural language model, and used to improve in- ference about language varieties not seen during training.  In experiments with 1303 Bible translations into 990 different lan- guages, we empirically explore the ca- pacity of multilingual language models, and also show that the language vectors capture genetic relationships between lan- guages.
+
+================================== Ai Message ==================================
+
+No. They explore continuous vector representations of language and show that the language vectors capture genetic relationships between languages.

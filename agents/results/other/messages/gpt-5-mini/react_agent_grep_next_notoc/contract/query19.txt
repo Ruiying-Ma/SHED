@@ -1,0 +1,47 @@
+================================ Human Message =================================
+
+HYPOTHESIS:
+No licensing: Agreement shall not grant Receiving Party any right to Confidential Information.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_uZfyBLeqQb6z1KeOTSdZbB3E)
+ Call ID: call_uZfyBLeqQb6z1KeOTSdZbB3E
+  Args:
+    pattern: license|No license|shall not grant|grant.*right to|Receiving Party any right|no license to|rights to Confidential Information
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+8. EXPORT LAWS. Neither party shall export, directly or indirectly,any of the Confidential Information to any country, person or entity which the US Government, at the time of export, requires an export license or other governmental approval without first obtaining such license or approval.  The Recipient shall first obtain the written consent of
+Bosch North America Mutual NDA rev. 2017.03.31.IPR-NA
+Page 2 of 4
+Disclosing Party prior to submitting any request for authority to export such Confidential Information.   For the purposes of this Agreement, export occurs when Confidential Information is transferred from one country to another by any means, including but not limited to physical shipments, FTP file transfers, e-mails, faxes, oral transfers or remote server access and an export may also occur when Confidential Information is transferred to or accessed by a person who is neither a citizen nor permanent resident of the country in which such transfer or access is taking place.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_GR4ryzgQeBnRy4kLsyVjmOW0)
+ Call ID: call_GR4ryzgQeBnRy4kLsyVjmOW0
+  Args:
+    pattern: No license|no license|licenses|no rights|not grant|shall not be|rights are|Ownership|remain.*property|retain.*ownership|proprietary rights
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+9. OWNERSHIP OF CONFIDENTIAL INFORMATION. Disclosing Party or its licensors,as the case may be, retain all rights in  Confidential Information  disclosed  and all documents, prototypes, software development kits (SDKs)  and other similar tangible property embodying, containing or reflecting the same shall remain the property of Disclosing Party.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_ZnTZKoSgA6MwdKYLSLVjCqgW)
+ Call ID: call_ZnTZKoSgA6MwdKYLSLVjCqgW
+  Args:
+    pattern: license.*Confidential|grant.*license|no license to use|not grant.*license|No license to|Nothing in this Agreement shall grant|shall not grant.*right.*Confidential|rights to Confidential Information|no license for
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+10. NO LICENSE.Neither the execution of this Agreement nor the disclosure of any Confidential Information is construed as granting either expressly or by implication, estoppel or otherwise, any license or right  to  the Confidential Information or any intellectual property rights embodied therein.
+
+================================== Ai Message ==================================
+
+Entailment

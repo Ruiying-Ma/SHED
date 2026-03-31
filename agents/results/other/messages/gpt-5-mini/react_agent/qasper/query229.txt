@@ -1,0 +1,105 @@
+================================ Human Message =================================
+
+QUERY:
+How does sentence construction component works?
+
+TABLE OF CONTENTS (TOC):
+1 | Natural Language Generation for Non-Expert Users
+1.1 | 1 Introduction
+1.2 | 2 Background: Grammatical Framework
+1.3 | 3 Method
+1.3.1 | 3.1 Sentence Structure Recognition
+1.3.2 | 3.2 Sentence Components Recognition
+1.3.3 | 3.3 GF Grammar Encoder
+1.3.4 | 3.4 GF Grammar Exporter
+1.4 | 4 Experiments
+1.4.1 | 4.1 NLG for Annotated Ontologies
+1.4.2 | 4.2 Intermediate Representation for Wiki Pages
+1.5 | 5 Related Works
+1.6 | 6 Conclusions and Future Work
+1.7 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_KRhXyI4dvvEbPMiP6PxdJUWD)
+ Call ID: call_KRhXyI4dvvEbPMiP6PxdJUWD
+  Args:
+    section_id: 1.3.3
+
+================================= Tool Message =================================
+Name: read_section
+
+3.3 GF Grammar Encoder
+The goal of the encoder is to identify appropriate GF rules for the construction of a GF grammar of a sentence given its structure and its components identified in the previous two modules. This is necessary since a sentence can be encoded in GF by more than one set of rules; for example, the sentence “Bill wants to play a game” can be encoded by the rules
+ Bill → NP, want → VV, play → V2, game → NP and one of the sets of GF rules in the table below:
+V2 → NP → VP V2 → NP → VP NP → VV → VP → Cl VV → VP → VP NP → VP → Cl
+In GF, NP, VV, V2, VP, and Cl stand for noun phrase , verb-phrase-complement verb , two-place verb , verb phrase and clause , respectively.  Note that although the set of GF grammatical rules can be used to construct a constituency-based parse tree 12 , the reverse direction is not always true. To the best of our knowledge, there exists no algorithm for converting a constituency-based parse tree to a set GF grammar rules. We therefore need to identify the GF rules for each sentence structure.In our system, a GF rule is assigned to a structure initially (Table 2).  Each rule in Table 2 represents the first level of the constituency-based parse tree. It acts as the coordinator for all other succeeding rules.Given the seed components identified in Section 3.2 and the above GF rules, a GF grammar for each sentence can be constructed. However, this grammar can only be used to generate fairly simple sentences. For example, for the sentence “Bill plays a popular board game with his close friends. ”, a GF grammar for structure #2 can be constructed, which can only generate the sentence “Bill plays game.”
+12 Constituency parsing aims to extract a constituency-based parse tree from a sentence that represents its syntactic structure http://nlpprogress.com/english/constituency parsing.html
+V.D. Nguyen, T. C. Son & E. Pontelli
+287
+ For noun components N → N → CN CN: common noun N → NP NP: noun phrase AP → CN → CN AP: adjectival phrase CN → NP NP → Adv → NP Adv: verb-phrase-modifying adverb NP → NP → ListNP NP → ListNP → ListNP Conj → ListNP → NP Conj: conjunction For verb components VP → Adv → VP For adjective components A → AP A: adjective AdA → AP → AP AdA: adjective-modifying adverb
+ Table 3: Extended GF Rules
+because it does not contain any complement components identified in Section 3.2. Therefore, we assgin a set of GF rules for the construction of each parameter in the GF rules in Table 2. The set of GF rules has to follow two conventions. The first one is after applying the set of rules to some components of the sentence, the type of the production is one of the type in Table 2, e.g.  NP , V P , Cl , V 2, . . . . The second convention is that the GF encoder will select the rules as the order from top to bottom in Table 3. Note that the encoder always has information of what type of input and output for the rule it is looking for. For instance, we have “game” is the object (main components), and we know that we have to con- struct “game” in the result GF grammar to be a NP (noun phrase). Program Π 2 identifies that there are two complement components for the word “game”, which are “board” and “popular”, a noun and an adjective respectively.  The GF encoder then select the set of rules: N → N → CN and A → AP to create the common noun “board game” and the adjective phrase first. The next rule is AP → CN → CN. The last rule to be applied is CN → NP. The selection is easily decided since the input and the output of the rules are pre-determined, and there is no ambiguity in the selection process. The encoder uses the GF rules and the components identified by the previous subsections to produce different constructors for different components of a sentence. A part of the output of the GF encoder for the object “game” is
+Game = mkNP (mkNP popular_board_game_CN ) (ConstructorsEng.mkAdv with_Prep (mkNP close_friend_CN )) ;
+The encoder will also create the operators that will be included in the oper section of the GF grammar for supporting the new constructor.  For example, the following operators will be generated for serving the Game constructor above:
+ popular_A = mkA "popular" ; popular_AP = mkAP popular_A ; popular_board_game_CN = mkCN popular_AP board_game_N ; board_game_N = mkN "board game" "board games" ; close_A = mkA "close" ; close_AP = mkAP close_A ; close_friend_CN = mkCN close_AP friend_N ; friend_N = mkN "friend" "friends" ;
+288
+Natural Language Generation for Non-Expert Users
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_EWWx62Xl2Sb3wukChKzlXmmS)
+ Call ID: call_EWWx62Xl2Sb3wukChKzlXmmS
+  Args:
+    section_id: 1.3.4
+
+================================= Tool Message =================================
+Name: read_section
+
+3.4 GF Grammar Exporter
+The GF Grammar Exporter has the simplest job among all modules in the system. It creates a GF program for a paragraph using the GF grammars created for the sentences of the paragraph. By taking the union of all respective elements of each grammar for each sentence, i.e., categories, functions, linearizations and operators, the Grammar Exporter will group them into the set of categories (respectively, categories, functions, linearizations, operators) of the final grammar.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_4yj19Wg8HgvHLDggKMsPSIVg)
+ Call ID: call_4yj19Wg8HgvHLDggKMsPSIVg
+  Args:
+    section_id: 1.3.2
+
+================================= Tool Message =================================
+Name: read_section
+
+3.2 Sentence Components Recognition
+The goal of this step is to identify the relationship between elements of a sentence structure and chunks of words in a sentence from the POS tags and the dependency-based parse tree. For example, the sentence “Bill plays a game” is encoded by a structure #2 and we expect that Bill , plays , and game correspond to the subject, verb, and object, respectively.We begin with recognizing the main words (components) that play the most important roles in the sentence based on a given sentence structure.  This is achieved by program Π 2 (Listing 4). The first four rules of Π 2 determine the main subject and verb of the sentence whose structure is #1, #2, #3, or #5. Structure #4 requires a special treatment since the components following tobe can be of different forms.  For instance, in “Cathy is gorgeous,” the part after tobe is an adjective, but in “Cathy is a beautiful girl,” the part after tobe is a noun, though, with adjective beautiful . This is done using the four last rules of Π 2 .Listing 4: Program Π 2 2 { sub(S); verb(V) } :- nsubj(V,S).  3 { sub(S); obj(O); verb(V) } :- nsubj(V,S), dobj(V,O). 2 { sub(S); verb(V) } :- nsubjpass(V,S), auxpass(V,TOBE). 4 { sub(S); obj(O); verb_1(V1); verb_2(V2) } :- nsubj(V1,S), xcomp(V1,V2), dobj(V2,O).  2 { sub(S); adj(O) } :- nsubj(O,S), pos_tag(O,jj). 2 { sub(S); obj(O) } :- nsubj(O,S), pos_tag(O,nn). 2 { sub(S); obj(O) } :- nsubj(O,S), pos_tag(O,nns). 2 { sub(S); obj(O) } :- nsubj(O,S), pos_tag(O,cd). The result of program Π 2 is an one-to-one mapping of some of the words in the sentence into the importaint components of a sentence, called main components, i.e. subject, object and verb. The mapping is constructed by using the core arguments in Universal Dependency Relations 11 . Since not every word in the sentence is in a core argument relation, there are some words in the sentence that are not in the domain of the mapping that Π 2 produces.  We denote these words are complement components. To identify these words, we encode the Non-core dependents and Nominal dependents from Universal Dependency Relations into the set of rules in program Π 3 .Program Π 3 (Listing 5), together with the atoms extracted from the dependency-based parse tree such as compound ( P , N ) ( N is compound noun at the position P in the sentence), amod ( P , J ) ( J is an adjective modifier), etc. , is used to identify the complement components of the main components computed by Π 2 while maintaining the structure of the sentence created by Π 1 . For example, a complement of a noun could be another noun (as “board” in “board game”), or an adjective (as “popular” in “popular board game”), or a preposition (as “for adults” in “board game for adults”).11 https://universaldependencies.org/u/dep/
+286
+ Natural Language Generation for Non-Expert Users
+Structure GF rules #1 NP → VP → Cl #2 NP → V2 → NP → Cl #3 NP → VV → V2 → NP → Cl #4 NP → AP → Cl and NP → NP → Cl #5 NP → passiveVP → Cl
+Table 2: GF Rules Assigned to Each Structure
+Listing 5: Program Π 3 noun_compound(N) :- compound(pos,N).  adj_mod(JJ) :- amod(pos,JJ). noun_conjunction(N) :- conj(pos,N). preposition(COMP,IN) :- nmod(pos,COMP), case(COMP,IN). adverbial_modifier(ADV) :- advmod(pos,ADV).The input of Program Π 3 is the position ( pos ) of the word in the sentence. Program Π 3 is called whenever there is a new complement component discovered.  That way of recursive calls is to identify the maximal chunk of the words that support the main components of the sentence. The result of this module is a list of vocabularies for the next steps.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_8x5tL4URo7So3f2LJNszXG04)
+ Call ID: call_8x5tL4URo7So3f2LJNszXG04
+  Args:
+    section_id: 1.3.1
+
+================================= Tool Message =================================
+Name: read_section
+
+3.1 Sentence Structure Recognition
+The sentence structure recognition process involves 2 modules: natural language processing (NLP) mod- ule and logical reasoning on result from NLP module. In this paper, we make use of the Stanford Parser tools 6 described in [4, 17, 22, 14, 10]
+The NLP module tokenizes the input free text to produce a dependency-based parse tree 7 and part- of-speech tag (POS tag).  The dependency-based parse tree and the POS tag are then transform into an answer set program (ASP) [8] which contains only facts. Table 1 shows the transformation of the result of NLP module into an ASP program for the sentence “Bill plays a game”. In this table, nsubj, det, dobj and punct denote relations in the dependency-based parse tree, and mean nominal subject, determiner, direct object and punctuation respectively.  Full description of all relations in a dependency-based parse tree can be found in the Universal Dependency website 8 . The second set of notations are the POS tag PRP, VBP, DT and NN corresponding to pronoun, verb, determiner and noun . Readers can find the full list of POS tag in Penn Treebank Project 9 .NLP result ASP program Dependency tree nsubj(plays-2,Bill-1) ROOT(. -0,plays-2) det(game-4,a-3) dobj(plays-2,game-4) punct(plays-2,.-5) nsubj(2,1). det(4,3). dobj(2,4). punct(2,5). POS tag (Bill, PRP) (plays, VBP) (a, DT) (game, NN) (., .) pos tag(1,prp).  pos tag(2,vbp). pos tag(3,dt). pos tag(4,nn). pos tag(5,punct).Table 1: Transformation from NLP result to asp program
+From the collection of the dependency atoms from the dependency-based parse tree, we determine the structure of a sentence using an ASP program, called Π 1 (Listing 3).Listing 3: Program Π 1
+structure(1,1) :- nsubj(V,S).  structure(2,2) :- nsubj(V,S), dobj(V,O). structure(3,3) :- nsubj(V1,S), xcomp(V1,V2), dobj(V2,O). structure(4,2) :- nsubj(O,S), cop(O,TOBE). structure(5,2) :- nsubjpass(V,S), auxpass(V,TOBE). Each of the rule above can be read as if the right-hand side is true then the left-hand side must be true . These rules define five possible structures 10 of a sentence represented by the atom structure(x,y) . x and y in the atom structure(x,y) denote the type of the structure and the number of dependency relations
+6 https://nlp.stanford.edu/software/lex-parser.shtml
+7 https://en.wikipedia.org/wiki/Parse tree
+ 8 http://universaldependencies.org/
+9 https://www.ling.upenn.edu/courses/Fall 2003/ling001/penn treebank pos.html
+10 These are the types of structures that we have implemented in our prototype. Adding additional types will allow us to generate more complicated sentences. This is left for our next work.V.D. Nguyen, T. C. Son & E. Pontelli
+285
+ applied to activate the rule generating this atom, respectively. We refer to y as the i -value of the structure. For example, structure ( 1 , 1 ) will be recognized if the nsubj relation is in the dependency-based parse tree; structure ( 3 , 3 ) needs 3 dependency relations to be actived: nsubj , xcomp and dobj . We often use structure # x to indicate a structure of type x . Together with the collection of the atoms encoding the relations in the dependency-based parse tree, Π 1 generates several atoms of the form structure ( x , y ) for a sentence. Among all these atoms, an atom with the highest i -value represents the structure constructed using the highest number of dependency relations. And hence, that structure is the most informative structure that is recoginized for the sentence.  Observe that structure ( 1 , 1 ) is the most simplified structure of any sentence.
+
+================================== Ai Message ==================================
+
+The sentence construction component (GF Grammar Encoder) identifies appropriate GF rules to build a GF grammar for a sentence from its recognized structure and components, assigning an initial GF rule per structure (Table 2). It then selects sets of GF rules (following two conventions: resulting production types must be one of those in Table 2 and rules are chosen top-to-bottom from Table 3) based on known input/output types to create constructors and generate supporting operators for the GF grammar.

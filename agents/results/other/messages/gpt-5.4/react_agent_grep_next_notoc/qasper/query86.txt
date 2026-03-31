@@ -1,0 +1,77 @@
+================================ Human Message =================================
+
+QUERY:
+What is the state-of-the-art?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_TheNQNIDYhYNJ8Bj83P0v8Nv)
+ Call ID: call_TheNQNIDYhYNJ8Bj83P0v8Nv
+  Args:
+    pattern: state-of-the-art|SOTA|best performance|outperform|state of the art
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+We focus on named entity recognition (NER) for Chinese social media. With massive unlabeled text and quite lim- ited labelled corpus, we propose a semi- supervised learning model based on B- LSTM neural network. To take advan- tage of traditional methods in NER such as CRF, we combine transition probabil- ity with deep learning in our model.  To bridge the gap between label accuracy and F-score of NER, we construct a model which can be directly trained on F-score. When considering the instability of F- score driven method and meaningful in- formation provided by label accuracy, we propose an integrated method to train on both F-score and label accuracy. Our in- tegrated model yields substantial improve- ment over previous state-of-the-art result.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_PfsFk5q0jsqqPer9DiLKzxUo)
+ Call ID: call_PfsFk5q0jsqqPer9DiLKzxUo
+  Args:
+    pattern: previous state-of-the-art|state-of-the-art result|state of the art result|previous state of the art
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+We focus on named entity recognition (NER) for Chinese social media. With massive unlabeled text and quite lim- ited labelled corpus, we propose a semi- supervised learning model based on B- LSTM neural network. To take advan- tage of traditional methods in NER such as CRF, we combine transition probabil- ity with deep learning in our model.  To bridge the gap between label accuracy and F-score of NER, we construct a model which can be directly trained on F-score. When considering the instability of F- score driven method and meaningful in- formation provided by label accuracy, we propose an integrated method to train on both F-score and label accuracy. Our in- tegrated model yields substantial improve- ment over previous state-of-the-art result.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_ZEL5RA040SsPJg7xtUQDPouw)
+ Call ID: call_ZEL5RA040SsPJg7xtUQDPouw
+  Args:
+    pattern: Table|results|F-score|benchmark|dataset
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+We focus on named entity recognition (NER) for Chinese social media. With massive unlabeled text and quite lim- ited labelled corpus, we propose a semi- supervised learning model based on B- LSTM neural network. To take advan- tage of traditional methods in NER such as CRF, we combine transition probabil- ity with deep learning in our model.  To bridge the gap between label accuracy and F-score of NER, we construct a model which can be directly trained on F-score. When considering the instability of F- score driven method and meaningful in- formation provided by label accuracy, we propose an integrated method to train on both F-score and label accuracy. Our in- tegrated model yields substantial improve- ment over previous state-of-the-art result.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_VS5dXC4UjuxImzk1yHBMJC6b)
+ Call ID: call_VS5dXC4UjuxImzk1yHBMJC6b
+  Args:
+    pattern: previous work|baseline|comparison|experiments|evaluation
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1 Introduction
+With the development of Internet, social me- dia plays an important role in information exchange. The natural language processing tasks on social media are more challenging which draw attention of many researchers (Li and Liu, 2015; Habib and van Keulen, 2015; Radford et al., 2015; Cherry and Guo, 2015). As the foundation of many downstream applications (Weissenborn et al., 2015; Delgado et al. , 2014; Hajishirzi et al., 2013) such as information extrac- tion, named entity recognition (NER) deserves more research in prevailing and challenging social media text. NER is a task to identify names in texts and to assign names with particular types (Sun et al., 2009; Sun, 2014; Sun et al., 2014; He and Sun, 2017).  It is the informality of social media that discourages accuracy of NER
+systems. While efforts in English have nar- rowed the gap between social media and formal domains (Cherry and Guo, 2015), the task in Chinese remains challenging. It is caused by Chinese logographic characters which lack many clues to indicate whether a word is a name, such as capitalization.  The scant labelled Chi- nese social media corpus makes the task more challenging (Neelakantan and Collins, 2015; Skeppstedt, 2014; Liu et al., 2015).To address the problem, one approach is to use the lexical embeddings learnt from massive unla- beled text.  To take better advantage of unlabeled text, Peng and Dredze (2015) evaluates three types of embeddings for Chinese text, and shows the effectiveness of positional character embeddings with experiments. Considering the value of word segmentation in Chinese NER, another approach is to construct an integrated model to jointly train learned representations for both predicting word segmentations and NER (Peng and Dredze, 2016). However, the two above approaches are imple- mented within CRF model.  We construct a semi- supervised model based on B-LSTM neural net- work to learn from the limited labelled corpus by using lexical information provided by massive un- labeled text. To shrink the gap between label ac- curacy and F-Score, we propose a method to di- rectly train on F-Score rather than label accuracy in our model. In addition, we propose an inte- grated method to train on both F-Score and label accuracy.  Specifically, we make contributions as follows:
+• We propose a method to directly train on F- Score rather than label accuracy.In addition, we propose an integrated method to train on both F-Score and label accuracy.
+• We combine transition probability into our B- LSTM based max margin neural network toform structured output in neural network.
+• We evaluate two methods to use lexical em- beddings from unlabeled text in neural net- work.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_aCaL39HEXKFAxUNZfZ5DD1sm)
+ Call ID: call_aCaL39HEXKFAxUNZfZ5DD1sm
+  Args:
+    pattern: Peng and Dredze|2015|2016|best|previous|state
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+We focus on named entity recognition (NER) for Chinese social media. With massive unlabeled text and quite lim- ited labelled corpus, we propose a semi- supervised learning model based on B- LSTM neural network. To take advan- tage of traditional methods in NER such as CRF, we combine transition probabil- ity with deep learning in our model.  To bridge the gap between label accuracy and F-score of NER, we construct a model which can be directly trained on F-score. When considering the instability of F- score driven method and meaningful in- formation provided by label accuracy, we propose an integrated method to train on both F-score and label accuracy. Our in- tegrated model yields substantial improve- ment over previous state-of-the-art result.
+
+================================== Ai Message ==================================
+
+Unanswerable

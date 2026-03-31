@@ -1,0 +1,54 @@
+================================ Human Message =================================
+
+QUERY:
+Do they report the annotation agreement?
+
+TABLE OF CONTENTS (TOC):
+1 | Aggressive, Repetitive, Intentional, Visible, and Imbalanced: Refining Representations for Cyberbullying Classification
+1.1 | Abstract
+1.2 | Introduction
+1.3 | Background
+1.3.1 | Defining Cyberbullying
+1.3.2 | Existing Sources of Cyberbullying Data
+1.3.3 | Modeling Cyberbullying Behavior
+1.4 | Curating a Comprehensive Cyberbullying Dataset
+1.4.1 | Data Collection
+1.4.2 | Annotation Task
+1.4.3 | Cyberbullying Transcends Cyberaggression
+1.5 | Feature Engineering
+1.5.1 | Text-based Features
+1.5.2 | Social Network Features
+1.5.3 | Timeline Features
+1.5.4 | Thread Features
+1.6 | Experimental Evaluation
+1.7 | Discussion
+1.8 | Conclusion
+1.9 | Acknowledgements
+1.10 | References
+1.11 | Appendix 1: Analysis of the Real-World Class Distribution for Cyberbullying Criteria
+1.12 | Appendix 2: Model Evaluation
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_VO0WqH2TgzCzV5Xlz969jbiQ)
+ Call ID: call_VO0WqH2TgzCzV5Xlz969jbiQ
+  Args:
+    section_id: 1.4.2
+
+================================= Tool Message =================================
+Name: read_section
+
+Annotation Task
+We presented each tweet in the dataset to three separate an- notators as a Human Intelligence Task (HIT) on Amazon’s Mechanical Turk (MTurk) platform. By the time of recruit- ment, 6,897 of the 9,803 aggressive tweets were accessible from the Twitter web page. The remainder of the tweets had been removed, or the Twitter account had been locked or suspended. We asked our annotators to consider the full message thread for each tweet as displayed on Twitter’s web inter- face. We also gave them a list of up to 15 recent mentions by the author of the tweet, directed towards any of the other accounts mentioned in the original thread. Then we asked annotators to interpret each tweet in light of this social con- text, and had them provide us with labels for five key cy- berbullying criteria.  We defined these criteria in terms of the author account (“who posted the given tweet?”) and the tar- get (“who was the tweet about?” – not necessarily the first mention). We also stated that “if the target is not on Twit- ter or their handle cannot be identified” the annotator should “please write OTHER .” With this framework established, we gave the definitions for our five cyberbullying criteria as fol- lows.
+1. Aggressive language: ( AGGR ) Regardless of the au- thor’s intent,the language of the tweet could be seen as aggressive. The user either addresses a group or in- dividual, and the message contains at least one phrase that could be described as confrontational, derogatory, insulting, threatening, hostile, violent, hateful, or sexu- ally abusive .
+2. Repetition:( REP ) The target user has received at least two aggressive messages in total (either from the author or from another user in the visible thread).
+3. Harmful intent:( HARM ) The tweet was designed to tear down or disadvantage the target user by causing them distress or by harming their public image. The target does not respond agreeably as to a joke or an otherwise lighthearted comment.
+4. Visibility among peers:( PEER ) At least one other user besides the target has liked, retweeted, or responded to at least one of the author’s messages.
+5. Power imbalance:( POWER ) Power is derived from au- thority and perceived social advantage. Celebrities and public figures are more powerful than common users. Minorities and disadvantaged groups have less power. Bullies can also derive power from peer support.Each of these criteria was represented as a binary label, ex- cept for power imbalance , which was ternary. We asked “Is
+Table 3: Analysis of Labeled Twitter Data
+ Criterion Positive Balance Inter-annotator Agreement Cyberbullying Correlation aggression 74.8% 0.23 0.22 repetition 6.6% 0.18 0.27 harmful intent 16.1% 0.42 0.68 visibility among peers 30.1% 0.51 0.07 target power 34.3% 0.37 0.11 author power 3.1% 0. 10 -0.02 equal power 59.7% 0.22 -0.09 cyberbullying 0.7% 0.18 –
+there strong evidence that the author is more powerful than the target? Is the target more powerful? Or if there is not any good evidence, just mark equal .” We recognized that an imbalance of power might arise in a number of different cir- cumstances.  Therefore, we did not restrict our definition to just one form of power, such as follower count or popularity.For instructional purposes, we provided five sample threads to demonstrate both positive and negative examples for each of the five criteria. Two of these threads are shown here. The thread in Figure 1a displays bullying behavior that is targeted against the green user, with all five cyberbully- ing criteria displayed.  The thread includes repeated use of aggressive language such as “she really fucking tried” and “she knows she lost.” The bully’s harmful intent is evident in the victim’s defensive responses. And lastly, the thread is visible among four peers as three gang up against one, cre- ating a power imbalance.The final tweet in Figure 1b shows the importance of con- text in the annotation process.  If we read only this individ- ual message, we might decide that the post is cyberbullying, but given the social context here, we can confidently assert that this post is not cyberbullying. Although it contains the aggressive phrase “FUCK YOU TOO BITCH”, the author does not intend harm. The message is part of a joking ex- change between two friends or equals, and no other peers have joined in the conversation or interacted with the thread. After asking workers to review these examples, we gave them a short 7-question quiz to test their knowledge. Work- ers were given only one quiz attempt, and they were ex- pected to score at least 6 out of 7 questions correctly before they could proceed to the paid HIT. Workers were then paid $0 . 12 for each thread that they annotated.We successfully recruited 170 workers to label all 6,897 available threads in our dataset.  They labeled an average of 121.7 threads and a median of 7 threads each. They spent an average time of 3 minutes 50 seconds, and a median time of 61 seconds per thread. For each thread, we collected an- notations from three different workers, and from this data we computed our reliability metrics using Fleiss’s Kappa for inter-annotator agreement as shown in Table 3. We determined ground truth for our data using a 2 out of 3 majority vote as in Hosseinmardi et al. (2015). If the message thread was missing or a target user could not be identified, we removed the entry from the dataset, since later we would need to draw our features from both the thread and the target profile. After filtering in this way, we were left with 5,537 labeled tweets.Figure 1: Cyberbullying or not .  The leftmost thread demonstrates all five cyberbullying criteria. Although the thread in the middle contains repeated use of aggressive language, there is no harmful intent, visibility among peers, or power imbalance. Overlap measures. (right) Graphical representation of the neighborhood overlap measures of author a and target t .
+
+================================== Ai Message ==================================
+
+Yes. They report inter-annotator agreement using Fleiss’s Kappa in Table 3 for each criterion and cyberbullying.

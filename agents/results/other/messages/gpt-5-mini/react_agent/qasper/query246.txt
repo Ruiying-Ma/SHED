@@ -1,0 +1,72 @@
+================================ Human Message =================================
+
+QUERY:
+Do they use skip-gram word2vec?
+
+TABLE OF CONTENTS (TOC):
+1 | Improving Word Representations: A Sub-sampled Unigram Distribution for Negative Sampling
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2 Word2Vec
+1.3.1 | 2.1 Architectures
+1.3.2 | 2.2 Negative Sampling
+1.3.3 | 2.3 Sub-sampling
+1.4 | 3 Related Work
+1.5 | 4 Sub-sampled Unigram Distribution
+1.5.1 | 4.1 Critical Word
+1.5.2 | 4.2 Semantics Quantification
+1.5.3 | 4.3 Expression of Sub-sampling Rate
+1.5.4 | 4.4 Constants Estimation
+1.5.5 | 4.5 Discussions
+1.6 | 5 Experiments
+1.6.1 | 5.1 Experimental Setup
+1.6.1.1 | 5.1.1 Baselines
+1.6.1.2 | 5.1.2 Training Corpora
+1.6.1.3 | 5.1.3 Training details
+1.6.2 | 5.2 Task 1: Word Similarity Task
+1.6.2.1 | 5.2.1 Task Description
+1.6.2.2 | 5.2.2 Results
+1.6.3 | 5.3 Task 2: Synonym Selection Task
+1.6.3.1 | 5.3.1 Task Description
+1.6.3.2 | 5.3.2 Results
+1.6.4 | 5.4 Task 3: Word Analogy Task
+1.6.4.1 | 5.4.1 Task Description
+1.6.4.2 | 5.4.2 Results
+1.6.5 | 5.5 Extension of Semantics Quantification 5.5.1 MSR Sentence Completion Task
+1.6.5.1 | 5.5.2 Results
+1.7 | 6 Conclusions
+1.8 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_3KARxay7ndQY0mFVxv034Ydq)
+ Call ID: call_3KARxay7ndQY0mFVxv034Ydq
+  Args:
+    section_id: 1.3.1
+
+================================= Tool Message =================================
+Name: read_section
+
+2.1 Architectures
+Firstly, we briefly introduce the two architec- tures, i.e. , skip-gram (SG) and continuous bag- of-words (CBOW) in Word2Vec ( Mikolov et al. , 2013b ).  For a corpus with a word sequence w 1 , w 2 , · · · , w T , skip-gram predicts the context word w t + j given the center word w t , and maxi- mizes the average log probability,
+1 T T X t =1 X − c ≤ j ≤ c,j 6 =0 log p ( w t + j | w t ) , (1)
+ where c is the size of context window, and p ( w t + j | w t ) is defined by the full softmax function,
+p ( w O | w I ) = exp v 0> w O v w I P | V | w =1 exp ( v 0> w v w I ) , (2)
+ where v w and v 0 w are the vectors of the “input” and “output” words, and | V | is the size of vocabulary.As for CBOW, it predicts the center word based on the context words. The input vector is usu- ally the average of the context words’ vectors, i.e. , v w I = 1 2 c P − c ≤ j ≤ c,j 6 =0 v w t + j .
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_VDQpVCaHeIBux2izvifrxvkL)
+ Call ID: call_VDQpVCaHeIBux2izvifrxvkL
+  Args:
+    section_id: 1.6.1.3
+
+================================= Tool Message =================================
+Name: read_section
+
+5.1.3 Training details
+We implement the training of word vectors with the word2vec tool 5 , in which the part of noise distribution is modified to support several choices. For SG and CBOW, we set the vector dimension- ality to 100, and the size of the context window to 5. We choose 10 negative samples for each train- ing sample in the models.  The models are trained using the stochastic gradient decent (SGD) algo- rithm with a linear decaying learning rate with an initial value of 0.025 in SG and 0.05 in CBOW. We train the models on the three large corpora for 2 epochs, and for MSR’s Holmes novels the value may vary. Results in this paper are shown in per- centages and each of them is the average result of 4 repeated experiments, unless otherwise stated.
+
+================================== Ai Message ==================================
+
+Yes — they train skip-gram (SG) using the word2vec tool.

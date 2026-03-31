@@ -1,0 +1,99 @@
+================================ Human Message =================================
+
+QUERY:
+who annotated the new dataset?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_3jLP5W15VIE2eB2HS80lF1Ea)
+ Call ID: call_3jLP5W15VIE2eB2HS80lF1Ea
+  Args:
+    pattern: annotat|dataset|new dataset
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+In this paper, we investigate a new approach to Population, Intervention and Outcome (PIO) element detection, a common task in Evidence Based Medicine (EBM). The purpose of this study is two-fold: to build a training dataset for PIO element detection with minimum redun- dancy and ambiguity and to investigate pos- sible options in utilizing state of the art em- bedding methods for the task of PIO element detection.  For the former purpose, we build a new and improved dataset by investigating the shortcomings of previously released datasets. For the latter purpose, we leverage the state of the art text embedding, Bidirectional Encoder Representations from Transformers (BERT), and build a multi-label classifier. We show that choosing a domain specific pre-trained embedding further optimizes the performance of the classifier. Furthermore, we show that the model could be enhanced by using ensem- ble methods and boosting techniques provided that features are adequately chosen.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_z18dkRU3QeZfPYmIokdvbCMe)
+ Call ID: call_z18dkRU3QeZfPYmIokdvbCMe
+  Args:
+    pattern: annotat
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_0VgXcC2aLPhQ3bp3NvcwUzFw)
+ Call ID: call_0VgXcC2aLPhQ3bp3NvcwUzFw
+  Args:
+    pattern: dataset
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+In this paper, we investigate a new approach to Population, Intervention and Outcome (PIO) element detection, a common task in Evidence Based Medicine (EBM). The purpose of this study is two-fold: to build a training dataset for PIO element detection with minimum redun- dancy and ambiguity and to investigate pos- sible options in utilizing state of the art em- bedding methods for the task of PIO element detection.  For the former purpose, we build a new and improved dataset by investigating the shortcomings of previously released datasets. For the latter purpose, we leverage the state of the art text embedding, Bidirectional Encoder Representations from Transformers (BERT), and build a multi-label classifier. We show that choosing a domain specific pre-trained embedding further optimizes the performance of the classifier. Furthermore, we show that the model could be enhanced by using ensem- ble methods and boosting techniques provided that features are adequately chosen.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_XozRUbwpczBZGwu2XphN0JDQ)
+ Call ID: call_XozRUbwpczBZGwu2XphN0JDQ
+  Args:
+    pattern: annotator|annotated|annotation
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_TGMhWgYNmL8ZNZGT9fHZCZqn)
+ Call ID: call_TGMhWgYNmL8ZNZGT9fHZCZqn
+  Args:
+    pattern: crowd|expert|doctor|physician|student|author
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1 Introduction
+Evidence-based medicine (EBM) is of primary importance in the medical field. Its goal is to present statistical analyses of issues of clinical fo- cus based on retrieving and analyzing numerous papers in the medical literature ( Haynes et al. , 1997 ). The PubMed database is one of the most commonly used databases in EBM ( Sackett et al. , 1996 ). Biomedical papers, describing randomized con- trolled trials in medical intervention, are published at a high rate every year. The volume of these pub- lications makes it very challenging for physicians to find the best medical intervention for a given patient group and condition ( Borah et al. , 2017 ). Computational methods and natural language pro- cessing (NLP) could be adopted in order to expe- dite the process of biomedical evidence synthesis.  Specifically, NLP tasks applied to well structured
+documents and queries can help physicians extract appropriate information to identify the best avail- able evidence in the context of medical treatment.Clinical questions are formed using the PIO framework, where clinical issues are broken down into four components: Population/Problem (P), Intervention (I), Comparator (C), and Outcome (O). We will refer to these categories as PIO el- ements, by using the common practice of merging the C and I categories.  In ( Rathbone et al. , 2017 ) a literature screening performed in 10 systematic reviews was studied. It was found that using the PIO framework can significantly improve litera- ture screening efficacy. Therefore, efficient extrac- tion of PIO elements is a key feature of many EBM applications and could be thought of as a multi- label sentence classification problem. Previous works on PIO element extraction fo- cused on classical NLP methods, such as Naive Bayes (NB), Support Vector Machines (SVM) and Conditional Random Fields (CRF) ( Chung , 2009 ; Boudin et al. , 2010 ). These models are shallow and limited in terms of modeling capacity.  Fur- thermore, most of these classifiers are trained to extract PIO elements one by one which is sub- optimal since this approach does not allow the use of shared structure among the individual classi- fiers.Deep neural network models have increased in popularity in the field of NLP. They have pushed the state of the art of text representation and in- formation retrieval.  More specifically, these tech- niques enhanced NLP algorithms through the use of contextualized text embeddings at word, sen- tence, and paragraph levels ( Mikolov et al. , 2013 ; Le and Mikolov , 2014 ; Peters et al. , 2017 ; Devlin et al. , 2018 ; Logeswaran and Lee , 2018 ; Radford et al. , 2018 ). More recently, Jin and Szolovits ( 2018 ) pro- posed a bidirectional long short term memory (LSTM) model to simultaneously extract PIO
+components from PubMed abstracts. To our knowledge, that study was the first in which a deep learning framework was used to extract PIO ele- ments from PubMed abstracts.In the present paper, we build a dataset of PIO elements by improving the methodology found in ( Jin and Szolovits , 2018 ).  Furthermore, we built a multi-label PIO classifier, along with a boost- ing framework, based on the state of the art text embedding, BERT. This embedding model has been proven to offer a better contextualization compared to a bidirectional LSTM model ( Devlin et al. , 2018 ).
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_JHXtgsOZnvVxqpgSlA21Rilx)
+ Call ID: call_JHXtgsOZnvVxqpgSlA21Rilx
+  Args:
+    pattern: Jin and Szolovits|methodology|improv
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+In this paper, we investigate a new approach to Population, Intervention and Outcome (PIO) element detection, a common task in Evidence Based Medicine (EBM). The purpose of this study is two-fold: to build a training dataset for PIO element detection with minimum redun- dancy and ambiguity and to investigate pos- sible options in utilizing state of the art em- bedding methods for the task of PIO element detection.  For the former purpose, we build a new and improved dataset by investigating the shortcomings of previously released datasets. For the latter purpose, we leverage the state of the art text embedding, Bidirectional Encoder Representations from Transformers (BERT), and build a multi-label classifier. We show that choosing a domain specific pre-trained embedding further optimizes the performance of the classifier. Furthermore, we show that the model could be enhanced by using ensem- ble methods and boosting techniques provided that features are adequately chosen.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_EurDdY8RrRIuLyCUhXuK9VBr)
+ Call ID: call_EurDdY8RrRIuLyCUhXuK9VBr
+  Args:
+    pattern: 2 |dataset|Data|Methods|annotation
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+In this paper, we investigate a new approach to Population, Intervention and Outcome (PIO) element detection, a common task in Evidence Based Medicine (EBM). The purpose of this study is two-fold: to build a training dataset for PIO element detection with minimum redun- dancy and ambiguity and to investigate pos- sible options in utilizing state of the art em- bedding methods for the task of PIO element detection.  For the former purpose, we build a new and improved dataset by investigating the shortcomings of previously released datasets. For the latter purpose, we leverage the state of the art text embedding, Bidirectional Encoder Representations from Transformers (BERT), and build a multi-label classifier. We show that choosing a domain specific pre-trained embedding further optimizes the performance of the classifier. Furthermore, we show that the model could be enhanced by using ensem- ble methods and boosting techniques provided that features are adequately chosen.
+
+================================== Ai Message ==================================
+
+Unanswerable

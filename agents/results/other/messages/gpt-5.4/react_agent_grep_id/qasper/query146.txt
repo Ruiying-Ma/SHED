@@ -1,0 +1,91 @@
+================================ Human Message =================================
+
+QUERY:
+did they test with other pretrained models besides bert?
+
+TABLE OF CONTENTS (TOC):
+1 | T O T UNE OR N OT T O T UNE ? H OW A BOUT THE B EST OF B OTH W ORLDS ?
+1.1 | A BSTRACT
+1.2 | 1 Introduction
+1.3 | 2 Related Studies
+1.4 | 3 Methodology
+1.5 | 4 Experiments
+1.5.1 | 4.1 Overview
+1.5.2 | 4.2 Experiment A: Sequence Labeling
+1.5.3 | 4.3 Experiment B: Text Classification
+1.5.4 | 4.4 Experiment C: Semantic Similarity Tasks
+1.6 | 5 Discussions and Conclusions
+1.7 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_all (call_vggUsCfKpnlvO9p9KX1pvC03)
+ Call ID: call_vggUsCfKpnlvO9p9KX1pvC03
+  Args:
+    pattern: pretrained model|BERT|RoBERTa|XLNet|ALBERT|GPT|DistilBERT|Electra|pre-trained
+
+================================= Tool Message =================================
+Name: grep_search_all
+
+1.1
+1.2
+1.3
+1.4
+1.5.1
+1.5.2
+1.5.3
+1.5.4
+1.6
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_yFRulT8nwksXkdi57IYEKuDd)
+ Call ID: call_yFRulT8nwksXkdi57IYEKuDd
+  Args:
+    section_id: 1.5.1
+  read_section (call_3is01hmgPfdVpSb48ZWgI4vG)
+ Call ID: call_3is01hmgPfdVpSb48ZWgI4vG
+  Args:
+    section_id: 1.5.2
+  read_section (call_Vwvjbo9ocwxTVFgF6P5sZ9pq)
+ Call ID: call_Vwvjbo9ocwxTVFgF6P5sZ9pq
+  Args:
+    section_id: 1.5.3
+  read_section (call_rwMxlLY2vWNxEobUJuCQ374D)
+ Call ID: call_rwMxlLY2vWNxEobUJuCQ374D
+  Args:
+    section_id: 1.5.4
+
+================================= Tool Message =================================
+Name: read_section
+
+4.1 Overview
+We perform three different experiments to test our hypotheses. First, we perform a named entity recognition tasks, by adding a bi-LSTM on top of the BERT model. In this experiment, we hope to test whether, without any modification to the commonly used network structure, our proposed training strategy will improve the overall accuracy. Second, we perform a text classification experiments, in this experiments, we trained three models, and perform a model ensemble.  We hope to show that even the added network has not contributed to significantly in improving the accuracy, it does provide opportunities for model ensembles. Finally, we perform the textual similarity tests, in which we show that if one can tailor make a network that specifically fit the characteristics of the pre-trained languages, more significant improvement can be expected.Under the strategy finetune-only , we use only single BERT. In order to adapt to different tasks, we will add a fully connected layer upon BERT. In the sequence labeling task, the BERT word embedding of each word passes through two fully connected layers, and the prediction probability of named entity can be obtained. In the next two verification tasks, we use “[CLS]” for prediction and add two fully connected layers subsequently. Under our strategy stack- and-finetune , we set different learning rates for the two phases.  We tried to set the learning rate of the first stage to 1 e − 1 , 1 e − 2 , 5 e − 3 , 1 e − 3 and 5 e − 4 , and set it to a smaller number in the latter stage, such as 1 e − 3 , 1 e − 4 , 5 e − 5 and 1 e − 5 .  After our experiments, we found that it gets better results while the learning rate is set to 0.001 in the stage of training only the upper model and set to 5 e − 5 in the later stage. Since BERT-Adam[2] has excellent performance, in our experiments, we use it as an optimizer with β 1 = 0 . 9 , β 2 = 0 . 999 , L 2 -weight decay of 0 .  01 .We apply a dropout trick on all layers and set the dropout probability as 0.1.
+
+================================= Tool Message =================================
+Name: read_section
+
+4.2 Experiment A: Sequence Labeling
+In the sequence labeling task,we explore sub-task named entity recognition using CoNLL03 dataset [6], which is a public available used in many studies to test the accuracy of their proposed methods [30, 31, 32, 33, 2]. For strategy finetune-only and strategy stack-and-finetune , we implemented two models: one with BERT and the other with BERT adding a Bi-LSTM on top. Eval measure is accuracy and F1 score. Model Accuracy(%) F1(%) BERT 98.75 85.62 BERT + Bi-LSTM 99.74 92.51 Table 2: Results for named entity recognition
+As is shown in Table 2, even without modifying the networks to specifically adapt to the pre-trained model, our training strategy still brought improvement towards overall accuracy of 0.99% for the accuracy and 0. 068 on the F1 score, proving the success of our proposed methods.
+
+================================= Tool Message =================================
+Name: read_section
+
+4.3 Experiment B: Text Classification
+In the task of text categorization, we used Yahoo Answer Classification Dataset. The Dataset is consists of 10 classes, but due to the huge amount of the dataset, we just select two class of them. As for the upper model,we choose DenseNet[34] and HighwayLSTM [35].4
+To Tune or Not To Tune? How About the Best of Both Worlds?A PREPRINT
+ The DenseNet structure contains four independent blocks and each block has four CNNs connected by residual. We initialize word embedding in the word representation layer with BERT. We initialize each character as a 768-dimension vector. In the experiment of training DenseNet,we concat the output vector of DenseNet with [CLS] for prediction.Model Accuracy(%) F1(%) BERT 90.05 89.97 BERT + HighwayLSTM 89.85 89. 85 BERT + DenseNet 90.31 90.25 Ensembled Model 90.77 90.43
+Table 3: Results for text classification
+We find the ensembled model enjoys a 0.72% improvements compared to the fine-tune only model and 0.005 improve- ment for the F1 score.
+
+================================= Tool Message =================================
+Name: read_section
+
+4.4 Experiment C: Semantic Similarity Tasks
+We use “Quora-Question-Pair” dataset 1. This is a commonly used dataset containing 400k question pairs, annotated manually to be semantically equivalent or not. Due to its high quality, it is a standard dataset to test the success of various semantic similarity tasks. Various models which are tested on this data set are proposed, including but not limited to [36, 37, 38, 39]. Apart from the BERT fine-tuning only model and BERT+ BIMPM model, we also devise two new network structures by modifying the BIMPM model. In the first model is to remove the first bi-LSTM of BIMPM, which is the input layer for the matching layer in BIMPM.  In the second model, we combine the matching layer of BIMPM and with a transformer[17], a model we call Sim-Transformer by replacing the output layer of the matching layer, originally a bi-LSTM model, with a transformer model. From the experimental results shown in Table 4, we can see that due to the strong expressive ability of the BERT, there is almost no difference in the experimental results of removing the first bi-LSTM and BIMPM.  In addition, we also find that Sim-Transformer’s performance without fine-tuning is nearly four percentage points lower than BIMPM, but it out-performs BIMPM after fine-tuning. In general, the results show that BERT + Sim-Transformer out-performs BERT-only model by 4.7%, thus confirming our hypotheses again.Model Accuracy(BERT fixed) Accuracy(Fine-tune BERT) BERT – 0. 8445 BERT + BIMPM [39] 0.8739 0.8899 BERT + BIMPM(First bi-LSTM removed) 0.869 0.8855 BERT + Sim-Transformer 0.8341 0.8915
+Table 4: Results for semantic similarity task
+
+================================== Ai Message ==================================
+
+No. In the experiments, they only used BERT and BERT-based variants such as BERT + Bi-LSTM, BERT + HighwayLSTM, BERT + DenseNet, BERT + BIMPM, and BERT + Sim-Transformer.

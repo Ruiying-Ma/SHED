@@ -1,0 +1,59 @@
+================================ Human Message =================================
+
+QUERY:
+What is the type of the project 'Birdview Avenue Improvements (CalOES Project)'?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_jsNPCxTLoaDbKcRhoxP3Vltw)
+ Call ID: call_jsNPCxTLoaDbKcRhoxP3Vltw
+  Args:
+    pattern: Birdview Avenue Improvements \(CalOES Project\)
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Birdview Avenue Improvements (CalOES Project) ¾ Updates:  The  design  of  this  project  has  been  included  in  the  Malibu  Park Drainage  Improvements  project  and  updates  will  be  provided  under that project.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_GBnFPEFxbwri6AKGiEoYn4WJ)
+ Call ID: call_GBnFPEFxbwri6AKGiEoYn4WJ
+  Args:
+    pattern: Birdview Avenue
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Birdview Avenue Improvements (CalOES Project) ¾ Updates:  The  design  of  this  project  has  been  included  in  the  Malibu  Park Drainage  Improvements  project  and  updates  will  be  provided  under that project.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_06UOD639udbGtr0DYqXs4uNL)
+ Call ID: call_06UOD639udbGtr0DYqXs4uNL
+  Args:
+    pattern: CalOES
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Latigo Canyon Road Roadway/Retaining Wall Improvements (FEMA Project)
+¾
+Updates:  Staff is finalizing the design of this project.  Staff  is  also  working  with  FEMA/CalOES  to  substitute  the  existing timber with non-combustible materials.¾
+Project Schedule  Complete Design: Spring 2021  Begin Construction: Summer 2021
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_oNb5IWtzcWtFyHa6E07O2ufA)
+ Call ID: call_oNb5IWtzcWtFyHa6E07O2ufA
+  Args:
+    pattern: Birdview[\s\S]{0,200}Type
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+
+none

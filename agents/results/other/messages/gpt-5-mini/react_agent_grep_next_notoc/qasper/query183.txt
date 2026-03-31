@@ -1,0 +1,58 @@
+================================ Human Message =================================
+
+QUERY:
+Which was the most helpful strategy?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_3OYbF8va98MfGsrLC5s4SMV5)
+ Call ID: call_3OYbF8va98MfGsrLC5s4SMV5
+  Args:
+    pattern: most helpful strategy
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_GmwthHcEE23S8MnQs6CL1VIh)
+ Call ID: call_GmwthHcEE23S8MnQs6CL1VIh
+  Args:
+    pattern: most helpful
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_JBEGUSio7eekdqw2mKmO7Oz5)
+ Call ID: call_JBEGUSio7eekdqw2mKmO7Oz5
+  Args:
+    pattern: helpful strategy
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_QIHgmqXaNU404pWnVB2XT7qH)
+ Call ID: call_QIHgmqXaNU404pWnVB2XT7qH
+  Args:
+    pattern: helpful
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+4 Discussion
+The goal of our study was to test the feasibility of building classifiers by using crowdsourcing and active learning strategies. We had 7,220 sample job loss- related tweets annotated using Amazon MTurk, tested 8 classification models, and evaluated 4 active learning strategies to answer our two RQs.The key benefit of crowdsourcing is to have a large number of workers avail- able to carry out tasks on a piecework basis.  This means that it is likely to get the crowd to start work on tasks almost immediately and be able to have a large number of tasks completed quickly. However, even welltrained workers are only human and can make mistakes. Our first RQ was to find an optimal and economical way to get reliable annotations from crowdsourcing. Beyond using control tweets, we tested different cut-off time to assess how the amount of time workers spent on the task would affect annotation quality.  We found that the annotation quality is low if the tasks were finished within 90 seconds. We also found that the annotation quality is not affected by the number of workers (i.e., between 3 worker group vs 5 worker group), which was also demonstrated by Mozafari et al [29].In second RQ, we aimed to find which active learning strategy is most effi- cient and cost-effective to build event classification models using Twitter data.  We started with selecting representative machine learning and deep learning clas- sifiers. Among the 4 machine learning classifiers (i.e., LR, NB, RF, and SVM), LR and RF classifiers have the best performance on the task of identifying job loss events from tweets. Among the 4 deep learning methods (i.e., CNN, RNN, LSTM, LSTM with GRU), CNN has the best performance. In active learning, the learning algorithm is set to proactively select a subset of available examples to be manually labeled next from a pool of yet unlabeled instances. The fundamental idea behind the concept is that a machine learning algorithm could potentially achieve a better accuracy quicker and using fewer training data if it were allowed to choose the most informative data it wants to learn from. In our experiment, we found that the entropy algorithm is the best
+10 Y. Zhao et al. way to build machine learning models fast and efficiently. Vote entropy and KL divergence, the query-by-committee active learning methods are helpful for the training of machine learning ensemble classifiers. However, all the active learning strategies we tested do not work well with deep learning model (i.e., CNN) or deep learning-based ensemble classifier.We also recognize the limitations of our study. First, we only tested 5 clas- sifiers (i.e. , LR, RF, CNN, a machine learning ensemble classifier, and a deep learning classifier) and 4 active learning strategies (i.e., least confident, entropy, vote entropy, KL divergence). Other state-of-art methods for building tweet clas- sifiers (e.g., BERT [30]) and other active learning strategies (e.g., variance re- duction [31]) are worth exploring.  Second, other crowdsourcing quality control methods such as using prequalification questions to identify high-quality workers also warrant further investigations. Third, the crowdsourcing and active learning pipeline can potentially be applied to other data and tasks. However, more exper- iments are needed to test the fea-sibility. Fourth, the current study only focused on which active learning strategy is most efficient and cost-effective to build event classification models using crowdsourcing labels.  Other research questions such as how the correctness of the crowdsourced labels would impact classifier performance warrant future investigations.In sum, our study demonstrated that crowdsourcing with active learning is a possible way to build up machine learning classifiers efficiently. However, active learning strategies do not benefit deep learning classifiers in our study.
+
+================================== Ai Message ==================================
+
+The entropy algorithm.

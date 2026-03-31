@@ -1,0 +1,60 @@
+================================ Human Message =================================
+
+QUERY:
+what shortcomings of previous datasets are mentioned?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_CeumAkCwG0oo5PHpkIb7XKh3)
+ Call ID: call_CeumAkCwG0oo5PHpkIb7XKh3
+  Args:
+    pattern: shortcomings|limitations|previous datasets|dataset
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+In this paper, we investigate a new approach to Population, Intervention and Outcome (PIO) element detection, a common task in Evidence Based Medicine (EBM). The purpose of this study is two-fold: to build a training dataset for PIO element detection with minimum redun- dancy and ambiguity and to investigate pos- sible options in utilizing state of the art em- bedding methods for the task of PIO element detection.  For the former purpose, we build a new and improved dataset by investigating the shortcomings of previously released datasets. For the latter purpose, we leverage the state of the art text embedding, Bidirectional Encoder Representations from Transformers (BERT), and build a multi-label classifier. We show that choosing a domain specific pre-trained embedding further optimizes the performance of the classifier. Furthermore, we show that the model could be enhanced by using ensem- ble methods and boosting techniques provided that features are adequately chosen.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_UkWsAsYiSxV2DR48e7GWEv6R)
+ Call ID: call_UkWsAsYiSxV2DR48e7GWEv6R
+  Args:
+    pattern: shortcomings|limitations|previously released datasets|released datasets
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+In this paper, we investigate a new approach to Population, Intervention and Outcome (PIO) element detection, a common task in Evidence Based Medicine (EBM). The purpose of this study is two-fold: to build a training dataset for PIO element detection with minimum redun- dancy and ambiguity and to investigate pos- sible options in utilizing state of the art em- bedding methods for the task of PIO element detection.  For the former purpose, we build a new and improved dataset by investigating the shortcomings of previously released datasets. For the latter purpose, we leverage the state of the art text embedding, Bidirectional Encoder Representations from Transformers (BERT), and build a multi-label classifier. We show that choosing a domain specific pre-trained embedding further optimizes the performance of the classifier. Furthermore, we show that the model could be enhanced by using ensem- ble methods and boosting techniques provided that features are adequately chosen.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_DjUNMzKFiLl2ijUK5203aYfJ)
+ Call ID: call_DjUNMzKFiLl2ijUK5203aYfJ
+  Args:
+    pattern: ambiguity|redundancy|redundant|ambiguous
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+In this paper, we investigate a new approach to Population, Intervention and Outcome (PIO) element detection, a common task in Evidence Based Medicine (EBM). The purpose of this study is two-fold: to build a training dataset for PIO element detection with minimum redun- dancy and ambiguity and to investigate pos- sible options in utilizing state of the art em- bedding methods for the task of PIO element detection.  For the former purpose, we build a new and improved dataset by investigating the shortcomings of previously released datasets. For the latter purpose, we leverage the state of the art text embedding, Bidirectional Encoder Representations from Transformers (BERT), and build a multi-label classifier. We show that choosing a domain specific pre-trained embedding further optimizes the performance of the classifier. Furthermore, we show that the model could be enhanced by using ensem- ble methods and boosting techniques provided that features are adequately chosen.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_M48NYvnsl5IPAJAdex3uwACA)
+ Call ID: call_M48NYvnsl5IPAJAdex3uwACA
+  Args:
+    pattern: previously released datasets|existing datasets|prior datasets|dataset construction|annotation
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+In this paper, we investigate a new approach to Population, Intervention and Outcome (PIO) element detection, a common task in Evidence Based Medicine (EBM). The purpose of this study is two-fold: to build a training dataset for PIO element detection with minimum redun- dancy and ambiguity and to investigate pos- sible options in utilizing state of the art em- bedding methods for the task of PIO element detection.  For the former purpose, we build a new and improved dataset by investigating the shortcomings of previously released datasets. For the latter purpose, we leverage the state of the art text embedding, Bidirectional Encoder Representations from Transformers (BERT), and build a multi-label classifier. We show that choosing a domain specific pre-trained embedding further optimizes the performance of the classifier. Furthermore, we show that the model could be enhanced by using ensem- ble methods and boosting techniques provided that features are adequately chosen.
+
+================================== Ai Message ==================================
+
+Previous datasets are described as having redundancy and ambiguity.

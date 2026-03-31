@@ -1,0 +1,47 @@
+================================ Human Message =================================
+
+QUERY:
+Which datasets do they evaluate on?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_IPxtGmFxl78ma3NVlfwoHoPS)
+ Call ID: call_IPxtGmFxl78ma3NVlfwoHoPS
+  Args:
+    pattern: (?i)dataset|datasets|evaluate on|evaluation
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Fine-grained entity typing is a challenging problem since it usually involves a relatively large tag set and may require to understand the context of the entity mention. In this pa- per, we use entity linking to help with the fine- grained entity type classification process. We propose a deep neural model that makes pre- dictions based on both the context and the in- formation obtained from entity linking results. Experimental results on two commonly used datasets demonstrates the effectiveness of our approach.  On both datasets, it achieves more than 5% absolute strict accuracy improvement over the state of the art.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_mDnkX3rW0BWTyEeEWKzkagM5)
+ Call ID: call_mDnkX3rW0BWTyEeEWKzkagM5
+  Args:
+    pattern: (?i)OntoNotes|BBN|FIGER|Wiki|dataset
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Fine-grained entity typing is a challenging problem since it usually involves a relatively large tag set and may require to understand the context of the entity mention. In this pa- per, we use entity linking to help with the fine- grained entity type classification process. We propose a deep neural model that makes pre- dictions based on both the context and the in- formation obtained from entity linking results. Experimental results on two commonly used datasets demonstrates the effectiveness of our approach.  On both datasets, it achieves more than 5% absolute strict accuracy improvement over the state of the art.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_8G6vSHtz1bEdTK8MTEED2tfO)
+ Call ID: call_8G6vSHtz1bEdTK8MTEED2tfO
+  Args:
+    pattern: (?i)BBN|OntoNotes|FIGER
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+4.1 Setup
+We use two datasets: FIGER (GOLD) ( Ling and Weld , 2012 ) and BBN ( Weischedel and Brunstein , 2005 ). The sizes of their tag sets are 113 and 47, respectively. FIGER (GOLD) allows mentions to have multiple type paths, but BBN does not. An- other commonly used dataset, OntoNotes ( Gillick et al.  , 2014 ), is not used since it contains many pronoun and common noun phrase mentions such as “it,” “he,” “a thrift institution,” which are not suitable to directly apply entity linking on.Following ( Ling and Weld , 2012 ), we gen- erate weakly labeled datasets for training with Wikipedia anchor links. Since the tag sets used by FIGER (GOLD) and BBN are different, we create a training set for each of them.  For each dataset, 2 , 000 weakly labeled samples are ran- domly picked to form a development set. We also manually annotated 50 person mentions collected from news articles for tuning the parameter λ P .We use the 300 dimensional pretrained GloVe word vectors provided by ( Pennington et al. , 2014 ). The hidden layer sizes of the two layers of BiLSTMs are both set to 250.  For the three- layer MLP, the size of the two hidden layers are both set to 500. The size of the type embeddings is 500. λ P is set to 2.0. We also apply batch nor- malization and dropout to the input of each dense layer in our three-layer MLP during training.We use strict accuracy, Macro F1, and Micro F1 to evaluate fine-grained typing performance ( Ling and Weld , 2012 ).
+
+================================== Ai Message ==================================
+
+FIGER (GOLD) and BBN. OntoNotes is mentioned but not used.

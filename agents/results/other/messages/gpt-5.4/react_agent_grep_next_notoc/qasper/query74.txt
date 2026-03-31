@@ -1,0 +1,61 @@
+================================ Human Message =================================
+
+QUERY:
+Which weak signal data do they use?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_uE9W2F8BAZacI1NpfqK2lFaD)
+ Call ID: call_uE9W2F8BAZacI1NpfqK2lFaD
+  Args:
+    pattern: weak signal|weak signals
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+ABSTRACT
+Detecting controversy in general web pages is a daunting task, but increasingly essential to efficiently moderate discussions and effec- tively filter problematic content. Unfortunately, controversies occur across many topics and domains, with great changes over time. This paper investigates neural classifiers as a more robust methodology for controversy detection in general web pages. Current models have often cast controversy detection on general web pages as Wikipedia linking, or exact lexical matching tasks.  The diverse and changing nature of controversies suggest that semantic approaches are better able to detect controversy. We train neural networks that can capture semantic information from texts using weak signal data. By leveraging the semantic properties of word embeddings we robustly improve on existing controversy detection methods. To evaluate model stability over time and to unseen topics, we asses model performance under varying training conditions to test cross- temporal, cross-topic, cross-domain performance and annotator congruence.  In doing so, we demonstrate that weak-signal based neural approaches are closer to human estimates of controversy and are more robust to the inherent variability of controversies.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_8jVjik27OAM9ZpyaopTh4179)
+ Call ID: call_8jVjik27OAM9ZpyaopTh4179
+  Args:
+    pattern: Wikipedia|wiki
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+ABSTRACT
+Detecting controversy in general web pages is a daunting task, but increasingly essential to efficiently moderate discussions and effec- tively filter problematic content. Unfortunately, controversies occur across many topics and domains, with great changes over time. This paper investigates neural classifiers as a more robust methodology for controversy detection in general web pages. Current models have often cast controversy detection on general web pages as Wikipedia linking, or exact lexical matching tasks.  The diverse and changing nature of controversies suggest that semantic approaches are better able to detect controversy. We train neural networks that can capture semantic information from texts using weak signal data. By leveraging the semantic properties of word embeddings we robustly improve on existing controversy detection methods. To evaluate model stability over time and to unseen topics, we asses model performance under varying training conditions to test cross- temporal, cross-topic, cross-domain performance and annotator congruence.  In doing so, we demonstrate that weak-signal based neural approaches are closer to human estimates of controversy and are more robust to the inherent variability of controversies.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_z8SQonnm1qsQats46EnJ8yQ2)
+ Call ID: call_z8SQonnm1qsQats46EnJ8yQ2
+  Args:
+    pattern: weakly|weak signal data|dataset|data set|training data
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+ABSTRACT
+Detecting controversy in general web pages is a daunting task, but increasingly essential to efficiently moderate discussions and effec- tively filter problematic content. Unfortunately, controversies occur across many topics and domains, with great changes over time. This paper investigates neural classifiers as a more robust methodology for controversy detection in general web pages. Current models have often cast controversy detection on general web pages as Wikipedia linking, or exact lexical matching tasks.  The diverse and changing nature of controversies suggest that semantic approaches are better able to detect controversy. We train neural networks that can capture semantic information from texts using weak signal data. By leveraging the semantic properties of word embeddings we robustly improve on existing controversy detection methods. To evaluate model stability over time and to unseen topics, we asses model performance under varying training conditions to test cross- temporal, cross-topic, cross-domain performance and annotator congruence.  In doing so, we demonstrate that weak-signal based neural approaches are closer to human estimates of controversy and are more robust to the inherent variability of controversies.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_9LtdfQkbVthnGMDUzc2dy0yn)
+ Call ID: call_9LtdfQkbVthnGMDUzc2dy0yn
+  Args:
+    pattern: Crawling from Wikipedia|Wikipedia pages|linked from Wikipedia|category
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+3.1 Datasets and evaluation
+We use the Clueweb09 derived dataset of [4] for baseline compari- son. For cross-temporal, cross-topic and cross-domain training & evaluation, we generate a new dataset based on Wikipedia crawl data 3 . This dataset is gathered by using Wikipedia’s ‘List of Con- toversial articles’ overview page of 2018 (time of writing) and 2009 (for comparison with baselines) 4 .  Using this as a ‘seed’ set of con- troversial articles, we iteratively crawl the ‘See also’, ‘References’ and ‘External links’ hyperlinks up to two hops from the seed list.The negative seed pages (i.e. non controversial) are gathered by using the random article endpoint 5 . The snowball-sample approach includes general, non-Wikipedia, pages that are referred to from Wikipedia pages.  The dataset thus extends beyond just the ency- clopedia genre of texts. Labels are assumed to propagate: a page linked from a controversial issue is assumed to be controversial. The resulting dataset statistics are summarized in Table 1.Table 1: Wikipedia derived dataset statistics. Including the percentages of controversial (i.e. positive labelled) and general (i.e. non-Wikipedia) web pages from the total amount of pages per dataset split. Set Seeds Total Controversial General Web Train 5600 23.703 7.233 (31%) 15.449 (65%) Validation 200 988 651 (66%) 688 (70%) Test 200 1.024 654 (64%) 723 (71%)
+To be useful as a flagging mechanism for moderation, a contro- versy detection algorithm should satisfy both Precision and Recall criteria.  F1 scores will therefore be used to evaluate this balance. The AUC values are used to measure classification performance in the unbalanced controversy datasets. The test-train split depends on the task investigated and is listed in the results section for the respective task. To test for significant results, all models were eval- uated using a bootstrap approach: by drawing 1000 samples with replacements n documents from the test set equal to the test-set size.  The resulting confidence intervals based on percentiles provide a measure of significance.
+
+================================== Ai Message ==================================
+
+They use a Wikipedia-crawl-derived weak-signal dataset: seed controversial articles from Wikipedia’s “List of Controversial articles” pages (2018 and 2009), then iteratively crawl “See also,” “References,” and “External links” up to two hops; negative seeds come from Wikipedia’s random article endpoint. Labels are weakly propagated so pages linked from controversial issues are assumed controversial.

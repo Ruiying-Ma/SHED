@@ -1,0 +1,20 @@
+================================ Human Message =================================
+
+HYPOTHESIS:
+Permissible development of similar information: Receiving Party may independently develop information similar to Confidential Information.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_lFpQtUkCunnwxN2nnSK4PwVR)
+ Call ID: call_lFpQtUkCunnwxN2nnSK4PwVR
+  Args:
+    pattern: independently develop|independent development|similar information|similar to Confidential Information|develop information
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+13. INDEPENDENT DEVELOPMENTS.Disclosing Party understands that Recipient may develop or have developed information internally, or receive  or have received  information from other parties that is  similar to the  Confidential Information.  Accordingly, nothing in this Agreement shall be construed as a representation that Recipient has not or  will not independently develop products that compete with the products or systems contemplated by the Confidential Information provided that it does so without breaching the terms of this Agreement.
+
+================================== Ai Message ==================================
+
+Entailment

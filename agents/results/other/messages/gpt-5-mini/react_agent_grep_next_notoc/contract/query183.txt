@@ -1,0 +1,64 @@
+================================ Human Message =================================
+
+HYPOTHESIS:
+Notice on compelled disclosure: Receiving Party shall notify Disclosing Party in case Receiving Party is required by law, regulation or judicial process to disclose any Confidential Information.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_8euxGrWOsyNtyAJJdWMYchvs)
+ Call ID: call_8euxGrWOsyNtyAJJdWMYchvs
+  Args:
+    pattern: required by law|compel|compelled|compulsion|judicial process|subpoena|court order|required to disclose|disclos* by law|law, regulation|notice
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1.1. Any notice given under or in relation to the Agreement shall be given in writing and for the attention to:
+a) If to Discloser: Att.:Att.: Andreas von Buchwald avb@nordicknowledgepartners.com
+b) If to Recipient: Att: You3
+NORDIC KNOWLEDGE PARTNERS NKP
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_PvSmCOVWt01jvFjLHx6En9J3)
+ Call ID: call_PvSmCOVWt01jvFjLHx6En9J3
+  Args:
+    pattern: compelled to disclose|required to disclose|required by law|legal process|judicial process|subpoena|court order|notify|notice to Disclosing|notify Disclosing|notice Disclos*|required by|regulation to disclose
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_iZOVKYPPuapGR67xhYImBaoX)
+ Call ID: call_iZOVKYPPuapGR67xhYImBaoX
+  Args:
+    pattern: Recipient shall notify|Recipient must notify|shall notify Disclos|notify Disclos|notify Discloser|notify Disclosing Party|notify the Disclos|obliged to notify|shall give notice if|give notice if required by law
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_tONinrAYVVgvmCbWtwlbZWJz)
+ Call ID: call_tONinrAYVVgvmCbWtwlbZWJz
+  Args:
+    pattern: Disclosure required by law|required by law to disclose|compelled by law|compelled disclosure|court order to disclose|judicial
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+5.2.4. is required to be disclosed by law,regulation or any competent governmental, judicial or regulatory authority, or by a recognized stock exchange, or in response to a request from a regulatory body with a supervisory role over Recipient or any of its Affiliates, in which case Recipient  will  (or,  if  Recipient's  Representative  is  subject  to  the  disclosure  obligation, Recipient will procure that such Representative will), in each case to the extent permitted by law, regulation or the relevant authority:
+a) inform Discloser of the circumstances of the disclosure and the information that will be disclosed as soon as reasonably practicable;
+b) permit Discloser in its absolute discretion to seek to obtain an injunction or take other appropriate action to protect the Confidential Information;
+c) take all such steps as may be reasonable and practicable in the circumstances to agree the form,contents and timing of such disclosure with Discloser before making such disclosure, provided that Recipient shall not be required to take any action under this Clause which it considers in good faith to be contrary to any of its legal or regulatory obligations;
+d) consult with Discloser as to possible steps to prevent or limit such disclosure and take those steps to the extent reasonably practicable in the circumstances,provided that Recipient shall not be required to take any action under this Clause which it considers in good faith to be contrary to any of its legal or regulatory obligations; and
+e) request assurances as to confidentiality from anybody to which the Confidential Information is to be disclosed.
+
+================================== Ai Message ==================================
+
+Entailment

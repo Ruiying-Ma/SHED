@@ -1,0 +1,100 @@
+================================ Human Message =================================
+
+QUERY:
+How is quality of the word vectors measured?
+
+TABLE OF CONTENTS (TOC):
+1 | Improving Word Representations: A Sub-sampled Unigram Distribution for Negative Sampling
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2 Word2Vec
+1.3.1 | 2.1 Architectures
+1.3.2 | 2.2 Negative Sampling
+1.3.3 | 2.3 Sub-sampling
+1.4 | 3 Related Work
+1.5 | 4 Sub-sampled Unigram Distribution
+1.5.1 | 4.1 Critical Word
+1.5.2 | 4.2 Semantics Quantification
+1.5.3 | 4.3 Expression of Sub-sampling Rate
+1.5.4 | 4.4 Constants Estimation
+1.5.5 | 4.5 Discussions
+1.6 | 5 Experiments
+1.6.1 | 5.1 Experimental Setup
+1.6.1.1 | 5.1.1 Baselines
+1.6.1.2 | 5.1.2 Training Corpora
+1.6.1.3 | 5.1.3 Training details
+1.6.2 | 5.2 Task 1: Word Similarity Task
+1.6.2.1 | 5.2.1 Task Description
+1.6.2.2 | 5.2.2 Results
+1.6.3 | 5.3 Task 2: Synonym Selection Task
+1.6.3.1 | 5.3.1 Task Description
+1.6.3.2 | 5.3.2 Results
+1.6.4 | 5.4 Task 3: Word Analogy Task
+1.6.4.1 | 5.4.1 Task Description
+1.6.4.2 | 5.4.2 Results
+1.6.5 | 5.5 Extension of Semantics Quantification 5.5.1 MSR Sentence Completion Task
+1.6.5.1 | 5.5.2 Results
+1.7 | 6 Conclusions
+1.8 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_pdx3D37NTCrqH52OC4QyTDyh)
+ Call ID: call_pdx3D37NTCrqH52OC4QyTDyh
+  Args:
+    pattern: quality of the word vectors|quality of word vectors|quality.*word vectors|measure.*quality.*word vectors|How is quality of the word vectors measured
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1 | Abstract
+Word2Vec is the most popular model for word representation and has been widely investi- gated in literature. However, its noise distribu- tion for negative sampling is decided by empir- ical trials and the optimality has always been ignored. We suggest that the distribution is a sub-optimal choice, and propose to use a sub- sampled unigram distribution for better nega- tive sampling.  Our contributions include: (1) proposing the concept of semantics quantifica- tion and deriving a suitable sub-sampling rate for the proposed distribution adaptive to dif- ferent training corpora; (2) demonstrating the advantages of our approach in both negative sampling and noise contrastive estimation by extensive evaluation tasks; and (3) proposing a semantics weighted model for the MSR sen- tence completion task, resulting in consider- able improvements.  Our work not only im- proves the quality of word vectors but also benefits current understanding of Word2Vec.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_3J8QVNKCmFyRWDdRQERiVBtP)
+ Call ID: call_3J8QVNKCmFyRWDdRQERiVBtP
+  Args:
+    pattern: quality
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1 | Abstract
+Word2Vec is the most popular model for word representation and has been widely investi- gated in literature. However, its noise distribu- tion for negative sampling is decided by empir- ical trials and the optimality has always been ignored. We suggest that the distribution is a sub-optimal choice, and propose to use a sub- sampled unigram distribution for better nega- tive sampling.  Our contributions include: (1) proposing the concept of semantics quantifica- tion and deriving a suitable sub-sampling rate for the proposed distribution adaptive to dif- ferent training corpora; (2) demonstrating the advantages of our approach in both negative sampling and noise contrastive estimation by extensive evaluation tasks; and (3) proposing a semantics weighted model for the MSR sen- tence completion task, resulting in consider- able improvements.  Our work not only im- proves the quality of word vectors but also benefits current understanding of Word2Vec.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_pYuF9JebEfwsKMKTfeP9HYBP)
+ Call ID: call_pYuF9JebEfwsKMKTfeP9HYBP
+  Args:
+    pattern: measure.*quality|measured|evaluation tasks|evaluation|evaluate|quality of word vectors measured|quality of the word vectors measured|quality of the vectors
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1 | Abstract
+Word2Vec is the most popular model for word representation and has been widely investi- gated in literature. However, its noise distribu- tion for negative sampling is decided by empir- ical trials and the optimality has always been ignored. We suggest that the distribution is a sub-optimal choice, and propose to use a sub- sampled unigram distribution for better nega- tive sampling.  Our contributions include: (1) proposing the concept of semantics quantifica- tion and deriving a suitable sub-sampling rate for the proposed distribution adaptive to dif- ferent training corpora; (2) demonstrating the advantages of our approach in both negative sampling and noise contrastive estimation by extensive evaluation tasks; and (3) proposing a semantics weighted model for the MSR sen- tence completion task, resulting in consider- able improvements.  Our work not only im- proves the quality of word vectors but also benefits current understanding of Word2Vec.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_xuvM1JXZHhcJmeb72ITr37AN)
+ Call ID: call_xuvM1JXZHhcJmeb72ITr37AN
+  Args:
+    section_id: 1.6.2
+
+================================= Tool Message =================================
+Name: read_section
+
+5.2 Task 1: Word Similarity Task
+5.2.1 Task Description
+The task computes the correlation between the word similarity scores by human judgment and the
+word distances in vector space. We use Pearson correlation coefficient ρ p as the metric, the higher of which the better the word vectors are. The ex- pression of ρ p is
+ρ p = Cov( φ, ˆ φ ) q Var( φ )Var( ˆ φ ) , (19)
+ where φ and ˆ φ are random variables for the word similarity scores by human judgment and the cosine distances between word vectors, re- spectively. Benchmark datasets for this task in- clude RG ( Rubenstein and Goodenough , 1965 ), MC ( Miller and Charles , 1991 ), WS ( Finkelstein et al. , 2001 ), MEN ( Bruni et al. , 2012 ), and RW ( Luong et al.  , 2013 ).
+5.2.2 Results
+We implement the task on the mentioned 5 datasets and show the results in the column Word Similarity of Table 2 . At the first glance, our noise distributions Sub L 1 and Sub L 2 perform slightly better than Uni 3 / 4 . Significant improvements can be achieved on two small datasets RG and MC, because they are more sensitive to the vector qual- ity.  Another observation is that CBOW is more affected by Sub L 1 and Sub L 2 than SG, if com- paring results on RG and MC with Wiki10 cor- pus. These results show that our noise distribu- tions have the potential as high as or even higher than the smoothed unigram distribution in learning good word vectors.
+
+================================== Ai Message ==================================
+
+By computing the Pearson correlation coefficient ρ_p between human word similarity scores and the cosine distances between word vectors, with higher ρ_p indicating better word vectors.

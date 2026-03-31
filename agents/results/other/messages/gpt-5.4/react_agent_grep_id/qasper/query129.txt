@@ -1,0 +1,97 @@
+================================ Human Message =================================
+
+QUERY:
+What model is used to generate the premise?
+
+TABLE OF CONTENTS (TOC):
+1 | Hierarchical Neural Story Generation
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2 Writing Prompts Dataset
+1.4 | 3 Approach
+1.4.1 | 3.1 Hierarchical Story Generation
+1.4.2 | 3.2 Efficient Learning with Convolutional Sequence-to-Sequence Model
+1.4.3 | 3.3 Modeling Unbounded Context with Gated Multi-Scale Self-attention
+1.4.4 | 3.4 Improving Relevance to Input Prompt with Model Fusion
+1.5 | 4 Related Work
+1.5.1 | 4.1 Story Generation
+1.5.2 | 4.2 Hierarchical Text Generation
+1.5.3 | 4.3 Fusion Models
+1.6 | 5 Experimental Setup
+1.6.1 | 5.1 Baselines
+1.6.2 | 5.2 Fusion Training
+1.6.3 | 5.3 Training
+1.6.4 | 5.4 Generation
+1.6.5 | 5.5 Evaluation
+1.7 | 6 Results
+1.8 | 7 Discussion
+1.8.1 | 7.1 Generation Quality
+1.8.2 | 7.2 Use of Attention
+1.9 | 8 Conclusion
+1.10 | References
+1.11 | 9 Appendix of Model Architectures
+1.11.1 | 9.1 GCNN Language Model + Self-Attention
+1.11.2 | 9.2 Conv seq2seq + self-attention
+1.11.3 | 9.3 Ensemble: Conv seq2seq + self-attention
+1.11.4 | 9.4 Fusion: Conv seq2seq + self-attention
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_all (call_eb6DPSPNBVhGyEvJrZyrwiKw)
+ Call ID: call_eb6DPSPNBVhGyEvJrZyrwiKw
+  Args:
+    pattern: premise
+
+================================= Tool Message =================================
+Name: grep_search_all
+
+1.1
+1.2
+1.3
+1.4.1
+1.5.1
+1.6.5
+1.9
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_SfaMK0zGegbR2haCP90d84u6)
+ Call ID: call_SfaMK0zGegbR2haCP90d84u6
+  Args:
+    section_id: 1.4.1
+  read_section (call_H99t7P6b9FFL0OsPwitQafTQ)
+ Call ID: call_H99t7P6b9FFL0OsPwitQafTQ
+  Args:
+    section_id: 1.2
+  read_section (call_2DZpUaXQDNAYJRalrKm7F5hI)
+ Call ID: call_2DZpUaXQDNAYJRalrKm7F5hI
+  Args:
+    section_id: 1.1
+
+================================= Tool Message =================================
+Name: read_section
+
+3.1 Hierarchical Story Generation
+High-level structure is integral to good stories, but language models generate on a strictly-word-by- word basis and so cannot explicitly make high- level plans. We introduce the ability to plan by decomposing the generation process into two lev- els. First, we generate the premise or prompt of the story using the convolutional language model from Dauphin et al. ( 2017 ). The prompt gives a sketch of the structure of the story.  Second, we use a seq2seq model to generate a story that follows the premise. Conditioning on the prompt makes it easier for the story to remain consistent and also have structure at a level beyond single phrases.1 www.github.com/pytorch/fairseq 2 www.reddit.com/r/WritingPrompts/
+Figure 2: Self-Attention Mechanism of a single head, with GLU gating and downsampling.  Mul- tiple heads are concatenated, with each head using a separate downsampling function.
+
+================================= Tool Message =================================
+Name: read_section
+
+1 Introduction
+Story-telling is on the frontier of current text gen- eration technology: stories must remain themati- cally consistent across the complete document, re- quiring modeling very long range dependencies; stories require creativity; and stories need a high level plot, necessitating planning ahead rather than word-by-word generation ( Wiseman et al. , 2017 ). We tackle the challenges of story-telling with a hierarchical model, which first generates a sen- tence called the prompt describing the topic for the story, and then conditions on this prompt when generating the story. Conditioning on the prompt or premise makes it easier to generate consistent stories because they provide grounding for the overall plot. It also reduces the tendency of stan- dard sequence models to drift off topic.Prompt: The Mage, the Warrior, and the Priest
+ Story: A light breeze swept the ground, and carried with it still the distant scents of dust and time-worn stone. The Warrior led the way, heaving her mass of armour and mus- cle over the uneven terrain. She soon crested the last of the low embankments, which still bore the unmistakable fin- gerprints of haste and fear. She lifted herself up onto the top the rise, and looked out at the scene before her. [...]
+ Figure 1: Example prompt and beginning of a story from our dataset. We train a hierarchical model that first generates a prompt, and then con- ditions on the prompt when generating a story.We find that standard sequence-to-sequence (seq2seq) models ( Sutskever et al.  , 2014 ) applied to hierarchical story generation are prone to de- generating into language models that pay little at- tention to the writing prompt (a problem that has been noted in other domains, such as dialogue re- sponse generation ( Li et al. , 2015a )).  This failure is due to the complex and underspecified depen- dencies between the prompt and the story, which are much harder to model than the closer depen- dencies required for language modeling (for exam- ple, consider the subtle relationship between the first sentence and prompt in Figure 1 ).To improve the relevance of the generated story to its prompt, we introduce a fusion mechanism ( Sriram et al.  , 2017 ) where our model is trained on top of an pre-trained seq2seq model. To improve over the pre-trained model, the second model must focus on the link between the prompt and the story. For the first time, we show that fusion mechanisms can help seq2seq models build dependencies be- tween their input and output.Another major challenge in story generation is the inefficiency of modeling long documents with standard recurrent architectures—stories contain 734 words on average in our dataset.  We improve efficiency using a convolutional architecture, al-
+# Train Stories 272,600 # Test Stories 15,138 # Validation Stories 15,620 # Prompt Words 7.7M # Story Words 200M Average Length of Prompts 28.4 Average Length of Stories 734.5
+Table 1: Statistics of W RITING P ROMPTS dataset
+lowing whole stories to be encoded in parallel.  Existing convolutional architectures only encode a bounded amount of context ( Dauphin et al. , 2017 ), so we introduce a novel gated self-attention mech- anism that allows the model to condition on its previous outputs at different time-scales.To train our models, we gathered a large dataset of 303,358 human generated stories paired with writing prompts from an online forum.  Evaluating free form text is challenging, so we also introduce new evaluation metrics which isolate different as- pects of story generation.Experiments show that our fusion and self- attention mechanisms improve over existing tech- niques on both automated and human evaluation measures. Our new dataset and neural architec- tures allow for models which can creatively gen- erate longer, more consistent and more fluent pas- sages of text.  Human judges prefer our hierarchi- cal model’s stories twice as often as those of a non- hierarchical baseline.
+
+================================= Tool Message =================================
+Name: read_section
+
+Abstract
+We explore story generation : creative sys- tems that can build coherent and fluent passages of text about a topic. We collect a large dataset of 300K human-written sto- ries paired with writing prompts from an online forum. Our dataset enables hierar- chical story generation, where the model first generates a premise, and then trans- forms it into a passage of text.  We gain further improvements with a novel form of model fusion that improves the relevance of the story to the prompt, and adding a new gated multi-scale self-attention mech- anism to model long-range context. Ex- periments show large improvements over strong baselines on both automated and human evaluations. Human judges prefer stories generated by our approach to those from a strong non-hierarchical model by a factor of two to one.
+
+================================== Ai Message ==================================
+
+The premise is generated using the convolutional language model from Dauphin et al. (2017).

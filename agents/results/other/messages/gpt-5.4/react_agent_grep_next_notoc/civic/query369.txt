@@ -1,0 +1,24 @@
+================================ Human Message =================================
+
+QUERY:
+What is the type of the project 'Broad Beach Road Water Quality Infrastructure Repairs (CalJPIA Project)'?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_j8QbWl8OuEAp463Ag2y1nLs1)
+ Call ID: call_j8QbWl8OuEAp463Ag2y1nLs1
+  Args:
+    pattern: Broad Beach Road Water Quality Infrastructure Repairs \(CalJPIA Project\)|Broad Beach Road Water Quality Infrastructure Repairs|CalJPIA Project
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Broad Beach Road Water Quality Infrastructure Repairs (CalJPIA Project)
+¾ Updates:
+ The project consultant prepared the specifications for the project. Staff is finalizing the bid documents.¾
+Project Schedule:
+ Complete Design: January 2022  Begin Construction: February 2022
+
+================================== Ai Message ==================================
+
+disaster

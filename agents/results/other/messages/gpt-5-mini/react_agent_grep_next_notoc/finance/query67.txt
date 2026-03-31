@@ -1,0 +1,35 @@
+================================ Human Message =================================
+
+QUERY:
+What is the FY2017 return on assets (ROA) for Coca Cola? ROA is defined as: FY2017 net income / (average total assets between FY2016 and FY2017). Round your answer to two decimal places. Give a response to the question by relying on the details shown in the balance sheet and the P&L statement.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_1TyKrtOywD0WSceimPvGgMod)
+ Call ID: call_1TyKrtOywD0WSceimPvGgMod
+  Args:
+    pattern: Coca Cola|Coca-Cola|FY2017|FY 2017|2017 net income|Net income|Total assets|Balance Sheet|Income Statement|Profit & Loss
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+General
+The Coca-Cola Company is the world's largest beverage company. We own or license and market more than 500 nonalcoholic beverage brands, which we group into the following category clusters: sparkling soft drinks; water, enhanced water and sports drinks; juice, dairy and plant-based beverages; tea and coffee; and energy drinks. We own and market four of the world's top five nonalcoholic sparkling soft drink brands: Coca-Cola, Diet Coke, Fanta and Sprite.  Finished beverage products bearing our trademarks, sold in the United States since 1886, are now sold in more than 200 countries.We make our branded beverage products available to consumers throughout the world through our network of Company-owned or -controlled bottling and distribution operations as well as independent bottling partners, distributors, wholesalers and retailers — the world's largest beverage distribution system. Beverages bearing trademarks owned by or licensed to us account for more than 1. 9 billion of the approximately 60 billion servings of all beverages consumed worldwide every day.We believe our success depends on our ability to connect with consumers by providing them with a wide variety of beverage options to meet their desires, needs and lifestyles. Our success further depends on the ability of our people to execute effectively, every day. Our objective is to use our Company's assets — our brands, financial strength, unrivaled distribution system, global reach, and the talent and strong commitment of our management and associates — to become more competitive and to accelerate growth in a manner that creates value for our shareowners.We were incorporated in September 1919 under the laws of the State of Delaware and succeeded to the business of a Georgia corporation with the same name that had been organized in 1892.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_noW3MgSqVCzO1NO6ijgyyPkE)
+ Call ID: call_noW3MgSqVCzO1NO6ijgyyPkE
+  Args:
+    pattern: Consolidated Balance Sheets|Total Assets|Total assets|ASSETS|Total assets\s*\$|Total assets\s*\(
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+ITEM 6. SELECTED FINANCIAL DATA
+The following selected financial data should be read in conjunction with "Item 7. Management's Discussion and Analysis of Financial Condition and Results of Operations" and our consolidated financial statements and the accompanying notes thereto contained in "Item 8. Financial Statements and Supplementary Data" of this report. Year Ended December 31, 2017 2016 2015 2014 2013 (In millions except per share data) SUMMARY OF OPERATIONS Net operating revenues $ 35,410 $ 41,863   $ 44,294   $ 45,998   $ 46,854 Net income from continuing operations 1,182 6,550 7,366 7,124 8,626 Net income attributable to shareowners of The Coca-Cola Company 1,248 6,527 7,351 7,098 8,584 PER SHARE DATA Basic net income from continuing operations $ 0. 28 $ 1.51   $ 1.69   $ 1.62   $ 1.94 Basic net income 0.29 1.51 1.69 1.62 1.94 Diluted net income from continuing operations 0.27 1.49 1.67 1.60 1.90 Diluted net income 0.29 1.49 1.67 1.60 1. 90 Cash dividends 1.48 1.40 1.32 1.22 1.12 BALANCE SHEET DATA Total assets $ 87,896 $ 87,270   $ 89,996   $ 91,968   $ 90,002 Long-term debt 31,182 29,684 28,311 19,010 19,101
+The Company's results are impacted by acquisitions and divestitures.  Refer to "Item 7. Management's Discussion and Analysis of Financial Condition and Results of Operations" for additional information.
+
+================================== Ai Message ==================================
+
+1.42%

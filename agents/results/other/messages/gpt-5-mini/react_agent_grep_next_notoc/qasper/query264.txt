@@ -1,0 +1,96 @@
+================================ Human Message =================================
+
+QUERY:
+Are the results applicable to other language pairs than German-English?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_sufxAfu2sWERpPTr1U2JPN7d)
+ Call ID: call_sufxAfu2sWERpPTr1U2JPN7d
+  Args:
+    pattern: German-English
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_AyifORPVRVXciQV29jxjTLS2)
+ Call ID: call_AyifORPVRVXciQV29jxjTLS2
+  Args:
+    pattern: language pairs
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_avZcabYRFOVjPvJclOeEgMme)
+ Call ID: call_avZcabYRFOVjPvJclOeEgMme
+  Args:
+    pattern: other language
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_NMGwq1AWVza0qn6RgxxusOX1)
+ Call ID: call_NMGwq1AWVza0qn6RgxxusOX1
+  Args:
+    pattern: applicab
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_6zuywA0FXHZkE8lq0KZqzAg4)
+ Call ID: call_6zuywA0FXHZkE8lq0KZqzAg4
+  Args:
+    pattern: German
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+3.1 Experimental Settings
+The evaluation is on two widely used public ma- chine translation datasets: IWSLT14 German-to- English (De-En) ( Huang et al. , 2017 ; Bahdanau et al. , 2016 ) and WMT14 English-to-German (En- De) dataset ( Wu et al. , 2016 ; Gehring et al. , 2017 ).  To compare with previous works, we also re- verse WMT14 English-to-German dataset and ob- tain WMT14 German-to-English dataset.Figure 3: Hint-based training from ART model to NART model.We pretrain Transformer ( Vaswani et al. , 2017 ) as the teacher model on each dataset, which achieves 33.26/27.30/31.29 in terms of BLEU ( Papineni et al.  , 2002 ) in IWSLT14 De-En, WMT14 En-De and De-En test sets. The student model shares the same number of layers in en- coder/decoder, size of hidden states/embeddings and number of heads as the teacher models (Fig- ure 3 ). Following Gu et al. ( 2017 ); Kim and Rush ( 2016 ), we replace the target sentences by the de- coded output of the teacher models. Hyperparameters ( γ st , γ tr , λ, µ ) for hint-based learning are determined to make the scales of three loss components similar after initialization. We also employ label smoothing of value ls = 0 . 1 ( Szegedy et al. , 2016 ) in all experiments. We use Adam optimizer and follow the setting in Vaswani et al. ( 2017 ).  Models for WMT14/IWSLT14 tasks are trained on 8/1 NVIDIA M40 GPUs respec- tively. The model is based on the open-sourced tensor2tensor ( Vaswani et al. , 2018 ). 1 More settings can be found in Appendix.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_HCe0hUxGiWuNwLJ1bvSMkuSM)
+ Call ID: call_HCe0hUxGiWuNwLJ1bvSMkuSM
+  Args:
+    pattern: other language pairs|language pair|languages|applicab|generaliz|generalize|transfer|different language|language pairs than
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+3.2 Inference
+During training, T y does not need to be predicted as the target sentence is given. During testing, we have to predict the length of the target sentence for each source sentence. In many languages, the length of the target sentence can be roughly es- timated from the length of the source sentence. We choose a simple method to avoid the computa- tional overhead, which uses input length to deter-
+ mine target sentence length: T y = T x + C , where C is a constant bias determined by the average length differences between the source and target training sentences. We can also predict the target length ranging from [( T x + C ) − B, ( T x + C )+ B ] , where B is the halfwidth. By doing this, we can obtain multiple translation results with different lengths.  Note that we choose this method only to show the effectiveness of our proposed method and a more advanced length estimation method can be used to further improve the performance.Once we have multiple translation results, we additionally use our ART teacher model to eval- uate each result and select the one that achieves the highest probability.  As the evaluation is fully parallelizable (since it is identical to the parallel training of the ART model), this rescoring opera- tion will not hurt the non-autoregressive property of the NART model.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_qHJavWSUIm3qvN2w6M2rf9Dx)
+ Call ID: call_qHJavWSUIm3qvN2w6M2rf9Dx
+  Args:
+    pattern: Conclusion|Conclusions|Discussion
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+4 Conclusion
+In this paper, we proposed to use hints from a well-trained ART model to enhance the training of NART models. Our results on WMT14 En-De and De-En significantly outperform previous NART baselines, with one order of magnitude faster in inference than ART models. In the future, we will focus on designing new architectures and training methods for NART models to achieve comparable accuracy as ART models.
+
+================================== Ai Message ==================================
+
+Unanswerable

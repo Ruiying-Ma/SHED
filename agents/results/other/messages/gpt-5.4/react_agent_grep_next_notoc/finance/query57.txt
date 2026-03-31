@@ -1,0 +1,156 @@
+================================ Human Message =================================
+
+QUERY:
+What is the FY2019 - FY2020 total revenue growth rate for Block (formerly known as Square)? Answer in units of percents and round to one decimal place. Approach the question asked by assuming the standpoint of an investment banking analyst who only has access to the statement of income.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_gZuIaNGuclFfYKFXzvmGjrNd)
+ Call ID: call_gZuIaNGuclFfYKFXzvmGjrNd
+  Args:
+    pattern: total revenue|revenue
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+SPECIAL NOTE REGARDING FORWARD-LOOKING STATEMENTS
+This Annual Report on Form 10-K contains forward-looking statements within the meaning of Section 27A of the Securities Act of 1933, as amended, and Section 21E of the Securities Exchange Act of 1934, as amended, that involve substantial risks and uncertainties.  Forward-looking statements generally relate to future events or our future financial or operating performance.  In some cases, you can identify forward-looking statements because they contain words such as “may,” “will,” “appears,” “should,” “expects,” “plans,” “anticipates,” “could,” “intends,” “target,” “projects,” “contemplates,” “believes,” “estimates,” “predicts,” “potential,”  or  “continue,”  or  the  negative  of  these  words  or  other  similar  terms  or  expressions  that  concern  our  expectations,  strategy,  plans,  or  intentions.  Forward-looking statements contained in this Annual Report on Form 10-K include, but are not limited to, statements about our future financial performance, the impact of the COVID-19 pandemic and related public health measures on our business, customers, and employees, our expectations regarding transaction and loan losses,  our  potential  exposure  as  a  participant  in  the  Paycheck  Protection  Program  ("PPP")  and  its  effect  on  our  liquidity  and  financial  results,  our  anticipated growth  and  growth  strategies  and  our  ability  to  effectively  manage  that  growth,  our  ability  to  invest  in  and  develop  our  products  and  services  to  operate  with changing technology, the expected benefits of our products to our customers and the impact of our products on our business; and our expectations regarding Gross Payment Volume (GPV) and revenue, including our expectations regarding the Cash App and Seller ecosystems, our expectations regarding product launches, the expected impact of our recent acquisitions, our plans with respect to patents and other intellectual property, our expectations regarding litigation, positions we have taken  with  respect  to  our  taxes,  our  expectations  regarding  share-based  compensation,  our  expectations  regarding  the  impacts  of  accounting  guidance  and  the timing  of  our  compliance  therewith,  our  expectations  regarding  restricted  cash,  and  the  sufficiency  of  our  cash  and  cash  equivalents  and  cash  generated  from operations to meet our working capital and capital expenditure requirements. We have based the forward-looking statements on our current expectations and projections about future events and trends that we believe may affect our business, financial condition, results of operations, prospects, business strategy, and financial needs.  The outcome of the events described in these forward-looking statements  is  subject  to  known  and  unknown  risks,  uncertainties,  and  other  factors  described  in  the  section  titled  “Risk  Factors”  and  elsewhere  in  this  Annual Report on Form 10-K.  We operate in a very competitive and rapidly changing environment.  New risks and uncertainties emerge from time to time and it is not possible for us to predict all risks and uncertainties that could have an impact on the forward-looking statements contained in this Annual Report on Form 10-K.  We cannot assure you that the results, events, and circumstances reflected in the forward-looking statements will be achieved or occur, and actual results, events, or circumstances could differ materially from those described in the forward-looking statements. All forward-looking statements are based on information and estimates available to the Company at the time of this Annual Report on Form 10-K and are not guarantees of future performance.  We undertake no obligation to update any forward-looking statements made in this Annual Report on Form 10-K to reflect events  or  circumstances  after  the  date  of  this  Annual  Report  on  Form  10-K  or  to  reflect  new  information  or  the  occurrence  of  unanticipated  events,  except  as required by law. 3
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_TrDfYWumY2jWryMXkYpRSAbN)
+ Call ID: call_TrDfYWumY2jWryMXkYpRSAbN
+  Args:
+    pattern: statement[s]? of operations|consolidated statements of operations|total net revenue|total revenue
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_qI7ZdXrT3R2tVsm6pUVLb2aW)
+ Call ID: call_qI7ZdXrT3R2tVsm6pUVLb2aW
+  Args:
+    pattern: Consolidated Statements of Operations
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_4bWei9Sm9IS6fKKqKnP4bg2u)
+ Call ID: call_4bWei9Sm9IS6fKKqKnP4bg2u
+  Args:
+    pattern: costs and expenses
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_lvcc9Zp4w3VeofSAxax3hIRj)
+ Call ID: call_lvcc9Zp4w3VeofSAxax3hIRj
+  Args:
+    pattern: 2020 2019 2018
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Key Operating Metrics and Non-GAAP Financial Measures
+We collect and analyze operating and financial data to evaluate the health of our business, allocate our resources, and assess our performance.  In addition to  total  net  revenue,  net  income  (loss),  and  other  results  under  generally  accepted  accounting  principles  (GAAP),  the  following  table  sets  forth  key  operating metrics  and  non-GAAP  financial  measures  we  use  to  evaluate  our  business.   We  believe  these  metrics  and  measures  are  useful  to  facilitate  period-to-period comparisons of our business, and to facilitate comparisons of our performance to that of other payment solution providers. Year Ended December 31, 2020 2019 2018 2017 2016 ( in thousands, except for GPV and per share data) Gross Payment Volume (GPV) (in millions) $ 112,295  $ 106,239  $ 84,654  $ 65,343  $ 49,683 Adjusted EBITDA $ 474,071  $ 416,853  $ 256,523  $ 139,009  $ 44,887 Adjusted Net Income Per Share: Basic $ 0. 95  $ 0.90  $ 0.55  $ 0.30  $ 0.04 Diluted $ 0.84  $ 0.80  $ 0.47  $ 0.27  $ 0.04
+ For 2016, each of these metrics and measures excludes the effect of our processing agreement with Starbucks which transitioned to another payments solutions provider in the fourth quarter of 2016.  As transactions with Starbucks have not recurred, we believe it is useful to exclude Starbucks activity to clearly show the impact Starbucks has had on our financial results historically.  Our agreements with other sellers generally provide both those sellers and us the unilateral right to terminate such agreements at any time, without fine or penalty.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_hB6umRtjOxvpTDxDM41sMtxa)
+ Call ID: call_hB6umRtjOxvpTDxDM41sMtxa
+  Args:
+    pattern: total net revenue
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_CMSmg3tuPLdIEhlDti9amxAc)
+ Call ID: call_CMSmg3tuPLdIEhlDti9amxAc
+  Args:
+    pattern: net revenue
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_tunQkB6itzNBeQO6xlzYtcBz)
+ Call ID: call_tunQkB6itzNBeQO6xlzYtcBz
+  Args:
+    pattern: in thousands
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Key Operating Metrics and Non-GAAP Financial Measures
+We collect and analyze operating and financial data to evaluate the health of our business, allocate our resources, and assess our performance.  In addition to  total  net  revenue,  net  income  (loss),  and  other  results  under  generally  accepted  accounting  principles  (GAAP),  the  following  table  sets  forth  key  operating metrics  and  non-GAAP  financial  measures  we  use  to  evaluate  our  business.   We  believe  these  metrics  and  measures  are  useful  to  facilitate  period-to-period comparisons of our business, and to facilitate comparisons of our performance to that of other payment solution providers. Year Ended December 31, 2020 2019 2018 2017 2016 ( in thousands, except for GPV and per share data) Gross Payment Volume (GPV) (in millions) $ 112,295  $ 106,239  $ 84,654  $ 65,343  $ 49,683 Adjusted EBITDA $ 474,071  $ 416,853  $ 256,523  $ 139,009  $ 44,887 Adjusted Net Income Per Share: Basic $ 0. 95  $ 0.90  $ 0.55  $ 0.30  $ 0.04 Diluted $ 0.84  $ 0.80  $ 0.47  $ 0.27  $ 0.04
+ For 2016, each of these metrics and measures excludes the effect of our processing agreement with Starbucks which transitioned to another payments solutions provider in the fourth quarter of 2016.  As transactions with Starbucks have not recurred, we believe it is useful to exclude Starbucks activity to clearly show the impact Starbucks has had on our financial results historically.  Our agreements with other sellers generally provide both those sellers and us the unilateral right to terminate such agreements at any time, without fine or penalty.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_V5y0NWENW2Ncidh8vd0EHYgC)
+ Call ID: call_V5y0NWENW2Ncidh8vd0EHYgC
+  Args:
+    pattern: bitcoin revenue|subscription and services-based revenue|transaction-based revenue|hardware revenue
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_nV927JtIYdRsxKu8YyXDRjVS)
+ Call ID: call_nV927JtIYdRsxKu8YyXDRjVS
+  Args:
+    pattern: Revenue:
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Quarterly Results of Operations
+The following  tables  set forth  selected  unaudited  quarterly  statements  of operations  data  for the last  eight  quarters.   The information  for each  of these quarters has been prepared on the same basis as the audited annual financial statements included elsewhere in this Annual Report on Form 10-K and, in the opinion of management, includes all adjustments, which consist only of normal recurring adjustments, necessary for the fair presentation of the results of operations for these  periods.   This  data  should  be  read  in  conjunction  with  our  audited  consolidated  financial  statements  and  related  notes  included  elsewhere  in  this  Annual Report on Form 10-K.  These quarterly operating results are not necessarily indicative of the results we may achieve in future periods.Three Months Ended, Dec. 31, 2020 Sep. 30, 2020 Jun. 30, 2020 Mar. 31, 2020 Dec. 31, 2019 Sep. 30, 2019 Jun.  30, 2019 Mar.  31, 2019 (in thousands, except per share data) (unaudited) Revenue: Transaction-based revenue $ 929,011 $ 925,294  $ 682,572  $ 758,101  $ 832,180  $ 816,622  $ 775,510  $ 656,762 Subscription and services-based revenue 449,371 447,522 346,275 296,235 281,415 279,801 251,383 218,857 Hardware revenue 24,363 27,294 19,322 20,675 22,267 21,766 22,260 18,212 Bitcoin revenue 1,756,225 1,633,764 875,456 306,098 177,567 148,285 125,085 65,528 Total net revenue 3,158,970 3,033,874 1,923,625 1,381,109 1,313,429 1,266,474 1,174,238 959,359 Cost of revenue: Transaction-based costs 535,283 522,680 388,106 465,779 519,241 519,312 490,349 409,069 Subscription and services-based costs 65,046 66,786 50,169 40,711 50,276 63,352 60,119 60,523 Hardware costs 35,994 45,220 28,315 34,372 40,504 35,672 33,268 26,941 Bitcoin costs 1,715,452 1,601,615 858,041 299,426 174,438 146,167 122,938 64,696 Amortization of acquired technology 3,505 3,118 2,231 2,320 1,921 1,934 1,719 1,376 Total cost of revenue 2,355,280 2,239,419 1,326,862 842,608 786,380 766,437 708,393 562,605 Gross profit 803,690 794,455 596,763 538,501 527,049 500,037 465,845 396,754 Operating expenses: Product development 253,448 226,567 206,825 194,986 173,284 168,771 174,201 154,350 Sales and marketing 328,576 348,463 238,096 194,535 185,231 149,467 156,421 133,713 General and administrative 159,420 153,902 136,386 129,495 118,164 115,980 100,508 101,598 Transaction and loan losses 15,986 15,198 37,603 108,883 32,132 32,722 34,264 27,841 Amortization of acquired customer assets 1,077 983 905 890 890 1,003 1,294 1,294 Total operating expenses 758,507 745,113 619,815 628,789 509,701 467,943 466,688 418,796 Operating income (loss) 45,183 49,342 (23,052) (90,288) 17,348 32,094 (843) (22,042) Gain on sale of asset group — — — — (373,445) — — — Interest expense, net 17,988 14,980 14,769 9,206 6,060 5,632 5,143 4,681 Other expense (income), net (271,212) (784) (25,591) 5,862 (6,715) (5,541) 1,230 11,299 Income (loss) before income tax 298,407 35,146 (12,230) (105,356) 391,448 32,003 (7,216) (38,022) Provision (benefit) for income taxes 4,448 (1,369) (752) 535 508 2,606 (476) 129 Net income (loss) $ 293,959 $ 36,515  $ (11,478) $ (105,891) $ 390,940  $ 29,397  $ (6,740) $ (38,151) Net income (loss) per share: Basic $ 0. 65 $ 0.08  $ (0.03) $ (0.24) $ 0.91  $ 0.07  $ (0.02) $ (0.09) Diluted $ 0.59 $ 0.07  $ (0.03) $ (0.24) $ 0.83  $ 0.06  $ (0.02) $ (0. 09) Weighted-average shares used to compute net income (loss) per share: Basic 452,869 444,458 440,117 434,940 430,136 427,124 423,305 419,289 Diluted 502,237 488,069 440,117 434,940 485,394 466,099 423,305 419,289
+67
+ Costs and expenses include share-based compensation expense as follows:
+Three Months Ended, Dec. 31, 2020 Sep. 30, 2020 Jun. 30, 2020 Mar. 31, 2020 Dec. 31, 2019 Sep. 30, 2019 Jun. 30, 2019 Mar.  31, 2019 (in thousands) Share-Based Compensation (unaudited) Cost of revenue $ 97 $ 100  $ 95  $ 76  $ 67  $ 38  $ 29  $ 21 Product development 83,906 78,682 69,565 57,400 55,726 56,321 56,144 42,649 Sales and marketing 9,273 12,063 8,884 6,407 6,416 6,269 7,833 6,202 General and administrative 20,352 19,544 17,636 13,420 17,674 14,798 15,460 12,216 Total share-based compensation $ 113,628 $ 110,389  $ 96,180  $ 77,303  $ 79,883  $ 77,426  $ 79,466  $ 61,088
+ The  following  table  sets  forth  the  key  operating  metrics  and  non-GAAP  financial  measures  we  use  to  evaluate  our  business  for  each  of  the  periods indicated:
+Three Months Ended, Dec. 31, 2020 Sep. 30, 2020 Jun.  30, 2020 Mar. 31, 2020 Dec. 31, 2019 Sep. 30, 2019 Jun. 30, 2019 Mar.  31, 2019 (in thousands, except for GPV and per share data) Key Operating Metrics and non-GAAP Financial Measures (unaudited) Gross Payment Volume (GPV) (in millions) $ 32,022  $ 31,729  $ 22,801  $ 25,743  $ 28,639  $ 28,228  $ 26,785  $ 22,587 Adjusted EBITDA $ 185,489  $ 181,320  $ 97,931  $ 9,331  $ 118,529  $ 131,323  $ 105,304  $ 61,697 Adjusted Net Income (Loss) Per Share: Basic $ 0. 37  $ 0.39  $ 0.20  $ (0.02) $ 0.25  $ 0.28  $ 0.23  $ 0.13 Diluted $ 0.32  $ 0.34  $ 0.18  $ (0.02) $ 0.23  $ 0.25  $ 0.21  $ 0.11
+ The following table presents a reconciliation of net loss to Adjusted EBITDA for each of the periods indicated:
+Three Months Ended, Dec. 31, 2020 Sep. 30, 2020 Jun. 30, 2020 Mar. 31, 2020 Dec. 31, 2019 Sep. 30, 2019 Jun.  30, 2019 Mar.  31, 2019 (in thousands) Adjusted EBITDA Reconciliation (unaudited) Net income (loss) $ 293,959  $ 36,515  $ (11,478) $ (105,891) $ 390,940  $ 29,397  $ (6,740) $ (38,151) Share-based compensation expense 113,628 110,389 96,180 77,303 79,883 77,426 79,466 61,088 Depreciation and amortization 22,471 20,624 21,056 20,061 18,719 19,125 18,783 18,971 Interest expense, net 17,988 14,980 14,769 9,206 6,060 5,632 5,143 4,681 Other expense (income), net (271,212) (784) (25,591) 5,862 (6,715) (5,541) 1,230 11,299 Provision (benefit) for income taxes 4,448 (1,369) (752) 535 508 2,606 (476) 129 Loss on disposal of property and equipment 475 396 1,481 218 580 128 281 19 Gain on sale of asset group — — — — (373,445) — — — Acquisition related and other costs 3,543 359 2,056 1,524 1,260 1,564 6,133 782 Acquired deferred revenue adjustment 257 281 302 657 928 1,224 1,849 3,456 Acquired deferred costs adjustment (68) (71) (92) (144) (189) (238) (365) (577) Adjusted EBITDA $ 185,489  $ 181,320  $ 97,931  $ 9,331  $ 118,529  $ 131,323  $ 105,304  $ 61,697
+ 68
+The following table presents a reconciliation of net loss to Adjusted Net Income (Loss) Per Share for each of the periods indicated:
+Three Months Ended, Dec. 31, 2020 Sep. 30, 2020 Jun. 30, 2020 Mar. 31, 2020 Dec. 31, 2019 Sep.  30, 2019 Jun. 30, 2019 Mar.  31, 2019 (in thousands, except per share data) Adjusted Net Income Per Share: (unaudited) Net income (loss) $ 293,959 $ 36,515  $ (11,478) $ (105,891) $ 390,940  $ 29,397  $ (6,740) $ (38,151) Share-based compensation expense 113,628 110,389 96,180 77,303 79,883 77,426 79,466 61,088 Amortization of intangible assets 5,717 5,236 4,134 4,152 3,714 3,841 3,958 3,487 Amortization of debt discount and issuance costs 20,355 17,516 17,580 12,528 9,963 9,843 9,725 9,608 Loss (gain) on revaluation of equity investments (274,299) — (20,998) — (4,141) (2,462) 4,842 14,087 Loss on extinguishment of long-term debt 4,258 1,403 — 990 — — — — Loss (gain) on disposal of property and equipment 475 396 1,481 218 580 128 281 19 Gain on sale of asset group — — — — (373,445) — — — Acquisition related and other costs 3,543 359 2,056 1,524 1,260 1,564 6,133 782 Acquired deferred revenue adjustment 257 281 302 657 928 1,224 1,849 3,456 Acquired deferred cost adjustment (68) (71) (92) (144) (189) (238) (365) (577) Adjusted Net Income (Loss) - basic $ 167,825 $ 172,024  $ 89,165  $ (8,663) $ 109,493  $ 120,723  $ 99,149  $ 53,799 Cash interest expense on convertible senior notes 1,596 1,544 1,565 — 1,277 1,277 1,277 1,277 Adjusted Net Income (Loss) - diluted $ 169,421 $ 173,568  $ 90,730  $ (8,663) $ 110,770  $ 122,000  $ 100,426  $ 55,076 Adjusted Net Income (Loss) Per Share: Basic $ 0. 37 $ 0.39  $ 0.20  $ (0.02) $ 0.25  $ 0.28  $ 0.23  $ 0.13 Diluted $ 0.32 $ 0.34  $ 0.18  $ (0.02) $ 0.23  $ 0.25  $ 0.21  $ 0. 11 Weighted-average shares used to compute Adjusted Net Income (Loss) Per Share: Basic 452,869 444,458 440,117 434,940 430,136 427,124 423,305 419,289 Diluted 523,586 514,806 500,201 434,940 485,394 486,404 486,532 487,056
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_x8zE5mtehSZa0kZUvUsko5qU)
+ Call ID: call_x8zE5mtehSZa0kZUvUsko5qU
+  Args:
+    pattern: Year Ended December 31, 2020.*Total net revenue|Total net revenue.*2020.*2019
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+
+101.1%

@@ -1,0 +1,59 @@
+================================ Human Message =================================
+
+QUERY:
+Do they reduce language variation of text by enhancing frequencies?
+
+TABLE OF CONTENTS (TOC):
+1 | Combining Thesaurus Knowledge and Probabilistic Topic Models
+1.1 | 1 Introduction
+1.2 | 2 Related Work
+1.3 | 3 Approach to Integration Whole Thesauri into Topic Models
+1.4 | 4 Automatic Measures to Estimate the Quality of Topic Models
+1.5 | 5 Use of Automatic Measures to Assess Combined Models
+1.6 | 6 Manual Evaluation of Combined Topic Models
+1.7 | 7 Conclusion
+1.8 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_all (call_zzyTAQd2IhFVOb7vLzGCLIOZ)
+ Call ID: call_zzyTAQd2IhFVOb7vLzGCLIOZ
+  Args:
+    pattern: enhanc|frequenc|language variation|reduce.*variation|variation of text
+
+================================= Tool Message =================================
+Name: grep_search_all
+
+1.2
+1.3
+1.4
+1.5
+1.6
+1.7
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_4g1KDVBPNFcwzYBVNcJoJPAE)
+ Call ID: call_4g1KDVBPNFcwzYBVNcJoJPAE
+  Args:
+    section_id: 1.3
+  read_section (call_xxuOv0wDp4YT6JP5PCUPNxBv)
+ Call ID: call_xxuOv0wDp4YT6JP5PCUPNxBv
+  Args:
+    section_id: 1.7
+
+================================= Tool Message =================================
+Name: read_section
+
+3 Approach to Integration Whole Thesauri into Topic Models
+In our approach we develop the idea of [17] that proposed to construct similarity sets between ngram phrases between each other and single words. Phrases and words are included in the same similarity set if they have the same component word, for example, weapon – nuclear weapon – weapon of mass destruction; discrimination – racial dis- crimination .  It was supposed that if expressions from the same similarity set co-occur in the same document then their contribution into the document’s topics is really more than it is presented with their frequencies, therefore their frequencies should be increased. In such an approach, the algorithm can "see" similarities between different multiword expressions with the same component word. In our approach, at first, we include related single words and phrases from a the- saurus such as WordNet or EuroVoc in these similarity sets. Then, we add preliminarily extracted ngrams into these sets and, this way, we use two different sources of external knowledge. We use the same LDA-SIM algorithm as described in [17] but study what types of semantic relations can be introduced into such similarity sets and be useful for improving topic models.  The pseudocode of LDA-SIM algorithm is presented in Algo- rithm 1, where S = { S w } is a similarity set, expressions in similarity sets can comprise single words, thesaurus phrases or generated noun compounds.We can compare this approach with the approaches applying the generalized Polya urn model [9,10,11]. To add prior knowledge, those approaches change topic distri- butions for related words globally in the collection.  We modify topic probabilities for related words and phrases locally, in specific texts, only when related words (phrases) co-occur in these texts.
+
+================================= Tool Message =================================
+Name: read_section
+
+7 Conclusion
+In this paper we presented the approach for introducing thesaurus information into topic models. The main idea of the approach is based on the assumption that if related words or phrases co-occur in the same text, their frequencies should be enhanced and this action leads to their mutual larger contribution into topics found in this text. In the experiments on four English collections, it was shown that the direct imple- mentation of this idea using WordNet synonyms and/or direct relations leads to great degradation of the unigram model. But the correction of initial assumptions and exclud- ing hyponyms from frequencies adding improve the model and makes it much better than the initial model in several measures. Adding ngrams in a similar manner further improves the model. Introducing information from domain-specific thesaurus EuroVoc led to improving the initial model without the additional assumption, which can be explained by the absence of general abstract words in such information-retrieval thesauri.We also considered thematic analysis of an Islam Internet site and evaluated the combined topic models manually. We found that the best, understandable topics are obtained by adding domain-specific thesaurus knowledge (domain terms, synonyms, and relations).Acknowledgments.  This study is supported by Russian Scientific Foundation in part concerning the combined approach uniting thesaurus information and probabilistic topic models (project N16-18-02074). The study on application of the approach to content analysis of Islam sites is supported by Russian Foundation for Basic Research (project N 16-29-09606).12 Loukachevitch et al.
+
+================================== Ai Message ==================================
+
+Yes. They assume that when related words or phrases co-occur in the same text, their frequencies should be enhanced so the model can capture similarities between different expressions, effectively reducing language variation.

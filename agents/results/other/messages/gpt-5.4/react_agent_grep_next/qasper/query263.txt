@@ -1,0 +1,57 @@
+================================ Human Message =================================
+
+QUERY:
+Were any datasets other than WMT used to test the model?
+
+TABLE OF CONTENTS (TOC):
+1 | Hint-Based Training for Non-Autoregressive Machine Translation Zhuohan Li 1 Zi Lin 2,3 Di He 2 Fei Tian 4 Tao Qin 5 Liwei Wang 2 Tie-Yan Liu 5 1 UC Berkeley 2 Peking University 3 Google AI 4 Facebook 5 Microsoft Research zhuohan@cs.berkeley.edu { zi.lin, di he, wanglw } @pku.edu.cn feitia@fb.com { taoqin, tyliu } @microsoft.com
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2 Approach
+1.3.1 | 2.1 Observation: Illed States and Attentions
+1.3.2 | 2.2 Hints from the ART teacher Model
+1.4 | 3 Experiments
+1.4.1 | 3.1 Experimental Settings
+1.4.2 | 3.2 Inference
+1.4.3 | 3.3 Experimental Results
+1.5 | 4 Conclusion
+1.6 | Acknowledgment
+1.7 | References
+1.8 | Appendix
+1.8.1 | A Related Works
+1.8.1.1 | A.1 AutoRegressive Translation
+1.8.1.2 | A.2 Non-AutoRegressive Translation
+1.8.1.3 | A.3 Knowledge Distillation and Hint-Based Training
+1.8.2 | B Network Architecture
+1.8.3 | C Extra Experimental Settings
+1.8.4 | D Case Study
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_xAJrUrRRDmzJ6Ghcvt9EFmKc)
+ Call ID: call_xAJrUrRRDmzJ6Ghcvt9EFmKc
+  Args:
+    pattern: WMT|IWSLT|dataset|datasets|corpus|corpora
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1 | Abstract
+Due to the unparallelizable nature of the autoregressive factorization, AutoRegressive Translation (ART) models have to generate tokens sequentially during decoding and thus suffer from high inference latency. Non- AutoRegressive Translation (NART) models were proposed to reduce the inference time, but could only achieve inferior translation ac- curacy. In this paper, we proposed a novel approach to leveraging the hints from hidden states and word alignments to help the training of NART models.  The results achieve signif- icant improvement over previous NART mod- els for the WMT14 En-De and De-En datasets and are even comparable to a strong LSTM- based ART baseline but one order of magni- tude faster in inference.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_iFlVtw86ZsrczoNCS4iS9jxx)
+ Call ID: call_iFlVtw86ZsrczoNCS4iS9jxx
+  Args:
+    pattern: WMT|IWSLT|dataset|datasets|corpus|corpora
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.4.1 | 3.1 Experimental Settings
+The evaluation is on two widely used public ma- chine translation datasets: IWSLT14 German-to- English (De-En) ( Huang et al. , 2017 ; Bahdanau et al. , 2016 ) and WMT14 English-to-German (En- De) dataset ( Wu et al. , 2016 ; Gehring et al. , 2017 ).  To compare with previous works, we also re- verse WMT14 English-to-German dataset and ob- tain WMT14 German-to-English dataset.Figure 3: Hint-based training from ART model to NART model.We pretrain Transformer ( Vaswani et al. , 2017 ) as the teacher model on each dataset, which achieves 33.26/27.30/31.29 in terms of BLEU ( Papineni et al.  , 2002 ) in IWSLT14 De-En, WMT14 En-De and De-En test sets. The student model shares the same number of layers in en- coder/decoder, size of hidden states/embeddings and number of heads as the teacher models (Fig- ure 3 ). Following Gu et al. ( 2017 ); Kim and Rush ( 2016 ), we replace the target sentences by the de- coded output of the teacher models. Hyperparameters ( γ st , γ tr , λ, µ ) for hint-based learning are determined to make the scales of three loss components similar after initialization. We also employ label smoothing of value ls = 0 . 1 ( Szegedy et al. , 2016 ) in all experiments. We use Adam optimizer and follow the setting in Vaswani et al. ( 2017 ).  Models for WMT14/IWSLT14 tasks are trained on 8/1 NVIDIA M40 GPUs respec- tively. The model is based on the open-sourced tensor2tensor ( Vaswani et al. , 2018 ). 1 More settings can be found in Appendix.
+
+================================== Ai Message ==================================
+
+Yes. Besides WMT14, the model was also evaluated on the IWSLT14 German-to-English (De-En) dataset.

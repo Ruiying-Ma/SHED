@@ -1,0 +1,34 @@
+================================ Human Message =================================
+
+QUERY:
+What are the characteristics of the dataset of Twitter users?
+
+TABLE OF CONTENTS (TOC):
+1 | Towards Automatic Bot Detection in Twitter for Health-related Tasks Anahita Davoudi, PhD 1 , Ari Z. Klein, PhD 1 , Abeed Sarker, PhD 2 , Graciela Gonzalez-Hernandez, PhD 1 1 Department of Biostatistics, Epidemiology and Informatics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA 19104 2 Department of Biomedical Informatics, School of Medicine, Emory University, Atlanta, GA 30322
+1.1 | Abstract
+1.2 | Introduction
+1.3 | 1 Methods
+1.3.1 | 1.1 Corpus
+1.3.2 | 1.2 Classification
+1.4 | 2 Results
+1.5 | 3 Discussion
+1.6 | 4 Conclusion
+1.7 | Acknowledgments
+1.8 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_FactZUdtwI6tC0ndPGMJj5qe)
+ Call ID: call_FactZUdtwI6tC0ndPGMJj5qe
+  Args:
+    section_id: 1.3.1
+
+================================= Tool Message =================================
+Name: read_section
+
+1.1 Corpus
+To identify bots in health-related social media data, we retrieved a sample of 10 , 417 users from a database containing more than 400 million publicly available tweets posted by more than 100 , 000 users who have announced their preg- nancy on Twitter 5 . This sample is based on related work for detecting users who have mentioned various pregnancy outcomes in their tweets.  Two professional annotators manually categorized the 10 , 417 users as ”bot,” ”non-bot,” or ”unavailable,” based on their publicly available Twitter sites. Users were annotated broadly as ”bot” if, in contrast to users annotated as ”non-bot,” they do not appear to be posting personal information.  Users were annotated as ”un- available” if their Twitter sites could not be viewed at the time of annotation, due to modifying their privacy settings or being removed or suspended from Twitter. Based on 1000 overlapping annotations, their inter-annotator agreement (IAA) was κ = 0 . 93 (Cohens kappa 22 ), considered ”almost perfect agreement” 23 .  Their IAA does not include disagree- ments resulting from the change of a user’s status to or from ”unavailable” in the time between the first and second annotations. Upon resolving the disagreements, 413 (4%) users were annotated as ”bot,” 7849 (75 . 35%) as ”non-bot,” and 20 . 69 (19 . 9%) as ”unavailable”.
+
+================================== Ai Message ==================================
+
+A sample of 10,417 users was drawn from a database of more than 400 million publicly available tweets posted by more than 100,000 users who announced their pregnancy; two professional annotators manually labeled users as “bot” (if they did not appear to be posting personal information), “non-bot,” or “unavailable” (if the Twitter site could not be viewed), with inter-annotator agreement κ = 0.93 on 1,000 overlapping annotations. Upon resolving disagreements, 413 (4%) users were annotated as “bot,” 7,849 (75.35%) as “non-bot,” and 2,069 (19.9%) as “unavailable.”

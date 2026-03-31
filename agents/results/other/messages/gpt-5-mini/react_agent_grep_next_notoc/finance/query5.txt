@@ -1,0 +1,115 @@
+================================ Human Message =================================
+
+QUERY:
+Does 3M have a reasonably healthy liquidity profile based on its quick ratio for Q2 of FY2023? If the quick ratio is not relevant to measure liquidity, please state that and explain why.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_tKul6m7nU1vaGhpKYmvoDIYG)
+ Call ID: call_tKul6m7nU1vaGhpKYmvoDIYG
+  Args:
+    pattern: quick ratio|quick|liquidity|Q2|FY2023|2023 second quarter|quarterly|3M
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+3M Company and Subsidiaries Consolidated Statement of Income (Loss) (Unaudited)
+Three months ended June 30, Six months ended June 30, (Millions, except per share amounts) 2023 2022 2023 2022 Net sales $ 8,325 $ 8,702 $ 16,356 $ 17,531 Operating expenses Cost of sales 4,606 5,093 9,219 9,919 Selling, general and administrative expenses 12,204 3,023 13,909 4,905 Research, development and related expenses 473 476 945 956 Total operating expenses 17,283 8,592 24,073 15,780 Operating income (loss) (8,958) 110 (7,717) 1,751 Other expense (income), net 65 50 117 88 Income (loss) before income taxes (9,023) 60 (7,834) 1,663 Provision (benefit) for income taxes (2,184) (23) (1,974) 279 Income (loss) of consolidated group (6,839) 83 (5,860) 1,384 Income (loss) from unconsolidated subsidiaries, net of taxes 3 (1) 5 1 Net income (loss) including noncontrolling interest (6,836) 82 (5,855) 1,385 Less: Net income (loss) attributable to noncontrolling interest 5 4 10 8 Net income (loss) attributable to 3M $ (6,841) $ 78 $ (5,865) $ 1,377 Weighted average 3M common shares outstanding — basic 553. 9 571.0 553.3 571.6 Earnings (loss) per share attributable to 3M common shareholders — basic $ (12.35) $ 0.14 $ (10.60) $ 2.41 Weighted average 3M common shares outstanding — diluted 553.9 572.7 553.3 573.8 Earnings (loss) per share attributable to 3M common shareholders — diluted $ (12. 35) $ 0.14 $ (10.60) $ 2.40
+The accompanying Notes to Consolidated Financial Statements are an integral part of this statement.3
+Table of Contents
+3M Company and Subsidiaries
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_l7qwLFUozgBl3A0szT6aepmI)
+ Call ID: call_l7qwLFUozgBl3A0szT6aepmI
+  Args:
+    pattern: Condensed Consolidated Balance Sheets|Consolidated Balance Sheets|Balance Sheets|June 30, 2023|June 30 2023|Assets current|Current assets|Total current assets|Total current liabilities|Inventories|Cash and cash equivalents|Short-term investments
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+2023 to 2025 Structural Reorganization Actions
+In the first quarter of 2023, 3M announced it would undertake structural reorganization actions to reduce the size of the corporate center of the Company, simplify supply chain, streamline 3M’s geographic footprint, reduce layers of management, further align business go-to-market models to customers, and reduce manufacturing roles to align with production volumes.  During the first six months of 2023, management approved and committed to undertake associated actions impacting approximately 5,100 positions resulting in a pre-tax charge of $52 million and $212 million in the first and second quarters of 2023, respectively. Remaining activities related to the restructuring actions approved and committed under this initiative are expected to be largely completed through the end of 2023. 3M expects to commit to further actions under this initiative.  This aggregate initiative beginning in the first quarter of 2023 and continuing through 2025 is expected to impact approximately 8,500 positions worldwide with an expected pre-tax charge of $700 million to $900 million over that period.The related restructuring charges for periods presented were recorded in the income (loss) statement as follows:
+ (Millions) Three months ended June 30, 2023 Six months ended June 30, 2023 Cost of sales $ 47 $ 63 Selling, general and administrative expenses 146 178 Research, development and related expenses 19 23 Total operating income impact $ 212  $ 264
+The business segment operating income (loss) impact of these restructuring charges is summarized as follows:
+ Three months ended June 30, 2023 Six months ended June 30, 2023 (Millions) Employee Related Asset-Related and Other Total Employee Related Asset-Related and Other Total Safety and Industrial $ 44 $ — $ 44 $ 54  $ —  $ 54 Transportation and Electronics 25 — 25 37 — 37 Health Care 10 — 10 12 — 12 Consumer 13 — 13 16 — 16 Corporate and unallocated 100 20 120 125 20 145 Total operating expense $ 192 $ 20 $ 212 $ 244  $ 20  $ 264
+ 12
+Table of Contents
+Restructuring actions, including cash and non-cash impacts, follow:
+ (Millions) Employee-Related Asset-Related and Other Total Expense incurred in the first quarter of 2023 $ 52  $ —  $ 52 Incremental expense incurred in the second quarter of 2023 192 20 212 Non-cash changes — (20) (20) Cash payments (56) — (56) Accrued restructuring action balance as of June 30, 2023 $ 188  $ —  $ 188
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_xBJ1Nu6LEroZCOX4CzZxUV4Z)
+ Call ID: call_xBJ1Nu6LEroZCOX4CzZxUV4Z
+  Args:
+    pattern: Condensed Consolidated Balance Sheets (Unaudited)|CONSOLIDATED BALANCE SHEETS|Condensed Consolidated Balance Sheets|ASSETS|LIABILITIES AND SHAREHOLDERS' EQUITY|June 30, 2023 (Unaudited)
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_VGqdl11pG441KVwKn1wHot78)
+ Call ID: call_VGqdl11pG441KVwKn1wHot78
+  Args:
+    pattern: Total current assets|Current assets|Cash and cash equivalents|Short-term investments|Accounts receivable|Receivables|Inventories|Total current liabilities|Short-term borrowings|accounts payable|Accrued liabilities|Current maturities of long-term debt|Total liabilities and stockholders' equity|Total liabilities
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Fair Value of Financial Instruments:
+The Company’s financial instruments include cash and cash equivalents, marketable securities, accounts receivable, certain investments, accounts payable, borrowings, and derivative contracts. The fair values of cash equivalents, accounts receivable, accounts payable, and short-term borrowings and current portion of long-term debt approximated carrying values because of the short-term nature of these instruments. Available-for-sale marketable securities, in addition to certain derivative instruments, are recorded at fair values as indicated in the preceding disclosures.  To estimate fair values (classified as level 2) for its long-term debt, the Company utilized third-party quotes, which are derived all or in part from model prices, external sources, market prices, or the third-party’s internal records. Information with respect to the carrying amounts and estimated fair values of these financial instruments follow:
+ June 30, 2023 December 31, 2022 (Millions) Carrying Value Fair Value Carrying Value Fair Value Long-term debt, excluding current portion $ 12,954 $ 11,471 $ 14,001  $ 12,484
+The fair values reflected in the sections above consider the terms of the related debt absent the impacts of derivative/hedging activity.  The carrying amount of long-term debt referenced above is impacted by certain fixed-to-floating interest rate swaps that are designated as fair value hedges and by the designation of certain fixed rate Eurobond securities issued by the Company as hedging instruments of the Company’s net investment in its European subsidiaries.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_08YP49Le8k9WHQOfbggnPtCN)
+ Call ID: call_08YP49Le8k9WHQOfbggnPtCN
+  Args:
+    pattern: Current assets June 30, 2023|Total current assets June 30, 2023|Current liabilities June 30, 2023|Total current liabilities June 30, 2023|Inventories June 30, 2023|Accounts receivable, net|Receivables, net June 30, 2023
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_4HQf8D8P0X3wZaVduGcDSgjN)
+ Call ID: call_4HQf8D8P0X3wZaVduGcDSgjN
+  Args:
+    pattern: June 30, 2023.*Current|As of June 30, 2023.*Total current assets|As of June 30, 2023.*Total current liabilities|As of June 30, 2023.*Cash and cash equivalents|As of June 30, 2023.*Inventories
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+NOTE 9. Marketable Securities
+The Company invests in asset-backed securities, certificates of deposit/time deposits, commercial paper, and other securities. The following is a summary of amounts recorded on the Consolidated Balance Sheet for marketable securities (current and non-current).(Millions) June 30, 2023 December 31, 2022 Commercial paper $ 10 $ 213 Certificates of deposit/time deposits 42 21 U.S.  municipal securities 4 4 Current marketable securities 56 238 U.S. municipal securities 23 23 Non-current marketable securities 23 23 Total marketable securities $ 79 $ 261
+At June 30, 2023 and December 31, 2022, gross unrealized, gross realized, and net realized gains and/or losses (pre-tax) were not material. The balances at June 30, 2023 for marketable securities by contractual maturity are shown below. Actual maturities may differ from contractual maturities because the issuers of the securities may have the right to prepay obligations without prepayment penalties.(Millions) June 30, 2023 Due in one year or less $ 56 Due after one year through five years 15 Due after five years through ten years 8 Total marketable securities $ 79
+18
+ Table of Contents
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_JD9LBNTqwuMC6DGmn4qAISl9)
+ Call ID: call_JD9LBNTqwuMC6DGmn4qAISl9
+  Args:
+    pattern: Total assets|Total liabilities and stockholders' equity|Total assets June 30, 2023|Total current assets|Current assets|Assets current|CURRENT ASSETS|ASSETS.*CURRENT|LIABILITIES AND STOCKHOLDERS' EQUITY
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+3M Company and Subsidiaries Consolidated Balance Sheet
+(Unaudited) (Dollars in millions, except per share amount) June 30, 2023 December 31, 2022 Assets Current assets Cash and cash equivalents $ 4,258 $ 3,655 Marketable securities — current 56 238 Accounts receivable — net of allowances of $160 and $174 4,947 4,532 Inventories Finished goods 2,526 2,497 Work in process 1,527 1,606 Raw materials and supplies 1,227 1,269 Total inventories 5,280 5,372 Prepaids 674 435 Other current assets 539 456 Total current assets 15,754 14,688 Property, plant and equipment 26,459 25,998 Less: Accumulated depreciation (17,248) (16,820) Property, plant and equipment — net 9,211 9,178 Operating lease right of use assets 812 829 Goodwill 12,869 12,790 Intangible assets — net 4,470 4,699 Other assets 5,764 4,271 Total assets $ 48,880 $ 46,455 Liabilities Current liabilities Short-term borrowings and current portion of long-term debt $ 3,033 $ 1,938 Accounts payable 3,231 3,183 Accrued payroll 785 692 Accrued income taxes 172 259 Operating lease liabilities — current 244 261 Other current liabilities 3,471 3,190 Total current liabilities 10,936 9,523 Long-term debt 12,954 14,001 Pension and postretirement benefits 1,912 1,966 Operating lease liabilities 570 580 Other liabilities 14,651 5,615 Total liabilities 41,023 31,685 Commitments and contingencies (Note 14) Equity 3M Company shareholders’ equity: Common stock par value, $. 01 par value; 944,033,056 shares issued 9 9 Shares outstanding - June 30, 2023: 551,992,430 Shares outstanding - December 31, 2022: 549,245,105 Additional paid-in capital 6,858 6,691 Retained earnings 40,290 47,950 Treasury stock, at cost: (32,926) (33,255) Shares at June 30, 2023: 392,040,626 Shares at December 31, 2022: 394,787,951 Accumulated other comprehensive income (loss) (6,433) (6,673) Total 3M Company shareholders’ equity 7,798 14,722 Noncontrolling interest 59 48 Total equity 7,857 14,770 Total liabilities and equity $ 48,880 $ 46,455
+ The accompanying Notes to Consolidated Financial Statements are an integral part of this statement.5
+Table of Contents
+3M Company and Subsidiaries
+
+================================== Ai Message ==================================
+
+3M’s quick ratio for Q2 FY2023 using cash (4,258) + current marketable securities (56) + accounts receivable, net (4,947) = 9,261; quick ratio = 9,261 / 10,936 ≈ 0.85. Because it is below 1, quick assets are insufficient to cover current liabilities, indicating the liquidity profile is not reasonably healthy.

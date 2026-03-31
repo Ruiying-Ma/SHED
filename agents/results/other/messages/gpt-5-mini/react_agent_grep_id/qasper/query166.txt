@@ -1,0 +1,206 @@
+================================ Human Message =================================
+
+QUERY:
+Do they separately evaluate performance of their learned representations (before forwarding them to the CNN layer)?
+
+TABLE OF CONTENTS (TOC):
+1 | Enhancing Sentence Relation Modeling with Auxiliary Character-level Embedding
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2 Character-level Convolutional Neural Network
+1.3.1 | 2.1 Temporal Convolution
+1.3.2 | 2.2 Highway MLP
+1.4 | 3 Multi-Layer Bidirectional LSTM
+1.4.1 | 3.1 RNN vs LSTM
+1.4.2 | 3.2 Model Description
+1.5 | 4 Learning from Matching Features
+1.5.1 | 4.1 Reshape Feature Planes
+1.5.2 | 4.2 CNN Topology
+1.6 | 5 Experiments
+1.6.1 | 5.1 Hyperparameters and Training Details
+1.6.2 | 5.2 Objective Functions
+1.6.3 | 5.3 Results and Discussions
+1.6.4 | 5.4 Tree LSTM vs Sequence LSTM
+1.7 | 6 Related Work
+1.8 | 7 Conclusions
+1.9 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_all (call_W2PO98XmM5vmgf2IVNbrSJ6F)
+ Call ID: call_W2PO98XmM5vmgf2IVNbrSJ6F
+  Args:
+    pattern: represent
+
+================================= Tool Message =================================
+Name: grep_search_all
+
+1.1
+1.2
+1.3.1
+1.4.2
+1.5.1
+1.6.1
+1.6.2
+1.6.4
+1.8
+1.9
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_all (call_UFzgTm0NiLxAfFVWl6s1hyxP)
+ Call ID: call_UFzgTm0NiLxAfFVWl6s1hyxP
+  Args:
+    pattern: forward
+
+================================= Tool Message =================================
+Name: grep_search_all
+
+1.2
+1.4.2
+1.6.4
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_all (call_7i67LCTNUBsM3QpkFxQZGaYJ)
+ Call ID: call_7i67LCTNUBsM3QpkFxQZGaYJ
+  Args:
+    pattern: evaluate
+
+================================= Tool Message =================================
+Name: grep_search_all
+
+No matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_b6Wgvi6YCMOI8CZtxlrQ6CxG)
+ Call ID: call_b6Wgvi6YCMOI8CZtxlrQ6CxG
+  Args:
+    section_id: 1.6.3
+
+================================= Tool Message =================================
+Name: read_section
+
+5.3 Results and Discussions
+Table 1 and 2 show the Pearson correlation and accuracy comparison results of semantic related- ness and text entailment tasks. We can see that combining CharCNN with multi-layer bidirec- tional LSTM yields better performance compared with other traditional machine learning methods such as SVM and MaxEnt approach (Proisl and Evert, 2014; Lai and Hockenmaier, 2014) that served with many handcraft features.  Note that our method doesn’t need extra handcrafted feature ex- traction procedure. Also our method doesn’t lever- age external linguistic resources such as wordnet or parsing which get best results in (Tai et al., 2015). More importantly, both task prediction re- sults close to the state-of-the-art results. It proved that our approaches successfully simultaneously predict heterogeneous tasks. Note that for seman- tic relatedness task, the latest research (Tai et al.,
+ 2015) proposed a tree-structure based LSTM, the Pearson correlation score of their system can reach 0.863. Compared with their approach, our method didn’t use dependency parsing and can be used to predict tasks contains multiple languages.We hope to point out that we implemented the method in (Tai et al., 2015), but the results are not as good as our method. Here we use the re- sults reported in their paper.  Based on our experi- ments, we believe the method in (Tai et al., 2015) is very sensitive to the initializations, thus it may not achieve the good performance in different set- tings. However, our method is pretty stable which may benefit from the joint tasks training.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_GDZ2nb7yL8wi6ZQZRjLAhxUN)
+ Call ID: call_GDZ2nb7yL8wi6ZQZRjLAhxUN
+  Args:
+    section_id: 1.4.2
+
+================================= Tool Message =================================
+Name: read_section
+
+3.2 Model Description
+One shortcoming of conventional RNNs is that they are only able to make use of previous context. In text entailment, the decision is made after the whole sentence pair is digested. Therefore, explor- ing future context would be better for sequence meaning representation. Bidirectional RNNs ar- chitecture (Graves et al., 2013) proposed a solu- tion of making prediction based on future words. At each time step t , the model maintains two hid- den states, one for the left-to-right propagation − → h t and the other for the right-to-left propagation ← − h t . The hidden state of the Bidirectional LSTM is the concatenation of the forward and backward hidden states.  The following equations illustrate the main ideas: − → h t = tanh( − → Wx t + − → U − → h t − 1 + − → b ) ← − h t = tanh( ← − Wx t + ← − U ← − h t +1 + ← − b ) . (9)
+ Deep RNNs can be created by stacking multi- ple RNN hidden layer on top of each other, with the output sequence of one layer forming the in- put sequence for the next. Assuming the same hid- den layer function is used for all N layers in the stack, the hidden vectors h n are iteratively com- puted from n = 1 to N and t = 1 to T :
+ h n t = tanh( Wh n − 1 t + Uh n t − 1 + b ) . (10)
+Multilayer bidirectional RNNs can be imple- mented by replacing each hidden vector h n with the forward and backward vectors − → h n and ← − h n , and ensuring that every hidden layer receives in- put from both the forward and backward layers at the level below.  Furthermore, we can apply LSTM memory cell to hidden layers to construct multi- layer bidirectional LSTM.Finally, we can concatenate sequence hidden matrix − → M ∈ R n × d and reversed sequence hidden matrix ← − M ∈ R n × d to form the sentence represen- tation. We refer to n is the number of layers, d as the memory dimensionality of the LSTM.  In the next section, we will use the two matrixs to gener- ate matching feature planes via linear algebra op- erations.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_ioHi6qK0ySUpOXyeNtL2YgtG)
+ Call ID: call_ioHi6qK0ySUpOXyeNtL2YgtG
+  Args:
+    section_id: 1.5
+
+================================= Tool Message =================================
+Name: read_section
+
+4 Learning from Matching Features
+Inspired by (Tai et al., 2015), we apply element- wise merge to first sentence matrix M 1 ∈ R n × 2 d and second sentence matrix M 2 ∈ R n × 2 d . Simi- lar to previous method, we can define two simple matching feature planes ( FPs ) with below equa- tions:
+ F P 1 = M 1 M 2 , F P 2 = | M 1 − M 2 | , (11)
+where is the element-wise multiplication. The F P 1 measure can be interpreted as an element- wise comparison of the signs of the input repre- sentations. The F P 2 measure can be interpreted as the distance between the input representations.In addition to the above measures, we also found the following feature plane can improve the performance:
+ F P 3 = 1 dConv ( Reshape ( J oin ( M 1 , M 2 ))) , (12)
+In F P 3 , the 1 dConv means one-dimensional con- volution. Join mean concatenate the two represen- tation. The intuition behind F P 3 is let the one- dimensional convolution preserves the common information between sentence pairs.
+4.1 Reshape Feature Planes
+Recall that the multi-layer bidirectional LSTM generates sentence representation matrix M ∈ R n × 2 d by concatenating sentence hidden matrix − → M ∈ R n × d and reversed sentence hidden matrix ← − M ∈ R n × d . Then we conduct element-wise merge to form feature plane M f p ∈ R n × 2 d .  Therefore, the final input into temporal convolution layer is a 3D tensor I ∈ R f × n × 2 d , where f is the number of matching feature plane, n is the number of lay- ers, d as the memory dimensionality of the LSTM. Note that the 3D tensor convolutional layer input I can be viewed as an image where each feature plane is a channel.  In computer vision and image processing communities, the spatial 2D convolu- tion is often used over an input image composed of several input planes. In experiment section, we will compare 2D convolution with 1D convolu- tion. In order to facilitate temporal convolution, we need reshape I to 2D tensor.
+4.2 CNN Topology
+The matching feature planes can be viewed as channels of images in image processing. In our scenario, these feature planes hold the matching information. We will use temporal convolutional neural network to learn hidden matching features. The mechanism of temporal CNN here is the same as character-level temporal CNN. However, the kernels are totally different.It’s quite important to design a good topology for CNN to learn hidden features from heteroge- neous feature planes.  After several experiments, we found two topological graphs can be deployed in the architecture. Figure 2 and Figure 3 show the two CNN graphs. In Topology I, we stack temporal convolution with kernel width as 1 and tanh activation on top of each feature plane. After that, we deploy another temporal convolution and
+tanh activation operation with kernel width as 2.  In Topology II, however, we first stack temporal con- volution and tanh activation with kernel width as 2. Then we deploy another temporal convolution and tanh activation operation with kernel width as 1. Experiment results demonstrate that the Topol- ogy I is slightly better than the Topology II. This conclusion is reasonable. The feature planes are heterogeneous. After conducting convolution and tanh activation transformation, it makes sense to compare values across different feature planes.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_J7fXsnEVKQhaCDUEC0QTXxH4)
+ Call ID: call_J7fXsnEVKQhaCDUEC0QTXxH4
+  Args:
+    section_id: 1.3
+
+================================= Tool Message =================================
+Name: read_section
+
+2 Character-level Convolutional Neural Network
+Besides pre-trained word vectors, we are also in- terested in generating word vectors from charac- ters. To achieve that, we leverage deep convolu- tional neural network(ConvNets). The model ac- cepts a sequence of encoded characters as input. The encoding si done by prescribing an alphabet of size m for the input language, and then quan- tize each character using one-hot encoding.  Then, the sequence of characters is transformed to a se- quence of such m sized vectors with fixed length l 0 . Any character exceeding length l 0 is ignored, and any characters that are not in the alphabet are quantized as all-zero vectors. The alphabet used in our model consists of 36 characters, including 26 english letters and 10 digits. Below, we will intro- duce character-level temporal convolution neural network.
+2.1 Temporal Convolution
+Temporal Convolution applies one-dimensional convolution over an input sequence. The one- dimensional convolution is an operation between a vector of weights m ∈ R m and a vector of in- puts viewed as a sequence x ∈ R n . The vector m is the filter of the convolution. Concretely, we think of x as the input token and x i ∈ R as a sin- gle feature value associated with the i -th character in this token.  The idea behind the one-dimensional convolution is to take the dot product of the vec- tor m with each m -gram in the token x to obtain another sequence c :
+c j = m T x j − m +1: j . (1)
+Usually, x i is not a single value, but a d - dimensional vector so that x ∈ R d × n . There ex- ist two types of 1d convolution operations.  One is called Time Delay Neural Networks (TDNNs). The other one was introduced by (Collobert et al., 2011). In TDNN, weights m ∈ R d × m form a ma- trix. Each row of m is convolved with the corre- sponding row of x . In (Collobert et al., 2011) ar- chitecture, a sequence of length n is represented as:
+ x 1: n = x 1 ⊕ x 2 · · · ⊕ x n , (2)
+where ⊕ is the concatenation operation. In gen- eral, let x i : i + j refer to the concatenation of char- acters x i , x i +1 , . . . , x i + j . A convolution operation involves a filter w ∈ R hk , which is applied to a
+ window of h characters to produce the new fea- ture. For example, a feature c i is generated from a window of characters x i : i + h − 1 by:
+c i = f ( w · x i : i + h − 1 + b ) . (3)
+Here b ∈ R is a bias term and f is a non- linear function such as the thresholding function f ( x ) = max { 0 , x } .  This filter is applied to each possible window of characters in the sequence { x 1: h , x 2: h +1 , . . . , x n − h +1: n } to produce a feature map:
+c = [ c 1 , c 2 , . . . , c n − h +1 ] , (4) with c ∈ R n − h +1 .
+2.2 Highway MLP
+On top of convolutional neural network layers, we build another Highway Multilayer Perceptron (HMLP) layer to further enhance character-level word embeddings. Conventional MLP applies an affine transformation followed by a nonlinearity to obtain a new set of features:
+z = g ( Wy + b ) . (5)
+One layer of a highway network does the follow- ing:
+ z = t g ( W H y + b H ) + (1 − t ) y , (6)
+where g is a nonlinearity, t = σ ( W T y + b T ) is called as the transform gate, and (1 − t ) is called as the carry gate. Similar to the memory cells in LSTM networks, highway layers allow adaptively carrying some dimensions of the input directly to the input for training deep networks.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_4z5YkDFjzNCWPKt0hSuWj8Jx)
+ Call ID: call_4z5YkDFjzNCWPKt0hSuWj8Jx
+  Args:
+    section_id: 1.6.1
+
+================================= Tool Message =================================
+Name: read_section
+
+5.1 Hyperparameters and Training Details
+We first initialize our word representations using publicly available 300-dimensional Glove word vectors 2 . LSTM memory dimension is 100, the number of layers is 2. On the other hand, for CharCNN model we use threshold activation func- tion on top of each temporal convolution and max pooling pairs . The CharCNN input frame size equals alphabet size, output frame size is 100. The maximum sentence length is 37.  The kernel width of each temporal convolution is set to 3, the step is 1, the hidden units of HighwayMLP is 50. Train- ing is done through stochastic gradient descent over shuffled mini-batches with the AdaGrad up- date rule (Duchi et al., 2011). The learning rate is set to 0.05. The mini-batch size is 25.  The model parameters were regularized with a per-minibatch L2 regularization strength of 10 − 4 . Note that word embeddings were fixed during training.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_zuALIO3JrQni9xUclZQAWFnx)
+ Call ID: call_zuALIO3JrQni9xUclZQAWFnx
+  Args:
+    section_id: 1.2
+
+================================= Tool Message =================================
+Name: read_section
+
+1 Introduction
+Traditional approaches (Lai and Hockenmaier, 2014; Zhao et al., 2014; Jimenez et al., 2014) for sentence relation modeling tasks such as para- phrase identification, question answering, recog- nized textual entailment and semantic textual sim- ilarity prediction usually build the supervised model using a variety of hand crafted features. Hundreds of features generated at different lin- guistic levels are exploited to boost classification.  With the success of deep learning, there has been much interest in applying deep neural network based techniques to further improve the prediction performances (Socher et al., 2011b; Iyyer et al., 2014; Yin and Schutze, 2015).A key component of deep neural network is
+word embedding which serve as an lookup ta- ble to get word representations.  From low level NLP tasks such as language modeling, POS tag- ging, name entity recognition, and semantic role labeling (Collobert et al., 2011; Mikolov et al., 2013), to high level tasks such as machine trans- lation, information retrieval and semantic analy- sis (Kalchbrenner and Blunsom, 2013; Socher et al., 2011a; Tai et al. , 2015). Deep word represen- tation learning has demonstrated its importance for these tasks. All the tasks get performance im- provement via further learning either word level representations or sentence level representations. On the other hand, some researchers have found character-level convolutional networks (Kim et al., 2016; Zhang et al., 2015) are useful in extracting information from raw signals for the task such as language modeling or text classification. In this work, we focus on deep neural net- work based sentence relation modeling tasks. We explore treating each sentence as a kind of raw signal at character level, and applying temporal (one-dimensional) Convolution Neural Network (CNN) (Collobert et al., 2011), Highway Multi- layer Perceptron (HMLP) and multi-layer bidirec- tional LSTM (Long Short Term Memory) (Graves et al. , 2013) to learn sentence representations. We propose a new deep neural network archi- tecture that jointly leverage pre-trained word em- bedding and character embedding to represent the meaning sentences. More specifically, our new ap- proach first generates two kinds of word sequence representations. One kind of sequence represen- tations are the composition of pre-trained word vectors. The other kind of sequence representa- tion comprise word vectors that generating from character-level convolutional network.  We then in- ject the two sequence representations into bidi- rectional LSTM, which means forward directional LSTM accept pre-trained word embedding out- put and backward directional LSTM accept aux-
+iliary character CNN embedding output. The fi- nal sentence representation is the concatenation of the two direction. After that, we construct match- ing features followed by another temporal CNN to learn high-level hidden matching feature represen- tations.  Figure 1 shows the neural network archi- tecture for general sentence relation modeling.Our model shows that when trained on small size datasets, combining pre-trained word embed- dings with auxiliary character-level embedding can improve the sentence representation. Word embeddings can help capturing general word se- mantic meanings, whereas char-level embedding can help modeling task specific word mean- ings.  Note that auxiliary character-level embed- ding based sentence representation do not require the knowledge of words or even syntactic structure of a language. The enhanced sentence representa- tion generated by multi-layer bidirectional LSTM will encapsulate the character and word levels in- formations. Furthermore, it may enhance match- ing features that generated by computing similar- ity measures on sentence pairs. Quantitative eval- uations on standard dataset demonstrate the effec- tiveness and advantages of our method. Figure 1: Neural Network Architecture for Deep Matching Feature Learning. M-BLSTM is Multi- layer Bidirectional LSTM. Orange color repre- sents sequence representations that concatenating pre-trained word vectors. Purple color represents sequence representation concatenating word vec- tors that generating from character-level convolu- tional network and HMLP.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_wUCRPpmTZnuS43kjJJXDDjqW)
+ Call ID: call_wUCRPpmTZnuS43kjJJXDDjqW
+  Args:
+    section_id: 1.6.4
+
+================================= Tool Message =================================
+Name: read_section
+
+5.4 Tree LSTM vs Sequence LSTM
+In this experiment, we will compare tree LSTM with sequential LSTM. A limitation of the se- quence LSTM architectures is that they only al- low for strictly sequential information propaga- tion. However, tree LSTMs allow richer network topologies where each LSTM unit is able to in- corporate information from multiple child units.  As in standard LSTM units, each Tree-LSTM unit (indexed by j ) contains input and output gates i j and o j , a memory cell c j and hidden state h j . The difference between the standard LSTM unit and tree LSTM units is that gating vectors and memory cell updates are dependent on the states of possibly many child units. Additionally, instead of a single forget gate, the tree LSTM unit contains one for- get gate f jk for each child k .  This allows the tree LSTM unit to selectively incorporate information
+Method Pearson Correlation Features Reported in MaxEnt 0.799 137 (Lai and Hockenmaier, 2014) Decision tree 0.804 214 (Jimenez et al., 2014) RNN 0.827 N/A StanfordNLP run5 Logical Inference 0.827 32 (Bjerva et al. , 2014) MaxEnt, SVM, kNN, GB, RF 0.828 72 (Zhao et al., 2014) WordEmbedding+MB-LSTM+Temp-CNN 0.849 0 Our implementation CharCNN+MB-LSTM+Temp-CNN 0.851 0 Our implementation
+Table 1: Semantic Relatedness Task Comparison.Method Accuracy Features Reported in SVM 0. 823 41 (Proisl and Evert, 2014) Decision tree 0.831 214 (Jimenez et al., 2014) MaxEnt, SVM, kNN, GB, RF 0.836 72 (Zhao et al., 2014) WordEmbedding+MB-LSTM+Temp-CNN 0.838 0 Our implementation CharCNN+MB-LSTM+Temp-CNN 0. 842 0 Our implementation MaxEnt 0.846 137 (Lai and Hockenmaier, 2014)
+Table 2: Textual Entailment Task Comparison.from each child.We use dependency tree child-sum tree LSTM proposed by (Tai et al., 2015) as our baseline. Given a tree, let C ( j ) denote the set of children of node j . The child-sum tree LSTM transition equa- tions are the following:
+ ˜ h j = X k ∈ C ( j ) h k , i j = σ ( W ( i ) x j + U ( i ) ˜ h j + b ( i ) ) , f jk = σ ( W ( f ) x j + U ( f ) h k + b ( f ) ) , o j = σ ( W ( o ) x j + U ( o ) ˜ h j + b ( o ) ) , u j = tanh( W ( u ) x j + U ( u ) ˜ h j + b ( u ) ) , c j = i j u j + f jk c k , h j = o j tanh( c j ) .  (18)
+Table 3 show the comparisons between tree and sequential based methods. We can see that, if we don’t deploy CNN, simple Tree LSTM yields bet- ter result than traditional LSTM, but worse than Bidirectional LSTM. This is reasonable due to the fact that Bidirectional LSTM can enhance sen- tence representation by concatenating forward and backward representations. We found that adding CNN layer will decrease the accuracy in this sce- nario.  Because when feeding into CNN, we have to reshape the feature planes otherwise convolu- tion will not work. For example, we set convo- lution kernel width as 2, the input 2D tensor will
+have the shape lager than 2. To boost performance with CNN, we need more matching features. We found Multi-layer Bidirectional LSTM can incor- porate more features and achieve best performance compared with single-layer Bidirectional LSTM. Method Accuracy Pearson Dep-Tree LSTM 0.833 0.849 Dep-Tree LSTM + CNN 0.798 0.822 LSTM 0.812 0.833 LSTM + CNN 0.776 0.810 1-Bidirectional LSTM 0.834 0.848 1-Bidirectional LSTM+ CNN 0.821 0.846
+Table 3: Results of Tree LSTM vs Sequence LSTM on auxiliary char embedding.
+
+================================== Ai Message ==================================
+
+Yes; Table 3 compares models without CNN (e.g., LSTM, 1-Bidirectional LSTM, Dep-Tree LSTM) to versions with CNN (e.g., LSTM+CNN, 1-Bidirectional LSTM+CNN, Dep-Tree LSTM+CNN).

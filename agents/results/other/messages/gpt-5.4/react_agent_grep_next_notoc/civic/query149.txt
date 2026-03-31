@@ -1,0 +1,37 @@
+================================ Human Message =================================
+
+QUERY:
+What is the type of the project 'PCH Signal Synchronization System Improvements Project'?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_buupiTJEXIcBTCkVHhJI4H6o)
+ Call ID: call_buupiTJEXIcBTCkVHhJI4H6o
+  Args:
+    pattern: PCH Signal Synchronization System Improvements Project
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+PCH Signal Synchronization System Improvements Project
+¾ Updates:
+ 65% design package was submitted to Caltrans in November 2020 and
+we received comments to those plans.  Consultant is working on final design documents and changes based on the comments received.¾
+Project Schedule:  Complete Final Design: July 2021
+ Advertise: August 2021  Award Contract and Begin Construction: Fall 2021
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_nZdSwbPiKI4aA0AbnUuaFszp)
+ Call ID: call_nZdSwbPiKI4aA0AbnUuaFszp
+  Args:
+    pattern: type|capital|disaster
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+
+none

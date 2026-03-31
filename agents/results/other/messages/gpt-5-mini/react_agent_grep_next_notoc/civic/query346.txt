@@ -1,0 +1,99 @@
+================================ Human Message =================================
+
+QUERY:
+What is the type of the project 'Trancas Canyon Park Playground Resurfacing'?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_yQ7pEwm5M86cHbenGUQrb7dW)
+ Call ID: call_yQ7pEwm5M86cHbenGUQrb7dW
+  Args:
+    pattern: Trancas Canyon Park Playground Resurfacing
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Trancas Canyon Park Playground Resurfacing
+¾ Project Description:  The project will include removing and replacing the upper layer of the playground surfacing at Trancas Canyon Park.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_QlNYcGrdMJhScamIbOJm40vd)
+ Call ID: call_QlNYcGrdMJhScamIbOJm40vd
+  Args:
+    pattern: Trancas Canyon Park Playground Resurfacing[\s\S]*?Type:
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_C15EDzmfNaO6s8WwwGcD20Py)
+ Call ID: call_C15EDzmfNaO6s8WwwGcD20Py
+  Args:
+    pattern: Playground Resurfacing[\s\S]*?Type:
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_LKTiDjzF6afVTmFCvRo9hZSW)
+ Call ID: call_LKTiDjzF6afVTmFCvRo9hZSW
+  Args:
+    pattern: Trancas Canyon Park
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Trancas Canyon Park Playground Resurfacing
+¾ Project Description:  The project will include removing and replacing the upper layer of the playground surfacing at Trancas Canyon Park.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_VD942MA7LphswjjHUpQkx1fR)
+ Call ID: call_VD942MA7LphswjjHUpQkx1fR
+  Args:
+    pattern: Type:\s*(capital|disaster)
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_0e69fTM5GV9RMNX7L30AgoQS)
+ Call ID: call_0e69fTM5GV9RMNX7L30AgoQS
+  Args:
+    pattern: Project Description:
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+PCH at Trancas Canyon Road Right Turn Lane
+¾ Project Description:  This project consists of installing a new westbound right turn lane at the intersection of PCH and Trancas Canyon Road.¾ Updates:
+ The consultant submitted preliminary design to the City in early August.¾ Estimated Schedule:
+ Began Design: Spring 2022
+ Complete Design: Spring 2023
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_b8LsxL2AQwO0wkWKB0elboMQ)
+ Call ID: call_b8LsxL2AQwO0wkWKB0elboMQ
+  Args:
+    pattern: Playground
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Trancas Canyon Park Playground Resurfacing
+¾ Project Description:  The project will include removing and replacing the upper layer of the playground surfacing at Trancas Canyon Park.
+
+================================== Ai Message ==================================
+
+none

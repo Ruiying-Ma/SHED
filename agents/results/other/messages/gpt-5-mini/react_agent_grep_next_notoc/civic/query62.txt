@@ -1,0 +1,23 @@
+================================ Human Message =================================
+
+QUERY:
+What is the status of the project '2022 Morning View Resurfacing & Storm Drain Improvements'?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_iz3DlQvAd65ueK23eC5v4bfM)
+ Call ID: call_iz3DlQvAd65ueK23eC5v4bfM
+  Args:
+    pattern: 2022 Morning View Resurfacing & Storm Drain Improvements
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+2022 Morning View Resurfacing & Storm Drain Improvements
+¾ Updates:
+ Staff is working with the consultant to finalize the design plans for this project and will submit to the County for review.¾ Project Schedule:
+ Complete Design: Summer 2023  Advertise: Fall 2023  Begin Construction: Fall 2023
+
+================================== Ai Message ==================================
+
+design

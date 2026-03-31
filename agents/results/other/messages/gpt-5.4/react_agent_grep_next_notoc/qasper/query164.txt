@@ -1,0 +1,84 @@
+================================ Human Message =================================
+
+QUERY:
+By how much do they outperform existing methods?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_c74a3kCAXlBxW7Q7zYopwYVo)
+ Call ID: call_c74a3kCAXlBxW7Q7zYopwYVo
+  Args:
+    pattern: outperform|outperforms|existing methods|state-of-the-art|baseline|improvement|improves by
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Neural network based approaches for sentence relation modeling automatically generate hidden matching features from raw sentence pairs. However, the qual- ity of matching feature representation may not be satisfied due to complex semantic relations such as entailment or contradic- tion. To address this challenge, we pro- pose a new deep neural network architec- ture that jointly leverage pre-trained word embedding and auxiliary character embed- ding to learn sentence meanings.  The two kinds of word sequence representations as inputs into multi-layer bidirectional LSTM to learn enhanced sentence repre- sentation. After that, we construct match- ing features followed by another temporal CNN to learn high-level hidden matching feature representations. Experimental re- sults demonstrate that our approach con- sistently outperforms the existing methods on standard evaluation datasets.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_4EXVx6Jd12ScE3Da8mVKUup9)
+ Call ID: call_4EXVx6Jd12ScE3Da8mVKUup9
+  Args:
+    pattern: outperform|outperforms|existing methods|state-of-the-art|baseline|improvement|improves by
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+5.3 Results and Discussions
+Table 1 and 2 show the Pearson correlation and accuracy comparison results of semantic related- ness and text entailment tasks. We can see that combining CharCNN with multi-layer bidirec- tional LSTM yields better performance compared with other traditional machine learning methods such as SVM and MaxEnt approach (Proisl and Evert, 2014; Lai and Hockenmaier, 2014) that served with many handcraft features.  Note that our method doesn’t need extra handcrafted feature ex- traction procedure. Also our method doesn’t lever- age external linguistic resources such as wordnet or parsing which get best results in (Tai et al., 2015). More importantly, both task prediction re- sults close to the state-of-the-art results. It proved that our approaches successfully simultaneously predict heterogeneous tasks. Note that for seman- tic relatedness task, the latest research (Tai et al.,
+ 2015) proposed a tree-structure based LSTM, the Pearson correlation score of their system can reach 0.863. Compared with their approach, our method didn’t use dependency parsing and can be used to predict tasks contains multiple languages.We hope to point out that we implemented the method in (Tai et al., 2015), but the results are not as good as our method. Here we use the re- sults reported in their paper.  Based on our experi- ments, we believe the method in (Tai et al., 2015) is very sensitive to the initializations, thus it may not achieve the good performance in different set- tings. However, our method is pretty stable which may benefit from the joint tasks training.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_jIiT4SjNJzg5bwzOCxxjySyQ)
+ Call ID: call_jIiT4SjNJzg5bwzOCxxjySyQ
+  Args:
+    pattern: Table 1|Table 2|Pearson correlation|accuracy comparison
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+5.3 Results and Discussions
+Table 1 and 2 show the Pearson correlation and accuracy comparison results of semantic related- ness and text entailment tasks. We can see that combining CharCNN with multi-layer bidirec- tional LSTM yields better performance compared with other traditional machine learning methods such as SVM and MaxEnt approach (Proisl and Evert, 2014; Lai and Hockenmaier, 2014) that served with many handcraft features.  Note that our method doesn’t need extra handcrafted feature ex- traction procedure. Also our method doesn’t lever- age external linguistic resources such as wordnet or parsing which get best results in (Tai et al., 2015). More importantly, both task prediction re- sults close to the state-of-the-art results. It proved that our approaches successfully simultaneously predict heterogeneous tasks. Note that for seman- tic relatedness task, the latest research (Tai et al.,
+ 2015) proposed a tree-structure based LSTM, the Pearson correlation score of their system can reach 0.863. Compared with their approach, our method didn’t use dependency parsing and can be used to predict tasks contains multiple languages.We hope to point out that we implemented the method in (Tai et al., 2015), but the results are not as good as our method. Here we use the re- sults reported in their paper.  Based on our experi- ments, we believe the method in (Tai et al., 2015) is very sensitive to the initializations, thus it may not achieve the good performance in different set- tings. However, our method is pretty stable which may benefit from the joint tasks training.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_crZFTpbziGnOavn4CM5GfGza)
+ Call ID: call_crZFTpbziGnOavn4CM5GfGza
+  Args:
+    pattern: 0\.[0-9]+|[0-9]+\.[0-9]+|accuracy
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+2.1 Temporal Convolution
+Temporal Convolution applies one-dimensional convolution over an input sequence. The one- dimensional convolution is an operation between a vector of weights m ∈ R m and a vector of in- puts viewed as a sequence x ∈ R n . The vector m is the filter of the convolution. Concretely, we think of x as the input token and x i ∈ R as a sin- gle feature value associated with the i -th character in this token.  The idea behind the one-dimensional convolution is to take the dot product of the vec- tor m with each m -gram in the token x to obtain another sequence c :
+c j = m T x j − m +1: j . (1)
+Usually, x i is not a single value, but a d - dimensional vector so that x ∈ R d × n . There ex- ist two types of 1d convolution operations.  One is called Time Delay Neural Networks (TDNNs). The other one was introduced by (Collobert et al., 2011). In TDNN, weights m ∈ R d × m form a ma- trix. Each row of m is convolved with the corre- sponding row of x . In (Collobert et al., 2011) ar- chitecture, a sequence of length n is represented as:
+ x 1: n = x 1 ⊕ x 2 · · · ⊕ x n , (2)
+where ⊕ is the concatenation operation. In gen- eral, let x i : i + j refer to the concatenation of char- acters x i , x i +1 , . . . , x i + j . A convolution operation involves a filter w ∈ R hk , which is applied to a
+ window of h characters to produce the new fea- ture. For example, a feature c i is generated from a window of characters x i : i + h − 1 by:
+c i = f ( w · x i : i + h − 1 + b ) . (3)
+Here b ∈ R is a bias term and f is a non- linear function such as the thresholding function f ( x ) = max { 0 , x } .  This filter is applied to each possible window of characters in the sequence { x 1: h , x 2: h +1 , . . . , x n − h +1: n } to produce a feature map:
+c = [ c 1 , c 2 , . . . , c n − h +1 ] , (4) with c ∈ R n − h +1 .
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_uKEZx7qf3JxveAUI6wVHx77K)
+ Call ID: call_uKEZx7qf3JxveAUI6wVHx77K
+  Args:
+    pattern: Table 1|Table 2|0\.863|0\.8[0-9][0-9]|0\.7[0-9][0-9]|Acc|Accuracy|Pearson
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+5.3 Results and Discussions
+Table 1 and 2 show the Pearson correlation and accuracy comparison results of semantic related- ness and text entailment tasks. We can see that combining CharCNN with multi-layer bidirec- tional LSTM yields better performance compared with other traditional machine learning methods such as SVM and MaxEnt approach (Proisl and Evert, 2014; Lai and Hockenmaier, 2014) that served with many handcraft features.  Note that our method doesn’t need extra handcrafted feature ex- traction procedure. Also our method doesn’t lever- age external linguistic resources such as wordnet or parsing which get best results in (Tai et al., 2015). More importantly, both task prediction re- sults close to the state-of-the-art results. It proved that our approaches successfully simultaneously predict heterogeneous tasks. Note that for seman- tic relatedness task, the latest research (Tai et al.,
+ 2015) proposed a tree-structure based LSTM, the Pearson correlation score of their system can reach 0.863. Compared with their approach, our method didn’t use dependency parsing and can be used to predict tasks contains multiple languages.We hope to point out that we implemented the method in (Tai et al., 2015), but the results are not as good as our method. Here we use the re- sults reported in their paper.  Based on our experi- ments, we believe the method in (Tai et al., 2015) is very sensitive to the initializations, thus it may not achieve the good performance in different set- tings. However, our method is pretty stable which may benefit from the joint tasks training.
+
+================================== Ai Message ==================================
+
+Unanswerable

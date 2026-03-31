@@ -1,0 +1,32 @@
+================================ Human Message =================================
+
+HYPOTHESIS:
+Survival of obligations: Some obligations of Agreement may survive termination of Agreement.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_DbiUGB1GsKHT6x39St8mwSr6)
+ Call ID: call_DbiUGB1GsKHT6x39St8mwSr6
+  Args:
+    pattern: surviv
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_QeWxFzobCzjmdG15ThmsLtNa)
+ Call ID: call_QeWxFzobCzjmdG15ThmsLtNa
+  Args:
+    pattern: termination
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.10 The expiration or termination of this Agreement shall not affect such of the provisions of  this Agreement which expressly provide that they will operate after any such expiration or termination or which of necessity must continue to have effect after such expiration or termination, notwithstanding that the clauses themselves do not expressly provide for this.
+
+================================== Ai Message ==================================
+
+Entailment

@@ -1,0 +1,112 @@
+================================ Human Message =================================
+
+QUERY:
+On which datasets does LadaBERT achieve state-of-the-art?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_bF7YmD0f81T4eX0Q4Q8vUtzd)
+ Call ID: call_bF7YmD0f81T4eX0Q4Q8vUtzd
+  Args:
+    pattern: LadaBERT
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+BERT is a cutting-edge language representation model pre-trained by a large corpus, which achieves superior performances on various natural language understanding tasks. However, a major blocking issue of applying BERT to online services is that it is memory-intensive and leads to unsatisfactory latency of user requests. Existing solutions leverage knowledge distilla- tion frameworks to learn smaller models that imitate the behaviors of BERT.  However, the train- ing procedure of knowledge distillation is expensive itself as it requires sufficient training data to imitate the teacher model. In this paper, we address this issue by proposing a hybrid solution named LadaBERT (Lightweight adaptation of BERT through hybrid model compression), which combines the advantages of different model compression methods, including weight pruning, matrix factorization and knowledge distillation.  LadaBERT achieves state-of-the-art accuracy on various public datasets while the training overheads can be reduced by an order of magnitude.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_dJqkiy31TPL4sJ8FMVFQo3W8)
+ Call ID: call_dJqkiy31TPL4sJ8FMVFQo3W8
+  Args:
+    pattern: state-of-the-art
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+BERT is a cutting-edge language representation model pre-trained by a large corpus, which achieves superior performances on various natural language understanding tasks. However, a major blocking issue of applying BERT to online services is that it is memory-intensive and leads to unsatisfactory latency of user requests. Existing solutions leverage knowledge distilla- tion frameworks to learn smaller models that imitate the behaviors of BERT.  However, the train- ing procedure of knowledge distillation is expensive itself as it requires sufficient training data to imitate the teacher model. In this paper, we address this issue by proposing a hybrid solution named LadaBERT (Lightweight adaptation of BERT through hybrid model compression), which combines the advantages of different model compression methods, including weight pruning, matrix factorization and knowledge distillation.  LadaBERT achieves state-of-the-art accuracy on various public datasets while the training overheads can be reduced by an order of magnitude.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_snD4g0LBRUFh95aUAdsiipJT)
+ Call ID: call_snD4g0LBRUFh95aUAdsiipJT
+  Args:
+    pattern: datasets
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+BERT is a cutting-edge language representation model pre-trained by a large corpus, which achieves superior performances on various natural language understanding tasks. However, a major blocking issue of applying BERT to online services is that it is memory-intensive and leads to unsatisfactory latency of user requests. Existing solutions leverage knowledge distilla- tion frameworks to learn smaller models that imitate the behaviors of BERT.  However, the train- ing procedure of knowledge distillation is expensive itself as it requires sufficient training data to imitate the teacher model. In this paper, we address this issue by proposing a hybrid solution named LadaBERT (Lightweight adaptation of BERT through hybrid model compression), which combines the advantages of different model compression methods, including weight pruning, matrix factorization and knowledge distillation.  LadaBERT achieves state-of-the-art accuracy on various public datasets while the training overheads can be reduced by an order of magnitude.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_ZHt6CywdxOBMxcWbWPFBKqSl)
+ Call ID: call_ZHt6CywdxOBMxcWbWPFBKqSl
+  Args:
+    pattern: GLUE
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+4.2 Setup
+We leverage the pre-trained checkpoint of base-bert-uncased 2 as the initial model for compression, which contains 12 layers, 12 heads, 110M parameters, and 768 hidden units per layer. Hyper-parameter
+1 https://github.com/huawei-noah/Pretrained-Language-Model/tree/master/TinyBERT
+2 https://storage.googleapis.com/bert models/2018 10 18/uncased L12 H768 A12. zip
+selection is conducted on the validation data for each dataset. After training, the prediction results are submitted to the GLUE-benchmark evaluation platform 3 to get the evaluation performance on test data.For a comprehensive evaluation, we experiment with four settings of LadaBERT, namely LadaBERT- 1, -2, -3 and -4, which reduce the model parameters of BERT-Base by 2.5, 5.0, 7. 5 and 10.0 times respectively. In our experiment, we set the batch size as 32 and learning rate as 2e-5. The optimizer is BertAdam with the default setting (Devlin et al., 2018). Fine-grained compression ratios are optimized by random search on SST dataset and transferred to other datasets (shown in Table 2). Following (Jiao et al. , 2019), the temperature value in distillation loss function is set as 1 in all experiments without tuning.Table 2: Fine-grained compression ratios Model Overall Embedding layer Matrix factorization Weight pruning LadaBERT-1 × 2 . 5 × 1 . 43 × 2 . 0 × 1 . 56 LadaBERT-2 × 5 . 0 × 2 . 05 × 2 . 0 × 3 .  41 LadaBERT-3 × 7 . 5 × 5 . 0 × 2 . 0 × 4 . 33 LadaBERT-4 × 10 . 0 × 5 . 0 × 2 . 5 × 5 . 45
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_DIW6URMtWNJu9WfQ6Zor48ZT)
+ Call ID: call_DIW6URMtWNJu9WfQ6Zor48ZT
+  Args:
+    pattern: SST
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+4.1 Datasets & Baselines
+We compare LadaBERT with state-of-the-art model compression approaches on five public datasets of different tasks of natural language understanding, including sentiment classification (SST-2), natural lan- guage inference (MNLI-m, MNLI-mm, QNLI) and pairwise semantic equivalence (QQP). The statistics of these datasets are described in Table 1.Task #Train #Dev.  #Test #Class SST-2 67,350 873 1,822 2 QQP 363,871 40,432 390,965 2 MNLI-m 392,703 9,816 9,797 3 MNLI-mm 392,703 9,833 9,848 3 QNLI 104,744 5,464 5,464 2
+Table 1: Dataset Statistics
+ The baseline approaches are summarized below.
+• Weight pruning and Matrix factorization are two simple baselines described in Section 3.3. We evaluate both pruning methods in an iterative manner until the target compression ratio is reached.
+• Hybrid pruning is a combination of matrix factorization and weight pruning,which conducts it- erative weight pruning on the basis of SVD-based matrix factorization. It is performed iteratively until the desired compression ratio is achieved.
+• BERT-FT ,BERT-KD and BERT-PKD are reported in (Sun et al., 2019), where BERT-FT directly fine-tunes the model via supervision labels, BERT-KD is the vanilla knowledge distillation algo- rithm (Hinton et al., 2015), and BERT-PKD stands for Patient Knowledge Distillation proposed in (Sun et al., 2019).  The student model is composed of 3 Transformer layers, resulting in a 2 . 5 × compression ratio. Each layer has the same hidden size as the pre-trained teacher, so the initial parameters of student model can be inherited from the corresponding teacher.
+• TinyBERT (Jiao et al.,2019) instantiates a tiny student model, which has totally 14.5M parameters ( 7 . 5 × compression ratio) composed of 4 layers, 312 hidden units, 1200 intermediate size and 12 heads. For a fair comparison, we reproduce the TinyBERT pipeline 1 without general distillation and data augmentation, which is time-exhaustive and resource-consuming.
+• BERT-Small has the same model architecture as TinyBERT,but is directly pre-trained by the offi- cial BERT pipeline. The performance values are copied from (Jiao et al., 2019) for reference.
+• Distilled-BiLSTM (Tang et al.,2019) leverages a single-layer bidirectional-LSTM as the student model, where the hidden units and intermediate size are set to be 300 and 400 respectively, resulting in a 10 . 8 × compression ratio. This model requires an expensive training process similar to vanilla BERT.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_DdhT0kZi3hSemOxlgFBBLG45)
+ Call ID: call_DdhT0kZi3hSemOxlgFBBLG45
+  Args:
+    pattern: state-of-the-art accuracy on various public datasets
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+BERT is a cutting-edge language representation model pre-trained by a large corpus, which achieves superior performances on various natural language understanding tasks. However, a major blocking issue of applying BERT to online services is that it is memory-intensive and leads to unsatisfactory latency of user requests. Existing solutions leverage knowledge distilla- tion frameworks to learn smaller models that imitate the behaviors of BERT.  However, the train- ing procedure of knowledge distillation is expensive itself as it requires sufficient training data to imitate the teacher model. In this paper, we address this issue by proposing a hybrid solution named LadaBERT (Lightweight adaptation of BERT through hybrid model compression), which combines the advantages of different model compression methods, including weight pruning, matrix factorization and knowledge distillation.  LadaBERT achieves state-of-the-art accuracy on various public datasets while the training overheads can be reduced by an order of magnitude.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_8AyxBsoKejNnU0EUT42NO0ko)
+ Call ID: call_8AyxBsoKejNnU0EUT42NO0ko
+  Args:
+    pattern: Table 3
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+4.3 Performance Comparison
+Table 3: Performance comparison on various model sizes Algorithm MNLI-m MNLI-mm SST-2 QQP QNLI #Params Ratio BERT-Base 84.6 83.4 93.5 71.2/- 90.5 110M × 1.0 LadaBERT-1 83.5 82.5 92.8 70.7/88.9 89.6 44M × 2. 5 BERT-FT 74.8 74.3 86.4 65.8/86.9 84.3 44M × 2.5 BERT-KD 75.4 74.8 86.9 67.3/87.6 84.0 44M × 2.5 BERT-PKD 76.7 76.3 87.5 68.1/87.8 84. 7 44M × 2.5 Weight pruning 82.8 81.6 92.3 70.1/88.5 88.9 44M × 2.5 matrix factorization 77.7 77.4 87.6 65.7/87.2 84.3 44M × 2.5 Hybrid pruning 81.2 80.0 90.0 68.0/87. 5 83.3 44M × 2.5 LadaBERT-2 83.1 82.2 91.8 69.9/87.9 88.2 22M × 5.0 Weight pruning 75.9 75.6 84.8 60.3/83.5 81.7 22M × 5.0 matrix factorization 71.8 71.8 82. 8 60.3/83.5 75.4 22M × 5.0 Hybrid pruning 76.1 75.3 85.4 64.9/85.8 80.6 22M × 5.0 LadaBERT-3 82.1 81.8 89.9 69.4/87.8 84.5 15M × 7.5 TinyBERT 80. 9 79.5 89.5 65.4/87.5 77.9 15M × 7.5 BERT-Small 75.4 74.9 87.6 66.5/- 84.8 15M × 7.5 Weight pruning 69.1 68.8 81.8 59.7/82.9 76.4 15M × 7. 5 matrix factorization 60.2 60.0 81.3 58.5/82.0 62.2 15M × 7.5 Hybrid pruning 71.9 71.0 83.5 62.3/84.7 73.8 15M × 7.5 LadaBERT-4 75.8 76.1 84.0 67.4/86.6 75. 1 11M × 10.0 Distilled-BiLSTM 73.0 72.6 90.7 68.2/88.1 - 10M × 10.8 Weight pruning 64.9 65.1 80.4 56.9/80.5 62.7 11M × 10.0 matrix factorization 59.9 59.6 79.2 57.8/81. 9 62.2 11M × 10.0 Hybrid pruning 68.4 67.9 81.5 58.6/83.5 63.2 11M × 10.0
+The evaluation results of LadaBERT and state-of-the-art approaches are listed in Table 3, where the models are ranked by parameter sizes for feasible comparison.  As shown in the table, LadaBERT con- sistently outperforms the strongest baselines under similar model sizes. In addition, the performance of LadaBERT demonstrates the superiority of a combination of SVD-based matrix factorization, weight pruning and knowledge distillation.3 https://gluebenchmark.com/
+Figure 3: Learning curve on MNLI-m dataset. Figure 4: Learning curve on QQP dataset.With model size of 2 .  5 × reduction, LadaBERT-1 performs significantly better than BERT-PKD, boost- ing the performance by relative 8.9, 8.1, 6.1, 3.8 and 5.8 percentages on MNLI-m, MNLI-mm, SST-2, QQP and QNLI datasets respectively.  Recall that BERT-PKD initializes the student model by selecting 3 of 12 layers in the pre-trained BERT-Base model. It turns out that the discarded layers have a huge impact on the model performance, which is hard to be recovered by knowledge distillation. On the other hand, LadaBERT generates the student model by iterative pruning on the pre-trained teacher.  In this way, the original knowledge in the teacher model can be preserved to the largest extent, and the benefit is complementary to knowledge distillation.LadaBERT-3 has a comparable size as TinyBERT with a 7 . 5 × compression ratio. As shown in the results, TinyBERT does not work well without expensive data augmentation and general distillation, hindering its application to low-resource settings.  The reason is that the student model of TinyBERT is distilled from scratch, so it requires much more data to mimic the teacher’s behaviors. Instead, Lad- aBERT has better initial and intermediate status calculated by hybrid model compression, which is much more light-weighted and achieves competitive performances with much faster learning speed (learning curve comparison is shown in Section 4.4).  Moreover, LadaBERT-3 outperforms BERT-Small on most of the datasets, which is pre-trained from scratch by the official BERT pipeline. This means that Lad- aBERT can quickly adapt to smaller model sizes and achieve competitive performance without expansive re-training on a large corpus.Moreover, Distilled-BiLSTM performs well on SST-2 dataset with more than 10 × compression ratio, owing to good generalization ability of LSTM model on small datasets.  Nevertheless, the performance of LadaBERT-4 is competitive on larger datasets such as MNLI and QQP. This is impressive as LadaBERT is much more efficient without exhaustive re-training on a large corpus. In addition, the inference speed of BiLSTM is slower than transformer-based models with similar parameter sizes.
+
+================================== Ai Message ==================================
+
+MNLI-m, MNLI-mm, SST-2, QQP, and QNLI.

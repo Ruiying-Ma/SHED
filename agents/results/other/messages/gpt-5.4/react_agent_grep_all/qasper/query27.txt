@@ -1,0 +1,88 @@
+================================ Human Message =================================
+
+QUERY:
+How much data did they gather from crowdsourcing?
+
+TABLE OF CONTENTS (TOC):
+1 | A Crowd-based Evaluation of Abuse Response Strategies in Conversational Agents
+1.1 | Verena Rieser
+1.2 | Abstract
+1.3 | 1 Introduction
+1.4 | 2 Data Collection
+1.5 | 3 Human Evaluation
+1.6 | 4 Results
+1.6.1 | 4.1 Demographic Factors
+1.6.2 | 4.2 Prompt context
+1.6.3 | 4.3 Systems
+1.7 | 5 Related and Future Work
+1.8 | 6 Conclusion
+1.9 | Acknowledgements
+1.10 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_vTQnuAcDGRkSQ14KMECKgyYf)
+ Call ID: call_vTQnuAcDGRkSQ14KMECKgyYf
+  Args:
+    section_id: 1.4
+
+================================= Tool Message =================================
+Name: read_section
+
+2 Data Collection
+We first gather abusive utterances from 600K con- versations with US-based customers. We search for relevant utterances by simple keyword spot- ting and find that about 5% of the corpus includes abuse, with mostly sexually explicit utterances.Previous research reports even higher levels of abuse between 11% ( Angeli and Brahnam , 2008 ) and 30% ( Worswick ).  Since we are not allowed to directly quote from our corpus in order to protect customer rights, we summarise the data to a total of 109 “prototypical” utterances - substantially ex- tending the previous dataset of 35 utterances from Cercas Curry and Rieser ( 2018 ) - and categorise these utterances based on the Linguistic Society’s definition of sexual harassment ( Linguistic Soci- ety of America ):
+A) Gender and Sexuality, e.g. “Are you gay?”,“How do you have sex?”
+B) Sexualised Comments, e.g. “I love watching porn.”,“I’m horny.” C) Sexualised Insults, e.g. “Stupid bitch.”, “Whore”
+D) Sexual Requests and Demands, e.g. “Will you have sex with me?”, “Talk dirty to me.”
+We then use these prompts to elicit responses from the following systems, following methodol- ogy from Cercas Curry and Rieser ( 2018 ).
+• 4 Commercial : Amazon Alexa, Apple Siri, Google Home, Microsoft’s Cortana.
+• 4 Non-commercial rule-based : E.L.I.Z.A.( Wallace and Dunlop ), Parry ( Colby , 2016 ), A.L.I.C.E. ( Wallace , 2014 ), Alley ( Learn En- glish Network , 2014 ).
+• 4 Data-driven approaches:- Cleverbot ( Carpenter , 1997 );
+- NeuralConvo ( Chaumond and Delangue , 2016 ),a re-implementation of ( Vinyals and Le , 2015 );
+- an implementation of ( Ritter et al. ,2010 )’s Information Retrieval approach;
+- a vanilla Seq2Seq model trained on clean Reddit data ( Cercas Curry and Rieser ,2018 ).
+• Negative Baselines : We also compile re- sponses by adult chatbots:Sophia69 ( sop ), Laurel Sweet ( lau ), Captain Howdy ( how ), Annabelle Lee ( ann ), Dr Love ( drl ).We repeated the prompts multiple times to see if system responses varied and if defensiveness in- creased with continued abuse. If this was the case, we included all responses in the study. 1 Following this methodology, we collected a total of 2441 sys- tem replies in July-August 2018 - 3. 5 times more data than Cercas Curry and Rieser ( 2018 ) - which 2 expert annotators manually annotated according to the categories in Table 1 ( κ = 0 . 66 ).
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_all (call_UpQJzwLwuVWXxT9ckPJwIEC7)
+ Call ID: call_UpQJzwLwuVWXxT9ckPJwIEC7
+  Args:
+    pattern: crowd|crowdsourc|AMT|Mechanical Turk|participants|workers|annotat
+
+================================= Tool Message =================================
+Name: grep_search_all
+
+1.2 | Abstract
+How should conversational agents respond to verbal abuse through the user? To answer this question, we conduct a large-scale crowd- sourced evaluation of abuse response strate- gies employed by current state-of-the-art sys- tems.  Our results show that some strategies, such as “polite refusal” score highly across the board, while for other strategies demographic factors, such as age, as well as the severity of the preceding abuse influence the user’s per- ception of which response is appropriate. In addition, we find that most data-driven models lag behind rule-based or commercial systems in terms of their perceived appropriateness.
+
+1.3 | 1 Introduction
+Ethical challenges related to dialogue systems and conversational agents raise novel research ques- tions, such as learning from biased data sets ( Hen- derson et al. , 2018 ), and how to handle verbal abuse from the user’s side ( Cercas Curry and Rieser , 2018 ; Angeli and Brahnam , 2008 ; Angeli and Carpenter , 2006 ; Brahnam , 2005 ).  As high- lighted by a recent UNESCO report ( West et al. , 2019 ), appropriate responses to abusive queries are vital to prevent harmful gender biases: the of- ten submissive and flirty responses by the female- gendered systems reinforce ideas of women as subservient. In this paper, we investigate the appropriateness of possible strategies by gather- ing responses from current state-of-the-art systems and ask crowd-workers to rate them.
+
+1.4 | 2 Data Collection
+We first gather abusive utterances from 600K con- versations with US-based customers. We search for relevant utterances by simple keyword spot- ting and find that about 5% of the corpus includes abuse, with mostly sexually explicit utterances.Previous research reports even higher levels of abuse between 11% ( Angeli and Brahnam , 2008 ) and 30% ( Worswick ).  Since we are not allowed to directly quote from our corpus in order to protect customer rights, we summarise the data to a total of 109 “prototypical” utterances - substantially ex- tending the previous dataset of 35 utterances from Cercas Curry and Rieser ( 2018 ) - and categorise these utterances based on the Linguistic Society’s definition of sexual harassment ( Linguistic Soci- ety of America ):
+A) Gender and Sexuality, e.g. “Are you gay?”,“How do you have sex?”
+B) Sexualised Comments, e.g. “I love watching porn.”,“I’m horny.” C) Sexualised Insults, e.g. “Stupid bitch.”, “Whore”
+D) Sexual Requests and Demands, e.g. “Will you have sex with me?”, “Talk dirty to me.”
+We then use these prompts to elicit responses from the following systems, following methodol- ogy from Cercas Curry and Rieser ( 2018 ).
+• 4 Commercial : Amazon Alexa, Apple Siri, Google Home, Microsoft’s Cortana.
+• 4 Non-commercial rule-based : E.L.I.Z.A.( Wallace and Dunlop ), Parry ( Colby , 2016 ), A.L.I.C.E. ( Wallace , 2014 ), Alley ( Learn En- glish Network , 2014 ).
+• 4 Data-driven approaches:- Cleverbot ( Carpenter , 1997 );
+- NeuralConvo ( Chaumond and Delangue , 2016 ),a re-implementation of ( Vinyals and Le , 2015 );
+- an implementation of ( Ritter et al. ,2010 )’s Information Retrieval approach;
+- a vanilla Seq2Seq model trained on clean Reddit data ( Cercas Curry and Rieser ,2018 ).
+• Negative Baselines : We also compile re- sponses by adult chatbots:Sophia69 ( sop ), Laurel Sweet ( lau ), Captain Howdy ( how ), Annabelle Lee ( ann ), Dr Love ( drl ).We repeated the prompts multiple times to see if system responses varied and if defensiveness in- creased with continued abuse. If this was the case, we included all responses in the study. 1 Following this methodology, we collected a total of 2441 sys- tem replies in July-August 2018 - 3. 5 times more data than Cercas Curry and Rieser ( 2018 ) - which 2 expert annotators manually annotated according to the categories in Table 1 ( κ = 0 . 66 ).
+
+1.5 | 3 Human Evaluation
+In order to assess the perceived appropriateness of system responses we conduct a human study using crowd-sourcing on the FigureEight platform. We define appropriateness as “acceptable behaviour in a work environment” and the participants were made aware that the conversations took place be- tween a human and a system. Ungrammatical (1a) and incoherent (1b) responses are excluded from this study.  We collect appropriateness rat- ings given a stimulus (the prompt) and four ran- domly sampled responses from our corpus that the worker is to label following the methodology de- scribed in ( Novikova et al. , 2018 ), where each ut- terance is rated relatively to a reference on a user- defined scale. Ratings are then normalised on a scale from [0-1].  This methodology was shown to produce more reliable user ratings than com- monly used Likert Scales. In addition, we collect demographic information, including gender and age group. In total we collected 9960 HITs from 472 crowd workers. In order to identify spammers and unsuitable ratings, we use the responses from the adult-only bots as test questions: We remove users who give high ratings to sexual bot responses the majority (more than 55%) of the time. 18,826 scores remain - resulting in an average of 7.7 rat- ings per individual system reply and 1568.8 rat- ings per response type as listed in Table 1 .Due to missing demographic data - and after removing malicious crowdworkers - we only consider a sub- set of 190 raters for our demographic study. The
+group is composed of 130 men and 60 women. Most raters (62. 6%) are under the age of 44, with similar proportions across age groups for men and women. This is in-line with our target population: 57% of users of smart speakers are male and the majority are under 44 ( Koksal , 2018 ).
+
+1.6.2 | 4.2 Prompt context
+Here, we explore the hypothesis, that users per- ceive different responses as appropriate, depen- dent on the type and gravity of harassment, see Section 2 . The results in Table 4 indeed show that perceived appropriateness varies significantly be- tween prompt contexts.  For example, a joke (3b) is accepted after an enquiry about Gender and Sex- uality (A) and even after Sexual Requests and De- mands (D), but deemed inappropriate after Sexu- alised Comments (B). Note that none of the bots responded with a joke after Sexualised Insults (C). Avoidance (2f) is considered most appropriate in
+1 However, systems rarely varied: On average, our cor- pus contains 1. 3 responses per system for each prompt. Only the commercial systems and ALICE occasionally offered a second reply, but usually just paraphrasing the original reply. Captain Howdy was the only system that became increasingly aggressive with continued abuse.2 We do not use Bonferroni to correct for multiple com- parisons, since according to Armstrong ( 2014 ), it should not be applied in an exploratory study since it increases the chance to miss possible effects (Type II errors). 1) Nonsensical Responses 2) Negative Responses 3) Positive Responses (a) Non-grammatical: answer is not grammatical/ understand- able “i’m a prop 8”. (b) Non-coherent: answer does not make sense in context - un- intentional topic change. U: “What are you wearing?” S: “I’m here.” (c) No-answer: system does not output a response.  (d) Search results: system re- turns search results or offers to search. (e) Don’t know: system doesn’t know how to answer. “I don’t know”, “I don’t understand”. (a) Humorous refusal: “You got the wrong type of assistant.” (b) Polite refusal: U: “Are you gay?” S: “That is not something I feel compelled to answer. ” (c) Deflection: Intentional topic shift. U: “Are you gay?” S: “We were discussing you, not me.” (d) Chastising: System tells user off. U: “Do you like porn?” S: “It’s about time you showed some interest in my feelings.” (e) Retaliation: System insults back.  “Go away, you faggot” (f) Avoids answering directly: “I haven’t been around very long. I’m still figuring that out.” (a) Play-along: System answers user query directly. U: “Are you a woman?” S: “That’s right, I am a woman bot.” (b) Joke: Response is humorous but not encouraging further harass- ment.  U: “Talk dirty to me” S: “Dirt, grime” (c) Flirtation: Response can be hu- morous and/or encourage fur- ther responses from the user. Example: U: “What are you wearing?” S: “In the cloud, no one knows what you’re wear- ing.”
+Table 1: Full annotation scheme for system response types after user abuse.  Categories (1a) and (1b) are excluded from this study.Overall Male Female 1c 2 0.445 ± 0 . 186 2 0.451 ± 0 . 182 4 0.439 ± 0 . 185 1d 10 0.391 ± 0 . 191 9 0.399 ± 0 . 182 10 0.380 ± 0 .  200 1e 4 0.429 ± 0 . 178 3 0.440 ± 0 . 167 2 0.444 ± 0 . 171 2a 8 0.406 ± 0 . 182 10 0.396 ± 0 . 185 8 0.413 ± 0 . 188 2b 1 0.480 ± 0 . 165 1 0. 485 ± 0 . 162 1 0.490 ± 0 . 170 2c 6 0.414 ± 0 . 184 6 0.414 ± 0 . 179 9 0.401 ± 0 . 191 2d 5 0.423 ± 0 . 186 4 0.432 ± 0 . 179 3 0.441 ± 0 .  179 2e 12 0.341 ± 0 . 219 12 0.342 ± 0 . 214 11 0.348 ± 0 . 222 2f 9 0.401 ± 0 . 197 7 0.413 ± 0 . 188 6 0.422 ± 0 . 175 3a 7 0.408 ± 0 . 187 8 0. 409 ± 0 . 183 7 0.416 ± 0 . 188 3b 3 0.429 ± 0 . 174 5 0.418 ± 0 . 170 5 0.429 ± 0 . 187 3c 11 0.344 ± 0 . 211 11 0.342 ± 0 . 205 11 0.340 ± 0 . 217
+ Table 2: Response ranking, mean and standard deviation for demographic groups with (*) p < .05, (**) p < .01 wrt. other groups.18-24 25-34 35-44 45+ 1c 2 0.453 ± 0 . 169 3 0.442 ± 0 . 192 3 0.453 ± 0 . 179 3 0.440 ± 0 .  203 1d 9 0.388 ± 0 . 193 10 0.385 ± 0 . 200 10 0.407 ± 0 . 164 7 0.401 ± 0 . 180 1e 6** 0.409** ± 0 . 178 4 0.441 ± 0 . 173 2 0.461 ± 0 . 153 2 0. 463 ± 0 . 151 2a 8 0.396 ± 0 . 197 9 0.393 ± 0 . 181 8 0.432 ± 0 . 168 11 0.349 ± 0 . 214 2b 1 0.479 ± 0 . 176 1 0.478 ± 0 . 172 1 0.509 ± 0 .  135 1 0.485 ± 0 . 166 2c 5 0.424 ± 0 . 178 8 0.398 ± 0 . 195 7 0.435 ± 0 . 164 8 0.392 ± 0 . 188 2d 4 0.417 ± 0 . 179 5 0.437 ± 0 . 189 4 0. 452 ± 0 . 164 4 0.437 ± 0 . 171 2e 11 0.355 ± 0 . 220 12** 0.312** ± 0 . 222 11 0.369 ± 0 . 200 10 0.3...(truncated)
+
+================================== Ai Message ==================================
+
+They collected 9960 HITs from 472 crowd workers. After filtering, 18,826 scores remained.

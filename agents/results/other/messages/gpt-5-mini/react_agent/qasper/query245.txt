@@ -1,0 +1,45 @@
+================================ Human Message =================================
+
+QUERY:
+what is the previous work they are comparing to?
+
+TABLE OF CONTENTS (TOC):
+1 | Improved English to Russian Translation by Neural Suffix Prediction Kai Song 1,2 , Yue Zhang 3 , Min Zhang 1 , Weihua Luo 2 1 Soochow University, Suzhou, China
+1.1 | Abstract
+1.2 | Introduction
+1.3 | Related Work
+1.3.1 | Translation Granularity
+1.3.2 | Morphology and MT
+1.4 | Background
+1.4.1 | Russian Morphology and Stemming
+1.4.2 | Neural Machine Translation Baselines
+1.5 | Target-Side Suffix Prediction
+1.5.1 | Training
+1.5.2 | Decoding
+1.6 | Experiments
+1.6.1 | Data
+1.6.2 | Baselines
+1.6.3 | Our System
+1.6.4 | Distributed Training
+1.6.5 | Results and Analysis
+1.7 | Conclusion
+1.8 | Acknowledgments
+1.9 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_VWVZg7CcmcMfVEcr3CUGE2FE)
+ Call ID: call_VWVZg7CcmcMfVEcr3CUGE2FE
+  Args:
+    section_id: 1.6.2
+
+================================= Tool Message =================================
+Name: read_section
+
+Baselines
+Our RNN and Transformer baseline systems utilize BPE (Sennrich, Haddow, and Birch 2015b) to transfer the origi- nal word sequence to subword sequence on both the source and the target sides, since the subword method had a stable improvement compared with word based system, especially on morphologically rich languages. Besides, we compared our system with a fully character- based baseline system, which is an implementation of Lee, Cho, and Hofmann (2016)’s work, and is available on github 3 .We limit the source and target vocabularies to the most frequent 30K tokens for both English and Russian. For news domain, about 99.7% tokens are covered by the source side
+vocabulary, about 97. 0% target tokens are covered by the target side vocabulary.
+
+================================== Ai Message ==================================
+
+Lee, Cho, and Hofmann (2016)

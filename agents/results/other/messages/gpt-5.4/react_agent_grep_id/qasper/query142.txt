@@ -1,0 +1,40 @@
+================================ Human Message =================================
+
+QUERY:
+Where did the joke data come from?
+
+TABLE OF CONTENTS (TOC):
+1 | Knowledge Amalgam: Generating Jokes and Quotes Together ∗ Bhargav Chippada, Shubajit Saha Microsoft R&D bhargav.chippada@microsoft.com, shubajit.saha@microsoft.com
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2 Related Work
+1.3.1 | 2.1 Recurrent Neural Networks
+1.3.2 | 2.2 Humor Generation
+1.4 | 3 Approach
+1.4.1 | 3.1 Dataset
+1.4.2 | 3.2 Controlled LSTM Architecture
+1.4.3 | 3.3 Model Parameters
+1.5 | 4 Experiments
+1.5.1 | 4.1 Just Jokes
+1.5.2 | 4.2 Forward and Reverse Jokes
+1.5.3 | 4.3 Jokes, Quotes, and Tweets
+1.6 | 5 Evaluation
+1.7 | 6 Conclusion
+1.8 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_yBR7uOsE9IES3VJS7Fr9yEye)
+ Call ID: call_yBR7uOsE9IES3VJS7Fr9yEye
+  Args:
+    section_id: 1.4.1
+
+================================= Tool Message =================================
+Name: read_section
+
+3.1 Dataset
+Our training data consists of jokes, quotes, and tweets from different sources. We combined multiple sources and de- duplicated them to arrive at a large corpus for training. The two sources for jokes are CrowdTruth 1 and Subreddits 2 . Af- ter cleaning, we ended up with 96910 jokes and a vocabulary size of 8922 words. The two sources for quotes are Quota- bles 3 and the TheWebMiner 4 .  After cleaning, we ended up with 43383 quotes and a vocabulary size of 8916 words. We downloaded the scraped tweets from kaggle 5 and ended up with 130250 tweets with a vocabulary size of 10805 words after cleaning. We constrained the vocabulary to about 10000 words in each case.  Finally, we combined the jokes, quotes, and tweets along with their class labels (joke is 0, quote is 1, tweet is 2) into a single unified dataset. The combined dataset consists of 270543 sentences and a vocabulary size of 12614 words. Each sentence starts with a ’sos’ tag and ends with a ’eos’ tag to denote the start and end of sentences. The fi- nal datasets can be found on our github 6 repository.  When we train the controlled LSTM with the combined data, we use weighted sample strategy so that the three categories con- tribute equally to loss even though their numbers are different.
+
+================================== Ai Message ==================================
+
+The joke data came from two sources: CrowdTruth and Subreddits.

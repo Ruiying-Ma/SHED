@@ -1,0 +1,81 @@
+================================ Human Message =================================
+
+QUERY:
+How big are two introduced datasets?
+
+TABLE OF CONTENTS (TOC):
+1 | Automatically Inferring Gender Associations from Language
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2 Related Work
+1.4 | 3 Data Collection
+1.5 | 4 Inferring Word-Level Associations
+1.5.1 | 4.1 Methods
+1.5.2 | 4.2 Findings
+1.6 | 5 Clustering & Cluster Labeling
+1.6.1 | 5.1 Methods
+1.6.2 | 5.2 Findings
+1.7 | 6 Human Evaluations
+1.8 | 7 Conclusion
+1.9 | References
+1.10 | A Appendix
+1.10.1 | A.1 Word-Level Results
+1.10.2 | A.2 Clustering and Cluster Labeling Results
+1.10.3 | A.3 Human Evaluation Results
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_VWcAR3uoDepBgNk8FS79fK0a)
+ Call ID: call_VWcAR3uoDepBgNk8FS79fK0a
+  Args:
+    section_id: 1.1
+  read_section (call_Xx3l4UwUNAaDgjE8T4HRArPm)
+ Call ID: call_Xx3l4UwUNAaDgjE8T4HRArPm
+  Args:
+    section_id: 1.4
+
+================================= Tool Message =================================
+Name: read_section
+
+Abstract
+In this paper, we pose the question: do people talk about women and men in different ways? We introduce two datasets and a novel integra- tion of approaches for automatically inferring gender associations from language, discover- ing coherent word clusters, and labeling the clusters for the semantic concepts they repre- sent.  The datasets allow us to compare how people write about women and men in two dif- ferent settings - one set draws from celebrity news and the other from student reviews of computer science professors. We demonstrate that there are large-scale differences in the ways that people talk about women and men and that these differences vary across domains. Human evaluations show that our methods sig- nificantly outperform strong baselines.
+
+================================= Tool Message =================================
+Name: read_section
+
+3 Data Collection
+Our first dataset contains articles from celebrity magazines People , UsWeekly , and E!News . We labeled each article for whether it was report- ing on men, women, or neither/unknown. 2 To do this, we first extracted the article’s topic tags. Some of these tags referred to people, but oth- ers to non-people entities, such as “Gift Ideas” or “Health. ” To distinguish between these types of tags, we queried each tag on Wikipedia and checked whether the top page result contained a “Born” entry in its infobox – if so, we concluded that the tag referred to a person.Then, from the person’s Wikipedia page, we de- termined their gender by checking whether the in- troductory paragraphs of the page contained more male or female pronouns.  This method was simple but effective, since pronouns in the introduction al- most always resolve to the subject of that page. In fact, on a sample of 80 tags that we manually an- notated, we found that comparing pronoun counts predicted gender with perfect accuracy. Finally, if an article tagged at least one woman and did not tag any men, we labeled the article as Female; in the opposite case, we labeled it as Male. Our second dataset contains reviews from Rate- MyProfessors (RMP), an online platform where students can review their professors. We included all 5,604 U.S. schools on RMP, and collected all reviews for CS professors at those schools. We la- beled each review with the gender of the professor whom it was about, which we determined by com- paring the count of male versus female pronouns over all reviews for that professor.  This method was again effective, because the reviews are ex-
+2 Our method unfortunately could not take into account non-binary gender identities, as it relied on she/her and he/his pronouns, and could not easily integrate the singular they/them, nor could we find sufficient examples of ze/zir or other non-binary pronouns in our data. That said, we will continue striving towards better inclusion, and hope in future work to expand our methods beyond the binary. pressly written about a certain professor, so the pronouns typically resolve to that professor.In addition to extracting the text of the articles or reviews, for each dataset we also collected var- ious useful metadata. For the celebrity dataset, we recorded each article’s timestamp and the name of the author, if available.  Storing author names creates the potential to examine the relationship between the gender of the author and the gender of the subject, such as asking if there are differ- ences between how women write about men and how men write about men. In this work, we did not yet pursue this direction because we wanted to begin with a simpler question of how gender is discussed: regardless of the gender of the au- thors, what is the content being put forth and con- sumed?  Furthermore, we were unable to extract author gender in the professor dataset since the RMP reviews are anonymous. However, in future work, we may explore the influence of author gen- der in the celebrity dataset.For the professor dataset, we captured metadata such as each review’s rating, which indicates how the student feels about the professor on a scale of AWFUL to AWESOME.  This additional variable in our data creates the option in future work to factor in sentiment; for example, we could study whether there are differences in language used when criticizing a female versus a male professor.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_all (call_J53PReNdwnAPSbaHvKCz24ae)
+ Call ID: call_J53PReNdwnAPSbaHvKCz24ae
+  Args:
+    pattern: \b(?:[0-9]{1,3}(?:,[0-9]{3})+|[0-9]+)\b.{0,40}\b(?:articles|reviews|dataset|contains)
+
+================================= Tool Message =================================
+Name: grep_search_all
+
+1.3
+1.4
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_kRaTxMVp61C2ftizGgZgLpVa)
+ Call ID: call_kRaTxMVp61C2ftizGgZgLpVa
+  Args:
+    section_id: 1.3
+
+================================= Tool Message =================================
+Name: read_section
+
+2 Related Work
+The study of gender and language has a rich his- tory in social science. Its roots are often attributed to Robin Lakoff, who argued that language is fun- damental to gender inequality, “reflected in both the ways women are expected to speak, and the ways in which women are spoken of” ( Lakoff , 1973 ).  Prominent scholars following Lakoff have included Deborah Tannen ( 1990 ), Mary Bucholtz and Kira Hall ( 1995 ), Janet Holmes ( 2003 ), Pene- lope Eckert ( 2003 ), and Deborah Cameron ( 2008 ), along with many others.In recent decades, the study of gender and language has also attracted computational re- searchers.  Echoing Lakoff’s original claim, a popular strand of computational work focuses on differences in how women and men talk, an- alyzing key lexical traits ( Boulis and Ostendorf , 2005 ; Argamon et al. , 2007 ; Bamman et al. , 2014 ) and predicting a person’s gender from some text they have written ( Rao et al. , 2010 ; Jurgens et al. ,
+ ∗ Since writing this paper, Serina Chang has moved to the Department of Computer Science at Stanford University.1 Our datasets and code are available at cs.columbia.edu/nlp/tools.cgi#gendered%20corpus and github.com/serinachang5/gender-associations, respectively.2017 ). There is also research studying how people talk to women and men ( Voigt et al.  , 2018 ), as well as how people talk about women and men, typi- cally in specific domains such as sports journalism ( Fu et al. , 2016 ), fiction writing ( Fast et al. , 2016 ), movie scripts ( Sap et al. , 2017 ), and Wikipedia bi- ographies ( Wagner et al. , 2015 , 2016 ).  Our work builds on this body by diving into two novel do- mains: celebrity news, which explores gender in pop culture, and student reviews of CS professors, which examines gender in academia and, particu- larly, the historically male-dominated field of CS.  Furthermore, many of these works rely on manu- ally constructed lexicons or topics to pinpoint gen- dered language, but our methods automatically in- fer gender-associated words and labeled clusters, thus reducing supervision and increasing the po- tential to discover subtleties in the data.Modeling gender associations in language could also be instrumental to other NLP tasks.  Abusive language is often founded in sex- ism ( Waseem and Hovy , 2016 ; Jha and Mamidi , 2017 ), so models of gender associations could help to improve detection in those cases. Gen- der bias also manifests in NLP pipelines: prior research has found that word embeddings preserve gender biases ( Bolukbasi et al. , 2016 ; Caliskan et al. , 2017 ; Garg et al.  , 2018 ), and some have developed methods to reduce this bias ( Zhao et al. , 2018 , 2019 ). Yet, the problem is far from solved; for example, Gonen and Goldberg 2019 showed that it is still possible to recover gender bias from “de-biased” embeddings.  These findings further motivate our research, since be- fore we can fully reduce gender bias in embed- dings, we need to develop a deeper understanding of how gender permeates through language in the first place.We also build on methods to cluster words in word embedding space and automatically label clusters. Clustering word embeddings has proven useful for discovering salient patterns in text cor- pora ( Wilson et al. , 2018 ; Demszky et al. , 2019 ).  Once clusters are derived, we would like them to be interpretable. Much research simply considers the top- n words from each cluster, but this method can be subjective and time-consuming to interpret. Thus, there are efforts to design methods of auto- matic cluster labeling ( Manning et al. , 2008 ). We take a similar approach to Poostchi and Piccardi 2018 , who leverage word embeddings and Word-
+Celeb Professor Num.  texts 15,917 283,973 Num. sentences 342,645 976,677 Fem-Male prop. .67 / .33 .28 / .72
+Table 1: Summary statistics of our datasets.Net during labeling, and we extend their method with additional techniques and evaluations.
+
+================================== Ai Message ==================================
+
+The two introduced datasets contain 15,917 texts in the celebrity dataset and 283,973 texts in the professor dataset. They comprise 342,645 and 976,677 sentences, respectively.

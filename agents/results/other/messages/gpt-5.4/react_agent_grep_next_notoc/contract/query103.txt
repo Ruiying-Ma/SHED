@@ -1,0 +1,20 @@
+================================ Human Message =================================
+
+HYPOTHESIS:
+Return of confidential information: Receiving Party shall destroy or return some Confidential Information upon the termination of Agreement.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_lYHWK0DnBual9dGX1zq4rtxG)
+ Call ID: call_lYHWK0DnBual9dGX1zq4rtxG
+  Args:
+    pattern: return|destroy|termination|terminate|upon.*termination|confidential information
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+6.  Return of Confidential Information.Upon the request of VIDAR or the termination or expiration of this Confidential Agreement, Receiver shall promptly return to VIDAR all copies of the Confidential Information and obtained by Receiver.
+
+================================== Ai Message ==================================
+
+Entailment

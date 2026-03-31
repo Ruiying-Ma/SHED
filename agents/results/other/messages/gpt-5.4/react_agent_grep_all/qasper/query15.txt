@@ -1,0 +1,72 @@
+================================ Human Message =================================
+
+QUERY:
+Do they outperform current NER state-of-the-art models?
+
+TABLE OF CONTENTS (TOC):
+1 | TENER: Adapting Transformer Encoder for Named Entity Recognition Hang Yan, Bocao Deng, Xiaonan Li, Xipeng Qiu ∗
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2 Related Work
+1.3.1 | 2.1 Neural Architecture for NER
+1.3.2 | 2.2 Transformer
+1.3.2.1 | 2.2.1 Transformer Encoder Architecture
+1.3.2.2 | 2.2.2 Position Embedding
+1.4 | 3 Proposed Model
+1.4.1 | 3.1 Embedding Layer
+1.4.2 | 3.2 Encoding Layer with Adapted Transformer
+1.4.2.1 | 3.2.1 Direction- and Distance-Aware Attention
+1.4.2.2 | 3.2.2 Un-scaled Dot-Product Attention
+1.4.3 | 3.3 CRF Layer
+1.5 | 4 Experiment
+1.5.1 | 4.1 Data
+1.5.2 | 4.2 Results on Chinese NER Datasets
+1.5.3 | 4.3 Results on English NER datasets
+1.5.4 | 4.4 Analysis of Different Character Encoders
+1.5.5 | 4.5 Convergent Speed Comparison
+1.6 | 5 Conclusion
+1.7 | References
+1.8 | 6 Supplemental Material
+1.8.1 | 6.1 Character Encoder
+1.8.2 | 6.2 Hyper-parameters
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_zankD29WxfNBDkieZNqq4ixI)
+ Call ID: call_zankD29WxfNBDkieZNqq4ixI
+  Args:
+    section_id: 1.5.2
+  read_section (call_eEzIDkuqgk12pYOqD6uXMjtN)
+ Call ID: call_eEzIDkuqgk12pYOqD6uXMjtN
+  Args:
+    section_id: 1.5.3
+  read_section (call_IOAzdRE4RZQQjnKRjPM31H34)
+ Call ID: call_IOAzdRE4RZQQjnKRjPM31H34
+  Args:
+    section_id: 1.1
+
+================================= Tool Message =================================
+Name: read_section
+
+4.2 Results on Chinese NER Datasets
+We first present our results in the four Chinese NER datasets. Since Chinese NER is directly based on the characters, it is more straightforward to show the abilities of different models without considering the influence of word representation.As shown in Table 2 , the vanilla Transformer does not perform well and is worse than the BiL- STM and CNN based models.  However, when relative positional encoding combined, the perfor- mance was enhanced greatly, resulting in better re- sults than the BiLSTM and CNN in all datasets. The number of training examples of the Weibo dataset is tiny, therefore the performance of the Transformer is abysmal, which is as expected since the Transformer is data-hungry.  Neverthe- less, when enhanced with the relative positional encoding and unscaled attention, it can achieve even better performance than the BiLSTM-based model. The superior performance of the adapted Transformer in four datasets ranging from small datasets to big datasets depicts that the adapted Transformer is more robust to the number of train- ing examples than the vanilla Transformer. As the last line of Table 2 depicts, the scaled attention will deteriorate the performance.
+
+================================= Tool Message =================================
+Name: read_section
+
+4.3 Results on English NER datasets
+The comparison between different NER models on English NER datasets is shown in Table 3 . The poor performance of the Transformer in the NER datasets was also reported by ( Guo et al. , 2019 ). Although performance of the Transformer is higher than ( Guo et al. , 2019 ), it still lags be- hind the BiLSTM-based models ( Ma and Hovy , 2016 ).  Nonetheless, the performance is massively enhanced by incorporating the relative positional encoding and unscaled attention into the Trans- former. The adaptation not only makes the Trans- former achieve superior performance than BiL-
+Models CoNLL2003 OntoNotes 5.0 BiLSTM-CRF ( Huang et al. , 2015 ) 88.83 CNN-BiLSTM-CRF ( Chiu and Nichols , 2016 ) 90.91 ± 0.20 86. 12 ± 0.22 BiLSTM-BiLSTM-CRF ( Lample et al. , 2016 ) 90.94 CNN-BiLSTM-CRF ( Ma and Hovy , 2016 ) 91.21 ID-CNN ( Strubell et al. , 2017 ) 90.54 ± 0.18 86.84 ± 0.19 LM-LSTM-CRF ( Liu et al.  , 2018 ) 91.24 ± 0.12 CRF+HSCRF ( Ye and Ling , 2018 ) 91.26 ± 0.1 BiLSTM-BiLSTM-CRF ( Akhundov et al. , 2018 ) 91.11 LS+BiLSTM-CRF ( Ghaddar and Langlais , 2018 ) 90.52 ± 0.20 86. 57 ± 0.1 CN 3 ( Liu et al. , 2019 ) 91.1 GRN ( Chen et al. , 2019 ) 91.44 ± 0.16 87.67 ± 0.17 Transformer 89.57 ± 0.12 86.73 ± 0.07 TENER (Ours) 91.33 ± 0.05 88.43 ± 0. 12 w/ scale 91.06 ± 0.09 87.94 ± 0.1 w/ CNN-char 91.45 ± 0.07 88.25 ± 0.11
+Table 3: The F1 scores on English NER datasets. We only list results based on non-contextualized embed- dings, and methods utilized pre-trained language mod- els, pre-trained features, or higher dimension word vec- tors are excluded.  TENER (Ours) uses the Trans- former encoder both in the character-level and word- level. “w/ scale” means TENER using the scaled atten- tion in Eq.( 19 ). “w/ CNN-char” means TENER using CNN as character encoder instead of AdaTrans. STM based models, but also unveil the new state- of-the-art performance in two NER datasets when only the Glove 100d embedding and CNN char- acter embedding are used. The same deteriora- tion of performance was observed when using the scaled attention. Besides, if ELMo was used ( Pe- ters et al. , 2018 ), the performance of TENER can be further boosted as depicted in Table 4 . Models CoNLL2003 OntoNotes 5.0 BiLSTM 92.55 ± 0.10 88.88 ± 0.16 GRN ( Chen et al. , 2019 ) 92.34 ± 0.1 - TENER (Ours) 92.62 ± 0.09 89.78 ± 0.15
+ Table 4: Performance of models with ELMo as their embeddings in English NER datasets. “BiLSTM” is our run. In the larger OntoNotes5.0, TENER achieves much better F1 score.Char Word BiLSTM ID-CNN AdaTrans No Char 88.34 ± 0.32 87.30 ± 0.15 88.37 ± 0.27 BiLSTM 91.32 ± 0. 13 89.99 ± 0.14 91.29 ± 0.12 CNN 91.22 ± 0.10 90.17 ± 0.02 91.45 ± 0.07 Transformer 91.12 ± 0.10 90.05 ± 0.13 91.23 ± 0.06 AdaTrans 91.38 ± 0.15 89.99 ± 0.05 91. 33 ± 0.05 (a) CoNLL2003 Char Word BiLSTM ID-CNN AdaTrans No Char 85.20 ± 0.23 84.26 ± 0.07 85.80 ± 0.10 BiLSTM 87.85 ± 0.09 87.38 ± 0.17 88.12 ± 0.16 CNN 87.79 ± 0.14 87. 10 ± 0.06 88.25 ± 0.11 Transformer 88.01 ± 0.06 87.31 ± 0.10 88.20 ± 0.07 AdaTrans 88.12 ± 0.17 87.51 ± 0.11 88.43 ± 0.12 (b) OntoNotes 5.0
+ Table 5: F1 scores in the CoNLL2003 and OntoNotes 5.0. “Char” means character-level encoder, and “Word” means word-level encoder. “AdaTrans” means our adapted Transformer encoder.
+
+================================= Tool Message =================================
+Name: read_section
+
+Abstract
+Bidirectional long short-term memory net- works (BiLSTMs) have been widely used as an encoder for named entity recognition (NER) task. Recently, the fully-connected self-attention architecture (aka Transformer) is broadly adopted in various natural language processing (NLP) tasks owing to its paral- lelism and advantage in modeling the long- range context. Nevertheless, the performance of the vanilla Transformer in NER is not as good as it is in other NLP tasks.  In this paper, we propose TENER, a NER architec- ture adopting adapted Transformer Encoder to model the character-level features and word- level features. By incorporating the direction- aware, distance-aware and un-scaled atten- tion, we prove the Transformer-like encoder is just as effective for NER as other NLP tasks. Experiments on six NER datasets show that TENER achieves superior performance than the prevailing BiLSTM-based models.
+
+================================== Ai Message ==================================
+
+Yes. The paper states that TENER achieves superior performance over prevailing BiLSTM-based models, and on English datasets it “unveil[s] the new state-of-the-art performance” on two NER datasets under the stated embedding setting.

@@ -1,0 +1,56 @@
+================================ Human Message =================================
+
+HYPOTHESIS:
+Sharing with employees: Receiving Party may share some Confidential Information with some of Receiving Party's employees.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_WxnOEhISs0YgoNr7wR5Ybgit)
+ Call ID: call_WxnOEhISs0YgoNr7wR5Ybgit
+  Args:
+    pattern: employees
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_1bUx2IepEzCTYRe5ZeXzb14Q)
+ Call ID: call_1bUx2IepEzCTYRe5ZeXzb14Q
+  Args:
+    pattern: Receiving Party may share
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_LyAxGGBPOq25VA4yfOFThph3)
+ Call ID: call_LyAxGGBPOq25VA4yfOFThph3
+  Args:
+    pattern: Receiving Party
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_zDc6lwIJcFBzKfMZvJ1pRxEo)
+ Call ID: call_zDc6lwIJcFBzKfMZvJ1pRxEo
+  Args:
+    pattern: employee
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+4.  Additional Receivers.  An employee, director, officer, manager, member,partner, affiliate, associate, agent, attorney, accountant, consultant, banker, business adviser, financial adviser, scientific adviser or technical adviser of Receiver may become a party to this Agreement by signing a counterpart hereof, a copy of which shall be provided to VIDAR within five days of signature.
+
+================================== Ai Message ==================================
+
+Entailment

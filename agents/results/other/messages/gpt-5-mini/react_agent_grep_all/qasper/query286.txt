@@ -1,0 +1,91 @@
+================================ Human Message =================================
+
+QUERY:
+Were the Wikipedia edits that removed framings, presuppositions and attitudes from biased sentences a Wiki community effort, or were annotators trained to do it?
+
+TABLE OF CONTENTS (TOC):
+1 | Automatically Neutralizing Subjective Bias in Text Reid Pryzant, 1 Richard Diehl Martinez, 1 Nathan Dass, 1 Sadao Kurohashi, 2 Dan Jurafsky, 1 Diyi Yang 3
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2 Wiki Neutrality Corpus (WNC)
+1.3.1 | 2.1 Dataset Properties
+1.4 | 3 Methods for Neutralizing Text
+1.4.1 | • t = [ w t 1 , ..., w t m ] is a target sequence and the neutralized version of s .
+1.4.2 | 3.1 MODULAR
+1.4.3 | 3.2 CONCURRENT
+1.5 | 4 Experiments
+1.5.1 | 4.1 Experimental Protocol
+1.5.2 | 4.2 Wikipedia (WNC)
+1.5.3 | 4.3 Real-world Media
+1.6 | 5 Error Analysis
+1.7 | 6 Algorithmic Analysis
+1.7.1 | 6.1 Detecting Subjectivity
+1.7.2 | 6.2 Join Embedding
+1.8 | 7 Related Work
+1.9 | 8 Conclusion and Future Work
+1.10 | 9 Acknowledgements
+1.11 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_all (call_SMHdrPoDFsu51XQUXl0OBlf4)
+ Call ID: call_SMHdrPoDFsu51XQUXl0OBlf4
+  Args:
+    pattern: annotator|annotators|Wikipedia edits|Wiki community|community effort|editors|framing|presupposition|attitude|removed framings|removed presuppositions|removed attitudes|edits that removed|removed framing|removed presupposition
+
+================================= Tool Message =================================
+Name: grep_search_all
+
+1.1 | Abstract
+Texts like news, encyclopedias, and some social media strive for objectivity. Yet bias in the form of inappropriate subjectiv- ity — introducing attitudes via framing, presupposing truth, and casting doubt — remains ubiquitous. This kind of bias erodes our collective trust and fuels social conflict. To address this issue, we introduce a novel testbed for natural language generation: automatically bringing inappropriately subjective text into a neutral point of view (“neutralizing” biased text).  We also offer the first parallel corpus of biased language. The corpus contains 180,000 sentence pairs and originates from Wikipedia edits that removed various framings, presupposi- tions, and attitudes from biased sentences. Last, we propose two strong encoder-decoder baselines for the task. A straight- forward yet opaque CONCURRENT system uses a BERT en- coder to identify subjective words as part of the generation process.  An interpretable and controllable MODULAR algo- rithm separates these steps, using (1) a BERT-based classifier to identify problematic words and (2) a novel join embed- ding through which the classifier can edit the hidden states of the encoder. Large-scale human evaluation across four do- mains (encyclopedias, news headlines, books, and political speeches) suggests that these algorithms are a first step to- wards the automatic identification and reduction of bias.
+
+1.11 | References
+[Asthana and Halfaker 2018] Asthana, S., and Halfaker,A. 2018. With few eyes, all hoaxes are deep. Proceedings of the ACM on Human-Computer Interaction 2(CSCW):21.
+[Bengio et al. 2007] Bengio, Y.; Lamblin,P.; Popovici, D.; and Larochelle, H. 2007. Greedy layer-wise training of deep networks. In Advances in neural information processing sys- tems , 153–160.
+[Bolukbasi et al. 2016] Bolukbasi, T.;Chang, K.-W.; Zou, J. Y.; Saligrama, V.; and Kalai, A. T. 2016. Man is to com- puter programmer as woman is to homemaker? debiasing word embeddings. In Advances in neural information pro- cessing systems , 4349–4357.
+[Bordia and Bowman 2019] Bordia, S., and Bowman, S., and Bowman, S. R. 2019. Identifying and reducing gender bias in word-level language models. In NAACL 2019 Student Research Work- shop .
+[Bruce and Wiebe 1999] Bruce, R. F.,R. F., and Wiebe, J. M. 1999. Recognizing subjectivity: a case study in manual tag- ging. Natural Language Engineering 5(2):187–205.
+[Callison-Burch 2009] Callison-Burch, C.2009. Fast, cheap, and creative: Evaluating translation quality using amazon’s mechanical turk. In Proceedings of EMNLP , 286–295.
+[Chaganty, Mussman,and Liang 2018] Chaganty, A. T.; Mussman, S.; and Liang, P. 2018. The price of debiasing automatic metrics in natural language evaluation. In Proceedings of ACL .
+[Das, Dantcheva, and Bremond 2018] Das, A.;Dantcheva, A.; and Bremond, F. 2018. Mitigating bias in gender, age and ethnicity classification: a multi-task convolution neural network approach. In Proceedings of the European Confer- ence on Computer Vision (ECCV) , 0–0.
+[Devlin et al. 2019] Devlin, J.; Chang, M.-W.; Lee, K.; and Toutanova, K. 2019. Bert: Pre-training of deep bidirectional transformers for language understanding.
+[Dun, Zhu, and Zhao 2019] Dun, P.; Zhu, L.;Zhu, L.; and Zhao, D. 2019. Extending answer prediction for deep bi-directional transformers. 32nd Conference on Neural Information Pro- cessing Systems (NIPS) .
+[Efron and Tibshirani 1994] Efron, B.,B., and Tibshirani, R. J. 1994. An introduction to the bootstrap . CRC press.
+[Ethayarajh, Duvenaud,and Hirst 2019] Ethayarajh, K.; Du- venaud, D.; and Hirst, G. 2019. Understanding undesirable word embedding associations. Proceedings of the Associa- tion for Computational Linguistics (ACL) .
+[Faruqui et al. 2018] Faruqui, M.; Pavlick,E.; Tenney, I.; and Das, D. 2018. Wikiatomicedits: A multilingual corpus of wikipedia edits for modeling language and discourse. Pro- ceedings of the 2018 Conference on Empirical Methods in Natural Language Processing .
+[Foundation 2018] Foundation, O. S. 2018.Indicators of news media trust. https://kf-site-production.s3.amazonaws. com/media elements/files/000/000/216/original/
+KnightFoundation Panel4 Trust Indicators FINAL.pdf.
+[Gallup 2018] Gallup. 2018. Americans: Much misinformation,bias, inaccuracy in news. https:
+//news.gallup.com/opinion/gallup/235796/ \ americans- misinformation-bias- \ inaccuracy-news.aspx.
+[Gonen and Goldberg 2019] Gonen, H., and Goldberg, Y.2019. Lipstick on a pig: Debiasing methods cover up sys- tematic gender biases in word embeddings but do not re- move them. North American Chapter of the Association for Computational Linguistics (NAACL) .
+[Guu et al. 2018] Guu, K.; Hashimoto,T. B.; Oren, Y.; and Liang, P. 2018. Generating sentences by editing prototypes. Transactions of the Association of Computational Linguis- tics 6:437–450.
+[Gwet 2011] Gwet, K. L. 2011.On the krippendorffs alpha coefficient. Manuscript submitted for publication. Retrieved October 2(2011):2011.
+[Hatzivassiloglou and Wiebe 2000] Hatzivassiloglou,V., and Wiebe, J. M. 2000. Effects of adjective orientation and gradability on sentence subjectivity. In Proceedings of COLING 2000 , 299–305.
+[Hill, Cho, and Korhonen 2016] Hill, F.; Cho,and Korhonen 2016] Hill, F.; Cho, K.; and Ko- rhonen, A. 2016. Learning distributed representa- tions of sentences from unlabelled data. arXiv preprint arXiv:1602.03483 .
+[Hochreiter and Schmidhuber 1997] Hochreiter, S.,S., and Schmidhuber, J. 1997. Long short-term memory. Neural computation 9(8):1735–1780.
+[Hube and Fetahu 2018] Hube, C., and Fetahu,B. 2018. De- tecting biased statements in wikipedia. In The Web Confer- ence , 1779–1786. International World Wide Web Confer- ences Steering Committee.
+[Hube and Fetahu 2019] Hube, C., and Fetahu,B. 2019. Neural based statement classification for biased language. In Proceedings of the Twelfth ACM International Confer- ence on Web Search and Data Mining , 195–203. ACM.
+[Iyyer et al. 2014] Iyyer, M.; Enns,P.; Boyd-Graber, J.; and Resnik, P. 2014. Political ideology detection using recursive neural networks. In Proceedings of ACL , 1113–1122.
+[Junczys-Dowmunt et al.2018] Junczys-Dowmunt, M.; Grundkiewicz, R.; Guha, S.; and Heafield, K. 2018. Approaching neural grammatical error correction as a low-resource machine translation task. In Proceedings of NAACL .
+[Kingma and Ba 2014] Kingma, D. P., and Ba,J. 2014. Adam: A method for stochastic optimization. International Conference for Learning Representations (ICLR) .
+[Koehn 2004] Koehn, P. 2004.Statistical significance tests for machine translation evaluation. In Conference on Empir- ical Methods in Natural Language Processing .
+[Lample et al. 2018] Lample, G.; Ott, M.;Ott, M.; Conneau, A.; De- noyer, L.; and Ranzato, M. 2018. Phrase-based & neural unsupervised machine translation.
+[Leeftink and Spanakis 2019] Leeftink, W.,W., and Spanakis, G. 2019. Towards controlled transformation of sentiment in sentences. International Conference on Agents and Artifi- cial Intelligence (ICAART) .[Li et al. 2018] Li, J.; Jia, R.; He, H.; and Liang, P. 2018.Delete, retrieve, generate: A simple approach to sentiment and style transfer. In Proceedings of NAACL .
+[Luong, Pham, and Manning 2015] Luong, M.-T.; Pham, H.; and Manning, C. D. 2015. Effective approaches to attention-based neural machine translation. In Proceedings of EMNLP .
+[Manzini et al. 2019] Manzini, T.; Lim,Y. C.; Tsvetkov, Y.; and Black, A. W. 2019. Black is to criminal as caucasian is to police: Detecting and removing multiclass bias in word embeddings. In NAACL 2019 .
+[Marneffe, Manning, and Potts 2012] Marneffe,M.-C. d.; Manning, C. D.; and Potts, C. 2012. Did it happen? the pragmatic complexity of veridicality assessment. Computa- tional Linguistics 38(2):301–333.
+[Mihaylova et al. 2018] Mihaylova,T.; Nakov, P.; Marquez, L.; Barron-Cedeno, A.; Mohtarami, M.; Karadzhov, G.; and Glass, J. 2018. Fact checking in community forums. In Thirty-Second AAAI Conference on Artificial Intelligence .
+[Mir et al. 2019] Mir, R.; Felbo, B.;Felbo, B.; Obradovich, N.; and Rahwan, I. 2019. Evaluating style transfer for text. In Pro- ceedings of NAACL .
+[Morstatter et al. 2018] Morstatter, F.; Wu,L.; Yavanoglu, U.; Corman, S. R.; and Liu, H. 2018. Identifying framing bias in online news. ACM Transactions on Social Comput- ing 1(2):5.
+[Papineni et al. 2002] Papineni, K.;Roukos, S.; Ward, T.; and Zhu, W.-J. 2002. Bleu: a method for automatic eval- uation of machine translation. In Proceedings of ACL , 311– 318.
+[Paszke et al. 2017] Paszke, A.; Gross,S.; Chintala, S.; Chanan, G.; Yang, E.; DeVito, Z.; Lin, Z.; Desmaison, A.; Antiga, L.; and Lerer, A. 2017. Automatic differentiation in pytorch.
+[Prabhumoye et al. 2018] Prabhumoye,S.; Tsvetkov, Y.; Salakhutdinov, R.; and Black, A. W. 2018. Style trans- fer through back-translation. Association for Computational Linguistics (ACL) .
+[Pryzant et al. 2017] Pryzant, R.; Chung,Y.; Jurafsky, D.; and Britz, D. 2017. Jesc: Japanese-english subtitle cor- pus. 11th edition of the Language Resources and Evaluation Conference (LREC) .
+[Rashkin et al. 2017] Rashkin, H.; Choi, E.;Choi, E.; Jang, J. Y.; Volkova, S.; and Choi, Y. 2017. Truth of varying shades: An- alyzing language in fake news and political fact-checking. In Proceedings of EMNLP , 2931–2937.
+[Recasens, Danescu-Niculescu-Mizil,and Jurafsky 2013] Recasens, M.; Danescu-Niculescu-Mizil, C.; and Jurafsky, D. 2013. Linguistic models for analyzing and detecting biased language. In Proceedings of ACL , 1650–1659.
+[Rudinger, White, and Van Durme 2018] Rudinger, R.;White, A. S.; and Van Durme, B. 2018. Neural models of factuality. In Proceedings of the 2018 Conference of the North American Chapter of the Association for Computa- tional Linguistics: Human Language Technologies, Volume 1 (Long Papers) , 731–744.
+[Saur´ı and Pustejovsky 2009] Saur´ı,R., and Pustejovsky, J. 2009. F...(truncated)
+
+================================== Ai Message ==================================
+
+They came from Wikipedia community edits: the WNC corpus was harvested from Wikipedia edits by Wikipedia editors (the paper even analyzes editor tenure), not from trained annotators.

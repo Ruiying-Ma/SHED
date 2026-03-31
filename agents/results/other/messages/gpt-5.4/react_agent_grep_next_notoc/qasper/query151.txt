@@ -1,0 +1,60 @@
+================================ Human Message =================================
+
+QUERY:
+What is the size of the corpus?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_jvxoKIZJI7EQow7MOyYINdTr)
+ Call ID: call_jvxoKIZJI7EQow7MOyYINdTr
+  Args:
+    pattern: corpus|dataset|data set
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Adpositions are frequent markers of semantic relations, but they are highly ambiguous and vary significantly from language to language. Moreover, there is a dearth of annotated corpora for investigating the cross-linguistic variation of adposition semantics, or for building multilingual disambiguation systems. This paper presents a corpus in which all adpositions have been semantically annotated in Mandarin Chinese; to the best of our knowledge, this is the first Chinese corpus to be broadly annotated with adposition semantics.  Our approach adapts a framework that defined a general set of supersenses according to ostensibly language-independent semantic criteria, though its development focused primarily on English prepositions (Schneider et al., 2018). We find that the supersense categories are well-suited to Chinese adpositions despite syntactic differences from English. On a Mandarin translation of The Little Prince , we achieve high inter-annotator agreement and analyze semantic correspondences of adposition tokens in bitext. Keywords: adpositions, supersenses, Mandarin Chinese, corpus, annotation
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_M4BIeddqj21ONRHWDHVFZAxY)
+ Call ID: call_M4BIeddqj21ONRHWDHVFZAxY
+  Args:
+    pattern: The Little Prince|tokens|annotated
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Adpositions are frequent markers of semantic relations, but they are highly ambiguous and vary significantly from language to language. Moreover, there is a dearth of annotated corpora for investigating the cross-linguistic variation of adposition semantics, or for building multilingual disambiguation systems. This paper presents a corpus in which all adpositions have been semantically annotated in Mandarin Chinese; to the best of our knowledge, this is the first Chinese corpus to be broadly annotated with adposition semantics.  Our approach adapts a framework that defined a general set of supersenses according to ostensibly language-independent semantic criteria, though its development focused primarily on English prepositions (Schneider et al., 2018). We find that the supersense categories are well-suited to Chinese adpositions despite syntactic differences from English. On a Mandarin translation of The Little Prince , we achieve high inter-annotator agreement and analyze semantic correspondences of adposition tokens in bitext. Keywords: adpositions, supersenses, Mandarin Chinese, corpus, annotation
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_6Ndmk6J30A8GlNYmLyFG8C5Z)
+ Call ID: call_6Ndmk6J30A8GlNYmLyFG8C5Z
+  Args:
+    pattern: size|corpus consists|contains|total of|sentences|words|tokens
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Adpositions are frequent markers of semantic relations, but they are highly ambiguous and vary significantly from language to language. Moreover, there is a dearth of annotated corpora for investigating the cross-linguistic variation of adposition semantics, or for building multilingual disambiguation systems. This paper presents a corpus in which all adpositions have been semantically annotated in Mandarin Chinese; to the best of our knowledge, this is the first Chinese corpus to be broadly annotated with adposition semantics.  Our approach adapts a framework that defined a general set of supersenses according to ostensibly language-independent semantic criteria, though its development focused primarily on English prepositions (Schneider et al., 2018). We find that the supersense categories are well-suited to Chinese adpositions despite syntactic differences from English. On a Mandarin translation of The Little Prince , we achieve high inter-annotator agreement and analyze semantic correspondences of adposition tokens in bitext. Keywords: adpositions, supersenses, Mandarin Chinese, corpus, annotation
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_1M5i5XmSY1wyjLx1CScIfbID)
+ Call ID: call_1M5i5XmSY1wyjLx1CScIfbID
+  Args:
+    pattern: Little Prince
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Adpositions are frequent markers of semantic relations, but they are highly ambiguous and vary significantly from language to language. Moreover, there is a dearth of annotated corpora for investigating the cross-linguistic variation of adposition semantics, or for building multilingual disambiguation systems. This paper presents a corpus in which all adpositions have been semantically annotated in Mandarin Chinese; to the best of our knowledge, this is the first Chinese corpus to be broadly annotated with adposition semantics.  Our approach adapts a framework that defined a general set of supersenses according to ostensibly language-independent semantic criteria, though its development focused primarily on English prepositions (Schneider et al., 2018). We find that the supersense categories are well-suited to Chinese adpositions despite syntactic differences from English. On a Mandarin translation of The Little Prince , we achieve high inter-annotator agreement and analyze semantic correspondences of adposition tokens in bitext. Keywords: adpositions, supersenses, Mandarin Chinese, corpus, annotation
+
+================================== Ai Message ==================================
+
+Unanswerable

@@ -1,0 +1,207 @@
+================================ Human Message =================================
+
+QUERY:
+What is the FY2019 fixed asset turnover ratio for Activision Blizzard? Fixed asset turnover ratio is defined as: FY2019 revenue / (average PP&E between FY2018 and FY2019). Round your answer to two decimal places. Base your judgments on the information provided primarily in the statement of income and the statement of financial position.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_3A28LYszJKBOWIeYSaHpijbp)
+ Call ID: call_3A28LYszJKBOWIeYSaHpijbp
+  Args:
+    pattern: (?i)property, plant|PP&E|equipment|fixed assets|statement of financial position|balance sheets|income statements|net revenues|revenue
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+CAUTIONARY STATEMENT
+This Annual Report on Form 10-K contains, or incorporates by reference, certain forward-looking statements within the meaning of the Private Securities Litigation Reform Act of 1995.  Such statements consist of any statement other than a recitation of historical facts and include, but are not limited to: (1) projections of revenues, expenses, income or loss, earnings or loss per share, cash flow, or other financial items; (2) statements of our plans and objectives, including those related to releases of products or services and restructuring activities; (3) statements of future financial or operating performance, including the impact of tax items thereon; and (4) statements of assumptions underlying such statements.  Activision Blizzard, Inc.  generally uses words such as “outlook,” “forecast,” “will,” “could,” “should,” “would,” “to be,” “plan,” “plans,” “believes,” “may,” “might,” “expects,” “intends,” “intends as,” “anticipates,” “estimate,” “future,” “positioned,” “potential,” “project,” “remain,” “scheduled,” “set to,” “subject to,” “upcoming,” and other similar expressions to help identify forward-looking statements.  Forward-looking statements are subject to business and economic risks, reflect management’s current expectations, estimates, and projections about our business, and are inherently uncertain and difficult to predict.The company cautions that a number of important factors could cause Activision Blizzard, Inc.’s actual future results and other future circumstances to differ materially from those expressed in any forward-looking statements.  Some of the risk factors that could cause our actual results to differ from those stated in forward- looking statements can be found in “Risk Factors” included in Part I, Item 1A of this Annual Report on Form 10-K. The forward-looking statements contained herein are based upon information available to us as of the date of this Annual Report on Form 10-K and we assume no obligation to update any such forward-looking statements.  Although these forward-looking statements are believed to be true when made, they may ultimately prove to be incorrect. These statements are not guarantees of our future performance and are subject to risks, uncertainties, and other factors, some of which are beyond our control and may cause actual results to differ materially from current expectations.Activision Blizzard Inc.’s names, abbreviations thereof, logos, and product and service designators are all either the registered or unregistered trademarks or trade names of Activision Blizzard.  All other product or service names are the property of their respective owners. All dollar amounts referred to in, or contemplated by, this Annual Report on Form 10-K refer to U.S. dollars, unless otherwise explicitly stated to the contrary.3
+Table of Contents
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_GzjdqUzkTY64KXAM3vd3inUS)
+ Call ID: call_GzjdqUzkTY64KXAM3vd3inUS
+  Args:
+    pattern: (?i)consolidated balance sheets|consolidated statements of income|property and equipment|property, plant and equipment|net revenues
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Customers
+While the Company does sell directly to end consumers in certain instances, such as sales through Blizzard Battle.net, in other instances our customers may be platform providers, such as Sony, Microsoft, Google, and Apple, or retailers, such as Walmart and GameStop, who act as distributors of our content to end consumers.  For the years ended December 31, 2019, 2018, and 2017, Apple, Google, and Sony have been our most significant customers with revenues of 17%, 13%, and 11%, respectively, for 2019, 15%, 11%, and 13%, respectively, for 2018, and 16%, 10%, and 14%, respectively, for 2017.  No other customer accounted for 10% or more of our net revenues in the periods discussed above.We had two customers—Sony and Microsoft—who accounted for 18% and 11%, respectively, of consolidated gross receivables at December 31, 2019. We had two customers—Sony and NetEase, Inc.—who accounted for 15% and 12%, respectively, of consolidated gross receivables at December 31, 2018.  No other customer accounted for 10% or more of our consolidated gross receivables in the periods discussed above.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_mTlH29FObyJPbUnXPmEf63r3)
+ Call ID: call_mTlH29FObyJPbUnXPmEf63r3
+  Args:
+    pattern: (?i)consolidated balance sheets
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Unsecured Senior Notes
+At December 31, 2019 and December 31, 2018, we had the following unsecured senior notes outstanding:
+• $650 million of 2.3% unsecured senior notes due September 2021 (the “2021 Notes”);
+• $400 million of 2.6% unsecured senior notes due June 2022 (the “2022 Notes”);
+• $850 million of 3. 4% unsecured senior notes due September 2026 (the “2026 Notes”);
+• $400 million of 3.4% unsecured senior notes due June 2027 (the “2027 Notes”); and
+• $400 million of 4. 5% unsecured senior notes due June 2047 (the “2047 Notes”, and together with the 2021 Notes, the 2022 Notes, the 2026 Notes, and the 2027 Notes, the “Notes”).The Notes are general senior obligations of the Company and rank pari passu in right of payment to all of the Company’s existing and future senior indebtedness, including the Revolver described above.  The Notes are not secured and are effectively junior to any of the Company’s existing and future indebtedness that is secured to the extent of the value of the collateral securing such indebtedness. The Notes contain customary covenants that place restrictions in certain circumstances on, among other things, the incurrence of secured debt, entry into sale or leaseback transactions, and certain merger or consolidation transactions. We were in compliance with the terms of the Notes as of December 31, 2019. Interest is payable semi-annually in arrears on March 15 and September 15 of each year for the 2021 Notes and the 2026 Notes, and payable semi-annually in arrears on June 15 and December 15 of each year for the 2022 Notes, the 2027 Notes, and the 2047 Notes. Accrued interest payable is recorded within “Accrued expenses and other liabilities” in our consolidated balance sheets.  As of both December 31, 2019 and December 31, 2018, we had accrued interest payable of $15 million related to the Notes.F-32
+Table of Contents
+ACTIVISION BLIZZARD, INC. AND SUBSIDIARIES
+Notes to Consolidated Financial Statements (continued)
+ We may redeem some or all of the 2021 Notes, the 2022 Notes, the 2026 Notes, the 2027 Notes, and the 2047 Notes prior to August 15, 2021, May 15, 2022, June 15, 2026, March 15, 2027, and December 15, 2046, respectively, and in each case at a price equal to 100% of the aggregate principal amount thereof plus a “make-whole” premium and accrued and unpaid interest.  Any redemption of all or a portion of the applicable class of note after the applicable date would be at 100% of aggregate principal amount plus accrued and unpaid interest.Upon the occurrence of certain change of control events, we will be required to offer to repurchase the Notes at a purchase price equal to 101% of the principal amount thereof, plus accrued and unpaid interest. These repurchase requirements are considered clearly and closely related to the Notes and are not accounted for separately upon issuance.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_6Crt7yMPw86sovSu5kYI12d4)
+ Call ID: call_6Crt7yMPw86sovSu5kYI12d4
+  Args:
+    pattern: (?i)net revenues
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Customers
+While the Company does sell directly to end consumers in certain instances, such as sales through Blizzard Battle.net, in other instances our customers may be platform providers, such as Sony, Microsoft, Google, and Apple, or retailers, such as Walmart and GameStop, who act as distributors of our content to end consumers.  For the years ended December 31, 2019, 2018, and 2017, Apple, Google, and Sony have been our most significant customers with revenues of 17%, 13%, and 11%, respectively, for 2019, 15%, 11%, and 13%, respectively, for 2018, and 16%, 10%, and 14%, respectively, for 2017.  No other customer accounted for 10% or more of our net revenues in the periods discussed above.We had two customers—Sony and Microsoft—who accounted for 18% and 11%, respectively, of consolidated gross receivables at December 31, 2019. We had two customers—Sony and NetEase, Inc.—who accounted for 15% and 12%, respectively, of consolidated gross receivables at December 31, 2018.  No other customer accounted for 10% or more of our consolidated gross receivables in the periods discussed above.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_338dFC8NAenxFBAwmy4aPnOT)
+ Call ID: call_338dFC8NAenxFBAwmy4aPnOT
+  Args:
+    pattern: (?i)revenues.*2019|2019.*revenues|net revenues.*2019|statement[s]? of operations|statement[s]? of income
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Customers
+While the Company does sell directly to end consumers in certain instances, such as sales through Blizzard Battle.net, in other instances our customers may be platform providers, such as Sony, Microsoft, Google, and Apple, or retailers, such as Walmart and GameStop, who act as distributors of our content to end consumers.  For the years ended December 31, 2019, 2018, and 2017, Apple, Google, and Sony have been our most significant customers with revenues of 17%, 13%, and 11%, respectively, for 2019, 15%, 11%, and 13%, respectively, for 2018, and 16%, 10%, and 14%, respectively, for 2017.  No other customer accounted for 10% or more of our net revenues in the periods discussed above.We had two customers—Sony and Microsoft—who accounted for 18% and 11%, respectively, of consolidated gross receivables at December 31, 2019. We had two customers—Sony and NetEase, Inc.—who accounted for 15% and 12%, respectively, of consolidated gross receivables at December 31, 2018.  No other customer accounted for 10% or more of our consolidated gross receivables in the periods discussed above.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_8a7TuVpgF95unwHGWCefZIlf)
+ Call ID: call_8a7TuVpgF95unwHGWCefZIlf
+  Args:
+    pattern: (?i)property and equipment.*2019|2019.*property and equipment|property and equipment, net|net property and equipment
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Leases
+In February 2016, the FASB issued new guidance related to the accounting for leases. The new standard replaced all current U.S. GAAP guidance on this topic. The new standard, among other things, requires a lessee to classify a lease as either an operating or financing lease, and to recognize a lease liability and a right-of-use (“ROU”) asset for its leases. On January 1, 2019, we adopted the new lease accounting standard.  This is reflected in our significant accounting policy disclosure for leases below. Refer to Note 3 for information about the impact of adoption on our consolidated financial statements.F-14
+Table of Contents
+ACTIVISION BLIZZARD, INC. AND SUBSIDIARIES
+Notes to Consolidated Financial Statements (continued)
+We determine if an arrangement is or contains a lease at contract inception.  In certain of our lease arrangements, primarily those related to our data center arrangements, judgment is required in determining if a contract contains a lease. For these arrangements, there is judgment in evaluating if the arrangement provides us with an asset that is physically distinct, or that represents substantially all of the capacity of the asset, and if we have the right to direct the use of the asset. Lease assets and liabilities are recognized based on the present value of future lease payments over the lease term at the commencement date.  Included in the lease liability are future lease payments that are fixed, in-substance fixed, or are payments based on an index or rate known at the commencement date of the lease. Variable lease payments are recognized as lease expenses as incurred, and generally relate to variable payments made based on the level of services provided by the landlords of our leases. The operating lease ROU asset also includes any lease payments made prior to commencement, initial direct costs incurred, and lease incentives received.  As most of our leases do not provide an implicit rate, we generally use our incremental borrowing rate in determining the present value of future payments. The incremental borrowing rate represents the rate required to borrow funds over a similar term to purchase the leased asset, and is based on the information available at the commencement date of the lease. For leased assets with similar lease terms and asset type we applied a portfolio approach in determining a single incremental borrowing rate to apply to the leased assets. In determining our lease liability, the lease term includes options to extend or terminate the lease when it is reasonably certain that we will exercise such option. For operating leases, the lease expense for minimum lease payments is recognized on a straight-line basis over the lease term. Finance lease assets are depreciated on a straight-line basis over the estimated life of the asset, not to exceed the length of the lease, with interest expense associated with finance lease liabilities recorded using the effective interest method.  Leases with an initial term of 12 months or less are not recorded on the balance sheet, and we recognize lease expense for these leases on a straight-line basis over the lease term.We have lease agreements with lease and non-lease components. For our real estate, server and data center, and event production and broadcasting equipment leases, we elected the practical expedient to account for the lease and non-lease components as a single lease component.  In all other lease arrangements, we account for lease and non-lease components separately. Additionally, for certain leases that have a group of leased assets with similar characteristics in size and composition, we may apply a portfolio approach to effectively account for the operating lease ROU assets and liabilities.Operating lease ROU assets are presented in “Other assets” and operating lease liabilities are presented in “Accrued expenses and other current liabilities” and “Other liabilities” on our consolidated balance sheet. Finance lease ROU assets are presented in “Property and equipment, net” and finance lease liabilities are presented in “Accrued expenses and other current liabilities” and “Other liabilities” on our consolidated balance sheet.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_cTPJE5AzxkGz4ctAA3ZPMhDV)
+ Call ID: call_cTPJE5AzxkGz4ctAA3ZPMhDV
+  Args:
+    pattern: (?i)property and equipment, net
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Leases
+In February 2016, the FASB issued new guidance related to the accounting for leases. The new standard replaced all current U.S. GAAP guidance on this topic. The new standard, among other things, requires a lessee to classify a lease as either an operating or financing lease, and to recognize a lease liability and a right-of-use (“ROU”) asset for its leases. On January 1, 2019, we adopted the new lease accounting standard.  This is reflected in our significant accounting policy disclosure for leases below. Refer to Note 3 for information about the impact of adoption on our consolidated financial statements.F-14
+Table of Contents
+ACTIVISION BLIZZARD, INC. AND SUBSIDIARIES
+Notes to Consolidated Financial Statements (continued)
+We determine if an arrangement is or contains a lease at contract inception.  In certain of our lease arrangements, primarily those related to our data center arrangements, judgment is required in determining if a contract contains a lease. For these arrangements, there is judgment in evaluating if the arrangement provides us with an asset that is physically distinct, or that represents substantially all of the capacity of the asset, and if we have the right to direct the use of the asset. Lease assets and liabilities are recognized based on the present value of future lease payments over the lease term at the commencement date.  Included in the lease liability are future lease payments that are fixed, in-substance fixed, or are payments based on an index or rate known at the commencement date of the lease. Variable lease payments are recognized as lease expenses as incurred, and generally relate to variable payments made based on the level of services provided by the landlords of our leases. The operating lease ROU asset also includes any lease payments made prior to commencement, initial direct costs incurred, and lease incentives received.  As most of our leases do not provide an implicit rate, we generally use our incremental borrowing rate in determining the present value of future payments. The incremental borrowing rate represents the rate required to borrow funds over a similar term to purchase the leased asset, and is based on the information available at the commencement date of the lease. For leased assets with similar lease terms and asset type we applied a portfolio approach in determining a single incremental borrowing rate to apply to the leased assets. In determining our lease liability, the lease term includes options to extend or terminate the lease when it is reasonably certain that we will exercise such option. For operating leases, the lease expense for minimum lease payments is recognized on a straight-line basis over the lease term. Finance lease assets are depreciated on a straight-line basis over the estimated life of the asset, not to exceed the length of the lease, with interest expense associated with finance lease liabilities recorded using the effective interest method.  Leases with an initial term of 12 months or less are not recorded on the balance sheet, and we recognize lease expense for these leases on a straight-line basis over the lease term.We have lease agreements with lease and non-lease components. For our real estate, server and data center, and event production and broadcasting equipment leases, we elected the practical expedient to account for the lease and non-lease components as a single lease component.  In all other lease arrangements, we account for lease and non-lease components separately. Additionally, for certain leases that have a group of leased assets with similar characteristics in size and composition, we may apply a portfolio approach to effectively account for the operating lease ROU assets and liabilities.Operating lease ROU assets are presented in “Other assets” and operating lease liabilities are presented in “Accrued expenses and other current liabilities” and “Other liabilities” on our consolidated balance sheet. Finance lease ROU assets are presented in “Property and equipment, net” and finance lease liabilities are presented in “Accrued expenses and other current liabilities” and “Other liabilities” on our consolidated balance sheet.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_Qob8C1ZDBckkycKHzRrEc3kT)
+ Call ID: call_Qob8C1ZDBckkycKHzRrEc3kT
+  Args:
+    pattern: (?i)Table of Contents\s+ACTIVISION BLIZZARD, INC\. AND SUBSIDIARIES\s+Consolidated Balance Sheets|Consolidated Balance Sheets.*Cash
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Financial Instruments
+The carrying amounts of “Cash and cash equivalents,” “Accounts receivable, net of allowances,” “Accounts payable,” and “Accrued expenses and other liabilities” approximate fair value due to the short-term nature of these accounts. Our investments in U.S.  treasuries, government agency securities, and corporate bonds, if any, are carried at fair value, which is based on quoted market prices for such securities, if available, or is estimated on the basis of quoted market prices of financial instruments with similar characteristics.The Company transacts business in various foreign currencies and has significant international sales and expenses denominated in foreign currencies, subjecting us to foreign currency risk.  To mitigate our foreign currency risk resulting from our foreign currency-denominated monetary assets, liabilities, earnings and our foreign currency risk related to functional currency-equivalent cash flows resulting from our intercompany transactions, we periodically enter into currency derivative contracts, principally forward contracts. These forward contracts generally have a maturity of less than one year. The counterparties for our currency derivative contracts are large and reputable commercial or investment banks. We assess the nature of these derivatives under Financial Accounting Standards Board (“FASB”) Accounting Standards Codification (“ASC”) Topic 815 to determine whether such derivatives should be designated as hedging instruments. The fair value of foreign currency contracts are estimated based on the prevailing exchange rates of the various hedged currencies as of the end of the period.  We report the fair value of these contracts within “Other current assets,” “Accrued expense and other liabilities,” “Other assets,” or “Other liabilities,” as applicable, in our consolidated balance sheets.We do not hold or purchase any foreign currency forward contracts for trading or speculative purposes. For foreign currency forward contracts which are not designated as hedging instruments under ASC 815, we record the changes in the estimated fair value of these derivatives within “General and administrative expenses” in our consolidated statements of operations, consistent with the nature of the underlying transactions. For foreign currency forward contracts which have been designated as cash flow hedges in accordance with ASC 815, we assess the effectiveness of these cash flow hedges at inception and on an ongoing basis and determine if the hedges are effective at providing offsetting changes in cash flows of the hedged items.  The Company records the changes in the estimated fair value of these derivatives in “Accumulated other comprehensive loss” and subsequently reclassifies the related amount of accumulated other comprehensive income (loss) to earnings within “General and administrative” or “Net revenues” when the hedged item impacts earnings, consistent with the nature and timing of the underlying transactions.  Cash flows from these foreign currency forward contracts are classified in the same category as the cash flows associated with the hedged item in the consolidated statements of cash flows. We measure hedge ineffectiveness, if any, and if it is determined that a derivative has ceased to be a highly effective hedge, the Company will discontinue hedge accounting for the derivative.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_jSQHVDOAoA0YwqMZP3yRgwWa)
+ Call ID: call_jSQHVDOAoA0YwqMZP3yRgwWa
+  Args:
+    pattern: (?i)revenues of|net revenues were|net revenues.*million
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Customers
+While the Company does sell directly to end consumers in certain instances, such as sales through Blizzard Battle.net, in other instances our customers may be platform providers, such as Sony, Microsoft, Google, and Apple, or retailers, such as Walmart and GameStop, who act as distributors of our content to end consumers.  For the years ended December 31, 2019, 2018, and 2017, Apple, Google, and Sony have been our most significant customers with revenues of 17%, 13%, and 11%, respectively, for 2019, 15%, 11%, and 13%, respectively, for 2018, and 16%, 10%, and 14%, respectively, for 2017.  No other customer accounted for 10% or more of our net revenues in the periods discussed above.We had two customers—Sony and Microsoft—who accounted for 18% and 11%, respectively, of consolidated gross receivables at December 31, 2019. We had two customers—Sony and NetEase, Inc.—who accounted for 15% and 12%, respectively, of consolidated gross receivables at December 31, 2018.  No other customer accounted for 10% or more of our consolidated gross receivables in the periods discussed above.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_Goom4eJLlqdPtVQeDXzhvlPq)
+ Call ID: call_Goom4eJLlqdPtVQeDXzhvlPq
+  Args:
+    pattern: (?i)Net revenues\s*\$|Net revenues\s+[0-9,]+|Property and equipment, net\s+[0-9,]+
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+15. Operating Segments and Geographic Regions
+Currently, we have three reportable segments—Activision, Blizzard, and King. Our operating segments are consistent with the manner in which our operations are reviewed and managed by our Chief Executive Officer, who is our chief operating decision maker (“CODM”).  The CODM reviews segment performance exclusive of: the impact of the change in deferred revenues and related cost of revenues with respect to certain of our online-enabled games; share-based compensation expense; amortization of intangible assets as a result of purchase price accounting; fees and other expenses (including legal fees, expenses, and accruals) related to acquisitions, associated integration activities, and financings; certain restructuring and related costs; and certain other non-cash charges.  The CODM does not review any information regarding total assets on an operating segment basis, and accordingly, no disclosure is made with respect thereto.Our operating segments are also consistent with our internal organizational structure, the way we assess operating performance and allocate resources, and the availability of separate financial information. We do not aggregate operating segments.F-35
+Table of Contents
+ACTIVISION BLIZZARD, INC. AND SUBSIDIARIES
+Notes to Consolidated Financial Statements (continued)
+ Information on the reportable segment net revenues and segment operating income are presented below (amounts in millions):
+ Year Ended December 31, 2019 Activision Blizzard King Total Segment Revenues Net revenues from external customers $ 2,219   $ 1,676   $ 2,031   $ 5,926 Intersegment net revenues (1) — 43 — 43 Segment net revenues $ 2,219   $ 1,719   $ 2,031   $ 5,969 Segment operating income $ 850   $ 464   $ 740   $ 2,054 Year Ended December 31, 2018 Activision Blizzard King Total Segment Revenues Net revenues from external customers $ 2,458   $ 2,238   $ 2,086   $ 6,782 Intersegment net revenues (1) — 53 — 53 Segment net revenues $ 2,458   $ 2,291   $ 2,086   $ 6,835 Segment operating income $ 1,011   $ 685   $ 750   $ 2,446 Year Ended December 31, 2017 Activision Blizzard King Total Segment Revenues Net revenues from external customers $ 2,628   $ 2,120   $ 1,998   $ 6,746 Intersegment net revenues (1) — 19 — 19 Segment net revenues $ 2,628   $ 2,139   $ 1,998   $ 6,765 Segment operating income $ 1,005   $ 712   $ 700   $ 2,417
+ (1) Intersegment revenues reflect licensing and service fees charged between segments.F-36
+Table of Contents
+ACTIVISION BLIZZARD, INC. AND SUBSIDIARIES
+Notes to Consolidated Financial Statements (continued)
+Reconciliations of total segment net revenues and total segment operating income to consolidated net revenues and consolidated income before income tax expense are presented in the table below (amounts in millions):
+ Years Ended December 31, 2019 2018 2017 Reconciliation to consolidated net revenues: Segment net revenues $ 5,969   $ 6,835   $ 6,765 Revenues from non-reportable segments (1) 462 480 410 Net effect from recognition (deferral) of deferred net revenues (2) 101 238 (139) Elimination of intersegment revenues (3) (43) (53) (19) Consolidated net revenues $ 6,489   $ 7,500   $ 7,017 Reconciliation to consolidated income before income tax expense: Segment operating income $ 2,054   $ 2,446   $ 2,417 Operating income (loss) from non-reportable segments (1) 24 31 (19) Net effect from recognition (deferral) of deferred net revenues and related cost of revenues (2) 52 100 (71) Share-based compensation expense (166) (209) (178) Amortization of intangible assets (203) (370) (757) Fees and other expenses related to the acquisition of King (4) — — (15) Restructuring costs (5) (137) (10) (15) Other non-cash charges (6) — — (14) Discrete tax-related items (7) (17) — (39) Consolidated operating income 1,607 1,988 1,309 Interest and other expense (income), net (26) 71 146 Loss on extinguishment of debt — 40 12 Consolidated income before income tax expense $ 1,633   $ 1,877   $ 1,151
+ (1) Includes other income and expenses from operating segments managed outside the reportable segments, including our Distribution business. Also includes unallocated corporate income and expenses.(2) Reflects the net effect from recognition (deferral) of deferred net revenues, along with related cost of revenues, on certain of our online-enabled products.(3) Intersegment revenues reflect licensing and service fees charged between segments. (4) Reflects fees and other expenses, such as legal, banking, and professional services fees, related to the acquisition of King and associated integration activities, including related debt financings.(5) Reflects restructuring initiatives, which include severance and other restructuring-related costs.(6) Reflects a non-cash accounting charge to reclassify certain cumulative translation gains (losses) into earnings due to the substantial liquidation of certain of our foreign entities. (7) Reflects the impact of other unusual or unique tax-related items and activities.F-37
+Table of Contents
+ACTIVISION BLIZZARD, INC. AND SUBSIDIARIES
+Notes to Consolidated Financial Statements (continued)
+ Due to requirements from our adoption of a new revenue accounting standard in 2018, net revenues by distribution channel for the years ended December 31, 2019 and 2018, include a reconciliation to our segment revenues as disclosed for each of our reportable segments above. Net revenues by distribution channel were as follows (amounts in millions):
+ Year Ended December 31, 2019 Activision Blizzard King Non-reportable segments Elimination of intersegment revenues (3) Total Net revenues by distribution channel: Digital online channels (1) $ 1,366   $ 1,580   $ 2,029   $ —   $ (43)   $ 4,932 Retail channels 818 91 — — — 909 Other (2) 3 181 — 464 — 648 Total consolidated net revenues $ 2,187   $ 1,852   $ 2,029   $ 464   $ (43)   $ 6,489 Change in deferred revenues: Digital online channels (1) $ 122   $ (128)   $ 2   $ —   $ —   $ (4) Retail channels (90) (5) — — — (95) Other (2) — — — (2) — (2) Total change in deferred revenues $ 32   $ (133)   $ 2   $ (2)   $ —   $ (101) Segment net revenues: Digital online channels (1) $ 1,488   $ 1,452   $ 2,031   $ —   $ (43)   $ 4,928 Retail channels 728 86 — — — 814 Other (2) 3 181 — 462 — 646 Total segment net revenues $ 2,219   $ 1,719   $ 2,031   $ 462   $ (43)   $ 6,388
+ F-38
+Table of Contents
+ACTIVISION BLIZZARD, INC. AND SUBSIDIARIES
+Notes to Consolidated Financial Statements (continued)
+ Year Ended December 31, 2018 Activision Blizzard King Non-reportable segments Elimination of intersegment revenues (3) Total Net revenues by distribution channel: Digital online channels (1) $ 1,740   $ 2,009   $ 2,090   $ —   $ (53)   $ 5,786 Retail channels 998 109 — — — 1,107 Other (2) — 148 — 459 — 607 Total consolidated net revenues $ 2,738   $ 2,266   $ 2,090   $ 459   $ (53)   $ 7,500 Change in deferred revenues: Digital online channels (1) $ (96)   $ 32   $ (4)   $ —   $ —   $ (68) Retail channels (184) (7) — — — (191) Other (2) — — — 21 — 21 Total change in deferred revenues $ (280)   $ 25   $ (4)   $ 21   $ —   $ (238) Segment net revenues: Digital online channels (1) $ 1,644   $ 2,041   $ 2,086   $ —   $ (53)   $ 5,718 Retail channels 814 102 — — — 916 Other (2) — 148 — 480 — 628 Total segment net revenues $ 2,458   $ 2,291   $ 2,086   $ 480   $ (53)   $ 7,262
+ Year Ended December 31, 2017 Net revenues by distribution channel: Digital online channels (1) $ 5,479 Retail channels 1,033 Other (2) 505 Total consolidated net revenues $ 7,017
+(1) Net revenues from “Digital online channels” include revenues from digitally-distributed subscriptions, downloadable content, microtransactions, and products, as well as licensing royalties. (2) Net revenues from “Other” primarily includes revenues from our Distribution business and the Overwatch League.(3) Intersegment revenues reflect licensing and service fees charged between segments.F-39
+Table of Contents
+ACTIVISION BLIZZARD, INC. AND SUBSIDIARIES
+Notes to Consolidated Financial Statements (continued)
+Geographic information presented below is based on the location of the paying customer.  Net revenues by geographic region, including a reconciliation to each of our reportable segment’s net revenues, were as follows (amounts in millions):
+ Year Ended December 31, 2019 Activision Blizzard King Non-reportable segments Elimination of intersegment revenues (2) Total Net revenues by geographic region: Americas $ 1,286   $ 822   $ 1,254   $ —   $ (21)   $ 3,341 EMEA (1) 691 543 557 464 (16) 2,239 Asia Pacific 210 487 218 — (6) 909 Total consolidated net revenues $ 2,187   $ 1,852   $ 2,029   $ 464   $ (43)   $ 6,489 Change in deferred revenues: Americas $ 16   $ (62)   $ 2   $ —   $ —   $ (44) EMEA (1) 12 (57) — (2) — (47) Asia Pacific 4 (14) — — — (10) Total change in deferred revenues $ 32   $ (133)   $ 2   $ (2)   $ —   $ (101) Segment net revenues: Americas $ 1,302   $ 760   $ 1,256   $ —   $ (21)   $ 3,297 EMEA (1) 703 486 557 462 (16) 2,192 Asia Pacific 214 473 218 — (6) 899 Total segment net revenues $ 2,219   $ 1,719   $ 2,031   $ 462   $ (43)   $ 6,388 F-40
+ Table of Contents
+ACTIVISION BLIZZARD, INC. AND SUBSIDIARIES
+Notes to Consolidated Financial Statements (continued)
+ Year Ended December 31, 2018 Activision Blizzard King Non-reportable segments Elimination of intersegment revenues (2) Total Net revenues by geographic region: Americas $ 1,622   $ 1,004   $ 1,269   $ 13   $ (28)   $ 3,880 EMEA (1) 897 692 599 446 (16) 2,618 Asia Pacific 219 570 222 — (9) 1,002 Total consolidated net revenues $ 2,738   $ 2,266   $ 2,090   $ 459   $ (53)   $ 7,500 Change in deferred revenues: Americas $ (163)   $ 15   $ (3)   $ —   $ —   $ (151) EMEA (1) (127) 16 (1) 21 — (91) Asia Pacific 10 (6) — — — 4 Total change in deferred revenues $ (280)   $ 25   $ (4)   $ 21   $ —   $ (238) Segment net...(truncated)
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_bi6JKqjItw2e0HVk78yAWuue)
+ Call ID: call_bi6JKqjItw2e0HVk78yAWuue
+  Args:
+    pattern: (?i)Property and equipment.*December 31, 2019|December 31, 2019.*Property and equipment|At December 31, 2019.*Property and equipment
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+6. Property and Equipment, Net
+Property and equipment, net was comprised of the following (amounts in millions):
+At December 31, 2019 2018 Land $ 1   $ 1 Buildings 4 4 Leasehold improvements 252 248 Computer equipment 654 700 Office furniture and other equipment 91 99 Total cost of property and equipment 1,002 1,052 Less accumulated depreciation (749) (770) Property and equipment, net $ 253   $ 282
+ Depreciation expense for the years ended December 31, 2019, 2018, and 2017 was $124 million, $138 million, and $130 million, respectively.F-25
+Table of Contents
+ACTIVISION BLIZZARD, INC. AND SUBSIDIARIES
+Notes to Consolidated Financial Statements (continued)
+
+================================== Ai Message ==================================
+
+2.42

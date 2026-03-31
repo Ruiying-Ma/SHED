@@ -1,0 +1,34 @@
+================================ Human Message =================================
+
+HYPOTHESIS:
+Survival of obligations: Some obligations of Agreement may survive termination of Agreement.
+
+TABLE OF CONTENTS (TOC):
+1 | CONFIDENTIALITY AND NON-DISCLOSURE AGREEMENT
+1.1 | 1. Confidential Information.  VENDOR acknowledges that in the course of providing services to UNIVERSITY,
+1.2 | 2. Nondisclosure.    VENDOR,  its  employees,  agents,
+1.3 | 3. Disclosure  Sought  Under  Legal  Process.
+1.4 | 4. Return  of  Materials.
+1.5 | 5. Loss  of  Access.
+1.6 | 6. Immediate  Notice.
+1.7 | 7. Appropriate  Forum.
+1.8 | 8. Termination.
+1.9 | 9. Severability.  All of the provisions of this agreement are severable.
+1.10 | 10.  Entire Agreement Amendments.  This Agreement is intended as the complete,
+1.11 | 11.  Original Copy.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_tAsHRAnDZ19vAki6DcToOAIp)
+ Call ID: call_tAsHRAnDZ19vAki6DcToOAIp
+  Args:
+    section_id: 1.8
+
+================================= Tool Message =================================
+Name: read_section
+
+8. Termination.This  Agreement  shall  survive  the  termination  of  the services to be provided by VENDOR or any other agreement by and between the parties.
+
+================================== Ai Message ==================================
+
+Entailment

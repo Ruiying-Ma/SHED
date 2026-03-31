@@ -1,0 +1,115 @@
+================================ Human Message =================================
+
+HYPOTHESIS:
+Sharing with employees: Receiving Party may share some Confidential Information with some of Receiving Party's employees.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_zLeGNhYY7ejPy8zfe31fw1SX)
+ Call ID: call_zLeGNhYY7ejPy8zfe31fw1SX
+  Args:
+    pattern: employee|employees|personnel|representative|Representatives|agents
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1. DEFINITIONS
+Affiliate : shall mean any other corporation or other form of business entity, which, directly or indirectly, controls, is controlled by, or is under common control with, a Party at any time during the term of this Agreement.  For purposes of this definition, the term “control” means direct or indirect beneficial ownership of more than 50% of the voting share or interest of the entity;
+Confidential Information : has the meaning given in clause 2 of this Agreement;
+ Disclosing Party : a Party to this Agreement which discloses its Confidential Information to the other Party;
+Purpose :  [[INSERT  DETAILS  e.g.  to  establish  a  business  relationship  in  respect  to  the  supply  of  [named  service provision or goods] from X, etc]];
+Receiving Party : a Party to this Agreement which receives the Confidential Information from the other Party;
+ Representatives : any employees, officers, directors, professional advisors or consultants in relation to each Party and any of its Affiliates, who are actively and directly engaged in the Purpose;
+Term : has the meaning given in clause 10.1 of this Agreement.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_KqJSxRnNh4Ko23pCb7WSiRja)
+ Call ID: call_KqJSxRnNh4Ko23pCb7WSiRja
+  Args:
+    pattern: Representatives|employee|employees
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1. DEFINITIONS
+Affiliate : shall mean any other corporation or other form of business entity, which, directly or indirectly, controls, is controlled by, or is under common control with, a Party at any time during the term of this Agreement.  For purposes of this definition, the term “control” means direct or indirect beneficial ownership of more than 50% of the voting share or interest of the entity;
+Confidential Information : has the meaning given in clause 2 of this Agreement;
+ Disclosing Party : a Party to this Agreement which discloses its Confidential Information to the other Party;
+Purpose :  [[INSERT  DETAILS  e.g.  to  establish  a  business  relationship  in  respect  to  the  supply  of  [named  service provision or goods] from X, etc]];
+Receiving Party : a Party to this Agreement which receives the Confidential Information from the other Party;
+ Representatives : any employees, officers, directors, professional advisors or consultants in relation to each Party and any of its Affiliates, who are actively and directly engaged in the Purpose;
+Term : has the meaning given in clause 10.1 of this Agreement.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_r1OHpsaHmZuKerVPSvffawwL)
+ Call ID: call_r1OHpsaHmZuKerVPSvffawwL
+  Args:
+    pattern: disclose|disclosure|share|shared|available to|Representatives
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+B.The  Parties  have  agreed  to  comply  with  this  Agreement  in  connection  with  the  disclosure  and  use  of Confidential Information.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_vDpa6PipTSqILTIbg2K8D4Ya)
+ Call ID: call_vDpa6PipTSqILTIbg2K8D4Ya
+  Args:
+    pattern: Receiving Party shall|Receiving Party may|Representatives
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1. DEFINITIONS
+Affiliate : shall mean any other corporation or other form of business entity, which, directly or indirectly, controls, is controlled by, or is under common control with, a Party at any time during the term of this Agreement.  For purposes of this definition, the term “control” means direct or indirect beneficial ownership of more than 50% of the voting share or interest of the entity;
+Confidential Information : has the meaning given in clause 2 of this Agreement;
+ Disclosing Party : a Party to this Agreement which discloses its Confidential Information to the other Party;
+Purpose :  [[INSERT  DETAILS  e.g.  to  establish  a  business  relationship  in  respect  to  the  supply  of  [named  service provision or goods] from X, etc]];
+Receiving Party : a Party to this Agreement which receives the Confidential Information from the other Party;
+ Representatives : any employees, officers, directors, professional advisors or consultants in relation to each Party and any of its Affiliates, who are actively and directly engaged in the Purpose;
+Term : has the meaning given in clause 10.1 of this Agreement.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_1EqEIgzdk73wOejrkJ0xepxw)
+ Call ID: call_1EqEIgzdk73wOejrkJ0xepxw
+  Args:
+    pattern: purpose|need to know|necessary|to its Representatives|to Representatives|Affiliates
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1. DEFINITIONS
+Affiliate : shall mean any other corporation or other form of business entity, which, directly or indirectly, controls, is controlled by, or is under common control with, a Party at any time during the term of this Agreement.  For purposes of this definition, the term “control” means direct or indirect beneficial ownership of more than 50% of the voting share or interest of the entity;
+Confidential Information : has the meaning given in clause 2 of this Agreement;
+ Disclosing Party : a Party to this Agreement which discloses its Confidential Information to the other Party;
+Purpose :  [[INSERT  DETAILS  e.g.  to  establish  a  business  relationship  in  respect  to  the  supply  of  [named  service provision or goods] from X, etc]];
+Receiving Party : a Party to this Agreement which receives the Confidential Information from the other Party;
+ Representatives : any employees, officers, directors, professional advisors or consultants in relation to each Party and any of its Affiliates, who are actively and directly engaged in the Purpose;
+Term : has the meaning given in clause 10.1 of this Agreement.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_elmVKBQotCe2r9vWZAuB77IB)
+ Call ID: call_elmVKBQotCe2r9vWZAuB77IB
+  Args:
+    pattern: 3\.|4\.|5\.|obligation|permitted|third party|disclose
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1. DEFINITIONS
+Affiliate : shall mean any other corporation or other form of business entity, which, directly or indirectly, controls, is controlled by, or is under common control with, a Party at any time during the term of this Agreement.  For purposes of this definition, the term “control” means direct or indirect beneficial ownership of more than 50% of the voting share or interest of the entity;
+Confidential Information : has the meaning given in clause 2 of this Agreement;
+ Disclosing Party : a Party to this Agreement which discloses its Confidential Information to the other Party;
+Purpose :  [[INSERT  DETAILS  e.g.  to  establish  a  business  relationship  in  respect  to  the  supply  of  [named  service provision or goods] from X, etc]];
+Receiving Party : a Party to this Agreement which receives the Confidential Information from the other Party;
+ Representatives : any employees, officers, directors, professional advisors or consultants in relation to each Party and any of its Affiliates, who are actively and directly engaged in the Purpose;
+Term : has the meaning given in clause 10.1 of this Agreement.
+
+================================== Ai Message ==================================
+
+NotMentioned

@@ -1,0 +1,23 @@
+================================ Human Message =================================
+
+QUERY:
+what dataset did they use?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_P6yrUJOOmEVRqepAaHw5E3wL)
+ Call ID: call_P6yrUJOOmEVRqepAaHw5E3wL
+  Args:
+    pattern: dataset
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+4. Experiments and Results 4.1. Corpora
+The DUC-2001 dataset (Over, 2001), which is a collection of 308 news articles, is annotated by (Wan and Xiao, 2008b). The Inspec dataset is a collection of 2,000 abstracts from journal papers including the paper title.  This is a relatively popular dataset for automatic keyphrase extraction, as it was first used by (Hulth, 2003) and later by Mihalcea and (Mihalcea and Tarau, 2004) and (Liu et al., 2009). The NUS Keyphrase Corpus (Nguyen and Kan, 2007) in- cludes 211 scientific conference papers with lengths be- tween 4 to 12 pages.  Each paper has one or more sets of keyphrases assigned by its authors and other annotators. The number of candidate keyphrases that can be extracted is potentially large, making this corpus the most challeng- ing of the four. Finally, the ICSI Meeting Corpus (Janin et al., 2003), which is annotated by Liu et al. (2009a), includes 161 meet- ing transcriptions.  Unlike the other three datasets, the gold standard keys for the ICSI corpus are mostly unigrams.
+4.2. Result
+For comparing with our system, we reimplemented Sin- gleRank and Topical PageRank. Table 2 shows the result of our reimplementation of SingleRank and Topical PageR- ank, as well as the result of our system. Note that we pre- dict the same number of phrase ( k = 10 ) for each document while testing all three methods.The result shows our result has guaranteed improvement over SingleRank and Topical PageRank on all four corpora.
+
+================================== Ai Message ==================================
+
+They used the DUC-2001 dataset, the Inspec dataset, the NUS Keyphrase Corpus, and the ICSI Meeting Corpus.

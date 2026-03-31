@@ -1,0 +1,71 @@
+================================ Human Message =================================
+
+QUERY:
+What types of commonsense knowledge are they talking about?
+
+TABLE OF CONTENTS (TOC):
+1 | Improved Representation Learning for Predicting Commonsense Ontologies
+1.1 | Abstract
+1.2 | 1. Introduction
+1.3 | 2. Data
+1.4 | 3. Models
+1.4.1 | 3.1. Order Embeddings
+1.4.2 | 3.2. Joint Text and Order Embedding
+1.5 | 4. Long-Range Join and Meet Constraints
+1.6 | 5. Experiments
+1.6.1 | 5.1. Joint Text and Order Embedding
+1.6.2 | 5.2. Long-Range Join and Meet Constraints
+1.7 | 6. Conclusion and Future Work
+1.8 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_all (call_TKKrzl5GsmC4n4ZGRmGvpzk4)
+ Call ID: call_TKKrzl5GsmC4n4ZGRmGvpzk4
+  Args:
+    pattern: commonsense knowledge
+
+================================= Tool Message =================================
+Name: grep_search_all
+
+1.2
+1.4.2
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_OlvAaNYGJAKaFRPUXXHfLw8e)
+ Call ID: call_OlvAaNYGJAKaFRPUXXHfLw8e
+  Args:
+    section_id: 1.2
+
+================================= Tool Message =================================
+Name: read_section
+
+1. Introduction
+A core problem in artificial intelligence is to capture, in machine-usable form, the collection of information that an ordinary person would have, known as commonsense knowledge . For example, a machine should know that a room may have a door, and that when a person enters a room, it is generally through a door. This background knowledge is crucial for solving many difficult, ambigu- ous natural language problems in coreference resolution and question answering, as well as the creation of other reasoning machines. More than just curating a static collection of facts, we would like commonsense knowledge to be represented in a way that lends itself to machine reasoning and inference of missing information. We concern ourselves in this pa-
+per with the problem of learning commonsense knowledge representations.In machine learning settings, knowledge is usually repre- sented as a hypergraph of triplets such as Freebase ( Bol- lacker et al.  , 2008 ), WordNet ( Miller , 1995 ), and Con- ceptNet ( Speer et al. , 2016 ). In these knowledge graphs, nodes represent entities or terms t , and hyperedges are re- lations R between these entities or terms, with each fact in the knowledge graph represented as a triplet < t 1 , R, t 2 > . Researchers have developed many models for knowledge representation and learning in this setting ( Bordes et al.  , 2013 ; Wang et al. , 2014 ; Nickel et al. , 2011 ; Li et al. , 2016 ; Socher et al. , 2013 ), under the umbrella of knowl- edge graph completion . However, none of these naturally lend themselves to traditional methods of logical reasoning such as transitivity and negation. While a knowledge graph completion model can represent relations such as I S -A and entailment, there is no mecha- nism to ensure that its predictions are internally consistent. For example, if we know that a dog is a mammal, and a pit bull is a dog, we would like the model to also predict that a pit bull is a mammal.  These transitive entailment rela- tions describe ontologies of hierarchical data, a key com- ponent of commonsense knowledge which we focus on in this work.Recently, a thread of research on representation learning has aimed to create embedding spaces that automatically enforce consistency in these predictions using the intrin- sic geometry of the embedding space ( Vilnis & McCallum , 2015 ; Vendrov et al. ; Nickel & Kiela , 2017 ).  In these mod- els, the inferred embedding space creates a globally con- sistent structured prediction of the ontology, rather than the local relation predictions of previous models.We focus on the order-embedding model ( Vendrov et al. ) which was proposed for general hierarchical prediction in- cluding multimodal problems such as image captioning.  While the original work included results on ontology pre- diction on WordNet, we focus exclusively on the model’s application to commonsense knowledge, with its unique characteristics including complex ordering structure, com- positional, multi-word entities, and the wealth of common- sense knowledge to be found in large-scale unstructured text data.1 CICS, University of Massachusetts, Amherst, USA. Corre- spondence to: Xiang Li < xiangl@cs.umass. edu > .Proceedings of the ICML 17 Workshop on Deep Structured Pre- diction , Sydney, Australia, PMLR 70, 2017. Copyright 2017 by the author(s).Improved Representation Learning for Predicting Commonsense Ontologies
+We propose two extensions to the order embedding model. The first augments hierarchical supervision from existing ontologies with non-hierarchical knowledge in the form of raw text. We find incorporating unstructured text brings accuracy from 92. 0 to 93.0 on a commonsense dataset containing I S -A relations from ConceptNet and Microsoft Concept Graph (MCG), with larger relative gains from smaller amounts of labeled data.The second extension uses the complex partial-order struc- ture of real-world ontologies to find long-distance triplet constraints among embeddings which are poorly enforced by the standard pairwise training method. By adding our additional triplet constraints to the baseline order- embedding model, we find performance improves from 90. 6 to 91.3 accuracy on the WordNet ontology dataset.We find that order embeddings’ ease of extension, both by incorporating non-ordered data, and additional train- ing constraints derived from the structure of the problem, makes it a promising avenue for the development of fur- ther algorithms for automatic learning and jointly consis- tent prediction of ontologies.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_KQQFnEHDXOWHYhjPw7a6GoOl)
+ Call ID: call_KQQFnEHDXOWHYhjPw7a6GoOl
+  Args:
+    section_id: 1.4.2
+
+================================= Tool Message =================================
+Name: read_section
+
+3.2. Joint Text and Order Embedding
+We aim to augment our ontology prediction embedding model with more general commonsense knowledge mined from raw text. A standard method for learning word repre- sentations is word2vec ( Mikolov et al. , 2013 ), which pre- dicts current word embeddings using a context of surround- ing word embeddings.  We incorporate a modification of the CBOW model in this work, which uses the average embed- ding from a window around the current word as a context vector v 2 to predict the current word vector v 1 :
+v 2 = 1 window X k ∈{− window/ 2 ,...,window/ 2 }\{ t } v t + k
+Improved Representation Learning for Predicting Commonsense Ontologies
+ term 1 relation term 2 Dataset coral reefs IsA delicate ecosystems ConceptNet diabetes IsA chronic health condition MCG fantasy life.n.01 IsA imagination.n.01 WordNet
+Table 1. Example triplets from each dataset.Figure 2. Adding more training examples: black line is the origi- nal training data, green line is obtained by transitive closure, and yellow line is obtained by join and meet. Because order embeddings are all positive and compared coordinate-wise, we use a variant of CBOW that scores similarity to context based on based on L 1 distance and not dot product, v 0 1 and v 0 2 are the negative examples selected from the vocabulary during training:
+ d pos = d ( v 1 , v 2 ) = k v 1 − v 2 k d neg = d ( v 0 1 , v 0 2 ) = k v 0 1 − v 0 2 k L CBOW = X w c ,w t max(0 , m + d pos − d neg )
+Finally, after each gradient update, we map the embeddings back to the positive domain by applying the absolute value function.  We propose jointly learning both the order- and text- embedding model with a simple weighted combina- tion of the two objective functions:
+L Joint = α 1 L Order + α 2 L CBOW
+
+================================== Ai Message ==================================
+
+They focus on ontologies of hierarchical data expressed as transitive entailment (IS‑A) relations, including complex ordering structure, compositional multi‑word entities, and commonsense knowledge mined from large‑scale unstructured text.

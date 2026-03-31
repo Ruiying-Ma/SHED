@@ -1,0 +1,75 @@
+================================ Human Message =================================
+
+QUERY:
+How do they incorporate expert knowledge into their topic model?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_idAM4aPFBgYmBHaB2YZJh5Rd)
+ Call ID: call_idAM4aPFBgYmBHaB2YZJh5Rd
+  Args:
+    pattern: expert knowledge|prior knowledge|knowledge|topic model
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Many predictive tasks, such as diagnosing a pa- tient based on their medical chart, are ultimately defined by the decisions of human experts. Un- fortunately, encoding experts’ knowledge is of- ten time consuming and expensive. We propose a simple way to use fuzzy and informal knowledge from experts to guide discovery of interpretable latent topics in text. The underlying intuition of our approach is that latent factors should be informative about both correlations in the data and a set of relevance variables specified by an expert.  Mathematically, this approach is a combination of the information bottleneck and Total Correlation Explanation (CorEx). We give a preliminary evaluation of Anchored CorEx, showing that it produces more coherent and in- terpretable topics on two distinct corpora.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_Rcx9F6zR6V76yAgCOnyLwdc6)
+ Call ID: call_Rcx9F6zR6V76yAgCOnyLwdc6
+  Args:
+    pattern: anchor|anchored
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1. Introduction
+A clinician can look at a patient’s electronic health record (EHR) and not only decide whether the patient has diabetes but also produce a succinct summary of the clinical evi- dence. Replicating this feat with computational tools has been the focus of much research in clinical informatics. There are major initiatives underway to codify clinical knowledge into formal representations, most often as de- terministic rules that can be applied in a semi-automated fashion ( Newton et al.  , 2013 ). However, representing the intuitive judgments of human experts can be challenging, particularly when the formal system does not match the ex- pert’s knowledge. For example, many deterministic disease classifiers used in clinical informatics rely heavily upon administrative codes not available at time of diagnosis. Further, developing and testing such systems is time- and
+labor-intensive. We propose instead a lightweight information theoretic framework for codifying informal human knowledge and then use it to extract interpretable latent topics from text corpora. For example, to discover patients with diabetes in a set of clinical notes, a doctor can begin by specifying disease-specific anchor terms ( Arora et al. , 2012 ; Halpern et al. , 2014 ), such as “diabetes” or “insulin. ” Our frame- work then uses these to help discover both latent topics associated with diabetes and records in which diabetes- related topics occur. The user can then add (or remove) additional anchor terms (e.g., “metformin”) to improve the quality of the learned (diabetes) topics. In this workshop paper, we introduce a simple approach to anchored information theoretic topic modeling using a novel combination of Correlation Explanation (CorEx) ( Ver Steeg & Galstyan , 2014 ) and the information bottle- neck ( Tishby et al. , 2000 ). This flexible framework enables the user to leverage domain knowledge to guide exploration of a collection of documents and to impose semantics onto latent factors learned by CorEx.  We present preliminary experimental results on two text corpora (including a cor- pus of clinical notes), showing that anchors can be used to discover topics that are more specific and relevant. What is more, we demonstrate the potential for this framework to perform weakly supervised learning in settings where labeling documents is prohibitively expensive ( Chen et al. , 2013 ; Agarwal et al. , 2016 ). With respect to interpretable machine learning, our con- tributions are twofold. First, our framework provides a way for human users to share domain knowledge with a statistical learning algorithm that is both convenient for the human user and easily digestible by the machine. Second, our experimental results confirm that the introduction of simple anchor words can improve the coherence and human interpretability of topics discovered from data. Both are es- sential to successful and interactive collaboration between machine learning and human users. 2016 ICML Workshop on Human Interpretability in Machine Learning (WHI 2016) , New York, NY, USA. Copyright by the author(s).101
+Toward Interpretable Topic Discovery via Anchored Correlation Explanation
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_qS1EVwHADDscOs10kzHFKAi7)
+ Call ID: call_qS1EVwHADDscOs10kzHFKAi7
+  Args:
+    pattern: relevance variables|specified by an expert|anchor terms|mutual information
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Many predictive tasks, such as diagnosing a pa- tient based on their medical chart, are ultimately defined by the decisions of human experts. Un- fortunately, encoding experts’ knowledge is of- ten time consuming and expensive. We propose a simple way to use fuzzy and informal knowledge from experts to guide discovery of interpretable latent topics in text. The underlying intuition of our approach is that latent factors should be informative about both correlations in the data and a set of relevance variables specified by an expert.  Mathematically, this approach is a combination of the information bottleneck and Total Correlation Explanation (CorEx). We give a preliminary evaluation of Anchored CorEx, showing that it produces more coherent and in- terpretable topics on two distinct corpora.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_0Os8IYFu2t8NyQllLVl1JcXI)
+ Call ID: call_0Os8IYFu2t8NyQllLVl1JcXI
+  Args:
+    pattern: information bottleneck|CorEx|objective|anchor words
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Many predictive tasks, such as diagnosing a pa- tient based on their medical chart, are ultimately defined by the decisions of human experts. Un- fortunately, encoding experts’ knowledge is of- ten time consuming and expensive. We propose a simple way to use fuzzy and informal knowledge from experts to guide discovery of interpretable latent topics in text. The underlying intuition of our approach is that latent factors should be informative about both correlations in the data and a set of relevance variables specified by an expert.  Mathematically, this approach is a combination of the information bottleneck and Total Correlation Explanation (CorEx). We give a preliminary evaluation of Anchored CorEx, showing that it produces more coherent and in- terpretable topics on two distinct corpora.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_NGlMX0IazuEJnO1pe4M1mFDU)
+ Call ID: call_NGlMX0IazuEJnO1pe4M1mFDU
+  Args:
+    pattern: specified by an expert|anchor words can|add.*remove.*anchor|user can
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Many predictive tasks, such as diagnosing a pa- tient based on their medical chart, are ultimately defined by the decisions of human experts. Un- fortunately, encoding experts’ knowledge is of- ten time consuming and expensive. We propose a simple way to use fuzzy and informal knowledge from experts to guide discovery of interpretable latent topics in text. The underlying intuition of our approach is that latent factors should be informative about both correlations in the data and a set of relevance variables specified by an expert.  Mathematically, this approach is a combination of the information bottleneck and Total Correlation Explanation (CorEx). We give a preliminary evaluation of Anchored CorEx, showing that it produces more coherent and in- terpretable topics on two distinct corpora.
+
+================================== Ai Message ==================================
+
+They incorporate expert knowledge by letting experts specify disease- or concept-specific anchor terms, such as “diabetes,” “insulin,” or “metformin,” and using these anchors to guide discovery of latent topics. In Anchored CorEx, the latent factors are encouraged to be informative about both correlations in the data and expert-specified relevance variables.

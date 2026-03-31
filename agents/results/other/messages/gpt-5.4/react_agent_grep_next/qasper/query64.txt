@@ -1,0 +1,40 @@
+================================ Human Message =================================
+
+QUERY:
+How many languages are in the dataset?
+
+TABLE OF CONTENTS (TOC):
+1 | A system for the 2019 Sentiment, Emotion and Cognitive State Task of DARPA’s LORELEI project
+1.1 | I. I NTRODUCTION
+1.2 | II. P REVIOUS W ORK
+1.3 | III. P ROBLEM D EFINITION
+1.3.1 | A. The Sentiment, Emotion and Cognitive State (SEC) Task
+1.3.2 | B. Data
+1.3.3 | C. Evaluation
+1.4 | IV. M ETHOD
+1.4.1 | A. Machine Translation
+1.4.2 | B. Linguistic Features
+1.4.3 | C. Models
+1.5 | V. R ESULTS
+1.6 | VI. C ONCLUSION
+1.7 | R EFERENCES
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_w5HWOn7c6XAtBnYFTInC186N)
+ Call ID: call_w5HWOn7c6XAtBnYFTInC186N
+  Args:
+    section_id: 1.3.2
+
+================================= Tool Message =================================
+Name: read_section
+
+B. Data
+Training data provided for the task included documents were collected from social media, SMS, news articles, and news wires. This consisted of 76 documents in English and 47 in Spanish. The data are relevant to the HADR domain but are not grounded in a common HADR incident. Each document is annotated for situation frames and associated sentiment by 2 trained annotators from the Linguistic Data Consortium (LDC) 3 .  Sentiment annotations were done at a segment (sentence) level, and included Situation Frame, Polar- ity (positive / negative), Sentiment Score, Emotion, Source and Target. Sentiment labels were annotated between the values of -3 (very negative) and +3 (very positive) with 0.5 increments excluding 0. Additionally, the presence or absence of three specific emotions: fear, anger, and joy/happiness was marked.  If a segment contains sentiment toward more than one target, each will be annotated separately. Summary of the training data is given in Table II.3 https://www.ldc.upenn.edu/
+1 For an in-depth review of these approaches, we refer the reader to [22]
+2 For example, anger, disgust, fear, happiness, sadness, and surprise
+ TABLE II F REQUENCY STATISTICS FOR THE PROVIDED TRAINING DATA PER LANGUAGE : NUMBER OF DOCUMENTS , NUMBER OF ANNOTATED SITUATION FRAMES , NUMBER OF SENTIMENT INSTANCES , PERCENTAGE OF NEGATIVE POLARITY . #Documents #SF #Sentiment % Neg English 76 85 380 81.57 Spanish 47 56 168 98.10 Total 123 141 548 84.85
+
+================================== Ai Message ==================================
+
+2

@@ -1,0 +1,41 @@
+================================ Human Message =================================
+
+QUERY:
+What supervised baselines did they compare with?
+
+TABLE OF CONTENTS (TOC):
+1 | Look, Read and Enrich Learning from Scientific Figures and their Captions Jose Manuel Gomez-Perez , Raul Ortega Expert System Cogito Labs { jmgomez,rortega } @expertsystem.com
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2 Related work
+1.4 | 3 Figure-Caption Correspondence
+1.4.1 | 3.1 FCC Architecture and Model
+1.4.2 | 3.2 Semantic Embeddings
+1.5 | 4 Results and Discussion
+1.5.1 | 4.1 Datasets
+1.5.2 | 4.2 Figure-Caption Correspondence
+1.5.3 | 4.3 Image-Sentence Matching
+1.5.4 | 4.4 Caption and Figure Classification
+1.5.5 | 4.5 Textbook Question Answering (TQA) for Multi-Modal Machine Comprehension
+1.6 | 5 Qualitative Analysis
+1.7 | 6 Conclusions
+1.8 | Acknowledgments
+1.9 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_ZBSlLq1y8uSnFCDptzo24RHA)
+ Call ID: call_ZBSlLq1y8uSnFCDptzo24RHA
+  Args:
+    section_id: 1.5.2
+
+================================= Tool Message =================================
+Name: read_section
+
+4.2 Figure-Caption Correspondence
+We evaluate our method in the task it was trained to solve: de- termining whether a figure and a caption correspond. We also compare the performance of the FCC task against two super- vised baselines, training them on a classification task against the SciGraph taxonomy. For such baselines we first train the vision and language networks independently and then com- bine them. The feature extraction parts of both networks are the same as described in section 3.1.  On top of them, we at- tach a fully connected layer with 128 neurons and ReLU ac- tivation and a softmax layer, with as many neurons as target classes.The direct combination baseline computes the figure- caption correspondence through the scalar product between the softmax outputs of both networks. If it exceeds a thresh- old, which we heuristically fixed on 0.325, the result is positive.  The supervised pre-training baseline freezes the weights of the feature extraction trunks from the two trained networks, assembles them in the FCC architecture as shown in section 3.1, and trains the FCC task on the fully connected layers. While direct combination provides a notion of the agreement between the two branches, supervised pre-training is the most similar supervised approach to our method.Table 1 shows the results of the FCC task and the super- vised baselines.  F CC k denotes the corpus and word rep- resentation used to train the FCC task. Acc vgg shows the accuracy after replacing our visual branch with pre-trained VGG16 features learnt on ImageNet. This provides an esti- mate of how specific of the scientific domain scientific figures and therefore the resulting visual features can be, compared to natural images.  As the table shows, the results obtained using pre-trained visual features are clearly worse in general (only slightly better in F CC 3 ), suggesting that the visual in- formation contained in scientific figures indeed differs from natural images.We trained the FCC network on two different scientific corpora: SciGraph ( F CC 1 − 5 ) and SemScholar ( F CC 6 − 7 ).  Both F CC 1 and F CC 6 learnt their own word representations without transfer of any pre-trained knowledge. Even in its
+most basic form our approach substantially improves over the supervised baselines, confirming that the visual and language branches learn from each other and also that figure-caption correspondence is an effective source of free supervision. Adding pre-trained knowledge at the input layer of the language subnetwork provides an additional boost, particu- larly with lemma and concept embeddings from Vecsigrafo ( F CC 5 ). Vecsigrafo clearly outperformed HolE ( F CC 3 ), which was also beaten by pre-trained fastText [Bojanowski et al. , 2017] word embeddings ( F CC 2 ) trained on SemScholar.  Since graph-based KG embedding approaches like HolE only generate embeddings of the artifacts explicitly contained in the KG, this may indicate that Sensigrafo, the KG used in this task, provides a partial coverage of the scientific domain, as could be expected since we are using an off-the-shelf ver- sion. Deeper inspection shows that HolE only covers 20% of the lemmas in the SciGraph vocabulary.  On the other hand, Vecsigrafo, trained on the same KG, also captures lexical in- formation from the text corpora it is trained on, Wikipedia or SemScholar, raising lemma coverage to 42% and 47%, re- spectively.Although the size of Wikipedia is almost triple of our Sem- Scholar corpus, training Vecsigrafo on the latter resulted in better FCC accuracy ( F CC 4 vs.  F CC 5 ), suggesting that domain relevance is more significant than sheer volume, in line with our previous findings in [Garcia and Gomez-Perez, 2018]. Training FCC on SemScholar, much larger than Sci- Graph, further improves accuracy, as shown in F CC 6 and F CC 7 .
+
+================================== Ai Message ==================================
+
+They compared with two supervised baselines: the direct combination baseline and the supervised pre-training baseline.

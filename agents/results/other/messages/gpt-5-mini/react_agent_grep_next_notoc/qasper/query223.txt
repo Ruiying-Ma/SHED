@@ -1,0 +1,37 @@
+================================ Human Message =================================
+
+QUERY:
+How many annotators did they have?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_rwg4Hz27JNifloaROmGFqKPD)
+ Call ID: call_rwg4Hz27JNifloaROmGFqKPD
+  Args:
+    pattern: annotat
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+As offensive language has become a rising issue for online communities and social media platforms, researchers have been investigating ways of coping with abusive content and developing systems to detect its different types: cyberbullying, hate speech, aggression, etc. With a few notable exceptions, most research on this topic so far has dealt with English. This is mostly due to the availability of language resources for English.  To address this shortcoming, this paper presents the first Greek annotated dataset for offensive language identification: the Offensive Greek Tweet Dataset (OGTD). OGTD is a manually annotated dataset containing 4,779 posts from Twitter annotated as offensive and not offensive. Along with a detailed description of the dataset, we evaluate several computational models trained and tested on this data.Keywords: offensive language, hate speech, Greek
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_7ZzYtif5INE24doX6NAEmscZ)
+ Call ID: call_7ZzYtif5INE24doX6NAEmscZ
+  Args:
+    pattern: annotators
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+3.1. Pre-processing and annotation
+We collected a set of 49,154 tweets. URLs, Emojis and Emoticons were removed, while usernames and user men- tions were filtered as @USER following the same method- ology described in OLID (Zampieri et al., 2019a). Dupli- cate punctuation such as question and exclamation marks was normalized.  After removing duplicate tweets, the dataset was comprised of 46,218 tweets of which 5,000 were randomly sampled for annotation. We used Light- Tag 2 to annotate the dataset due to its simple and straight- forward user interface and limitless annotations, provided by the software creators. Based on explicit annotation guidelines written in Greek and our proposal of the definition of offensive language, a team of three volunteers were asked to classify each tweet found in the dataset with one of the following tags: Of- fensive , Not Offensive and Spam , which was introduced to filter out spam from the dataset. Inter-annotator agreement was subsequently calculated and labels with 100% agree- ment were deemed acceptable annotations.  In cases of dis- agreement, labels with majority agreement above 66% were selected as the actual annotations of the tweets in ques- tion. For labels with complete disagreement between anno- tators, one of the authors of this paper reviewed the tweets with two extra human judges, to get the desired majority agreement above 66%. Figure 1 is a confusion matrix that shows the inter-annotator agreement or reliability, statisti- cally measured by Cohen’s kappa coefficient.  The bench- mark annotated dataset produced contained 4,779 tweets, containing over 29% offensive content. The final distribu- tion of labels in the new Offensive Greek Tweet Dataset (OGTD), along with the breakdown of the data into train- ing and testing, is showing in Table 1.1 https://github.com/thunlp/paragraph2vec
+2 https://www.lighttag.io/
+ Labels Training Set Test Set Total Offensive 955 446 1,401 Not Offensive 2,390 988 3,378 All 3,345 1,434 4,779
+Table 1: Distribution of labels in the OGTD v1.0.Figure 1: Cohen’s Kappa for each pair of annotators
+
+================================== Ai Message ==================================
+
+Three.

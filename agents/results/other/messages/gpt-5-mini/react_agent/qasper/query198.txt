@@ -1,0 +1,42 @@
+================================ Human Message =================================
+
+QUERY:
+How can an existing bot detection system by customized for health-related research?
+
+TABLE OF CONTENTS (TOC):
+1 | Towards Automatic Bot Detection in Twitter for Health-related Tasks Anahita Davoudi, PhD 1 , Ari Z. Klein, PhD 1 , Abeed Sarker, PhD 2 , Graciela Gonzalez-Hernandez, PhD 1 1 Department of Biostatistics, Epidemiology and Informatics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA 19104 2 Department of Biomedical Informatics, School of Medicine, Emory University, Atlanta, GA 30322
+1.1 | Abstract
+1.2 | Introduction
+1.3 | 1 Methods
+1.3.1 | 1.1 Corpus
+1.3.2 | 1.2 Classification
+1.4 | 2 Results
+1.5 | 3 Discussion
+1.6 | 4 Conclusion
+1.7 | Acknowledgments
+1.8 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_j0yWOwINCvHOiZAyE5zC6tvO)
+ Call ID: call_j0yWOwINCvHOiZAyE5zC6tvO
+  Args:
+    section_id: 1.3.2
+
+================================= Tool Message =================================
+Name: read_section
+
+1.2 Classification
+We used the 8262 ”bot” and ”non-bot” users in experiments to train and evaluate three classification systems. We split the users into 80% (training) and 20% (test) sets, stratified based on the distribution of ”bot” and ”non-bot” users.  The training set includes 61 , 160 , 686 tweets posted by 6610 users, and the held-out test set includes 15 , 703 , 735 tweets posted by 1652 users. First, we evaluated Botometer on our held-out test set. Botometer is a publicly available bot detection system designed for political dot detection. It outputs a score between 0 and 1 for a user, representing the likelihood that a user is a bot.  Second, we used the Botometer score for each user as a feature in training a gradient boosting classifier which is a decision tree-based ensemble machine learning algorithm with gradient boosting 24 and can be used to address class imbalance. To adapt the Botometer scores to our binary classification task, we set the threshold to 0 . 47 , based on performing 5-fold cross validation over the training set.  To further address the class imbalance, we used the Synthetic Minority Over-sampling Technique (SMOTE) 25 to create artificial instances of ”bot” users in the training set. We also performed 5-fold cross validation over the training set to optimize parameters for the classifier; we used exponential as the loss function, set the number of estimators to 200 , and set the learning rate to 0 . 1 .  Third, we used the classifier with an extended set of features that are not used by Botometer. Based on our manual annotation, we consider the following features to be potentially informative for distinguishing ”bot” and ”non-bot” users in health-related data:
+• Tweet Diversity . Considering that ”bot” users may re-post the same tweets,we used the ratio of a user’s unique tweets to the total number of tweets posted by the user, where 0 indicates that the user has posted only the same tweet multiple times, and 1 indicates that each tweet is unique and has been posted only once. As Figure 1 illustrates, a subset of ”bot” users (in the training set) have posted more of the same tweets than ”non-bot” users.
+• URL score . During manual annotation,we found that ”bot” users’ tweets frequently contain URLs ( e.g. , adver- tisements for health-related products, such as medications), so we use the ratio of the number of a user’s tweets containing a URL to the total number of tweets posted by the user.
+• Mean Daily Posts .Considering that ”bot” users may post tweets more frequently than ”non-bot” users, we
+measured the average and standard deviation of the number of tweets posted daily by a user. As Figure 1 illustrates, a subset of ”bot” users post, on average, more tweets daily than ”non-bot” users.
+• Topics .Considering that ”bot” users may post tweets about a limited number of targeted topics, we used topic modeling to the measure the heterogeneity of topics in a user’s tweets.  We used Latent Dirichlet Allocation (LDA) 26 to extract the top five topics from all of the users’ 1000 most recent tweets (or all the tweets if a user has posted less than 1000 tweets), and used the mean of the weights of each topic across all of a user’s tweets.
+• Mean Post Length .Considering that the length of tweets may be different between ”bot” and ”non-bot” users, we used the mean word length and standard deviation of a user’s tweets.Figure 1: The distribution of features for ”bot” and ”non-bot” users in the training set.
+• Profile Picture . In addition to tweet-related features,we used features based on information in users’ profiles. Considering that a ”non-bot” user’s profile picture may be more likely to contain a face, we used a publicly available system iv to detect the number of faces in a profile picture. As Figure 2, illustrates a face was not detected in the profile picture of the majority of ”non-bot” users (in the training set), whereas at least one face was detected in the profile picture of the majority of ”bot” users.
+• User Name . Finally,we used a publicly available lexicon v to detect the presence or absence of a person’s name in a user name. As Figure 2 illustrates, the name of a person is present (1) in approximately half of ”non-bot” user names, whereas the name of a person is absent (0) in the majority of ”bot” user names.iv https://github.com/ageitgey/face_recognition . Accessed: 08/15/2019.  v https://pypi.org/project/gender-guesser/ . Accessed: 07/25/2019.Figure 2: The distribution of faces detected in profile pictures and names detected in user names for ”bot” and ”non- bot” users in the training set.
+
+================================== Ai Message ==================================
+
+Use the existing system (Botometer) as a feature by taking its score and tuning a threshold (0.47 via 5‑fold cross validation), then train a gradient boosting classifier (optimized with 5‑fold CV, exponential loss, 200 estimators, learning rate 0.1) while using SMOTE to address class imbalance. Augment with health-focused features not in Botometer: tweet diversity, URL score, mean daily posts, topic heterogeneity via LDA, mean post length, profile-picture face detection, and person-name detection in usernames.

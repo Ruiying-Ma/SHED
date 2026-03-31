@@ -1,0 +1,57 @@
+================================ Human Message =================================
+
+QUERY:
+What does BEA stand for?
+
+TABLE OF CONTENTS (TOC):
+1 | The CUED’s Grammatical Error Correction Systems for BEA-2019
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2 Low-resource Track Submission 2.1 FST-based Grammatical Error Correction
+1.3.1 | 2.2 Experimental Setup
+1.3.2 | 2.3 Results
+1.3.3 | 2.4 Differences Between CoNLL-2014 and BEA-2019 Dev
+1.4 | 3 Restricted Track Submission
+1.4.1 | 3.1 Experimental Setup
+1.5 | 4 Conclusion
+1.6 | Acknowledgments
+1.7 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_all (call_hsx1xUdonmmjqUyrxA7OSqWI)
+ Call ID: call_hsx1xUdonmmjqUyrxA7OSqWI
+  Args:
+    pattern: BEA
+
+================================= Tool Message =================================
+Name: grep_search_all
+
+1.1 | Abstract
+We describe two entries from the Cambridge University Engineering Department to the BEA 2019 Shared Task on grammatical er- ror correction. Our submission to the low- resource track is based on prior work on us- ing finite state transducers together with strong neural language models.  Our system for the restricted track is a purely neural system con- sisting of neural language models and neural machine translation models trained with back- translation and a combination of checkpoint averaging and fine-tuning – without the help of any additional tools like spell checkers. The latter system has been used inside a separate system combination entry in cooperation with the Cambridge University Computer Lab.
+
+1.2 | 1 Introduction
+The automatic correction of errors in text [ In a such situaction → In such a situation ] is receiv- ing more and more attention from the natural lan- guage processing community. A series of compe- titions has been devoted to grammatical error cor- rection (GEC): the CoNLL-2013 shared task ( Ng et al. , 2013 ), the CoNLL-2014 shared task ( Ng et al.  , 2014 ), and finally the BEA 2019 shared task ( Bryant et al. , 2019 ). This paper presents the contributions from the Cambridge University En- gineering Department to the latest GEC competi- tion at the BEA 2019 workshop.We submitted systems to two different tracks. The low-resource track did not permit the use of parallel training data except a small develop- ment set with around 4K sentence pairs.  For our low-resource system we extended our prior work on finite state transducer based GEC ( Stahlberg et al. , 2019 ) to handle new error types such as punctuation errors as well as insertions and dele- tions of a small number of frequent words. For the restricted track , the organizers provided 1.2M
+pairs (560K without identity mappings) of cor- rected and uncorrected sentences.  Our goal on the restricted track was to explore the potential of purely neural models for grammatical error cor- rection. 1 We confirm the results of Kasewa et al. ( 2018 ) and report substantial gains by applying back-translation ( Sennrich et al. , 2016b ) to GEC – a data augmentation technique common in ma- chine translation. Furthermore, we noticed that large parts of the training data do not match the target domain.  We mitigated the domain gap by over-sampling the in-domain training corpus, and by fine-tuning through continued training. Our final model is an ensemble of four neural ma- chine translation (NMT) models and two neural language models (LMs) with Transformer archi- tecture ( Vaswani et al. , 2017 ).  Our purely neu- ral system was also part of the joint submission with the Cambridge University Computer Lab de- scribed by Yuan et al. ( 2019 ).
+
+1.3.2 | 2.3 Results
+We report M2 ( Dahlmeier and Ng , 2012 ) scores on the CoNLL-2014 test set ( Ng et al. , 2014 ) and span-based ERRANT scores ( Bryant et al. , 2017 ) on the BEA-2019 dev set ( Bryant et al. , 2019 ). On CoNLL-2014 we compare with the best published results with comparable amount of parallel train- ing data.  We refer to ( Bryant et al. , 2019 ) for a full comparison of BEA-2019 systems. We tune our systems on BEA-2019 and only report the per- formance on CoNLL-2014 for comparison to prior work.Tab. 2 summarizes our low-resource experi- ments. Our substitution-only system already out- performs the prior work of Stahlberg et al. ( 2019 ).  Allowing for deletions and insertions improves the ERRANT score on BEA-2019 Dev by 2.57 points. We report further gains on both test sets by en- sembling two language models and increasing the beam size.
+
+1.3.3 | 2.4 Differences Between CoNLL-2014 and BEA-2019 Dev
+Our results in Tab. 2 differ significantly between the CoNLL-2014 test set and the BEA-2019 dev set. Allowing insertions is beneficial on BEA- 2019 Dev but decreases the M2 score on CoNLL- 2014. Increasing the beam size improves our sys- tem by 3.28 points on CoNLL-2014 while the im-
+3 http://www.statmt.org/wmt19/ translation-task. html
+Per Sentence Per Word CoNLL BEA CoNLL BEA Missing 0.35 0.46 1.51% 2.30% Replacement 1.52 1.31 6.62% 6.57% Unnecessary 0.42 0.19 1.83% 0.98% Total 2.29 1.96 9.95% 9.86%
+ Table 3: Number of correction types in CoNLL-2014 and BEA-2019 Dev references.pact on BEA-2019 Dev is smaller (+0.85 points). These differences can be partially explained by comparing the error type frequencies in the refer- ence annotations in both test sets (Tab. 3 ). Samples in CoNLL-2014 generally need more corrections per sentence than in BEA-2019 Dev.  More im- portantly, the CoNLL-2014 test set contains fewer missing words, but much more unnecessary words than BEA-2019 Dev. This mismatch tempers with tuning as we explicitly tune insertion and deletion penalties.
+
+1.4.1 | 3.1 Experimental Setup
+We use neural LMs and neural machine transla- tion (NMT) models in our restricted track entry.B ASE B IG T2T HParams set trans. base trans. big # physical GPUs 4 4 Batch size 4,192 2,048 SGD delay factor 2 4 # training iterations 300K 400K Beam size 4 8
+ Table 4: NMT setups B ASE and B IG used in our exper- iments for the restricted track.Number of Sentences With Identities W/o Identities FCE 28K 18K Lang-8 1,038K 498K NUCLE 57K 21K W&I+LOCNESS 34K 23K Total 1,157K 560K
+ Table 5: BEA-2019 parallel training data with and without removing pairs where source and target sen- tences are the same.Our neural LM is as described in Sec. 2.2 . Our LMs and NMT models share the same subword segmentation. We perform exploratory NMT ex- periments with the B ASE setup, but switch to the B IG setup for our final models. Tab. 4 shows the differences between both setups. Tab.  5 lists some corpus statistics for the BEA-2019 training sets. In our experiments without fine-tuning we decode with the average of the 20 most recent checkpoints ( Junczys-Dowmunt et al. , 2016 ). We use the SGNMT decoder ( Stahlberg et al. , 2017b , 2018b ) in all our experiments. In-domain corpus over-sampling The BEA- 2019 training corpora (Tab. 5 ) differ significantly not only in size but also their closeness to the target domain. The W&I+LOCNESS corpus is most similar to the BEA-2019 dev and test sets in terms of domains and the distribution over En- glish language proficiency, but only consists of 34K sentence pairs.  To increase the importance of in-domain training samples we over-sampled the W&I+LOCNESS corpus with different rates. Tab. 6 shows that over-sampling by factor 4 (i.e. adding the W&I+LOCNESS corpus four times to the training set) improves the ERRAMT F 0 . 5 - score by 2. 2 points on the BEA-2019 dev set and does not lead to substantial losses on the CoNLL-2014 test set. We will over-sample the W&I+LOCNESS corpus by four in all subsequent experiments.Removing identity mappings Previous works often suggested to remove unchanged sentences
+ W&I+LOCNESS Ratio CoNLL-2014 BEA-2019 Dev Over-sampling Rate P R M2 P R ERRANT 1x 1:33 59.88 17.46 40.30 38.20 15.09 29.24 4x 1:8 59.16 17.20 39.76 40.40 16.67 31. 44 8x 1:4 57.73 17.76 39.81 39.19 16.73 30.90
+Table 6: Over-sampling the BEA-2019 in-domain corpus W&I+LOCNESS under B ASE models. The second column contains the ratio of W&I+LOCNESS samples to training samples from the other corpora. Identity CoNLL-2014 BEA-2019 Dev Removal P R M2 P R ERR. × 59.16 17.20 39.76 40.40 16.67 31.44 X 53.34 28.83 45.59 33.04 23.14 30.44
+Table 7: Impact of identity removal on B ASE models.(i.e.  source and target sentences are equal) from the training corpora ( Stahlberg et al. , 2019 ; Zhao et al. , 2019 ; Grundkiewicz and Junczys-Dowmunt , 2018 ). We note that removing these identity map- pings can be seen as measure to control the bal- ance between precision and recall. As shown in Tab.  7 , removing identities encourages the model to make more corrections and thus leads to higher recall but lower precision. It depends on the test set whether this results in an improvement in F 0 . 5 score. For the subsequent experiments we found that removing identities in the parallel training corpora but not in the back-translated synthetic data works well in practice.Back-translation Back-translation ( Sennrich et al.  , 2016b ) has become the most widely used technique to use monolingual data in neural machine translation. Back-translation extends the existing parallel training set by additional training samples with real English target sentences but synthetic source sentences. Different methods have been proposed to synthesize the source sentence such as using dummy tokens ( Sennrich et al. , 2016b ), copying the target sentence ( Currey et al.  , 2017 ), or sampling from or decoding with a reverse sequence-to-sequence model ( Sennrich et al. , 2016b ; Edunov et al. , 2018 ; Kasewa et al. ,
+2018 ). The most popular approach is to generate the synthetic source sentences with a reverse model that is trained to transform target to source sentences using beam search. In GEC, this means that the reverse model learns to introduce errors into a correct English sentence.  Back-translation has been applied successfully to GEC by Kasewa et al. ( 2018 ). We confirm the effectiveness of back-translation in GEC and discuss some of the differences between applying this technique to grammatical error correction and machine translation.Our experiments with back-translation are sum- marized in Tab. 8 . Adding 1M synthetic sentences to the training data already yields very substantial gains on both test sets.  We achieve our best re- sults with 5M synthetic sentences (+8.44 on BEA- 2019 Dev). In machine translation, it is important to maintain a balance between authentic and syn- thetic data ( Sennrich et al. , 2016b ; Poncelas et al. , 2018 ; Sennrich et al. , 2016a ).  Over-sampling the real data is a common practice to rectify that ratio if large amounts of synthetic data are available. In- terestingly, over-sam...(truncated)
+
+================================== Ai Message ==================================
+
+Unanswerable

@@ -1,0 +1,132 @@
+================================ Human Message =================================
+
+QUERY:
+What are the parts of the "multimodal" resources?
+
+TABLE OF CONTENTS (TOC):
+1 | Classifying Diagrams and Their Parts using Graph Neural Networks: A Comparison of Crowd-Sourced and Expert Annotations
+1.1 | Abstract
+1.2 | 1. Introduction
+1.3 | 2. Data
+1.3.1 | 2.1. Crowd-sourced Annotations from AI2D
+1.3.2 | 2.2. Expert Annotations from AI2D-RST
+1.4 | 3. Graph-based Representations
+1.4.1 | 3.1. Nodes
+1.4.1.1 | 3.1.1. Node Types
+1.4.1.2 | 3.1.2. Node Features
+1.4.1.3 | 3.1.3. Discourse Relations
+1.4.2 | 3.2. Edges
+1.5 | 4. Experiments
+1.5.1 | 4.1. Graph Neural Networks
+1.5.2 | 4.2. Hyperparameters and Training
+1.5.3 | 4.3. Tasks
+1.5.3.1 | 4.3.1. Node Classification
+1.5.3.2 | 4.3.2. Graph Classification
+1.6 | 5. Discussion
+1.7 | 6. Conclusion
+1.8 | 7. Bibliographical References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_all (call_zPzTeq9LFsX7R5kbCsOnUdWO)
+ Call ID: call_zPzTeq9LFsX7R5kbCsOnUdWO
+  Args:
+    pattern: multimodal
+
+================================= Tool Message =================================
+Name: grep_search_all
+
+1.1
+1.2
+1.3.1
+1.4.1.3
+1.6
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_UGl15Uw1hBfskvyz3fd4Xqwh)
+ Call ID: call_UGl15Uw1hBfskvyz3fd4Xqwh
+  Args:
+    section_id: 1.1
+
+================================= Tool Message =================================
+Name: read_section
+
+Abstract
+This article compares two multimodal resources that consist of diagrams which describe topics in elementary school natural sciences. Both resources contain the same diagrams and represent their structure using graphs, but differ in terms of their annotation schema and how the annotations have been created – depending on the resource in question – either by crowd-sourced workers or trained experts.  This article reports on two experiments that evaluate how effectively crowd-sourced and expert-annotated graphs can represent the multimodal structure of diagrams for representation learning using various graph neural networks. The results show that the identity of diagram elements can be learned from their layout features, while the expert annotations provide better representations of diagram types.Keywords: multimodality, diagrams, graph neural networks, annotation, crowd-sourcing
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_eYGfadkzIDusa53iUNBX104U)
+ Call ID: call_eYGfadkzIDusa53iUNBX104U
+  Args:
+    section_id: 1.2
+
+================================= Tool Message =================================
+Name: read_section
+
+1. Introduction
+Diagrams are a common feature of many everyday media from newspapers to school textbooks, and not surprisingly, different forms of diagrammatic representation have been studied from various perspectives. To name just a few ex- amples, recent work has examined patterns in diagram de- sign (Hullman and Bach, 2018) and their interpretation in context (Tversky et al. , 2016), and developed frameworks for classifying diagrams (Engelhardt and Richards, 2018) and proposed guidelines for their design (Cheng, 2016). There is also a long-standing interest in processing and gen- erating diagrams computationally (Andr´e and Rist, 1995; Bateman et al. , 2001; Bateman and Henschel, 2007), which is now resurfacing as advances emerging from deep learn- ing for computer vision and natural language processing are brought to bear on diagrammatic representations (Sachan et al., 2018; Choi et al., 2018; Haehn et al., 2019). From the perspective of computational processing, dia- grammatic representations present a formidable challenge, as they involve tasks from both computer vision and nat- ural language processing. On the one hand, diagrams have a spatial organisation – layout – which needs to be segmented to identify meaningful units and their position. Making sense of how diagrams exploit the 2D layout space falls arguably within the domain of computer vision.  On the other hand, diagrams also have a discourse structure , which uses the layout space to set up discourse relations between instances of natural language, various types of im- ages, arrows and lines, thus forming a unified discourse or- ganisation. The need to parse this discourse structure shifts the focus towards the field of natural language processing. Understanding and making inferences about the structure of diagrams and other forms of multimodal discourse may be broadly conceptualised as multimodal discourse parsing .  Recent examples of work in this area include Alikhani et al. (2019) and Otto et al. (2019), who model discourse re- lations between natural language and photographic images, drawing on linguistic theories of coherence and text–image relations, respectively. In most cases, however, predicting a
+single discourse relation covers only a part of the discourse structure. Sachan et al.  (2019) note that there is a need for comprehensive theories and models of multimodal commu- nication, as they can be used to rethink tasks that have been previously considered only from the perspective of natural language processing.Unlike many other areas, the study of diagrammatic rep- resentations is particularly well-resourced, as several mul- timodal resources have been published recently to support research on computational processing of diagrams (Kemb- havi et al. , 2016; Choi et al., 2018; Hiippala et al., under review). This study compares two such resources, AI2D (Kembhavi et al., 2016) and AI2D-RST (Hiippala et al., un- der review), which both feature the same diagrams, as the latter is an extension of the former.  Whereas AI2D features crowd-sourced, non-expert annotations, AI2D-RST pro- vides multiple layers of expert annotations, which are in- formed by state-of-the-art approaches to multimodal com- munication (Bateman et al., 2017) and annotation (Bate- man, 2008; Hiippala, 2015). This provides an interesting setting for comparison and evaluation, as non-expert annotations are cheap to produce and easily outnumber the expert-annotated data, whose pro- duction consumes both time and resources. Expert annota- tions, however, incorporate domain knowledge from multi- modality theory, which is unavailable via crowd-sourcing. Whether expert annotations provide better representations of diagrammatic structures and thus justify their higher cost is one question that this study seeks to answer. Both AI2D and AI2D-RST represent the multimodal struc- ture of diagrams using graphs. This enables learning their representations using graph neural networks, which are gaining currency as a graph is a natural choice for repre- senting many types of data (Wu et al., 2019b).  This article reports on two experiments that evaluate the capability of AI2D and AI2D-RST to represent the multimodal structure of diagrams using graphs, focusing particularly on spatial layout, the hierarchical organisation of diagram elements and their connections expressed using arrows and lines.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_UMMKlW16HX2hoKMrLOmiE2ar)
+ Call ID: call_UMMKlW16HX2hoKMrLOmiE2ar
+  Args:
+    section_id: 1.3.1
+
+================================= Tool Message =================================
+Name: read_section
+
+2.1. Crowd-sourced Annotations from AI2D
+The Allen Institute for Artificial Intelligence Diagrams dataset (AI2D) contains 4903 English-language diagrams, which represent topics in primary school natural sciences, such as food webs, human physiology and life cycles, amounting to a total of 17 classes (Kembhavi et al., 2016). The dataset was originally developed to support research on diagram understanding and visual question answering (Kim et al. , 2018), but has also been used to study the con- textual interpretation of diagrammatic elements, such as ar- rows and lines (Alikhani and Stone, 2018).  The AI2D annotation schema models four types of dia- gram elements: text, graphics, arrows and arrowheads, whereas the semantic relations that hold between these el- ements are described using ten relations from a frame- work for analysing diagrammatic representations in Engel- hardt (2002). Each diagram is represented using a Diagram Parse Graph (DPG), whose nodes stand for diagram ele- ments while the edges between the nodes carry information about their semantic relations.  The annotation for AI2D, which includes layout segmentations for the diagram im- ages, DPGs and a multiple choice question-answer set, was created by crowd-sourced non-expert annotators on Ama- zon Mechanical Turk 1 (Kembhavi et al., 2016, 243).  I have previously argued that describing different types of multimodal structures in diagrammatic representations re- quires different types of graphs (Hiippala and Orekhova, 2018). To exemplify, many forms of multimodal discourse are assumed to possess a hierarchical structure, whose rep- resentation requires a tree graph.  Diagrams, however, use arrows and lines to draw connections between elements that are not necessarily part of the same subtree, and for this rea- son representing connectivity requires a cyclic graph. AI2D DPGs, in turn, conflate the description of semantic rela- tions and connections expressed using diagrammatic ele- ments.  Whether computational modelling of diagrammatic structures, or more generally, multimodal discourse pars- ing, benefits from pulling apart different types of multi- modal structure remains an open question, which we pur- sued by developing an alternative annotation schema for AI2D, named AI2D-RST, which is introduced below.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_kut8qGFeszbKwiYWt69pwyvd)
+ Call ID: call_kut8qGFeszbKwiYWt69pwyvd
+  Args:
+    section_id: 1.4.1.3
+
+================================= Tool Message =================================
+Name: read_section
+
+3.1.3. Discourse Relations
+AI2D-RST models discourse relations using nodes, which have a 25-dimensional, one-hot encoded feature vector to represent the type of discourse relation, which are drawn from Rhetorical Structure Theory (Mann and Thompson, 1988). In AI2D, the discourse relations derived from En- gelhardt (2002) are represented using a 10-dimensional
+one-hot encoded vector, which is associated with edges connecting diagram elements participating in the relation.  Because the two resources draw on different theories and represent discourse relations differently, I use the grouping and connectivity graph for AI2D-RST representations and ignore the edge features in AI2D, as these descriptions at- tempt to describe roughly the same multimodal structures. A comparison of discourse relations is left for a follow-up study focusing on representing the discourse structure of diagrams.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_kLP6ISigO6nqxQVYo2iWmAub)
+ Call ID: call_kLP6ISigO6nqxQVYo2iWmAub
+  Args:
+    section_id: 1.6
+
+================================= Tool Message =================================
+Name: read_section
+
+5. Discussion
+The results for AI2D-RST show that the grouping graph, which represents visual perceptual groups of diagram ele- ments and their hierarchical organisation, provides a robust foundation for describing the spatial organisation of dia- grammatic representations. This kind of generic schema can be expanded beyond diagrams to other modes of ex- pression that make use of the spatial extent, such as entire page layouts.  A description of how the layout space is used can be incorporated into any effort to model discourse rela- tions that may hold between the groups or their parts.The promising results AI2D-RST suggest is that domain experts in multimodal communication should be involved in planning crowd-sourced annotation tasks right from the beginning.  Segmentation, in particular, warrants attention as this phase defines the units of analysis: cut-outs and cross-sections, for instance, use labels and lines to pick out sub-regions of graphical objects, whereas in illustrations the labels often refer to entire objects. Such distinctions should preferably be picked out at the very beginning to be
+incorporated fully into the annotation schema. Tasks related to grouping and connectivity annotation could be crowd-sourced relatively easily, whereas annotating di- agram types and discourse relations may require multi-step procedures and assistance in the form of prompts, as Yung et al. (2019) have recently shown for RST. Involving both expert and crowd-sourced annotators could also alleviate problems related to circularity by forcing domain experts to frame the tasks in terms understandable to crowd-sourced workers (Riezler, 2014). In light of the results for graph classification, one should note that node features are averaged before classification regardless of their connections in the graph . Whereas the expert-annotated grouping graph in AI2D-RST has been pruned from isolated nodes, which ensures that features are propagated to neighbouring nodes, the crowd-sourced AI2D graphs contain both isolated nodes and subgraphs. To what extent these disconnections affect the performance for AI2D warrant a separate study.  Additionally, more ad- vanced techniques than mere averaging, such as pooling, should be explored in future work.Finally, there are many aspects of diagrammatic represen- tation that were not explored in this study.  To begin with, a comparison of representations for discourse structures us- ing the question-answering set accompanying AI2D would be particularly interesting, especially if both AI2D and AI2D-RST graphs were enriched with features from state of the art semantic representations for natural language and graphic elements.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_all (call_VvpO8IPLgcI1WkoKOabyjGkA)
+ Call ID: call_VvpO8IPLgcI1WkoKOabyjGkA
+  Args:
+    pattern: parts of|parts|multimodal resources|multimodal resource|resources that consist of diagrams|consist of diagrams|resources consist
+
+================================= Tool Message =================================
+Name: grep_search_all
+
+1.1
+1.3
+1.4
+1.5.3.1
+1.5.3.2
+1.6
+
+================================== Ai Message ==================================
+
+text, graphics, arrows and arrowheads

@@ -1,0 +1,79 @@
+================================ Human Message =================================
+
+QUERY:
+How does the proposed training framework mitigate the bias pattern?
+
+TABLE OF CONTENTS (TOC):
+1 | Mitigating Annotation Artifacts in Natural Language Inference Datasets to Improve Cross-dataset Generalization Ability Guanhua Zhang 1 , 2 ∗ , Bing Bai 1 ∗ , Junqi Zhang 1 , Kun Bai 1 ,Conghui Zhu 2 , Tiejun Zhao 2 1 Cloud and Smart Industries Group, Tencent, China 2 Harbin Institute of Technology, China { guanhzhang,icebai,benjqzhang,kunbai } @tencent.com , { chzhu,tjzhao } @hit-mtlab.net
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2 Related Work
+1.4 | 3 Making Artifacts Unpredictable
+1.5 | 4 Experimental Results
+1.5.1 | 4.1 Evaluation Scheme
+1.5.2 | 4.2 Experiment Setup
+1.5.3 | 4.3 Can Artifacts Generalize Across Datasets?
+1.5.4 | 4.4 Debiasing Results
+1.6 | 5 Conclusion
+1.7 | References
+1.8 | A Detailed Assumptions and Proof of Theorem 1
+1.9 | B Experiment Setting
+1.9.1 | B.1 Hard-Easy Datasets Setting
+1.9.2 | B.2 Experiment Setup
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_all (call_3tiSqNH4LZwE5CpgW0wVQEi9)
+ Call ID: call_3tiSqNH4LZwE5CpgW0wVQEi9
+  Args:
+    pattern: bias pattern|proposed training framework|mitigate.*bias|debias|artifact.*unpredictable|training framework
+
+================================= Tool Message =================================
+Name: grep_search_all
+
+1.1
+1.2
+1.3
+1.5.3
+1.5.4
+1.6
+1.7
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_9nTbiYfYEQirgHJqxj7hoWUY)
+ Call ID: call_9nTbiYfYEQirgHJqxj7hoWUY
+  Args:
+    section_id: 1.4
+  read_section (call_Ab63vPurghJISjkJvyqI1FZY)
+ Call ID: call_Ab63vPurghJISjkJvyqI1FZY
+  Args:
+    section_id: 1.5.4
+  read_section (call_sV4FQUpvmf9BTY5XahzbeGZS)
+ Call ID: call_sV4FQUpvmf9BTY5XahzbeGZS
+  Args:
+    section_id: 1.1
+
+================================= Tool Message =================================
+Name: read_section
+
+3 Making Artifacts Unpredictable
+Essentially speaking, the problem of the bias pat- tern is that the artifacts in hypotheses are dis- tributed differently among labels, so balancing them across labels may be a good solution to al- leviate the impacts ( Gururangan et al. , 2018 ).Based on the idea proposed by Zhang et al. ( 2019 ), we demonstrate that we can make artifacts in biased datasets balanced across different classes by assigning specific weights for every sample.  We refer the distribution of the acquired weighted dataset as artifact-balanced distribution . We con- sider a supervised NLI task, which is to predict the relationship label y given a sentence pair x , and we denote the hypothesis in x as h . Without loss of generality, we assume that the prior probability of different labels is equal, and then we have the following theorem.Theorem 1.  For any classifier f = f ( x, h ) , and for any loss function ∆( f ( x, h ) , y ) , if we use w = 1 P ( y | h ) as weight for every sample during train- ing, it’s equivalent to training with the artifact- balanced distribution.Detailed assumptions and the proof of the theo- rem is presented in Appendix A .  With the theorem, we can simply use cross predictions to estimate P ( y | h ) in origin datasets and use them as sample weights during training. The step-by-step proce-
+Algorithm 1: Artifact-balanced Learning Input : The dataset { x, h, y } and the number of fold K for cross prediction. Procedure : 01 Estimate P ( y | h ) for every sample by training classifiers and using K -fold cross-predicting strategy.  02 Obtain the weights w = 1 (1 − ǫ ) P ( y | h )+ ǫ for all samples and normalize the sum of the weights. 03 Train and validate models using w as the sample weights.dure for artifact-balanced learning is presented in Algorithm 1.However, it is difficult to precisely estimate the probability P ( y | h ) .  A minor error might lead to a significant difference to the weight, especially when the probability is close to zero. Thus, in practice, we use w = 1 (1 − ǫ ) P ( y | h )+ ǫ as sample weights during training in order to improve the robustness. We can find that as ǫ increases, the weights tend to be uniform, indicating that the de- biasing effect decreases as the smooth term grows.  Moreover, in order to keep the prior probabil- ity P ( Y ) unchanged, we normalize the sum of weights of the three labels to the same.
+
+================================= Tool Message =================================
+Name: read_section
+
+4.4 Debiasing Results
+Effectiveness of Debiasing Focusing on the re- sults when smooth equals 0 . 01 for SNLI and smooth equals 0 . 02 for MultiNLI, we observe that the AUC of Hyp for all testing sets are ap- proximately 0 . 5 , indicating Hyp ’s predictions are approximately equivalent to randomly guessing. Also, the gap between Hard and Easy for Norm significantly decreases comparing with the base- line.  With the smooth, we can conclude that our method effectively alleviates the bias pattern.With other smooth terms, our method still has more or less debiasing abilities. In those testing sets which are not neutral to the bias pattern, the AUC of Hyp always come closer to 0 . 5 compar- ing with the baseline with whatever smooth val- ues. Performances of Norm on Hard and Easy also come closer comparing with the baseline.  Norm trained with SNLI even exceed baseline in Hard with most smooth terms.From the results of Hyp , we can find a trend that the larger the smooth value is, the lower the level of debiasing is, while with a very small or even no smooth value, the AUC may be lower than 0 . 5 .  As mentioned before, we owe this to the imperfect estimation of P ( y | h ) , and we can conclude that a proper smooth value is a prerequisite for the best debiasing effect.Benefits of Debiasing Debiasing may improve models’ generalization ability from two aspects:
+(1) Mitigate the misleading effect of annotation artifacts. (2) Improve models’ semantic learning ability. When the annotation artifacts of the training set cannot be generalized to the testing set, which should be more common in the real-world, pre- dicting by artifacts may hurt models’ performance. Centering on the results of JOCI, in which the bias pattern of MultiNLI is misleading, we find that Norm trained with MultiNLI outperforms baseline after debiasing with all smooth values tested. Furthermore, debiasing can reduce models’ de- pendence on the bias pattern during training, thus force models to better learn semantic information to make predictions. Norm trained with SNLI exceed baseline in JOCI with smooth terms 0 . 01 and 0 . 1 . With larger smooth terms, Norm trained with both SNLI and MultiNLI exceeds baseline in SICK.  Given the fact that JOCI is almost neutral to artifacts in SNLI, and the bias pattern of both SNLI and MultiNLI are even predictive in SICK, we owe these promotions to that our method im- proves models’ semantic learning ability.As to other testing sets like SNLI, MMatch and MMismatch , we notice that the performance of Norm always decreases compared with the baseline.  As mentioned before, both SNLI and MultiNLI are prepared by Huamn Elicited , and their artifacts can be generalized across each other. We owe the drop to that the detrimental effect of mitigating the predictable bias pattern exceeds the beneficial effect of the improvement of semantic learning ability.
+
+================================= Tool Message =================================
+Name: read_section
+
+Abstract
+Natural language inference (NLI) aims at pre- dicting the relationship between a given pair of premise and hypothesis. However, several works have found that there widely exists a bias pattern called annotation artifacts in NLI datasets, making it possible to identify the la- bel only by looking at the hypothesis. This irregularity makes the evaluation results over- estimated and affects models’ generalization ability. In this paper, we consider a more trust- worthy setting, i.e.  , cross-dataset evaluation. We explore the impacts of annotation artifacts in cross-dataset testing. Furthermore, we pro- pose a training framework to mitigate the im- pacts of the bias pattern. Experimental results demonstrate that our methods can alleviate the negative effect of the artifacts and improve the generalization ability of models.
+
+================================== Ai Message ==================================
+
+It mitigates the bias pattern by making artifacts balanced across labels through sample reweighting: each training example is assigned a weight based on the inverse of the estimated hypothesis-only label probability, using \(w = 1 / ((1-\epsilon)P(y|h)+\epsilon)\) with normalization to keep label priors unchanged. The framework estimates \(P(y|h)\) via K-fold cross-prediction and then trains the model with these weights so that dependence on annotation artifacts is reduced.

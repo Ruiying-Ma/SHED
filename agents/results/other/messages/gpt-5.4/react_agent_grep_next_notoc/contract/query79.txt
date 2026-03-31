@@ -1,0 +1,132 @@
+================================ Human Message =================================
+
+HYPOTHESIS:
+Sharing with third-parties: Receiving Party may share some Confidential Information with some third-parties (including consultants, agents and professional advisors).
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_CioHQg30Gnm7C2nDDpTiSyQU)
+ Call ID: call_CioHQg30Gnm7C2nDDpTiSyQU
+  Args:
+    pattern: third part|consultant|agent|professional advisor|advisor|representative|affiliate
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.  The  confidential,proprietary  and  trade  secret  information  of  the  Disclosing  Party  (hereinafter "Confidential Information") provided hereunder is any and all information, in whatever form (including electronic data) that will be disclosed to facilitate the potential transaction of business (related to the provision  of  SAP  Services  to  HRM)  between  the  Parties,  including,  but  not  limited  to, portions  or parts of the November 1, 2012 Agreement (including any schedules  or appendices) between the Province of Nova Scotia and IBM, each Party's disclosure of intellectual property, techniques, sketches,  drawings,  models,  inventions,  know-how,  processes,  apparatus,  equipment,  algorithms, software  programs,  software  source  documents,  and  formulae  related  to  the  current,  future  and proposed  products,  documents  and  services,  research,  experimental  work,  development,  design details and specifications, engineering, financial information, procurement requirements, purchasing, manufacturing,  licensing,  sales  or  service  customer  lists,  business  forecasts,  sales  and merchandizing, and marketing plans and information.   For purposes of this Agreement confidential, proprietary  and  trade  secret  information  of the  Province’s  SAP  Service  Provider  or  any  other Province’s  Service  Provider, any  parent  company,  subsidiary  or  affiliate  of  the  Disclosing  party shall be considered Confidential Information of the Disclosing Party for purposes of this Agreement.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_RftajEkBos9pGcXM0QNBaM2Y)
+ Call ID: call_RftajEkBos9pGcXM0QNBaM2Y
+  Args:
+    pattern: disclose|disclosure|third part|consultant|agent|advisor|representative|need to know|employees|contractor
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+DISCUSSION
+It became apparent during these negotiations that HRM staff needed to be made aware of certain key terms of the PNS’ agreement with its SAP service provider in order to understand and be in a position to negotiate for appropriate service level standards.  The PNS has taken the position that it  cannot  disclose  this  and  other  information  to  HRM  unless  HRM  and  the  PNS  enter  into  a mutual Non-Disclosure Agreement. On July 26, 2013, the PNS forwarded a proposed Non-Disclosure Agreement to staff.  This Non- Disclosure  Agreement  permits  the  PNS  and  HRM  to  disclose  confidential  information  to  each other during the period of negotiations.   Any confidential information exchanged between HRM and the PNS “shall only be used for the purposes of facilitating the business relationship between the Parties” and once the agreement terminates each party must “promptly return or destroy” all confidential information received from the other party.It is the intention of HRM and the PNS to execute an agreement for the provision of SAP support services  before  September  9,  2013.     As  a  result,  staff  is  seeking  direction  on  this  matter  from Regional  Council  on  August  6,  2013,  rather  than  waiting  for  the  next  scheduled  meeting  of Regional Council on September 10, 2013.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_sWB1pES7f8a2fP7I90hEqqBj)
+ Call ID: call_sWB1pES7f8a2fP7I90hEqqBj
+  Args:
+    pattern: employees|officer|director|consultant|agent|advisor|representative|third part|professional
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+14. This Agreement constitutes the entire agreement, written or verbal,between the parties with respect to  the  terms  set  forth  herein.    This  Agreement  may  not  be  amended  except  in  writing  signed  by  a duly authorized representative of the respective parties.[The space below is intentionally left blank.]
+4
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_gv7ABjLBKj4DpR8RSj5YYcRW)
+ Call ID: call_gv7ABjLBKj4DpR8RSj5YYcRW
+  Args:
+    pattern: shall not disclose|may disclose|not disclose|disclose.*except|except.*disclose|permitted.*disclose
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+3.The  Receiving  Party  agrees  that  Confidential  Information  shall  be  used  only  for  the  purposes  of facilitating  the  business  relationship  between  the  Parties.     Additionally,  subject  to  section  4  below, the  Receiving  Party  shall  not  disclose  Confidential  Information  to  any  third  party  without  the  prior written  approval  of  the  Disclosing  Party.     The  Receiving  Party  shall  maintain  the  Confidential Information  with  at  least  the  same  degree  of  care  that  the  Receiving  Party  uses  to  protect  its  own similar categories of confidential and proprietary information, but no less than a reasonable degree of  care  under  the  circumstances.     The  Receiving  Party  shall  not  make  any  copies  of  Confidential Information  except  as  necessary  to  perform  hereunder.    Each  Party  shall  be  responsible  for  any breach  of  this  Agreement  by  such  Party,  its  employees,  agents,  officials,  representatives  or consultants acting within the scope of their engagement or employment.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_5Zi8hkJ5SuySd5BZzmjgHAQB)
+ Call ID: call_5Zi8hkJ5SuySd5BZzmjgHAQB
+  Args:
+    pattern: section 4|4\.|employees, agents|representatives or consultants
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Item No.  14.1 Halifax Regional Council August 6, 2013
+TO: Mayor Savage and Members of Halifax Regional Council SUBMITTED BY: ___________________________________________________________ Richard Butts, Chief Administrative Officer __________________________________________________________ Mike Labrecque, Deputy Chief Administrative Officer DATE: July 31, 2013 SUBJECT: Non-Disclosure Agreement with the Province of Nova Scotia
+ORIGIN
+On June 25, 2013, Regional Council authorized the CAO to negotiate and execute an agreement for SAP support services with the Province of Nova Scotia.
+LEGISLATIVE AUTHORITY
+Under section 58(5) of the HRM Charter, Regional Council has the power to make and carry out a  contract.    Under  section  10(3)  of  the  HRM  Charter,  the  Mayor  and  Clerk  may  sign  any document to which the Municipality is a party on behalf of the Municipality.
+RECOMMENDATION
+It  is  recommended  that  Regional  Council  authorize  the  Mayor  and  Clerk  to  sign  a  Non- Disclosure Agreement with the Province of Nova Scotia with terms and conditions substantially similar to the draft agreement attached hereto as Attachment “A”.Non-Disclosure Agreement with the Province of NS - 2 - Council Report
+August 6, 2013
+BACKGROUND
+In furtherance of the June 25, 2013 directive of Regional Council, staff entered into negotiations with the Province of Nova Scotia  (“PNS”) on those terms and conditions that were not  already agreed to during transition planning.
+DISCUSSION
+It became apparent during these negotiations that HRM staff needed to be made aware of certain key terms of the PNS’ agreement with its SAP service provider in order to understand and be in a position to negotiate for appropriate service level standards.  The PNS has taken the position that it  cannot  disclose  this  and  other  information  to  HRM  unless  HRM  and  the  PNS  enter  into  a mutual Non-Disclosure Agreement. On July 26, 2013, the PNS forwarded a proposed Non-Disclosure Agreement to staff.  This Non- Disclosure  Agreement  permits  the  PNS  and  HRM  to  disclose  confidential  information  to  each other during the period of negotiations.   Any confidential information exchanged between HRM and the PNS “shall only be used for the purposes of facilitating the business relationship between the Parties” and once the agreement terminates each party must “promptly return or destroy” all confidential information received from the other party.It is the intention of HRM and the PNS to execute an agreement for the provision of SAP support services  before  September  9,  2013.     As  a  result,  staff  is  seeking  direction  on  this  matter  from Regional  Council  on  August  6,  2013,  rather  than  waiting  for  the  next  scheduled  meeting  of Regional Council on September 10, 2013.
+FINANCIAL IMPLICATIONS
+N/A
+COMMUNITY ENGAGEMENT
+N/A
+ENVIRONMENTAL IMPLICATIONS
+N/A
+Non-Disclosure Agreement with the Province of NS - 3 - Council Report
+August 6, 2013
+ALTERNATIVES
+Regional  Council  could  decline  to  authorize  execution  of  the  Non-Disclosure  Agreement,  in which  case  staff  will,  in  accordance  with  the  June  25,  2013  directive  of  Regional  Council, request  that the  PNS  continue to  negotiate with  HRM  with  the goal  of executing an agreement for  SAP  support  services,  notwithstanding  HRM’s  refusal  to  sign  the  Non-Disclosure Agreement. If  negotiations  are  permitted  to  continue  despite  HRM’s  refusal  to  sign  the  Non-Disclosure Agreement, it is  anticipated that the  PNS will refuse to  provide HRM  with  certain  confidential information  that  might  assist  HRM  in  formulating  and  pursuing  an  appropriate  negotiation position.
+ATTACHMENTS
+Attachment “A”: Draft Non-Disclosure Agreement
+______________________________________________________________________________ A copy of this report can be obtained online at http://www.halifax.ca/council/agendasc/cagenda.html then choose the appropriate meeting date, or by contacting the Office of the Municipal Clerk at 490-4210, or Fax 490-4208.  Report Prepared by: David Greener, Senior Solicitor, Legal Services, 490-3960 Report Approved by: ________________________________________________ Martin Ward, Q.C., Acting Director, Legal Services, 490-3960 ______________________________________________________________________________
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_UxvqUQs9JYjRKBUcYOFaQQQg)
+ Call ID: call_UxvqUQs9JYjRKBUcYOFaQQQg
+  Args:
+    pattern: 4\.(.|\n)*
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Item No.  14.1 Halifax Regional Council August 6, 2013
+TO: Mayor Savage and Members of Halifax Regional Council SUBMITTED BY: ___________________________________________________________ Richard Butts, Chief Administrative Officer __________________________________________________________ Mike Labrecque, Deputy Chief Administrative Officer DATE: July 31, 2013 SUBJECT: Non-Disclosure Agreement with the Province of Nova Scotia
+ORIGIN
+On June 25, 2013, Regional Council authorized the CAO to negotiate and execute an agreement for SAP support services with the Province of Nova Scotia.
+LEGISLATIVE AUTHORITY
+Under section 58(5) of the HRM Charter, Regional Council has the power to make and carry out a  contract.    Under  section  10(3)  of  the  HRM  Charter,  the  Mayor  and  Clerk  may  sign  any document to which the Municipality is a party on behalf of the Municipality.
+RECOMMENDATION
+It  is  recommended  that  Regional  Council  authorize  the  Mayor  and  Clerk  to  sign  a  Non- Disclosure Agreement with the Province of Nova Scotia with terms and conditions substantially similar to the draft agreement attached hereto as Attachment “A”.Non-Disclosure Agreement with the Province of NS - 2 - Council Report
+August 6, 2013
+BACKGROUND
+In furtherance of the June 25, 2013 directive of Regional Council, staff entered into negotiations with the Province of Nova Scotia  (“PNS”) on those terms and conditions that were not  already agreed to during transition planning.
+DISCUSSION
+It became apparent during these negotiations that HRM staff needed to be made aware of certain key terms of the PNS’ agreement with its SAP service provider in order to understand and be in a position to negotiate for appropriate service level standards.  The PNS has taken the position that it  cannot  disclose  this  and  other  information  to  HRM  unless  HRM  and  the  PNS  enter  into  a mutual Non-Disclosure Agreement. On July 26, 2013, the PNS forwarded a proposed Non-Disclosure Agreement to staff.  This Non- Disclosure  Agreement  permits  the  PNS  and  HRM  to  disclose  confidential  information  to  each other during the period of negotiations.   Any confidential information exchanged between HRM and the PNS “shall only be used for the purposes of facilitating the business relationship between the Parties” and once the agreement terminates each party must “promptly return or destroy” all confidential information received from the other party.It is the intention of HRM and the PNS to execute an agreement for the provision of SAP support services  before  September  9,  2013.     As  a  result,  staff  is  seeking  direction  on  this  matter  from Regional  Council  on  August  6,  2013,  rather  than  waiting  for  the  next  scheduled  meeting  of Regional Council on September 10, 2013.
+FINANCIAL IMPLICATIONS
+N/A
+COMMUNITY ENGAGEMENT
+N/A
+ENVIRONMENTAL IMPLICATIONS
+N/A
+Non-Disclosure Agreement with the Province of NS - 3 - Council Report
+August 6, 2013
+ALTERNATIVES
+Regional  Council  could  decline  to  authorize  execution  of  the  Non-Disclosure  Agreement,  in which  case  staff  will,  in  accordance  with  the  June  25,  2013  directive  of  Regional  Council, request  that the  PNS  continue to  negotiate with  HRM  with  the goal  of executing an agreement for  SAP  support  services,  notwithstanding  HRM’s  refusal  to  sign  the  Non-Disclosure Agreement. If  negotiations  are  permitted  to  continue  despite  HRM’s  refusal  to  sign  the  Non-Disclosure Agreement, it is  anticipated that the  PNS will refuse to  provide HRM  with  certain  confidential information  that  might  assist  HRM  in  formulating  and  pursuing  an  appropriate  negotiation position.
+ATTACHMENTS
+Attachment “A”: Draft Non-Disclosure Agreement
+______________________________________________________________________________ A copy of this report can be obtained online at http://www.halifax.ca/council/agendasc/cagenda.html then choose the appropriate meeting date, or by contacting the Office of the Municipal Clerk at 490-4210, or Fax 490-4208.  Report Prepared by: David Greener, Senior Solicitor, Legal Services, 490-3960 Report Approved by: ________________________________________________ Martin Ward, Q.C., Acting Director, Legal Services, 490-3960 ______________________________________________________________________________
+
+================================== Ai Message ==================================
+
+Contradiction

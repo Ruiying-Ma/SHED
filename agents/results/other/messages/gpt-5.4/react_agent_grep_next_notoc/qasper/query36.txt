@@ -1,0 +1,60 @@
+================================ Human Message =================================
+
+QUERY:
+What supervised baselines did they compare with?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_3cdE9J4JjnCkuEa96jiMGFnC)
+ Call ID: call_3cdE9J4JjnCkuEa96jiMGFnC
+  Args:
+    pattern: supervised baselines|baseline
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Compared to natural images, understanding sci- entific figures is particularly hard for machines. However, there is a valuable source of informa- tion in scientific literature that until now has re- mained untapped: the correspondence between a figure and its caption. In this paper we investi- gate what can be learnt by looking at a large num- ber of figures and reading their captions, and in- troduce a figure-caption correspondence learning task that makes use of our observations.  Train- ing visual and language networks without super- vision other than pairs of unconstrained figures and captions is shown to successfully solve this task. We also show that transferring lexical and semantic knowledge from a knowledge graph sig- nificantly enriches the resulting features. Finally, we demonstrate the positive impact of such features in other tasks involving scientific text and figures, like multi-modal classification and machine com- prehension for question answering, outperforming supervised baselines and ad-hoc approaches.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_goNXKrUAbGggylK5oj6g9WkF)
+ Call ID: call_goNXKrUAbGggylK5oj6g9WkF
+  Args:
+    pattern: supervised
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Compared to natural images, understanding sci- entific figures is particularly hard for machines. However, there is a valuable source of informa- tion in scientific literature that until now has re- mained untapped: the correspondence between a figure and its caption. In this paper we investi- gate what can be learnt by looking at a large num- ber of figures and reading their captions, and in- troduce a figure-caption correspondence learning task that makes use of our observations.  Train- ing visual and language networks without super- vision other than pairs of unconstrained figures and captions is shown to successfully solve this task. We also show that transferring lexical and semantic knowledge from a knowledge graph sig- nificantly enriches the resulting features. Finally, we demonstrate the positive impact of such features in other tasks involving scientific text and figures, like multi-modal classification and machine com- prehension for question answering, outperforming supervised baselines and ad-hoc approaches.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_1lFFmGrKTva3jIhKi3wyLZ6S)
+ Call ID: call_1lFFmGrKTva3jIhKi3wyLZ6S
+  Args:
+    pattern: Section|classification|question answering|baseline
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Compared to natural images, understanding sci- entific figures is particularly hard for machines. However, there is a valuable source of informa- tion in scientific literature that until now has re- mained untapped: the correspondence between a figure and its caption. In this paper we investi- gate what can be learnt by looking at a large num- ber of figures and reading their captions, and in- troduce a figure-caption correspondence learning task that makes use of our observations.  Train- ing visual and language networks without super- vision other than pairs of unconstrained figures and captions is shown to successfully solve this task. We also show that transferring lexical and semantic knowledge from a knowledge graph sig- nificantly enriches the resulting features. Finally, we demonstrate the positive impact of such features in other tasks involving scientific text and figures, like multi-modal classification and machine com- prehension for question answering, outperforming supervised baselines and ad-hoc approaches.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_3q5vc5ZVOat8MvS3LvqTraqz)
+ Call ID: call_3q5vc5ZVOat8MvS3LvqTraqz
+  Args:
+    pattern: ad-hoc|VGG|ResNet|LSTM|SVM|logistic|random forest|caption
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Compared to natural images, understanding sci- entific figures is particularly hard for machines. However, there is a valuable source of informa- tion in scientific literature that until now has re- mained untapped: the correspondence between a figure and its caption. In this paper we investi- gate what can be learnt by looking at a large num- ber of figures and reading their captions, and in- troduce a figure-caption correspondence learning task that makes use of our observations.  Train- ing visual and language networks without super- vision other than pairs of unconstrained figures and captions is shown to successfully solve this task. We also show that transferring lexical and semantic knowledge from a knowledge graph sig- nificantly enriches the resulting features. Finally, we demonstrate the positive impact of such features in other tasks involving scientific text and figures, like multi-modal classification and machine com- prehension for question answering, outperforming supervised baselines and ad-hoc approaches.
+
+================================== Ai Message ==================================
+
+Unanswerable

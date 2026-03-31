@@ -1,0 +1,291 @@
+================================ Human Message =================================
+
+QUERY:
+How much has the effective tax rate of Corning changed between FY2021 and FY2022?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_6lKaLlB1vPidw58h8IGVT6oo)
+ Call ID: call_6lKaLlB1vPidw58h8IGVT6oo
+  Args:
+    pattern: effective tax rate
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Provision for Income Taxes
+For the year ended December 31, 2022, the effective tax rate differed from the U.S. statutory rate of 21% primarily due to the following:
+• A net provision of $67 million due to changes in tax reserves;
+• A net provision of $40 million due to differences arising from foreign earnings; and
+• A net provision of $38 million due to changes in valuation allowance assessments, offset by
+ • A net benefit of $60 million due to tax credits; and
+• A net benefit of $49 million due to foreign derived intangible income.For the year ended December 31, 2021, the effective tax rate differed from the U.S. statutory rate of 21% primarily due to the following:
+• A net benefit of $62 million due to tax credits; and
+• A net benefit of $37 million related to share-based compensation payments, offset by
+ • A net provision of $52 million due to differences arising from foreign earnings, including the impact of intercompany asset sales.The U.S. enacted the Inflation Reduction Act of 2022 (“IRA”) in August 2022, which, among other sections, creates a new book minimum tax of at least 15% of consolidated pre-tax income for corporations with average book income in excess of $1 billion.  This provision of the IRA will first apply to the Company in 2024. We do not expect the IRA to have a material impact on our effective tax rate. In addition, we are currently evaluating the various credits available under IRA and its impact to Corning’s financial position and results of operations, including the effective tax rate.Refer to Note 7 (Income Taxes) in the accompanying notes to the consolidated financial statements for further details regarding income tax matters.26
+Table of Contents
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_j8RiuOjEtQyiOQd5e9aPNDmE)
+ Call ID: call_j8RiuOjEtQyiOQd5e9aPNDmE
+  Args:
+    pattern: tax rate
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Provision for Income Taxes
+For the year ended December 31, 2022, the effective tax rate differed from the U.S. statutory rate of 21% primarily due to the following:
+• A net provision of $67 million due to changes in tax reserves;
+• A net provision of $40 million due to differences arising from foreign earnings; and
+• A net provision of $38 million due to changes in valuation allowance assessments, offset by
+ • A net benefit of $60 million due to tax credits; and
+• A net benefit of $49 million due to foreign derived intangible income.For the year ended December 31, 2021, the effective tax rate differed from the U.S. statutory rate of 21% primarily due to the following:
+• A net benefit of $62 million due to tax credits; and
+• A net benefit of $37 million related to share-based compensation payments, offset by
+ • A net provision of $52 million due to differences arising from foreign earnings, including the impact of intercompany asset sales.The U.S. enacted the Inflation Reduction Act of 2022 (“IRA”) in August 2022, which, among other sections, creates a new book minimum tax of at least 15% of consolidated pre-tax income for corporations with average book income in excess of $1 billion.  This provision of the IRA will first apply to the Company in 2024. We do not expect the IRA to have a material impact on our effective tax rate. In addition, we are currently evaluating the various credits available under IRA and its impact to Corning’s financial position and results of operations, including the effective tax rate.Refer to Note 7 (Income Taxes) in the accompanying notes to the consolidated financial statements for further details regarding income tax matters.26
+Table of Contents
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_sMVvLX1UAlrDQdpcEgbTTLSw)
+ Call ID: call_sMVvLX1UAlrDQdpcEgbTTLSw
+  Args:
+    pattern: %.*effective tax rate|effective tax rate.*%|effective tax.*rate.*2021|effective tax.*2022
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Provision for Income Taxes
+For the year ended December 31, 2022, the effective tax rate differed from the U.S. statutory rate of 21% primarily due to the following:
+• A net provision of $67 million due to changes in tax reserves;
+• A net provision of $40 million due to differences arising from foreign earnings; and
+• A net provision of $38 million due to changes in valuation allowance assessments, offset by
+ • A net benefit of $60 million due to tax credits; and
+• A net benefit of $49 million due to foreign derived intangible income.For the year ended December 31, 2021, the effective tax rate differed from the U.S. statutory rate of 21% primarily due to the following:
+• A net benefit of $62 million due to tax credits; and
+• A net benefit of $37 million related to share-based compensation payments, offset by
+ • A net provision of $52 million due to differences arising from foreign earnings, including the impact of intercompany asset sales.The U.S. enacted the Inflation Reduction Act of 2022 (“IRA”) in August 2022, which, among other sections, creates a new book minimum tax of at least 15% of consolidated pre-tax income for corporations with average book income in excess of $1 billion.  This provision of the IRA will first apply to the Company in 2024. We do not expect the IRA to have a material impact on our effective tax rate. In addition, we are currently evaluating the various credits available under IRA and its impact to Corning’s financial position and results of operations, including the effective tax rate.Refer to Note 7 (Income Taxes) in the accompanying notes to the consolidated financial statements for further details regarding income tax matters.26
+Table of Contents
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_LrW0OCQoRiYVTdHvUJpKAC83)
+ Call ID: call_LrW0OCQoRiYVTdHvUJpKAC83
+  Args:
+    pattern: (?i)effective tax rate
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Provision for Income Taxes
+For the year ended December 31, 2022, the effective tax rate differed from the U.S. statutory rate of 21% primarily due to the following:
+• A net provision of $67 million due to changes in tax reserves;
+• A net provision of $40 million due to differences arising from foreign earnings; and
+• A net provision of $38 million due to changes in valuation allowance assessments, offset by
+ • A net benefit of $60 million due to tax credits; and
+• A net benefit of $49 million due to foreign derived intangible income.For the year ended December 31, 2021, the effective tax rate differed from the U.S. statutory rate of 21% primarily due to the following:
+• A net benefit of $62 million due to tax credits; and
+• A net benefit of $37 million related to share-based compensation payments, offset by
+ • A net provision of $52 million due to differences arising from foreign earnings, including the impact of intercompany asset sales.The U.S. enacted the Inflation Reduction Act of 2022 (“IRA”) in August 2022, which, among other sections, creates a new book minimum tax of at least 15% of consolidated pre-tax income for corporations with average book income in excess of $1 billion.  This provision of the IRA will first apply to the Company in 2024. We do not expect the IRA to have a material impact on our effective tax rate. In addition, we are currently evaluating the various credits available under IRA and its impact to Corning’s financial position and results of operations, including the effective tax rate.Refer to Note 7 (Income Taxes) in the accompanying notes to the consolidated financial statements for further details regarding income tax matters.26
+Table of Contents
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_3nUrj5ojc7hZXmwBTFQ1urOX)
+ Call ID: call_3nUrj5ojc7hZXmwBTFQ1urOX
+  Args:
+    pattern: Note 7 \(Income Taxes\)
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Provision for Income Taxes
+For the year ended December 31, 2022, the effective tax rate differed from the U.S. statutory rate of 21% primarily due to the following:
+• A net provision of $67 million due to changes in tax reserves;
+• A net provision of $40 million due to differences arising from foreign earnings; and
+• A net provision of $38 million due to changes in valuation allowance assessments, offset by
+ • A net benefit of $60 million due to tax credits; and
+• A net benefit of $49 million due to foreign derived intangible income.For the year ended December 31, 2021, the effective tax rate differed from the U.S. statutory rate of 21% primarily due to the following:
+• A net benefit of $62 million due to tax credits; and
+• A net benefit of $37 million related to share-based compensation payments, offset by
+ • A net provision of $52 million due to differences arising from foreign earnings, including the impact of intercompany asset sales.The U.S. enacted the Inflation Reduction Act of 2022 (“IRA”) in August 2022, which, among other sections, creates a new book minimum tax of at least 15% of consolidated pre-tax income for corporations with average book income in excess of $1 billion.  This provision of the IRA will first apply to the Company in 2024. We do not expect the IRA to have a material impact on our effective tax rate. In addition, we are currently evaluating the various credits available under IRA and its impact to Corning’s financial position and results of operations, including the effective tax rate.Refer to Note 7 (Income Taxes) in the accompanying notes to the consolidated financial statements for further details regarding income tax matters.26
+Table of Contents
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_cOUytCH7J6fUGd5uVCJl2g08)
+ Call ID: call_cOUytCH7J6fUGd5uVCJl2g08
+  Args:
+    pattern: 2022.*effective tax rate.*%|effective tax rate.*2022.*%|2021.*effective tax rate.*%
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Provision for Income Taxes
+For the year ended December 31, 2022, the effective tax rate differed from the U.S. statutory rate of 21% primarily due to the following:
+• A net provision of $67 million due to changes in tax reserves;
+• A net provision of $40 million due to differences arising from foreign earnings; and
+• A net provision of $38 million due to changes in valuation allowance assessments, offset by
+ • A net benefit of $60 million due to tax credits; and
+• A net benefit of $49 million due to foreign derived intangible income.For the year ended December 31, 2021, the effective tax rate differed from the U.S. statutory rate of 21% primarily due to the following:
+• A net benefit of $62 million due to tax credits; and
+• A net benefit of $37 million related to share-based compensation payments, offset by
+ • A net provision of $52 million due to differences arising from foreign earnings, including the impact of intercompany asset sales.The U.S. enacted the Inflation Reduction Act of 2022 (“IRA”) in August 2022, which, among other sections, creates a new book minimum tax of at least 15% of consolidated pre-tax income for corporations with average book income in excess of $1 billion.  This provision of the IRA will first apply to the Company in 2024. We do not expect the IRA to have a material impact on our effective tax rate. In addition, we are currently evaluating the various credits available under IRA and its impact to Corning’s financial position and results of operations, including the effective tax rate.Refer to Note 7 (Income Taxes) in the accompanying notes to the consolidated financial statements for further details regarding income tax matters.26
+Table of Contents
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_aoevXu8WCvHL3F7YSB0IvctD)
+ Call ID: call_aoevXu8WCvHL3F7YSB0IvctD
+  Args:
+    pattern: \d+\.?\d*%.*effective|effective.*\d+\.?\d*%|effective tax.*rate.*\d+\.?\d*%
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Optical Communications Segment
+We invented the world’s first low-loss optical fiber in 1970. Since that milestone, we have continued to pioneer optical fiber, cable and connectivity solutions. As global demand driven by video usage grows exponentially, telecommunications networks continue to migrate from copper to optical-based systems that can deliver the required cost-effective capacity. Our experience puts us in a unique position to design and deliver optical solutions that reach every edge of the communications network. The Optical Communications segment is divided into two main product groupings – carrier network and enterprise network. The carrier network group consists primarily of products and solutions for optical-based communications infrastructure for services such as video, data and voice communications. The enterprise network group consists primarily of optical-based communication networks sold to businesses, governments and individuals for their own use.2
+Table of Contents
+ Our carrier network product portfolio encompasses an array of optical fiber products, including Vascade® optical fibers for use in submarine networks; LEAF® optical fiber for long-haul, regional and metropolitan networks; SMF-28® ULL and TXF® fiber for more scalable long-haul and regional networks; SMF-28e+™ single-mode optical fiber providing additional transmission wavelengths in metropolitan and access networks and ClearCurve® ultra-bendable single-mode fiber for use in multiple- dwelling units and fiber-to-the-home applications.   For high performance across the range of long-haul, metro, access and fiber-to-the-home network applications, SMF- 28® Ultra and SMF-28® Contour fibers deliver industry-leading attenuation, compatibility and improved macrobend performance in one fiber. A portion of our optical fiber is sold directly to end users and third-party cablers globally. Our remaining fiber production is cabled internally and sold to end users as either bulk cable or as part of an integrated optical solution.  Our cable products, including the RocketRibbon® and miniXtend® portfolios, support various outdoor, indoor/outdoor and indoor applications and include a broad range of loose tube, ribbon and drop cable designs with flame-retardant versions available for indoor and indoor/outdoor use including 5G networks. In addition to optical fiber and cable, our carrier network product portfolio also includes hardware and equipment products, including cable assemblies, fiber-optic hardware, fiber-optic connectors, optical components and couplers, closures, network interface devices and other accessories. These products may be sold as individual components or as part of integrated optical connectivity solutions designed for various carrier network applications.  Examples of these solutions include our Evolv™ platform, which provides pre-connectorized solutions for cost-effectively deploying fiber-to-the-home and 5G networks; and the Centrix platform, which provides a fiber management system with industry-leading density and innovative jumper routing that can be deployed in a wide variety of carrier switching centers. In addition to our optical-based portfolio, our carrier network portfolio also contains select copper-based products including subscriber demarcation, connection and protection devices, xDSL (different variations of digital subscriber lines) passive solutions and outside plant enclosures.Our enterprise network portfolio leverages optical fiber products, including ClearCurve® ultra-bendable multimode fiber for private and hyperscale data centers and other enterprise network applications. Our hardware and equipment for enterprise network applications include cable assemblies, fiber-optic hardware, fiber-optic connectors, optical components and couplers, closures and other accessories. These products may be sold as individual components or as part of integrated optical connectivity solutions designed for various network applications, including hyperscale data centers.  Examples of enterprise network solutions include the EDGE® platform, which provides high-density pre- connectorized cabling solutions for data center applications, supporting a path to speeds of 400G and beyond and Everon™ Network Solutions, which provide next- generation cellular connectivity products for interior spaces of all sizes.Our optical fiber manufacturing facilities are in North Carolina, China, India and a new facility in Poland as of the third quarter of 2022.  Cabling operations are in North Carolina, Poland and smaller regional locations. Our manufacturing operations for hardware and equipment products are in Texas, Mexico, Brazil, Germany, Poland and China.Patent protection is important to the segment’s operations. The segment has an extensive portfolio of patents relating to its products, technologies and manufacturing processes. The segment licenses certain of its patents to third parties and generates revenue from these licenses, although the royalty income is not currently material to this segment’s operating results.  We are licensed to use certain patents owned by others, which are considered important to the segment’s operations. Refer to the material under the heading “Patents and Trademarks” for more information.The Optical Communications segment represented 34% of Corning’s total segment net sales in 2022.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_UdWCo1LyyJLmzI68io65YcPX)
+ Call ID: call_UdWCo1LyyJLmzI68io65YcPX
+  Args:
+    pattern: Provision for income taxes|Provision for Income Taxes|Income tax|Income Taxes|effective tax
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Income Before Income Taxes
+The translation impact of fluctuations in foreign currency exchange rates, including the impact of hedges realized in the current year, adversely impacted Corning’s income before income taxes by $142 million for the year ended December 31, 2022, when compared to the same period in 2021.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_ngAdpNBQPZpalIcU6DOGJRXJ)
+ Call ID: call_ngAdpNBQPZpalIcU6DOGJRXJ
+  Args:
+    pattern: % for the year ended December 31, 2022|effective rate for the year ended December 31, 2022|effective tax rate for the year ended
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_757UFDGxYM3xP5H6CTG7dDFY)
+ Call ID: call_757UFDGxYM3xP5H6CTG7dDFY
+  Args:
+    pattern: effective rate
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_H4utWm89fdFo4359wdH5nxeJ)
+ Call ID: call_H4utWm89fdFo4359wdH5nxeJ
+  Args:
+    pattern: %.*2022.*2021|2022.*21%|2021.*21%|effective.*rate.*year.*2021|effective.*rate.*year.*2022|income tax.*rate|tax rate.*2022|tax rate.*2021
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+2022 Results
+Net sales for the year ended December 31, 2022 were $14.2 billion, a net increase of $107 million, or 1%, when compared to the year ended December 31, 2021. This is driven by 15% growth in segment net sales in Optical Communications of $674 million and 34% growth in Hemlock and Emerging Growth Businesses of $419 million, which helped offset a $394 million decrease in Display Technologies.  In addition, movements in foreign exchange rates adversely impacted Corning’s consolidated net sales by $616 million for the year ended December 31, 2022, when compared to the same period in 2021.For the year ended December 31, 2022, we generated net income attributable to Corning Incorporated of $1,316 million, or $1.54 per diluted share, compared to net income attributable to Corning Incorporated of $1,906 million, or $1. 28 per diluted share, for the year ended December 31, 2021. When compared to 2021, the $590 million decrease was primarily driven by a $238 million increase in severance, accelerated depreciation, asset write-offs and other related charges, a $50 million increase in litigation, regulatory and other legal matters and a $120 million adverse impact from foreign currency translation.Diluted earnings per share for the year ended December 31, 2022 increased by $0. 26 per diluted share, or 20%, when compared to the year ended December 31, 2021, primarily driven by the immediate repurchase and retirement of 35 million common shares which resulted in an $803 million one-time reduction to net income available to common shareholders in 2021, partially offset by the decrease in net income attributable to Corning Incorporated as described above.   Refer to Note 16 (Shareholders’ Equity) and Note 17 (Earnings per Common Share) in the accompanying notes to the consolidated financial statements for additional information.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_4WZ9wIQsPaIkxzlSnjdwlMzP)
+ Call ID: call_4WZ9wIQsPaIkxzlSnjdwlMzP
+  Args:
+    pattern: Income tax.*expense|Provision.*income taxes|Provision for income taxes|Provision for Income Taxes|Provision.*for Income Taxes|Income tax.*rate.*%|provision of income taxes.*$
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Provision for Income Taxes
+For the year ended December 31, 2022, the effective tax rate differed from the U.S. statutory rate of 21% primarily due to the following:
+• A net provision of $67 million due to changes in tax reserves;
+• A net provision of $40 million due to differences arising from foreign earnings; and
+• A net provision of $38 million due to changes in valuation allowance assessments, offset by
+ • A net benefit of $60 million due to tax credits; and
+• A net benefit of $49 million due to foreign derived intangible income.For the year ended December 31, 2021, the effective tax rate differed from the U.S. statutory rate of 21% primarily due to the following:
+• A net benefit of $62 million due to tax credits; and
+• A net benefit of $37 million related to share-based compensation payments, offset by
+ • A net provision of $52 million due to differences arising from foreign earnings, including the impact of intercompany asset sales.The U.S. enacted the Inflation Reduction Act of 2022 (“IRA”) in August 2022, which, among other sections, creates a new book minimum tax of at least 15% of consolidated pre-tax income for corporations with average book income in excess of $1 billion.  This provision of the IRA will first apply to the Company in 2024. We do not expect the IRA to have a material impact on our effective tax rate. In addition, we are currently evaluating the various credits available under IRA and its impact to Corning’s financial position and results of operations, including the effective tax rate.Refer to Note 7 (Income Taxes) in the accompanying notes to the consolidated financial statements for further details regarding income tax matters.26
+Table of Contents
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_lGV4RffmGaupHcq1M9exGyNM)
+ Call ID: call_lGV4RffmGaupHcq1M9exGyNM
+  Args:
+    pattern: \beffective\b
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Optical Communications Segment
+We invented the world’s first low-loss optical fiber in 1970. Since that milestone, we have continued to pioneer optical fiber, cable and connectivity solutions. As global demand driven by video usage grows exponentially, telecommunications networks continue to migrate from copper to optical-based systems that can deliver the required cost-effective capacity. Our experience puts us in a unique position to design and deliver optical solutions that reach every edge of the communications network. The Optical Communications segment is divided into two main product groupings – carrier network and enterprise network. The carrier network group consists primarily of products and solutions for optical-based communications infrastructure for services such as video, data and voice communications. The enterprise network group consists primarily of optical-based communication networks sold to businesses, governments and individuals for their own use.2
+Table of Contents
+ Our carrier network product portfolio encompasses an array of optical fiber products, including Vascade® optical fibers for use in submarine networks; LEAF® optical fiber for long-haul, regional and metropolitan networks; SMF-28® ULL and TXF® fiber for more scalable long-haul and regional networks; SMF-28e+™ single-mode optical fiber providing additional transmission wavelengths in metropolitan and access networks and ClearCurve® ultra-bendable single-mode fiber for use in multiple- dwelling units and fiber-to-the-home applications.   For high performance across the range of long-haul, metro, access and fiber-to-the-home network applications, SMF- 28® Ultra and SMF-28® Contour fibers deliver industry-leading attenuation, compatibility and improved macrobend performance in one fiber. A portion of our optical fiber is sold directly to end users and third-party cablers globally. Our remaining fiber production is cabled internally and sold to end users as either bulk cable or as part of an integrated optical solution.  Our cable products, including the RocketRibbon® and miniXtend® portfolios, support various outdoor, indoor/outdoor and indoor applications and include a broad range of loose tube, ribbon and drop cable designs with flame-retardant versions available for indoor and indoor/outdoor use including 5G networks. In addition to optical fiber and cable, our carrier network product portfolio also includes hardware and equipment products, including cable assemblies, fiber-optic hardware, fiber-optic connectors, optical components and couplers, closures, network interface devices and other accessories. These products may be sold as individual components or as part of integrated optical connectivity solutions designed for various carrier network applications.  Examples of these solutions include our Evolv™ platform, which provides pre-connectorized solutions for cost-effectively deploying fiber-to-the-home and 5G networks; and the Centrix platform, which provides a fiber management system with industry-leading density and innovative jumper routing that can be deployed in a wide variety of carrier switching centers. In addition to our optical-based portfolio, our carrier network portfolio also contains select copper-based products including subscriber demarcation, connection and protection devices, xDSL (different variations of digital subscriber lines) passive solutions and outside plant enclosures.Our enterprise network portfolio leverages optical fiber products, including ClearCurve® ultra-bendable multimode fiber for private and hyperscale data centers and other enterprise network applications. Our hardware and equipment for enterprise network applications include cable assemblies, fiber-optic hardware, fiber-optic connectors, optical components and couplers, closures and other accessories. These products may be sold as individual components or as part of integrated optical connectivity solutions designed for various network applications, including hyperscale data centers.  Examples of enterprise network solutions include the EDGE® platform, which provides high-density pre- connectorized cabling solutions for data center applications, supporting a path to speeds of 400G and beyond and Everon™ Network Solutions, which provide next- generation cellular connectivity products for interior spaces of all sizes.Our optical fiber manufacturing facilities are in North Carolina, China, India and a new facility in Poland as of the third quarter of 2022.  Cabling operations are in North Carolina, Poland and smaller regional locations. Our manufacturing operations for hardware and equipment products are in Texas, Mexico, Brazil, Germany, Poland and China.Patent protection is important to the segment’s operations. The segment has an extensive portfolio of patents relating to its products, technologies and manufacturing processes. The segment licenses certain of its patents to third parties and generates revenue from these licenses, although the royalty income is not currently material to this segment’s operating results.  We are licensed to use certain patents owned by others, which are considered important to the segment’s operations. Refer to the material under the heading “Patents and Trademarks” for more information.The Optical Communications segment represented 34% of Corning’s total segment net sales in 2022.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_kMXiGB7CZskHULZvizOwgGJc)
+ Call ID: call_kMXiGB7CZskHULZvizOwgGJc
+  Args:
+    pattern: Income tax expense for the year|Provision for income taxes.*\$|Provision for income taxes.*$|Income tax.*\$|Income tax expense.*for the year ended|Income taxes.*\$|Tax expense.*\$
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+RESULTS OF OPERATIONS
+The following table presents selected highlights from our operations (in millions):
+Year ended December 31, % change 2022 2021 22 vs.  21 Net sales $ 14,189 $ 14,082 1% Gross margin $ 4,506 $ 5,063 (11%) (gross margin %) 32% 36% Selling, general and administrative expenses $ 1,898 $ 1,827 4% (as a % of net sales) 13% 13% Research, development and engineering expenses $ 1,047 $ 995 5% (as a % of net sales) 7% 7% Translated earnings contract gain, net $ 351 $ 354 (1%) (as a % of net sales) 2% 3% Income before income taxes $ 1,797 $ 2,426 (26%) (as a % of net sales) 13% 17% Provision for income taxes $ (411) $ (491) 16% Effective tax rate 23% 20% Net income attributable to Corning Incorporated $ 1,316 $ 1,906 (31%) (as a % of net sales) 9 % 14% Comprehensive income attributable to Corning Incorporated $ 661 $ 1,471 (55%)
+ 24
+Table of Contents
+Net Sales
+Net sales for the year ended December 31, 2022 increased by $107 million, or 1%, when compared to the same period in 2021. The increase was primarily driven by sales growth in Optical Communications of $674 million and Hemlock and Emerging Growth Businesses of $419 million, offset by the adverse impact of volume declines in Display Technologies resulting in a decrease in segment net sales of $394 million.  In addition, movements in foreign exchange rates adversely impacted Corning’s consolidated net sales by $616 million for the year ended December 31, 2022, when compared to the same period in 2021. Refer to the “Segment Analysis” section of our MD&A below for a discussion of net sales by segment.In 2022 and 2021, sales in international markets accounted for 65% and 68% of total net sales, respectively.
+Cost of Sales / Gross Margin
+The types of expenses included in cost of sales are: raw materials consumption, including direct and indirect materials; salaries, wages and benefits; depreciation and amortization; production utilities; production-related purchasing; warehousing (including receiving and inspection); repairs and maintenance; inter-location inventory transfer costs; production and warehousing facility property insurance; rent for production facilities; freight and logistics costs; and other production overhead. Gross margin decreased by $557 million, or 11% and gross margin as a percentage of sales decreased by 4 percentage points when compared to 2021.  The decrease in gross margin was primarily driven by higher production, material and freight costs as well as incremental severance, accelerated depreciation, asset write-offs and other related charges of $257 million.  In addition, movements in foreign exchange rates had an adverse impact of $422 million on Corning’s consolidated gross margin for the year ended December 31, 2022, when compared to the same period in 2021.
+Selling, General and Administrative Expenses
+Selling, general and administrative expenses increased by $71 million, or 4%, and were consistent as a percentage of sales when compared to 2021.The types of expenses included in selling, general and administrative expenses are: salaries, wages and benefits; stock-based compensation expense; travel; sales commissions; professional fees; and depreciation and amortization, utilities and rent for administrative facilities.
+Research, Development and Engineering Expenses
+Research, development and engineering expenses increased by $52 million, or 5%, and were consistent as a percentage of sales when compared to 2021.25
+Table of Contents
+Translated earnings contract gain, net
+Included in translated earnings contract gain, net, is the impact of foreign currency contracts which economically hedge the translation exposure arising from movements in the Japanese yen, South Korean won, new Taiwan dollar, euro, Chinese yuan and British pound and its impact on net income.The following table provides detailed information on the impact of translated earnings contracts gain, net for the years ended December 31, 2022 and 2021 (in millions):
+ Income before tax Net income Income before tax Net income Income before tax Net income 2022 2021 2022 vs.  2021 Hedges related to translated earnings: Realized gain, net (1) $ 320 $ 245 $ 47    $ 36    $ 273    $ 209 Unrealized gain, net (2) 31 24 307 237 (276) (213) Total translated earnings contract gain, net $ 351 $ 269 $ 354    $ 273    $ (3)   $ (4)
+ (1) For the years ended December 31, 2022 and 2021, includes pre-tax realized gains of $20 million and pre-tax realized losses of $20 million, respectively, related to the expiration of option contracts. These amounts were reflected within operating activities in the consolidated statements of cash flows.(2) The impact to income was primarily driven by Japanese yen, South Korean won and euro-denominated hedges of translated earnings.
+Income Before Income Taxes
+The translation impact of fluctuations in foreign currency exchange rates, including the impact of hedges realized in the current year, adversely impacted Corning’s income before income taxes by $142 million for the year ended December 31, 2022, when compared to the same period in 2021.
+Provision for Income Taxes
+For the year ended December 31, 2022, the effective tax rate differed from the U.S. statutory rate of 21% primarily due to the following:
+• A net provision of $67 million due to changes in tax reserves;
+• A net provision of $40 million due to differences arising from foreign earnings; and
+• A net provision of $38 million due to changes in valuation allowance assessments, offset by
+ • A net benefit of $60 million due to tax credits; and
+• A net benefit of $49 million due to foreign derived intangible income.For the year ended December 31, 2021, the effective tax rate differed from the U.S. statutory rate of 21% primarily due to the following:
+• A net benefit of $62 million due to tax credits; and
+• A net benefit of $37 million related to share-based compensation payments, offset by
+ • A net provision of $52 million due to differences arising from foreign earnings, including the impact of intercompany asset sales.The U.S. enacted the Inflation Reduction Act of 2022 (“IRA”) in August 2022, which, among other sections, creates a new book minimum tax of at least 15% of consolidated pre-tax income for corporations with average book income in excess of $1 billion.  This provision of the IRA will first apply to the Company in 2024. We do not expect the IRA to have a material impact on our effective tax rate. In addition, we are currently evaluating the various credits available under IRA and its impact to Corning’s financial position and results of operations, including the effective tax rate.Refer to Note 7 (Income Taxes) in the accompanying notes to the consolidated financial statements for further details regarding income tax matters.26
+Table of Contents
+Net Income Attributable to Corning Incorporated
+As a result of the items discussed above, net income attributable to Corning Incorporated and per share data were as follows (in millions, except per share amounts):
+ Year ended December 31, 2022 2021 Net income attributable to Corning Incorporated $ 1,316 $ 1,906 Series A convertible preferred stock dividend (24) Excess consideration paid for redemption of preferred stock (1) (803) Net income available to common shareholders used in basic and diluted earnings per common share calculation $ 1,316 $ 1,079 Basic earnings per common share $ 1.56 $ 1. 30 Diluted earnings per common share $ 1.54 $ 1.28 Weighted-average common shares outstanding - basic 843 828 Weighted-average common shares outstanding - diluted 857 844
+(1) On January 16, 2021, the Preferred Stock became convertible into 115 million Common Shares, in whole or in part, at the option of the holder, Samsung Display Co., Ltd. (“SDC”).  On April 5, 2021, Corning and SDC executed a Share Repurchase Agreement (“SRA”).  Refer to Note 16 (Shareholders’ Equity) in the accompanying notes to the consolidated financial statements for additional information.
+Comprehensive Income attributable to Corning Incorporated
+The $810 million decrease in comprehensive income attributable to Corning Incorporated was primarily due to the $549 million decrease in net income attributable to Corning Incorporated and a $175 million increase in net losses on foreign currency translation adjustments, driven by the Japanese yen, Chinese yuan and South Korean won.Refer to Note 16 (Shareholders’ Equity) in the accompanying notes to the consolidated financial statements for additional information.27
+Table of Contents
+
+================================== Ai Message ==================================
+
+The effective tax rate increased by 3 percentage points (from 20% in 2021 to 23% in 2022).

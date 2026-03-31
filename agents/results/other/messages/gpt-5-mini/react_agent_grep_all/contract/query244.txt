@@ -1,0 +1,69 @@
+================================ Human Message =================================
+
+HYPOTHESIS:
+Survival of obligations: Some obligations of Agreement may survive termination of Agreement.
+
+TABLE OF CONTENTS (TOC):
+1 | NON-DISCLOSURE AGREEMENT
+1.1 | 1.  In connection with any transaction entered or contemplated to be entered pursua...
+1.2 | 2. Borrower shall use the Information solely in its credit,
+1.3 | 3. Borrower shall limit the distribution of the Information within the firm to only those credit,
+1.4 | 4.  Borrower shall maintain the Information in confidence and shall not disclose th...
+1.5 | 5.  If Borrower (or its employees or agents) breaches or threatens to breach this A...
+1.6 | 6. Borrower acknowledges that,
+1.7 | 7.  This Agreement shall be binding upon and shall inure to the benefit of the part...
+1.8 | 8. This Agreement shall be effective as of the date set forth above.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_all (call_QQIQ2ip2y2l564WuSz1y1JRO)
+ Call ID: call_QQIQ2ip2y2l564WuSz1y1JRO
+  Args:
+    pattern: surviv
+
+================================= Tool Message =================================
+Name: grep_search_all
+
+No matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_1kGGdnwLJuvVuWJ4MRGIm7YH)
+ Call ID: call_1kGGdnwLJuvVuWJ4MRGIm7YH
+  Args:
+    section_id: 1.7
+
+================================= Tool Message =================================
+Name: read_section
+
+7.This Agreement shall be binding upon and shall inure to the benefit of the parties hereto and their respective successors and permitted assigns. This Agreement shall be governed by the laws of the State of New York, without regard to its conflict of law principles. Borrower and Lending Agent hereby hereby irrevocably waive any and all rights to trial by jury in any legal proceeding arising out of or relating to this Agreement.  This Agreement constitutes the entire agreement and understanding between the parties and supersedes any and all prior agreements and understandings, oral or written, relating to the subject matter hereof. This Agreement may not be amended except by a writing signed by both parties hereto.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_all (call_nFIDepZtoaPNRtPuh0cP2k8c)
+ Call ID: call_nFIDepZtoaPNRtPuh0cP2k8c
+  Args:
+    pattern: terminat|terminate|surviving|survives|survived|expire|expires|expiration
+
+================================= Tool Message =================================
+Name: grep_search_all
+
+1.8 | 8. This Agreement shall be effective as of the date set forth above.The obligations hereunder shall expire upon the earlier to occur of (a) ___ years from the termination date of the last loan of securities outstanding under the Borrowing Agreement or (b) the date upon which the Information ceases to be confidential as set forth above.IN WITNESS WHEREOF, the parties have caused this Agreement to be duly executed by their respective authorized representatives as of the day and year first above written. ________________ [BORROWER] _______________________ [LENDING AGENT] By: ____________________________ Name: __________________________ Title: ___________________________ By: _____________________________ Name: __________________________ Title: ___________________________
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_NMtqlY1shehJ8QKpWskYJVkm)
+ Call ID: call_NMtqlY1shehJ8QKpWskYJVkm
+  Args:
+    section_id: 1.4
+
+================================= Tool Message =================================
+Name: read_section
+
+4.Borrower shall maintain the Information in confidence and shall not disclose the information to any third party without the consent of Lending Agent; provided, however, that Borrower may disclose the Information to the extent required by
+Sample 2
+subpoena, court order, request from a regulatory body with jurisdiction over Borrower, or as otherwise required by law or regulation.  Borrower shall not be required to keep the Information confidential to the extent that the Information (a) becomes publicly known through means other than a breach of this Agreement by Borrower; (b) was in the possession of Borrower prior to receipt thereof from the Lending Agent; or (c) is independently learned, obtained or developed by Borrower without violating the terms of this Agreement.
+
+================================== Ai Message ==================================
+
+NotMentioned

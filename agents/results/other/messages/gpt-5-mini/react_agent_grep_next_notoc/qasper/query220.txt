@@ -1,0 +1,124 @@
+================================ Human Message =================================
+
+QUERY:
+What are the models tested on the dataset?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_kwxFJr2cOq3xY9KfW3Ou2d6Z)
+ Call ID: call_kwxFJr2cOq3xY9KfW3Ou2d6Z
+  Args:
+    pattern: models tested|tested on the dataset|Models tested|models evaluated|we test|we evaluate|Baselines|Compared methods
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+As offensive language has become a rising issue for online communities and social media platforms, researchers have been investigating ways of coping with abusive content and developing systems to detect its different types: cyberbullying, hate speech, aggression, etc. With a few notable exceptions, most research on this topic so far has dealt with English. This is mostly due to the availability of language resources for English.  To address this shortcoming, this paper presents the first Greek annotated dataset for offensive language identification: the Offensive Greek Tweet Dataset (OGTD). OGTD is a manually annotated dataset containing 4,779 posts from Twitter annotated as offensive and not offensive. Along with a detailed description of the dataset, we evaluate several computational models trained and tested on this data.Keywords: offensive language, hate speech, Greek
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_h5LG1RiXWdmlMSGNjORczHex)
+ Call ID: call_h5LG1RiXWdmlMSGNjORczHex
+  Args:
+    pattern: we evaluate several computational models|we evaluate|we trained|We evaluate|we test several|models trained and tested
+    })}TitleMismatchIFICATION to=functions.grep_search_next _APPEND_ERROR_WHEN_PATTERN_INVALID_INPUT.Json_PATCH_FIX_AVAILABLE_EMBED_APPEND тух to=functions.grep_search_next INFRINGEMENT_CONTINUE_STREAM_BLOCKING_APOLOGY what?** I need to call tool properly. Let's search :  }** continuous. Let's call tool again.**
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Tool 'grep_search_next' failed after 1 attempt with TypeError: grep_search_next() got an unexpected keyword argument '})}TitleMismatchIFICATION to=functions.grep_search_next _APPEND_ERROR_WHEN_PATTERN_INVALID_INPUT.Json_PATCH_FIX_AVAILABLE_EMBED_APPEND тух to=functions.grep_search_next INFRINGEMENT_CONTINUE_STREAM_BLOCKING_APOLOGY what?** I need to call tool properly. Let's search '. Please try again.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_kk13x9xAnbGMI2s84OJLzSm5)
+ Call ID: call_kk13x9xAnbGMI2s84OJLzSm5
+  Args:
+    pattern: models trained and tested|we evaluate several computational models|we evaluate several|we evaluate
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+As offensive language has become a rising issue for online communities and social media platforms, researchers have been investigating ways of coping with abusive content and developing systems to detect its different types: cyberbullying, hate speech, aggression, etc. With a few notable exceptions, most research on this topic so far has dealt with English. This is mostly due to the availability of language resources for English.  To address this shortcoming, this paper presents the first Greek annotated dataset for offensive language identification: the Offensive Greek Tweet Dataset (OGTD). OGTD is a manually annotated dataset containing 4,779 posts from Twitter annotated as offensive and not offensive. Along with a detailed description of the dataset, we evaluate several computational models trained and tested on this data.Keywords: offensive language, hate speech, Greek
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_mL4gnIJqfVbGYTg5wOQXZS40)
+ Call ID: call_mL4gnIJqfVbGYTg5wOQXZS40
+  Args:
+    pattern: Models tested|Baselines|Methods|Classifiers|Models|experiments|Experiment setup|Evaluation|we tested|we compare|we tested the following|we experimented with
+    }】} I must call properly. Let's just search for 'Models' word.}]}**Attempt again.**} to=functions.grep_search_nextაფრთხारितQueryable.Json_FIXED_APOLOGY_KEYSPATCH{: Models
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Tool 'grep_search_next' failed after 1 attempt with TypeError: grep_search_next() got an unexpected keyword argument '}】} I must call properly. Let's just search for 'Models' word.}]}**Attempt again.**} to=functions.grep_search_nextაფრთხारितQueryable.Json_FIXED_APOLOGY_KEYSPATCH{'. Please try again.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_pgSAFCpeju62WaC5Z2rkTMaX)
+ Call ID: call_pgSAFCpeju62WaC5Z2rkTMaX
+  Args:
+    pattern: Models
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+4.1.1. Classical Machine Learning Models
+Every classical model was considered on the condition it could take matrices as input for fitting and was trained with the default settings because of the size of the dataset. Five models were trained: Two SVMs, one with linear kernel and the other with a radial basis function kernel (RBF), both with a value of 1 in the penalty parameter C of the error term. The gamma value of the RBF SVM which indicates how much influence a single training example has, was set to 2.  The third classifier trained was another linear clas- sifier with Stochastic Gradient Descent (SGDC) learning. The gradient of the loss is estimated each sample at a time and the SGDC is updated along the way with a decreas- ing learning rate. The parameters for maximum epochs and the stopping criterion were defined using the default values in scikit-learn.  The final classifier was two models based on the Bayes theorem: Multinomial Naïve Bayes, which works with occurrence counts, and Bernoulli Naïve Bayes, which is designed for binary features.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_qooo43wRBE4q7TOdzptKQZbg)
+ Call ID: call_qooo43wRBE4q7TOdzptKQZbg
+  Args:
+    pattern: 4.1.2. Deep Learning Models|Deep Learning|LSTM|CNN|fastText|word2vec|embeddings|Bidirectional
+    }**I'll search for '4.1.2'**} to=functions.grep_search_next առանձնUSER_JSON_FIX_SOLVE_APOLOGY_PROCEED({: 4.1.2
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Tool 'grep_search_next' failed after 1 attempt with TypeError: grep_search_next() got an unexpected keyword argument '}**I'll search for '4.1.2'**} to=functions.grep_search_next առանձնUSER_JSON_FIX_SOLVE_APOLOGY_PROCEED({'. Please try again.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_vS51VEExSnQIIySijnRUiLqM)
+ Call ID: call_vS51VEExSnQIIySijnRUiLqM
+  Args:
+    pattern: 4.1.2
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+4.1.2. Deep Learning Models
+Six different deep learning models were considered. All of these models have been used in an aggression detec- tion task. The models are Pooled GRU (Plum et al., 2019), Stacked LSTM with Attention (Plum et al., 2019), LSTM and GRU with Attention (Plum et al., 2019), 2D Convo- lution with Pooling (Ranasinghe et al. , 2019), GRU with Capsule (Hettiarachchi and Ranasinghe, 2019), LSTM with Capsule and Attention (Ranasinghe et al., 2019) and BERT (Devlin et al., 2019). These models has been used in HASOC 2019 and achieved a third place finish in English task and a eighth place finish in German and Hindi subtasks (Ranasinghe et al. , 2019). Parameters described in (Ranas- inghe et al., 2019) were used as the default parameters in order to ease the training process. The code for the deep learning has been made available on Github 5 .
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_lLtPbd8oKcNbysBB2tSUGLO9)
+ Call ID: call_lLtPbd8oKcNbysBB2tSUGLO9
+  Args:
+    pattern: Baselines|we compare|we tested|Evaluation results|4.2|Results|We report
+    }】 to=functions.grep_search_nextาพрылContinuation_ERRORED_INPUT_FORMAT_FIX({: Baselines|we compare|we tested|Evaluation results|4.2|Results|We report
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Tool 'grep_search_next' failed after 1 attempt with TypeError: grep_search_next() got an unexpected keyword argument '}】 to=functions.grep_search_nextาพрылContinuation_ERRORED_INPUT_FORMAT_FIX({'. Please try again.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_BMdV5i0RYkympAQhcNRgYafZ)
+ Call ID: call_BMdV5i0RYkympAQhcNRgYafZ
+  Args:
+    pattern: Baselines
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+
+Classical machine learning models: two SVMs (linear and RBF), a Stochastic Gradient Descent classifier (SGDC), Multinomial Naïve Bayes, and Bernoulli Naïve Bayes. Deep learning models: Pooled GRU; Stacked LSTM with Attention; LSTM and GRU with Attention; 2D Convolution with Pooling; GRU with Capsule; LSTM with Capsule and Attention; and BERT.

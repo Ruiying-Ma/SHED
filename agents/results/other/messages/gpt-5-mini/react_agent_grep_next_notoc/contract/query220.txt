@@ -1,0 +1,92 @@
+================================ Human Message =================================
+
+HYPOTHESIS:
+Limited use: Receiving Party shall not use any Confidential Information for any purpose other than the purposes stated in Agreement.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_n0nAj5y7C5pazOOEO8xHHj8v)
+ Call ID: call_n0nAj5y7C5pazOOEO8xHHj8v
+  Args:
+    pattern: Receiving Party
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_7X0qOxLYZUJB8F3PrLOtZrDU)
+ Call ID: call_7X0qOxLYZUJB8F3PrLOtZrDU
+  Args:
+    pattern: Limited use
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_ehkt9VmP7KY60QFQruglmXNW)
+ Call ID: call_ehkt9VmP7KY60QFQruglmXNW
+  Args:
+    pattern: use any Confidential Information
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_gF8d12tcyyK18XtKvKICh1Vl)
+ Call ID: call_gF8d12tcyyK18XtKvKICh1Vl
+  Args:
+    pattern: Confidential Information
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_2ZisgIE9zzgk3dl1BxoZBZj1)
+ Call ID: call_2ZisgIE9zzgk3dl1BxoZBZj1
+  Args:
+    pattern: Confidential
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_ebvWEr9n6F71Giso51tkETgb)
+ Call ID: call_ebvWEr9n6F71Giso51tkETgb
+  Args:
+    pattern: use
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+11. Injunctive Relief .The RECEIVING PARTY understands and agrees that monetary damages will not be sufficient to avoid or compensate for the unauthorized use or disclosure of the CONFIDENTIAL INFORMATION and that injunctive relief would be appropriate to prevent any actual or threatened use of disclosure of such CONFIDENTIAL INFORMATION .
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_LKxzlsYmJb5Tiqolgl0Y55e8)
+ Call ID: call_LKxzlsYmJb5Tiqolgl0Y55e8
+  Args:
+    pattern: purpose
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+2. Limited Purpose .The CONFIDENTIAL INFORMATION shall be used by the RECEIVING PARTY solely for the purpose of discussing AG Projects’ services and products.
+
+================================== Ai Message ==================================
+
+Entailment

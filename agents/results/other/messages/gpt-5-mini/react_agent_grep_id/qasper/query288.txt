@@ -1,0 +1,58 @@
+================================ Human Message =================================
+
+QUERY:
+What is the sign language recognition task investigated?
+
+TABLE OF CONTENTS (TOC):
+1 | Sign Language Recognition Analysis using Multimodal Data
+1.1 | I. I NTRODUCTION
+1.2 | II. L ITERATURE R EVIEW
+1.3 | III. D ATASET
+1.3.1 | A. Collection Protocol
+1.3.2 | B. Data Modality
+1.4 | IV. O UR A PPROACH
+1.4.1 | A. Recurrent Neural Networks (RNN)
+1.4.2 | B. 3D Convolutional Neural Network
+1.4.3 | C. Axis Independent LSTM
+1.4.4 | D. Spatial AI-LSTM
+1.4.5 | E. Combined Network
+1.5 | V. E XPERIMENTS
+1.5.1 | A. Skeletal Data
+1.5.2 | B. Video Data
+1.5.3 | C. Training Details
+1.5.4 | D. Baseline Methods
+1.5.5 | E. Experimental Results
+1.5.6 | F. Effect of Same Subject Data in Training
+1.6 | VI. C ONCLUSION
+1.7 | A CKNOWLEDGMENTS
+1.8 | R EFERENCES
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_all (call_5icFhAW5RYk5E3qfPZSVSOuk)
+ Call ID: call_5icFhAW5RYk5E3qfPZSVSOuk
+  Args:
+    pattern: sign language recognition task|task investigated|recognition task|What is the sign language recognition task
+
+================================= Tool Message =================================
+Name: grep_search_all
+
+1.2
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_KwlfEU0BTkYdAzbidJ78PrtD)
+ Call ID: call_KwlfEU0BTkYdAzbidJ78PrtD
+  Args:
+    section_id: 1.2
+
+================================= Tool Message =================================
+Name: read_section
+
+II. L ITERATURE R EVIEW
+Most sign language recognition systems use RGB video data as input. These approaches model sequential dependencies using Hidden Markov Models (HMM). Zafrullah et al. [8] used colored gloves (worn on hands) during data collection and developed an HMM based framework for ASL phrase verification. They also used hand crafted features from Kinect skeletal data and accelerometers worn on hand [9]. Huang et al.  [2] demonstrated the effectiveness of using Convolutional neural network (CNN) with RGB video data for sign language recognition. Three dimensional CNN have been used to extract spatio-temporal features from video [3]. Similar architecture was implemented for Italian gestures [10]. Sun et al. [4] hypothesized that not all RGB frames in a video are equally important and assigned a binary latent variable to each frame
+1 Contact author for the details. 2 IRB protocol 1338304-2: For privacy purposes we can only make the skeletal data and hand patches publicly available.in training videos for indicating the importance of a frame within a latent support vector machine model. Zaki et al. [11] proposed two new features with existing hand crafted features and developed the system using HMM based approach.  Some researchers have used appearance-based features and divided the approach into sub units of RGB and tracking data, with a HMM model for recognition [12].Compared to RGB methods, skeletal data has received little attention in ASL recognition. However, in a closely similar human action recognition task, a significant amount of work has been done using body joint location related data. Shahroudy et al. [13] published the largest dataset for human activity recognition.  They proposed an extension of long short term memory (LSTM) model which leverages group motion of several body joints to recognize human activity from skeletal data. A different adaptation of the LSTM model was proposed by Liu et al. [14] where spatial interaction among joints was considered in addition to the temporal dynamics. Veeriah et al. [15] proposed a LSTM network to capture the salient motion pattern of body joints.  This method takes into account the derivative of motion states associated with different body joints. Some have treated the whole body as a hierarchical configuration of different body parts and proposed a hierarchi- cal RNN to recognize human activities [6]. Several attention based models were proposed for human activity analysis [16], [17]. Some prior works converted skeleton sequences of body joints or RGB videos into an image representation and then applied state-of-the-art image recognition models [18], [19].  Motivated by the success of skeletal data in human activity recognition, we investigate its suitability for recognizing ASL signs.
+
+================================== Ai Message ==================================
+
+Investigating the suitability of skeletal data for recognizing ASL signs.

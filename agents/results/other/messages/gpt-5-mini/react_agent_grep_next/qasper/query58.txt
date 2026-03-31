@@ -1,0 +1,66 @@
+================================ Human Message =================================
+
+QUERY:
+What dataset do they use?
+
+TABLE OF CONTENTS (TOC):
+1 | Neural Summarization by Extracting Sentences and Words Jianpeng Cheng Mirella Lapata ILCC, School of Informatics, University of Edinburgh 10 Crichton Street, Edinburgh EH8 9AB jianpeng.cheng@ed.ac.uk mlap@inf.ed.ac.uk
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2 Problem Formulation
+1.4 | 3 Training Data for Summarization
+1.5 | 4 Neural Summarization Model
+1.5.1 | 4.1 Document Reader
+1.5.2 | 4.2 Sentence Extractor
+1.5.3 | 4.3 Word Extractor
+1.6 | 5 Experimental Setup
+1.7 | 6 Results
+1.8 | 7 Conclusions
+1.9 | Acknowledgments
+1.10 | 8 Appendix
+1.11 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_jp96yeErvHUmSM7Dmd339DTT)
+ Call ID: call_jp96yeErvHUmSM7Dmd339DTT
+  Args:
+    pattern: dataset
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1 | Abstract
+Traditional approaches to extractive summarization rely heavily on human- engineered features. In this work we propose a data-driven approach based on neural networks and continuous sentence features. We develop a general frame- work for single-document summarization composed of a hierarchical document encoder and an attention-based extractor. This architecture allows us to develop different classes of summarization models which can extract sentences or words. We train our models on large scale corpora containing hundreds of thousands of document-summary pairs 1 .  Experimental results on two summarization datasets demonstrate that our models obtain results comparable to the state of the art without any access to linguistic annotation.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_c2wBBWWZLXgwfLmbsOZv0X7O)
+ Call ID: call_c2wBBWWZLXgwfLmbsOZv0X7O
+  Args:
+    pattern: DUC
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.10 | 8 Appendix
+In addition to the DUC 2002 and 500 DailyMail samples, we additionally report results on the en- tire DailyMail test set (Table 3). Since there is no established evaluation standard for this task, we experimented with three different ROUGE limits: 75 bytes, 275 bytes and full length.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_7ccx0XALkPVLQSJ7bYlqkF7r)
+ Call ID: call_7ccx0XALkPVLQSJ7bYlqkF7r
+  Args:
+    section_id: 1.4
+
+================================= Tool Message =================================
+Name: read_section
+
+3 Training Data for Summarization
+Data-driven neural summarization models require a large training corpus of documents with labels indicating which sentences (or words) should be in the summary. Until now such corpora have been limited to hundreds of examples (e.g., the DUC 2002 single document summarization cor- pus) and thus used mostly for testing (Woodsend and Lapata, 2010).  To overcome the paucity of annotated data for training, we adopt a methodol- ogy similar to Hermann et al. (2015) and create two large-scale datasets, one for sentence extrac- tion and another one for word extraction.In a nutshell, we retrieved 3 hundreds of thou- sands of news articles and their corresponding highlights from DailyMail (see Figure 1 for an ex- ample). The highlights (created by news editors)
+ are genuinely abstractive summaries and therefore not readily suited to supervised training. To cre- ate the training data for sentence extraction , we reverse approximated the gold standard label of each document sentence given the summary based on their semantic correspondence (Woodsend and Lapata, 2010).  Specifically, we designed a rule- based system that determines whether a document sentence matches a highlight and should be la- beled with 1 (must be in the summary), and 0 oth- erwise. The rules take into account the position of the sentence in the document, the unigram and bigram overlap between document sentences and highlights, the number of entities appearing in the highlight and in the document sentence.  We ad- justed the weights of the rules on 9,000 documents with manual sentence labels created by Woodsend and Lapata (2010). The method obtained an accu- racy of 85% when evaluated on a held-out set of 216 documents coming from the same dataset and was subsequently used to label 200K documents. Approximately 30% of the sentences in each doc- ument were deemed summary-worthy. For the creation of the word extraction dataset, we examine the lexical overlap between the high- lights and the news article. In cases where all high- light words (after stemming) come from the orig- inal document, the document-highlight pair con- stitutes a valid training example and is added to the word extraction dataset. For out-of-vocabulary (OOV) words, we try to find a semantically equiv- alent replacement present in the news article.  Specifically, we check if a neighbor, represented
+3 The script for constructing our datasets is modified from the one released in Hermann et al. (2015).by pre-trained 4 embeddings, is in the original doc- ument and therefore constitutes a valid substitu- tion. If we cannot find any substitutes, we discard the document-highlight pair.  Following this pro- cedure, we obtained a word extraction dataset con- taining 170K articles, again from the DailyMail.
+
+================================== Ai Message ==================================
+
+DailyMail.

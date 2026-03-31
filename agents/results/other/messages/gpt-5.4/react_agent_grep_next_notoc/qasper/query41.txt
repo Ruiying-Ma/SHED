@@ -1,0 +1,70 @@
+================================ Human Message =================================
+
+QUERY:
+what was the baseline?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_KS6bYrTNPL3q65rPMhgq1j4T)
+ Call ID: call_KS6bYrTNPL3q65rPMhgq1j4T
+  Args:
+    pattern: [Bb]aseline
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+4.1 Anger Dataset
+For the anger dataset, our experiments showed that GloVe embeddings of dimension 50 outperformed others, obtaining an average gain of 0.066 corre- lation over embeddings of size 25 and of 0.021
+2 github.com/epochx/emoatt
+Corpus Dropout Embeddings λ h EmoAtt Baseline ρ dev ρ test ρ dev ρ test Sadness 0.8 GloVe Twitter 50 0. 20 50 0.586 0.520 0.562 0.648 Joy 0.8 GloVe Twitter 50 0.20 100 0.790 0.537 0.703 0.654 Anger 0.5 GloVe Twitter 50 0.01 100 0.734 0.470 0.605 0.639 Fear 0.9 GloVe Twitter 50 0. 05 100 0.644 0.561 0.574 0.652 Average 0.689 0.522 0.611 0.648
+Table 2: Summary of the best results.Dataset w/features w/o features Sadness 0.586 0.543 Joy 0.790 0.781 Anger 0.734 0.662 Fear 0.644 0.561
+ Table 3: Impact of adding our binary features.Figure 1: Example of attention weights for the Joy dataset. White denotes more weight.for embeddings of size 100. However on ly the first of these values was significant, with a p-value of 3 . 86 × 10 − 5 . Regarding the hidden size of the RNN, we could not find statistical difference across the tested sizes. Dropout also had inconsis- tent effects, but was generally useful.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_cWjUnAyHAcC5AscmW3JxltkG)
+ Call ID: call_cWjUnAyHAcC5AscmW3JxltkG
+  Args:
+    pattern: baseline|Baseline
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+4.1 Anger Dataset
+For the anger dataset, our experiments showed that GloVe embeddings of dimension 50 outperformed others, obtaining an average gain of 0.066 corre- lation over embeddings of size 25 and of 0.021
+2 github.com/epochx/emoatt
+Corpus Dropout Embeddings λ h EmoAtt Baseline ρ dev ρ test ρ dev ρ test Sadness 0.8 GloVe Twitter 50 0. 20 50 0.586 0.520 0.562 0.648 Joy 0.8 GloVe Twitter 50 0.20 100 0.790 0.537 0.703 0.654 Anger 0.5 GloVe Twitter 50 0.01 100 0.734 0.470 0.605 0.639 Fear 0.9 GloVe Twitter 50 0. 05 100 0.644 0.561 0.574 0.652 Average 0.689 0.522 0.611 0.648
+Table 2: Summary of the best results.Dataset w/features w/o features Sadness 0.586 0.543 Joy 0.790 0.781 Anger 0.734 0.662 Fear 0.644 0.561
+ Table 3: Impact of adding our binary features.Figure 1: Example of attention weights for the Joy dataset. White denotes more weight.for embeddings of size 100. However on ly the first of these values was significant, with a p-value of 3 . 86 × 10 − 5 . Regarding the hidden size of the RNN, we could not find statistical difference across the tested sizes. Dropout also had inconsis- tent effects, but was generally useful.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_aLMYRryRKf2Vh0mf1S4X19zc)
+ Call ID: call_aLMYRryRKf2Vh0mf1S4X19zc
+  Args:
+    pattern: compared against|compare.*baseline|our baseline|baseline model|without attention|attention
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1 Introduction
+Twitter is a huge micro-blogging service with more than 500 million tweets per day from dif- ferent locations in the world and in different lan- guages. This large, continuous, and dynamically updated content is considered a valuable resource for researchers. In particular, many of these mes- sages contain emotional charge, conveying af- fectemotions, feelings and attitudes, which can be studied to understand the expression of emotion in text, as well as the social phenomena associated. While studying emotion in text it is commonly useful to characterize the emotional charge of a passage based on its words. Some words have af- fect as a core part of their meaning. For example, dejected and wistful denote some amount of sad- ness, and are thus associated with sadness. On the other hand, some words are associated with affect even though they do not denote affect.  For exam- ple, failure and death describe concepts that are usually accompanied by sadness and thus they de- note some amount of sadness.While analyzing the emotional content in text, mosts tasks are almost always framed as classi- fication tasks, where the intention is to identify one emotion among many for a sentence or pas-
+sage. However, it is often useful for applications to know the degree to which an emotion is ex- pressed in text.  To this end, the WASSA-2017 Shared Task on Emotion Intensity ( Mohammad and Bravo-Marquez , 2017b ) represents the first task where systems have to automatically deter- mine the intensity of emotions in tweets. Con- cretely, the objective is to given a tweet containing the emotion of joy, sadness, fear or anger, deter- mine the intensity or degree of the emotion felt by the speaker as a real-valued score between zero and one. The task is specially challenging since tweets contain informal language, spelling errors and text referring to external content. Given the 140 char- acter limit of tweets, it is also possible to find some phenomena such as the intensive usage of emoti- cons and of other special Twitter features, such as hashtags and usernames mentions —used to call or notify other users.  In this paper we describe our system designed for the WASSA-2017 Shared Task on Emotion Intensity, which we tackle based on the premise of representation learning without the usage of external information, such as lexi- cons. In particular, we use a Bi-LSTM model with intra-sentence attention on top of word em- beddings to generate a tweet representation that is suitable for emotion intensity.  Our results show that our proposed model offers interesting capabil- ities compared to approaches that do rely on exter- nal information sources.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_G5b6Ke4HYHQRBD6wnWusQFhS)
+ Call ID: call_G5b6Ke4HYHQRBD6wnWusQFhS
+  Args:
+    pattern: without attention|no attention|Bi-LSTM|LSTM.*baseline|regression
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1 Introduction
+Twitter is a huge micro-blogging service with more than 500 million tweets per day from dif- ferent locations in the world and in different lan- guages. This large, continuous, and dynamically updated content is considered a valuable resource for researchers. In particular, many of these mes- sages contain emotional charge, conveying af- fectemotions, feelings and attitudes, which can be studied to understand the expression of emotion in text, as well as the social phenomena associated. While studying emotion in text it is commonly useful to characterize the emotional charge of a passage based on its words. Some words have af- fect as a core part of their meaning. For example, dejected and wistful denote some amount of sad- ness, and are thus associated with sadness. On the other hand, some words are associated with affect even though they do not denote affect.  For exam- ple, failure and death describe concepts that are usually accompanied by sadness and thus they de- note some amount of sadness.While analyzing the emotional content in text, mosts tasks are almost always framed as classi- fication tasks, where the intention is to identify one emotion among many for a sentence or pas-
+sage. However, it is often useful for applications to know the degree to which an emotion is ex- pressed in text.  To this end, the WASSA-2017 Shared Task on Emotion Intensity ( Mohammad and Bravo-Marquez , 2017b ) represents the first task where systems have to automatically deter- mine the intensity of emotions in tweets. Con- cretely, the objective is to given a tweet containing the emotion of joy, sadness, fear or anger, deter- mine the intensity or degree of the emotion felt by the speaker as a real-valued score between zero and one. The task is specially challenging since tweets contain informal language, spelling errors and text referring to external content. Given the 140 char- acter limit of tweets, it is also possible to find some phenomena such as the intensive usage of emoti- cons and of other special Twitter features, such as hashtags and usernames mentions —used to call or notify other users.  In this paper we describe our system designed for the WASSA-2017 Shared Task on Emotion Intensity, which we tackle based on the premise of representation learning without the usage of external information, such as lexi- cons. In particular, we use a Bi-LSTM model with intra-sentence attention on top of word em- beddings to generate a tweet representation that is suitable for emotion intensity.  Our results show that our proposed model offers interesting capabil- ities compared to approaches that do rely on exter- nal information sources.
+
+================================== Ai Message ==================================
+
+The baseline test correlations in Table 2 were 0.648 for Sadness, 0.654 for Joy, 0.639 for Anger, and 0.652 for Fear, with an average of 0.648.

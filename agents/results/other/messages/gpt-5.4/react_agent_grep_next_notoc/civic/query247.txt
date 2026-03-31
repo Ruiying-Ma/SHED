@@ -1,0 +1,23 @@
+================================ Human Message =================================
+
+QUERY:
+What is the type of the project 'Latigo Canyon Road Roadway/Retaining Wall Improvements (FEMA Project)'?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_R7weBBtySCnhxRpir7oax8C9)
+ Call ID: call_R7weBBtySCnhxRpir7oax8C9
+  Args:
+    pattern: Latigo Canyon Road Roadway/Retaining Wall Improvements \(FEMA Project\)|Latigo Canyon Road|FEMA Project
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Latigo Canyon Road Roadway/Retaining Wall Improvements (FEMA Project)
+¾
+Updates:  Staff is finalizing the design of this project.  Staff  is  also  working  with  FEMA/CalOES  to  substitute  the  existing timber with non-combustible materials.¾
+Project Schedule  Complete Design: Spring 2021  Begin Construction: Summer 2021
+
+================================== Ai Message ==================================
+
+disaster

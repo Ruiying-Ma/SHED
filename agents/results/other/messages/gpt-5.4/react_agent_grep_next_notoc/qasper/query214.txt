@@ -1,0 +1,60 @@
+================================ Human Message =================================
+
+QUERY:
+by how much did their approach outperform previous work?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_xI7gDesLE3VCkNKEiHB2tFp8)
+ Call ID: call_xI7gDesLE3VCkNKEiHB2tFp8
+  Args:
+    pattern: outperform|previous work|state-of-the-art|improv|better than previous|outperformed
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Automatic sarcasm detection methods have traditionally been designed for maximum performance on a specific domain. This poses challenges for those wishing to transfer those ap- proaches to other existing or novel domains, which may be typified by very different language characteristics. We de- velop a general set of features and evaluate it under different training scenarios utilizing in-domain and/or out-of-domain training data.  The best-performing scenario, training on both while employing a domain adaptation step, achieves an F 1 of 0.780, which is well above baseline F 1 -measures of 0.515 and 0.345. We also show that the approach outperforms the best results from prior work on the same target domain.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_gCBo81P818G0kpPyUFsDRx4g)
+ Call ID: call_gCBo81P818G0kpPyUFsDRx4g
+  Args:
+    pattern: prior work|best results from prior work|same target domain|0\.780|F 1
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Automatic sarcasm detection methods have traditionally been designed for maximum performance on a specific domain. This poses challenges for those wishing to transfer those ap- proaches to other existing or novel domains, which may be typified by very different language characteristics. We de- velop a general set of features and evaluate it under different training scenarios utilizing in-domain and/or out-of-domain training data.  The best-performing scenario, training on both while employing a domain adaptation step, achieves an F 1 of 0.780, which is well above baseline F 1 -measures of 0.515 and 0.345. We also show that the approach outperforms the best results from prior work on the same target domain.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_6lmNbmG0JLKNa0tZKNmJRVJg)
+ Call ID: call_6lmNbmG0JLKNa0tZKNmJRVJg
+  Args:
+    pattern: prior work|best results from prior work|same target domain|Riloff|Davidov|Tsur|Reyes|0\.78|0\.780|F1
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Automatic sarcasm detection methods have traditionally been designed for maximum performance on a specific domain. This poses challenges for those wishing to transfer those ap- proaches to other existing or novel domains, which may be typified by very different language characteristics. We de- velop a general set of features and evaluate it under different training scenarios utilizing in-domain and/or out-of-domain training data.  The best-performing scenario, training on both while employing a domain adaptation step, achieves an F 1 of 0.780, which is well above baseline F 1 -measures of 0.515 and 0.345. We also show that the approach outperforms the best results from prior work on the same target domain.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_llnqj8zShJHCzYZcmLd8HoA5)
+ Call ID: call_llnqj8zShJHCzYZcmLd8HoA5
+  Args:
+    pattern: Table|prior work|same target domain|Twitter|target domain|best results
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Automatic sarcasm detection methods have traditionally been designed for maximum performance on a specific domain. This poses challenges for those wishing to transfer those ap- proaches to other existing or novel domains, which may be typified by very different language characteristics. We de- velop a general set of features and evaluate it under different training scenarios utilizing in-domain and/or out-of-domain training data.  The best-performing scenario, training on both while employing a domain adaptation step, achieves an F 1 of 0.780, which is well above baseline F 1 -measures of 0.515 and 0.345. We also show that the approach outperforms the best results from prior work on the same target domain.
+
+================================== Ai Message ==================================
+
+Unanswerable

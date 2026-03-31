@@ -1,0 +1,55 @@
+================================ Human Message =================================
+
+QUERY:
+What is the accuracy of this model compared to sota?
+
+TABLE OF CONTENTS (TOC):
+1 | OpenTapioca: Lightweight Entity Linking for Wikidata
+1.1 | 1 Introduction
+1.2 | 2 Particularities of Wikidata
+1.3 | 3 Related work
+1.3.1 | 3.1 Local compatibility
+1.3.2 | 3.2 Topic similarity
+1.3.3 | 3.3 Mapping coherence
+1.4 | 4 OpenTapioca: an entity linking model for Wikidata
+1.4.1 | 4.1 Local compatibility
+1.4.2 | 4.2 Semantic similarity
+1.4.3 | 4.3 Classifying entities in context
+1.5 | 5 Experimental setup
+1.6 | 6 Conclusion
+1.7 | Bibliography
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_all (call_3jZBo28EDVd9ZU3xqykVEGTR)
+ Call ID: call_3jZBo28EDVd9ZU3xqykVEGTR
+  Args:
+    pattern: sota|state-of-the-art|state of the art|state-of-art|state-of the art|accuracy
+
+================================= Tool Message =================================
+Name: grep_search_all
+
+1.6
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_9tYrSCifEXsbaVWUklsPJayg)
+ Call ID: call_9tYrSCifEXsbaVWUklsPJayg
+  Args:
+    section_id: 1.6
+
+================================= Tool Message =================================
+Name: read_section
+
+6 Conclusion
+The surface forms curated by Wikidata editors are sufficient to reach honourable re- call, without the need to expand them with mentions extracted from Wikipedia. Our restriction to people, locations and organizations probably helps in this regard and we anticipate worse performance for broader domains. Our approach works best for sci- entific affiliations, where spelling is more canonical than in newswire. The availability
+5 This is the case of Julie Pace (Q34666768) in Figure 1. 6 We built the nifconverter tool to do this conversion for any NIF dataset.7 The original data is available under an Etalab license at https://www.istex.fr/
+8 The full details can be found at http://w3id.org/gerbil/experiment?id=201904110006
+8 Antonin Delpeuch
+AIDA-CoNLL Microposts 2016 Micro Macro Micro Macro AIDA 0.725 0. 684 0.056 0.729 Babelfy 0.481 0.421 0.031 0.526 DBP Spotlight 0.528 0.456 0.053 0.306 FREME NER 0.382 0.237 0.037 0.790 OpenTapioca 0.482 0.399 0.087 0. 515 ISTEX-1000 RSS-500 Micro Macro Micro Macro AIDA 0.531 0.494 0.455 0.447 Babelfy 0.461 0.447 0.314 0.304 DBP Spotlight 0.574 0.575 0.281 0.261 FREME NER 0.422 0.321 0.307 0.274 OpenTapioca 0.870 0. 858 0.335 0.310
+Fig. 2. F1 scores on test datasets
+of Twitter identifiers directly in Wikidata helps us to reach acceptable performance in this domain. The accuracy degrades on longer texts which require relying more on the ambiant topical context. In future work, we would like to explore the use of entity em- beddings to improve our approach in this regard.
+
+================================== Ai Message ==================================
+
+Unanswerable

@@ -1,0 +1,167 @@
+================================ Human Message =================================
+
+QUERY:
+What was the baseline?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_dwJim2rRypuxIH8H1lAC7EDk)
+ Call ID: call_dwJim2rRypuxIH8H1lAC7EDk
+  Args:
+    pattern: baseline
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_lY9trgzE0wlzUIbMLwNki6B1)
+ Call ID: call_lY9trgzE0wlzUIbMLwNki6B1
+  Args:
+    pattern: Baseline
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_3dkfCituM21QUJ2GtBcVIwaP)
+ Call ID: call_3dkfCituM21QUJ2GtBcVIwaP
+  Args:
+    pattern: baseline model
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_I6SuZkEsMZOfzLIHfIIch7aN)
+ Call ID: call_I6SuZkEsMZOfzLIHfIIch7aN
+  Args:
+    pattern: we use
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+3.1. Etdnn/ams
+Etdnn/ams system is an extended version of tdnn with the additive margin softmax loss [2]. Etdnn is used in speaker verification in [3]. Compared with the traditional tdnn in [4], it has wider context and interleaving dense layers between each two tdnn layers. The archi- tecture of our etdnn network is shown in table 5.  It is the same as the etdnn architecture in [3], except that the context of layer 5 of our system is t-3:t+3 instead of t-3, t, t+3. The x-vector is extracted from layer 12 prior to the ReLU non-linearity. For the loss, we use addi- tive margin softmax with m = 0 . 15 instead of traditional softmax loss or angular softmax loss.  Additive margin softmax is proposed in [5] and then used in speaker verification in our paper [2]. It is easier to train and generally performs better than angular softmax.∗ Co First Author,heliang@mail.tsinghua.edu.cn
+Table 5 . Etdnn architecture
+ Layer Layer Type Context Size 1 TDNN-ReLU t-2:t+2 512 2 Dense-ReLU t 512 3 TDNN-ReLU t-2,t,t+2 512 4 Dense-ReLU t 512 5 TDNN-ReLU t-3:t+3 512 6 Dense-ReLU t 512 7 TDNN-ReLU t-4,t,t+4 512 8 Dense-ReLU t 512 9 Dense-ReLU t 512 10 Dense-ReLU t 1500 11 Pooling(mean+stddev) Full-seq 2 × 1500 12 Dense(Embedding)-ReLU 512.  13 Dense-ReLU 512. 14 Dense-Softmax Num. spks.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_2ZtngzEY5CqbhTwYtUKRKflR)
+ Call ID: call_2ZtngzEY5CqbhTwYtUKRKflR
+  Args:
+    pattern: baseline was
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_5FVnl1FqsNCiy6cELUv59dcM)
+ Call ID: call_5FVnl1FqsNCiy6cELUv59dcM
+  Args:
+    pattern: We use a baseline
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_RKgcD1L748CIz17WBdPVmhUr)
+ Call ID: call_RKgcD1L748CIz17WBdPVmhUr
+  Args:
+    pattern: baseline system
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_NEDNqk8JIE6pYhTgHJue4MI6)
+ Call ID: call_NEDNqk8JIE6pYhTgHJue4MI6
+  Args:
+    pattern: baseline model is
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_EYXkmO4Rxs6btKCnqlSJwDNu)
+ Call ID: call_EYXkmO4Rxs6btKCnqlSJwDNu
+  Args:
+    pattern: Our baseline
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_9Bzzxhzy7LVZiAUVpRzy2J9X)
+ Call ID: call_9Bzzxhzy7LVZiAUVpRzy2J9X
+  Args:
+    pattern: baseline
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_WjU8RJLblGVt6RMtTjZZ4pPV)
+ Call ID: call_WjU8RJLblGVt6RMtTjZZ4pPV
+  Args:
+    pattern: i-vector
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_0WxjkfTQliXZlPqWHFboyLkW)
+ Call ID: call_0WxjkfTQliXZlPqWHFboyLkW
+  Args:
+    pattern: We compare
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_dAN9iZji6wl7kf3wC4sTZtyZ)
+ Call ID: call_dAN9iZji6wl7kf3wC4sTZtyZ
+  Args:
+    pattern: comparison
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+
+Unanswerable

@@ -1,0 +1,39 @@
+================================ Human Message =================================
+
+QUERY:
+How big is their dataset?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_gvnuyxLTwVSly1CNOodVAS8K)
+ Call ID: call_gvnuyxLTwVSly1CNOodVAS8K
+  Args:
+    pattern: dataset
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Current research on hate speech analysis is typically oriented towards monolingual and single classification tasks. In this paper, we present a new multilingual multi-aspect hate speech analysis dataset and use it to test the current state-of-the-art multilingual multitask learning approaches. We evaluate our dataset in various classification settings, then we dis- cuss how to leverage our annotations in order to improve hate speech detection and classifi- cation in general.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_5Wc7UKmrMCU3tsmunwcC2MDR)
+ Call ID: call_5Wc7UKmrMCU3tsmunwcC2MDR
+  Args:
+    pattern: Our dataset
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+2 Related Work
+There is little consensus on the difference between profanity and hate speech and, how to define the latter ( Schmidt and Wiegand , 2017 ). As shown in Figure 2 , slurs are not an unequivocal indi- cator of hate speech and can be part of a non- aggressive conversation, while some of the most offensive comments may come in the form of sub- tle metaphors or sarcasm ( Malmasi and Zampieri , 2018 ).  Consequently, there is no existing human annotated vocabulary that explicitly reveals the presence of hate speech, which makes the avail-
+Figure 2: Three tweets in which (1) the first one ac- cuses immigrants of harming society without using any direct insult; (2) the second insults a Hispanic person using a slur; and (3) the third one uses slurs to give a personal account. This shows that profanity is not a clear indicator of the presence of hate speech. able hate speech corpora sparse and noisy ( Nobata et al. , 2016 ).Given the subjectivity and the complexity of such data, annotation schemes have rarely been made fine-grained. Table 1 compares different la- belsets that exist in the literature. For instance, Waseem and Hovy ( 2016 ) use racist, sexist, and normal as labels; Davidson et al.  ( 2017 ) label their data as hateful, offensive (but not hateful), and nei- ther, while ElSherief et al. ( 2018 ) present an En- glish dataset that records the target category based on which hate speech discriminates against peo- ple, such as ethnicity, gender, or sexual orientation and ask human annotators to classify the tweets as hate and non hate. Founta et al.  ( 2018 ) label their data as offensive, abusive, hateful, aggressive, cy- berbullying, spam, and normal. On the other hand, Qian et al. ( 2018 ) have chosen to detect ideologies of hate speech counting 40 different hate ideolo- gies among 13 extremist hate groups.The detection of hate speech targets is yet an- other challenging aspect of the annotation. Park et al.  ( 2018 ) report the bias that exists in the current datasets towards identity words, such as women , which may later cause false predictions. They propose to debias gender identity word em-
+5 our code is available on: https://github.com/ HKUST-KnowComp/MLMA_hate_speech
+Dataset # Tweets Labels Annotators/Tweet Chatzakou et al.  ( 2017 ) 9,484 aggressive, bullying, spam, normal 5 Waseem and Hovy ( 2016 ) 16, 914 racist, sexist, normal 1 Davidson et al. ( 2017 ) 24, 802 hateful, offensive (but not hateful), neither 3 or more Golbeck et al.  ( 2017 ) 35,000 the worst, threats, hate speech, direct 2 to 3 harassment, potentially offensive, non-harassment Founta et al. ( 2018 ) 80, 000 offensive, abusive, hateful speech, 5 to 20 aggressive, cyberbullying, spam, normal ElSherief et al.  ( 2018 ) 28,608 directed, generalized + target = archaic, class, disability, 3 ethnicity, gender, nationality, religion, sexual orientation Ours 13,000 Labels for five different aspects 5
+Table 1: Comparative table of some of the available hate speech and abusive language corpora in terms of labels and sizes.beddings with additional data for training and tun- ing their binary classifier.  We address this false positive bias problem and the common ambiguity of target detection by asking the annotators to label target attributes such as origin, gender, or religious affiliation within 16 named target groups such as refugees, or immigrants.Furthermore, Klubiˇcka and Fernandez ( 2018 ) have reproduced the experiment of Waseem and Hovy ( 2016 ) in order to study how hate speech affects the popularity of a tweet, but discovered that some tweets have been deleted.  For repli- cation purposes, we provide the community with anonymized 6 tweet texts rather than IDs.Non-English hate speech datasets include Ital- ian, German, Dutch, and Arabic corpora. San- guinetti et al. ( 2018 ) present a dataset of Ital- ian tweets, in which the annotations capture the degree of intensity of offensive and aggressive tweets, in addition to whether the tweets are ironic and contain stereotypes or not. Ross et al.  ( 2017 ) have collected more than 500 German tweets against refugees, and annotated them as hateful and not hateful. Hee et al. ( 2015 ) detect bullies and victims among youngsters in Dutch comments on AskFM, and classify cyberbullying comments as insults or threats. Moreover, Albadi et al. ( 2018 ) provide a corpus of Arabic sectarian speech.Another predominant phenomenon in hate speech corpora is code switching. Bohra et al.  ( 2018 ) present a dataset of code mixed Hindi- English tweets, while Galery et al. ( 2018 ) report the presence of Hindi tokens in English data and use multilingual word embeddings to deal with this issue when detecting toxicity. Similarly, we use such embeddings to take advantage of the mul-
+tilinguality and comparability of our corpora dur- ing the classification. Our dataset is the first trilingual dataset com- prising English, French, and Arabic tweets that en- compasses various targets and hostility types. Ad- ditionally, to the best of our knowledge, this is the first work that examines how annotators react to hate speech comments.To fully exploit the collected annotations, we tested multitask learning on our dataset. Multi- task learning ( Collobert et al.  , 2011 ) allows neu- ral networks to share parameters with one an- other and, thus, learn from related tasks. It has been used in different NLP tasks such as pars- ing ( Hashimoto et al. , 2017 ), dependency pars- ing ( Peng et al. , 2017 ), neural machine transla- tion ( Luong et al. , 2016 ), sentiment analysis ( Au- genstein et al.  , 2018 ), and other tasks. Multi- task learning architectures tackle challenges that include sharing the label space and the question of private and shared space for loosely related tasks ( Ruder et al. , 2017 ), for which techniques may in- volve a massive space of potential parameter shar- ing architectures.
+
+================================== Ai Message ==================================
+
+Their dataset contains 13,000 tweets.

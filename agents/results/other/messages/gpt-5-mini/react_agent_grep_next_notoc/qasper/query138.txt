@@ -1,0 +1,296 @@
+================================ Human Message =================================
+
+QUERY:
+What social-network features are used?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_Ua4VwT5dBwVtubDaxI3cqeWQ)
+ Call ID: call_Ua4VwT5dBwVtubDaxI3cqeWQ
+  Args:
+    pattern: social-network features
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_PALyjmpGpe1pjpJQuGxFd1ao)
+ Call ID: call_PALyjmpGpe1pjpJQuGxFd1ao
+  Args:
+    pattern: social network features
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_Vst963nQ0d8QWamqXHhHcCvO)
+ Call ID: call_Vst963nQ0d8QWamqXHhHcCvO
+  Args:
+    pattern: social-network
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Conclusion
+In this study, we produced an original dataset for cyberbul- lying detection research and an approach that leverages this dataset to more accurately detect cyberbullying. Our label- ing scheme was designed to accommodate the cyberbullying definitions that have been proposed throughout the literature. In order to more accurately represent the nature of cyberbul- lying, we decomposed this complex issue into five represen- tative characteristics.  Our classes distinguish cyberbullying from other related behaviors, such as isolated aggression or crude joking. To help annotators infer these distinctions, we provided them with the full context of each message’s reply thread, along with a list of the author’s most recent mentions. In this way, we secured a new set of labels for more reliable cyberbullying representations.From these ground truth labels, we designed a new set of features to quantify each of the five cyberbullying crite- ria.  Unlike previous text-based or user-based features, our features measure the relationship between a message author and target. We show that these features improve the perfor- mance of standard text-based models. These results demon- strate the relevance of social-network and language-based measurements to account for the nuanced social characteris- tics of cyberbullying. Despite improvements over baseline methods, our classi- fiers have not attained the high levels of precision and recall that should be expected of real-world detection systems. For this reason, we argue that the challenging task of cyberbul- lying detection remains an open research problem.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_EWVJx2C5S0NBsHIHZgSmYB73)
+ Call ID: call_EWVJx2C5S0NBsHIHZgSmYB73
+  Args:
+    pattern: features
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Cyberbullying is a pervasive problem in online communi- ties. To identify cyberbullying cases in large-scale social net- works, content moderators depend on machine learning clas- sifiers for automatic cyberbullying detection. However, exist- ing models remain unfit for real-world applications, largely due to a shortage of publicly available training data and a lack of standard criteria for assigning ground truth labels. In this study, we address the need for reliable data using an original annotation framework.  Inspired by social sciences research into bullying behavior, we characterize the nuanced problem of cyberbullying using five explicit factors to represent its social and linguistic aspects. We model this behavior using social network and language-based features, which improve classifier performance. These results demonstrate the impor- tance of representing and modeling cyberbullying as a social phenomenon.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_5lDHyflJLOXQRrUPplsF4TBF)
+ Call ID: call_5lDHyflJLOXQRrUPplsF4TBF
+  Args:
+    pattern: social network and language-based features
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Cyberbullying is a pervasive problem in online communi- ties. To identify cyberbullying cases in large-scale social net- works, content moderators depend on machine learning clas- sifiers for automatic cyberbullying detection. However, exist- ing models remain unfit for real-world applications, largely due to a shortage of publicly available training data and a lack of standard criteria for assigning ground truth labels. In this study, we address the need for reliable data using an original annotation framework.  Inspired by social sciences research into bullying behavior, we characterize the nuanced problem of cyberbullying using five explicit factors to represent its social and linguistic aspects. We model this behavior using social network and language-based features, which improve classifier performance. These results demonstrate the impor- tance of representing and modeling cyberbullying as a social phenomenon.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_LMX5iNmZqXxkAjwPGhrYRTET)
+ Call ID: call_LMX5iNmZqXxkAjwPGhrYRTET
+  Args:
+    pattern: We designed a new set of features
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_kb5LY3vuDJIXKyF6imnRunLi)
+ Call ID: call_kb5LY3vuDJIXKyF6imnRunLi
+  Args:
+    pattern: social
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Cyberbullying is a pervasive problem in online communi- ties. To identify cyberbullying cases in large-scale social net- works, content moderators depend on machine learning clas- sifiers for automatic cyberbullying detection. However, exist- ing models remain unfit for real-world applications, largely due to a shortage of publicly available training data and a lack of standard criteria for assigning ground truth labels. In this study, we address the need for reliable data using an original annotation framework.  Inspired by social sciences research into bullying behavior, we characterize the nuanced problem of cyberbullying using five explicit factors to represent its social and linguistic aspects. We model this behavior using social network and language-based features, which improve classifier performance. These results demonstrate the impor- tance of representing and modeling cyberbullying as a social phenomenon.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_KCACBIqt0ECovBmZtsVBPo5j)
+ Call ID: call_KCACBIqt0ECovBmZtsVBPo5j
+  Args:
+    pattern: relationship between a message author and target
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Conclusion
+In this study, we produced an original dataset for cyberbul- lying detection research and an approach that leverages this dataset to more accurately detect cyberbullying. Our label- ing scheme was designed to accommodate the cyberbullying definitions that have been proposed throughout the literature. In order to more accurately represent the nature of cyberbul- lying, we decomposed this complex issue into five represen- tative characteristics.  Our classes distinguish cyberbullying from other related behaviors, such as isolated aggression or crude joking. To help annotators infer these distinctions, we provided them with the full context of each message’s reply thread, along with a list of the author’s most recent mentions. In this way, we secured a new set of labels for more reliable cyberbullying representations.From these ground truth labels, we designed a new set of features to quantify each of the five cyberbullying crite- ria.  Unlike previous text-based or user-based features, our features measure the relationship between a message author and target. We show that these features improve the perfor- mance of standard text-based models. These results demon- strate the relevance of social-network and language-based measurements to account for the nuanced social characteris- tics of cyberbullying. Despite improvements over baseline methods, our classi- fiers have not attained the high levels of precision and recall that should be expected of real-world detection systems. For this reason, we argue that the challenging task of cyberbul- lying detection remains an open research problem.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_iKEUocWHMAPrJGWpIl9Ci6Sd)
+ Call ID: call_iKEUocWHMAPrJGWpIl9Ci6Sd
+  Args:
+    pattern: mention
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Appendix 2: Model Evaluation
+For the sake of comparison, we provide precision, recall, and F 1 scores for five different machine learning models: k - nearest neighbors (KNN), random forest, support vector ma- chine (SVM), AdaBoost, and Multilayer Perceptron (MLP). Then we provide feature weights for our logistic regression model trained on each of the five cyberbullying criteria.Table 9: Random Forest Precision
+Criterion BoW Text User Proposed Combined aggression 77. 6% 80.1% 78.3% 78.7% 79.7% repetition 6.5% 6.8% 7.7% 16.1% 10.8% harmful intent 18.4% 28.1% 33.2% 33.4% 43.1% visibility among peers 28.7% 32.7% 34.8% 42. 8% 35.1% target power 39.3% 43.3% 77.9% 74.5% 69.6%
+Table 10: AdaBoost Precision
+Criterion BoW Text User Proposed Combined aggression 82.6% 81.6% 77.0% 77.5% 81.6% repetition 7.8% 9.0% 7.3% 16.6% 25. 8% harmful intent 29.1% 46.4% 34.3% 39.9% 60.0% visibility among peers 30.5% 32.9% 35.9% 45.8% 46.1% target power 42.5% 46.5% 78.0% 78.2% 77.9%
+Table 11: MLP Precision
+ Criterion BoW Text User Proposed Combined aggression 82.8% 78.8% 76.7% 77.4% 78.3% repetition 7.7% 8.7% 8.6% 16.9% 19.6% harmful intent 27.4% 42.8% 37.3% 38.4% 46.8% visibility among peers 30.1% 34. 0% 34.3% 41.6% 38.5% target power 39.6% 45.2% 74.3% 72.0% 68.6%
+Table 12: Random Forest Recall
+Criterion BoW Text User Proposed Combined aggression 56.4% 78.5% 43.7% 45.3% 76.2% repetition 36.2% 24.9% 46. 3% 64.7% 29.9% harmful intent 42.4% 35.1% 78.4% 78.2% 53.5% visibility among peers 48.1% 30.6% 50.5% 49.9% 32.5% target power 60.1% 38.0% 79.0% 81.9% 76.7%
+ Table 13: AdaBoost Recall
+Criterion BoW Text User Proposed Combined aggression 75.0% 86.4% 65.9% 77.4% 86.3% repetition 23.8% 4.1% 26.8% 31.2% 17.8% harmful intent 44.4% 37.8% 57.0% 52.8% 50.8% visibility among peers 41. 0% 15.4% 42.8% 43.1% 32.0% target power 56.0% 39.4% 81.8% 81.0% 75.6%
+Table 14: MLP Recall
+Criterion BoW Text User Proposed Combined aggression 64.1% 86.5% 65.5% 68.0% 85.6% repetition 26.8% 6. 8% 22.5% 27.1% 12.6% harmful intent 51.0% 33.3% 57.0% 57.0% 37.2% visibility among peers 51.6% 23.5% 45.6% 50.2% 26.5% target power 61.6% 37.5% 76.5% 76.2% 65.6%
+ Table 15: Random Forest F 1
+Criterion BoW Text User Proposed Combined aggression 65.2% 79.3% 56.0% 57.5% 77.9% repetition 11.0% 10.6% 13.2% 25.8% 15.8% harmful intent 25.6% 31.1% 46.6% 46.8% 47. 7% visibility among peers 35.7% 30.8% 41.2% 46.1% 33.6% target power 47.4% 39.9% 78.4% 78.0% 72.8%
+Table 16: AdaBoost F 1
+Criterion BoW Text User Proposed Combined aggression 78.6% 83.9% 71.0% 77.5% 83. 9% repetition 11.7% 5.6% 11.5% 21.6% 20.9% harmful intent 35.1% 41.6% 42.8% 45.4% 55.0% visibility among peers 34.9% 21.0% 39.1% 44.3% 37.8% target power 48.3% 42.7% 79. 8% 79.6% 76.7%
+Table 17: MLP F 1
+Criterion BoW Text User Proposed Combined aggression 72.2% 82.5% 70.7% 72.4% 81.8% repetition 12.0% 7.6% 12.4% 20.7% 15.2% harmful intent 35.7% 37.3% 45.0% 45. 8% 41.3% visibility among peers 38.0% 27.7% 39.2% 45.5% 31.4% target power 48.2% 41.0% 75.4% 74.0% 67.0%
+Table 18: Top Absolute Weights for Aggressive Language
+Rank Feature Weight 1 affect (LIWC) -1.34 2 sexual (LIWC) 1. 07 3 negemo (LIWC) 0.90 4 maximum author retweets 0.86 5 relativ (LIWC) -0.75 6 bio (LIWC) -0.69 7 posemo (LIWC) 0.66 8 num chars -0.64 9 space (LIWC) 0.52 10 upward overlap 0.51
+Table 19: Top Absolute Weights for Repetition Features
+ Rank Feature Weight 1 negemo (LIWC) 1.40 2 author verified status -1.32 3 affect (LIWC) -1.24 4 cogmech (LIWC) -0.96 5 relativ (LIWC) -0.89 6 posemo (LIWC) 0.80 7 social (LIWC) 0.77 8 aggressive user count 0.63 9 upward overlap 0. 62 10 number of unique terms 0.61
+Table 20: Top Absolute Weights for Harmful Intent
+Rank Feature Weight 1 number of words -1.70 2 number of unique terms 1.41 3 bio (LIWC) -1.05 4 funct (LIWC) 0.95 5 author follower count -0.90 6 present (LIWC) 0.83 7 you (LIWC) 0. 83 8 message count 0.79 9 upward mention count -0.71 10 verb (LIWC) -0.67
+Table 21: Top Absolute Weights for Visibility Among Peers
+Rank Feature Weight 1 author follower count 6.29 2 maximum author retweets -1.63 3 maximum author favorites 1.46 4 aggressive user count -1.36 5 number of words -1. 16 6 reply user count 1.03 7 number of unique terms 1.02 8 reply message count -0.91 9 message count 0.77 10 affect (LIWC) -0.67
+Table 22: Top Absolute Weights for Target Power
+Rank Feature Weight 1 target follower count 2.28 2 author follower count -1.67 3 bidirectional overlap -1.22 4 target verified status 1. 20 5 upward overlap -1.11 6 downward overlap 1.04 7 relativ (LIWC) 0.76 8 reply user count -0.69 9 space (LIWC) -0.68 10 message count -0.63
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_zGMl29Ep67JgtgLlUO6xFkEX)
+ Call ID: call_zGMl29Ep67JgtgLlUO6xFkEX
+  Args:
+    pattern: Proposed
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Appendix 2: Model Evaluation
+For the sake of comparison, we provide precision, recall, and F 1 scores for five different machine learning models: k - nearest neighbors (KNN), random forest, support vector ma- chine (SVM), AdaBoost, and Multilayer Perceptron (MLP). Then we provide feature weights for our logistic regression model trained on each of the five cyberbullying criteria.Table 9: Random Forest Precision
+Criterion BoW Text User Proposed Combined aggression 77. 6% 80.1% 78.3% 78.7% 79.7% repetition 6.5% 6.8% 7.7% 16.1% 10.8% harmful intent 18.4% 28.1% 33.2% 33.4% 43.1% visibility among peers 28.7% 32.7% 34.8% 42. 8% 35.1% target power 39.3% 43.3% 77.9% 74.5% 69.6%
+Table 10: AdaBoost Precision
+Criterion BoW Text User Proposed Combined aggression 82.6% 81.6% 77.0% 77.5% 81.6% repetition 7.8% 9.0% 7.3% 16.6% 25. 8% harmful intent 29.1% 46.4% 34.3% 39.9% 60.0% visibility among peers 30.5% 32.9% 35.9% 45.8% 46.1% target power 42.5% 46.5% 78.0% 78.2% 77.9%
+Table 11: MLP Precision
+ Criterion BoW Text User Proposed Combined aggression 82.8% 78.8% 76.7% 77.4% 78.3% repetition 7.7% 8.7% 8.6% 16.9% 19.6% harmful intent 27.4% 42.8% 37.3% 38.4% 46.8% visibility among peers 30.1% 34. 0% 34.3% 41.6% 38.5% target power 39.6% 45.2% 74.3% 72.0% 68.6%
+Table 12: Random Forest Recall
+Criterion BoW Text User Proposed Combined aggression 56.4% 78.5% 43.7% 45.3% 76.2% repetition 36.2% 24.9% 46. 3% 64.7% 29.9% harmful intent 42.4% 35.1% 78.4% 78.2% 53.5% visibility among peers 48.1% 30.6% 50.5% 49.9% 32.5% target power 60.1% 38.0% 79.0% 81.9% 76.7%
+ Table 13: AdaBoost Recall
+Criterion BoW Text User Proposed Combined aggression 75.0% 86.4% 65.9% 77.4% 86.3% repetition 23.8% 4.1% 26.8% 31.2% 17.8% harmful intent 44.4% 37.8% 57.0% 52.8% 50.8% visibility among peers 41. 0% 15.4% 42.8% 43.1% 32.0% target power 56.0% 39.4% 81.8% 81.0% 75.6%
+Table 14: MLP Recall
+Criterion BoW Text User Proposed Combined aggression 64.1% 86.5% 65.5% 68.0% 85.6% repetition 26.8% 6. 8% 22.5% 27.1% 12.6% harmful intent 51.0% 33.3% 57.0% 57.0% 37.2% visibility among peers 51.6% 23.5% 45.6% 50.2% 26.5% target power 61.6% 37.5% 76.5% 76.2% 65.6%
+ Table 15: Random Forest F 1
+Criterion BoW Text User Proposed Combined aggression 65.2% 79.3% 56.0% 57.5% 77.9% repetition 11.0% 10.6% 13.2% 25.8% 15.8% harmful intent 25.6% 31.1% 46.6% 46.8% 47. 7% visibility among peers 35.7% 30.8% 41.2% 46.1% 33.6% target power 47.4% 39.9% 78.4% 78.0% 72.8%
+Table 16: AdaBoost F 1
+Criterion BoW Text User Proposed Combined aggression 78.6% 83.9% 71.0% 77.5% 83. 9% repetition 11.7% 5.6% 11.5% 21.6% 20.9% harmful intent 35.1% 41.6% 42.8% 45.4% 55.0% visibility among peers 34.9% 21.0% 39.1% 44.3% 37.8% target power 48.3% 42.7% 79. 8% 79.6% 76.7%
+Table 17: MLP F 1
+Criterion BoW Text User Proposed Combined aggression 72.2% 82.5% 70.7% 72.4% 81.8% repetition 12.0% 7.6% 12.4% 20.7% 15.2% harmful intent 35.7% 37.3% 45.0% 45. 8% 41.3% visibility among peers 38.0% 27.7% 39.2% 45.5% 31.4% target power 48.2% 41.0% 75.4% 74.0% 67.0%
+Table 18: Top Absolute Weights for Aggressive Language
+Rank Feature Weight 1 affect (LIWC) -1.34 2 sexual (LIWC) 1. 07 3 negemo (LIWC) 0.90 4 maximum author retweets 0.86 5 relativ (LIWC) -0.75 6 bio (LIWC) -0.69 7 posemo (LIWC) 0.66 8 num chars -0.64 9 space (LIWC) 0.52 10 upward overlap 0.51
+Table 19: Top Absolute Weights for Repetition Features
+ Rank Feature Weight 1 negemo (LIWC) 1.40 2 author verified status -1.32 3 affect (LIWC) -1.24 4 cogmech (LIWC) -0.96 5 relativ (LIWC) -0.89 6 posemo (LIWC) 0.80 7 social (LIWC) 0.77 8 aggressive user count 0.63 9 upward overlap 0. 62 10 number of unique terms 0.61
+Table 20: Top Absolute Weights for Harmful Intent
+Rank Feature Weight 1 number of words -1.70 2 number of unique terms 1.41 3 bio (LIWC) -1.05 4 funct (LIWC) 0.95 5 author follower count -0.90 6 present (LIWC) 0.83 7 you (LIWC) 0. 83 8 message count 0.79 9 upward mention count -0.71 10 verb (LIWC) -0.67
+Table 21: Top Absolute Weights for Visibility Among Peers
+Rank Feature Weight 1 author follower count 6.29 2 maximum author retweets -1.63 3 maximum author favorites 1.46 4 aggressive user count -1.36 5 number of words -1. 16 6 reply user count 1.03 7 number of unique terms 1.02 8 reply message count -0.91 9 message count 0.77 10 affect (LIWC) -0.67
+Table 22: Top Absolute Weights for Target Power
+Rank Feature Weight 1 target follower count 2.28 2 author follower count -1.67 3 bidirectional overlap -1.22 4 target verified status 1. 20 5 upward overlap -1.11 6 downward overlap 1.04 7 relativ (LIWC) 0.76 8 reply user count -0.69 9 space (LIWC) -0.68 10 message count -0.63
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_KahruQYFetV305eeclfIVLHA)
+ Call ID: call_KahruQYFetV305eeclfIVLHA
+  Args:
+    pattern: author follower count|target follower count|retweets|favorites|verified|overlap|reply user count|aggressive user count|message count|upward mention|bidirectional overlap|downward overlap
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+References
+[Al-garadi, Varathan, and Ravana 2016] Al-garadi, M. A.; Varathan, K. D.; and Ravana, S. D. 2016. Cybercrime de- tection in online communications: The experimental case of
+cyberbullying detection in the twitter network. Computers in Human Behavior 63:433–443.
+[Bird, Klein, and Loper 2009] Bird, S.; Klein,and Loper 2009] Bird, S.; Klein, E.; and Loper, E. 2009. Natural language processing with Python: analyz- ing text with the natural language toolkit . ” O’Reilly Media, Inc.”.
+[Chatzakou et al. 2017] Chatzakou, D.;Kourtellis, N.; Blackburn, J.; De Cristofaro, E.; Stringhini, G.; and Vakali, A. 2017. Mean birds: Detecting aggression and bullying on twitter. In Proceedings of the 2017 ACM on web science conference , 13–22. ACM.
+[Chawla et al. 2002] Chawla, N. V.;Bowyer, K. W.; Hall, L. O.; and Kegelmeyer, W. P. 2002. SMOTE: synthetic minority over-sampling technique. JAIR 16:321–357.
+[Chelmis, Zois, and Yao 2017] Chelmis,C.; Zois, D.-S.; and Yao, M. 2017. Mining patterns of cyberbullying on twitter. In ICDMW , 126–133. IEEE.
+[Dadvar et al. 2013] Dadvar, M.;Trieschnigg, D.; Ordelman, R.; and de Jong, F. 2013. Improving cyberbullying detection with user context. In European Conference on Information Retrieval , 693–696. Springer.
+[David-Ferdon and Hertz 2009] David-Ferdon, C.,C., and Hertz, M. F. 2009. Electronic media and youth violence; a CDC issue brief for researchers.
+[Davidson et al. 2017] Davidson, T.; Warmsley,D.; Macy, M.; and Weber, I. 2017. Automated hate speech detection and the problem of offensive language. In Eleventh Interna- tional AAAI Conference on Web and Social Media .
+[Dinakar, Reichart, and Lieberman 2011] Dinakar,K.; Re- ichart, R.; and Lieberman, H. 2011. Modeling the detection of textual cyberbullying. In fifth international AAAI confer- ence on weblogs and social media .
+[Hinduja and Patchin 2008] Hinduja, S., and Patchin,J. W. 2008. Cyberbullying: An exploratory analysis of factors related to offending and victimization. Deviant behavior 29(2):129–156.
+[Hosseinmardi et al. 2015] Hosseinmardi, H.;Mattson, S. A.; Rafiq, R. I.; Han, R.; Lv, Q.; and Mishra, S. 2015. Analyzing labeled cyberbullying incidents on the instagram social network. In International conference on social informatics , 49–66. Springer.
+[Hosseinmardi et al. 2016] Hosseinmardi, H.;Rafiq, R. I.; Han, R.; Lv, Q.; and Mishra, S. 2016. Prediction of cyber- bullying incidents in a media-based social network. In 2016 IEEE/ACM International Conference on Advances in Social Networks Analysis and Mining (ASONAM) , 186–192. IEEE.
+[Huang and Chou 2010] Huang, Y.-y., and Chou,C. 2010. An analysis of multiple factors of cyberbullying among ju- nior high school students in taiwan. Computers in Human Behavior 26(6):1581–1590.
+[Huang, Singh, and Atrey 2014] Huang, Q.; Singh,and Atrey 2014] Huang, Q.; Singh, V. K.; and Atrey, P. K. 2014. Cyber bullying detection using social and textual analysis. In Proceedings of the 3rd International Workshop on Socially-Aware Multimedia , 3–6. ACM.
+[Hutto and Gilbert 2014] Hutto, C. J., and Gilbert,E. 2014. Vader: A parsimonious rule-based model for sentiment anal-
+ysis of social media text. In Eighth international AAAI con- ference on weblogs and social media .
+[Kowalski and Limber 2013] Kowalski, R.M., and Limber, S. P. 2013. Psychological, physical, and academic corre- lates of cyberbullying and traditional bullying. Journal of Adolescent Health 53(1):S13–S20.
+[Li 2006] Li, Q. 2006.Cyberbullying in schools: A re- search of gender differences. School psychology interna- tional 27(2):157–170.
+[Miller 2016] Miller, K. 2016.Cyberbullying and its con- sequences: How cyberbullying is contorting the minds of victims and bullies alike, and the law’s limited available re- dress. S. Cal. Interdisc. LJ 26:379.
+[Nahar et al. 2013] Nahar, V.; Li, X.;Li, X.; Pang, C.; and Zhang, Y. 2013. Cyberbullying detection based on text-stream classi- fication. In The 11th Australasian Data Mining Conference (AusDM 2013) .
+[Nahar et al. 2014] Nahar, V.;Al-Maskari, S.; Li, X.; and Pang, C. 2014. Semi-supervised learning for cyberbully- ing detection in social networks. In Australasian Database Conference , 160–171. Springer.
+[Olweus 1994] Olweus, D. 1994.Bullying at school. In Aggressive behavior . Springer. 97–130.
+[Olweus 2012] Olweus, D. 2012.Cyberbullying: An over- rated phenomenon? European Journal of Developmental Psychology 9(5):520–538.
+[Pennebaker, Booth, and Francis 2007] Pennebaker,J. W.; Booth, R. J.; and Francis, M. E. 2007. Liwc2007: Linguistic inquiry and word count. Austin, Texas: liwc. net .
+[Price, Dalgleish, and others 2010] Price, M.;Dalgleish, J.; et al. 2010. Cyberbullying: Experiences, impacts and cop- ing strategies as described by australian young people. Youth Studies Australia 29(2):51.
+[Raskauskas and Stoltz 2007] Raskauskas, J.,J., and Stoltz, A. D. 2007. Involvement in traditional and electronic bullying among adolescents. Developmental psychology 43(3):564.
+[Reynolds, Kontostathis, and Edwards 2011] Reynolds,K.; Kontostathis, A.; and Edwards, L. 2011. Using machine learning to detect cyberbullying. In 2011 10th Interna- tional Conference on Machine learning and applications and workshops , volume 2, 241–244. IEEE.
+[Rosa et al. 2019] Rosa, H.; Pereira, N.;Pereira, N.; Ribeiro, R.; Fer- reira, P.; Carvalho, J.; Oliveira, S.; Coheur, L.; Paulino, P.; Sim˜ao, A. V.; and Trancoso, I. 2019. Automatic cyberbul- lying detection: A systematic review. Computers in Human Behavior 93:333–345.
+[Salawu, He, and Lumsden 2017] Salawu,S.; He, Y.; and Lumsden, J. 2017. Approaches to automated detection of cyberbullying: A survey. IEEE Transactions on Affective Computing .
+[Sampasa-Kanyinga, Roumeliotis,and Xu 2014] Sampasa- Kanyinga, H.; Roumeliotis, P.; and Xu, H. 2014. As- sociations between cyberbullying and school bullying victimization and suicidal ideation, plans and attempts among canadian schoolchildren. PloS one 9(7):e102145.
+[Singh, Huang, and Atrey 2016] Singh, V. K.;Huang, Q.; and Atrey, P. K. 2016. Cyberbullying detection using prob- abilistic socio-textual information fusion. In Proceedings of the 2016 IEEE/ACM International Conference on Advances in Social Networks Analysis and Mining , 884–887. IEEE Press.
+[Slonje and Smith 2008] Slonje, R., and Smith,P. K. 2008. Cyberbullying: Another main type of bullying? Scandina- vian journal of psychology 49(2):147–154.
+[Slonje, Smith,and Fris´en 2013] Slonje, R.; Smith, P. K.; and Fris´en, A. 2013. The nature of cyberbullying, and strategies for prevention. Computers in human behavior 29(1):26–32.
+[Soni and Singh 2018] Soni, D., and Singh, V.2018. Time reveals all wounds: Modeling temporal characteristics of cy- berbullying. In Twelfth International AAAI Conference on Web and Social Media .
+[Sugandhi et al. 2016] Sugandhi, R.;Pande, A.; Agrawal, A.; and Bhagat, H. 2016. Automatic monitoring and prevention of cyberbullying. International Journal of Computer Appli- cations 8:17–19.
+[Van Hee et al. 2018] Van Hee, C.; Jacobs,G.; Emmery, C.; Desmet, B.; Lefever, E.; Verhoeven, B.; De Pauw, G.; Daele- mans, W.; and Hoste, V. 2018. Automatic detection of cy- berbullying in social media text. PloS one 13(10):e0203794.
+[Waasdorp and Bradshaw 2015] Waasdorp, T. E.,T. E., and Brad- shaw, C. P. 2015. The overlap between cyberbullying and traditional bullying. Journal of Adolescent Health 56(5):483–488.
+[Xu et al. 2012] Xu, J.-M.; Jun, K.-S.; Zhu, X.; and Bell- more, A. 2012. Learning from bullying traces in social media. In Proceedings of the 2012 conference of the North American chapter of the association for computational lin- guistics: Human language technologies , 656–666. Associa- tion for Computational Linguistics.
+[Yao et al. 2019] Yao, M.; Chelmis, C.;Chelmis, C.; Zois, D.; et al. 2019. Cyberbullying ends here: Towards robust detection of cy- berbullying in social media. In The World Wide Web Con- ference , 3427–3433. ACM.
+[Zhang et al. 2016] Zhang, X.; Tong, J.;Tong, J.; Vishwamitra, N.; Whittaker, E.; Mazer, J. P.; Kowalski, R.; Hu, H.; Luo, F.; Macbeth, J.; and Dillon, E. 2016. Cyberbullying detection with a pronunciation based convolutional neural network. In 2016 15th IEEE International Conference on Machine Learning and Applications (ICMLA) , 740–745.  IEEE.
+[Zhao, Zhou, and Mao 2016] Zhao, R.; Zhou,and Mao 2016] Zhao, R.; Zhou, A.; and Mao, K. 2016. Automatic detection of cyberbullying on social networks based on bullying features. In Proceedings of the 17th international conference on distributed computing and networking , 43. ACM.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_86xPFz4dwjx4cQJVFxO7n9Si)
+ Call ID: call_86xPFz4dwjx4cQJVFxO7n9Si
+  Args:
+    pattern: feature|features used|social-network features|user-based features|text-based features|BoW Text User Proposed Combined
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Cyberbullying is a pervasive problem in online communi- ties. To identify cyberbullying cases in large-scale social net- works, content moderators depend on machine learning clas- sifiers for automatic cyberbullying detection. However, exist- ing models remain unfit for real-world applications, largely due to a shortage of publicly available training data and a lack of standard criteria for assigning ground truth labels. In this study, we address the need for reliable data using an original annotation framework.  Inspired by social sciences research into bullying behavior, we characterize the nuanced problem of cyberbullying using five explicit factors to represent its social and linguistic aspects. We model this behavior using social network and language-based features, which improve classifier performance. These results demonstrate the impor- tance of representing and modeling cyberbullying as a social phenomenon.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_VYpNfKTt151iToWwm3NW2PEV)
+ Call ID: call_VYpNfKTt151iToWwm3NW2PEV
+  Args:
+    pattern: Proposed features|Proposed feature|social-network features used|user-based features|network features|upward overlap|bidirectional overlap|downward overlap|aggressive user count
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Appendix 2: Model Evaluation
+For the sake of comparison, we provide precision, recall, and F 1 scores for five different machine learning models: k - nearest neighbors (KNN), random forest, support vector ma- chine (SVM), AdaBoost, and Multilayer Perceptron (MLP). Then we provide feature weights for our logistic regression model trained on each of the five cyberbullying criteria.Table 9: Random Forest Precision
+Criterion BoW Text User Proposed Combined aggression 77. 6% 80.1% 78.3% 78.7% 79.7% repetition 6.5% 6.8% 7.7% 16.1% 10.8% harmful intent 18.4% 28.1% 33.2% 33.4% 43.1% visibility among peers 28.7% 32.7% 34.8% 42. 8% 35.1% target power 39.3% 43.3% 77.9% 74.5% 69.6%
+Table 10: AdaBoost Precision
+Criterion BoW Text User Proposed Combined aggression 82.6% 81.6% 77.0% 77.5% 81.6% repetition 7.8% 9.0% 7.3% 16.6% 25. 8% harmful intent 29.1% 46.4% 34.3% 39.9% 60.0% visibility among peers 30.5% 32.9% 35.9% 45.8% 46.1% target power 42.5% 46.5% 78.0% 78.2% 77.9%
+Table 11: MLP Precision
+ Criterion BoW Text User Proposed Combined aggression 82.8% 78.8% 76.7% 77.4% 78.3% repetition 7.7% 8.7% 8.6% 16.9% 19.6% harmful intent 27.4% 42.8% 37.3% 38.4% 46.8% visibility among peers 30.1% 34. 0% 34.3% 41.6% 38.5% target power 39.6% 45.2% 74.3% 72.0% 68.6%
+Table 12: Random Forest Recall
+Criterion BoW Text User Proposed Combined aggression 56.4% 78.5% 43.7% 45.3% 76.2% repetition 36.2% 24.9% 46. 3% 64.7% 29.9% harmful intent 42.4% 35.1% 78.4% 78.2% 53.5% visibility among peers 48.1% 30.6% 50.5% 49.9% 32.5% target power 60.1% 38.0% 79.0% 81.9% 76.7%
+ Table 13: AdaBoost Recall
+Criterion BoW Text User Proposed Combined aggression 75.0% 86.4% 65.9% 77.4% 86.3% repetition 23.8% 4.1% 26.8% 31.2% 17.8% harmful intent 44.4% 37.8% 57.0% 52.8% 50.8% visibility among peers 41. 0% 15.4% 42.8% 43.1% 32.0% target power 56.0% 39.4% 81.8% 81.0% 75.6%
+Table 14: MLP Recall
+Criterion BoW Text User Proposed Combined aggression 64.1% 86.5% 65.5% 68.0% 85.6% repetition 26.8% 6. 8% 22.5% 27.1% 12.6% harmful intent 51.0% 33.3% 57.0% 57.0% 37.2% visibility among peers 51.6% 23.5% 45.6% 50.2% 26.5% target power 61.6% 37.5% 76.5% 76.2% 65.6%
+ Table 15: Random Forest F 1
+Criterion BoW Text User Proposed Combined aggression 65.2% 79.3% 56.0% 57.5% 77.9% repetition 11.0% 10.6% 13.2% 25.8% 15.8% harmful intent 25.6% 31.1% 46.6% 46.8% 47. 7% visibility among peers 35.7% 30.8% 41.2% 46.1% 33.6% target power 47.4% 39.9% 78.4% 78.0% 72.8%
+Table 16: AdaBoost F 1
+Criterion BoW Text User Proposed Combined aggression 78.6% 83.9% 71.0% 77.5% 83. 9% repetition 11.7% 5.6% 11.5% 21.6% 20.9% harmful intent 35.1% 41.6% 42.8% 45.4% 55.0% visibility among peers 34.9% 21.0% 39.1% 44.3% 37.8% target power 48.3% 42.7% 79. 8% 79.6% 76.7%
+Table 17: MLP F 1
+Criterion BoW Text User Proposed Combined aggression 72.2% 82.5% 70.7% 72.4% 81.8% repetition 12.0% 7.6% 12.4% 20.7% 15.2% harmful intent 35.7% 37.3% 45.0% 45. 8% 41.3% visibility among peers 38.0% 27.7% 39.2% 45.5% 31.4% target power 48.2% 41.0% 75.4% 74.0% 67.0%
+Table 18: Top Absolute Weights for Aggressive Language
+Rank Feature Weight 1 affect (LIWC) -1.34 2 sexual (LIWC) 1. 07 3 negemo (LIWC) 0.90 4 maximum author retweets 0.86 5 relativ (LIWC) -0.75 6 bio (LIWC) -0.69 7 posemo (LIWC) 0.66 8 num chars -0.64 9 space (LIWC) 0.52 10 upward overlap 0.51
+Table 19: Top Absolute Weights for Repetition Features
+ Rank Feature Weight 1 negemo (LIWC) 1.40 2 author verified status -1.32 3 affect (LIWC) -1.24 4 cogmech (LIWC) -0.96 5 relativ (LIWC) -0.89 6 posemo (LIWC) 0.80 7 social (LIWC) 0.77 8 aggressive user count 0.63 9 upward overlap 0. 62 10 number of unique terms 0.61
+Table 20: Top Absolute Weights for Harmful Intent
+Rank Feature Weight 1 number of words -1.70 2 number of unique terms 1.41 3 bio (LIWC) -1.05 4 funct (LIWC) 0.95 5 author follower count -0.90 6 present (LIWC) 0.83 7 you (LIWC) 0. 83 8 message count 0.79 9 upward mention count -0.71 10 verb (LIWC) -0.67
+Table 21: Top Absolute Weights for Visibility Among Peers
+Rank Feature Weight 1 author follower count 6.29 2 maximum author retweets -1.63 3 maximum author favorites 1.46 4 aggressive user count -1.36 5 number of words -1. 16 6 reply user count 1.03 7 number of unique terms 1.02 8 reply message count -0.91 9 message count 0.77 10 affect (LIWC) -0.67
+Table 22: Top Absolute Weights for Target Power
+Rank Feature Weight 1 target follower count 2.28 2 author follower count -1.67 3 bidirectional overlap -1.22 4 target verified status 1. 20 5 upward overlap -1.11 6 downward overlap 1.04 7 relativ (LIWC) 0.76 8 reply user count -0.69 9 space (LIWC) -0.68 10 message count -0.63
+
+================================== Ai Message ==================================
+
+Author follower count, target follower count, author verified status, target verified status, maximum author retweets, maximum author favorites, aggressive user count, reply user count, reply message count, message count, upward mention count, upward overlap, bidirectional overlap, downward overlap.

@@ -1,0 +1,132 @@
+================================ Human Message =================================
+
+QUERY:
+What is F-score obtained?
+
+TABLE OF CONTENTS (TOC):
+1 | F-Score Driven Max Margin Neural Network for Named Entity Recognition in Chinese Social Media
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2 Model
+1.3.1 | 2.1 Transition Probability
+1.3.2 | 2.2 F-Score Driven Training Method
+1.3.3 | 2.3 Word Segmentation Representation
+1.4 | 3 Experiments and Analysis
+1.4.1 | 3.1 Datasets
+1.4.2 | 3.2 Parameter Estimation
+1.4.3 | 3.3 Results and Analysis
+1.5 | 4 Conclusions and Future Work
+1.6 | Acknowledgements
+1.7 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_7bYJmG3tTRBxTEoQtJXvMY44)
+ Call ID: call_7bYJmG3tTRBxTEoQtJXvMY44
+  Args:
+    section_id: 1.4.3
+
+================================= Tool Message =================================
+Name: read_section
+
+3.3 Results and Analysis
+We evaluate two methods to incorporate word seg- mentation information. The results of two meth- ods are shown as Table 2. We can see that posi- tional character embeddings perform better in neu- ral network. This is probably because positional character embeddings method can learn word seg- mentation information from unlabeled text while word segmentation can only use training corpus.We adopt positional character embeddings in our next four models. Our first model is a B- LSTM neural network (baseline).  To take ad- vantage of traditional model (Chieu and Ng, 2002; Mccallum et al., 2001) such as CRF, we com- bine transition probability in our B-LSTM based MMNN. We design a F-Score driven training method in our third model F-Score Driven Model I . We propose an integrated training method in our fourth model F-Score Driven Model II .The re-
+ sults of models are depicted as Figure 1(a). From the figure, we can know our models perfrom better with little loss in time.Table 3 shows results for NER on test sets. In the Table 3, we also show micro F1-score (Over- all) and out-of-vocabulary entities (OOV) recall. Peng and Dredze (2016) is the state-of-the-art NER system in Chinese Social media.  By compar- ing the results of B-LSTM model and B-LSTM + MTNN model, we can know transition probability is significant for NER. Compared with B-LSTM + MMNN model, F-Score Driven Model I improves the result of named entity with a loss in nominal mention.  The integrated training model (F-Score Driven Model II) benefits from both label accu- racy and F-Score, which achieves a new state-of- the-art NER system in Chinese social media. Our integrated model has better performance on named entity and nominal mention.To better understand the impact of the factor β , we show the results of our integrated model with different values of β in Figure 1(c).  From Figure 1(c), we can know that β is an important factor for us to balance F-score and accuracy. Our integrated model may help alleviate the influence of noise in NER in Chinese social media.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_all (call_MbI0IGshmVFkhqg6rdy14CWc)
+ Call ID: call_MbI0IGshmVFkhqg6rdy14CWc
+  Args:
+    pattern: F-Score|F1|F1-score|F1 score|F-score|micro F1|F1\-score|F1\.|F1
+    }```jsonlint```'}]}```}.jsonավորՠუნოცხროვ The tool input must be valid JSON. My previous call failed due to trailing. Need proper JSON, with pattern string. Use a simpler pattern : . No. Let's call with
+
+================================= Tool Message =================================
+Name: grep_search_all
+
+Tool 'grep_search_all' failed after 1 attempt with TypeError: grep_search_all() got an unexpected keyword argument '}```jsonlint```'}]}```}.jsonավորՠუნოცხროვ The tool input must be valid JSON. My previous call failed due to trailing. Need proper JSON, with pattern string. Use a simpler pattern '. Please try again.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_all (call_aRAYu88bN1O5frn6L9tq3MsR)
+ Call ID: call_aRAYu88bN1O5frn6L9tq3MsR
+  Args:
+    pattern: F1|F-Score|F1-score|micro F1|F-Score Driven
+
+================================= Tool Message =================================
+Name: grep_search_all
+
+1.2 | 1 Introduction
+With the development of Internet, social me- dia plays an important role in information exchange. The natural language processing tasks on social media are more challenging which draw attention of many researchers (Li and Liu, 2015; Habib and van Keulen, 2015; Radford et al., 2015; Cherry and Guo, 2015). As the foundation of many downstream applications (Weissenborn et al., 2015; Delgado et al. , 2014; Hajishirzi et al., 2013) such as information extrac- tion, named entity recognition (NER) deserves more research in prevailing and challenging social media text. NER is a task to identify names in texts and to assign names with particular types (Sun et al., 2009; Sun, 2014; Sun et al., 2014; He and Sun, 2017).  It is the informality of social media that discourages accuracy of NER
+systems. While efforts in English have nar- rowed the gap between social media and formal domains (Cherry and Guo, 2015), the task in Chinese remains challenging. It is caused by Chinese logographic characters which lack many clues to indicate whether a word is a name, such as capitalization.  The scant labelled Chi- nese social media corpus makes the task more challenging (Neelakantan and Collins, 2015; Skeppstedt, 2014; Liu et al., 2015).To address the problem, one approach is to use the lexical embeddings learnt from massive unla- beled text.  To take better advantage of unlabeled text, Peng and Dredze (2015) evaluates three types of embeddings for Chinese text, and shows the effectiveness of positional character embeddings with experiments. Considering the value of word segmentation in Chinese NER, another approach is to construct an integrated model to jointly train learned representations for both predicting word segmentations and NER (Peng and Dredze, 2016). However, the two above approaches are imple- mented within CRF model.  We construct a semi- supervised model based on B-LSTM neural net- work to learn from the limited labelled corpus by using lexical information provided by massive un- labeled text. To shrink the gap between label ac- curacy and F-Score, we propose a method to di- rectly train on F-Score rather than label accuracy in our model. In addition, we propose an inte- grated method to train on both F-Score and label accuracy.  Specifically, we make contributions as follows:
+• We propose a method to directly train on F- Score rather than label accuracy.In addition, we propose an integrated method to train on both F-Score and label accuracy.
+• We combine transition probability into our B- LSTM based max margin neural network toform structured output in neural network.
+• We evaluate two methods to use lexical em- beddings from unlabeled text in neural net- work.
+
+1.3.2 | 2.2 F-Score Driven Training Method
+Max Margin training method use structured mar- gin loss ∆( l, l ) to describe the difference between the corrected label sequence l and predicted la- bel sequence l . In fact, the structured margin loss ∆( l, l ) reflect the loss in label accuracy. Consider- ing the gap between label accuracy and F-Score in NER, we introduce a new training method to train directly on F-Score.  To introduce F-Score driven training method, we need to take a look at the sub- gradient of equation (4):
+∂J ∂θ = 1 m m X i =1 ( ∂s ( x, l max , θ ) ∂θ − ∂s ( x, l, θ ) ∂θ ) + λθ
+ In the subgradient, we can know that structured margin loss ∆( l, l ) contributes nothing to the subgradient of the regularized objective function J ( θ ) . The margin loss ∆( l, l ) serves as a trig- ger function to conduct the training process of B- LSTM based MMNN. We can introduce a new trigger function to guide the training process of neural network. F-Score Trigger Function The main criterion of NER task is F-score.  However, high label accu- racy does not mean high F-score. For instance, if every named entity’s last character is labeledas O, the label accuracy can be quite high, but the precision, recall and F-score are 0 . We use the F- Score between corrected label sequence and pre- dicted label sequence as trigger function, which
+can conduct the training process to optimize the F-Score of training examples. Our new structured margin loss can be described as:
+ e ∆( l, l ) = κ ∗ F Score (5)
+where F Score is the F-Score between corrected label sequence and predicted label sequence.F-Score and Label Accuracy Trigger Function The F-Score can be quite unstable in some situa- tion. For instance, if there is no named entity in a sentence, F-Score will be always 0 regardless of the predicted label sequence.  To take advantage of meaningful information provided by label ac- curacy, we introduce an integrated trigger function as follows:
+ˆ ∆( l, l ) = e ∆( l, l ) + β ∗ ∆( l, l ) (6)
+where β is a factor to adjust the weight of label accuracy and F-Score. Because F-Score depends on the whole label se- quence, we use beam search to find k label se- quences with top sentece-level score s ( x, l, θ ) and then use trigger function to rerank the k label se- quences and select the best.
+
+1.4.2 | 3.2 Parameter Estimation
+We pre-trained embeddings using word2vec (Mikolov et al., 2013) with the skip-gram training model, without negative sampling and other de- fault parameter settings. Like Mao et al. (2008), we use bigram features as follow:
+C n C n +1 ( n = − 2 , − 1 , 0 , 1) and C − 1 C 1 1
+We fix some labeling errors of the data.  2 https://github.com/fxsjy/jieba.Methods Named Entity Nominal Mention Precision Recall F1 Precision Recall F1 Character+Segmentation 48.52 39.23 43.39 58.75 47.96 52.91 Character+Position 65.87 39.71 49.55 68.12 47.96 56.29
+Table 2: Two methods to incorporate word segmentation information. Models Named Entity Nominal Mention Precision Recall F1 Precision Recall F1 Overall OOV (Peng and Dredze, 2015) 57.98 35.57 44.09 63.84 29.45 40.38 42.70 - (Peng and Dredze, 2016) 63.33 39.18 48.41 58.59 37.42 45.67 47. 38 - B-LSTM 65.87 39.71 49.55 68.12 47.96 56.29 52.81 13.97 B-LSTM + MMNN 65.29 37.80 47.88 73.53 51.02 60.24 53.86 17.90 F-Score Driven I (proposal) 66.67 39.23 49.40 69. 50 50.00 58.16 53.64 17.03 F-Score Driven II (proposal) 66.93 40.67 50.60 66.46 53.57 59.32 54.82 20.96
+Table 3: NER results for named and nominal mentions on test data.We use window approach (Collobert et al. , 2011) to extract higher level Features from word feature vectors. We treat bigram features as discrete fea- tures (Collobert et al., 2011) for our neural net- work. Our models are trained using stochastic gra- dient descent with an L2 regularizer. As for parameters in our models, window size for word embedding is 5 , word embedding di- mension, feature embedding dimension and hid- den vector dimension are all 100 , discount κ in margin loss is 0 . 2 , and the hyper parameter for the L 2 is 0 . 000001 . As for learning rate, initial learn- ing rate is 0 . 1 with a decay rate 0 . 95 .  For inte- grated model, β is 0 . 2 . We train 20 epochs and choose the best prediction for test.
+
+1.4.3 | 3.3 Results and Analysis
+We evaluate two methods to incorporate word seg- mentation information. The results of two meth- ods are shown as Table 2. We can see that posi- tional character embeddings perform better in neu- ral network. This is probably because positional character embeddings method can learn word seg- mentation information from unlabeled text while word segmentation can only use training corpus.We adopt positional character embeddings in our next four models. Our first model is a B- LSTM neural network (baseline).  To take ad- vantage of traditional model (Chieu and Ng, 2002; Mccallum et al., 2001) such as CRF, we com- bine transition probability in our B-LSTM based MMNN. We design a F-Score driven training method in our third model F-Score Driven Model I . We propose an integrated training method in our fourth model F-Score Driven Model II .The re-
+ sults of models are depicted as Figure 1(a). From the figure, we can know our models perfrom better with little loss in time.Table 3 shows results for NER on test sets. In the Table 3, we also show micro F1-score (Over- all) and out-of-vocabulary entities (OOV) recall. Peng and Dredze (2016) is the state-of-the-art NER system in Chinese Social media.  By compar- ing the results of B-LSTM model and B-LSTM + MTNN model, we can know transition probability is significant for NER. Compared with B-LSTM + MMNN model, F-Score Driven Model I improves the result of named entity with a loss in nominal mention.  The integrated training model (F-Score Driven Model II) benefits from both label accu- racy and F-Score, which achieves a new state-of- the-art NER system in Chinese social media. Our integrated model has better performance on named entity and nominal mention.To better understand the impact of the factor β , we show the results of our integrated model with different values of β in Figure 1(c).  From Figure 1(c), we can know that β is an important factor for us to balance F-score and accuracy. Our integrated model may help alleviate the influence of noise in NER in Chinese social media.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_all (call_jU6KcdqGdPAQ3SRob3s7JXFH)
+ Call ID: call_jU6KcdqGdPAQ3SRob3s7JXFH
+  Args:
+    pattern: obtained|obtains|achieves|achieved|obtaining
+
+================================= Tool Message =================================
+Name: grep_search_all
+
+1.3.1 | 2.1 Transition Probability
+B-LSTM neural network can learn from past input features and LSTM layer makes it more efficient (Hammerton, 2003; Hochreiter and Schmidhuber, 1997; Chen et al., 2015; Graves et al., 2006). How- ever, B-LSTM cannot learn sentence level label information. Huang et al. (2015) combine CRF to use sentence level label information.  We combine transition probability into our model to gain sentence level label information. To combine transition probability into B-LSTM neural network, we construct a Max Margin Neural Network (MMNN) (Pei et al., 2014) based on B-LSTM. The prediction of label in position t is given as:
+y t = sof tmax ( W hy ∗ h t + b y ) (1)
+ where W hy are the transformation parameters, h t the hidden vector and b y the bias parameter. For a input sentence c [1: n ] with a label sequence l [1: n ] , a sentence-level score is then given as:
+s ( c [1: n ] , l [1: n ] , θ ) = n X t =1 ( A l t − 1 l t + f Λ ( l t | c [1: n ] ))
+ where f Λ ( l t | c [1: n ] ) indicates the probability of la- bel l t at position t by the network with parameters Λ , A indicates the matrix of transition probability. In our model, f Λ ( l t | c [1: n ] ) is computed as:
+f Λ ( l t | c [1: n ] ) = − log ( y t [ l t ]) (2)
+ We define a structured margin loss ∆( l, l ) as Pei et al. (2014):
+∆( l, l ) = n X j =1 κ 1 { l j 6 = l j } (3)
+where n is the length of setence x , κ is a discount parameter, l a given correct label sequence and l a predicted label sequence.  For a given training instance ( x i , y i ) , our predicted label sequence is the label sequence with highest score:
+l ∗ i = arg max l i ∈ Y ( x i ) s ( x i , l i , θ )
+The label sequence with the highest score can be obtained by carrying out viterbi algorithm. The regularized objective function is as follows:
+ J ( θ ) = 1 m m X i =1 q i ( θ ) + λ 2 || θ || 2 (4)
+q i ( θ ) = max l i ∈ Y ( x i ) ( s ( x i , l i , θ )+∆( l i , l i )) − s ( x i , l i , θ )
+ By minimizing the object, we can increase the score of correct label sequence l and decrease the score of incorrect label sequence l .
+
+1.4.3 | 3.3 Results and Analysis
+We evaluate two methods to incorporate word seg- mentation information. The results of two meth- ods are shown as Table 2. We can see that posi- tional character embeddings perform better in neu- ral network. This is probably because positional character embeddings method can learn word seg- mentation information from unlabeled text while word segmentation can only use training corpus.We adopt positional character embeddings in our next four models. Our first model is a B- LSTM neural network (baseline).  To take ad- vantage of traditional model (Chieu and Ng, 2002; Mccallum et al., 2001) such as CRF, we com- bine transition probability in our B-LSTM based MMNN. We design a F-Score driven training method in our third model F-Score Driven Model I . We propose an integrated training method in our fourth model F-Score Driven Model II .The re-
+ sults of models are depicted as Figure 1(a). From the figure, we can know our models perfrom better with little loss in time.Table 3 shows results for NER on test sets. In the Table 3, we also show micro F1-score (Over- all) and out-of-vocabulary entities (OOV) recall. Peng and Dredze (2016) is the state-of-the-art NER system in Chinese Social media.  By compar- ing the results of B-LSTM model and B-LSTM + MTNN model, we can know transition probability is significant for NER. Compared with B-LSTM + MMNN model, F-Score Driven Model I improves the result of named entity with a loss in nominal mention.  The integrated training model (F-Score Driven Model II) benefits from both label accu- racy and F-Score, which achieves a new state-of- the-art NER system in Chinese social media. Our integrated model has better performance on named entity and nominal mention.To better understand the impact of the factor β , we show the results of our integrated model with different values of β in Figure 1(c).  From Figure 1(c), we can know that β is an important factor for us to balance F-score and accuracy. Our integrated model may help alleviate the influence of noise in NER in Chinese social media.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_7RiRORVG2LFai3kldPJWi3a9)
+ Call ID: call_7RiRORVG2LFai3kldPJWi3a9
+  Args:
+    section_id: 1.1
+
+================================= Tool Message =================================
+Name: read_section
+
+Abstract
+We focus on named entity recognition (NER) for Chinese social media. With massive unlabeled text and quite lim- ited labelled corpus, we propose a semi- supervised learning model based on B- LSTM neural network. To take advan- tage of traditional methods in NER such as CRF, we combine transition probabil- ity with deep learning in our model.  To bridge the gap between label accuracy and F-score of NER, we construct a model which can be directly trained on F-score. When considering the instability of F- score driven method and meaningful in- formation provided by label accuracy, we propose an integrated method to train on both F-score and label accuracy. Our in- tegrated model yields substantial improve- ment over previous state-of-the-art result.
+
+================================== Ai Message ==================================
+
+Unanswerable

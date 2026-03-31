@@ -1,0 +1,470 @@
+================================ Human Message =================================
+
+QUERY:
+Do they explore how their word representations vary across languages?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_XmPJAV2FpRSCDXVIno6oi7uo)
+ Call ID: call_XmPJAV2FpRSCDXVIno6oi7uo
+  Args:
+    pattern: language
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Most existing models for multilingual nat- ural language processing (NLP) treat lan- guage as a discrete category, and make predictions for either one language or the other. In contrast, we propose using continuous vector representations of lan- guage. We show that these can be learned efficiently with a character-based neural language model, and used to improve in- ference about language varieties not seen during training.  In experiments with 1303 Bible translations into 990 different lan- guages, we empirically explore the ca- pacity of multilingual language models, and also show that the language vectors capture genetic relationships between lan- guages.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_BFDmjOtNNyCCXQTWFEZOBTZ5)
+ Call ID: call_BFDmjOtNNyCCXQTWFEZOBTZ5
+  Args:
+    pattern: representation
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Most existing models for multilingual nat- ural language processing (NLP) treat lan- guage as a discrete category, and make predictions for either one language or the other. In contrast, we propose using continuous vector representations of lan- guage. We show that these can be learned efficiently with a character-based neural language model, and used to improve in- ference about language varieties not seen during training.  In experiments with 1303 Bible translations into 990 different lan- guages, we empirically explore the ca- pacity of multilingual language models, and also show that the language vectors capture genetic relationships between lan- guages.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_zAdLz5GVsWeysdioxsgCkerf)
+ Call ID: call_zAdLz5GVsWeysdioxsgCkerf
+  Args:
+    pattern: language vectors
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Most existing models for multilingual nat- ural language processing (NLP) treat lan- guage as a discrete category, and make predictions for either one language or the other. In contrast, we propose using continuous vector representations of lan- guage. We show that these can be learned efficiently with a character-based neural language model, and used to improve in- ference about language varieties not seen during training.  In experiments with 1303 Bible translations into 990 different lan- guages, we empirically explore the ca- pacity of multilingual language models, and also show that the language vectors capture genetic relationships between lan- guages.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_PpL1lucSuu9JCnxz7SNscUhf)
+ Call ID: call_PpL1lucSuu9JCnxz7SNscUhf
+  Args:
+    pattern: explor
+    max_results: 20
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Tool 'grep_search_next' failed after 1 attempt with TypeError: grep_search_next() got an unexpected keyword argument 'max_results'. Please try again.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_Z3s0DKbKuZX6ZirBmMjGDPbS)
+ Call ID: call_Z3s0DKbKuZX6ZirBmMjGDPbS
+  Args:
+    pattern: explor
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Most existing models for multilingual nat- ural language processing (NLP) treat lan- guage as a discrete category, and make predictions for either one language or the other. In contrast, we propose using continuous vector representations of lan- guage. We show that these can be learned efficiently with a character-based neural language model, and used to improve in- ference about language varieties not seen during training.  In experiments with 1303 Bible translations into 990 different lan- guages, we empirically explore the ca- pacity of multilingual language models, and also show that the language vectors capture genetic relationships between lan- guages.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_710uP4vhnjJdcxey9G5qKqvb)
+ Call ID: call_710uP4vhnjJdcxey9G5qKqvb
+  Args:
+    pattern: vary across languages
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_3tXIhnieRP3yfpYPLMeS328x)
+ Call ID: call_3tXIhnieRP3yfpYPLMeS328x
+  Args:
+    pattern: word
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+2 Related Work
+Multilingual language models is not a new idea (Fugen et al., 2003), the novelty of our work lies primarily in the use of language vectors and the empirical evaluation using nearly a thousand lan- guages.Concurrent with this work, Johnson et al. (2016) conducted a study using neural machine transla- tion (NMT), where a sub-word decoder is told which language to generate by means of a special language identifier token in the source sentence.  This is close to our model, although beyond a sim- ple interpolation experiment (as in our Section 5.3) they did not further explore the language vectors, which would have been challenging to do given the small number of languages used in their study.Ammar et al. (2016) used one-hot language identifiers as input to a multilingual word-based dependency parser, based on multilingual word embeddings.  Given that they report this result- ing in higher accuracy than using features from a typological database, it is a reasonable guess that their system learned language vectors which were able to encode syntactic properties relevant to the task. Unfortunately, they also did not look closer at the language vector space, which would have been interesting given the relatively large and di- verse sample of languages represented in the Uni- versal Dependencies treebanks.Our evaluation in Section 5. 2 calls to mind pre- vious work on automatic language classification, by Wichmann et al. (2010) among others. How- ever, our purpose is not to detect genealogical re- lationships, even though we use the strong correla- tion between such classifications and our language vectors as evidence that the vector space captures sensible information about languages.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_SXUFblfalzA61H7Wlh8DwQOX)
+ Call ID: call_SXUFblfalzA61H7Wlh8DwQOX
+  Args:
+    pattern: word representations
+    max_results: 10
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Tool 'grep_search_next' failed after 1 attempt with TypeError: grep_search_next() got an unexpected keyword argument 'max_results'. Please try again.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_16Gujnd4CuZD8iBSG7YP0tYx)
+ Call ID: call_16Gujnd4CuZD8iBSG7YP0tYx
+  Args:
+    pattern: word representations
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_x9V7R7blT5y4aTdsBLZEFdic)
+ Call ID: call_x9V7R7blT5y4aTdsBLZEFdic
+  Args:
+    pattern: representations of lan
+    max_results: 10
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Tool 'grep_search_next' failed after 1 attempt with TypeError: grep_search_next() got an unexpected keyword argument 'max_results'. Please try again.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_c8gQ3Pp7aywIN5Oq730s7kfz)
+ Call ID: call_c8gQ3Pp7aywIN5Oq730s7kfz
+  Args:
+    pattern: representations of language
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_3GNPZDZCZ0Ev4qDnXvMunZxM)
+ Call ID: call_3GNPZDZCZ0Ev4qDnXvMunZxM
+  Args:
+    pattern: Section 5
+    max_results: 10
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Tool 'grep_search_next' failed after 1 attempt with TypeError: grep_search_next() got an unexpected keyword argument 'max_results'. Please try again.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_GztEQbxWXvDfjFB7I8RXE8el)
+ Call ID: call_GztEQbxWXvDfjFB7I8RXE8el
+  Args:
+    pattern: 5.3
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+2 Related Work
+Multilingual language models is not a new idea (Fugen et al., 2003), the novelty of our work lies primarily in the use of language vectors and the empirical evaluation using nearly a thousand lan- guages.Concurrent with this work, Johnson et al. (2016) conducted a study using neural machine transla- tion (NMT), where a sub-word decoder is told which language to generate by means of a special language identifier token in the source sentence.  This is close to our model, although beyond a sim- ple interpolation experiment (as in our Section 5.3) they did not further explore the language vectors, which would have been challenging to do given the small number of languages used in their study.Ammar et al. (2016) used one-hot language identifiers as input to a multilingual word-based dependency parser, based on multilingual word embeddings.  Given that they report this result- ing in higher accuracy than using features from a typological database, it is a reasonable guess that their system learned language vectors which were able to encode syntactic properties relevant to the task. Unfortunately, they also did not look closer at the language vector space, which would have been interesting given the relatively large and di- verse sample of languages represented in the Uni- versal Dependencies treebanks.Our evaluation in Section 5. 2 calls to mind pre- vious work on automatic language classification, by Wichmann et al. (2010) among others. How- ever, our purpose is not to detect genealogical re- lationships, even though we use the strong correla- tion between such classifications and our language vectors as evidence that the vector space captures sensible information about languages.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_slKqHKjDIsT4EPeZ9N0arrtY)
+ Call ID: call_slKqHKjDIsT4EPeZ9N0arrtY
+  Args:
+    pattern: Section 5
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+2 Related Work
+Multilingual language models is not a new idea (Fugen et al., 2003), the novelty of our work lies primarily in the use of language vectors and the empirical evaluation using nearly a thousand lan- guages.Concurrent with this work, Johnson et al. (2016) conducted a study using neural machine transla- tion (NMT), where a sub-word decoder is told which language to generate by means of a special language identifier token in the source sentence.  This is close to our model, although beyond a sim- ple interpolation experiment (as in our Section 5.3) they did not further explore the language vectors, which would have been challenging to do given the small number of languages used in their study.Ammar et al. (2016) used one-hot language identifiers as input to a multilingual word-based dependency parser, based on multilingual word embeddings.  Given that they report this result- ing in higher accuracy than using features from a typological database, it is a reasonable guess that their system learned language vectors which were able to encode syntactic properties relevant to the task. Unfortunately, they also did not look closer at the language vector space, which would have been interesting given the relatively large and di- verse sample of languages represented in the Uni- versal Dependencies treebanks.Our evaluation in Section 5. 2 calls to mind pre- vious work on automatic language classification, by Wichmann et al. (2010) among others. How- ever, our purpose is not to detect genealogical re- lationships, even though we use the strong correla- tion between such classifications and our language vectors as evidence that the vector space captures sensible information about languages.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_URSjszFPSAgxGK0qbhLvrkDS)
+ Call ID: call_URSjszFPSAgxGK0qbhLvrkDS
+  Args:
+    pattern: Section 5.2
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_UkLDkCRJHA9dNer4dsltirI9)
+ Call ID: call_UkLDkCRJHA9dNer4dsltirI9
+  Args:
+    pattern: 5.2
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+5.2 Structure of the language space
+We now take a look at the language vectors found during training with the full model of 990 lan- guages. Figure 5 shows a hierarchical clustering of the subset of Germanic languages, which closely matches the established genetic relationships in this language family. While our experiments in- dicate that finding more remote relationships (say, connecting the Germanic languages to the Celtic) is difficult for the model, it is clear that the lan- guage vectors preserves similarity properties be- tween languages. In additional experiments we found the overall structure of these clusterings to be relatively sta- ble across models, but for very similar languages (such as Danish and the two varieties of Norwe- gian) the hierarchy might differ, and the some holds for languages or groups that are significantly different from the major groups.  An example from Figure 5 is English, which is traditionally clas- sified as a West Germanic language with strong influences from North Germanic as well as Ro- mance languages. In the figure English is (weakly) grouped with the West Germanic languages, but in other experiments it is instead weakly grouped with North Germanic.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_dWLEngNgGjkmro0B9c9tZDPS)
+ Call ID: call_dWLEngNgGjkmro0B9c9tZDPS
+  Args:
+    pattern: word representations vary
+    max_results: 10
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Tool 'grep_search_next' failed after 1 attempt with TypeError: grep_search_next() got an unexpected keyword argument 'max_results'. Please try again.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_OvTBhoUosaz7J3kX6pzu4ORU)
+ Call ID: call_OvTBhoUosaz7J3kX6pzu4ORU
+  Args:
+    pattern: word representations vary
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_yz32A36iAZUMwMqEjiiUldZW)
+ Call ID: call_yz32A36iAZUMwMqEjiiUldZW
+  Args:
+    pattern: word representation
+    max_results: 10
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Tool 'grep_search_next' failed after 1 attempt with TypeError: grep_search_next() got an unexpected keyword argument 'max_results'. Please try again.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_UrrIMniQV2NojR9KkyDjld5j)
+ Call ID: call_UrrIMniQV2NojR9KkyDjld5j
+  Args:
+    pattern: word
+    })}What happened?: 0
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Tool 'grep_search_next' failed after 1 attempt with TypeError: grep_search_next() got an unexpected keyword argument '})}What happened?'. Please try again.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_gqdS64AC62Xp1dbwYYDTNCPc)
+ Call ID: call_gqdS64AC62Xp1dbwYYDTNCPc
+  Args:
+    pattern: characters
+    })}What happened?: 0
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Tool 'grep_search_next' failed after 1 attempt with TypeError: grep_search_next() got an unexpected keyword argument '})}What happened?'. Please try again.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_k199a6o40zYzdhrxlzhr2aOo)
+ Call ID: call_k199a6o40zYzdhrxlzhr2aOo
+  Args:
+    pattern: word embedding
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+2 Related Work
+Multilingual language models is not a new idea (Fugen et al., 2003), the novelty of our work lies primarily in the use of language vectors and the empirical evaluation using nearly a thousand lan- guages.Concurrent with this work, Johnson et al. (2016) conducted a study using neural machine transla- tion (NMT), where a sub-word decoder is told which language to generate by means of a special language identifier token in the source sentence.  This is close to our model, although beyond a sim- ple interpolation experiment (as in our Section 5.3) they did not further explore the language vectors, which would have been challenging to do given the small number of languages used in their study.Ammar et al. (2016) used one-hot language identifiers as input to a multilingual word-based dependency parser, based on multilingual word embeddings.  Given that they report this result- ing in higher accuracy than using features from a typological database, it is a reasonable guess that their system learned language vectors which were able to encode syntactic properties relevant to the task. Unfortunately, they also did not look closer at the language vector space, which would have been interesting given the relatively large and di- verse sample of languages represented in the Uni- versal Dependencies treebanks.Our evaluation in Section 5. 2 calls to mind pre- vious work on automatic language classification, by Wichmann et al. (2010) among others. How- ever, our purpose is not to detect genealogical re- lationships, even though we use the strong correla- tion between such classifications and our language vectors as evidence that the vector space captures sensible information about languages.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_cVnZ6Mrc4RZhqTbIT7x3Ytib)
+ Call ID: call_cVnZ6Mrc4RZhqTbIT7x3Ytib
+  Args:
+    pattern: character-based
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Most existing models for multilingual nat- ural language processing (NLP) treat lan- guage as a discrete category, and make predictions for either one language or the other. In contrast, we propose using continuous vector representations of lan- guage. We show that these can be learned efficiently with a character-based neural language model, and used to improve in- ference about language varieties not seen during training.  In experiments with 1303 Bible translations into 990 different lan- guages, we empirically explore the ca- pacity of multilingual language models, and also show that the language vectors capture genetic relationships between lan- guages.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_lOCfFqP12uqMMtgdoqnJet4F)
+ Call ID: call_lOCfFqP12uqMMtgdoqnJet4F
+  Args:
+    pattern: across languages
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_1T5RAs3r8LXOOHm4HjXw5jHk)
+ Call ID: call_1T5RAs3r8LXOOHm4HjXw5jHk
+  Args:
+    pattern: word
+    })}What happened?: 0
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Tool 'grep_search_next' failed after 1 attempt with TypeError: grep_search_next() got an unexpected keyword argument '})}What happened?'. Please try again.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_Sqx3bKdk2Yo3vOQ9y5Gj8uF0)
+ Call ID: call_Sqx3bKdk2Yo3vOQ9y5Gj8uF0
+  Args:
+    pattern: vary
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+3 Data
+We base our experiments on a large collection of Bible translations crawled from the web, coming from various sources and periods of times. Any other multilingual data collection would work as well, but with the selected corpus we have the ad- vantage that we cover the same genre and roughly the same coverage for each language involved. It is also easy to divide the data into training and test
+Figure 1: Schematic of our model.  The three parts of the language vector are concatenated with the inputs to the two LSTM:s and the final softmax layer.sets by using Bible verse numbers, which allows us to control for semantic similarity between lan- guages in a way that would have been difficult in a corpus that is not multi-parallel. Altogether we have 1,303 translations in 990 languages that we can use for our purposes.  These were chosen so that the model alphabet size is below 1000 sym- bols, which was satisfied by choosing only trans- lations in Latin, Cyrillic or Greek script.Certainly, there are disadvantages as well, such as the limited size (roughly 500 million tokens in total, with most languages having only one trans- lation of the New Testament each, with roughly 200 thousand tokens), the narrow domain and the high overlap of named entities.  The latter can lead to some unexpected effects when using nonsensi- cal language vectors, as the model will then gen- erate a sequence of random names.The corpus deviates in some ways from an ideal multi-parallel corpus. Most translations are of the complete New Testament, whereas around 300 also contain the Old Testament (thus several times longer), and around ten contain only por- tions of the New Testament. Additionally, several languages have multiple translations, which are then concatenated.  These translations may vary in age and style, but historical versions of languages (with their own ISO 639-3 code) are treated as dis- tinct languages. During training we enforce a uni- form distribution between languages when select- ing training examples.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_SNs2PS5ZPDxxIhTmJJ68gnHZ)
+ Call ID: call_SNs2PS5ZPDxxIhTmJJ68gnHZ
+  Args:
+    pattern: language vectors capture
+    max_results: 10
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Tool 'grep_search_next' failed after 1 attempt with TypeError: grep_search_next() got an unexpected keyword argument 'max_results'. Please try again.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_HuygUztJwk52Gik5C6OnbRzB)
+ Call ID: call_HuygUztJwk52Gik5C6OnbRzB
+  Args:
+    pattern: capture genetic
+    })}What happened?: 0
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Tool 'grep_search_next' failed after 1 attempt with TypeError: grep_search_next() got an unexpected keyword argument '})}What happened?'. Please try again.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_F9MWl3NaCs8ljcvgRoSIW0tl)
+ Call ID: call_F9MWl3NaCs8ljcvgRoSIW0tl
+  Args:
+    pattern: Figure 5
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+5.2 Structure of the language space
+We now take a look at the language vectors found during training with the full model of 990 lan- guages. Figure 5 shows a hierarchical clustering of the subset of Germanic languages, which closely matches the established genetic relationships in this language family. While our experiments in- dicate that finding more remote relationships (say, connecting the Germanic languages to the Celtic) is difficult for the model, it is clear that the lan- guage vectors preserves similarity properties be- tween languages. In additional experiments we found the overall structure of these clusterings to be relatively sta- ble across models, but for very similar languages (such as Danish and the two varieties of Norwe- gian) the hierarchy might differ, and the some holds for languages or groups that are significantly different from the major groups.  An example from Figure 5 is English, which is traditionally clas- sified as a West Germanic language with strong influences from North Germanic as well as Ro- mance languages. In the figure English is (weakly) grouped with the West Germanic languages, but in other experiments it is instead weakly grouped with North Germanic.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_wki36rftPH11jq4VGmJvNrZN)
+ Call ID: call_wki36rftPH11jq4VGmJvNrZN
+  Args:
+    pattern: 5.3 Interpolation
+    max_results: 10
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Tool 'grep_search_next' failed after 1 attempt with TypeError: grep_search_next() got an unexpected keyword argument 'max_results'. Please try again.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_YUXWBY5rzAISnAOdaZf5Fnjq)
+ Call ID: call_YUXWBY5rzAISnAOdaZf5Fnjq
+  Args:
+    pattern: 5.3
+    })}What happened?: 0
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Tool 'grep_search_next' failed after 1 attempt with TypeError: grep_search_next() got an unexpected keyword argument '})}What happened?'. Please try again.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_YXPtGLWmwDFaQg2Fj2QVcDuC)
+ Call ID: call_YXPtGLWmwDFaQg2Fj2QVcDuC
+  Args:
+    pattern: Interpolation
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_MoGAB01Pxscclf7oNHh1Vj8X)
+ Call ID: call_MoGAB01Pxscclf7oNHh1Vj8X
+  Args:
+    pattern: interpol
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+2 Related Work
+Multilingual language models is not a new idea (Fugen et al., 2003), the novelty of our work lies primarily in the use of language vectors and the empirical evaluation using nearly a thousand lan- guages.Concurrent with this work, Johnson et al. (2016) conducted a study using neural machine transla- tion (NMT), where a sub-word decoder is told which language to generate by means of a special language identifier token in the source sentence.  This is close to our model, although beyond a sim- ple interpolation experiment (as in our Section 5.3) they did not further explore the language vectors, which would have been challenging to do given the small number of languages used in their study.Ammar et al. (2016) used one-hot language identifiers as input to a multilingual word-based dependency parser, based on multilingual word embeddings.  Given that they report this result- ing in higher accuracy than using features from a typological database, it is a reasonable guess that their system learned language vectors which were able to encode syntactic properties relevant to the task. Unfortunately, they also did not look closer at the language vector space, which would have been interesting given the relatively large and di- verse sample of languages represented in the Uni- versal Dependencies treebanks.Our evaluation in Section 5. 2 calls to mind pre- vious work on automatic language classification, by Wichmann et al. (2010) among others. How- ever, our purpose is not to detect genealogical re- lationships, even though we use the strong correla- tion between such classifications and our language vectors as evidence that the vector space captures sensible information about languages.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_I9XwmU6Sa1j8C0rgT0VDvEz4)
+ Call ID: call_I9XwmU6Sa1j8C0rgT0VDvEz4
+  Args:
+    pattern: \bword\b
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+2 Related Work
+Multilingual language models is not a new idea (Fugen et al., 2003), the novelty of our work lies primarily in the use of language vectors and the empirical evaluation using nearly a thousand lan- guages.Concurrent with this work, Johnson et al. (2016) conducted a study using neural machine transla- tion (NMT), where a sub-word decoder is told which language to generate by means of a special language identifier token in the source sentence.  This is close to our model, although beyond a sim- ple interpolation experiment (as in our Section 5.3) they did not further explore the language vectors, which would have been challenging to do given the small number of languages used in their study.Ammar et al. (2016) used one-hot language identifiers as input to a multilingual word-based dependency parser, based on multilingual word embeddings.  Given that they report this result- ing in higher accuracy than using features from a typological database, it is a reasonable guess that their system learned language vectors which were able to encode syntactic properties relevant to the task. Unfortunately, they also did not look closer at the language vector space, which would have been interesting given the relatively large and di- verse sample of languages represented in the Uni- versal Dependencies treebanks.Our evaluation in Section 5. 2 calls to mind pre- vious work on automatic language classification, by Wichmann et al. (2010) among others. How- ever, our purpose is not to detect genealogical re- lationships, even though we use the strong correla- tion between such classifications and our language vectors as evidence that the vector space captures sensible information about languages.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_EFV0IO9kSSXIJ28NnrHIxINi)
+ Call ID: call_EFV0IO9kSSXIJ28NnrHIxINi
+  Args:
+    pattern: embed
+    })}What happened?: 0
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Tool 'grep_search_next' failed after 1 attempt with TypeError: grep_search_next() got an unexpected keyword argument '})}What happened?'. Please try again.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_e5VGcCBECsAl4K5feOa7DuOk)
+ Call ID: call_e5VGcCBECsAl4K5feOa7DuOk
+  Args:
+    pattern: vectors
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Most existing models for multilingual nat- ural language processing (NLP) treat lan- guage as a discrete category, and make predictions for either one language or the other. In contrast, we propose using continuous vector representations of lan- guage. We show that these can be learned efficiently with a character-based neural language model, and used to improve in- ference about language varieties not seen during training.  In experiments with 1303 Bible translations into 990 different lan- guages, we empirically explore the ca- pacity of multilingual language models, and also show that the language vectors capture genetic relationships between lan- guages.
+
+================================== Ai Message ==================================
+
+No; they focus on continuous vector representations of languages (language vectors) learned with a character-based neural language model and analyze the structure of the language space (e.g. hierarchical clustering showing genetic relationships), rather than studying how word representations vary across languages.

@@ -1,0 +1,60 @@
+================================ Human Message =================================
+
+QUERY:
+What are the types of chinese poetry that are generated?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_3JESsLbu3zgrTyCAtnHkeIfj)
+ Call ID: call_3JESsLbu3zgrTyCAtnHkeIfj
+  Args:
+    pattern: (?i)chinese poetry|poetry|poem|poems|generated
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Poetry generation is an interesting research topic in the field of text generation. As one of the most valuable literary and cultural heritages of China, Chinese classical poetry is very familiar and loved by Chinese people from generation to generation. It has many particular characteristics in its language structure, ranging from form, sound to meaning, thus is regarded as an ideal testing task for text generation. In this paper, we propose a GPT-2 based uniformed framework for generating major types of Chinese classical poems.  We define a unified format for formulating all types of training samples by integrating detailed form information, then present a simple form- stressed weighting method in GPT-2 to strengthen the control to the form of the generated poems, with special emphasis on those forms with longer body length. Preliminary experimental results show this enhanced model can generate Chinese classical poems of major types with high quality in both form and content, validating the effectiveness of the proposed strategy.  The model has been incorporated into Jiuge, the most influential Chinese classical poetry generation system developed by Tsinghua University (Guo et al., 2019).
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_4A4apArEMZh8qnJxuCATzbno)
+ Call ID: call_4A4apArEMZh8qnJxuCATzbno
+  Args:
+    pattern: (?i)major types|types of Chinese classical poems|quatrain|regulated verse|iambic|ci|jueju|lüshi|lyrics
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Poetry generation is an interesting research topic in the field of text generation. As one of the most valuable literary and cultural heritages of China, Chinese classical poetry is very familiar and loved by Chinese people from generation to generation. It has many particular characteristics in its language structure, ranging from form, sound to meaning, thus is regarded as an ideal testing task for text generation. In this paper, we propose a GPT-2 based uniformed framework for generating major types of Chinese classical poems.  We define a unified format for formulating all types of training samples by integrating detailed form information, then present a simple form- stressed weighting method in GPT-2 to strengthen the control to the form of the generated poems, with special emphasis on those forms with longer body length. Preliminary experimental results show this enhanced model can generate Chinese classical poems of major types with high quality in both form and content, validating the effectiveness of the proposed strategy.  The model has been incorporated into Jiuge, the most influential Chinese classical poetry generation system developed by Tsinghua University (Guo et al., 2019).
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_9p9rhYOh0BMYoZn5VG1FLrHa)
+ Call ID: call_9p9rhYOh0BMYoZn5VG1FLrHa
+  Args:
+    pattern: (?i)jueju|lüshi|ci|quatrain|regulated verse|song iambic|poem type|form information
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Poetry generation is an interesting research topic in the field of text generation. As one of the most valuable literary and cultural heritages of China, Chinese classical poetry is very familiar and loved by Chinese people from generation to generation. It has many particular characteristics in its language structure, ranging from form, sound to meaning, thus is regarded as an ideal testing task for text generation. In this paper, we propose a GPT-2 based uniformed framework for generating major types of Chinese classical poems.  We define a unified format for formulating all types of training samples by integrating detailed form information, then present a simple form- stressed weighting method in GPT-2 to strengthen the control to the form of the generated poems, with special emphasis on those forms with longer body length. Preliminary experimental results show this enhanced model can generate Chinese classical poems of major types with high quality in both form and content, validating the effectiveness of the proposed strategy.  The model has been incorporated into Jiuge, the most influential Chinese classical poetry generation system developed by Tsinghua University (Guo et al., 2019).
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_RZfx9VLuD371pYNXC9bCmBkN)
+ Call ID: call_RZfx9VLuD371pYNXC9bCmBkN
+  Args:
+    pattern: (?i)dataset|training samples|form.*type|Table|types
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Poetry generation is an interesting research topic in the field of text generation. As one of the most valuable literary and cultural heritages of China, Chinese classical poetry is very familiar and loved by Chinese people from generation to generation. It has many particular characteristics in its language structure, ranging from form, sound to meaning, thus is regarded as an ideal testing task for text generation. In this paper, we propose a GPT-2 based uniformed framework for generating major types of Chinese classical poems.  We define a unified format for formulating all types of training samples by integrating detailed form information, then present a simple form- stressed weighting method in GPT-2 to strengthen the control to the form of the generated poems, with special emphasis on those forms with longer body length. Preliminary experimental results show this enhanced model can generate Chinese classical poems of major types with high quality in both form and content, validating the effectiveness of the proposed strategy.  The model has been incorporated into Jiuge, the most influential Chinese classical poetry generation system developed by Tsinghua University (Guo et al., 2019).
+
+================================== Ai Message ==================================
+
+Unanswerable

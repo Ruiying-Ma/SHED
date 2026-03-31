@@ -1,0 +1,64 @@
+================================ Human Message =================================
+
+QUERY:
+What is symbolic rewriting?
+
+TABLE OF CONTENTS (TOC):
+1 | Can Neural Networks Learn Symbolic Rewriting?
+1.1 | Abstract
+1.2 | 1. Introduction
+1.3 | 2. Data
+1.3.1 | 2.1. The AIM data set
+1.3.2 | 2.2. The polynomial data set
+1.4 | 3. Experiments
+1.4.1 | 3.1. AIM data set
+1.4.2 | 3.2. Polynomial data set
+1.5 | 4. Conclusions and future work
+1.6 | 5. Update: Integration data sets from Facebook Research experiments
+1.7 | Acknowledgements
+1.8 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_all (call_VMDlAqtK01BQPpHXjpVdLadq)
+ Call ID: call_VMDlAqtK01BQPpHXjpVdLadq
+  Args:
+    pattern: symbolic rewriting|rewrite|rewriting
+  read_section (call_JRABitEBCpcEtiuOIcI1wP7y)
+ Call ID: call_JRABitEBCpcEtiuOIcI1wP7y
+  Args:
+    section_id: 1.2
+  read_section (call_AcNolD1gZOsVpBODmhPLySpn)
+ Call ID: call_AcNolD1gZOsVpBODmhPLySpn
+  Args:
+    section_id: 1.1
+
+================================= Tool Message =================================
+Name: grep_search_all
+
+1.1
+1.2
+1.3.1
+1.3.2
+1.4.1
+1.4.2
+1.5
+1.6
+1.8
+
+================================= Tool Message =================================
+Name: read_section
+
+1. Introduction
+Neural networks (NNs) turned out to be very useful in sev- eral domains. In particular, one of the most spectacular ad- vances achieved with use of NNs has been natural language processing. One of the tasks in this domain is a translation between natural languages – neural machine translation (NMT) systems established here the state-of-the-art perfor- mance.  Recently, NMT produced first encouraging results in the autoformalization task ( Kaliszyk et al. , 2014 ; 2015 ; 2017 ; Wang et al. , 2018 ) where given an informal mathe- matical text in L A TEX the goal is to translate it to its for- mal (computer understandable) counterpart.  In particular, the NMT performance on a large synthetic L A TEX-to-Mizar dataset produced by a relatively sophisticated toolchain de- veloped for several decades ( Bancerek et al. , 2018 ) is sur- prisingly good ( Wang et al. , 2018 ), indicating that neural networks can learn quite complicated algorithms for sym- bolic data. This inspired us to pose a question: Can NMT models be used in the formal-to-formal setting?  In particu- lar: Can NMT models learn symbolic rewriting?The answer is relevant to various tasks in automated reasoning. For example, neural models could compete with symbolic methods such as inductive logic program- ming ( Muggleton & De Raedt , 1994 ) (ILP) that have been
+previously experimented with to learn simple rewrite tasks and theorem-proving heuristics from large formal cor- pora ( Urban , 1998 ).  Unlike (early) ILP, neural methods can, however, easily cope with large and rich datasets with- out combinatorial explosion.Our work is also an inquiry into the capabilities of NNs as such, in the spirit of works like ( Evans et al. , 2018 ).
+
+================================= Tool Message =================================
+Name: read_section
+
+Abstract
+This work investigates if the current neural ar- chitectures are adequate for learning symbolic rewriting. Two kinds of data sets are proposed for this research – one based on automated proofs and the other being a synthetic set of polynomial terms. The experiments with use of the current neural machine translation models are performed and its results are discussed. Ideas for extending this line of research are proposed, and its rele- vance is motivated.
+
+================================== Ai Message ==================================
+
+Symbolic rewriting is the task of learning or performing formal-to-formal translation of symbolic data using rewrite rules. The paper motivates it as relevant to automated reasoning.

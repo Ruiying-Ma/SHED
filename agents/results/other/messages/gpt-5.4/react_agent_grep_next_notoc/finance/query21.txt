@@ -1,0 +1,107 @@
+================================ Human Message =================================
+
+QUERY:
+What is Amcor's year end FY2020 net AR (in USD millions)? Address the question by adopting the perspective of a financial analyst who can only use the details shown within the balance sheet.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_ssoFbV2zibpEcJIKlLpNRItE)
+ Call ID: call_ssoFbV2zibpEcJIKlLpNRItE
+  Args:
+    pattern: balance sheet|accounts receivable|receivables|trade receivables|AR|net receivables
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+The Company
+Amcor plc (ARBN 630 385 278) is a holding company originally incorporated under the name Arctic Jersey Limited as a limited company under the Laws of the Bailiwick of Jersey in July 2018, in order to effect the Company's combination with Bemis Company, Inc. On October 10, 2018, Arctic Jersey Limited was renamed "Amcor plc" and became a public limited company incorporated under the Laws of the Bailiwick of Jersey.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_feCwWr923D3ckzFUX2QLhPOL)
+ Call ID: call_feCwWr923D3ckzFUX2QLhPOL
+  Args:
+    pattern: Consolidated Balance Sheets|balance sheets|trade receivables|accounts receivable
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Note 10 - Fair Value Measurements
+The fair values of the Company's financial assets and financial liabilities listed below reflect the amounts that would be received to sell the assets or paid to transfer the liabilities in an orderly transaction between market participants at the measurement date (exit price).The Company's non-derivative financial instruments primarily include cash and cash equivalents, trade receivables, trade payables, short-term debt and long-term debt.  At June 30, 2020 and 2019, the carrying value of these financial instruments, excluding long-term debt, approximates fair value because of the short-term nature of these instruments.Fair value disclosures are classified based on the fair value hierarchy. See Note 2, "Significant Accounting Policies," for information about the Company's fair value hierarchy.The fair value of long-term debt with variable interest rates approximates its carrying value.  The fair value of the Company's long-term debt with fixed interest rates is based on market prices, if available, or expected future cash flows discounted at the current interest rate for financial liabilities with similar risk profiles.The carrying values and estimated fair values of long-term debt with fixed interest rates (excluding finance leases) were as follows:
+ June 30, 2020 June 30, 2019 Carrying Value Fair Value Carrying Value Fair Value (in millions) (Level 2) (Level 2) Total long-term debt with fixed interest rates (excluding commercial paper and finance leases) $ 3,599.3  $ 3,793.1  $ 2,955.6  $ 3,041.3
+Assets and Liabilities Measured and Recorded at Fair Value on a Recurring Basis
+Additionally, the Company measures and records certain assets and liabilities, including derivative instruments and contingent purchase consideration liabilities, at fair value.The following table summarizes the fair value of these instruments, which are measured at fair value on a recurring basis, by level, within the fair value hierarchy:
+June 30, 2020 (in millions) Level 1 Level 2 Level 3 Total Assets Commodity contracts $ —  $ 0.4  $ —  $ 0. 4 Forward exchange contracts — 7.4 — 7.4 Interest rate swaps — 32.0 — 32.0 Total assets measured at fair value $ — $ 39.8 $ — $ 39.8 Liabilities Contingent purchase consideration liabilities $ —  $ —  $ 14.8  $ 14.8 Commodity contracts — 6.7 — 6.7 Forward exchange contracts — 16.8 — 16. 8 Interest rate swaps — — — — Cross currency interest rate swaps — 0.2 — 0.2 Total liabilities measured at fair value $ — $ 23.7 $ 14.8 $ 38.5
+72
+June 30, 2019 (in millions) Level 1 Level 2 Level 3 Total Assets Commodity contracts $ —  $ —  $ —  $ — Forward exchange contracts — 5.5 — 5. 5 Interest rate swaps — 32.8 — 32.8 Total assets measured at fair value $ — $ 38.3 $ — $ 38.3 Liabilities Contingent purchase consideration liabilities $ —  $ —  $ 13.6  $ 13.6 Commodity contracts — 4.6 — 4.6 Forward exchange contracts — 9.3 — 9. 3 Interest rate swaps — — — — Total liabilities measured at fair value $ — $ 13.9 $ 13.6 $ 27.5
+The fair value of the commodity contracts was determined using a discounted cash flow analysis based on the terms of the contracts and observed market forward prices discounted at a currency- specific rate. Forward exchange contract fair values were determined based on quoted prices for similar assets and liabilities in active markets using inputs such as currency rates and forward points.  The fair value of the interest rate swaps was determined using a discounted cash flow method based on market-based swap yield curves, considering current interest rates.The fair value of the contingent purchase consideration liabilities was determined for each arrangement individually. The fair value was determined using the income approach with significant inputs that are not observable in the market. Key assumptions include the discount rates consistent with the level of risk of achievement and probability adjusted financial projections.  The expected outcomes are recorded at net present value, which requires adjustment over the life for changes in risks and probabilities.The following table sets forth a summary of changes in the value of the Company's Level 3 financial liabilities:
+June 30, (in millions) 2020 2019 2018 Fair value at the beginning of the year $ 13.6 $ 14.6 $ 27. 6 Additions due to acquisitions — — — Changes in fair value of Level 3 liabilities 1.1 — 0.8 Payments — (1.0) (13.0) Foreign currency translation 0.1 — (0.8) Fair value at the end of the year $ 14.8 $ 13.6 $ 14.6
+ The fair value of contingent purchase consideration liabilities is included in other current liabilities and other non-current liabilities in the consolidated balance sheet. The change in fair value of the contingent purchase consideration liabilities, which was included in other income, net is due to the passage of time and changes in the probability of achievement used to develop the estimate.
+Assets and Liabilities Measured and Recorded at Fair Value on a Nonrecurring Basis
+In addition to assets and liabilities that are recorded at fair value on a recurring basis, the Company records assets and liabilities at fair value on a nonrecurring basis as required by U.S. GAAP. The Company measures certain assets, including the Company’s equity method investments, technology intangible assets, other intangible assets and goodwill at fair value on a nonrecurring basis when they are deemed to be other than temporarily impaired.  The fair values of these assets are determined, when applicable, based on valuation techniques using the best information available, and may include quoted market prices, market comparables and discounted cash flow projections.The Company tests for impairment of its equity method investments when impairment indicators are present. Impairment tests were performed by comparing the carrying value of the Company’s investment in AMVIG at the end of each
+73
+ period, including interim periods, to the fair value of the investment, which was determined based on AMVIG's quoted share price which is classified in Level 1 of the fair value hierarchy. Based on the Company’s evaluation of AMVIG’s current financial condition and the Company’s intent and ability to hold its investment in AMVIG to recover the carrying value, the Company concluded that the decline in fair value was temporary at March 31, 2020, and therefore no impairment was recorded.  However, the quoted share price did not recover in the fiscal fourth quarter and the Company determined that the investment was impaired as of June 30, 2020 and recorded an impairment charge of $25.6 million. The Company also recorded impairment charges of our AMVIG investment of $14.0 million in fiscal year 2019 and $36.5 million in fiscal year 2018. The Company tests indefinite-lived intangibles for impairment when facts and circumstances indicate the carrying value may not be recoverable from their undiscounted cash flows. The Company recognized non-cash impairment charges of $31.1 million in the fiscal year 2019 to reduce the carrying value of an indefinite-lived technology intangible asset to its fair value. During fiscal year 2020 and 2018, there were no indefinite-lived intangible impairment charges recorded.74
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_r4Z2ZlzqqeFvIJKFw3lKUaKY)
+ Call ID: call_r4Z2ZlzqqeFvIJKFw3lKUaKY
+  Args:
+    pattern: Current assets|Receivables, less allowances|Trade receivables, less allowances|Accounts receivable, less allowances|Consolidated Balance Sheets
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Note 21 - Deed of Cross Guarantee
+The parent entity, Amcor plc, and its wholly owned subsidiaries listed below are subject to a Deed of Cross Guarantee dated June 24, 2019 (the "Deed") under which each company guarantees the debts of the others:
+Amcor Pty Ltd Amcor Holdings (Australia) Pty Ltd Amcor Services Pty Ltd Techni-Chem Australia Pty Ltd Amcor Investments Pty Ltd Amcor Flexibles Group Pty Ltd
+Amcor Finance Australia Pty Ltd
+ Amcor Flexibles (Australia) Pty Ltd
+Packsys Pty Ltd
+Packsys Holdings (Aus) Pty Ltd
+Amcor Flexibles (Dandenong) Pty Ltd
+Amcor Flexibles (Port Melbourne) Pty Ltd
+Amcor European Holdings Pty Ltd
+Amcor Packaging (Asia) Pty Ltd ARP North America Holdco Ltd ARP LATAM Holdco Ltd
+ The entities above were the only parties to the Deed at June 30, 2020 and comprise the closed group for the purposes of the Deed (and also the extended closed group). ARP North America Holdco Ltd and ARP LATAM Holdco Ltd are newly incorporated entities and were added to the deed on September 25, 2019. No other parties have been added, removed or the subject to a notice of disposal since June 24, 2019. By entering into the Deed, the wholly owned subsidiaries have been relieved from the requirement to prepare a financial report and directors’ report under ASIC Corporations (Wholly-owned Companies) Instrument 2016/785.The following financial statements are additional disclosure items specifically required by ASIC and represent the consolidated results of the entities subject to the Deed only.108
+ Deed of Cross Guarantee Statement of Income (in millions) For the year ended June 30, 2020 2019 Net sales $ 323.6  $ 352.8 Cost of sales (274.1) (301.2) Gross profit 49.5 51.6 Operating expenses (24.5) (164.4) Other income, net 4,167.0 1,138.5 Operating income 4,192. 0 1,025.7 Interest income 24.8 34.7 Interest expense (29.9) (80.0) Other non-operating income (loss), net (0.5) 6.9 Income from continuing operations before income taxes 4,186.4 987.3 Income tax credit (22.6) 8.0 Net income $ 4,163.8 $ 995.3
+109
+ Deed of Cross Guarantee Summarized Statement of Comprehensive Income
+(in millions) For the year ended June 30, 2020 2019 Net income $ 4,163.8  $ 995.3 Other comprehensive income (loss) (1) : Net gains (losses) on cash flow hedges, net of tax (0.1) (1.0) Foreign currency translation adjustments, net of tax 34.2 78. 0 Net investment hedge of foreign operations, net of tax (1.9) (11.6) Other comprehensive income (loss) 32.2 65.4 Comprehensive (income) loss attributable to non-controlling interest — — Total comprehensive income $ 4,196.0 $ 1,060.7
+(1) All of the items in other comprehensive income (loss) may be reclassified subsequently to profit or loss. Deed of Cross Guarantee Summarized Statement of Income and Accumulated Losses (in millions) For the year ended June 30, 2020 2019 Retained earnings, beginning balance $ 2,519.0  $ 2,189.6 Net income 4,163.8 995.3 Accumulated profits before distribution 6,682.8 3,184.9 Dividends recognized during the financial period (747.6) (665. 9) Accumulated gains at the end of the financial period $ 5,935.2 $ 2,519.0
+110
+Deed of Cross Guarantee Balance Sheet (in millions) As of June 30, 2020 2019 Assets Current assets: Cash and cash equivalents $ 37.2  $ 52.3 Trade receivables, net 787.2 801.5 Inventories 57.5 65. 5 Prepaid expenses and other current assets 13.7 14.3 Total current assets 895.6 933.6 Non-current assets: Property, plant and equipment, net 76.8 82.0 Deferred tax assets 23.3 53.0 Other intangible assets, net 10.4 9.6 Goodwill 91.2 93.1 Other non-current assets 12,454.6 10,417. 7 Total non-current assets 12,656.3 10,655.4 Total assets $ 13,551.9 $ 11,589.0 Liabilities Current liabilities: Short-term debt 507.3 155.3 Trade payables 143.3 190.8 Accrued employee costs 17.8 19.0 Other current liabilities 40.7 66.7 Total current liabilities 709.1 431. 8 Non-current liabilities: Long-term debt, less current portion 355.8 1,587.7 Other non-current liabilities 2.9 3.3 Total liabilities 1,067.8 2,022.8 Shareholders' Equity Issued 15.7 16.3 Additional paid-in capital 5,500.9 6,030.8 Retained earnings 5,935.2 2,519. 0 Accumulated other comprehensive income (loss) 1,032.3 1,000.1 Total shareholders' equity 12,484.1 9,566.2 Total liabilities and shareholders' equity $ 13,551.9 $ 11,589.0
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_3AwMBVCG21cNfC8B3nSWnkDu)
+ Call ID: call_3AwMBVCG21cNfC8B3nSWnkDu
+  Args:
+    pattern: Amcor plc and Subsidiaries Consolidated Balance Sheets|Total current assets|Trade receivables, net
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Note 21 - Deed of Cross Guarantee
+The parent entity, Amcor plc, and its wholly owned subsidiaries listed below are subject to a Deed of Cross Guarantee dated June 24, 2019 (the "Deed") under which each company guarantees the debts of the others:
+Amcor Pty Ltd Amcor Holdings (Australia) Pty Ltd Amcor Services Pty Ltd Techni-Chem Australia Pty Ltd Amcor Investments Pty Ltd Amcor Flexibles Group Pty Ltd
+Amcor Finance Australia Pty Ltd
+ Amcor Flexibles (Australia) Pty Ltd
+Packsys Pty Ltd
+Packsys Holdings (Aus) Pty Ltd
+Amcor Flexibles (Dandenong) Pty Ltd
+Amcor Flexibles (Port Melbourne) Pty Ltd
+Amcor European Holdings Pty Ltd
+Amcor Packaging (Asia) Pty Ltd ARP North America Holdco Ltd ARP LATAM Holdco Ltd
+ The entities above were the only parties to the Deed at June 30, 2020 and comprise the closed group for the purposes of the Deed (and also the extended closed group). ARP North America Holdco Ltd and ARP LATAM Holdco Ltd are newly incorporated entities and were added to the deed on September 25, 2019. No other parties have been added, removed or the subject to a notice of disposal since June 24, 2019. By entering into the Deed, the wholly owned subsidiaries have been relieved from the requirement to prepare a financial report and directors’ report under ASIC Corporations (Wholly-owned Companies) Instrument 2016/785.The following financial statements are additional disclosure items specifically required by ASIC and represent the consolidated results of the entities subject to the Deed only.108
+ Deed of Cross Guarantee Statement of Income (in millions) For the year ended June 30, 2020 2019 Net sales $ 323.6  $ 352.8 Cost of sales (274.1) (301.2) Gross profit 49.5 51.6 Operating expenses (24.5) (164.4) Other income, net 4,167.0 1,138.5 Operating income 4,192. 0 1,025.7 Interest income 24.8 34.7 Interest expense (29.9) (80.0) Other non-operating income (loss), net (0.5) 6.9 Income from continuing operations before income taxes 4,186.4 987.3 Income tax credit (22.6) 8.0 Net income $ 4,163.8 $ 995.3
+109
+ Deed of Cross Guarantee Summarized Statement of Comprehensive Income
+(in millions) For the year ended June 30, 2020 2019 Net income $ 4,163.8  $ 995.3 Other comprehensive income (loss) (1) : Net gains (losses) on cash flow hedges, net of tax (0.1) (1.0) Foreign currency translation adjustments, net of tax 34.2 78. 0 Net investment hedge of foreign operations, net of tax (1.9) (11.6) Other comprehensive income (loss) 32.2 65.4 Comprehensive (income) loss attributable to non-controlling interest — — Total comprehensive income $ 4,196.0 $ 1,060.7
+(1) All of the items in other comprehensive income (loss) may be reclassified subsequently to profit or loss. Deed of Cross Guarantee Summarized Statement of Income and Accumulated Losses (in millions) For the year ended June 30, 2020 2019 Retained earnings, beginning balance $ 2,519.0  $ 2,189.6 Net income 4,163.8 995.3 Accumulated profits before distribution 6,682.8 3,184.9 Dividends recognized during the financial period (747.6) (665. 9) Accumulated gains at the end of the financial period $ 5,935.2 $ 2,519.0
+110
+Deed of Cross Guarantee Balance Sheet (in millions) As of June 30, 2020 2019 Assets Current assets: Cash and cash equivalents $ 37.2  $ 52.3 Trade receivables, net 787.2 801.5 Inventories 57.5 65. 5 Prepaid expenses and other current assets 13.7 14.3 Total current assets 895.6 933.6 Non-current assets: Property, plant and equipment, net 76.8 82.0 Deferred tax assets 23.3 53.0 Other intangible assets, net 10.4 9.6 Goodwill 91.2 93.1 Other non-current assets 12,454.6 10,417. 7 Total non-current assets 12,656.3 10,655.4 Total assets $ 13,551.9 $ 11,589.0 Liabilities Current liabilities: Short-term debt 507.3 155.3 Trade payables 143.3 190.8 Accrued employee costs 17.8 19.0 Other current liabilities 40.7 66.7 Total current liabilities 709.1 431. 8 Non-current liabilities: Long-term debt, less current portion 355.8 1,587.7 Other non-current liabilities 2.9 3.3 Total liabilities 1,067.8 2,022.8 Shareholders' Equity Issued 15.7 16.3 Additional paid-in capital 5,500.9 6,030.8 Retained earnings 5,935.2 2,519. 0 Accumulated other comprehensive income (loss) 1,032.3 1,000.1 Total shareholders' equity 12,484.1 9,566.2 Total liabilities and shareholders' equity $ 13,551.9 $ 11,589.0
+
+================================== Ai Message ==================================
+
+Amcor's FY2020 year-end net AR, based on the balance sheet line item "Trade receivables, net," was $787.2 million.

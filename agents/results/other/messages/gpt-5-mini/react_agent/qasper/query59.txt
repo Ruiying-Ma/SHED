@@ -1,0 +1,41 @@
+================================ Human Message =================================
+
+QUERY:
+Do they compare to abstractive summarization methods?
+
+TABLE OF CONTENTS (TOC):
+1 | Neural Summarization by Extracting Sentences and Words Jianpeng Cheng Mirella Lapata ILCC, School of Informatics, University of Edinburgh 10 Crichton Street, Edinburgh EH8 9AB jianpeng.cheng@ed.ac.uk mlap@inf.ed.ac.uk
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2 Problem Formulation
+1.4 | 3 Training Data for Summarization
+1.5 | 4 Neural Summarization Model
+1.5.1 | 4.1 Document Reader
+1.5.2 | 4.2 Sentence Extractor
+1.5.3 | 4.3 Word Extractor
+1.6 | 5 Experimental Setup
+1.7 | 6 Results
+1.8 | 7 Conclusions
+1.9 | Acknowledgments
+1.10 | 8 Appendix
+1.11 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_K9XQMzztTVWRetquFN8Dh20v)
+ Call ID: call_K9XQMzztTVWRetquFN8Dh20v
+  Args:
+    section_id: 1.7
+
+================================= Tool Message =================================
+Name: read_section
+
+6 Results
+Table 1 (upper half) summarizes our results on the DUC 2002 test dataset using R OUGE . NN - SE represents our neural sentence extraction model, NN - WE our word extraction model, and NN - ABS the neural abstractive baseline. The table also in- cludes results for the LEAD baseline, the logistic regression classifier ( LREG ), and three previously published systems ( ILP , TGRAPH , and URANK ). The NN - SE outperforms the LEAD and LREG baselines with a significant margin, while per- forming slightly better than the ILP model. This is an encouraging result since our model has only access to embedding features obtained from raw text. In comparison, LREG uses a set of manually selected features, while the ILP system takes advantage of syntactic information and ex- tracts summaries subject to well-engineered lin- guistic constraints, which are not available to our models.  Overall, our sentence extraction model achieves performance comparable to the state of the art without sophisticated constraint optimiza- tion ( ILP , TGRAPH ) or sentence ranking mech- anisms ( URANK ). We visualize the sentence weights of the NN - SE model in the top half of Fig- ure 4. As can be seen, the model is able to locate text portions which contribute most to the overall meaning of the document.R OUGE scores for the word extraction model are less promising.  This is somewhat expected given that R OUGE is n -gram based and not very well suited to measuring summaries which contain a significant amount of paraphrasing and may de- viate from the reference even though they express similar meaning. However, a meaningful com- parison can be carried out between NN - WE and NN - ABS which are similar in spirit. We observe that NN - WE consistently outperforms the purely abstractive model.  As NN - WE generates sum- maries by picking words from the original docu- ment, decoding is easier for this model compared
+10 We are grateful to Kristian Woodsend for giving us ac- cess to the output of his system. Unfortunately, we do not have access to the output of TGRAPH or URANK for inclusion in the human evaluation. sentence extraction : a gang of at least three people poured gasoline on a car that stopped to fill up at entity5 gas station early on Saturday morning and set the vehicle on fire a gang of at least three people poured gasoline on a car that stopped to fill up at entity5 gas station early on Saturday morning and set the vehicle on fire the driver of the car, who has not been identified, said he got into an argument with the suspects while he was pumping gas at a entity13 in entity14 the driver of the car, who has not been identified, said he got into an argument with the suspects while he was pumping gas at a entity13 in entity14 the group covered his white entity16 in gasoline and lit it ablaze while there were two passengers inside the group covered his white entity16 in gasoline and lit it ablaze while there were two passengers inside at least three people poured gasoline on a car and lit it on fire at a entity14 gas station explosive situation the passengers and the driver were not hurt during the incident but the car was completely ruined the man’s grandmother said the fire was lit after the suspects attempted to carjack her grandson, entity33 reported the man’s grandmother said the fire was lit after the suspects attempted to carjack her grandson, entity33 reported she said:’ he said he was pumping gas and some guys came up and asked for the car ’ they pulled out a gun and he took off running ’ they took the gas tank and started spraying ’ no one was injured during the fire , but the car ’s entire front end was torched , according to entity52 the entity53 is investigating the incident as an arson and the suspects remain at large the entity53 is investigating the incident as an arson and the suspects remain at large surveillance video of the incident is being used in the investigation before the fire , which occurred at 12:15am on Saturday , the suspects tried to carjack the man hot case the entity53 is investigating the incident at the entity67 station as an arson word extraction : gang poured gasoline in the car, entity5 Saturday morning.  the driver argued with the suspects. his grandmother said the fire was lit by the suspects attempted to carjack her grandson. entities : entity5 :California entity13 :76-Station entity14 : South LA entity16 :Dodge Charger entity33 :ABC entity52 :NBC entity53 :LACFD entity67 :LA76
+Figure 4: Visualization of the summaries for a DailyMail article. The top half shows the relative attention weights given by the sentence extraction model.  Darkness indicates sentence importance. The lower half shows the summary generated by the word extraction.to NN - ABS which deals with an open vocabulary. The extraction-based generation approach is more robust for proper nouns and rare words, which pose a serious problem to open vocabulary mod- els. An example of the generated summaries for NN - WE is shown at the lower half of Figure 4.Table 1 (lower half) shows system results on the 500 DailyMail news articles (test set).  In gen- eral, we observe similar trends to DUC 2002, with NN - SE performing the best in terms of all ROUGE metrics. Note that scores here are generally lower compared to DUC 2002. This is due to the fact that the gold standard summaries (aka highlights) tend to be more laconic and as a result involve a substantial amount of paraphrasing. More exper- imental results on this dataset are provided in the appendix. The results of our human evaluation study are shown in Table 2. Specifically, we show, propor- tionally, how often our participants ranked each system 1st, 2nd, and so on. Perhaps unsurpris- ingly, the human-written descriptions were con- sidered best and ranked 1st 27% of the time, how- ever closely followed by our NN - SE model which was ranked 1st 22% of the time.  The ILP system was mostly ranked in 2nd place (38% of the time). The rest of the systems occupied lower ranks. We further converted the ranks to ratings on a scale of 1 to 6 (assigning ratings 6 . . . 1 to rank placements 1 . . . 6). This allowed us to perform Analysis of Variance (ANOVA) which revealed a reliable ef- fect of system type.  Specifically, post-hoc Tukey tests showed that NN - SE and ILP are significantly ( p < 0 . 01) better than LEAD , NN - WE , and NN - ABS
+but do not differ significantly from each other or the human goldstandard.
+
+================================== Ai Message ==================================
+
+Yes; they include a neural abstractive baseline (NN-ABS) and compare to it. They report NN-WE consistently outperforms the purely abstractive model, and post-hoc tests show NN-SE (and ILP) are significantly better than LEAD, NN-WE, and NN-ABS.

@@ -1,0 +1,20 @@
+================================ Human Message =================================
+
+HYPOTHESIS:
+Survival of obligations: Some obligations of Agreement may survive termination of Agreement.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_ny4reOLv8IFNbDfM5CDK1FvU)
+ Call ID: call_ny4reOLv8IFNbDfM5CDK1FvU
+  Args:
+    pattern: surviv|termination|expire|remain in effect|continue
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+8. This Agreement shall be effective as of the date set forth above.The obligations hereunder shall expire upon the earlier to occur of (a) ___ years from the termination date of the last loan of securities outstanding under the Borrowing Agreement or (b) the date upon which the Information ceases to be confidential as set forth above.IN WITNESS WHEREOF, the parties have caused this Agreement to be duly executed by their respective authorized representatives as of the day and year first above written. ________________ [BORROWER] _______________________ [LENDING AGENT] By: ____________________________ Name: __________________________ Title: ___________________________ By: _____________________________ Name: __________________________ Title: ___________________________
+
+================================== Ai Message ==================================
+
+Entailment

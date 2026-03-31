@@ -1,0 +1,76 @@
+================================ Human Message =================================
+
+QUERY:
+What is the type of the project 'Storm Drain Master Plan (FEMA Project)'?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_6bm33VGxyrG6GNCC08v421Q6)
+ Call ID: call_6bm33VGxyrG6GNCC08v421Q6
+  Args:
+    pattern: Storm Drain Master Plan \(FEMA Project\)
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Storm Drain Master Plan (FEMA Project)
+¾ Project Description:  This project is funded through a grant from FEMA after the Woolsey Fire.  The City will create a complete inventory of storm drains, culverts, debris basins, manholes, and other drainage structures within the City.¾ Updates:  Council approved an agreement in December for design services. A kick-off meeting was held in late December.¾ Estimated Schedule:
+ Completion Date:  Spring 2022
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_3LFxmiffFOfRtdODDjPTeMak)
+ Call ID: call_3LFxmiffFOfRtdODDjPTeMak
+  Args:
+    pattern: Type:\s*
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_n5w8gyg0J4Xc66AZikc2KxAI)
+ Call ID: call_n5w8gyg0J4Xc66AZikc2KxAI
+  Args:
+    pattern: FEMA Project
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Outdoor Warningn Sirens - Design (FEMA Project)
+¾ Project Description:  An Emergency Warning Siren system will improve the City’s  ability  to  alert  the  community  by  providing  mechanisms  to  alert residents in areas without power and those who live in neighborhoods with poor  cell  service.     Phase  One  of  the  project  included  a  sound  study  to determine the optimal number and locations of individual sirens, power and infrastructure  requirements,  and  siren  sound  range.    The  City  has  been awarded a FEMA Hazard Mitigation grant to fund the design, engineering and environmental compliance needed for a shovel ready project.  Phase Two of
+Page 7 of 8
+Agenda Item # 4.A. the Emergency Warning Sirens project will be implementation of the design plan,  including  purchasing,  installing,  and  testing  the  sirens.    The  City  will apply for future grant funding for this phase of the project.¾ Upates:
+ On  November  30,  2021,  City  Council  approved  an  agreement  with Acoustic Technology to design the outdoor warning sirens.   A design report will be presented to Council upon completion. The Kickoff meeting for the Steering Committee was held on March 17, 2022.¾ Estimated Schedule: TBD
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_UNVSV2DmsLh238GBpAfOd8sJ)
+ Call ID: call_UNVSV2DmsLh238GBpAfOd8sJ
+  Args:
+    pattern: Storm Drain
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Storm Drain Master Plan (FEMA Project)
+¾ Project Description:  This project is funded through a grant from FEMA after the Woolsey Fire.  The City will create a complete inventory of storm drains, culverts, debris basins, manholes, and other drainage structures within the City.¾ Updates:  Council approved an agreement in December for design services. A kick-off meeting was held in late December.¾ Estimated Schedule:
+ Completion Date:  Spring 2022
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_eWKMrrGS3f9x16n2Dq8cxOI7)
+ Call ID: call_eWKMrrGS3f9x16n2Dq8cxOI7
+  Args:
+    pattern: Project Type|Type of Project|Project Category|Type -|Type:
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+
+disaster

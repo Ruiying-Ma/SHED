@@ -1,0 +1,53 @@
+================================ Human Message =================================
+
+QUERY:
+How do they incorporate expert knowledge into their topic model?
+
+TABLE OF CONTENTS (TOC):
+1 | Toward Interpretable Topic Discovery via Anchored Correlation Explanation
+1.1 | Abstract
+1.2 | 1. Introduction
+1.3 | 2. Methods
+1.4 | 3. Related Work
+1.5 | 4. Results and Discussion
+1.5.1 | 4.1. 20 Newsgroups
+1.5.2 | 4.2. i2b2 Obesity Challenge 2008
+1.5.3 | 4.3. Anchored CorEx for Discriminative Tasks
+1.6 | 5. Conclusion
+1.7 | Acknowledgements
+1.8 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_M5p1ixPJQdeyMneAilBzVjKx)
+ Call ID: call_M5p1ixPJQdeyMneAilBzVjKx
+  Args:
+    pattern: anchor
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.2 | 1. Introduction
+A clinician can look at a patient’s electronic health record (EHR) and not only decide whether the patient has diabetes but also produce a succinct summary of the clinical evi- dence. Replicating this feat with computational tools has been the focus of much research in clinical informatics. There are major initiatives underway to codify clinical knowledge into formal representations, most often as de- terministic rules that can be applied in a semi-automated fashion ( Newton et al.  , 2013 ). However, representing the intuitive judgments of human experts can be challenging, particularly when the formal system does not match the ex- pert’s knowledge. For example, many deterministic disease classifiers used in clinical informatics rely heavily upon administrative codes not available at time of diagnosis. Further, developing and testing such systems is time- and
+labor-intensive. We propose instead a lightweight information theoretic framework for codifying informal human knowledge and then use it to extract interpretable latent topics from text corpora. For example, to discover patients with diabetes in a set of clinical notes, a doctor can begin by specifying disease-specific anchor terms ( Arora et al. , 2012 ; Halpern et al. , 2014 ), such as “diabetes” or “insulin. ” Our frame- work then uses these to help discover both latent topics associated with diabetes and records in which diabetes- related topics occur. The user can then add (or remove) additional anchor terms (e.g., “metformin”) to improve the quality of the learned (diabetes) topics. In this workshop paper, we introduce a simple approach to anchored information theoretic topic modeling using a novel combination of Correlation Explanation (CorEx) ( Ver Steeg & Galstyan , 2014 ) and the information bottle- neck ( Tishby et al. , 2000 ). This flexible framework enables the user to leverage domain knowledge to guide exploration of a collection of documents and to impose semantics onto latent factors learned by CorEx.  We present preliminary experimental results on two text corpora (including a cor- pus of clinical notes), showing that anchors can be used to discover topics that are more specific and relevant. What is more, we demonstrate the potential for this framework to perform weakly supervised learning in settings where labeling documents is prohibitively expensive ( Chen et al. , 2013 ; Agarwal et al. , 2016 ). With respect to interpretable machine learning, our con- tributions are twofold. First, our framework provides a way for human users to share domain knowledge with a statistical learning algorithm that is both convenient for the human user and easily digestible by the machine. Second, our experimental results confirm that the introduction of simple anchor words can improve the coherence and human interpretability of topics discovered from data. Both are es- sential to successful and interactive collaboration between machine learning and human users. 2016 ICML Workshop on Human Interpretability in Machine Learning (WHI 2016) , New York, NY, USA. Copyright by the author(s).101
+Toward Interpretable Topic Discovery via Anchored Correlation Explanation
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_ZW4UjCfbkesqvLkEXUpfqDzt)
+ Call ID: call_ZW4UjCfbkesqvLkEXUpfqDzt
+  Args:
+    section_id: 1.3
+
+================================= Tool Message =================================
+Name: read_section
+
+2. Methods
+Anchored Correlation Explanation can be understood as a combination of Total Correlation Explanation (CorEx) ( Ver Steeg & Galstyan , 2014 ; 2015 ) and the multivariate in- formation bottleneck ( Tishby et al. , 2000 ; Slonim et al. , 2006 ). We search for a set of probabilistic functions of the inputs p ( y j | x ) for j = 1 , . . .  , m that optimize the following information theoretic objective:
+max p ( y j | x ) ,j =1 ,...,m T C ( X ; Y ) + β X i,j ∈R I ( X i ; Y j )
+The first term is the CorEx objective T C ( X ; Y ) ≡ T C ( X ) − T C ( X | Y ) , which aims to construct latent variables Y that best explain multivariate dependencies in the data X .  Here the data consist of n -dimensional binary vectors [ X 1 , . . . , X n ] . Total correlation, or multivariate mutual information ( Watanabe , 1960 ), is specified as T C ( X 1 , . . . , X n ) = D KL ( p ( x 1 , . . . , x n ) || Q i p ( x i )) where D KL is the KL divergence.  Maximizing T C ( X ; Y ) over latent factors { Y j } m j =1 amounts to minimizing T C ( X | Y ) , which measures how much dependence in X is explained by Y . At the global optimum, T C ( X | Y ) is zero and the observations are independent conditioned on the latent factors. Several papers have explored CorEx for unsupervised hierarchical topic modeling ( Ver Steeg & Galstyan , 2014 ; Chen et al.  , 2015 ; Hodas et al. , 2015 ).The second term involves the mutual information between pairs of latent factors Y j ) and anchor variables X i spec- ified in the set R = { ( i, j ) } . This is inspired by the information bottleneck ( Tishby et al. , 2000 ; Slonim et al. , 2006 ), a supervised information-theoretic approach to discovering latent factors.  The bottleneck objective max p ( y | x ) − I ( X ; Y ) + βI ( Z ; Y ) constructs latent factors Y that trade off compression of X against preserving information about relevance variables Z .Anchored CorEx preserves information about anchors while also explaining as much multivariate dependence between observations in X as possible. This framework is flexible: we can attach multiple anchors to one factor or one anchor to multiple factors.  We have found empirically that β = 1 works well and does not need to be tuned.Anchors allow us to both seed CorEx and impose semantics on latent factors: when analyzing medical documents, for example, we can anchor a diabetes latent factor to the word “diabetes.” The T C objective then discovers other words associated with “diabetes” and includes them in this topic. While there is not space here for a full description of the optimization, it is similar in principle to the approaches in Ver Steeg & Galstyan ( 2014 ; 2015 ). Two points are worth noting: first, the TC objective is replaced by a lower bound to make optimization feasible ( Ver Steeg &
+Galstyan , 2015 ). Second, we impose a sparse connection constraint (each word appears in only one topic) to speed up computation.  Open source code implementing CorEx is available on github ( Ver Steeg , 2016 ).
+
+================================== Ai Message ==================================
+
+They let users specify anchor terms/variables and add a mutual-information bottleneck term β Σ_{(i,j)∈R} I(X_i;Y_j) to the CorEx objective to preserve information about these anchors, thereby seeding topics and imposing semantics on latent factors; anchors can be attached flexibly (multiple anchors to one factor or one anchor to multiple factors) and β=1 works well.

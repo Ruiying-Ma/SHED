@@ -1,0 +1,48 @@
+================================ Human Message =================================
+
+QUERY:
+what datasets have been used for this task?
+
+TABLE OF CONTENTS (TOC):
+1 | Toward a Standardized and More Accurate Indonesian Part-of-Speech Tagging
+1.1 | I. I NTRODUCTION
+1.2 | II. R ELATED W ORK
+1.3 | III. M ETHODOLOGY
+1.3.1 | A. Dataset
+1.3.2 | B. Baselines
+1.3.3 | C. Comparisons
+1.3.4 | D. Experiments Setup
+1.3.5 | E. Evaluation
+1.4 | IV. R ESULTS AND D ISCUSSION
+1.5 | V. C ONCLUSION
+1.6 | R EFERENCES
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_p1NvcKXqJOK2VAi4TW7qYDJ0)
+ Call ID: call_p1NvcKXqJOK2VAi4TW7qYDJ0
+  Args:
+    section_id: 1.3.1
+  read_section (call_a1dP9BGtQ1utrpeFvkOrICRB)
+ Call ID: call_a1dP9BGtQ1utrpeFvkOrICRB
+  Args:
+    section_id: 1.2
+
+================================= Tool Message =================================
+Name: read_section
+
+A. Dataset
+We used the IDN Tagged Corpus proposed in [12]. The corpus contains 10K sentences and 250K tokens that are tagged manually. Due to the small size, 3 we used 5-fold cross-validation to split the corpus into training, development, and test sets. We did not split multi-word expressions but treated them as if they are a single token.1 http://www.panl10n.net
+2 https://github. com/famrashel/idn-tagged-corpus
+3 As a comparison, Penn Treebank corpus for English has 40K sen- tences.c 2018 IEEE. Personal use of this material is permitted.  Permission from IEEE must be obtained for all other uses, in any current or future media, including reprinting/republishing this material for advertising or promotional purposes, creating new collective works, for resale or redistribution to servers or lists, or reuse of any copyrighted component or this work in other works. The final version of this article is available at https://doi.org/10.1109/IALP.2018.8629236. All 5 folds of the dataset are available publicly 4 to serve as a benchmark for future work.
+
+================================= Tool Message =================================
+Name: read_section
+
+II. R ELATED W ORK
+Pisceldo et al. [6] built an Indonesian POS tagger by employing a conditional random field (CRF) [13] and a
+maximum entropy model. They used contextual unigram and bigram features and achieved accuracy scores of 80- 90% on PANL10N 1 dataset tagged manually using their proposed tagset. The dataset consists of 15K sentences.  Another work used a hidden Markov model enhanced with an affix tree to better handle out-of-vocabulary (OOV) words [7]. They evaluated their models on the same PANL10N dataset and achieved more than 90% overall accuracy and roughly 70% accuracy for the OOV cases. We note that while the datasets are the same, the split could be different. Thus, making a fair comparison be- tween them is difficult.Dinakaramani et al.  [12] proposed IDN Tagged Cor- pus, a new manually annotated POS tagging corpus for Indonesian. The corpus consists of 10K sentences and 250K tokens, and its tagset is different than that of the PANL10N dataset. The corpus is available online. 2 A rule- based tagger is developed in [8] using the aformentioned dataset, and is able to achieve an accuracy of 80%. One of the neural network-based POS taggers for In- donesian is proposed in [9]. They used a feedforward neu- ral network with an architecture similar to that proposed in [14]. They evaluated their methods on the new POS tagging corpus [12] and separated the evaluation of multi- and single-word expressions.  They experimented with several word embedding algorithms trained on Indonesian Wikipedia data and reported macro-averaged F 1 score of 91 and 73 for the single- and multi-word expression cases respectively. We remark that the choice of macro-averaged F 1 score is more suitable than accuracy for POS tagging because of the class imbalance in the dataset. There are too many words with NN as the true POS tag, so accuracy is not the best metric in such case.
+
+================================== Ai Message ==================================
+
+PANL10N and the IDN Tagged Corpus have been used for Indonesian POS tagging. PANL10N consists of 15K manually tagged sentences, while the IDN Tagged Corpus contains 10K sentences and 250K manually tagged tokens.

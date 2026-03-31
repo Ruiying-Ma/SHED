@@ -1,0 +1,112 @@
+================================ Human Message =================================
+
+QUERY:
+What models do they experiment on?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_QGVlseEudphYqMTdz3dFeu4R)
+ Call ID: call_QGVlseEudphYqMTdz3dFeu4R
+  Args:
+    pattern: experiment|experiments|evaluate|evaluated|model|models
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+As offensive language has become a rising issue for online communities and social media platforms, researchers have been investigating ways of coping with abusive content and developing systems to detect its different types: cyberbullying, hate speech, aggression, etc. With a few notable exceptions, most research on this topic so far has dealt with English. This is mostly due to the availability of language resources for English.  To address this shortcoming, this paper presents the first Greek annotated dataset for offensive language identification: the Offensive Greek Tweet Dataset (OGTD). OGTD is a manually annotated dataset containing 4,779 posts from Twitter annotated as offensive and not offensive. Along with a detailed description of the dataset, we evaluate several computational models trained and tested on this data.Keywords: offensive language, hate speech, Greek
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_7BCXoOMtrQQi6TpyQrLdyB0o)
+ Call ID: call_7BCXoOMtrQQi6TpyQrLdyB0o
+  Args:
+    pattern: evaluate several computational models|trained and tested|we evaluate|models
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+As offensive language has become a rising issue for online communities and social media platforms, researchers have been investigating ways of coping with abusive content and developing systems to detect its different types: cyberbullying, hate speech, aggression, etc. With a few notable exceptions, most research on this topic so far has dealt with English. This is mostly due to the availability of language resources for English.  To address this shortcoming, this paper presents the first Greek annotated dataset for offensive language identification: the Offensive Greek Tweet Dataset (OGTD). OGTD is a manually annotated dataset containing 4,779 posts from Twitter annotated as offensive and not offensive. Along with a detailed description of the dataset, we evaluate several computational models trained and tested on this data.Keywords: offensive language, hate speech, Greek
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_WDE2pnBAyj3Y02PnnHHR2Z9g)
+ Call ID: call_WDE2pnBAyj3Y02PnnHHR2Z9g
+  Args:
+    pattern: SVM|LSTM|BERT|GRU|CNN|Logistic Regression|Naive Bayes|fastText|word embeddings|baseline
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1. Introduction
+In the age of social media, offensive content online has be- come prevalent in recent years. There are many types of of- fensive content online such as racist and sexist posts and in- sults and threats targeted at individuals or groups. As such content increasingly occurs online, it has become a grow- ing issue for online communities. This has come to the attention of social media platforms and authorities under- lining the urgency to moderate and deal with such content.  Several studies in NLP have approached offensive language identification applying machine learning and deep learning systems on annotated data to identify such content. Re- searchers in the field have worked with different definitions of offensive language with hate speech being the most stud- ied among these types (Davidson et al., 2017). (Waseem et al., 2017) investigate the similarity between these sub- tasks.  With a few noteworthy exceptions, most research so far has dealt with English, due to the availability of lan- guage resources. This gap in the literature recently started to be addressed with studies on Spanish (Aragón et al., 2018), Hindi (Kumar et al., 2018), and German (Wiegand et al., 2018), to name a few. In this paper we contribute in this direction presenting the first Greek annotated dataset for offensive language iden- tification: the Offensive Greek Tweet Dataset (OGTD). OGTD uses a working definition of offensive language in- spired by the OLID dataset for English (Zampieri et al., 2019a) used in the recent OffensEval (SemEval-2019 Task 6) (Zampieri et al., 2019b).  In its version, 1.0 OGTD con- tains nearly 4,800 posts collected from Twitter and manu- ally annotated by a team of volunteers, resulting in a high- quality annotated dataset. We trained a number of sys- tems on this dataset and our best results have been obtained from a system using LSTMs and GRU with attention which achieved 0.89 F1 score.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_4OSnT9Gb7ZbORaNtVDG1KOXs)
+ Call ID: call_4OSnT9Gb7ZbORaNtVDG1KOXs
+  Args:
+    pattern: LSTMs|GRU|attention|BERT|CNN|SVM|baseline|systems
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+As offensive language has become a rising issue for online communities and social media platforms, researchers have been investigating ways of coping with abusive content and developing systems to detect its different types: cyberbullying, hate speech, aggression, etc. With a few notable exceptions, most research on this topic so far has dealt with English. This is mostly due to the availability of language resources for English.  To address this shortcoming, this paper presents the first Greek annotated dataset for offensive language identification: the Offensive Greek Tweet Dataset (OGTD). OGTD is a manually annotated dataset containing 4,779 posts from Twitter annotated as offensive and not offensive. Along with a detailed description of the dataset, we evaluate several computational models trained and tested on this data.Keywords: offensive language, hate speech, Greek
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_dIfFCpohII68HA72NJwNBHWj)
+ Call ID: call_dIfFCpohII68HA72NJwNBHWj
+  Args:
+    pattern: Machine Learning|Deep Learning|Experimental Setup|Experiments|Results
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+4.1.1. Classical Machine Learning Models
+Every classical model was considered on the condition it could take matrices as input for fitting and was trained with the default settings because of the size of the dataset. Five models were trained: Two SVMs, one with linear kernel and the other with a radial basis function kernel (RBF), both with a value of 1 in the penalty parameter C of the error term. The gamma value of the RBF SVM which indicates how much influence a single training example has, was set to 2.  The third classifier trained was another linear clas- sifier with Stochastic Gradient Descent (SGDC) learning. The gradient of the loss is estimated each sample at a time and the SGDC is updated along the way with a decreas- ing learning rate. The parameters for maximum epochs and the stopping criterion were defined using the default values in scikit-learn.  The final classifier was two models based on the Bayes theorem: Multinomial Naïve Bayes, which works with occurrence counts, and Bernoulli Naïve Bayes, which is designed for binary features.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_KeeOymEEwKilHPrSdy5CtYoa)
+ Call ID: call_KeeOymEEwKilHPrSdy5CtYoa
+  Args:
+    pattern: 4.1.2|Deep Learning|LSTM|GRU|attention
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1. Introduction
+In the age of social media, offensive content online has be- come prevalent in recent years. There are many types of of- fensive content online such as racist and sexist posts and in- sults and threats targeted at individuals or groups. As such content increasingly occurs online, it has become a grow- ing issue for online communities. This has come to the attention of social media platforms and authorities under- lining the urgency to moderate and deal with such content.  Several studies in NLP have approached offensive language identification applying machine learning and deep learning systems on annotated data to identify such content. Re- searchers in the field have worked with different definitions of offensive language with hate speech being the most stud- ied among these types (Davidson et al., 2017). (Waseem et al., 2017) investigate the similarity between these sub- tasks.  With a few noteworthy exceptions, most research so far has dealt with English, due to the availability of lan- guage resources. This gap in the literature recently started to be addressed with studies on Spanish (Aragón et al., 2018), Hindi (Kumar et al., 2018), and German (Wiegand et al., 2018), to name a few. In this paper we contribute in this direction presenting the first Greek annotated dataset for offensive language iden- tification: the Offensive Greek Tweet Dataset (OGTD). OGTD uses a working definition of offensive language in- spired by the OLID dataset for English (Zampieri et al., 2019a) used in the recent OffensEval (SemEval-2019 Task 6) (Zampieri et al., 2019b).  In its version, 1.0 OGTD con- tains nearly 4,800 posts collected from Twitter and manu- ally annotated by a team of volunteers, resulting in a high- quality annotated dataset. We trained a number of sys- tems on this dataset and our best results have been obtained from a system using LSTMs and GRU with attention which achieved 0.89 F1 score.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_ZBDoi2zd7dJ4XuZyAKljjHwM)
+ Call ID: call_ZBDoi2zd7dJ4XuZyAKljjHwM
+  Args:
+    pattern: attention which achieved|GRU with attention|BiLSTM|embedding
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1. Introduction
+In the age of social media, offensive content online has be- come prevalent in recent years. There are many types of of- fensive content online such as racist and sexist posts and in- sults and threats targeted at individuals or groups. As such content increasingly occurs online, it has become a grow- ing issue for online communities. This has come to the attention of social media platforms and authorities under- lining the urgency to moderate and deal with such content.  Several studies in NLP have approached offensive language identification applying machine learning and deep learning systems on annotated data to identify such content. Re- searchers in the field have worked with different definitions of offensive language with hate speech being the most stud- ied among these types (Davidson et al., 2017). (Waseem et al., 2017) investigate the similarity between these sub- tasks.  With a few noteworthy exceptions, most research so far has dealt with English, due to the availability of lan- guage resources. This gap in the literature recently started to be addressed with studies on Spanish (Aragón et al., 2018), Hindi (Kumar et al., 2018), and German (Wiegand et al., 2018), to name a few. In this paper we contribute in this direction presenting the first Greek annotated dataset for offensive language iden- tification: the Offensive Greek Tweet Dataset (OGTD). OGTD uses a working definition of offensive language in- spired by the OLID dataset for English (Zampieri et al., 2019a) used in the recent OffensEval (SemEval-2019 Task 6) (Zampieri et al., 2019b).  In its version, 1.0 OGTD con- tains nearly 4,800 posts collected from Twitter and manu- ally annotated by a team of volunteers, resulting in a high- quality annotated dataset. We trained a number of sys- tems on this dataset and our best results have been obtained from a system using LSTMs and GRU with attention which achieved 0.89 F1 score.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_V28xVyvPgRLOA5sgzF3hPA8w)
+ Call ID: call_V28xVyvPgRLOA5sgzF3hPA8w
+  Args:
+    pattern: 4.1.2\.|4.1.2|4.2|GRU|LSTM
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1. Introduction
+In the age of social media, offensive content online has be- come prevalent in recent years. There are many types of of- fensive content online such as racist and sexist posts and in- sults and threats targeted at individuals or groups. As such content increasingly occurs online, it has become a grow- ing issue for online communities. This has come to the attention of social media platforms and authorities under- lining the urgency to moderate and deal with such content.  Several studies in NLP have approached offensive language identification applying machine learning and deep learning systems on annotated data to identify such content. Re- searchers in the field have worked with different definitions of offensive language with hate speech being the most stud- ied among these types (Davidson et al., 2017). (Waseem et al., 2017) investigate the similarity between these sub- tasks.  With a few noteworthy exceptions, most research so far has dealt with English, due to the availability of lan- guage resources. This gap in the literature recently started to be addressed with studies on Spanish (Aragón et al., 2018), Hindi (Kumar et al., 2018), and German (Wiegand et al., 2018), to name a few. In this paper we contribute in this direction presenting the first Greek annotated dataset for offensive language iden- tification: the Offensive Greek Tweet Dataset (OGTD). OGTD uses a working definition of offensive language in- spired by the OLID dataset for English (Zampieri et al., 2019a) used in the recent OffensEval (SemEval-2019 Task 6) (Zampieri et al., 2019b).  In its version, 1.0 OGTD con- tains nearly 4,800 posts collected from Twitter and manu- ally annotated by a team of volunteers, resulting in a high- quality annotated dataset. We trained a number of sys- tems on this dataset and our best results have been obtained from a system using LSTMs and GRU with attention which achieved 0.89 F1 score.
+
+================================== Ai Message ==================================
+
+They experiment on five classical machine learning models: two SVMs (linear and RBF), Stochastic Gradient Descent, Multinomial Naïve Bayes, and Bernoulli Naïve Bayes. They also experiment on a deep learning system using LSTMs and GRU with attention.

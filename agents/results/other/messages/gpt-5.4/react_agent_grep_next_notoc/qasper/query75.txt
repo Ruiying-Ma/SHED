@@ -1,0 +1,60 @@
+================================ Human Message =================================
+
+QUERY:
+Do they compare their semantic feature approach to lexical approaches?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_UWKGwTDgITwMracJVwrWg2Xv)
+ Call ID: call_UWKGwTDgITwMracJVwrWg2Xv
+  Args:
+    pattern: semantic|lexical
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+ABSTRACT
+Detecting controversy in general web pages is a daunting task, but increasingly essential to efficiently moderate discussions and effec- tively filter problematic content. Unfortunately, controversies occur across many topics and domains, with great changes over time. This paper investigates neural classifiers as a more robust methodology for controversy detection in general web pages. Current models have often cast controversy detection on general web pages as Wikipedia linking, or exact lexical matching tasks.  The diverse and changing nature of controversies suggest that semantic approaches are better able to detect controversy. We train neural networks that can capture semantic information from texts using weak signal data. By leveraging the semantic properties of word embeddings we robustly improve on existing controversy detection methods. To evaluate model stability over time and to unseen topics, we asses model performance under varying training conditions to test cross- temporal, cross-topic, cross-domain performance and annotator congruence.  In doing so, we demonstrate that weak-signal based neural approaches are closer to human estimates of controversy and are more robust to the inherent variability of controversies.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_0sLOUKGg9KIxDfW8wSfZuI7q)
+ Call ID: call_0sLOUKGg9KIxDfW8wSfZuI7q
+  Args:
+    pattern: baseline|existing controversy detection methods|lexical matching|Wikipedia linking
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+ABSTRACT
+Detecting controversy in general web pages is a daunting task, but increasingly essential to efficiently moderate discussions and effec- tively filter problematic content. Unfortunately, controversies occur across many topics and domains, with great changes over time. This paper investigates neural classifiers as a more robust methodology for controversy detection in general web pages. Current models have often cast controversy detection on general web pages as Wikipedia linking, or exact lexical matching tasks.  The diverse and changing nature of controversies suggest that semantic approaches are better able to detect controversy. We train neural networks that can capture semantic information from texts using weak signal data. By leveraging the semantic properties of word embeddings we robustly improve on existing controversy detection methods. To evaluate model stability over time and to unseen topics, we asses model performance under varying training conditions to test cross- temporal, cross-topic, cross-domain performance and annotator congruence.  In doing so, we demonstrate that weak-signal based neural approaches are closer to human estimates of controversy and are more robust to the inherent variability of controversies.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_yyuBpsXyLKT0PeN3EbaqFNXD)
+ Call ID: call_yyuBpsXyLKT0PeN3EbaqFNXD
+  Args:
+    pattern: tf-idf|SVM|language model|lexical
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+ABSTRACT
+Detecting controversy in general web pages is a daunting task, but increasingly essential to efficiently moderate discussions and effec- tively filter problematic content. Unfortunately, controversies occur across many topics and domains, with great changes over time. This paper investigates neural classifiers as a more robust methodology for controversy detection in general web pages. Current models have often cast controversy detection on general web pages as Wikipedia linking, or exact lexical matching tasks.  The diverse and changing nature of controversies suggest that semantic approaches are better able to detect controversy. We train neural networks that can capture semantic information from texts using weak signal data. By leveraging the semantic properties of word embeddings we robustly improve on existing controversy detection methods. To evaluate model stability over time and to unseen topics, we asses model performance under varying training conditions to test cross- temporal, cross-topic, cross-domain performance and annotator congruence.  In doing so, we demonstrate that weak-signal based neural approaches are closer to human estimates of controversy and are more robust to the inherent variability of controversies.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_YBwORsIQGUAerQskkxR2joB7)
+ Call ID: call_YBwORsIQGUAerQskkxR2joB7
+  Args:
+    pattern: model|methods
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+ABSTRACT
+Detecting controversy in general web pages is a daunting task, but increasingly essential to efficiently moderate discussions and effec- tively filter problematic content. Unfortunately, controversies occur across many topics and domains, with great changes over time. This paper investigates neural classifiers as a more robust methodology for controversy detection in general web pages. Current models have often cast controversy detection on general web pages as Wikipedia linking, or exact lexical matching tasks.  The diverse and changing nature of controversies suggest that semantic approaches are better able to detect controversy. We train neural networks that can capture semantic information from texts using weak signal data. By leveraging the semantic properties of word embeddings we robustly improve on existing controversy detection methods. To evaluate model stability over time and to unseen topics, we asses model performance under varying training conditions to test cross- temporal, cross-topic, cross-domain performance and annotator congruence.  In doing so, we demonstrate that weak-signal based neural approaches are closer to human estimates of controversy and are more robust to the inherent variability of controversies.
+
+================================== Ai Message ==================================
+
+Yes. They compare their semantic neural approach against existing lexical approaches, specifically methods framed as Wikipedia linking or exact lexical matching tasks, and report robust improvements over these existing controversy detection methods.

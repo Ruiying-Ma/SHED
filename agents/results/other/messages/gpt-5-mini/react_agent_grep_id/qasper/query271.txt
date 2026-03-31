@@ -1,0 +1,242 @@
+================================ Human Message =================================
+
+QUERY:
+What are the datasets used in the paper?
+
+TABLE OF CONTENTS (TOC):
+1 | Event Representation Learning Enhanced with External Commonsense Knowledge
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2 Commonsense Knowledge Enhanced Event Representations
+1.3.1 | 2.1 Low-Rank Tensors for Event Embedding
+1.3.2 | 2.2 Intent Embedding
+1.3.3 | 2.3 Sentiment Embedding
+1.3.4 | 2.4 Joint Event, Intent and Sentiment Embedding
+1.4 | 3 Experiments
+1.4.1 | 3.1 Baselines
+1.4.2 | 3.2 Event Similarity Evaluation
+1.4.2.1 | 3.2.1 Hard Similarity Task
+1.4.2.2 | 3.2.2 Transitive Sentence Similarity
+1.4.2.3 | 3.2.3 Results
+1.4.2.4 | 3.2.4 Case Study
+1.4.3 | 3.3 Script Event Prediction
+1.4.4 | 3.4 Stock Market Prediction
+1.5 | 4 Related Work
+1.6 | 5 Conclusion
+1.7 | Acknowledgments
+1.8 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_all (call_5mv3wWeqKBC2U1D8rAZhw4IU)
+ Call ID: call_5mv3wWeqKBC2U1D8rAZhw4IU
+  Args:
+    pattern: (?i)dataset|(?i)datasets|(?i)Data set|(?i)data set
+
+================================= Tool Message =================================
+Name: grep_search_all
+
+1.2
+1.3.2
+1.3.3
+1.4.2.1
+1.4.2.2
+1.4.2.3
+1.4.3
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_nI8rvxcWr40gLoCBT4eUk2Il)
+ Call ID: call_nI8rvxcWr40gLoCBT4eUk2Il
+  Args:
+    section_id: 1.4.3
+
+================================= Tool Message =================================
+Name: read_section
+
+3.3 Script Event Prediction
+Event is a kind of important real-world knowl- edge. Learning effective event representations can be benefit for numerous applications. Script event prediction ( Chambers and Jurafsky , 2008 ) is a challenging event-based commonsense reasoning task, which is defined as giving an existing event context, one needs to choose the most reasonable subsequent event from a candidate list.Following Li et al.  ( 2018a ), we evaluate on the standard multiple choice narrative cloze (MCNC) dataset ( Granroth-Wilding and Clark , 2016 ). As SGNN proposed by Li et al. ( 2018a ) achieved state-of-the-art performances for this task, we
+Figure 5: Experimental results on S&P 500 index pre- diction. “+Int” means that we encode the intent infor- mation into the original event embeddings. use the framework of SGNN, and only replace their input event embeddings with our intent and sentiment-enhanced event embeddings.Wang et al. ( 2017 ) and Li et al. ( 2018a ) showed that script event prediction is a challenging prob- lem, and even 1% of accuracy improvement is very difficult. Experimental results shown in Ta- ble 3 demonstrate that we can achieve more than 1. 5% improvements in single model comparison and more than 1.4% improvements in multi-model integration comparison, just by replacing the in- put embeddings, which confirms that better event understanding can lead to better inference results. An interesting result is that the event embeddings only incorporated with intents achieved the best result against other baselines. This confirms that capturing people’s intents is helpful to infer their next plan.  In addition, we notice that the event embeddings only incorporated with sentiment also achieve better performance than SGNN. This is mainly because the emotional consistency does also contribute to predicate the subsequent event.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_zZG0gjT7Tk5FGCU2wgMnpVMD)
+ Call ID: call_zZG0gjT7Tk5FGCU2wgMnpVMD
+  Args:
+    section_id: 1.4.2.1
+
+================================= Tool Message =================================
+Name: read_section
+
+3.2.1 Hard Similarity Task
+We first follow Weber et al. ( 2018 ) evaluating our proposed approach on the hard similarity task. The goal of this task is that similar events should be close to each other in the same vector space, while dissimilar events should be far away with each other. To this end, Weber et al. ( 2018 ) created two categories of event pairs: 1) event pairs with similar semantics but have very little lexical over- lap (e.g. , military launch program / army starts ini- tiative); 2) events pairs with dissimilar semantics but have high lexical overlap (e.g., military launch program / military launch missile).The labeled dataset contains 230 event pairs (115 pairs each of similar and dissimilar types).Method Hard Similarity ( Accuracy % ) Transitive Sentence Similarity ( ρ ) Small Dataset Big Dataset Avg 5.2 13.7 0.67 Comp. NN 33. 0 18.9 0.63 EM Comp. 33.9 18.7 0.57 Role Factor Tensor 43.5 20.7 0.64 Predicate Tensor 41.0 25.6 0.63 KGEB 52.6 49.8 0.61 NTN 40.0 37.0 0.60 NTN+Int 65.2 58.1 0. 67 NTN+Senti 54.8 52.2 0.61 NTN+Int+Senti 77.4 62.8 0.74
+Table 1: Experimental results on hard similarity dataset and transitive sentence similarity dataset. The small dataset (230 event pairs) of hard similarity task from Weber et al. ( 2018 ), and the big dataset (2,000 event pairs) is annotated by us. The best results are in bold. Weber et al. ( 2018 ) asked three different an- notators to give the similarity/dissimilarity rank- ings, and only kept those labels that the annota- tors agreed upon completely. Following Weber et al.  ( 2018 ), for each baseline method and our approach, we obtain the cosine similarity score of the event pairs, and report the fraction of instances where the similar event pair receives a higher co- sine score than the dissimilar event pair (referring to Accuracy ∈ [0 , 1] ).  To evaluate the robustness of our approach, we extend this dataset to 1,000 event pairs (similar and dissimilar events each ac- count for 50%), and we will release this dataset to the public.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_IHzZlkcIqv1LKn49ayVCXTAl)
+ Call ID: call_IHzZlkcIqv1LKn49ayVCXTAl
+  Args:
+    section_id: 1.4.2.2
+
+================================= Tool Message =================================
+Name: read_section
+
+3.2.2 Transitive Sentence Similarity
+Except for the hard similarity task, we also evalu- ate our approach on the transitive sentence sim- ilarity dataset ( Kartsaklis and Sadrzadeh , 2014 ), which contains 108 pairs of transitive sentences: short phrases containing a single subject, object and verb (e.g., company cut cost). For each sentence pair, Kartsaklis and Sadrzadeh ( 2014 ) asked an annotator to label a similarity score from 1 to 7. For example, sentence pairs such as (medication, achieve, result) and (drug, produce, effect) are labeled with a high similarity value, while sentence pairs such as (author, write, book) and (delegate, buy, land) are annotated with a low similarity value.  Since each sentence pair has several annotations, following Weber et al. ( 2018 ), we use the average annotator score as the gold score 2 . We use the Spearmans correlation ( ρ ∈ [ − 1 , 1] ) to evaluate the cosine similarity given by each model and the
+gold score.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_MpQcpAtPo9MtkSKp4ibwjf5T)
+ Call ID: call_MpQcpAtPo9MtkSKp4ibwjf5T
+  Args:
+    section_id: 1.4.2.3
+
+================================= Tool Message =================================
+Name: read_section
+
+3.2.3 Results
+Experimental results of hard similarity and transi- tive sentence similarity are shown in Table 1 . We find that:
+(1) Simple averaging achieved competitive per- formance in the task of transitive sentence similar- ity, while performed very badly in the task of hard similarity. This is mainly because hard similarity dataset is specially created for evaluating the event pairs that should be close to each other but have lit- tle lexical overlap and that should be farther apart but have high lexical overlap.  Obviously, on such dataset, simply averaging word vectors which is incapable of capturing the semantic interactions between event arguments, cannot achieve a sound performance.(2) Tensor-based compositional methods (NTN, KGEB, Role Factor Tensor and Predicate Ten- sor) outperformed parameterized additive models (Comp. NN and EM Comp.), which shows that tensor is capable of learning the semantic compo- sition of event arguments. (3) Our commonsense knowledge enhanced event representation learning approach outper- formed all baseline methods across all datasets (achieving 78% and 200% improvements on hard similarity small and big dataset, respectively, com- pared to previous SOTA method), which indicates that commonsense knowledge is useful for distin- guishing distinct events.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_OFw8Od1MicEgbrrXZxB8ahqS)
+ Call ID: call_OFw8Od1MicEgbrrXZxB8ahqS
+  Args:
+    section_id: 1.3.2
+
+================================= Tool Message =================================
+Name: read_section
+
+2.2 Intent Embedding
+Intent embedding refers to encoding the event participants’ intents into event vectors, which is mainly used to explain why the actor per- formed the action. For example, given two events “ PersonX threw basketball ” and “ PersonX threw bomb ”, there are only subtle differences in their surface realizations, however, the intents are to- tally different. “ PersonX threw basketball ” is just for fun, while “ PersonX threw bomb ” could be a terrorist attack.  With the intents, we can easily dis- tinguish these superficial similar events.One challenge for incorporating intents into event embeddings is that we should have a large- scale labeled dataset, which annotated the event and its actor’s intents. Recently, Rashkin et al. ( 2018 ) and Sap et al.  ( 2019 ) released such valu- able commonsense knowledge dataset (ATOMIC), which consists of 25,000 event phrases covering a diverse range of daily-life events and situations. For example, given an event “ PersonX drinks cof- fee in the morning ”, the dataset labels PersonX ’s likely intent is “ PersonX wants to stay awake ”.We notice that the intents labeled in ATOMIC is a sentence. Hence, intent embedding is actually a sentence representation learning task.  There are a number of deep neural networks for learning dis- tributed sentence vectors, in which bi-directional LSTMs (BiLSTM) ( Hochreiter and Schmidhuber , 1997 ) have been a dominant one, giving state-of- the-art performances in language modelling ( Pe- ters et al. , 2018 ) and syntactic parsing ( Dozat and Manning , 2016 ). Hence, we use the BiLSTM model to learn in- tent representations, which is composed of two di- rected LSTM networks. In the forward direction, LSTM processes the input from the left to right and in the backward direction, it processes the in- put from right to left. In each LSTM component, it reads the input words recurrently using a single hidden state. Taking the forward LSTM network as an ex- ample, we first define the initial state as − → h 0 .LSTM reads the input word distributed vec- tors x 0 , x 1 , . . . , x n , and recurrently calculates the state transition − → h 1 , . . . , − → h n +1 the same as Graves and Schmidhuber ( 2005 ). The backward LSTM networks shares the same recurrent state transition procedure as the forward LSTM network. It also first defines an initial state ← − h n +1 , and reads the input word representa- tions x n , x n − 1 , . . . , x 0 , transforming their values to ← − h n , ← − h n − 1 , . . . , ← − h 0 , respectively. The BiLSTM model uses the concatenated vec- tor of − → h t and ← − h t as the hidden vector for the t -th word:
+h t = [ − → h t ; ← − h t ] (4)
+A single hidden vector representation v i of the in- put intent can be obtained by concatenating the last hidden states of the two LSTMs:
+v i = [ − → h n +1 ; ← − h 0 ] (5)
+ In the training process, we calculate the similar- ity between a given event vector v e and its related intent vector v i . For effectively training the model, we devise a ranking type loss function as follows:
+L I = max (0 , 1 − cosine ( v e , v i ) + cosine ( v e , v 0 i )) (6)
+where v 0 i is the incorrect intent for v e , which is randomly selected from the annotated dataset.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_CXh3Pl5VsqwkcPSDhXRMMvoO)
+ Call ID: call_CXh3Pl5VsqwkcPSDhXRMMvoO
+  Args:
+    section_id: 1.3.3
+
+================================= Tool Message =================================
+Name: read_section
+
+2.3 Sentiment Embedding
+Sentiment embedding refers to encoding the event participants’ emotions into event vectors, which is mainly used to explain how does the actor feel af- ter the event. For example, given two events “ Per- sonX broke record ” and “ PersonX broke vase ”, there are only subtle differences in their surface re- alizations, however, the emotions of PersonX are totally different.  After “ PersonX broke record ”, PersonX may be feel happy, while after “ PersonX broke vase ”, PersonX could be feel sad. With the emotions, we can also effectively distinguish these superficial similar events.We also use ATOMIC ( Sap et al. , 2019 ) as the event sentiment labeled dataset. In this dataset, the sentiment of the event is labeled as words.  For example, the sentiment of “ PersonX broke vase ” is labeled as “( sad, be regretful, feel sorry, afraid )”. We use SenticNet ( Cambria et al. , 2018 ) to normalize these emotion words ( W = { w 1 , w 2 , . . . , w n } ) as the positive (labeled as 1) or
+the negative (labeled as -1) sentiment.  The senti- ment polarity of the event P e is dependent on the polarity of the labeled emotion words P W : P e = 1 , if P i P w i > 0 , or P e = − 1 , if P i P w i < 0 . We use the softmax binary classifier to learn sen- timent enhanced event embeddings. The input of the classifier is event embeddings, and the output is its sentiment polarity (positive or negative).  The model is trained in a supervised manner by min- imizing the cross entropy error of the sentiment classification, whose loss function is given below.L S = − X x e ∈ C X l ∈ L p g l ( x e ) · log ( p l ( x e )) (7)
+ where C means all training instances, L is the col- lection of sentiment categories, x e means an event vector, p l ( x e ) is the probability of predicting x e as class l , p g l ( x e ) indicates whether class l is the correct sentiment category, whose value is 1 or -1.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_all (call_9bGMZ852RBV6mon0zfdz6zYU)
+ Call ID: call_9bGMZ852RBV6mon0zfdz6zYU
+  Args:
+    pattern: ATOMIC|MCNC|SenticNet|S&P|stock|Stock|S&P 500|Granroth|MCNC|transitive|Weber|Kartsaklis|Granroth-Wilding
+
+================================= Tool Message =================================
+Name: grep_search_all
+
+1.1
+1.2
+1.3.2
+1.3.3
+1.4.1
+1.4.2.1
+1.4.2.2
+1.4.2.3
+1.4.2.4
+1.4.3
+1.4.4
+1.5
+1.6
+1.8
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_kxe6OL5LYQV9TyUxdLNmqNKY)
+ Call ID: call_kxe6OL5LYQV9TyUxdLNmqNKY
+  Args:
+    section_id: 1.1
+
+================================= Tool Message =================================
+Name: read_section
+
+Abstract
+Prior work has proposed effective methods to learn event representations that can capture syntactic and semantic information over text corpus, demonstrating their effectiveness for downstream tasks such as script event predic- tion. On the other hand, events extracted from raw texts lacks of commonsense knowledge, such as the intents and emotions of the event participants, which are useful for distinguish- ing event pairs when there are only subtle dif- ferences in their surface realizations.  To ad- dress this issue, this paper proposes to leverage external commonsense knowledge about the intent and sentiment of the event. Experiments on three event-related tasks, i.e. , event simi- larity, script event prediction and stock mar- ket prediction, show that our model obtains much better event embeddings for the tasks, achieving 78% improvements on hard similar- ity task, yielding more precise inferences on subsequent events under given contexts, and better accuracies in predicting the volatilities of the stock market 1 .
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_XWhBL5F5yKZgNu0efwJjSepJ)
+ Call ID: call_XWhBL5F5yKZgNu0efwJjSepJ
+  Args:
+    section_id: 1.4.4
+
+================================= Tool Message =================================
+Name: read_section
+
+3.4 Stock Market Prediction
+It has been shown that news events influence the trends of stock price movements ( Luss and d’Aspremont , 2012 ). As news events affect hu- man decisions and the volatility of stock prices is influenced by human trading, it is reasonable to
+say that events can influence the stock market. In this section, we compare with several event- driven stock market prediction baseline methods: (1) Word , Luss and d’Aspremont ( 2012 ) use bag- of-words represent news events for stock predic- tion; (2) Event , Ding et al. ( 2014 ) represent events by subject-predicate-object triples for stock pre- diction; (3) NTN , Ding et al.  ( 2015 ) learn contin- ues event vectors for stock prediction; (4) KGEB , Ding et al. ( 2016 ) incorporate knowledge graph into event vectors for stock prediction.Experimental results are shown in Figure 5 . We find that knowledge-driven event embedding is a competitive baseline method, which incorporates world knowledge to improve the performances of event embeddings on the stock prediction.  Sen- timent is often discussed in predicting stock mar- ket, as positive or negative news can affect peo- ple’s trading decision, which in turn influences the movement of stock market. In this study, we em- pirically show that event emotions are effective for improving the performance of stock prediction (+2.4%).
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_4nEMM5QRlslBqLJ0U0Qq9Z2C)
+ Call ID: call_4nEMM5QRlslBqLJ0U0Qq9Z2C
+  Args:
+    section_id: 1.4.1
+
+================================= Tool Message =================================
+Name: read_section
+
+3.1 Baselines
+We compare the performance of our approach against a variety of event embedding models de-
+veloped in recent years. These models can be cat- egorized into three groups:
+• Averaging Baseline (Avg) This represents each event as the average of the constituent word vectors using pre-trained GloVe embed- dings ( Pennington et al., 2014 ).
+• Compositional Neural Network (Comp.NN) The distributed event representations are learned by concatenating the subject, predi- cate, and object embeddings into a two layer neural network ( Modi and Titov , 2013 ; Modi , 2016 ; Granroth-Wilding and Clark , 2016 ).
+• Element-wise Multiplicative Composition (EM Comp.) This method simply concate- nates the element-wise multiplications be- tween the verb and its subject/object.
+• Neural Tensor Network This line of work use tensors to learn the interactions between the predicate and its subject/object ( Ding et al., 2015 ; Weber et al. , 2018 ). Accord- ing to the different usage of tensors, we have three baseline methods: Role Factor Ten- sor ( Weber et al. , 2018 ) which represents the predicate as a tensor, Predicate Tensor ( Weber et al. , 2018 ) which uses two tensors learning the interactions between the predi- cate and its subject, and the predicate and its object, respectively, NTN ( Ding et al.  , 2015 ), which we used as the baseline event embed- ding model in this paper, and KGEB ( Ding et al. , 2016 ), which incorporates knowledge graph information in NTN.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_all (call_PD8wGa6X7FkddU9gnP7m727l)
+ Call ID: call_PD8wGa6X7FkddU9gnP7m727l
+  Args:
+    pattern: S&P 500|S&P|S&P500|S\&P
+
+================================= Tool Message =================================
+Name: grep_search_all
+
+1.4.3
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_all (call_Few5zeZHT9ZvG6uIJ8uzcIa2)
+ Call ID: call_Few5zeZHT9ZvG6uIJ8uzcIa2
+  Args:
+    pattern: MCNC|Multiple Choice Narrative Cloze|Granroth-Wilding|ATOMIC|hard similarity|transitive sentence similarity|S&P 500
+
+================================= Tool Message =================================
+Name: grep_search_all
+
+1.2
+1.3.2
+1.3.3
+1.4.1
+1.4.2.1
+1.4.2.2
+1.4.2.3
+1.4.3
+1.5
+1.8
+
+================================== Ai Message ==================================
+
+ATOMIC; SenticNet; the Multiple Choice Narrative Cloze (MCNC) dataset; the hard similarity dataset (Weber et al. 2018 small 230-pair and the authors' extended 2,000-pair big dataset); the transitive sentence similarity dataset (Kartsaklis and Sadrzadeh 2014); and S&P 500 stock market data.

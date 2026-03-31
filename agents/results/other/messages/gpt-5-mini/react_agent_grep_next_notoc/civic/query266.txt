@@ -1,0 +1,84 @@
+================================ Human Message =================================
+
+QUERY:
+What is the type of the project 'Marie Canyon Green Streets'?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_rB3eSJmlpbHI2g6J6lCQ7HvY)
+ Call ID: call_rB3eSJmlpbHI2g6J6lCQ7HvY
+  Args:
+    pattern: Marie Canyon Green Streets
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_9n19Nf80yvJZ6A1ncxItOKTz)
+ Call ID: call_9n19Nf80yvJZ6A1ncxItOKTz
+  Args:
+    pattern: Marie Canyon
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Marie Canyon  Green Streets
+¾ Updates:  The  City  has  recently  received  Measure  W  funds  to  complete  this project.    Staff  is  working  on  the  project  plans  to  prepare  for  public bidding. ¾ Project Schedule:  Complete  Design: September  2021
+ Begin Construction:  Winter 2021
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_VbA47mjhbRt1MWx3V80TVTcZ)
+ Call ID: call_VbA47mjhbRt1MWx3V80TVTcZ
+  Args:
+    pattern: Marie Canyon
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_s8VUnac1cEnU4tbywH0R5uBS)
+ Call ID: call_s8VUnac1cEnU4tbywH0R5uBS
+  Args:
+    pattern: Project Type
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_M1JOOml1XMeyT1ZKzsz9jymv)
+ Call ID: call_M1JOOml1XMeyT1ZKzsz9jymv
+  Args:
+    pattern: Type:
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_ivu3wQCTHBtMldu96jqXo4ke)
+ Call ID: call_ivu3wQCTHBtMldu96jqXo4ke
+  Args:
+    pattern: Green Streets
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Marie Canyon  Green Streets
+¾ Updates:  The  City  has  recently  received  Measure  W  funds  to  complete  this project.    Staff  is  working  on  the  project  plans  to  prepare  for  public bidding. ¾ Project Schedule:  Complete  Design: September  2021
+ Begin Construction:  Winter 2021
+
+================================== Ai Message ==================================
+
+none

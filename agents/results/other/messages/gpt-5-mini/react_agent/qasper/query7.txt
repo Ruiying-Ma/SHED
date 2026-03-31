@@ -1,0 +1,131 @@
+================================ Human Message =================================
+
+QUERY:
+Are their methods fully supervised?
+
+TABLE OF CONTENTS (TOC):
+1 | Spotting Rumors via Novelty Detection Yumeng Qin International School of Software Wuhan University yumeng.qin@whu.edu.cn Dominik Wurzer School of Informatics University of Edinburgh s1157979@sms.ed.ac.uk
+1.1 | Abstract
+1.2 | 1 Introduction
+1.2.1 | Novelty based Features
+1.2.2 | Pseudo Feedback for Detection/Classification
+1.2.3 | 1.1 Related Work
+1.3 | 2 Rumour Detection
+1.3.1 | 2.1 Problem Statement
+1.3.2 | 2.2 Novelty-based Features
+1.3.3 | 2.3 Novelty Feature Construction
+1.3.4 | 2.4 Pseudo Feedback
+1.3.4.1 | Training Pseudo Feedback Features
+1.4 | 3 Experiments
+1.4.1 | 3.1 Evaluation metrics
+1.4.2 | 3.2 Data set
+1.4.3 | 3.3 Rumour detection effectiveness
+1.4.4 | 3.4 Feature analysis
+1.4.4.1 | Novelty based Features
+1.4.4.2 | Pseudo Feedbaack
+1.4.5 | 3.5 Detecting unpopular rumours
+1.4.6 | 3.6 Efficiency and Scalability
+1.5 | 4 Conclusion
+1.6 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_xBy8f58n1AVAWEtWaqFcr3kF)
+ Call ID: call_xBy8f58n1AVAWEtWaqFcr3kF
+  Args:
+    section_id: 1.1
+
+================================= Tool Message =================================
+Name: read_section
+
+Abstract
+Rumour detection is hard because the most accurate systems operate retrospectively, only recognising rumours once they have collected repeated signals. By then the rumours might have already spread and caused harm. We introduce a new cate- gory of features based on novelty, tailored to detect rumours early on. To compen- sate for the absence of repeated signals, we make use of news wire as an addi- tional data source.  Unconfirmed (novel) information with respect to the news arti- cles is considered as an indication of ru- mours. Additionally we introduce pseudo feedback, which assumes that documents that are similar to previous rumours, are more likely to also be a rumour. Compari- son with other real-time approaches shows that novelty based features in conjunc- tion with pseudo feedback perform signif- icantly better, when detecting rumours in- stantly after their publication.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_7fPSEAqEg1NrSzszGyxexNbP)
+ Call ID: call_7fPSEAqEg1NrSzszGyxexNbP
+  Args:
+    section_id: 1.3.1
+
+================================= Tool Message =================================
+Name: read_section
+
+2.1 Problem Statement
+We frame the Real-time Rumour Detection task as a classification problem that assesses a docu- ment’s likelihood of becoming a future rumour at the time of its publication. Consequently, prediction takes place in real-time with a single pass over the data.More formally, we denote by d t the docu- ment that arrives from stream S : { d 0 , d 1 , ...d n } at time t .  Upon arrival of document d t we compute its corresponding feature vector f d,t . Given f d,t and the previously obtained weigh vector w we compute the rumour score RS d,t = w T × f d,t . The rumour prediction is based on a fixed thresh- olding strategy with respect to θ . We predict that message d t is likely to become a rumour if its rumour score exceeds the detection threshold RS d,t > θ .  The optimal parameter setting for weight vector w and detection threshold θ are learned on a test to maximise prediction accuracy.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_a0JvoRwe6YSK70vZqa5gPmZY)
+ Call ID: call_a0JvoRwe6YSK70vZqa5gPmZY
+  Args:
+    section_id: 1.3.4
+
+================================= Tool Message =================================
+Name: read_section
+
+2.4 Pseudo Feedback
+In addition to novelty based features we in- troduce another category of features - dubbed Pseudo-Feedback (PF) feature - to boost detection performance. The feature is conceptually related to pseudo relevance feedback found in retrieval and ranking tasks in IR. The concept builds upon the idea that documents, which reveal similar characteristics as previously detected rumours
+are also likely to be a rumour. During detection, feedback about which of the previous documents describes a rumour is not available.  Therefore, we rely on ’pseudo’ feedback and consider all docu- ments whose rumour score exceeds a threshold as true rumours.The PF feature describes the maximum similarity between a new document and those documents previously considered as rumour. Similarities are measured by vector proximity in term space. Conceptually, PF passes on evidence to repeated signals by increasing the rumour score of future documents if they are similar to a recently de- tected rumour.  Note that this allows harnessing information from repeated signals without the need of operating retrospectively.
+Training Pseudo Feedback Features
+The trainings routine differs from the standard procedure, because the computation of the PF feature requires two training rounds as we require a model of all other features to identify ’pseudo’ rumours. In a first training round a SVM is used to compute weights for all features in the trainings set, except the PF features. This provides a model for all but the PF features. Then the trainings set is processed to computing rumour scores based on the model obtained from our initial trainings round.  This time, we additionally compute the PF feature value by measuring the minimum distance in term space between the current document vector and those previous documents, whose rumour score exceeds a previously defined threshold. Since we operate on a stream, the number of documents previously considered as rumours grows without bound. To keep operation constant in time and space, we only compare against the k most recent documents considered to be rumours. Once we obtained the value for the PF feature, we compute its weight using the SVM.  The combination of the weight for the PF feature with the weights for all other features, obtained in the initial trainings round, resembles the final model.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_MPddWS6D0fHcqtT7ytSeJ2S8)
+ Call ID: call_MPddWS6D0fHcqtT7ytSeJ2S8
+  Args:
+    section_id: 1.2
+
+================================= Tool Message =================================
+Name: read_section
+
+1 Introduction
+Social Media has evolved from friendship based networks to become a major source for the con- sumption of news (NIST, 2008). On social me- dia, news is decentralised as it provides everyone the means to efficiently report and spread infor- mation. In contrast to traditional news wire, infor- mation on social media is spread without intensive investigation, fact and background checking.  The combination of ease and fast pace of sharing in- formation provides a fertile breeding ground for rumours, false- and disinformation. Social media users tend to share controversial information in- order to verify it, while asking about for the opin- ions of their followers (Zhao et. al, 2015). This
+further amplifies the pace of a rumour’s spread and reach. Rumours and deliberate disinformation have already caused panic and influenced public opinion. The cases in Germany and Austria 1 in 2016, show how misleading and false information about crimes committed by refugees negatively influ- enced the opinion of citizens.Detecting these rumours allows debunking them to prevent them from further spreading and caus- ing harm. The further a rumour has spread, the more likely it is to be debunked by users or tradi- tional media (Liu et. al, 2015).  However, by then rumours might have already caused harm. This highlights the importance and necessity of recog- nizing rumours as early as possible - preferably instantaneously.Rumour detection on social media is challenging due to the short texts, creative lexical variations and high volume of the streams. The task becomes even harder if we attempt to perform rumour de- tection on-the-fly, without looking into the future.  We provide an effective and highly scalable ap- proach to detect rumours instantly after they were posted with zero delay. We introduce a new fea- tures category called novelty based features. Nov- elty based features compensate the absence of re- peated information by consulting additional data sources - news wire articles. We hypothesize that information not confirmed by official news is an indication of rumours. Additionally we introduce pseudo feedback for classification.  In a nutshell, documents that are similar to previously detected rumours are considered to be more likely to also be a rumour. The proposed features can be computed in constant time and space allowing us to pro- cess high-volume streams in real-time (Muthukr-
+1 http://hoaxmap.org/ on 15.02.2016
+ishnan, 2005). Our experiments reveal that novelty based features and pseudo feedback significantly increases detection performance for early rumour detection. The contributions of this paper include:
+Novelty based Features
+We introduced a new category of features for in- stant rumour detection that harnesses trusted re- sources. Unconfirmed (novel) information with respect to trusted resources is considered as an in- dication of rumours.
+Pseudo Feedback for Detection/Classification
+Pseudo feedback increases detection accuracy by harnessing repeated signals, without the need of retrospective operation.
+1.1 Related Work
+Before rumour detection, scientists already stud- ied the related problem of information credibility evaluation (Castillo et. al. 2011; Richardson et. al, 2003). Recently, automated rumour detection on social media evolved into a popular research field which also relies on assessing the credibility of messages and their sources. The most successful methods proposed focus on classification harness- ing lexical, user-centric, propagation-based (Wu et.  al, 2015) and cluster-based (Cai et. al, 2014; Liu et. al, 2015; Zhao et. al, 2015) features.Many of these context based features originate from a study by Castillo et. al (2011), which pioneered in engineering features for credibility assessment on Twitter (Liu et. al, 2015).  They observed a significant correlation between the trustworthiness of a tweet with context-based characteristics including hashtags, punctuation characters and sentiment polarity. When assessing the credibility of a tweet, they also assessed the source of its information by constructing features based on provided URLs as well as user based features like the activeness of the user and social graph based features like the frequency of re-tweets. A comprehensive study by Castillo et.  al (2011) of information credibility assessment widely influenced recent research on rumour detection, whose main focuses lies upon improving detection quality.While studying the trustworthiness of tweets during crises, Mendoza et. al (2010) found that the topology of a distrustful tweet’s propagation pattern differs from those of news and normal
+tweets.  These findings along with the fact that rumours tend to more likely be questioned by responses than news paved the way for future research examining propagation graphs and clustering methods (Cai et. al, 2014; Zhao et. al, 2015). The majority of current research focuses on improving the accuracy of classifiers through new features based on clustering (Cai et. al, 2014; Zhao et. al, 2015), sentiment analysis (Qazvinian et.  al, 2011; Wu et. al, 2015) as well as propagation graphs (Kwon, et. al, 2013; Wang et. al, 2015).Recent research mainly focuses on further im- proving the quality of rumour detection while neglecting the increasing delay between the publication and detection of a rumour. The motivation for rumour detection lies in debunking them to prevent them from spreading and causing harm.  Unfortunately, state-of-the-art systems operate in a retrospective manner, meaning they detect rumours long after they have spread. The most accurate systems rely on features based on propagation graphs and clustering techniques. These features can only detect rumours after the rumours have spread and already caused harm.Therefore, researchers like Liu et. al (2015), Wu et. al (2015), Zhao et. al (2015) and Zhou et.  al (2015) focus on ’early rumour-detection’ while allowing a delay up to 24 hours. Their focus on latency aware rumour detection makes their approaches conceptually related to ours. Zhao et. al (1015) found clustering tweets containing enquiry patterns as an indication of rumours. Also clustering tweets by keywords and subsequently judging rumours using an ensemble model that combine user, propagation and content-based features proved to be effective (Zhou et. al, 2015).  Although the computation of their features is effi- cient, the need for repeated mentions in the form of response by other users results in increased latency between publication and detection. The approach with the lowest latency banks on the ’wisdom of the crowd’ (Liu et. al, 2015). In addition to traditional context and user based features they also rely on clustering micro-blogs by their topicality to identify conflicting claims, which indicate increased likelihood of rumours.  Although they claim to operate in real-time, they require a cluster of at least 5 messages to detect a rumour.In contrast, we introduce new features to de- tect rumours as early as possible - preferably instantly, allowing them to be debunked before they spread and cause harm.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_P8Cu5v22qpaCctrv7zA8BQIZ)
+ Call ID: call_P8Cu5v22qpaCctrv7zA8BQIZ
+  Args:
+    section_id: 1.5
+
+================================= Tool Message =================================
+Name: read_section
+
+4 Conclusion
+We introduced two new categories of features which significantly improve instantaneous rumour detection performance. Novelty based features consider the increased presence of unconfirmed information within a message with respect to trusted sources as an indication of being a rumour. Pseudo feedback features consider messages that are similar to previously detected rumours as more likely to also be a rumour. Pseudo feedback and its variant, recursive pseudo feedback, allow harnessing repeated signals without the need of operating retrospectively.  Our evaluation showed that novelty and pseudo feedback based features perform significantly more effective than other real-time and early detection baselines, when detecting rumours instantly after their publica- tion. This advantage vanishes when allowing an increased detection delay. We also showed that the proposed features can be computed efficiently enough to operate on the average Twitter and Sina Weibo stream while keeping time and space requirements constant.Category Description Punctuation categorical feat. based on the number of !?., POS categorical feat.  based on the number of verbs, nouns, adjectives, quantity and time words Sentiment categorical feat. based on the number of strong/weak negative/positive words Emotion degree of positive/negative/sad/anxious/surprised emotion Social Media categorical feat. based on the number of hash-tags and user-names Length categorical feat. based on the number of unique words URLs categorical feat.  based on the number of URLs, pictures Novelty novelty score based kterm length 1-3 for all and key-words Pseudo Feedback distance to the closest previous rumour
+Table 6: Description of features
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_x2NeI0CMhUdkQsXAbzaNS5W2)
+ Call ID: call_x2NeI0CMhUdkQsXAbzaNS5W2
+  Args:
+    section_id: 1.4.2
+
+================================= Tool Message =================================
+Name: read_section
+
+3.2 Data set
+Rumour detection on social media is a novel re- search field without official data sets. Since li- cences agreements forbid redistribution of data, no data sets from previous publications are avail- able. We therefore followed previous researchers like Liu et. al (2015) and Yang et. al (2012) and created our own dataset.trusted resources : We randomly collected 200 news articles about broad topics commonly re- ported by news wires over our target time period.  These range from news about celebrities and dis- asters to financial and political affairs as seen in table 1. Since we operate on Chinese social me- dia, we gathered news articles from Xinhua News
+Agency 2 , the leading news-wire in China. To en- sure a fair evaluation, we collected the news arti- cles before judging rumours, not knowing which rumours we would find later on.  We also only consider news articles published before the times- tamps of the social media messages.For our social media stream, we chose Sina Weibo, a Chinese social media service with more than 200 million active users 3 . Micro-blogs from Sina Weibo are denoted as ’ weibos ’.rumours : Sina Weibo offers an official rumour debunking service, operated by trained human professionals. Following Yang et.  al (2012) and Zhou et. al (2015), we use this service to obtain a high quality set of 202 confirmed rumours.non-rumours : We additionally gathered 202 non- rumours using the public Sina Weibo API 4 . Three human annotators judged these weibos based on unanimous decision making to ensure that they don’t contain rumours.Since we operate in a streaming environment, all weibos are sorted based on their publication time- stamp.  Table 3 shows a list of example for rumours found in our data set.We ordered the rumours and non-rumours chrono- logically and divided them in half, forming a train- ing and test set. We ensured that each of the sets consists of 50% rumours and non-rumours. This is important when effectiveness is measured by ac- curacy. All training and optimization use the train- ings set.  Performance is then reported based on a single run on the test set.2 http://www.xinhuanet.com/
+3 http://www.bbc.co.uk/news/technology-35361157 as of 10.02.2013
+4 http://open.weibo.com/wiki/API
+ 马 航 MH370 最 新 消 息 ， 遭 恐怖 分 子 劫 持 过 程 曝 光 ， 点 击 查 看 MH370 latest news, the process of being hijacked by terrorist has been revealed, click to view details 重 大 新 闻 ， 苹 果 公 司 获 得 三 星 10 亿 美 元 赔 款 ， 整整 30 卡 车 硬 币 开 到 了 苹 果 公 司 的 总 部 ！！！ Breaking news, Apple just got the 1 billion dollars for reparation from Samsung, Samsung drove 30 trucks of coins to the headquarters of Apple.  法 对 叙 IS 第 一 轮 战 术 核 打 击 定 于 16 日 上 午 10 时 进 行 。 France will start the first round nuclear attack against IS at 10:00 a.m. on the 16th
+Table 3: Examples rumours with translation
+ Figure 1: DET plot, revealing superior effective- ness of our approach for instant rumour detection for the full range of thresholds
+
+================================== Ai Message ==================================
+
+Yes — they use supervised learning: they frame detection as a classification problem and train SVMs on labeled rumours and non-rumours, with pseudo-feedback features computed via a two-round training procedure.

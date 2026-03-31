@@ -1,0 +1,47 @@
+================================ Human Message =================================
+
+QUERY:
+What is the status of the project 'PCH Median Improvements at Paradise Cove and Zuma Beach'?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_Rn0xaLJ9mkz1zIiIo51jNIuE)
+ Call ID: call_Rn0xaLJ9mkz1zIiIo51jNIuE
+  Args:
+    pattern: PCH Median Improvements at Paradise Cove and Zuma Beach
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+PCH Median Improvements at Paradise Cove and Zuma Beach
+¾ Project Description:  This project was identified in the 2015 PCH Safety Study and includes installing new raised medians and improvements.  New raised medians are proposed east and west of PCH and Paradise Cove Road.  The proposed improvements also include the relocation of the existing bus stop and new signage.   The project will also include the installation of new raised medians on PCH in the areas where the double yellow lines exist in the vicinity of Zuma Beach, specifically where the yellow paddles are installed.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_N5dSt6ulgvV4RRWdt2cal9h0)
+ Call ID: call_N5dSt6ulgvV4RRWdt2cal9h0
+  Args:
+    pattern: PCH Median Improvements
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+PCH Median Improvements Project
+¾ Updates:  An agreement for construction management services was approved by Council on March 14, 2022. Bids were opened and at the November 14 th Council  meeting  bids  will  be  rejected.    The  bids  came  in  higher than the available budget for the project.¾ Project Schedule:  Complete Design: March 2022
+ Advertise: TBD  Begin Construction: TBD
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_SBoJg0N17s0SUqIV1py41fp5)
+ Call ID: call_SBoJg0N17s0SUqIV1py41fp5
+  Args:
+    pattern: Status:
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+
+not started

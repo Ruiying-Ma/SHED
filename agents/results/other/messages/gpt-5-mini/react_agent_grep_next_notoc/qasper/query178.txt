@@ -1,0 +1,36 @@
+================================ Human Message =================================
+
+QUERY:
+Do they test against the large version of RoBERTa?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_sVE7tVP90gj7DBHzYo6Z97Mj)
+ Call ID: call_sVE7tVP90gj7DBHzYo6Z97Mj
+  Args:
+    pattern: RoBERTa
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Pretrained transformer-based language models have achieved state of the art across countless tasks in natural language processing. These models are highly expressive, comprising at least a hundred million parameters and a dozen layers. Recent evidence suggests that only a few of the final layers need to be fine-tuned for high quality on downstream tasks. Naturally, a subsequent research question is, “how many of the last layers do we need to fine-tune?” In this paper, we precisely answer this question.  We examine two recent pretrained language models, BERT and RoBERTa, across standard tasks in textual entailment, semantic similarity, sentiment analysis, and linguistic acceptabil- ity. We vary the number of final layers that are fine-tuned, then study the resulting change in task-specific effectiveness. We show that only a fourth of the final layers need to be fine-tuned to achieve 90% of the original quality.  Surpris- ingly, we also find that fine-tuning all layers does not always help.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_Lizq8AB18KcIzDtjJRM1iZKh)
+ Call ID: call_Lizq8AB18KcIzDtjJRM1iZKh
+  Args:
+    pattern: large
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+2.2 Layerwise Interpretability
+The prevailing evidence in the neural network lit- erature suggests that earlier layers extract univer- sal features, while later ones perform task-specific modeling. Zeiler and Fergus ( 2014 ) visualize the per-layer activations in image classification net- works, finding that the first few layers function as corner and edge detectors, and the final layers as class-specific feature extractors. Gatys et al.  ( 2016 ) demonstrate that the low- and high-level notions of content and style are separable in con- volutional neural networks, with lower layers cap- turing content and higher layers style.Pretrained transformers. In the NLP litera- ture, similar observations have been made for pre- trained language models. Clark et al.  ( 2019 ) an- alyze BERT’s attention and observe that the bot- tom layers attend broadly, while the top layers capture linguistic syntax. Kovaleva et al. ( 2019 ) find that the last few layers of BERT change the most after task-specific fine-tuning. Similar to our work, Houlsby et al.  ( 2019 ) fine-tune the top lay- ers of BERT, as part of their baseline comparison for their model compression approach. However, none of the studies comprehensively examine the number of necessary final layers across multiple pretrained transformers and datasets.Model Embedding Per-Layer Output Total BERT BASE 24M (22%) 7M (7%) 0.6M (0. 5%) 110M RoBERTa BASE 39M (31%) 7M (6%) 0.6M (0.5%) 125M BERT LARGE 32M (10%) 13M (4%) 1M (0.3%) 335M RoBERTa LARGE 52M (15%) 13M (4%) 1M (0.3%) 355M
+ Table 1: Parameter statistics for the base and large vari- ants of BERT and RoBERTa. Note that “per-layer” in- dicates the number of parameters in one intermediate layer, which is more relevant to our study.Model CoLA SST-2 MRPC STS-B QQP MNLI QNLI RTE MCC Acc. ρ ρ F 1 Acc. Acc. Acc. BERT BASE 58.8 92.7 90. 4 89.5 87.8 84.3 91.3 68.2 RoBERTa BASE 59.9 94.6 92.8 90.8 88.8 87.4 92.7 78.2 BERT LARGE 61.8 93.4 90.6 89.7 88.3 86.4 92.2 71.1 RoBERTa LARGE 66. 0 95.5 92.8 91.9 89.1 89.9 94.3 84.5
+Table 2: Reproduced results of BERT and RoBERTa on the development sets.
+
+================================== Ai Message ==================================
+
+Yes — they evaluate RoBERTa Large (RoBERTa LARGE) and report results for it.

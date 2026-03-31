@@ -1,0 +1,89 @@
+================================ Human Message =================================
+
+QUERY:
+What is the type of the project 'Malibu Park Drainage Improvements'?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_QOyScoOPSVlvsZTUU7lIvWWQ)
+ Call ID: call_QOyScoOPSVlvsZTUU7lIvWWQ
+  Args:
+    pattern: Malibu Park Drainage Improvements
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Malibu Park Drainage Improvements
+¾
+Updates:  Construction  Contract  has  been  awarded  and  we  are  waiting  on  a schedule to begin the construction.¾
+Project Schedule:  Begin Construction: June/July 2021
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_WFlOWN3BzIEk0LZwnAeLNo7Z)
+ Call ID: call_WFlOWN3BzIEk0LZwnAeLNo7Z
+  Args:
+    pattern: Malibu
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Malibu Park Drainage Improvements
+¾
+Updates:  Construction  Contract  has  been  awarded  and  we  are  waiting  on  a schedule to begin the construction.¾
+Project Schedule:  Begin Construction: June/July 2021
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_W4xh0uwxBGPAONN0RCb2vA6d)
+ Call ID: call_W4xh0uwxBGPAONN0RCb2vA6d
+  Args:
+    pattern: Type:
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_zISDVo6bUuwoI2hDTqfRXZ15)
+ Call ID: call_zISDVo6bUuwoI2hDTqfRXZ15
+  Args:
+    pattern: Drainage Improvements
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Malibu Park Drainage Improvements
+¾
+Updates:  Construction  Contract  has  been  awarded  and  we  are  waiting  on  a schedule to begin the construction.¾
+Project Schedule:  Begin Construction: June/July 2021
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_2W3GKcPDMdpVuehJBDosE6yW)
+ Call ID: call_2W3GKcPDMdpVuehJBDosE6yW
+  Args:
+    pattern: capital
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_cZQkmrZ7rFQDC9pnnigII847)
+ Call ID: call_cZQkmrZ7rFQDC9pnnigII847
+  Args:
+    pattern: disaster
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+
+none

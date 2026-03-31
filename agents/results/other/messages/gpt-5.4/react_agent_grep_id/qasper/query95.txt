@@ -1,0 +1,85 @@
+================================ Human Message =================================
+
+QUERY:
+Which translation pipelines do they use to compare against?
+
+TABLE OF CONTENTS (TOC):
+1 | XPersona: Evaluating Multilingual Personalized Chatbot Zhaojiang Lin ∗ , Zihan Liu ∗ , Genta Indra Winata ∗ , Samuel Cahyawijaya ∗ , Andrea Madotto ∗ , Yejin Bang, Etsuko Ishii, Pascale Fung Center for Artificial Intelligence Research (CAiRE)
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2 Related Work
+1.4 | 3 Data Collection
+1.5 | 4 Multilingual Personalized Conversational Models
+1.5.1 | 4.1 Model Architecture
+1.5.2 | 4.2 Training Strategy
+1.6 | 5 Experiments
+1.6.1 | 5.1 Evaluation Metrics
+1.6.2 | 5.2 Implementation Details
+1.6.3 | 5.3 Results and Discussion
+1.6.3.1 | 5.3.1 Quantitative Analysis
+1.6.3.2 | 5.3.2 Qualitative Analysis and Discussion
+1.7 | 6 Conclusion
+1.8 | References
+1.9 | A Dataset Collection
+1.9.1 | A.1 Annotation Instructions
+1.9.2 | A.2 Training Set Statistics
+1.10 | B Model Detail
+1.11 | C Human Evaluation
+1.12 | D Generated Samples
+1.12.1 | D.1 Mixed-language Samples
+1.12.2 | D.2 Model Comparison Samples
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_all (call_aeKk5qJQN3RtCkSohbmqYK8M)
+ Call ID: call_aeKk5qJQN3RtCkSohbmqYK8M
+  Args:
+    pattern: translation pipeline|translate|translation
+
+================================= Tool Message =================================
+Name: grep_search_all
+
+1.1
+1.10
+1.2
+1.3
+1.4
+1.5.1
+1.5.2
+1.6.2
+1.6.3.1
+1.6.3.2
+1.7
+1.8
+1.9.1
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_EZlItTmbyMudM22qGKWT3Nuu)
+ Call ID: call_EZlItTmbyMudM22qGKWT3Nuu
+  Args:
+    section_id: 1.6.2
+  read_section (call_WLVRhrmmCEybpXXkKKtoFehY)
+ Call ID: call_WLVRhrmmCEybpXXkKKtoFehY
+  Args:
+    section_id: 1.6.3.1
+
+================================= Tool Message =================================
+Name: read_section
+
+5.2 Implementation Details
+Multilingual Models We use the "BERT-Base, Multilingual Cased" checkpoint, and we denote the multilingual encoder-decoder model as M- Bert2Bert ( ∼ 220M parameters) and causal de- coder model as M-CausalBert ( ∼ 110M param- eters). We fine-tune both models in the combined training set (English in Persona-chat ( Zhang et al.  , 2018 ), six languages in Xpersona) for five epochs with AdamW 5 optimizer and a learning rate of 6 . 25 e - 5 .Monolingual Models To verify whether the mul- tilingual agent will under-perform the monolingual agent in the monolingual conversational task, we build a monolingual encoder-decoder model and causal decoder model for each language.  For a fair comparison, we initialize the monolingual models with a pre-trained monolingual BERT 6 ( Devlin et al. , 2018 ; Cui et al. , 2019 ; Martin et al. , 2019 ). We denote the monolingual encoder-decoder model as Bert2Bert ( ∼ 220M parameters) and causal de- coder model as CausalBert ( ∼ 110M parameters).  Then we fine-tune each model in each language independently for the same number of epoch and optimizer as the multilingual model.Translation-based Models Another strong base- line we compare with is Poly-encoder ( Humeau et al. , 2019 ), a large-scale pre-trained retrieval model that has shown state-of-the-art performance in the English Persona-chat dataset ( Li et al. , 2019 ). We adapt this model to the other languages by us- ing the Google Translate API to translate target lan- guages (e.g., Chinese) query to English as the input to the model, then translate the English response back to the target language. Thus, the response generation flow is: target query → English query → English response → target response. We denote this model as Poly .Cross-lingual Models.  In the first pre-training stage, we use the pre-trained weights from XLMR- base ( Conneau et al. , 2019 ). Then, we follow the second pre-training stage of XNLG ( Chi et al. , 2019 ) for pre-training Italian, Japanese, Korean, Indonesia cross-lingual transferable models. For Chinese and French, we directly apply the pre- trained XNLG ( Chi et al. , 2019 ) weights 7 .  Then, the pre-trained models are fine-tune on English Per- sonaChat training set and early stop based on the perplexity on target language validation set.
+
+================================= Tool Message =================================
+Name: read_section
+
+5.3.1 Quantitative Analysis
+Table 3 compares monolingual, multilingual, and cross-lingual models in terms of BLEU and per- plexity in the human-translated test set. On both evaluation matrices, the causal decoder models out- perform the encoder-decoder models. We observe that the encoder-decoder model tends to overlook dialogue context and generate digressive responses. (Generated samples are available in Appendix D) We hypothesize that this is because the one-to- many problem ( Zhao et al.  , 2017 ) in open-domain conversation weakens the relation between encoder and decoder; thus the well pre-trained decoder (Bert) easily converges to a locally-optimal, and
+5 AdamW: Adam algorithm with weight decay
+6 The monolingual BERT pre-trained models are available in https://github.com/huggingface/transformers
+7 Available in https://github.com/CZWin32768/XNLG
+ learns to ignore the dialogue context from the en- coder and generate the response in an unconditional language model way. We leave the investigation of this problem to future work. On the other hand, M-CausalBert achieves a comparable or slightly better performance compared to CausalBert, which suggests that M-CausalBert leverages the data from other languages.  As expected, we observe a sig- nificant gap between the cross-lingual model and other models, which indicates that cross-lingual zero-shot conversation modeling is very challeng- ing.Table 4 shows the human evaluation result of comparing M-CausalBert (Multi) against the hu- man, translation-based Poly-encoder (Poly), and monolingual CausalBert (Mono).  The results il- lustrate that Multi outperforms Mono in English and Chinese, and is on par with Mono in other lan- guages. On the other hand, Poly shows a strong performance in English as it was pre-trained with a large-scale English conversation corpus. In con- trast, the performance of Poly drops in other lan- guages, which indicates that the imperfect transla- tion affects translation-based systems.  We also con- duct M-CausalBert (Multi) against XNLG (cross) human evaluation, and Multi achieve nearly 100 percent winning rate.
+
+================================== Ai Message ==================================
+
+They compare against a translation-based Poly-encoder pipeline using Google Translate API: target-language query → English query → English response → target-language response.

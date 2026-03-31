@@ -1,0 +1,40 @@
+================================ Human Message =================================
+
+QUERY:
+Which dataset do they use?
+
+TABLE OF CONTENTS (TOC):
+1 | Improved and Robust Controversy Detection in General Web Pages Using Semantic Approaches under Large Scale Conditions
+1.1 | ABSTRACT
+1.2 | ACM Reference Format:
+1.3 | 1 INTRODUCTION & PRIOR WORK
+1.4 | 2 METHODS
+1.5 | 3 EXPERIMENTAL SETUP
+1.5.1 | 3.1 Datasets and evaluation
+1.5.2 | 3.2 Baseline models
+1.6 | 4 RESULTS
+1.6.1 | 4.1 Comparison of results with previous work
+1.6.2 | 4.2 Robustness of the model across time
+1.6.3 | 4.3 Robustness of the model across topics
+1.6.4 | 4.4 Robustness of the model across domains
+1.6.5 | 4.5 Human agreement
+1.7 | 5 CONCLUSION
+1.8 | REFERENCES
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_eygO1x7ujoVe6p0WJ3SCFqg0)
+ Call ID: call_eygO1x7ujoVe6p0WJ3SCFqg0
+  Args:
+    section_id: 1.5.1
+
+================================= Tool Message =================================
+Name: read_section
+
+3.1 Datasets and evaluation
+We use the Clueweb09 derived dataset of [4] for baseline compari- son. For cross-temporal, cross-topic and cross-domain training & evaluation, we generate a new dataset based on Wikipedia crawl data 3 . This dataset is gathered by using Wikipedia’s ‘List of Con- toversial articles’ overview page of 2018 (time of writing) and 2009 (for comparison with baselines) 4 .  Using this as a ‘seed’ set of con- troversial articles, we iteratively crawl the ‘See also’, ‘References’ and ‘External links’ hyperlinks up to two hops from the seed list.The negative seed pages (i.e. non controversial) are gathered by using the random article endpoint 5 . The snowball-sample approach includes general, non-Wikipedia, pages that are referred to from Wikipedia pages.  The dataset thus extends beyond just the ency- clopedia genre of texts. Labels are assumed to propagate: a page linked from a controversial issue is assumed to be controversial. The resulting dataset statistics are summarized in Table 1.Table 1: Wikipedia derived dataset statistics. Including the percentages of controversial (i.e. positive labelled) and general (i.e. non-Wikipedia) web pages from the total amount of pages per dataset split. Set Seeds Total Controversial General Web Train 5600 23.703 7.233 (31%) 15.449 (65%) Validation 200 988 651 (66%) 688 (70%) Test 200 1.024 654 (64%) 723 (71%)
+To be useful as a flagging mechanism for moderation, a contro- versy detection algorithm should satisfy both Precision and Recall criteria.  F1 scores will therefore be used to evaluate this balance. The AUC values are used to measure classification performance in the unbalanced controversy datasets. The test-train split depends on the task investigated and is listed in the results section for the respective task. To test for significant results, all models were eval- uated using a bootstrap approach: by drawing 1000 samples with replacements n documents from the test set equal to the test-set size.  The resulting confidence intervals based on percentiles provide a measure of significance.
+
+================================== Ai Message ==================================
+
+They use the Clueweb09-derived dataset of [4] for baseline comparison and a new Wikipedia-derived dataset gathered from Wikipedia’s “List of Controversial articles” (2018 and 2009) by iteratively crawling “See also”, “References” and “External links” up to two hops from the seed list.

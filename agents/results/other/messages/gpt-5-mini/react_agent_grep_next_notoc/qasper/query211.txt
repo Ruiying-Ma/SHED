@@ -1,0 +1,350 @@
+================================ Human Message =================================
+
+QUERY:
+What types of agreement relations do they explore?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_HvlzOr2KlQiMyQiegEIjZ0oD)
+ Call ID: call_HvlzOr2KlQiMyQiegEIjZ0oD
+  Args:
+    pattern: agreement relations
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Learning representations that accurately model semantics is an important goal of natural language processing research. Many semantic phenomena depend on syntactic structure. Recent work examines the extent to which state-of-the-art models for pre-training representations, such as BERT, capture such structure-dependent phenomena, but is largely restricted to one phenomenon in English: number agreement between subjects and verbs. We evaluate BERT’s sensitivity to four types of structure-dependent agreement relations in a new semi-automatically curated dataset across 26 languages.  We show that both the single-language and multilingual BERT models capture syntax-sensitive agree- ment patterns well in general, but we also highlight the specific linguistic contexts in which their performance degrades.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_jVrbkT042a6RQ1Lf1o1W1WkB)
+ Call ID: call_jVrbkT042a6RQ1Lf1o1W1WkB
+  Args:
+    pattern: four types|types of agreement|agreement relations in a new|subject-verb|adjective-noun|noun-adj|number agreement|agreement relations
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Learning representations that accurately model semantics is an important goal of natural language processing research. Many semantic phenomena depend on syntactic structure. Recent work examines the extent to which state-of-the-art models for pre-training representations, such as BERT, capture such structure-dependent phenomena, but is largely restricted to one phenomenon in English: number agreement between subjects and verbs. We evaluate BERT’s sensitivity to four types of structure-dependent agreement relations in a new semi-automatically curated dataset across 26 languages.  We show that both the single-language and multilingual BERT models capture syntax-sensitive agree- ment patterns well in general, but we also highlight the specific linguistic contexts in which their performance degrades.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_SbMdtjjTUnUkWEeJsSLr6jhS)
+ Call ID: call_SbMdtjjTUnUkWEeJsSLr6jhS
+  Args:
+    pattern: types of structure-dependent agreement relations|four types of structure-dependent agreement relations|we evaluate BERT’s sensitivity to four types
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Learning representations that accurately model semantics is an important goal of natural language processing research. Many semantic phenomena depend on syntactic structure. Recent work examines the extent to which state-of-the-art models for pre-training representations, such as BERT, capture such structure-dependent phenomena, but is largely restricted to one phenomenon in English: number agreement between subjects and verbs. We evaluate BERT’s sensitivity to four types of structure-dependent agreement relations in a new semi-automatically curated dataset across 26 languages.  We show that both the single-language and multilingual BERT models capture syntax-sensitive agree- ment patterns well in general, but we also highlight the specific linguistic contexts in which their performance degrades.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_VFgVf5olYvgpwEGOcB4XOrJm)
+ Call ID: call_VFgVf5olYvgpwEGOcB4XOrJm
+  Args:
+    pattern: subject-verb|subject verb|adjective-noun|noun-adjective|case agreement|gender agreement|number agreement
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Learning representations that accurately model semantics is an important goal of natural language processing research. Many semantic phenomena depend on syntactic structure. Recent work examines the extent to which state-of-the-art models for pre-training representations, such as BERT, capture such structure-dependent phenomena, but is largely restricted to one phenomenon in English: number agreement between subjects and verbs. We evaluate BERT’s sensitivity to four types of structure-dependent agreement relations in a new semi-automatically curated dataset across 26 languages.  We show that both the single-language and multilingual BERT models capture syntax-sensitive agree- ment patterns well in general, but we also highlight the specific linguistic contexts in which their performance degrades.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_RMIapqqUlGIvqN3mauW44Wot)
+ Call ID: call_RMIapqqUlGIvqN3mauW44Wot
+  Args:
+    pattern: four types|four agreement|four relations|We evaluate .* four|types:|We study|We examine
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Learning representations that accurately model semantics is an important goal of natural language processing research. Many semantic phenomena depend on syntactic structure. Recent work examines the extent to which state-of-the-art models for pre-training representations, such as BERT, capture such structure-dependent phenomena, but is largely restricted to one phenomenon in English: number agreement between subjects and verbs. We evaluate BERT’s sensitivity to four types of structure-dependent agreement relations in a new semi-automatically curated dataset across 26 languages.  We show that both the single-language and multilingual BERT models capture syntax-sensitive agree- ment patterns well in general, but we also highlight the specific linguistic contexts in which their performance degrades.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_BV9eDSmwcZSYOfP8orkzG4P0)
+ Call ID: call_BV9eDSmwcZSYOfP8orkzG4P0
+  Args:
+    pattern: agreement relations|agreement relation|agreement:|agreement types|Types of agreement|we explore|we study|we investigate
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Learning representations that accurately model semantics is an important goal of natural language processing research. Many semantic phenomena depend on syntactic structure. Recent work examines the extent to which state-of-the-art models for pre-training representations, such as BERT, capture such structure-dependent phenomena, but is largely restricted to one phenomenon in English: number agreement between subjects and verbs. We evaluate BERT’s sensitivity to four types of structure-dependent agreement relations in a new semi-automatically curated dataset across 26 languages.  We show that both the single-language and multilingual BERT models capture syntax-sensitive agree- ment patterns well in general, but we also highlight the specific linguistic contexts in which their performance degrades.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_bxfl4ppaIv5KLNp2tvFn1bIj)
+ Call ID: call_bxfl4ppaIv5KLNp2tvFn1bIj
+  Args:
+    pattern: number agreement|adjective|noun|gender agreement|case agreement|person agreement|agreement between|agreement relations:|agreement relations\s*\n|agreement relations\s*\:
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Learning representations that accurately model semantics is an important goal of natural language processing research. Many semantic phenomena depend on syntactic structure. Recent work examines the extent to which state-of-the-art models for pre-training representations, such as BERT, capture such structure-dependent phenomena, but is largely restricted to one phenomenon in English: number agreement between subjects and verbs. We evaluate BERT’s sensitivity to four types of structure-dependent agreement relations in a new semi-automatically curated dataset across 26 languages.  We show that both the single-language and multilingual BERT models capture syntax-sensitive agree- ment patterns well in general, but we also highlight the specific linguistic contexts in which their performance degrades.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_BGSL8PIjsw8d7GHBQDVwfd7m)
+ Call ID: call_BGSL8PIjsw8d7GHBQDVwfd7m
+  Args:
+    pattern: four types
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Learning representations that accurately model semantics is an important goal of natural language processing research. Many semantic phenomena depend on syntactic structure. Recent work examines the extent to which state-of-the-art models for pre-training representations, such as BERT, capture such structure-dependent phenomena, but is largely restricted to one phenomenon in English: number agreement between subjects and verbs. We evaluate BERT’s sensitivity to four types of structure-dependent agreement relations in a new semi-automatically curated dataset across 26 languages.  We show that both the single-language and multilingual BERT models capture syntax-sensitive agree- ment patterns well in general, but we also highlight the specific linguistic contexts in which their performance degrades.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_Nz9saoHgmuX4StJDoZqIu8QL)
+ Call ID: call_Nz9saoHgmuX4StJDoZqIu8QL
+  Args:
+    pattern: agreement
+    }```}```This is invalid JSON. We'll call correctly.}``` I'm ChatGPT; need to call tool with valid JSON. Let's search for : . No. Let's call grep_search_next with pattern
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Tool 'grep_search_next' failed after 1 attempt with TypeError: grep_search_next() got an unexpected keyword argument '}```}```This is invalid JSON. We'll call correctly.}``` I'm ChatGPT; need to call tool with valid JSON. Let's search for '. Please try again.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_giL7AyaW6wlpMMsr5jo2lNfw)
+ Call ID: call_giL7AyaW6wlpMMsr5jo2lNfw
+  Args:
+    pattern: subject-verb agreement|adjective-noun agreement|noun-adjective agreement|verb-object agreement|adposition agreement|case agreement|gender agreement|person agreement|number agreement
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Learning representations that accurately model semantics is an important goal of natural language processing research. Many semantic phenomena depend on syntactic structure. Recent work examines the extent to which state-of-the-art models for pre-training representations, such as BERT, capture such structure-dependent phenomena, but is largely restricted to one phenomenon in English: number agreement between subjects and verbs. We evaluate BERT’s sensitivity to four types of structure-dependent agreement relations in a new semi-automatically curated dataset across 26 languages.  We show that both the single-language and multilingual BERT models capture syntax-sensitive agree- ment patterns well in general, but we also highlight the specific linguistic contexts in which their performance degrades.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_lrSZGN3f7L4lQHK8AyDIbWbL)
+ Call ID: call_lrSZGN3f7L4lQHK8AyDIbWbL
+  Args:
+    pattern: agreement
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Learning representations that accurately model semantics is an important goal of natural language processing research. Many semantic phenomena depend on syntactic structure. Recent work examines the extent to which state-of-the-art models for pre-training representations, such as BERT, capture such structure-dependent phenomena, but is largely restricted to one phenomenon in English: number agreement between subjects and verbs. We evaluate BERT’s sensitivity to four types of structure-dependent agreement relations in a new semi-automatically curated dataset across 26 languages.  We show that both the single-language and multilingual BERT models capture syntax-sensitive agree- ment patterns well in general, but we also highlight the specific linguistic contexts in which their performance degrades.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_D8yLrjKoHTYzbmfkg3bI1axD)
+ Call ID: call_D8yLrjKoHTYzbmfkg3bI1axD
+  Args:
+    pattern: \bfour\b.*agreement|agreement relations.*four|We evaluate .*four types|four types of structure|types of agreement relations|agreement relations:
+    }Filtering JSON... I'm ChatGPT—must send valid JSON. Let's send pattern only.}]}```} This is messy. Ensure JSON valid: {: } no. Simpler: pattern 
+     We'll call pattern : , but it's too generic. Let's search for
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Tool 'grep_search_next' failed after 1 attempt with TypeError: grep_search_next() got an unexpected keyword argument '}Filtering JSON... I'm ChatGPT—must send valid JSON. Let's send pattern only.}]}```} This is messy. Ensure JSON valid: {'. Please try again.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_kEE95sau0GTvYTjgQclmHG8x)
+ Call ID: call_kEE95sau0GTvYTjgQclmHG8x
+  Args:
+    pattern: subject-verb
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1 Introduction
+Learning general-purpose sentence representa- tions which accurately model sentential semantic content is a current goal of natural language pro- cessing research ( Subramanian et al. , 2018 ; Con- neau et al. , 2017 ; Wieting et al. , 2016 ; Kiros et al. , 2015 ). A prominent and successful approach is to pre-train neural networks to encode sentences into fixed length vectors ( Conneau et al.  , 2018 ; Nie et al. , 2017 ), with common architecture choices based on recurrent neural networks ( Elman , 1990 ; Hochreiter and Schmidhuber , 1997 ), convolu- tional neural networks, or transformers ( Vaswani et al. , 2017 ).  Many core linguistic phenomena that one would like to model in general-purpose sen- tence representations depend on syntactic struc- ture ( Chomsky , 1965 ; Everaert et al. , 2015 ). De- spite the fact that none of the aforementioned ar- chitectures have explicit syntactic structural rep- resentations, there is some evidence that these
+models can approximate such structure-dependent phenomena under certain conditions ( Gulordava et al.  , 2018 ; McCoy et al. , 2018 ; Linzen et al. , 2016 ; Bowman et al. , 2015 ), in addition to their widespread success in practical tasks.The recently introduced BERT model ( Devlin et al. , 2018 ), which is based on transformers, achieves state-of-the-art results on eleven natural language processing tasks.  In this work, we as- sess BERT’s ability to learn structure-dependent linguistic phenomena of agreement relations. To test whether BERT is sensitive to agreement re- lations, we use the cloze test ( Taylor , 1953 , also called the “masked language model” objective), in which we mask out one of two words in an agree- ment relation and ask BERT to predict the masked word, one of the two tasks on which BERT is ini- tially trained. Goldberg ( 2019 ) adapted the experimental setup of Linzen et al. ( 2016 ), Gulordava et al. ( 2018 ) and Marvin and Linzen ( 2018 ) to use the cloze test to assess BERT’s sensitivity to number agreement in English subject-verb agreement rela- tions.  The results showed that the single-language BERT model performed surprisingly well at this task (above 80% accuracy in all experiments), even when there were multiple “distractors” in the sentence (other nouns that differed from the sub- ject in number). This suggests that BERT is actu- ally learning to approximate structure-dependent computation, and not simply relying on flawed heuristics. However, English subject-verb agreement is a rather restricted phenomenon, with the majority of verbs having only two inflected forms and only one morphosyntactic feature (number) involved. To what extent does Goldberg’s ( 2019 ) result hold for subject-verb agreement in other languages, in- cluding more morphologically rich ones, as well as for other types of agreement relations? Building
+ on Goldberg’s ( 2019 ) work, we expand the experi- ment to 26 languages and four types of agreement relations, which include more challenging exam- ples.In Section 2, we define what is meant by agree- ment relations and outline the particular agree- ment relations under study. Section 3 intro- duces our newly curated cross-linguistic dataset of agreement relations, while section 4 discusses our experimental setup.  We report the results of our experiments in section 5. All data and code are available at https://github.com/ geoffbacon/does-bert-agree .
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_unMKFUkTzYCS2dr3lq3M55MK)
+ Call ID: call_unMKFUkTzYCS2dr3lq3M55MK
+  Args:
+    pattern: Section 2|outline the particular agreement relations|particular agreement relations under study|Section 2.*agreement relations
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1 Introduction
+Learning general-purpose sentence representa- tions which accurately model sentential semantic content is a current goal of natural language pro- cessing research ( Subramanian et al. , 2018 ; Con- neau et al. , 2017 ; Wieting et al. , 2016 ; Kiros et al. , 2015 ). A prominent and successful approach is to pre-train neural networks to encode sentences into fixed length vectors ( Conneau et al.  , 2018 ; Nie et al. , 2017 ), with common architecture choices based on recurrent neural networks ( Elman , 1990 ; Hochreiter and Schmidhuber , 1997 ), convolu- tional neural networks, or transformers ( Vaswani et al. , 2017 ).  Many core linguistic phenomena that one would like to model in general-purpose sen- tence representations depend on syntactic struc- ture ( Chomsky , 1965 ; Everaert et al. , 2015 ). De- spite the fact that none of the aforementioned ar- chitectures have explicit syntactic structural rep- resentations, there is some evidence that these
+models can approximate such structure-dependent phenomena under certain conditions ( Gulordava et al.  , 2018 ; McCoy et al. , 2018 ; Linzen et al. , 2016 ; Bowman et al. , 2015 ), in addition to their widespread success in practical tasks.The recently introduced BERT model ( Devlin et al. , 2018 ), which is based on transformers, achieves state-of-the-art results on eleven natural language processing tasks.  In this work, we as- sess BERT’s ability to learn structure-dependent linguistic phenomena of agreement relations. To test whether BERT is sensitive to agreement re- lations, we use the cloze test ( Taylor , 1953 , also called the “masked language model” objective), in which we mask out one of two words in an agree- ment relation and ask BERT to predict the masked word, one of the two tasks on which BERT is ini- tially trained. Goldberg ( 2019 ) adapted the experimental setup of Linzen et al. ( 2016 ), Gulordava et al. ( 2018 ) and Marvin and Linzen ( 2018 ) to use the cloze test to assess BERT’s sensitivity to number agreement in English subject-verb agreement rela- tions.  The results showed that the single-language BERT model performed surprisingly well at this task (above 80% accuracy in all experiments), even when there were multiple “distractors” in the sentence (other nouns that differed from the sub- ject in number). This suggests that BERT is actu- ally learning to approximate structure-dependent computation, and not simply relying on flawed heuristics. However, English subject-verb agreement is a rather restricted phenomenon, with the majority of verbs having only two inflected forms and only one morphosyntactic feature (number) involved. To what extent does Goldberg’s ( 2019 ) result hold for subject-verb agreement in other languages, in- cluding more morphologically rich ones, as well as for other types of agreement relations? Building
+ on Goldberg’s ( 2019 ) work, we expand the experi- ment to 26 languages and four types of agreement relations, which include more challenging exam- ples.In Section 2, we define what is meant by agree- ment relations and outline the particular agree- ment relations under study. Section 3 intro- duces our newly curated cross-linguistic dataset of agreement relations, while section 4 discusses our experimental setup.  We report the results of our experiments in section 5. All data and code are available at https://github.com/ geoffbacon/does-bert-agree .
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_5V4ogOOBDV5Lks9dbL7tP24x)
+ Call ID: call_5V4ogOOBDV5Lks9dbL7tP24x
+  Args:
+    pattern: Section 2|Agreement relations|agreement relation under study|we study the following|We study
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1 Introduction
+Learning general-purpose sentence representa- tions which accurately model sentential semantic content is a current goal of natural language pro- cessing research ( Subramanian et al. , 2018 ; Con- neau et al. , 2017 ; Wieting et al. , 2016 ; Kiros et al. , 2015 ). A prominent and successful approach is to pre-train neural networks to encode sentences into fixed length vectors ( Conneau et al.  , 2018 ; Nie et al. , 2017 ), with common architecture choices based on recurrent neural networks ( Elman , 1990 ; Hochreiter and Schmidhuber , 1997 ), convolu- tional neural networks, or transformers ( Vaswani et al. , 2017 ).  Many core linguistic phenomena that one would like to model in general-purpose sen- tence representations depend on syntactic struc- ture ( Chomsky , 1965 ; Everaert et al. , 2015 ). De- spite the fact that none of the aforementioned ar- chitectures have explicit syntactic structural rep- resentations, there is some evidence that these
+models can approximate such structure-dependent phenomena under certain conditions ( Gulordava et al.  , 2018 ; McCoy et al. , 2018 ; Linzen et al. , 2016 ; Bowman et al. , 2015 ), in addition to their widespread success in practical tasks.The recently introduced BERT model ( Devlin et al. , 2018 ), which is based on transformers, achieves state-of-the-art results on eleven natural language processing tasks.  In this work, we as- sess BERT’s ability to learn structure-dependent linguistic phenomena of agreement relations. To test whether BERT is sensitive to agreement re- lations, we use the cloze test ( Taylor , 1953 , also called the “masked language model” objective), in which we mask out one of two words in an agree- ment relation and ask BERT to predict the masked word, one of the two tasks on which BERT is ini- tially trained. Goldberg ( 2019 ) adapted the experimental setup of Linzen et al. ( 2016 ), Gulordava et al. ( 2018 ) and Marvin and Linzen ( 2018 ) to use the cloze test to assess BERT’s sensitivity to number agreement in English subject-verb agreement rela- tions.  The results showed that the single-language BERT model performed surprisingly well at this task (above 80% accuracy in all experiments), even when there were multiple “distractors” in the sentence (other nouns that differed from the sub- ject in number). This suggests that BERT is actu- ally learning to approximate structure-dependent computation, and not simply relying on flawed heuristics. However, English subject-verb agreement is a rather restricted phenomenon, with the majority of verbs having only two inflected forms and only one morphosyntactic feature (number) involved. To what extent does Goldberg’s ( 2019 ) result hold for subject-verb agreement in other languages, in- cluding more morphologically rich ones, as well as for other types of agreement relations? Building
+ on Goldberg’s ( 2019 ) work, we expand the experi- ment to 26 languages and four types of agreement relations, which include more challenging exam- ples.In Section 2, we define what is meant by agree- ment relations and outline the particular agree- ment relations under study. Section 3 intro- duces our newly curated cross-linguistic dataset of agreement relations, while section 4 discusses our experimental setup.  We report the results of our experiments in section 5. All data and code are available at https://github.com/ geoffbacon/does-bert-agree .
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_FJ2wpbBcSlb4vVixAHB0dpaB)
+ Call ID: call_FJ2wpbBcSlb4vVixAHB0dpaB
+  Args:
+    pattern: Section 2\b|2\.|2 Agreement|Agreement relations under study|particular agreement relations under study
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1 Introduction
+Learning general-purpose sentence representa- tions which accurately model sentential semantic content is a current goal of natural language pro- cessing research ( Subramanian et al. , 2018 ; Con- neau et al. , 2017 ; Wieting et al. , 2016 ; Kiros et al. , 2015 ). A prominent and successful approach is to pre-train neural networks to encode sentences into fixed length vectors ( Conneau et al.  , 2018 ; Nie et al. , 2017 ), with common architecture choices based on recurrent neural networks ( Elman , 1990 ; Hochreiter and Schmidhuber , 1997 ), convolu- tional neural networks, or transformers ( Vaswani et al. , 2017 ).  Many core linguistic phenomena that one would like to model in general-purpose sen- tence representations depend on syntactic struc- ture ( Chomsky , 1965 ; Everaert et al. , 2015 ). De- spite the fact that none of the aforementioned ar- chitectures have explicit syntactic structural rep- resentations, there is some evidence that these
+models can approximate such structure-dependent phenomena under certain conditions ( Gulordava et al.  , 2018 ; McCoy et al. , 2018 ; Linzen et al. , 2016 ; Bowman et al. , 2015 ), in addition to their widespread success in practical tasks.The recently introduced BERT model ( Devlin et al. , 2018 ), which is based on transformers, achieves state-of-the-art results on eleven natural language processing tasks.  In this work, we as- sess BERT’s ability to learn structure-dependent linguistic phenomena of agreement relations. To test whether BERT is sensitive to agreement re- lations, we use the cloze test ( Taylor , 1953 , also called the “masked language model” objective), in which we mask out one of two words in an agree- ment relation and ask BERT to predict the masked word, one of the two tasks on which BERT is ini- tially trained. Goldberg ( 2019 ) adapted the experimental setup of Linzen et al. ( 2016 ), Gulordava et al. ( 2018 ) and Marvin and Linzen ( 2018 ) to use the cloze test to assess BERT’s sensitivity to number agreement in English subject-verb agreement rela- tions.  The results showed that the single-language BERT model performed surprisingly well at this task (above 80% accuracy in all experiments), even when there were multiple “distractors” in the sentence (other nouns that differed from the sub- ject in number). This suggests that BERT is actu- ally learning to approximate structure-dependent computation, and not simply relying on flawed heuristics. However, English subject-verb agreement is a rather restricted phenomenon, with the majority of verbs having only two inflected forms and only one morphosyntactic feature (number) involved. To what extent does Goldberg’s ( 2019 ) result hold for subject-verb agreement in other languages, in- cluding more morphologically rich ones, as well as for other types of agreement relations? Building
+ on Goldberg’s ( 2019 ) work, we expand the experi- ment to 26 languages and four types of agreement relations, which include more challenging exam- ples.In Section 2, we define what is meant by agree- ment relations and outline the particular agree- ment relations under study. Section 3 intro- duces our newly curated cross-linguistic dataset of agreement relations, while section 4 discusses our experimental setup.  We report the results of our experiments in section 5. All data and code are available at https://github.com/ geoffbacon/does-bert-agree .
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_js9ySzF8sRUZIJkKone0GSmI)
+ Call ID: call_js9ySzF8sRUZIJkKone0GSmI
+  Args:
+    pattern: 2 Agreement relations|2\. Agreement|Section 2\.|Section 2\b
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1 Introduction
+Learning general-purpose sentence representa- tions which accurately model sentential semantic content is a current goal of natural language pro- cessing research ( Subramanian et al. , 2018 ; Con- neau et al. , 2017 ; Wieting et al. , 2016 ; Kiros et al. , 2015 ). A prominent and successful approach is to pre-train neural networks to encode sentences into fixed length vectors ( Conneau et al.  , 2018 ; Nie et al. , 2017 ), with common architecture choices based on recurrent neural networks ( Elman , 1990 ; Hochreiter and Schmidhuber , 1997 ), convolu- tional neural networks, or transformers ( Vaswani et al. , 2017 ).  Many core linguistic phenomena that one would like to model in general-purpose sen- tence representations depend on syntactic struc- ture ( Chomsky , 1965 ; Everaert et al. , 2015 ). De- spite the fact that none of the aforementioned ar- chitectures have explicit syntactic structural rep- resentations, there is some evidence that these
+models can approximate such structure-dependent phenomena under certain conditions ( Gulordava et al.  , 2018 ; McCoy et al. , 2018 ; Linzen et al. , 2016 ; Bowman et al. , 2015 ), in addition to their widespread success in practical tasks.The recently introduced BERT model ( Devlin et al. , 2018 ), which is based on transformers, achieves state-of-the-art results on eleven natural language processing tasks.  In this work, we as- sess BERT’s ability to learn structure-dependent linguistic phenomena of agreement relations. To test whether BERT is sensitive to agreement re- lations, we use the cloze test ( Taylor , 1953 , also called the “masked language model” objective), in which we mask out one of two words in an agree- ment relation and ask BERT to predict the masked word, one of the two tasks on which BERT is ini- tially trained. Goldberg ( 2019 ) adapted the experimental setup of Linzen et al. ( 2016 ), Gulordava et al. ( 2018 ) and Marvin and Linzen ( 2018 ) to use the cloze test to assess BERT’s sensitivity to number agreement in English subject-verb agreement rela- tions.  The results showed that the single-language BERT model performed surprisingly well at this task (above 80% accuracy in all experiments), even when there were multiple “distractors” in the sentence (other nouns that differed from the sub- ject in number). This suggests that BERT is actu- ally learning to approximate structure-dependent computation, and not simply relying on flawed heuristics. However, English subject-verb agreement is a rather restricted phenomenon, with the majority of verbs having only two inflected forms and only one morphosyntactic feature (number) involved. To what extent does Goldberg’s ( 2019 ) result hold for subject-verb agreement in other languages, in- cluding more morphologically rich ones, as well as for other types of agreement relations? Building
+ on Goldberg’s ( 2019 ) work, we expand the experi- ment to 26 languages and four types of agreement relations, which include more challenging exam- ples.In Section 2, we define what is meant by agree- ment relations and outline the particular agree- ment relations under study. Section 3 intro- duces our newly curated cross-linguistic dataset of agreement relations, while section 4 discusses our experimental setup.  We report the results of our experiments in section 5. All data and code are available at https://github.com/ geoffbacon/does-bert-agree .
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_oQtBf8tTsAxtw48F1nafuLij)
+ Call ID: call_oQtBf8tTsAxtw48F1nafuLij
+  Args:
+    pattern: We study|under study|under study:|agreement relations under study:|agreement relations under study
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1 Introduction
+Learning general-purpose sentence representa- tions which accurately model sentential semantic content is a current goal of natural language pro- cessing research ( Subramanian et al. , 2018 ; Con- neau et al. , 2017 ; Wieting et al. , 2016 ; Kiros et al. , 2015 ). A prominent and successful approach is to pre-train neural networks to encode sentences into fixed length vectors ( Conneau et al.  , 2018 ; Nie et al. , 2017 ), with common architecture choices based on recurrent neural networks ( Elman , 1990 ; Hochreiter and Schmidhuber , 1997 ), convolu- tional neural networks, or transformers ( Vaswani et al. , 2017 ).  Many core linguistic phenomena that one would like to model in general-purpose sen- tence representations depend on syntactic struc- ture ( Chomsky , 1965 ; Everaert et al. , 2015 ). De- spite the fact that none of the aforementioned ar- chitectures have explicit syntactic structural rep- resentations, there is some evidence that these
+models can approximate such structure-dependent phenomena under certain conditions ( Gulordava et al.  , 2018 ; McCoy et al. , 2018 ; Linzen et al. , 2016 ; Bowman et al. , 2015 ), in addition to their widespread success in practical tasks.The recently introduced BERT model ( Devlin et al. , 2018 ), which is based on transformers, achieves state-of-the-art results on eleven natural language processing tasks.  In this work, we as- sess BERT’s ability to learn structure-dependent linguistic phenomena of agreement relations. To test whether BERT is sensitive to agreement re- lations, we use the cloze test ( Taylor , 1953 , also called the “masked language model” objective), in which we mask out one of two words in an agree- ment relation and ask BERT to predict the masked word, one of the two tasks on which BERT is ini- tially trained. Goldberg ( 2019 ) adapted the experimental setup of Linzen et al. ( 2016 ), Gulordava et al. ( 2018 ) and Marvin and Linzen ( 2018 ) to use the cloze test to assess BERT’s sensitivity to number agreement in English subject-verb agreement rela- tions.  The results showed that the single-language BERT model performed surprisingly well at this task (above 80% accuracy in all experiments), even when there were multiple “distractors” in the sentence (other nouns that differed from the sub- ject in number). This suggests that BERT is actu- ally learning to approximate structure-dependent computation, and not simply relying on flawed heuristics. However, English subject-verb agreement is a rather restricted phenomenon, with the majority of verbs having only two inflected forms and only one morphosyntactic feature (number) involved. To what extent does Goldberg’s ( 2019 ) result hold for subject-verb agreement in other languages, in- cluding more morphologically rich ones, as well as for other types of agreement relations? Building
+ on Goldberg’s ( 2019 ) work, we expand the experi- ment to 26 languages and four types of agreement relations, which include more challenging exam- ples.In Section 2, we define what is meant by agree- ment relations and outline the particular agree- ment relations under study. Section 3 intro- duces our newly curated cross-linguistic dataset of agreement relations, while section 4 discusses our experimental setup.  We report the results of our experiments in section 5. All data and code are available at https://github.com/ geoffbacon/does-bert-agree .
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_GCKNNgmo8wfWN5K7Ya0pCS6q)
+ Call ID: call_GCKNNgmo8wfWN5K7Ya0pCS6q
+  Args:
+    pattern: 2 Agreement relations|Agreement relations\n|Section 2:|Section 2 - Agreement|\n2\.|^2\s+Agreement
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_G78PDLkeDTui4DbwldiIiIJF)
+ Call ID: call_G78PDLkeDTui4DbwldiIiIJF
+  Args:
+    pattern: adject|adjectival|noun-adj|adposition|case|gender|number|person
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Learning representations that accurately model semantics is an important goal of natural language processing research. Many semantic phenomena depend on syntactic structure. Recent work examines the extent to which state-of-the-art models for pre-training representations, such as BERT, capture such structure-dependent phenomena, but is largely restricted to one phenomenon in English: number agreement between subjects and verbs. We evaluate BERT’s sensitivity to four types of structure-dependent agreement relations in a new semi-automatically curated dataset across 26 languages.  We show that both the single-language and multilingual BERT models capture syntax-sensitive agree- ment patterns well in general, but we also highlight the specific linguistic contexts in which their performance degrades.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_fFyxakMfkWF720TihOEA0pp8)
+ Call ID: call_fFyxakMfkWF720TihOEA0pp8
+  Args:
+    pattern: adjective-noun|adjective noun|adjectival|noun-adjective|noun adjective
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_f8bbbZ6kesPZDRy7HncHmEhj)
+ Call ID: call_f8bbbZ6kesPZDRy7HncHmEhj
+  Args:
+    pattern: subject-verb agreement relations|subject-verb agreement|subject-verb|verb agreement|number agreement between subjects and verbs|number agreement
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Learning representations that accurately model semantics is an important goal of natural language processing research. Many semantic phenomena depend on syntactic structure. Recent work examines the extent to which state-of-the-art models for pre-training representations, such as BERT, capture such structure-dependent phenomena, but is largely restricted to one phenomenon in English: number agreement between subjects and verbs. We evaluate BERT’s sensitivity to four types of structure-dependent agreement relations in a new semi-automatically curated dataset across 26 languages.  We show that both the single-language and multilingual BERT models capture syntax-sensitive agree- ment patterns well in general, but we also highlight the specific linguistic contexts in which their performance degrades.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_uK8rhBmOxzBrBAiFwAOeTkuq)
+ Call ID: call_uK8rhBmOxzBrBAiFwAOeTkuq
+  Args:
+    pattern: dataset|curated|curation|agreement relations dataset|Our dataset|we curated|curated dataset|semi-automatically curated
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Learning representations that accurately model semantics is an important goal of natural language processing research. Many semantic phenomena depend on syntactic structure. Recent work examines the extent to which state-of-the-art models for pre-training representations, such as BERT, capture such structure-dependent phenomena, but is largely restricted to one phenomenon in English: number agreement between subjects and verbs. We evaluate BERT’s sensitivity to four types of structure-dependent agreement relations in a new semi-automatically curated dataset across 26 languages.  We show that both the single-language and multilingual BERT models capture syntax-sensitive agree- ment patterns well in general, but we also highlight the specific linguistic contexts in which their performance degrades.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_ypxpD9lciemu7fh1YjIFEmXI)
+ Call ID: call_ypxpD9lciemu7fh1YjIFEmXI
+  Args:
+    pattern: four types|four types of agreement|four types of structure|four types of structure-dependent|four types of agreement relations
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Learning representations that accurately model semantics is an important goal of natural language processing research. Many semantic phenomena depend on syntactic structure. Recent work examines the extent to which state-of-the-art models for pre-training representations, such as BERT, capture such structure-dependent phenomena, but is largely restricted to one phenomenon in English: number agreement between subjects and verbs. We evaluate BERT’s sensitivity to four types of structure-dependent agreement relations in a new semi-automatically curated dataset across 26 languages.  We show that both the single-language and multilingual BERT models capture syntax-sensitive agree- ment patterns well in general, but we also highlight the specific linguistic contexts in which their performance degrades.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_MutTtOcAWCJbGiKbvqNkEQxZ)
+ Call ID: call_MutTtOcAWCJbGiKbvqNkEQxZ
+  Args:
+    pattern: gender
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+2 Structure-dependent agreement relations
+Agreement phenomena are an important and cross-linguistically common property of natural languages, and as such have been extensively stud- ied in syntax and morphology ( Corbett , 2006 ). 1 Languages often express grammatical features, such as number and gender, through inflectional morphology. An agreement relation is a mor- phophonologically overt co-variance in feature values between two words in a syntactic relation- ship ( Preminger , 2014 ).  In other words, agreement refers to when the morphosyntactic features of one word are reflected in its syntactic dependents. In this way, agreement relations are overt markers of covert syntactic structure. Thus, evaluating a model’s ability to capture agreement relations is also an evaluation of its ability to capture syntac- tic structure. Following Corbett ( 2003 ), we call the syntac- tically dependent word the “target” of the agree- ment relation, and the word with which it agrees we call the “controller”. An example of an agree- ment relation in English is given in ( 1 ), in which the inflected form of the verb BE ( are ) reflects the plural number of its syntactic head keys .  In all ex- amples in this section, the controller and target are given in bold. In this example, keys is the con- troller and are is the target of the agreement rela- tion.(1) The keys to the door are on the table.The agreement relation in ( 1 ) is between a sub- ject and its verb, but there are other types of agree-
+ment relations.  In addition to subject-verb agree- ment, three other types of agreement relations are cross-linguistically common: agreement of noun with i) determiner, ii) attributive adjective and iii) predicate adjective ( Baker , 2008 ). The latter two types are distinguished by whether the adjective modifies the noun within a noun phrase or whether it is predicated of the subject of a clause.  The first two types are sometimes categorized as nominal concord rather than agreement, but for our pur- poses this is merely a difference in terminology.The morphosyntactic feature in the agreement relation in ( 1 ) is number, a feature that is cross- linguistically common in agreement systems. In addition to number, the most commonly involved in agreement relations are gender, case and person ( Baker , 2008 ). With its comparatively limited inflectional mor- phology, English only exhibits subject-verb and determiner agreement (in demonstratives, “this” vs. “these”) and even then only agrees for num- ber. Languages with richer inflectional morphol- ogy tend to display more agreement types and in- volve more features. French, for example, em- ploys all four types of agreement relations.  Ex- amples are given in ( 2 )-( 5 ). The subject and verb in ( 2 ) agree for number, while the noun and deter- miner in ( 3 ), the noun and attributive adjective in ( 4 ) and the subject and predicated adjective in ( 5 ) agree for both number and gender.(2) Les cl´es de la porte se trouvent sur la table.‘The keys to the door are on the table.’
+ (3) Je peux voir les cl´es .‘I can see the keys.’
+(4) Je ne veux plus les cl´es totalement cass´ees . ‘I no longer want the completely broken keys.’
+(5) Les cl´es de la porte sont cass´ees .‘The keys to the door are broken.’
+ Previous work using agreement relations to as- sess knowledge of syntactic structure in mod- ern neural networks has focussed on subject-verb agreement in number ( Goldberg , 2019 ; Gulordava et al. , 2018 ; Linzen et al. , 2016 ). In our work, we study all four types of agreement relations and
+1 For a comprehensive bibliography, see http:// www.smg.surrey.ac.uk/projects/agreement/ bibliography/ . all four features discussed above. Moreover, pre- vious work using any method to assess BERT’s knowledge of syntactic structure has focussed ex- clusively on the single-language English model ( Hewitt and Manning , 2019 ; Goldberg , 2019 ; Ten- ney et al. , 2019 ; Lin et al. , 2019 ; Jawahar et al. , 2019 ; Clark et al. , 2019 ).  We expand this line of work to 26 languages. Not all languages in our sample exhibit all four types of agreement nor use all four features examined, but they all exhibit at least one of the agreement types involving at least one of the features.
+
+================================== Ai Message ==================================
+
+They explore subject–verb agreement and three nominal agreement types: agreement of a noun with its determiner, with an attributive adjective, and with a predicate adjective.

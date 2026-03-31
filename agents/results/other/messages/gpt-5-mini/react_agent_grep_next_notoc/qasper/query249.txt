@@ -1,0 +1,116 @@
+================================ Human Message =================================
+
+QUERY:
+Where do the news texts come from?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_GGbQM8jm3cKeRjXJ3n2FhyQa)
+ Call ID: call_GGbQM8jm3cKeRjXJ3n2FhyQa
+  Args:
+    pattern: news texts
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Keyphrase generation is the task of predicting a set of lexical units that conveys the main content of a source text. Existing datasets for keyphrase generation are only readily available for the scholarly domain and in- clude non-expert annotations. In this paper we present KPTimes , a large-scale dataset of news texts paired with editor-curated keyphrases. Exploring the dataset, we show how editors tag documents, and how their annotations differ from those found in ex- isting datasets.  We also train and evaluate state-of-the-art neural keyphrase genera- tion models on KPTimes to gain insights on how well they perform on the news domain. The dataset is available online at https://github.com/ygorg/KPTimes .
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_xB5PUdu7nJYNzINfH4fDVH7x)
+ Call ID: call_xB5PUdu7nJYNzINfH4fDVH7x
+  Args:
+    pattern: Times|New York|NYT|news texts come from|news texts
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Keyphrase generation is the task of predicting a set of lexical units that conveys the main content of a source text. Existing datasets for keyphrase generation are only readily available for the scholarly domain and in- clude non-expert annotations. In this paper we present KPTimes , a large-scale dataset of news texts paired with editor-curated keyphrases. Exploring the dataset, we show how editors tag documents, and how their annotations differ from those found in ex- isting datasets.  We also train and evaluate state-of-the-art neural keyphrase genera- tion models on KPTimes to gain insights on how well they perform on the news domain. The dataset is available online at https://github.com/ygorg/KPTimes .
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_RI3EK6oTL67GODpe1qPu0kEK)
+ Call ID: call_RI3EK6oTL67GODpe1qPu0kEK
+  Args:
+    pattern: KPTimes|editor-curated|editor curated|editor|editors
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Keyphrase generation is the task of predicting a set of lexical units that conveys the main content of a source text. Existing datasets for keyphrase generation are only readily available for the scholarly domain and in- clude non-expert annotations. In this paper we present KPTimes , a large-scale dataset of news texts paired with editor-curated keyphrases. Exploring the dataset, we show how editors tag documents, and how their annotations differ from those found in ex- isting datasets.  We also train and evaluate state-of-the-art neural keyphrase genera- tion models on KPTimes to gain insights on how well they perform on the news domain. The dataset is available online at https://github.com/ygorg/KPTimes .
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_C8QYVHzHNJmKzDB3DaXCXyHm)
+ Call ID: call_C8QYVHzHNJmKzDB3DaXCXyHm
+  Args:
+    pattern: New York Times|New York|Times|nytimes|Reuters|news texts come from|news texts come
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Keyphrase generation is the task of predicting a set of lexical units that conveys the main content of a source text. Existing datasets for keyphrase generation are only readily available for the scholarly domain and in- clude non-expert annotations. In this paper we present KPTimes , a large-scale dataset of news texts paired with editor-curated keyphrases. Exploring the dataset, we show how editors tag documents, and how their annotations differ from those found in ex- isting datasets.  We also train and evaluate state-of-the-art neural keyphrase genera- tion models on KPTimes to gain insights on how well they perform on the news domain. The dataset is available online at https://github.com/ygorg/KPTimes .
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_HkUZG7SYfwcKWRhlPZbVA1Sx)
+ Call ID: call_HkUZG7SYfwcKWRhlPZbVA1Sx
+  Args:
+    pattern: Dataset|data set|dataset of news|KPTimes dataset|Sources|source texts|news texts come from|news source
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Keyphrase generation is the task of predicting a set of lexical units that conveys the main content of a source text. Existing datasets for keyphrase generation are only readily available for the scholarly domain and in- clude non-expert annotations. In this paper we present KPTimes , a large-scale dataset of news texts paired with editor-curated keyphrases. Exploring the dataset, we show how editors tag documents, and how their annotations differ from those found in ex- isting datasets.  We also train and evaluate state-of-the-art neural keyphrase genera- tion models on KPTimes to gain insights on how well they perform on the news domain. The dataset is available online at https://github.com/ygorg/KPTimes .
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_NDQgeQZb5SqQWqin50AUU0bL)
+ Call ID: call_NDQgeQZb5SqQWqin50AUU0bL
+  Args:
+    pattern: news
+    } )}ERROR_TOO_MANY_REQUESTS_APICODE_ENDPOINT_BLOCKED_REALTIME_RETRY_AUTOMATIC_GENERIC_DEBUG_PLACEHOLDER_EXPECTED_VALID_JSON_BAD_ESCAPE~: }),
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Tool 'grep_search_next' failed after 1 attempt with TypeError: grep_search_next() got an unexpected keyword argument '} )}ERROR_TOO_MANY_REQUESTS_APICODE_ENDPOINT_BLOCKED_REALTIME_RETRY_AUTOMATIC_GENERIC_DEBUG_PLACEHOLDER_EXPECTED_VALID_JSON_BAD_ESCAPE~'. Please try again.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_2kSfkg2ycBsOjh7OhB8bagsz)
+ Call ID: call_2kSfkg2ycBsOjh7OhB8bagsz
+  Args:
+    pattern: New York Times
+    } )}ERROR_TOO_MANY_REQUESTS_APICODE_ENDPOINT_BLOCKED_REALTIME_RETRY_AUTOMATIC_GENERIC_DEBUG_PLACEHOLDER_EXPECTED_VALID_JSON_BAD_ESCAPE~: }
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Tool 'grep_search_next' failed after 1 attempt with TypeError: grep_search_next() got an unexpected keyword argument '} )}ERROR_TOO_MANY_REQUESTS_APICODE_ENDPOINT_BLOCKED_REALTIME_RETRY_AUTOMATIC_GENERIC_DEBUG_PLACEHOLDER_EXPECTED_VALID_JSON_BAD_ESCAPE~'. Please try again.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_tIPVjtMta119fi7yMPyoxPtn)
+ Call ID: call_tIPVjtMta119fi7yMPyoxPtn
+  Args:
+    pattern: New York
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+3 Building the KPTimes dataset
+To create the KPTimes dataset, we collected over half a million newswire articles by crawling se- lected online news websites. We applied heuristics to identify the content (title, headline and body) of each article and regarded the keyphrases pro- vided in the HTML metadata as the gold standard.  A cherry-picked sample document is showcased in Figure 1 , it allows to show present and absent keyphrases, as well as keyphrase variants (in this example News media and journalism ).We use the New York Times 1 as our pri- mary source of data, since the content tag- ging policy that it applies is rigorous and well-
+1 https://www.nytimes.com/
+Dataset Ann.  #Train #Dev #Test #words #kp len kp %abs S ch o la r SemEval-2010 A ∪ R 144 - 100 7 961 14.7 2.2 19.7 KP20k A 530K 20K 20K 176 5.3 2.6 42.6 N ew s DUC-2001 R - - 308 847 8.1 2. 0 3.7 KPCrowd R 450 - 50 465 46.2 1.1 11.2 KPTimes (this work) E 260K 10K 10K 921 5.0 1.5 54.7 JPTimes (this work) A - - 10K 648 5.3 1.3 28.2
+ Table 1: Statistics of available datasets for keyphrase generation. Gold annotation is performed by authors ( A ), readers ( R ) or editors ( E ). The number of documents in the training (#Train), validation (dev) and testing (#Test) splits are shown.  The average number of keyphrases (#kp) and words (#words) per document, the average length of keyphrases (len kp) and the ratio of keyphrases in the reference that do not appear in the document (%abs) are computed on the test set.documented 2 . The news articles are annotated in a semi-automatic way, first the editors revise a set of tags proposed by an algorithm.  They then provide additional tags which will be used by a taxonomy team to improve the algorithm.We first retrieved the URLs of the free-to-read articles from 2006 to 2017 3 , and collected the cor- responding archived HTML pages using the In- ternet Archive 4 . Doing so allows the distribu- tion of our dataset using a thin, URL-only list.  We then extracted the HTML body content us- ing beautifulsoup 5 and devised heuristics to extract the main content and title of each article while excluding extraneous HTML markup and inline ads. Gold standard keyphrases are obtained from the metadata (field types news keywords and keywords 6 ) available in the HTML page of each article. Surface form variants of gold keyphrases (e.g.  “ AIDS ; HIV ”, “ Driverless Cars ; Self-Driving Cars ” or “ Fatalities ; Casualties ”), which are sometimes present in the metadata, are kept to be used for evaluation purposes.We further cleansed and filtered the dataset by removing duplicates, articles without content and those with too few (less than 2) or too many (more than 10) keyphrases. This process resulted in a set of 279 923 article-keyphrase pairs.  We randomly divided this dataset into training (92.8%), devel- opment (3.6%) and test (3.6%) splits.Restricting ourselves to one source of data en- sures the uniformity and consistency of annotation
+that is missing in the other datasets, but it may also make the trained model source-dependent and harm generalization. To monitor the model’s abil- ity to generalize, we gather a secondary source of data.  We collected HTML pages from the Japan Times 7 and processed them the same way as de- scribed above. 10K more news articles were gath- ered as the JPTimes dataset.Although in this study we concentrate only on the textual content of the news articles, it is worth noting that the HTML pages also provide addi- tional information that can be helpful in generating keyphrases such as text style properties (e.g.  bold, italic), links to related articles, or news categoriza- tion (e.g. politics, science, technology).
+
+================================== Ai Message ==================================
+
+They come from the New York Times (free-to-read articles from 2006–2017 archived via the Internet Archive), with the Japan Times used as a secondary source.

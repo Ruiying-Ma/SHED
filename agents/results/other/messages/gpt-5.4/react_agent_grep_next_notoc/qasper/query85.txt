@@ -1,0 +1,100 @@
+================================ Human Message =================================
+
+QUERY:
+What is F-score obtained?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_JOgWbvThIH2caC1k3oMLrRQ5)
+ Call ID: call_JOgWbvThIH2caC1k3oMLrRQ5
+  Args:
+    pattern: F-score|F score|Fscore|F1|score obtained
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+We focus on named entity recognition (NER) for Chinese social media. With massive unlabeled text and quite lim- ited labelled corpus, we propose a semi- supervised learning model based on B- LSTM neural network. To take advan- tage of traditional methods in NER such as CRF, we combine transition probabil- ity with deep learning in our model.  To bridge the gap between label accuracy and F-score of NER, we construct a model which can be directly trained on F-score. When considering the instability of F- score driven method and meaningful in- formation provided by label accuracy, we propose an integrated method to train on both F-score and label accuracy. Our in- tegrated model yields substantial improve- ment over previous state-of-the-art result.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_k8saClsG61hsXnI4MBjj98hB)
+ Call ID: call_k8saClsG61hsXnI4MBjj98hB
+  Args:
+    pattern: state-of-the-art|improvement|F-score
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+We focus on named entity recognition (NER) for Chinese social media. With massive unlabeled text and quite lim- ited labelled corpus, we propose a semi- supervised learning model based on B- LSTM neural network. To take advan- tage of traditional methods in NER such as CRF, we combine transition probabil- ity with deep learning in our model.  To bridge the gap between label accuracy and F-score of NER, we construct a model which can be directly trained on F-score. When considering the instability of F- score driven method and meaningful in- formation provided by label accuracy, we propose an integrated method to train on both F-score and label accuracy. Our in- tegrated model yields substantial improve- ment over previous state-of-the-art result.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_rM9X8Wsy5xOaT7IRWBy6kyPa)
+ Call ID: call_rM9X8Wsy5xOaT7IRWBy6kyPa
+  Args:
+    pattern: Table|Results|result|F-score
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+We focus on named entity recognition (NER) for Chinese social media. With massive unlabeled text and quite lim- ited labelled corpus, we propose a semi- supervised learning model based on B- LSTM neural network. To take advan- tage of traditional methods in NER such as CRF, we combine transition probabil- ity with deep learning in our model.  To bridge the gap between label accuracy and F-score of NER, we construct a model which can be directly trained on F-score. When considering the instability of F- score driven method and meaningful in- formation provided by label accuracy, we propose an integrated method to train on both F-score and label accuracy. Our in- tegrated model yields substantial improve- ment over previous state-of-the-art result.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_TOYOBj7AxATZaiJfAzNclBSd)
+ Call ID: call_TOYOBj7AxATZaiJfAzNclBSd
+  Args:
+    pattern: [0-9]+\.[0-9]+.*F|F.*[0-9]+\.[0-9]+
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+2.2 F-Score Driven Training Method
+Max Margin training method use structured mar- gin loss ∆( l, l ) to describe the difference between the corrected label sequence l and predicted la- bel sequence l . In fact, the structured margin loss ∆( l, l ) reflect the loss in label accuracy. Consider- ing the gap between label accuracy and F-Score in NER, we introduce a new training method to train directly on F-Score.  To introduce F-Score driven training method, we need to take a look at the sub- gradient of equation (4):
+∂J ∂θ = 1 m m X i =1 ( ∂s ( x, l max , θ ) ∂θ − ∂s ( x, l, θ ) ∂θ ) + λθ
+ In the subgradient, we can know that structured margin loss ∆( l, l ) contributes nothing to the subgradient of the regularized objective function J ( θ ) . The margin loss ∆( l, l ) serves as a trig- ger function to conduct the training process of B- LSTM based MMNN. We can introduce a new trigger function to guide the training process of neural network. F-Score Trigger Function The main criterion of NER task is F-score.  However, high label accu- racy does not mean high F-score. For instance, if every named entity’s last character is labeledas O, the label accuracy can be quite high, but the precision, recall and F-score are 0 . We use the F- Score between corrected label sequence and pre- dicted label sequence as trigger function, which
+can conduct the training process to optimize the F-Score of training examples. Our new structured margin loss can be described as:
+ e ∆( l, l ) = κ ∗ F Score (5)
+where F Score is the F-Score between corrected label sequence and predicted label sequence.F-Score and Label Accuracy Trigger Function The F-Score can be quite unstable in some situa- tion. For instance, if there is no named entity in a sentence, F-Score will be always 0 regardless of the predicted label sequence.  To take advantage of meaningful information provided by label ac- curacy, we introduce an integrated trigger function as follows:
+ˆ ∆( l, l ) = e ∆( l, l ) + β ∗ ∆( l, l ) (6)
+where β is a factor to adjust the weight of label accuracy and F-Score. Because F-Score depends on the whole label se- quence, we use beam search to find k label se- quences with top sentece-level score s ( x, l, θ ) and then use trigger function to rerank the k label se- quences and select the best.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_Iq2EKFk4z0rOuR1kE0hPlpUi)
+ Call ID: call_Iq2EKFk4z0rOuR1kE0hPlpUi
+  Args:
+    pattern: state-of-the-art result|Table 1|Table 2|Table 3|evaluation
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+We focus on named entity recognition (NER) for Chinese social media. With massive unlabeled text and quite lim- ited labelled corpus, we propose a semi- supervised learning model based on B- LSTM neural network. To take advan- tage of traditional methods in NER such as CRF, we combine transition probabil- ity with deep learning in our model.  To bridge the gap between label accuracy and F-score of NER, we construct a model which can be directly trained on F-score. When considering the instability of F- score driven method and meaningful in- formation provided by label accuracy, we propose an integrated method to train on both F-score and label accuracy. Our in- tegrated model yields substantial improve- ment over previous state-of-the-art result.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_BF7Tz0ExwJjbBOF1O5Ilqp02)
+ Call ID: call_BF7Tz0ExwJjbBOF1O5Ilqp02
+  Args:
+    pattern: %|precision|recall|Our integrated model|dataset
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+2.2 F-Score Driven Training Method
+Max Margin training method use structured mar- gin loss ∆( l, l ) to describe the difference between the corrected label sequence l and predicted la- bel sequence l . In fact, the structured margin loss ∆( l, l ) reflect the loss in label accuracy. Consider- ing the gap between label accuracy and F-Score in NER, we introduce a new training method to train directly on F-Score.  To introduce F-Score driven training method, we need to take a look at the sub- gradient of equation (4):
+∂J ∂θ = 1 m m X i =1 ( ∂s ( x, l max , θ ) ∂θ − ∂s ( x, l, θ ) ∂θ ) + λθ
+ In the subgradient, we can know that structured margin loss ∆( l, l ) contributes nothing to the subgradient of the regularized objective function J ( θ ) . The margin loss ∆( l, l ) serves as a trig- ger function to conduct the training process of B- LSTM based MMNN. We can introduce a new trigger function to guide the training process of neural network. F-Score Trigger Function The main criterion of NER task is F-score.  However, high label accu- racy does not mean high F-score. For instance, if every named entity’s last character is labeledas O, the label accuracy can be quite high, but the precision, recall and F-score are 0 . We use the F- Score between corrected label sequence and pre- dicted label sequence as trigger function, which
+can conduct the training process to optimize the F-Score of training examples. Our new structured margin loss can be described as:
+ e ∆( l, l ) = κ ∗ F Score (5)
+where F Score is the F-Score between corrected label sequence and predicted label sequence.F-Score and Label Accuracy Trigger Function The F-Score can be quite unstable in some situa- tion. For instance, if there is no named entity in a sentence, F-Score will be always 0 regardless of the predicted label sequence.  To take advantage of meaningful information provided by label ac- curacy, we introduce an integrated trigger function as follows:
+ˆ ∆( l, l ) = e ∆( l, l ) + β ∗ ∆( l, l ) (6)
+where β is a factor to adjust the weight of label accuracy and F-Score. Because F-Score depends on the whole label se- quence, we use beam search to find k label se- quences with top sentece-level score s ( x, l, θ ) and then use trigger function to rerank the k label se- quences and select the best.
+
+================================== Ai Message ==================================
+
+Unanswerable

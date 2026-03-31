@@ -1,0 +1,86 @@
+================================ Human Message =================================
+
+QUERY:
+What domain of text are they working with?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_tpw3VwaU5AcptawWyHPnyhTw)
+ Call ID: call_tpw3VwaU5AcptawWyHPnyhTw
+  Args:
+    pattern: domain|text|corpus|dataset|working with|we work with|documents|clinical|biomedical|legal|news|reviews|tweets|social media
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Traditional approaches to extractive summarization rely heavily on human- engineered features. In this work we propose a data-driven approach based on neural networks and continuous sentence features. We develop a general frame- work for single-document summarization composed of a hierarchical document encoder and an attention-based extractor. This architecture allows us to develop different classes of summarization models which can extract sentences or words. We train our models on large scale corpora containing hundreds of thousands of document-summary pairs 1 .  Experimental results on two summarization datasets demonstrate that our models obtain results comparable to the state of the art without any access to linguistic annotation.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_BOATCPAyJAwFRCPn35cCDyE9)
+ Call ID: call_BOATCPAyJAwFRCPn35cCDyE9
+  Args:
+    pattern: CNN|Daily Mail|news|article|article-summary|Gigaword|DUC|document-summary pairs|dataset
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Traditional approaches to extractive summarization rely heavily on human- engineered features. In this work we propose a data-driven approach based on neural networks and continuous sentence features. We develop a general frame- work for single-document summarization composed of a hierarchical document encoder and an attention-based extractor. This architecture allows us to develop different classes of summarization models which can extract sentences or words. We train our models on large scale corpora containing hundreds of thousands of document-summary pairs 1 .  Experimental results on two summarization datasets demonstrate that our models obtain results comparable to the state of the art without any access to linguistic annotation.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_6FFcJbLJDGa7nd64b9ptMH6u)
+ Call ID: call_6FFcJbLJDGa7nd64b9ptMH6u
+  Args:
+    pattern: CNN|Daily Mail|Gigaword|DUC 2002|New York Times|news articles|article
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+8 Appendix
+In addition to the DUC 2002 and 500 DailyMail samples, we additionally report results on the en- tire DailyMail test set (Table 3). Since there is no established evaluation standard for this task, we experimented with three different ROUGE limits: 75 bytes, 275 bytes and full length.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_1CJiTK8hCgwyiyk16vB4yjY5)
+ Call ID: call_1CJiTK8hCgwyiyk16vB4yjY5
+  Args:
+    pattern: DailyMail|DUC 2002|dataset|corpus
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Traditional approaches to extractive summarization rely heavily on human- engineered features. In this work we propose a data-driven approach based on neural networks and continuous sentence features. We develop a general frame- work for single-document summarization composed of a hierarchical document encoder and an attention-based extractor. This architecture allows us to develop different classes of summarization models which can extract sentences or words. We train our models on large scale corpora containing hundreds of thousands of document-summary pairs 1 .  Experimental results on two summarization datasets demonstrate that our models obtain results comparable to the state of the art without any access to linguistic annotation.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_6v2P2lwKrdOq4Jc4zOBUZe1U)
+ Call ID: call_6v2P2lwKrdOq4Jc4zOBUZe1U
+  Args:
+    pattern: DailyMail
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+8 Appendix
+In addition to the DUC 2002 and 500 DailyMail samples, we additionally report results on the en- tire DailyMail test set (Table 3). Since there is no established evaluation standard for this task, we experimented with three different ROUGE limits: 75 bytes, 275 bytes and full length.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_YLjDUuQX2eJkQVwJtyQvJk4I)
+ Call ID: call_YLjDUuQX2eJkQVwJtyQvJk4I
+  Args:
+    pattern: DUC 2002
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+8 Appendix
+In addition to the DUC 2002 and 500 DailyMail samples, we additionally report results on the en- tire DailyMail test set (Table 3). Since there is no established evaluation standard for this task, we experimented with three different ROUGE limits: 75 bytes, 275 bytes and full length.
+
+================================== Ai Message ==================================
+
+News articles.

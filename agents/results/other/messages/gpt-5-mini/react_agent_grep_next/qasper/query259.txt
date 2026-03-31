@@ -1,0 +1,67 @@
+================================ Human Message =================================
+
+QUERY:
+what are the state of the art models?
+
+TABLE OF CONTENTS (TOC):
+1 | WikiRank:Improving Keyphrase Extraction Based on Background Knowledge
+1.1 | Abstract
+1.2 | 1. Introduction
+1.3 | 2. Existing Error Illustration with Example
+1.4 | 3. Proposed Model
+1.4.1 | 3.1. Graph Construction
+1.4.1.1 | 3.1.1. Automatic Concept Annotation
+1.4.1.2 | 3.1.2. Lexical Unit Selection
+1.4.1.3 | 3.1.3. Graph building
+1.4.2 | 3.2. WikiRank
+1.4.2.1 | 3.2.1. Optimization Problem
+1.4.2.2 | 3.2.2. Algorithm
+1.4.3 | 3.3. Approximation Approach with Pre-pruning
+1.5 | 4. Experiments and Results 4.1. Corpora
+1.5.1 | 4.2. Result
+1.6 | 5. Conclusion and Future Work
+1.7 | 6. Bibliographical References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_oAkbQzjKFLUfug142rVXy9fL)
+ Call ID: call_oAkbQzjKFLUfug142rVXy9fL
+  Args:
+    pattern: state[- ]of[- ]the[- ]art
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.3 | 2. Existing Error Illustration with Example
+Figure 1 shows part of an example document 1 . In this fig- ure, the gold keyphrases are marked with bold, and the keyphrases extracted by the TextRank system are marked with parentheses. We are going to illustrate the errors exist in most of present keyphrase extraction systems using this example. Overgeneration errors occur when a system correctly predicts a candidate as a keyphrase because it contains a word that frequently appears in the associated docu- ment, but at the same time erroneously outputs other candidates as keyphrases because they contain the same word(Hasan and Ng, 2014).  It is not easy to reject a non- keyphrase containing a word with a high term frequency: many unsupervised systems score a candidate by summing the score of each of its component words, and many su- pervised systems use unigrams as features to represent a candidate. To be more concrete, consider the news arti- cle in Figure 1. The word Cattle has a significant presence in the document.  Consequently, the system not only cor- rectly predict British cattle as a keyphrase, but also erro- neously predict cattle industry , cattle feed , and cattle brain as keyphrases, yielding overgeneration errors.1 Document from DUC-2001 Dataset AP900322-0200 Govern- ment Boosts Spending to Combat Cattle Plague 2 Prefix “wiki” represents the namespace “https://en.wikipedia.org/wiki/”
+ Redundancy errors occur when a system correctly iden- tifies a candidate as a keyphrase, but at the same time out- puts a semantically equivalent candidate (e.g., its alias) as a keyphrase. This type of error can be attributed to the failure of a system to determine that two candidates are semanti- cally equivalent.  Nevertheless, some researchers may argue that a system should not be penalized for redundancy errors because the extracted candidates are in fact keyphrases. In our example, bovine spongiform encephalopathy and bse refer to the same concept. If a system predicts both of them as keyphrases, it commits a redundancy error.Infrequency errors occur when a system fails to identify a keyphrase owing to its infrequent presence in the associ- ated document.  Handling infrequency errors is a challenge because state-of-the-art keyphrase extractors rarely predict candidates that appear only once or twice in a document. In the Mad cow disease example, the keyphrase extractor fails to identify export and scrapie as keyphrases, resulting in infrequency errors.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_VaPlAMVYv0xJ1MXwL5VKWuJw)
+ Call ID: call_VaPlAMVYv0xJ1MXwL5VKWuJw
+  Args:
+    pattern: TextRank|state-of-the-art|state of the art|present keyphrase extraction systems|models|baseline
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1 | Abstract
+Keyphrase is an efficient representation of the main idea of documents. While background knowledge can provide valuable information about documents, they are rarely incorporated in keyphrase extraction methods. In this paper, we propose WikiRank, an unsupervised method for keyphrase extraction based on the background knowledge from Wikipedia. Firstly, we construct a semantic graph for the document. Then we transform the keyphrase extraction problem into an optimization problem on the graph. Finally, we get the optimal keyphrase set to be the output.  Our method obtains improvements over other state-of-art models by more than 2% in F1-score.Keywords: Keyphrase Extraction, Knowledge Graph, Semantic Graph
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_VdhRwBTbkjYbYjnllX62APKg)
+ Call ID: call_VdhRwBTbkjYbYjnllX62APKg
+  Args:
+    section_id: 1.5.1
+
+================================= Tool Message =================================
+Name: read_section
+
+4.2. Result
+For comparing with our system, we reimplemented Sin- gleRank and Topical PageRank. Table 2 shows the result of our reimplementation of SingleRank and Topical PageR- ank, as well as the result of our system. Note that we pre- dict the same number of phrase ( k = 10 ) for each document while testing all three methods.The result shows our result has guaranteed improvement over SingleRank and Topical PageRank on all four corpora.
+
+================================== Ai Message ==================================
+
+SingleRank and Topical PageRank

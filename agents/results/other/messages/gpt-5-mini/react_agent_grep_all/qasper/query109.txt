@@ -1,0 +1,28 @@
+================================ Human Message =================================
+
+QUERY:
+What pretrained language model is used?
+
+TABLE OF CONTENTS (TOC):
+1 | Common-Knowledge Concept Recognition for SEVA
+1.1 | Abstract
+1.2 | INTRODUCTION
+1.3 | BACKGROUND AND MOTIVATION
+1.4 | CONCEPT RECOGNITION
+1.4.1 | BIO Labelling Scheme
+1.4.1.1 | 11. mea : represents measures, features, or behaviors such as cost , risk , or feasibility .
+1.4.2 | Abbreviations
+1.4.3 | Common-Knowledge Definitions
+1.4.4 | CR Dataset Construction and Pre-processing
+1.4.5 | Fine tuning with BERT
+1.5 | RELATION EXTRACTION
+1.5.1 | Hyponyms from Definitions
+1.5.2 | Hyponyms from POS tags
+1.5.3 | Relations from Abbreviations
+1.5.4 | Relation Extraction using Verb Phrase Chunking
+1.6 | CONCLUSION AND FUTURE WORK
+1.7 | References
+
+================================== Ai Message ==================================
+
+BERT

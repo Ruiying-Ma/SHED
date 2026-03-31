@@ -1,0 +1,59 @@
+================================ Human Message =================================
+
+QUERY:
+Were any datasets other than WMT used to test the model?
+
+TABLE OF CONTENTS (TOC):
+1 | Hint-Based Training for Non-Autoregressive Machine Translation Zhuohan Li 1 Zi Lin 2,3 Di He 2 Fei Tian 4 Tao Qin 5 Liwei Wang 2 Tie-Yan Liu 5 1 UC Berkeley 2 Peking University 3 Google AI 4 Facebook 5 Microsoft Research zhuohan@cs.berkeley.edu { zi.lin, di he, wanglw } @pku.edu.cn feitia@fb.com { taoqin, tyliu } @microsoft.com
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2 Approach
+1.3.1 | 2.1 Observation: Illed States and Attentions
+1.3.2 | 2.2 Hints from the ART teacher Model
+1.4 | 3 Experiments
+1.4.1 | 3.1 Experimental Settings
+1.4.2 | 3.2 Inference
+1.4.3 | 3.3 Experimental Results
+1.5 | 4 Conclusion
+1.6 | Acknowledgment
+1.7 | References
+1.8 | Appendix
+1.8.1 | A Related Works
+1.8.1.1 | A.1 AutoRegressive Translation
+1.8.1.2 | A.2 Non-AutoRegressive Translation
+1.8.1.3 | A.3 Knowledge Distillation and Hint-Based Training
+1.8.2 | B Network Architecture
+1.8.3 | C Extra Experimental Settings
+1.8.4 | D Case Study
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_lwNDB2w55T2Y9ebsvW0NprUP)
+ Call ID: call_lwNDB2w55T2Y9ebsvW0NprUP
+  Args:
+    section_id: 1.4.1
+  read_section (call_iUEIsItXrwCzezNRRku0JmS3)
+ Call ID: call_iUEIsItXrwCzezNRRku0JmS3
+  Args:
+    section_id: 1.4.3
+
+================================= Tool Message =================================
+Name: read_section
+
+3.1 Experimental Settings
+The evaluation is on two widely used public ma- chine translation datasets: IWSLT14 German-to- English (De-En) ( Huang et al. , 2017 ; Bahdanau et al. , 2016 ) and WMT14 English-to-German (En- De) dataset ( Wu et al. , 2016 ; Gehring et al. , 2017 ).  To compare with previous works, we also re- verse WMT14 English-to-German dataset and ob- tain WMT14 German-to-English dataset.Figure 3: Hint-based training from ART model to NART model.We pretrain Transformer ( Vaswani et al. , 2017 ) as the teacher model on each dataset, which achieves 33.26/27.30/31.29 in terms of BLEU ( Papineni et al.  , 2002 ) in IWSLT14 De-En, WMT14 En-De and De-En test sets. The student model shares the same number of layers in en- coder/decoder, size of hidden states/embeddings and number of heads as the teacher models (Fig- ure 3 ). Following Gu et al. ( 2017 ); Kim and Rush ( 2016 ), we replace the target sentences by the de- coded output of the teacher models. Hyperparameters ( γ st , γ tr , λ, µ ) for hint-based learning are determined to make the scales of three loss components similar after initialization. We also employ label smoothing of value ls = 0 . 1 ( Szegedy et al. , 2016 ) in all experiments. We use Adam optimizer and follow the setting in Vaswani et al. ( 2017 ).  Models for WMT14/IWSLT14 tasks are trained on 8/1 NVIDIA M40 GPUs respec- tively. The model is based on the open-sourced tensor2tensor ( Vaswani et al. , 2018 ). 1 More settings can be found in Appendix.
+
+================================= Tool Message =================================
+Name: read_section
+
+3.3 Experimental Results
+We compare our model with several baselines, in- cluding three ART models, the fertility based (FT) NART model ( Gu et al. , 2017 ), the determinis- tic iterative refinement based (IR) NART model ( Lee et al. , 2018 ), and the Latent Transformer (LT; Kaiser et al.  , 2018 ) which is not fully non- autoregressive by incorporating an autoregressive sub-module in the NART model architecture.The results are shown in the Table 1 . 2 Across
+1 Open-source code can be found at https://github. com/zhuohan123/hint-nart
+2 ‡ and † indicate that the latency is measured on our own platform or by previous works, respectively.  Note that the latencies may be affected by hardware settings and such ab- solute values are not fair for direct comparison, so we also list the speedup of the works compared to their ART baselines.WMT14 IWSLT14 Models En-De De-En De-En Latency Speedup Autoregressive models LSTM-based S2S ( Wu et al. , 2016 ; Bahdanau et al. , 2016 ) 24. 60 / 28.53 / / ConvS2S ( Gehring et al. , 2017 ; Edunov et al. , 2017 ) 26.43 / 32.84 / / Transformer ( Vaswani et al. , 2017 ) 27.30 31.29 33.26 784 ms ‡ 1.00 × Non-autoregressive models FT ( Gu et al. , 2017 ) 17. 69 20.62 / 39 ms † 15.6 × FT (rescoring 10 candidates) 18.66 22.41 / 79 ms † 7.68 × FT (rescoring 100 candidates) 19.17 23.20 / 257 ms † 2.36 × IR ( Lee et al. , 2018 , adaptive refinement steps) 21.54 25.43 / / 2. 39 × LT ( Kaiser et al. , 2018 ) 19.8 / / 105 ms † 5.78 × LT (rescoring 10 candidates) 21.0 / / / / LT (rescoring 100 candidates) 22.5 / / / / NART w/ hints 21.11 25.24 25.55 26 ms ‡ 30. 2 × NART w/ hints ( B = 4 , 9 candidates) 25.20 29.52 28.80 44 ms ‡ 17.8 ×
+Table 1: Performance on WMT14 En-De, De-En and IWSLT14 De-En tasks. “/” means non-reportable.different datasets, our method achieves significant improvements over previous non-autoregressive models.  Specifically, our method outperforms fer- tility based NART model with 6.54/7.11 BLEU score improvements on WMT En-De and De-En tasks in similar settings and achieves comparable results with state-of-the-art LSTM-based model on WMT En-De task. Furthermore, our model achieves a speedup of 30.2 (output a single sen- tence) or 17.8 (teacher rescoring) times over the ART counterparts.  Note that our speedups signif- icantly outperform all previous works, because of our lighter design of the NART model: without any computationally expensive module trying to improve the expressiveness.We also visualize the hidden state cosine sim- ilarities and attention distributions for the NART model with hint-based training, as shown in Fig- ure 1 (c) and 2 (c).  With hints from hidden states, the hidden states similarities of the NART model decrease in general, and especially for the posi- tions where the original NART model outputs in- coherent phrases. The attention distribution of the NART model after hint-based training is more similar to the ART teacher model and less ambigu- ous comparing to the NART model without hints.According to our empirical analysis, the per- centage of repetitive words drops from 8.3% to 6. 5% by our proposed methods on the IWSLT14 De-En test set, which is a 20%+ reduction. This shows that our proposed method effectively im- prove the quality of the translation outputs. We also provide several case studies in Appendix.Finally, we conduct an ablation study on IWSLT14 De-En task. As shown in Table 2 , the
+ Model L nll L nll + L align L nll + L align + L hid BLEU 23.08 24.76 25.55 Long-sentence BLEU 17.48 19.24 20.63
+Table 2: Ablation studies on IWSLT14 De-En. Results are BLEU scores without teacher rescoring.hints from word alignments provide an improve- ment of about 1. 6 BLEU points, and the hints from hidden states improve the results by about 0.8 BLEU points. We also test these models on a subsampled set whose source sentence lengths are at least 40. Our model outperforms the base- line model by more than 3 BLEU points (20.63 v.s. 17.48).
+
+================================== Ai Message ==================================
+
+Yes. Besides WMT14, the model was also evaluated on the IWSLT14 German-to-English (De-En) dataset.

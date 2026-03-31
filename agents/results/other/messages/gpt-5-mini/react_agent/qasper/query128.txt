@@ -1,0 +1,151 @@
+================================ Human Message =================================
+
+QUERY:
+Do they use pre-trained embeddings like BERT?
+
+TABLE OF CONTENTS (TOC):
+1 | Hierarchical Neural Story Generation
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2 Writing Prompts Dataset
+1.4 | 3 Approach
+1.4.1 | 3.1 Hierarchical Story Generation
+1.4.2 | 3.2 Efficient Learning with Convolutional Sequence-to-Sequence Model
+1.4.3 | 3.3 Modeling Unbounded Context with Gated Multi-Scale Self-attention
+1.4.4 | 3.4 Improving Relevance to Input Prompt with Model Fusion
+1.5 | 4 Related Work
+1.5.1 | 4.1 Story Generation
+1.5.2 | 4.2 Hierarchical Text Generation
+1.5.3 | 4.3 Fusion Models
+1.6 | 5 Experimental Setup
+1.6.1 | 5.1 Baselines
+1.6.2 | 5.2 Fusion Training
+1.6.3 | 5.3 Training
+1.6.4 | 5.4 Generation
+1.6.5 | 5.5 Evaluation
+1.7 | 6 Results
+1.8 | 7 Discussion
+1.8.1 | 7.1 Generation Quality
+1.8.2 | 7.2 Use of Attention
+1.9 | 8 Conclusion
+1.10 | References
+1.11 | 9 Appendix of Model Architectures
+1.11.1 | 9.1 GCNN Language Model + Self-Attention
+1.11.2 | 9.2 Conv seq2seq + self-attention
+1.11.3 | 9.3 Ensemble: Conv seq2seq + self-attention
+1.11.4 | 9.4 Fusion: Conv seq2seq + self-attention
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_y74R1W5F5iVpsYrKdXL5uBIR)
+ Call ID: call_y74R1W5F5iVpsYrKdXL5uBIR
+  Args:
+    section_id: 1.4
+
+================================= Tool Message =================================
+Name: read_section
+
+3 Approach
+The challenges of W RITING P ROMPTS are primar- ily in modeling long-range dependencies and con- ditioning on an abstract, high-level prompt. Re- current and convolutional networks have success- fully modeled sentences ( Jozefowicz et al. , 2016 ; Dauphin et al. , 2017 ), but accurately modeling several paragraphs is an open problem.  While seq2seq networks have strong performance on a variety of problems, we find that they are unable to build stories that accurately reflect the prompts. We will evaluate strategies to address these chal- lenges in the following sections.
+3.1 Hierarchical Story Generation
+High-level structure is integral to good stories, but language models generate on a strictly-word-by- word basis and so cannot explicitly make high- level plans. We introduce the ability to plan by decomposing the generation process into two lev- els. First, we generate the premise or prompt of the story using the convolutional language model from Dauphin et al. ( 2017 ). The prompt gives a sketch of the structure of the story.  Second, we use a seq2seq model to generate a story that follows the premise. Conditioning on the prompt makes it easier for the story to remain consistent and also have structure at a level beyond single phrases.1 www.github.com/pytorch/fairseq 2 www.reddit.com/r/WritingPrompts/
+Figure 2: Self-Attention Mechanism of a single head, with GLU gating and downsampling.  Mul- tiple heads are concatenated, with each head using a separate downsampling function.
+3.2 Efficient Learning with Convolutional Sequence-to-Sequence Model
+The length of stories in our dataset is a challenge for RNNs, which process tokens sequentially. To transform prompts into stories, we instead build on the convolutional seq2seq model of Gehring et al. ( 2017 ), which uses deep convolutional net- works as the encoder and decoder. Convolutional models are ideally suited to modeling long se- quences, because they allow parallelism of com- putation within the sequence.  In the Conv seq2seq model, the encoder and decoder are connected with attention modules ( Bahdanau et al. , 2015 ) that perform a weighted sum of encoder outputs, using attention at each layer of the decoder.
+3.3 Modeling Unbounded Context with Gated Multi-Scale Self-attention
+CNNs can only model a bounded context win- dow, preventing the modeling of long-range de- pendencies within the output story. To en- able modeling of unbounded context, we supple- ment the decoder with a self-attention mechanism ( Sukhbaatar et al. , 2015 ; Vaswani et al. , 2017 ),
+Figure 3: Multihead self-attention mechanism.  The decoder layer depicted attends with itself to gate the input of the subsequent decoder layer.which allows the model to refer to any previously generated words. The self-attention mechanism improves the model’s ability to extract long-range context with limited computational impact due to parallelism.Gated Attention: Similar to Vaswani et al. ( 2017 ), we use multi-head attention to allow each head to attend to information at different posi- tions.  However, the queries, keys and values are not given by linear projections but by more expres- sive gated deep neural nets with Gated Linear Unit ( Dauphin et al. , 2017 ) activations. We show that gating lends the self-attention mechanism crucial capacity to make fine-grained selections.Multi-Scale Attention: Further, we propose to have each head operating at a different time scale, depicted in Figure 2 .  Thus the input to each head is downsampled a different amount—the first head sees the full input, the second every other input timestep, the third every third input timestep, etc. The different scales encourage the heads to attend to different information. The downsampling oper- ation limits the number of tokens in the attention maps, making them sharper.The output of a single attention head is given by
+ h L +1 0: t = Linear v ( h L 0: t − 1 ) (1) softmax( q ( h L 0: t ) k ( h L 0: t ) > )
+where h L 0: t contains the hidden states up to time t
+at layer L , and q, k, v are gated downsampling net- works as shown in Figure 2 . Unlike Vaswani et al.  ( 2017 ), we allow the model to optionally attend to a 0 vector at each timestep, if it chooses to ignore the information of past timesteps (see Figure 3 ). This mechanism allows the model to recover the non-self-attention architecture and avoid attending to the past if it provides only noise. Additionally, we do not allow the self-attention mechanism to attend to the current timestep, only the past.
+3.4 Improving Relevance to Input Prompt with Model Fusion
+Unlike tasks such as translation, where the seman- tics of the target are fully specified by the source, the generation of stories from prompts is far more open-ended. We find that seq2seq models ignore the prompt and focus solely on modeling the sto- ries, because the local dependencies required for language modeling are easier to model than the subtle dependencies between prompt and story.We propose a fusion-based approach to en- courage conditioning on the prompt.  We train a seq2seq model that has access to the hidden states of a pretrained seq2seq model. Doing so can be seen as a type of boosting or residual learning that allows the second model to focus on what the first model failed to learn—such as conditioning on the prompt. To our knowledge, this paper is the first to show that fusion reduces the problem of seq2seq models degenerating into language mod- els that capture primarily syntactic and grammati- cal information. The cold fusion mechanism of Sriram et al. ( 2017 ) pretrains a language model and subse- quently trains a seq2seq model with a gating mechanism that learns to leverage the final hidden layer of the language model during seq2seq train- ing. We modify this approach by combining two seq2seq models as follows (see Figure 4 ):
+ g t = σ ( W [ h Training t ; h Pretrained t ] + b ) h t = g t ◦ [ h Training t ; h Pretrained t ]
+where the hidden state of the pretrained seq2seq model and training seq2seq model (represented by h t ) are concatenated to learn gates g t . The gates are computed using a linear projection with the weight matrix W .  The gated hidden layers are combined by concatenation and followed by more fully connected layers with GLU activations (see
+Figure 4: Diagram of our fusion model, which learns a second seq2seq model to improve a pre- trained model. The separate hidden states are com- bined after gating through concatenation.Appendix). We use layer normalization ( Ba et al. , 2016 ) after each fully connected layer.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_aqZ759tvwOI2wVp6v5z3GHpz)
+ Call ID: call_aqZ759tvwOI2wVp6v5z3GHpz
+  Args:
+    section_id: 1.6.3
+
+================================= Tool Message =================================
+Name: read_section
+
+5.3 Training
+We implement models with the fairseq-py library in PyTorch. Similar to Gehring et al. ( 2017 ), we train using the Nesterov accelerated gradient method ( Sutskever et al. , 2013 ) using gradient clipping ( Pascanu et al. , 2013 ). We perform hy- perparameter optimization on each of our models by cross-validating with random search on a vali- dation set.  We provide model architectures in the appendix.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_RyGoozu91v0J68Oma1ciw6Sr)
+ Call ID: call_RyGoozu91v0J68Oma1ciw6Sr
+  Args:
+    section_id: 1.6.1
+
+================================= Tool Message =================================
+Name: read_section
+
+5.1 Baselines
+We evaluate a number of baselines:
+(1) Language Models: Non-hierarchical models for story generation, which do not condition on the prompt. We use both the gated convolutional lan- guage (GCNN) model of Dauphin et al. ( 2017 ) and our additional self-attention mechanism.(2) seq2seq: using LSTMs and convolutional seq2seq architectures, and Conv seq2seq with de- coder self-attention. (3) Ensemble: an ensemble of two Conv seq2seq with self-attention models.(4) KNN: we also compare with a KNN model to find the closest prompt in the training set for each prompt in the test set. A TF-IDF vector for
+Model Valid Perplexity Test Perplexity Conv seq2seq 45.27 45.54 + self-attention 42.01 42.32 + multihead 40.12 40. 39 + multiscale 38.76 38.91 + gating 37.37 37.94
+Table 2: Effect of new attention mechanism. Gated multi-scale attention significantly improves the perplexity on the W RITING P ROMPTS dataset.each prompt was created using FASTTEXT ( Bo- janowski et al. , 2016 ) and FAISS ( Johnson et al. , 2017 ) was used for KNN search.  The retrieved story from the training set is limited to 150 words to match the length of generated stories.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_9bItojJDuAY831UIEVycuiMN)
+ Call ID: call_9bItojJDuAY831UIEVycuiMN
+  Args:
+    section_id: 1.11
+
+================================= Tool Message =================================
+Name: read_section
+
+9 Appendix of Model Architectures
+9.1 GCNN Language Model + Self-Attention
+9 layers with hidden unit sizes 512 × 4 , 768 × 2 , 1024 × 3 and convolutional kernel widths 4 × 2 , 1 , 4 × 3 , 1 , 3 × 2 . Learning rate 1, momentum 0.99, dropout 0.1, embedding size 300, l2 normal- ization 1 e − 7 , 4 decoder self-attention heads.
+9.2 Conv seq2seq + self-attention
+3 layers in encoder with hidden unit sizes 128 × 2 , 512 and convolutional kernel widths 3 × 3 . 8 layers in the decoder with hidden unit sizes 512 × 4 , 768 × 2 , 1024 with convolutional kernel widths 4 × 8 . Learning rate 0.25, momentum 0.99, dropout 0. 3, embedding size 256, output embed- ding size 256, l2 nomalization 1 e − 7 , 4 decoder self-attention heads.
+9.3 Ensemble: Conv seq2seq + self-attention
+Two different Conv seq2seq models were trained and ensembled together by averaging with equal weights.
+9.4 Fusion: Conv seq2seq + self-attention
+The pretrained seq2seq model is the model in Sec- tion 9.2 . The additional fused model has the fol- lowing architecture:
+5 layers in the encoder with hidden unit sizes 128 × 2 , 512 × 3 and convolutional kernel widths 3 × 5 . 5 layers in the decoder with hidden unit sizes 512 × 3 , 768 × 2 and convolutional kernel widths 4 × 5 . Learning rate 0. 25, momentum 0.99, dropout 0.3, embedding size 256, output embed- ding size 256, l2 normalization 1 e − 7 , 4 decoder self-attention heads.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_metRWLWdVocEcYYtQZIpgvT8)
+ Call ID: call_metRWLWdVocEcYYtQZIpgvT8
+  Args:
+    section_id: 1.5
+
+================================= Tool Message =================================
+Name: read_section
+
+4 Related Work
+4.1 Story Generation
+Sequence-to-sequence neural networks ( Sutskever et al. , 2014 ) have achieved state of the art perfor- mance on a variety of text generation tasks, such as machine translation ( Sutskever et al. , 2014 ) and summarization ( Rush et al. , 2015 ). Recent work has applied these models to more open-ended gen- eration tasks, including writing Wikipedia articles ( Liu et al.  , 2018 ) and poetry ( Zhang and Lapata , 2014 ).Previous work on story generation has explored seq2seq RNN architectures ( Roemmele , 2016 ), but has focused largely on using various content to inspire the stories. For instance, Kiros et al. ( 2015 ) uses photos to inspire short paragraphs trained on romance novels, and Jain et al. ( 2017 ) chain a se- ries of independent descriptions together into a short story.  Martin et al. ( 2017 ) decompose story generation into two steps, first converting text into event representations, then modeling stories as se- quences of events before translating back to natu- ral language. Similarly, Harrison et al. ( 2017 ) gen- erate summaries of movies as sequences of events using an RNN, then sample event representations using MCMC. They find this technique can gener- ate text of the desired genre, but the movie plots
+ are not interpretable (as the model outputs events, not raw text). However, we are not aware of pre- vious work that has used hierarchical generation from a textual premise to improve the coherence and structure of stories.
+4.2 Hierarchical Text Generation
+Previous work has proposed decomposing the challenge of generating long sequences of text into a hierarchical generation task. For instance, Li et al. ( 2015b ) use an LSTM to hierarchically learn word, then sentence, then paragraph embed- dings, then transform the paragraph embeddings into text. Yarats and Lewis ( 2017 ) generate a dis- crete latent variable based on the context, then generates text conditioned upon it.
+4.3 Fusion Models
+Previous work has investigated the integration of language models with seq2seq models. The two models can be leveraged together without ar- chitectural modifications: Ramachandran et al. ( 2016 ) use language models to initialize the en- coder and decoder side of the seq2seq model inde- pendently, and Chorowski and Jaitly ( 2016 ) com- bine the predictions of the language model and seq2seq model solely at inference time.  Recent work has also proposed deeper integration. Gul- cehre et al. ( 2015 ) combined a trained language model with a trained seq2seq model to learn a gat- ing function that joins them. Sriram et al. ( 2017 ) propose training the seq2seq model given the fixed language model then learning a gate to filter the in- formation from the language model.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_5bhNHR4CdjRBoorXfG28Fphr)
+ Call ID: call_5bhNHR4CdjRBoorXfG28Fphr
+  Args:
+    section_id: 1.1
+
+================================= Tool Message =================================
+Name: read_section
+
+Abstract
+We explore story generation : creative sys- tems that can build coherent and fluent passages of text about a topic. We collect a large dataset of 300K human-written sto- ries paired with writing prompts from an online forum. Our dataset enables hierar- chical story generation, where the model first generates a premise, and then trans- forms it into a passage of text.  We gain further improvements with a novel form of model fusion that improves the relevance of the story to the prompt, and adding a new gated multi-scale self-attention mech- anism to model long-range context. Ex- periments show large improvements over strong baselines on both automated and human evaluations. Human judges prefer stories generated by our approach to those from a strong non-hierarchical model by a factor of two to one.
+
+================================== Ai Message ==================================
+
+No; the paper does not use pre-trained embeddings like BERT.

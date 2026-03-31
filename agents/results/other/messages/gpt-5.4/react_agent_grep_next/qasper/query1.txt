@@ -1,0 +1,50 @@
+================================ Human Message =================================
+
+QUERY:
+How is intent annotated?
+
+TABLE OF CONTENTS (TOC):
+1 | End-to-End Trainable Non-Collaborative Dialog System
+1.1 | Abstract
+1.2 | Introduction
+1.3 | Related Work
+1.4 | Non-Collaborative Task Annotation Scheme
+1.5 | Datasets
+1.5.1 | A NTI S CAM Dataset
+1.5.2 | P ERSUASION F OR G OOD Dataset
+1.6 | Model
+1.6.1 | Background
+1.6.2 | Intent and Semantic Slot Classifiers
+1.6.3 | Response Generation
+1.6.4 | Response Filtering
+1.7 | Experiments
+1.7.1 | Baseline Models
+1.7.2 | Automatic Evaluation Metrics
+1.7.3 | Human Evaluation Metrics
+1.8 | Results and Analysis
+1.9 | Conclusion and Future Work
+1.10 | Acknowledgements
+1.11 | Appendix
+1.11.1 | Anti-Scam Collection Setting
+1.11.2 | Training details
+1.11.3 | Example Dialog
+1.12 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_dvKdhot6EY4baqxZBqaivPBy)
+ Call ID: call_dvKdhot6EY4baqxZBqaivPBy
+  Args:
+    section_id: 1.4
+
+================================= Tool Message =================================
+Name: read_section
+
+Non-Collaborative Task Annotation Scheme
+To decouple syntactic and semantic information in utter- ances and provide detailed supervision, we design a hierar- chical intent annotation scheme for non-collaborative tasks. We first separate on-task and off-task intents. As on-task in- tents are key actions that can vary among different tasks, we need to specifically define on-task intents for each task.  On the other hand, since off-task content is too general to de- sign task-specific intents, we choose common dialog acts as the categories. The advantage of this hierarchical annotation scheme is apparent when starting a new non-collaborative task: we only need to focus on designing the on-task cate- gories and semantic slots which are the same as traditional task-oriented dialog systems. Consequently, we don’t have to worry about the off-task annotation design since the off- task category is universal. In the intent annotation scheme shown in Table 1, we list the designed intent annotation scheme for the newly collected A NTI S CAM dataset and the P ERSUASION F OR - G OOD dataset. We first define on-task intents for the datasets, which are key actions in the task. Since our A N - TI S CAM focuses on understanding and reacting towards elicitations, we define elicitation , providing information and refusal as on-task intents.  In the P ERSUASION F OR -
+G OOD dataset, we define nine on-task intents in Table 1 based on the original P ERSUASION F OR G OOD dialog act annotation scheme. All these intents are related to do- nation actions, which are salient on-task intents in the persuasion task. The off-task intents are the same for both tasks, including six general intents and six additional social intents.  General intents are more closely related to the syntactic meaning of the sentence ( open question , yes no question , positive answer , negative answer , respon- sive statement , and nonresponsive statement ) while social intents are common social actions ( greeting , closing , apol- ogy , thanking , respond to thank , and hold ).For specific tasks, we also design a semantic slot an- notation scheme for annotating sentences based on their semantic content.  We identify 13 main semantic slots in the anti-scam task, for example, credit card numbers. We present a detailed semantic slot annotation in Table 2. Fol- lowing Wang et al., we segment each conversation turn into single sentences and then annotate each sentence rather than turns.Annotation Examples order detail “Your order will arrive by Thursday afternoon.” order update “Should I cancel your order?” payment “Was payment made with a Visa card? ” name “Can you give me your name?” identity “I am from Amazon customer service.” address “Can confirm your billing address for me?” phone num “What is your phone number?” card info “I need the credit card info please” card num “Can you verify your card number for me?” card cvs “Next, I will need the CVS number from that card.” card date “Can I have expiration date? ” account detail “This is to confirm your account.” others “How are you doing?”
+Table 2: A NTI S CAM ’s semantic slot annotation scheme.
+
+================================== Ai Message ==================================
+
+Intent is annotated with a hierarchical scheme that first separates on-task and off-task intents, then annotates each sentence (after segmenting each conversation turn into single sentences). On-task intents are task-specific key actions, while off-task intents use universal dialog acts: six general intents and six social intents.

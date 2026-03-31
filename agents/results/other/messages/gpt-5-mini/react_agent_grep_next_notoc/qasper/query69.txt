@@ -1,0 +1,136 @@
+================================ Human Message =================================
+
+QUERY:
+What platform do the crowd-sourced workers come from?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_l5qBGQNt0weTwLHlSmt9ok29)
+ Call ID: call_l5qBGQNt0weTwLHlSmt9ok29
+  Args:
+    pattern: crowd-?sourced|crowd sourced|crowd-sourced|crowdsource|crowd source|crowdworkers|crowd workers|crowdworkers|workers come from|platform|Amazon Mechanical Turk|Mechanical Turk|MTurk
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+This article compares two multimodal resources that consist of diagrams which describe topics in elementary school natural sciences. Both resources contain the same diagrams and represent their structure using graphs, but differ in terms of their annotation schema and how the annotations have been created – depending on the resource in question – either by crowd-sourced workers or trained experts.  This article reports on two experiments that evaluate how effectively crowd-sourced and expert-annotated graphs can represent the multimodal structure of diagrams for representation learning using various graph neural networks. The results show that the identity of diagram elements can be learned from their layout features, while the expert annotations provide better representations of diagram types.Keywords: multimodality, diagrams, graph neural networks, annotation, crowd-sourcing
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_MfOy6ZFZvisxdH4ovEGNN5U6)
+ Call ID: call_MfOy6ZFZvisxdH4ovEGNN5U6
+  Args:
+    pattern: Amazon Mechanical Turk
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_5PVZ90QUaf9aLpinWarIV95k)
+ Call ID: call_5PVZ90QUaf9aLpinWarIV95k
+  Args:
+    pattern: crowd-sourced
+    }EOF:
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Tool 'grep_search_next' failed after 1 attempt with TypeError: grep_search_next() got an unexpected keyword argument '}EOF'. Please try again.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_OZEjKG3Wvm4clcIy64Rv3DAo)
+ Call ID: call_OZEjKG3Wvm4clcIy64Rv3DAo
+  Args:
+    pattern: crowd-?sourced
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+This article compares two multimodal resources that consist of diagrams which describe topics in elementary school natural sciences. Both resources contain the same diagrams and represent their structure using graphs, but differ in terms of their annotation schema and how the annotations have been created – depending on the resource in question – either by crowd-sourced workers or trained experts.  This article reports on two experiments that evaluate how effectively crowd-sourced and expert-annotated graphs can represent the multimodal structure of diagrams for representation learning using various graph neural networks. The results show that the identity of diagram elements can be learned from their layout features, while the expert annotations provide better representations of diagram types.Keywords: multimodality, diagrams, graph neural networks, annotation, crowd-sourcing
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_NGEK1prHvXh3VUwKuMsh5QL0)
+ Call ID: call_NGEK1prHvXh3VUwKuMsh5QL0
+  Args:
+    pattern: crowd
+    }EOF:
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Tool 'grep_search_next' failed after 1 attempt with TypeError: grep_search_next() got an unexpected keyword argument '}EOF'. Please try again.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_4Z5gs24IaldchH9cxnSspao1)
+ Call ID: call_4Z5gs24IaldchH9cxnSspao1
+  Args:
+    pattern: crowd
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+This article compares two multimodal resources that consist of diagrams which describe topics in elementary school natural sciences. Both resources contain the same diagrams and represent their structure using graphs, but differ in terms of their annotation schema and how the annotations have been created – depending on the resource in question – either by crowd-sourced workers or trained experts.  This article reports on two experiments that evaluate how effectively crowd-sourced and expert-annotated graphs can represent the multimodal structure of diagrams for representation learning using various graph neural networks. The results show that the identity of diagram elements can be learned from their layout features, while the expert annotations provide better representations of diagram types.Keywords: multimodality, diagrams, graph neural networks, annotation, crowd-sourcing
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_RSgpOB14jildIyjfFYyrefuv)
+ Call ID: call_RSgpOB14jildIyjfFYyrefuv
+  Args:
+    pattern: workers
+    }EOF:
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Tool 'grep_search_next' failed after 1 attempt with TypeError: grep_search_next() got an unexpected keyword argument '}EOF'. Please try again.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_FWOSR2dzD99rWzEM6cbPefRw)
+ Call ID: call_FWOSR2dzD99rWzEM6cbPefRw
+  Args:
+    pattern: workers
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+This article compares two multimodal resources that consist of diagrams which describe topics in elementary school natural sciences. Both resources contain the same diagrams and represent their structure using graphs, but differ in terms of their annotation schema and how the annotations have been created – depending on the resource in question – either by crowd-sourced workers or trained experts.  This article reports on two experiments that evaluate how effectively crowd-sourced and expert-annotated graphs can represent the multimodal structure of diagrams for representation learning using various graph neural networks. The results show that the identity of diagram elements can be learned from their layout features, while the expert annotations provide better representations of diagram types.Keywords: multimodality, diagrams, graph neural networks, annotation, crowd-sourcing
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_VawYerVEYYUjQvq08uBGiUeA)
+ Call ID: call_VawYerVEYYUjQvq08uBGiUeA
+  Args:
+    pattern: Amazon
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_OfkJA1tHrFpTdIIwpDRlNpMJ)
+ Call ID: call_OfkJA1tHrFpTdIIwpDRlNpMJ
+  Args:
+    pattern: Mechanical|MTurk|Amazon Web Services|Turk
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+2.1. Crowd-sourced Annotations from AI2D
+The Allen Institute for Artificial Intelligence Diagrams dataset (AI2D) contains 4903 English-language diagrams, which represent topics in primary school natural sciences, such as food webs, human physiology and life cycles, amounting to a total of 17 classes (Kembhavi et al., 2016). The dataset was originally developed to support research on diagram understanding and visual question answering (Kim et al. , 2018), but has also been used to study the con- textual interpretation of diagrammatic elements, such as ar- rows and lines (Alikhani and Stone, 2018).  The AI2D annotation schema models four types of dia- gram elements: text, graphics, arrows and arrowheads, whereas the semantic relations that hold between these el- ements are described using ten relations from a frame- work for analysing diagrammatic representations in Engel- hardt (2002). Each diagram is represented using a Diagram Parse Graph (DPG), whose nodes stand for diagram ele- ments while the edges between the nodes carry information about their semantic relations.  The annotation for AI2D, which includes layout segmentations for the diagram im- ages, DPGs and a multiple choice question-answer set, was created by crowd-sourced non-expert annotators on Ama- zon Mechanical Turk 1 (Kembhavi et al., 2016, 243).  I have previously argued that describing different types of multimodal structures in diagrammatic representations re- quires different types of graphs (Hiippala and Orekhova, 2018). To exemplify, many forms of multimodal discourse are assumed to possess a hierarchical structure, whose rep- resentation requires a tree graph.  Diagrams, however, use arrows and lines to draw connections between elements that are not necessarily part of the same subtree, and for this rea- son representing connectivity requires a cyclic graph. AI2D DPGs, in turn, conflate the description of semantic rela- tions and connections expressed using diagrammatic ele- ments.  Whether computational modelling of diagrammatic structures, or more generally, multimodal discourse pars- ing, benefits from pulling apart different types of multi- modal structure remains an open question, which we pur- sued by developing an alternative annotation schema for AI2D, named AI2D-RST, which is introduced below.
+
+================================== Ai Message ==================================
+
+Amazon Mechanical Turk.

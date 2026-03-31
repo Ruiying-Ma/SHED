@@ -1,0 +1,123 @@
+================================ Human Message =================================
+
+HYPOTHESIS:
+Confidentiality of Agreement: Receiving Party shall not disclose the fact that Agreement was agreed or negotiated.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_BFFFsWS4RwES2PAp4TvbSPcp)
+ Call ID: call_BFFFsWS4RwES2PAp4TvbSPcp
+  Args:
+    pattern: fact that (this )?Agreement|existence of (this )?Agreement|negotiat|agreed|entered into|disclose.*agreement|publicity|press release|announcement
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+B.The  Parties  have  agreed  to  comply  with  this  Agreement  in  connection  with  the  disclosure  and  use  of Confidential Information.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_f0uZmQPDVhaOMItsBXKCVs6e)
+ Call ID: call_f0uZmQPDVhaOMItsBXKCVs6e
+  Args:
+    pattern: fact that (this )?Agreement|existence of (this )?Agreement|negotiat|agreed|entered into|disclose.*agreement|publicity|press release|announcement
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+a) the fact that discussions and negotiations are taking place concerning the Purpose and the status of those discussions and negotiations;Page 1 of 5
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_UC9nSYHJ1M5VZmxY1ra1pYlR)
+ Call ID: call_UC9nSYHJ1M5VZmxY1ra1pYlR
+  Args:
+    pattern: fact that discussions and negotiations|status of those discussions|Confidential Information means|confidential information.*fact that
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+a) the fact that discussions and negotiations are taking place concerning the Purpose and the status of those discussions and negotiations;Page 1 of 5
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_eaRtfHqeiB54vmiK81rE58zV)
+ Call ID: call_eaRtfHqeiB54vmiK81rE58zV
+  Args:
+    pattern: shall not disclose|must not disclose|may not disclose|not disclose.*fact|not reveal.*fact|Confidential Information
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+A.The Parties intend to enter into discussions relating to the Purpose which will involve the exchange of Confidential Information between them.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_TcwSvKK5CI6pPqXLiVevqEd1)
+ Call ID: call_TcwSvKK5CI6pPqXLiVevqEd1
+  Args:
+    pattern: shall not disclose|must not disclose|may not disclose|not disclose.*fact|not reveal.*fact|Confidential Information
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+B.The  Parties  have  agreed  to  comply  with  this  Agreement  in  connection  with  the  disclosure  and  use  of Confidential Information.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_2XQIdws8JtSuygom0BftfyQQ)
+ Call ID: call_2XQIdws8JtSuygom0BftfyQQ
+  Args:
+    pattern: shall not disclose|must not disclose|may not disclose|not disclose.*fact|not reveal.*fact|Confidential Information
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1. DEFINITIONS
+Affiliate : shall mean any other corporation or other form of business entity, which, directly or indirectly, controls, is controlled by, or is under common control with, a Party at any time during the term of this Agreement.  For purposes of this definition, the term “control” means direct or indirect beneficial ownership of more than 50% of the voting share or interest of the entity;
+Confidential Information : has the meaning given in clause 2 of this Agreement;
+ Disclosing Party : a Party to this Agreement which discloses its Confidential Information to the other Party;
+Purpose :  [[INSERT  DETAILS  e.g.  to  establish  a  business  relationship  in  respect  to  the  supply  of  [named  service provision or goods] from X, etc]];
+Receiving Party : a Party to this Agreement which receives the Confidential Information from the other Party;
+ Representatives : any employees, officers, directors, professional advisors or consultants in relation to each Party and any of its Affiliates, who are actively and directly engaged in the Purpose;
+Term : has the meaning given in clause 10.1 of this Agreement.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_TCuIoVKNoiGT7j2WIm4aidKm)
+ Call ID: call_TCuIoVKNoiGT7j2WIm4aidKm
+  Args:
+    pattern: 2\.|Confidential Information shall mean|includes|fact that discussions and negotiations are taking place
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+10.2.The rights and obligations contained in this Agreement shall continue in full force and effect for  [two (2)] years after expiration of the Term or termination of this Agreement.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_yswdZetbnHBL4V1y5X65xGkD)
+ Call ID: call_yswdZetbnHBL4V1y5X65xGkD
+  Args:
+    pattern: ^2\.|2\. CONFIDENTIAL INFORMATION|fact that discussions and negotiations are taking place
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+a) the fact that discussions and negotiations are taking place concerning the Purpose and the status of those discussions and negotiations;Page 1 of 5
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_JnGC1N01sUAE0AlPY6VyBHXZ)
+ Call ID: call_JnGC1N01sUAE0AlPY6VyBHXZ
+  Args:
+    pattern: Receiving Party shall.*not disclose|Receiving Party.*shall keep confidential|shall keep.*Confidential Information confidential|not disclose.*Confidential Information
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+c) not disclose or make available any Confidential Information in whole or in part to any person except as expressly permitted by and in accordance with this Agreement;and
+
+================================== Ai Message ==================================
+
+Contradiction

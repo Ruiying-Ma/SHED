@@ -1,0 +1,103 @@
+================================ Human Message =================================
+
+QUERY:
+How do they discover coherent word clusters?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_rprFRwyEa6AyrB0bLzr7j9aF)
+ Call ID: call_rprFRwyEa6AyrB0bLzr7j9aF
+  Args:
+    pattern: coherent word clusters|word clusters|clusters
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+In this paper, we pose the question: do people talk about women and men in different ways? We introduce two datasets and a novel integra- tion of approaches for automatically inferring gender associations from language, discover- ing coherent word clusters, and labeling the clusters for the semantic concepts they repre- sent.  The datasets allow us to compare how people write about women and men in two dif- ferent settings - one set draws from celebrity news and the other from student reviews of computer science professors. We demonstrate that there are large-scale differences in the ways that people talk about women and men and that these differences vary across domains. Human evaluations show that our methods sig- nificantly outperform strong baselines.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_gRVUkOxUMrnvtS4b8uRvYNMN)
+ Call ID: call_gRVUkOxUMrnvtS4b8uRvYNMN
+  Args:
+    pattern: discovering coherent word clusters|labeling the clusters|cluster
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+In this paper, we pose the question: do people talk about women and men in different ways? We introduce two datasets and a novel integra- tion of approaches for automatically inferring gender associations from language, discover- ing coherent word clusters, and labeling the clusters for the semantic concepts they repre- sent.  The datasets allow us to compare how people write about women and men in two dif- ferent settings - one set draws from celebrity news and the other from student reviews of computer science professors. We demonstrate that there are large-scale differences in the ways that people talk about women and men and that these differences vary across domains. Human evaluations show that our methods sig- nificantly outperform strong baselines.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_I4qxVMbTB3VJrNRBunPAS1bB)
+ Call ID: call_I4qxVMbTB3VJrNRBunPAS1bB
+  Args:
+    pattern: LDA|topic model|clustering|k-means|Brown|spectral|PMI|coherence
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+A.2 Clustering and Cluster Labeling Results
+Tables 7 and 8 provide the clustering and clus- ter labeling results for the top- n clusters in each domain, ranked by ascending normalized sum of squared errors. During clustering, we set k to N 50 , where N was the number of embeddings being clustered. In the celebrity domain, this resulted in 45 clusters; in Table 7 , we show the top 12.  In the professor domain, this resulted in 16 clusters; in Table 8 , we show the top 6.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_s1CDRXushFRUgmfeAHnNvWOK)
+ Call ID: call_s1CDRXushFRUgmfeAHnNvWOK
+  Args:
+    pattern: normalized sum of squared errors|embeddings being clustered|During clustering
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+A.2 Clustering and Cluster Labeling Results
+Tables 7 and 8 provide the clustering and clus- ter labeling results for the top- n clusters in each domain, ranked by ascending normalized sum of squared errors. During clustering, we set k to N 50 , where N was the number of embeddings being clustered. In the celebrity domain, this resulted in 45 clusters; in Table 7 , we show the top 12.  In the professor domain, this resulted in 16 clusters; in Table 8 , we show the top 6.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_wfNdALRl9pc1CseQ266hQeaK)
+ Call ID: call_wfNdALRl9pc1CseQ266hQeaK
+  Args:
+    pattern: sum of squared errors|k to N 50|embedding
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+A.2 Clustering and Cluster Labeling Results
+Tables 7 and 8 provide the clustering and clus- ter labeling results for the top- n clusters in each domain, ranked by ascending normalized sum of squared errors. During clustering, we set k to N 50 , where N was the number of embeddings being clustered. In the celebrity domain, this resulted in 45 clusters; in Table 7 , we show the top 12.  In the professor domain, this resulted in 16 clusters; in Table 8 , we show the top 6.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_Ub5CWXZdIauSxlXHk39UhjTV)
+ Call ID: call_Ub5CWXZdIauSxlXHk39UhjTV
+  Args:
+    pattern: word embeddings|embeddings|cluster labeling
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+A.2 Clustering and Cluster Labeling Results
+Tables 7 and 8 provide the clustering and clus- ter labeling results for the top- n clusters in each domain, ranked by ascending normalized sum of squared errors. During clustering, we set k to N 50 , where N was the number of embeddings being clustered. In the celebrity domain, this resulted in 45 clusters; in Table 7 , we show the top 12.  In the professor domain, this resulted in 16 clusters; in Table 8 , we show the top 6.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_jnZlFG51VNCGvySWSFRQ7dPx)
+ Call ID: call_jnZlFG51VNCGvySWSFRQ7dPx
+  Args:
+    pattern: k-means|K-means|clustered using
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+5.1 Methods
+First, we trained domain-specific word embed- dings using the Word2Vec ( Mikolov et al. , 2013 ) CBOW model ( w ∈ R 100 ). Then, we used k- means clustering to cluster the embeddings of the gender-associated words. Since k-means may con- verge at local optima, we ran the algorithm 50 times and kept the model with the lowest sum of squared errors. To automatically label the clusters, we com- bined the grounded knowledge of WordNet ( Miller , 1995 ) and context-sensitive strengths of domain-specific word embeddings. Our algo-
+rithm is similar to Poostchi and Piccardi 2018 ’s approach, but we extend their method by introduc- ing domain-specific word embeddings for cluster- ing as well as a new technique for sense disam- biguation.  Given a cluster, our algorithm proceeds with the following three steps:
+1. Sense disambiguation :The goal is to as- sign each cluster word to one of its WordNet synsets; let S represent the collection of cho- sen synsets. We know that these words have been clustered in domain-specific embedding space, which means that in the context of the domain, these words are very close semanti- cally. Thus, we choose S ∗ that minimizes the total distance between its synsets.
+2. Candidate label generation : In this step, we generate L ,the set of possible cluster labels. Our approach is simple: we take the union of all hypernyms of the synsets in S ∗ .
+3. Candidate label ranking : Here, we rank the synsets in L .We want labels that are as close to all of the synsets in S ∗ as possible; thus, we score the candidate labels by the sum of their distances to each synset in S ∗ and we rank them from least to most distance.In steps 1 and 3, we use WordNet pathwise dis- tance, but we encourage the exploration of other distance representations as well.
+
+================================== Ai Message ==================================
+
+They first train domain-specific Word2Vec CBOW embeddings and then use k-means to cluster the embeddings of the gender-associated words. Because k-means can get stuck in local optima, they run it 50 times and keep the clustering with the lowest sum of squared errors.

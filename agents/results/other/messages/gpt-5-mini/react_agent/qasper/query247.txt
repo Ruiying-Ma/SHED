@@ -1,0 +1,89 @@
+================================ Human Message =================================
+
+QUERY:
+How is quality of the word vectors measured?
+
+TABLE OF CONTENTS (TOC):
+1 | Improving Word Representations: A Sub-sampled Unigram Distribution for Negative Sampling
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2 Word2Vec
+1.3.1 | 2.1 Architectures
+1.3.2 | 2.2 Negative Sampling
+1.3.3 | 2.3 Sub-sampling
+1.4 | 3 Related Work
+1.5 | 4 Sub-sampled Unigram Distribution
+1.5.1 | 4.1 Critical Word
+1.5.2 | 4.2 Semantics Quantification
+1.5.3 | 4.3 Expression of Sub-sampling Rate
+1.5.4 | 4.4 Constants Estimation
+1.5.5 | 4.5 Discussions
+1.6 | 5 Experiments
+1.6.1 | 5.1 Experimental Setup
+1.6.1.1 | 5.1.1 Baselines
+1.6.1.2 | 5.1.2 Training Corpora
+1.6.1.3 | 5.1.3 Training details
+1.6.2 | 5.2 Task 1: Word Similarity Task
+1.6.2.1 | 5.2.1 Task Description
+1.6.2.2 | 5.2.2 Results
+1.6.3 | 5.3 Task 2: Synonym Selection Task
+1.6.3.1 | 5.3.1 Task Description
+1.6.3.2 | 5.3.2 Results
+1.6.4 | 5.4 Task 3: Word Analogy Task
+1.6.4.1 | 5.4.1 Task Description
+1.6.4.2 | 5.4.2 Results
+1.6.5 | 5.5 Extension of Semantics Quantification 5.5.1 MSR Sentence Completion Task
+1.6.5.1 | 5.5.2 Results
+1.7 | 6 Conclusions
+1.8 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_Eoketsheu6HM28JWFWttkDVK)
+ Call ID: call_Eoketsheu6HM28JWFWttkDVK
+  Args:
+    section_id: 1.6
+
+================================= Tool Message =================================
+Name: read_section
+
+5 Experiments
+To show the advantages of our noise distribu- tion, we conduct experiments on three evaluation tasks. While the word analogy task ( Mikolov et al. , 2013b ) is our focus for testing the linear re- lationships between word vectors, we also evalu- ate the learned word vectors on the word similarity task ( Pennington et al. , 2014 ) and the synonym se- lection task ( Liu et al. , 2015 ). In the following, we firstly describe the experi- mental setup including baselines, training corpora and details. Next, we report experimental results for the three NLP tasks. At last, we introduce the semantics weighted model proposed for the MSR sentence completion task ( Zweig et al. , 2012 ).
+5.1 Experimental Setup
+5.1.1 Baselines
+We train the two models, SG and CBOW, using the original noise distribution and other two obtained by our approach, specifically,
+(1) Uni 3 / 4 . The smoothed unigram distribution proposed by Mikolov et al. ( 2013b ).(2) Sub L 1 . The sub-sampled uinigram distribution, of which the threshold t c is estimated by wLSE-1. (3) Sub L 2 .  The sub-sampled uinigram distribution, of which the threshold t c is estimated by wLSE-2.
+5.1.2 Training Corpora
+Our training corpora come from four sources, de- scribed as below:
+(1) BWLM. The “One Billion Word Language Modeling Benchmark” 1 , which is already pre- processed and has almost 1 billion tokens.(2) Wiki10. The April 2010 snapshot of the Wikipedia corpus 2 with a total of about 2 million articles and 1 billion tokens.(3) UMBC.  The UMBC WebBase corpus 3 from the Stanford WebBase projects February 2007 Web crawl, with over 3 billion tokens.(4) MSR. The MSR corpus containing 5 Conan
+1 http://www.statmt.org/lm-benchmark 2 http://www.psych.ualberta.ca/ ˜westburylab/downloads/westburylab. wikicorp.download.html 3 http://ebiquity.umbc.  edu/blogger/2013/05/01/ umbc-webbase-corpus-of-3b-english-words
+Corpus Size Mcn Vocab t c -1 t c -2 BWLM 0.7 B 20 195 k 3.10 3.17 Wiki10 1.0 B 50 249 k 2.76 2.80 UMBC 3.0 B 50 267 k 1.33 1. 39 MSR 47 M 5 77 k 13.2 13.1
+Table 1 : Information of the training corpora.Doyle Sherlock Holmes novels 4 with about 50 million tokens.The first three large corpora are used for word similarity, synonym selection, and word analogy tasks. The MSR corpus is designated for the MSR sentence completion task. We pre-process the cor- pora by converting all words into lowercase and removing all the non-alphanumeric.  The num- ber of remaining tokens for each corpus is listed in the column Size of Table 1 . Vocabularies are built by discarding words whose occurrences are less than the threshold shown in the column Mcn . The column Vocab represents the sizes of the re- sulted vocabularies.  The rightmost two columns are the sub-sampling rates for our noise distribu- tion by the wLSE-1 and wLSE-2 estimations, re- spectively. The values are 10 6 times of the true ones for readability.
+5.1.3 Training details
+We implement the training of word vectors with the word2vec tool 5 , in which the part of noise distribution is modified to support several choices. For SG and CBOW, we set the vector dimension- ality to 100, and the size of the context window to 5. We choose 10 negative samples for each train- ing sample in the models.  The models are trained using the stochastic gradient decent (SGD) algo- rithm with a linear decaying learning rate with an initial value of 0.025 in SG and 0.05 in CBOW. We train the models on the three large corpora for 2 epochs, and for MSR’s Holmes novels the value may vary. Results in this paper are shown in per- centages and each of them is the average result of 4 repeated experiments, unless otherwise stated.
+5.2 Task 1: Word Similarity Task
+5.2.1 Task Description
+The task computes the correlation between the word similarity scores by human judgment and the
+word distances in vector space. We use Pearson correlation coefficient ρ p as the metric, the higher of which the better the word vectors are. The ex- pression of ρ p is
+ρ p = Cov( φ, ˆ φ ) q Var( φ )Var( ˆ φ ) , (19)
+ where φ and ˆ φ are random variables for the word similarity scores by human judgment and the cosine distances between word vectors, re- spectively. Benchmark datasets for this task in- clude RG ( Rubenstein and Goodenough , 1965 ), MC ( Miller and Charles , 1991 ), WS ( Finkelstein et al. , 2001 ), MEN ( Bruni et al. , 2012 ), and RW ( Luong et al.  , 2013 ).
+5.2.2 Results
+We implement the task on the mentioned 5 datasets and show the results in the column Word Similarity of Table 2 . At the first glance, our noise distributions Sub L 1 and Sub L 2 perform slightly better than Uni 3 / 4 . Significant improvements can be achieved on two small datasets RG and MC, because they are more sensitive to the vector qual- ity.  Another observation is that CBOW is more affected by Sub L 1 and Sub L 2 than SG, if com- paring results on RG and MC with Wiki10 cor- pus. These results show that our noise distribu- tions have the potential as high as or even higher than the smoothed unigram distribution in learning good word vectors.
+5.3 Task 2: Synonym Selection Task
+5.3.1 Task Description
+This task attempts to select the semantically clos- est word, from the candidate answers, to the stem word. For example, given the stem word “costly” and the candidate answers “expensive, beauti- ful, popular, complicated”, the most similar word should be “expensive”. For each candidate an- swer, we compute the cosine similarity score be- tween its word vector and that of the stem word.  The candidate answer with the highest score is our final answer for a question. Here we use the TOEFL dataset ( Landauer and Dumais , 1997 ) with 80 synonym questions and the LEX 6 dataset with 303 questions collected by ourselves.4 https://www.microsoft. com/en-us/research/project/ msr-sentence-completion-challenge 5 https://code.google.com/archive/p/ word2vec
+ 6 We collect the questions from two ebooks 501 Synonym and Antonym Questions and 1001 Vocabulary & Spelling Questions provided on the eLearning platform LearningEx- press. https://www.learningexpresshub.com
+Size Model Noise Word Similarity Synonym Selection Word Analogy RG MC WS MEN RW LEX Toefl Tot Sem Syn Tot 0.7 B sg Uni 3 / 4 62.1 64.4 62.5 66. 8 43.3 66.1 74.6 67.9 61.4 57.4 59.2 Sub L 1 62.9 66.0 63.1 67.1 43.3 67.9 73.6 69.1 62.8 56.8 59.5 Sub L 2 63.0 66.8 62.8 67.1 43. 2 68.3 73.6 69.4 63.5 56.9 59.9 cbow Uni 3 / 4 64.3 66.4 60.4 66.1 44.0 66.4 79.6 69.2 53.4 58.7 56.4 Sub L 1 64.6 67.1 61.0 66.7 44. 1 67.4 78.2 69.7 57.4 59.8 58.7 Sub L 2 65.7 67.9 60.7 66.7 43.7 68.3 79.2 70.7 58.0 60.4 59.3 1.0 B sg Uni 3 / 4 77.2 81.4 68.2 70. 1 43.3 65.9 82.8 69.6 61.6 58.8 60.1 Sub L 1 77.2 81.9 68.7 70.5 43.6 65.6 86.3 70.2 64.2 58.6 61.1 Sub L 2 77.3 81.5 68.4 70.4 43. 5 64.7 84.4 69.1 63.9 58.7 61.1 cbow Uni 3 / 4 76.2 76.9 68.7 70.6 44.1 68.8 82.8 71.9 65.0 61.3 63.0 Sub L 1 77.4 80.3 69.3 71.0 44. 6 67.7 84.0 71.3 67.4 62.2 64.6 Sub L 2 76.8 80.0 69.2 71.2 44.3 69.5 80.8 72.0 68.4 62.7 65.3 3.0 B sg Uni 3 / 4 69.7 77.6 67.6 69. 5 46.7 72.6 84.6 75.1 46.4 63.2 55.7 Sub L 1 69.9 78.7 67.8 70.2 47.3 72.9 84.6 75.3 51.4 64.1 58.4 Sub L 2 70.5 79.2 67.8 70.2 47. 1 72.4 85.9 75.2 51.2 63.8 58.2 cbow Uni 3 / 4 72.7 77.5 67.3 71.0 48.2 76.5 87.8 78.8 44.9 64.6 55.9 Sub L 1 74.2 78.2 67.8 71.5 48. 5 77.2 87.8 79.4 50.6 66.6 59.5 Sub L 2 74.4 78.7 68.0 71.5 48.4 78.0 87.1 79.9 50.7 66.8 59.6
+Table 2 : Results of evaluation tasks on the learned word vectors, i.e.  , word similarity, synonym selection, and word analogy. The sub-sampling rate for the training corpora is 10 − 4 .
+5.3.2 Results
+We report the results of this task in the Synonym Selection column of Table 2 . For all the noise dis- tributions, the results are not stable on TOEFL dataset since it is quite small. Still, Sub L 1 and Sub L 2 have comparable performance with Uni 3 / 4 . In particular, Sub L 1 makes considerable improve- ments with Wiki10 corpus.  As for LEX dataset, Sub L 1 and Sub L 2 outperform Uni 3 / 4 in both SG and CBOW models with BWLM corpus. With the other two corpora, Sub L 2 performs better than Sub L 1 and Uni 3 / 4 using CBOW model. But again, the SG model appears to be less boosted by Sub L 1 and Sub L 2 in terms of the corresponding results.  Considering the unbalanced number of questions in these two datasets, we provide the total results on TOEFL+LEX and conclude that our noise dis- tributions are better than Uni 3 / 4 .
+5.4 Task 3: Word Analogy Task
+5.4.1 Task Description
+The task comes from the idea that arithmetic operations in a word vector space can be pre- dicted: given three words w a , w b , and w c , the goal is to find a word w d such that the relation w d : w c is the same as the relation w b : w a . Semantic questions are in the form
+of “Athens:Greece is as Berlin:German” and syntactic ones are like “dance:dancing is as fly:flying”.  Here we choose the fourth word ˆ w d by maximizing the cosine similarity such that ˆ w d = arg max w ∈ V cos ( v w b − v w a + v w c , v w ) ( Mikolov et al. , 2013c ). We test the learned word vectors on the Google analogy dataset ( Mikolov et al. , 2013b ), which contains 8,869 semantic questions and 10,675 syntactic ones.
+5.4.2 Results
+This task is our primary focus because it exposes interesting linear relationships between word vec- tors. Thus we conduct four sub-experiments to in- vestigate four aspects of our noise distributions.Model Responses. The two models SG and CBOW respond differently to our noise distribu- tions as shown in Table 2 .  When applying CBOW model on the three corpora, our noise distribu- tions Sub L 1 and Sub L 2 can result in significant im- provements compared with Uni 3 / 4 , especially on semantic questions. Specifically, the accuracy of semantic questions is improved by 2 to 6 points, and for syntactic questions it is 1.5 to 2 points.  As for the SG model, the improvements on seman- t...(truncated)
+
+================================== Ai Message ==================================
+
+By computing the Pearson correlation coefficient between human word similarity scores and the cosine distances between word vectors.

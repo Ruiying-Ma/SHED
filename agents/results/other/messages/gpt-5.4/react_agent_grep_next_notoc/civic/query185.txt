@@ -1,0 +1,21 @@
+================================ Human Message =================================
+
+QUERY:
+What is the type of the project '2021 Annual Street Maintenance'?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_halQMlWfh9fEIyrXsFvksjYA)
+ Call ID: call_halQMlWfh9fEIyrXsFvksjYA
+  Args:
+    pattern: 2021 Annual Street Maintenance
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+2021 Annual Street Maintenance ¾ Project  Description:    This  project  provides  for  the  reconstruction  and maintenance  of  City  streets.  Including  asphalt  pavement  repairs,  Type  II slurry seal, speed humps and new thermoplastic striping. ¾ Project Schedule:
+ Bids were received on June 10 th . Staff is currently reviewing the bids and verifying that they comply with the project specifications.  Begin Construction: July 2021
+
+================================== Ai Message ==================================
+
+capital

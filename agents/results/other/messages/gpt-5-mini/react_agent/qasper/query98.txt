@@ -1,0 +1,90 @@
+================================ Human Message =================================
+
+QUERY:
+what are the baselines?
+
+TABLE OF CONTENTS (TOC):
+1 | A Large-Scale Test Set for the Evaluation of Context-Aware Pronoun Translation in Neural Machine Translation Mathias Müller 1 , 2 Annette Rios 1 Elena Voita 3 , 4 Rico Sennrich 1 , 5
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2 Related Work
+1.3.1 | 2.1 Context-Aware NMT Models
+1.3.2 | 2.2 Evaluation of Pronoun Translation
+1.4 | 3 Test set with contrastive examples
+1.4.1 | 3.1 Automatic extraction of contrastive examples from corpora
+1.4.2 | 3.2 Evaluation by scoring
+1.5 | 4 Context-Aware NMT Models
+1.5.1 | 4.1 Recurrent Models
+1.5.2 | 4.2 Transformer Models
+1.6 | 5 Experiments
+1.7 | 6 Evaluation
+1.8 | 7 Conclusions
+1.9 | Acknowledgements
+1.10 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_ZZef3OurF3NPnVM9B0z8GG5l)
+ Call ID: call_ZZef3OurF3NPnVM9B0z8GG5l
+  Args:
+    section_id: 1.6
+
+================================= Tool Message =================================
+Name: read_section
+
+5 Experiments
+We train all models on the data from the WMT 2017 English → German news translation shared task ( ∼ 5.8 million sentence pairs). These cor- pora do not have document boundaries, therefore a small fraction of sentences will be paired with wrong context, but we expect the model to be ro- bust against occasional random context (see also
+Voita et al. 2018 ).  Experimental setups for the RNN and Transformer models are different, and we describe them separately.All RNN-based models are trained with Ne- matus ( Sennrich et al. , 2017 ). We learn a joint BPE model with 89.5k merge operations ( Sennrich et al. , 2016 ). We train shallow models with an embedding size of 512, a hidden layer size of 1024 and layer normalization.  Models are trained with Adam ( Kingma and Ba , 2015 ), with an initial learning rate of 0.0001. We apply early stopping based on validation perplexity. The batch size for training is 80, and the maximum length of training sequences is 100 (if input sentences are concatenated) or 50 (if input lines are single sen- tences). For our Transformer-based experiments, we use a custom implementation and follow the hyper- parameters from Vaswani et al. ( 2017 ); Voita et al. ( 2018 ). Systems are trained on lowercased text that was encoded using BPE (32k merge opera- tions). Models consist of 6 encoder and decoder layers with 8 attention heads. The hidden state size is 512, the size of feedforward layers is 2048. Model performance is evaluated in terms of BLEU, on newstest2017 , newstest2018 and all sentence pairs from our pronoun test set. We compute scores with SacreBLEU ( Post , 2018 ). 9 Evaluation with BLEU is done mainly to control for overall translation quality.To evaluate pronoun translation, we perform contrastive evaluation and report the accuracy of models on our contrastive test set.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_5qLgy33YtdqkwKyxj05FpF2U)
+ Call ID: call_5qLgy33YtdqkwKyxj05FpF2U
+  Args:
+    section_id: 1.4
+
+================================= Tool Message =================================
+Name: read_section
+
+3 Test set with contrastive examples
+Contrastive evaluation requires a large set of suit- able examples that involve the translation of pro- nouns. As additional goals, our test set is designed to 1) focus on hard cases, so that it can be used as a benchmark to track progress in context-aware translation and 2) allow for fine-grained analysis.Section 3.1 describes how we extract our data set. Section 3. 2 explains how, given a set of con- trastive examples, contrastive evaluation works.
+3.1 Automatic extraction of contrastive examples from corpora
+We automatically create a test set from the Open- Subtitles corpus ( Lison and Tiedemann , 2016 ). 5 The goal is to provide a large number of diffi- cult test cases where an English pronoun has to be translated to a German pronoun.The most challenging cases are translating it to either er, sie or es , depending on the grammatical gender of the antecedent.  6 Not only is the transla- tion of it ambiguous, there is also class imbalance in the training data (see Table 2 ). There is roughly a 30% probability that it is aligned to es , 7 which makes it difficult to learn to translate er and sie . We use parsing and automatic co-reference reso- lution to find translation pairs that satisfy our con- straints. To provide a basis for filtering with constraints, we tokenize the whole data set with the Moses tokenizer, generate symmetric word alignments with fast_align ( Dyer et al. , 2013 ), parse the En- glish text with CoreNLP ( Manning et al. , 2014 ), parse the German text with ParZu ( Sennrich et al. , 2013 ) and perform coreference resolution on both sides.  The coreference chains are obtained with the neural model of CoreNLP for English, and with CorZu for German ( Tuggener , 2016 ), respec- tively.Then we opt for high-precision, aggressive fil- tering, according to the following protocol: for each pair of sentences ( e, f ) in English and Ger- man, extract iff
+Alignment Frequency Probability it → es 255764 0. 334 it → sie 64446 0.084 it → er 44543 0.058 it → ist 42614 0.055 it → Sie 26054 0.034 it → , 21037 0.027 it → das 17992 0.023 it → dies 11943 0.015 it → wird 11886 0.015 it → man 10539 0.013 it → ihn 7744 0. 010
+Table 2: Frequency and probability of alignments of it in the training data of our systems (all data from the WMT 2017 news translation task). Alignments are produced by a fast_align model.
+• e contains the English pronoun it ,and f con- tains a German pronoun that is third person singular ( er, sie or es ), as indicated by their part-of-speech tags;
+• those pronouns are aligned to each other;
+• both pronouns are in a coreference chain;
+• their nominal antecedents in the coreference chain are aligned on word level.This removes most candidate pairs, but is neces- sary to overcome the noise introduced by our pre- processing pipeline, most notably coreference res- olution. From the filtered set, we create a balanced test set by randomly sampling 4000 instances of each of the three translations of it under consider- ation ( er , sie , es ). We do not balance antecedent distance.  See Table 4 for the distribution of pro- noun pairs and antecedent distance in the test set.http://opus.nlpl.eu/OpenSubtitles2016.php For each sentence pair in the resulting test set, we introduce contrastive translations . A con- trastive translation is a translation variant where the correct pronoun is swapped with an incor- rect one.  For an example, see Table 3 , where the pronoun it in the original translation corre- sponds to sie because the antecedent bat is a fem- inine noun in German ( Fledermaus ). We produce wrong translations by replacing sie with one of the other pronouns ( er , es ).Note that, by themselves, these contrastive translations are grammatically correct if the an- tecedent is outside the current sentence. The test
+5
+ 6 The pronouns he and she usually refer to a person in En- glish, and since persons do not change gender in the trans- lation, we assume that learning the correspondences he → er and she → sie does not present a challenge for a model. Cases where he or she refer to a noun that is not a person are possible, but extremely rare.7 Note that these statistics include non-referential uses of it , that we exclude from our testset. source: It could get tangled in your hair. reference: Sie könnte sich in deinem Haar verfangen. contrastive: Er könnte sich in deinem Haar verfangen. contrastive: Es könnte sich in deinem Haar verfangen. antecedent en: a bat antecedent de: eine Fledermaus (f.) antecedent distance : 1
+Table 3: Example sentence pair with contrastive translations.  An antecedent distance of 1 means that the antecedent is in the immediately preceding sentence.set also contains pronouns with an antecedent in the same sentence (antecedent distance 0). Those examples do not require any additional context for disambiguation and we therefore expect the sentence-level baseline to perform well on them. We take extra care to ensure that the resulting contrastive translations are grammatically correct, because ungrammatical sentences are easily dis- missed by an NMT system. For instance, if there are any possessive pronouns (such as seine ) in the sentence, we also change their gender to match the personal pronoun replacement. The German coreference resolution system does not resolve es because most instances of es in Ger- man are either non-referential forms, or they refer to a clause instead of a nominal antecedent. We limit the test set to nominal antecedents, as these are the only ambiguous cases with respect to trans- lation.  For this reason, we have to rely entirely on the English coreference links for the extraction of sentence pairs with it → es , as opposed to pairs with it → er and it → sie where we have coreference chains in both languages. 8
+Our extraction process respects document boundaries, to ensure we always search for the right context.  We extract additional information from the annotated documents, such as the dis- tance (in sentences) between pronouns and their antecedents, the document of origin, lemma, mor- phology and dependency information if available.
+3.2 Evaluation by scoring
+Contrastive evaluation is different from conven- tional evaluation of machine translation in that it does not require any translation. Rather than test-
+ distance it → es it → er it → sie total 0 872 736 792 2400 1 1892 2577 2606 7075 2 631 459 420 1510 3 274 167 132 573 > 3 331 61 50 442 total 4000 4000 4000 12000
+ Table 4: Test set frequencies of pronoun pairs and antecedent distance (measured in sentences).ing a model’s ability to translate, it is a method to test a model’s ability to discriminate between given good and bad translations.We exploit the fact that NMT systems are in fact language models of the target language, con- ditioned on source text.  Like language models, NMT systems can be used to compute a model score (the negative log probability) for an existing translation. Contrastive evaluation, then, means to compare the model score of two pairs of in- puts: ( actual source, ref erence translation ) and ( actual source, contrastive translation ) . If the model score of the actual reference transla- tion is higher, we assume that this model can de- tect wrong pronoun translations. However, this does not mean that systems actu- ally produce the reference translation when given the source sentence for translation. An entirely different target sequence might rank higher in the system’s beam during decoding. The only conclu- sion permitted by contrastive evaluation is whether or not the reference translation is more probable than a contrastive variant.If the model score of the reference is indeed higher, we refer to this outcome as a “correct decision” by the model. The model’s decision
+ 8 There are some cases where the antecedent is listed as it in the test set. This is our fallback behaviour if the corefer- ence chain does not contain any noun. In that case, we do not know the true antecedent.is only correct if the reference translation has a higher score than any contrastive translation. In our evaluation, we aggregate model decisions on the whole test set and report the overall percent- age of correct decisions as accuracy. During scoring, the model is provided with ref- erence translations as target context, while during translation, the model needs to predict the full se- quence. It is an open question to what extent per- formance deteriorates when context is itself pre- dicted, and thus noisy. We highlight that the same problem arises for sentence-level NMT, and has been addressed with alternative training strategies ( Ranzato et al. , 2015 ).
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_Veui5XbOqm2q7N8mqsAs8ULO)
+ Call ID: call_Veui5XbOqm2q7N8mqsAs8ULO
+  Args:
+    section_id: 1.5
+
+================================= Tool Message =================================
+Name: read_section
+
+4 Context-Aware NMT Models
+This section describes several context-aware NMT models that we use in our experiments. They fall into two major categories: models based on RNNs and models based on the Transformer architecture ( Vaswani et al. , 2017 ). We experiment with addi- tional context on the source side and target side.
+4.1 Recurrent Models
+We consider the following recurrent baselines:
+baseline Our baseline model is a standard bidi- rectional RNN model with attention, trained with Nematus. It operates on the sentence level and does not see any additional context. The input and output embeddings of the decoder are tied, en- coder embeddings are not.concat22 We concatenate each sentence with one preceding sentence, for both the source and target side of the corpus.  Then we train on this new data set without any changes to the model ar- chitecture. This very simple method is inspired by Tiedemann and Scherrer ( 2017 ).The following models are taken, or slightly adapted, from Bawden et al. ( 2018 ). For this rea- son, we give only a very short description of them here and the reader is referred to their work for details. s-hier A multi-encoder architecture with hier- archical attention. This model has access to one additional context: the previous source sentence. It is read by a separate encoder, and attended to by an additional attention network. The output of the resulting two attention vectors is combined with yet another attention network.s-t-hier Identical to s-hier , except that it consid- ers two additional contexts: the previous source
+sentence and previous target sentence.  Both are read by separate encoders, and sequences from all encoders are combined with hierarchical attention.s-hier-to-2 The model has an additional en- coder for source context, whereas the target side of the corpus is concatenated, in the same way as for concat22 . This model achieved the best results in Bawden et al. ( 2018 ). For each variant, we also introduce and test weight tying: we share the parameters of embed- ding matrices between encoders that read the same kind of text (source or target side).
+4.2 Transformer Models
+All remaining models are based on the Trans- former architecture ( Vaswani et al. , 2017 ). A Transformer avoids recurrence completely: it follows an encoder-decoder architecture using stacked self-attention and fully connected layers for both the encoder and decoder.baseline A standard context-agnostic Trans- former. All model parameters are identical to a Transformer-base in Vaswani et al. ( 2017 ). concat22 A simple concatentation model where only the training data is modified, in the same way as for the recurrent concat22 model.concat21 Trained on data where the preceding sentence is concatenated to the current one only on the source side. This model is also taken from Tiedemann and Scherrer ( 2017 ).Voita et al. ( 2018 ) A more sophisticated context-aware Transformer that uses source context only.  It has a separate encoder for source context, but all layers except the last one are shared between encoders. A source and context sentence are first encoded independently, and then a single attention layer and a gating function are used to produce a context-aware representation of the source sentence. Such restricted interaction with context is shown to be beneficial for analysis of contextual phenomena captured by the model. For details the reader is referred to their work.
+
+================================== Ai Message ==================================
+
+For recurrent models the baseline is a standard bidirectional RNN model with attention, trained with Nematus, operating on the sentence level and not seeing additional context. For Transformer models the baseline is a standard context-agnostic Transformer (Transformer-base as in Vaswani et al., 2017).

@@ -1,0 +1,207 @@
+================================ Human Message =================================
+
+QUERY:
+Do they use pre-trained embeddings like BERT?
+
+TABLE OF CONTENTS (TOC):
+1 | Hierarchical Neural Story Generation
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2 Writing Prompts Dataset
+1.4 | 3 Approach
+1.4.1 | 3.1 Hierarchical Story Generation
+1.4.2 | 3.2 Efficient Learning with Convolutional Sequence-to-Sequence Model
+1.4.3 | 3.3 Modeling Unbounded Context with Gated Multi-Scale Self-attention
+1.4.4 | 3.4 Improving Relevance to Input Prompt with Model Fusion
+1.5 | 4 Related Work
+1.5.1 | 4.1 Story Generation
+1.5.2 | 4.2 Hierarchical Text Generation
+1.5.3 | 4.3 Fusion Models
+1.6 | 5 Experimental Setup
+1.6.1 | 5.1 Baselines
+1.6.2 | 5.2 Fusion Training
+1.6.3 | 5.3 Training
+1.6.4 | 5.4 Generation
+1.6.5 | 5.5 Evaluation
+1.7 | 6 Results
+1.8 | 7 Discussion
+1.8.1 | 7.1 Generation Quality
+1.8.2 | 7.2 Use of Attention
+1.9 | 8 Conclusion
+1.10 | References
+1.11 | 9 Appendix of Model Architectures
+1.11.1 | 9.1 GCNN Language Model + Self-Attention
+1.11.2 | 9.2 Conv seq2seq + self-attention
+1.11.3 | 9.3 Ensemble: Conv seq2seq + self-attention
+1.11.4 | 9.4 Fusion: Conv seq2seq + self-attention
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_all (call_93QEmYNWiyIXixNOtcQjavcT)
+ Call ID: call_93QEmYNWiyIXixNOtcQjavcT
+  Args:
+    pattern: BERT|pre-trained|pretrained|pre-trained embeddings|pretrained embeddings|embedd
+
+================================= Tool Message =================================
+Name: grep_search_all
+
+1.11.1
+1.11.2
+1.11.4
+1.2
+1.4.4
+1.5.2
+1.6.2
+1.6.5
+1.8.1
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_xqY1f3cuPDPSSd7kT7QSYdyB)
+ Call ID: call_xqY1f3cuPDPSSd7kT7QSYdyB
+  Args:
+    section_id: 1.11.1
+
+================================= Tool Message =================================
+Name: read_section
+
+9.1 GCNN Language Model + Self-Attention
+9 layers with hidden unit sizes 512 × 4 , 768 × 2 , 1024 × 3 and convolutional kernel widths 4 × 2 , 1 , 4 × 3 , 1 , 3 × 2 . Learning rate 1, momentum 0.99, dropout 0.1, embedding size 300, l2 normal- ization 1 e − 7 , 4 decoder self-attention heads.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_62XShFcYUJJEWb6AtFJYjHxZ)
+ Call ID: call_62XShFcYUJJEWb6AtFJYjHxZ
+  Args:
+    section_id: 1.11.2
+
+================================= Tool Message =================================
+Name: read_section
+
+9.2 Conv seq2seq + self-attention
+3 layers in encoder with hidden unit sizes 128 × 2 , 512 and convolutional kernel widths 3 × 3 . 8 layers in the decoder with hidden unit sizes 512 × 4 , 768 × 2 , 1024 with convolutional kernel widths 4 × 8 . Learning rate 0.25, momentum 0.99, dropout 0. 3, embedding size 256, output embed- ding size 256, l2 nomalization 1 e − 7 , 4 decoder self-attention heads.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_uUL9pxmuluCWSKFWoQw9DRoM)
+ Call ID: call_uUL9pxmuluCWSKFWoQw9DRoM
+  Args:
+    section_id: 1.11.4
+
+================================= Tool Message =================================
+Name: read_section
+
+9.4 Fusion: Conv seq2seq + self-attention
+The pretrained seq2seq model is the model in Sec- tion 9.2 . The additional fused model has the fol- lowing architecture:
+5 layers in the encoder with hidden unit sizes 128 × 2 , 512 × 3 and convolutional kernel widths 3 × 5 . 5 layers in the decoder with hidden unit sizes 512 × 3 , 768 × 2 and convolutional kernel widths 4 × 5 . Learning rate 0. 25, momentum 0.99, dropout 0.3, embedding size 256, output embed- ding size 256, l2 normalization 1 e − 7 , 4 decoder self-attention heads.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_syKoEvM1VSnteB70xiaxMp41)
+ Call ID: call_syKoEvM1VSnteB70xiaxMp41
+  Args:
+    section_id: 1.4.4
+
+================================= Tool Message =================================
+Name: read_section
+
+3.4 Improving Relevance to Input Prompt with Model Fusion
+Unlike tasks such as translation, where the seman- tics of the target are fully specified by the source, the generation of stories from prompts is far more open-ended. We find that seq2seq models ignore the prompt and focus solely on modeling the sto- ries, because the local dependencies required for language modeling are easier to model than the subtle dependencies between prompt and story.We propose a fusion-based approach to en- courage conditioning on the prompt.  We train a seq2seq model that has access to the hidden states of a pretrained seq2seq model. Doing so can be seen as a type of boosting or residual learning that allows the second model to focus on what the first model failed to learn—such as conditioning on the prompt. To our knowledge, this paper is the first to show that fusion reduces the problem of seq2seq models degenerating into language mod- els that capture primarily syntactic and grammati- cal information. The cold fusion mechanism of Sriram et al. ( 2017 ) pretrains a language model and subse- quently trains a seq2seq model with a gating mechanism that learns to leverage the final hidden layer of the language model during seq2seq train- ing. We modify this approach by combining two seq2seq models as follows (see Figure 4 ):
+ g t = σ ( W [ h Training t ; h Pretrained t ] + b ) h t = g t ◦ [ h Training t ; h Pretrained t ]
+where the hidden state of the pretrained seq2seq model and training seq2seq model (represented by h t ) are concatenated to learn gates g t . The gates are computed using a linear projection with the weight matrix W .  The gated hidden layers are combined by concatenation and followed by more fully connected layers with GLU activations (see
+Figure 4: Diagram of our fusion model, which learns a second seq2seq model to improve a pre- trained model. The separate hidden states are com- bined after gating through concatenation.Appendix). We use layer normalization ( Ba et al. , 2016 ) after each fully connected layer.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_67tcfFGNqtmiVwYipmlOMiW5)
+ Call ID: call_67tcfFGNqtmiVwYipmlOMiW5
+  Args:
+    section_id: 1.6.3
+
+================================= Tool Message =================================
+Name: read_section
+
+5.3 Training
+We implement models with the fairseq-py library in PyTorch. Similar to Gehring et al. ( 2017 ), we train using the Nesterov accelerated gradient method ( Sutskever et al. , 2013 ) using gradient clipping ( Pascanu et al. , 2013 ). We perform hy- perparameter optimization on each of our models by cross-validating with random search on a vali- dation set.  We provide model architectures in the appendix.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_all (call_TMJKB9D76TExXfwfO6i7K0Jz)
+ Call ID: call_TMJKB9D76TExXfwfO6i7K0Jz
+  Args:
+    pattern: pretrained|pre-trained|BERT|bert|embeddings|embedding size|pre-trained embeddings
+
+================================= Tool Message =================================
+Name: grep_search_all
+
+1.11.1
+1.11.2
+1.11.4
+1.2
+1.4.4
+1.5.2
+1.6.2
+1.6.5
+1.8.1
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_PMlTmXm2CQLHPosGcYVF3He3)
+ Call ID: call_PMlTmXm2CQLHPosGcYVF3He3
+  Args:
+    section_id: 1.2
+
+================================= Tool Message =================================
+Name: read_section
+
+1 Introduction
+Story-telling is on the frontier of current text gen- eration technology: stories must remain themati- cally consistent across the complete document, re- quiring modeling very long range dependencies; stories require creativity; and stories need a high level plot, necessitating planning ahead rather than word-by-word generation ( Wiseman et al. , 2017 ). We tackle the challenges of story-telling with a hierarchical model, which first generates a sen- tence called the prompt describing the topic for the story, and then conditions on this prompt when generating the story. Conditioning on the prompt or premise makes it easier to generate consistent stories because they provide grounding for the overall plot. It also reduces the tendency of stan- dard sequence models to drift off topic.Prompt: The Mage, the Warrior, and the Priest
+ Story: A light breeze swept the ground, and carried with it still the distant scents of dust and time-worn stone. The Warrior led the way, heaving her mass of armour and mus- cle over the uneven terrain. She soon crested the last of the low embankments, which still bore the unmistakable fin- gerprints of haste and fear. She lifted herself up onto the top the rise, and looked out at the scene before her. [...]
+ Figure 1: Example prompt and beginning of a story from our dataset. We train a hierarchical model that first generates a prompt, and then con- ditions on the prompt when generating a story.We find that standard sequence-to-sequence (seq2seq) models ( Sutskever et al.  , 2014 ) applied to hierarchical story generation are prone to de- generating into language models that pay little at- tention to the writing prompt (a problem that has been noted in other domains, such as dialogue re- sponse generation ( Li et al. , 2015a )).  This failure is due to the complex and underspecified depen- dencies between the prompt and the story, which are much harder to model than the closer depen- dencies required for language modeling (for exam- ple, consider the subtle relationship between the first sentence and prompt in Figure 1 ).To improve the relevance of the generated story to its prompt, we introduce a fusion mechanism ( Sriram et al.  , 2017 ) where our model is trained on top of an pre-trained seq2seq model. To improve over the pre-trained model, the second model must focus on the link between the prompt and the story. For the first time, we show that fusion mechanisms can help seq2seq models build dependencies be- tween their input and output.Another major challenge in story generation is the inefficiency of modeling long documents with standard recurrent architectures—stories contain 734 words on average in our dataset.  We improve efficiency using a convolutional architecture, al-
+# Train Stories 272,600 # Test Stories 15,138 # Validation Stories 15,620 # Prompt Words 7.7M # Story Words 200M Average Length of Prompts 28.4 Average Length of Stories 734.5
+Table 1: Statistics of W RITING P ROMPTS dataset
+lowing whole stories to be encoded in parallel.  Existing convolutional architectures only encode a bounded amount of context ( Dauphin et al. , 2017 ), so we introduce a novel gated self-attention mech- anism that allows the model to condition on its previous outputs at different time-scales.To train our models, we gathered a large dataset of 303,358 human generated stories paired with writing prompts from an online forum.  Evaluating free form text is challenging, so we also introduce new evaluation metrics which isolate different as- pects of story generation.Experiments show that our fusion and self- attention mechanisms improve over existing tech- niques on both automated and human evaluation measures. Our new dataset and neural architec- tures allow for models which can creatively gen- erate longer, more consistent and more fluent pas- sages of text.  Human judges prefer our hierarchi- cal model’s stories twice as often as those of a non- hierarchical baseline.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_Vgz0qOXvSztQhR8oUceEfxks)
+ Call ID: call_Vgz0qOXvSztQhR8oUceEfxks
+  Args:
+    section_id: 1.5.2
+
+================================= Tool Message =================================
+Name: read_section
+
+4.2 Hierarchical Text Generation
+Previous work has proposed decomposing the challenge of generating long sequences of text into a hierarchical generation task. For instance, Li et al. ( 2015b ) use an LSTM to hierarchically learn word, then sentence, then paragraph embed- dings, then transform the paragraph embeddings into text. Yarats and Lewis ( 2017 ) generate a dis- crete latent variable based on the context, then generates text conditioned upon it.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_wc6lahZsvkqFjXmf6bzXctI6)
+ Call ID: call_wc6lahZsvkqFjXmf6bzXctI6
+  Args:
+    section_id: 1.6.2
+
+================================= Tool Message =================================
+Name: read_section
+
+5.2 Fusion Training
+To train the fusion model, we first pretrain a Conv seq2seq with self-attention model on the W RIT - ING P ROMPTS dataset. This pretrained model is fixed and provided to the second Conv seq2seq with self-attention model during training time. The two models are integrated with the fusion mechanism described in Section 3.4 .
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_ZS4hLJtTMsEAtTSSbUfKD88P)
+ Call ID: call_ZS4hLJtTMsEAtTSSbUfKD88P
+  Args:
+    section_id: 1.8.1
+
+================================= Tool Message =================================
+Name: read_section
+
+7.1 Generation Quality
+Our proposed fusion model is capable of gener- ating unique text without copying directly from the training set. When analyzing 500 150-word generated stories from test-set prompts, the aver- age longest common subsequence is 8.9. In con- trast, the baseline Conv seq2seq model copies 10.2 words on average and the KNN baseline copies all 150 words from a story in the training set. Figure 8 shows the values of the fusion gates for an example story, averaged at each timestep. The pretrained seq2seq model acts similarly to a lan- guage model producing common words and punc- tuation. The second seq2seq model learns to focus on rare words, such as horned and robe .However, the fusion model has limitations. Us- ing random sampling to generate can produce er- rors.  For example, can’t is tokenized to ca n’t , and the model occasionally produces the first to- ken but misses the second. A similar error is after one line of dialogue, the model may move to an- other line of dialogue without generating a new- line token. A further obstacle is repetition. The model focuses frequently on what it has recently produced, which leads to the generation of similar text multiple times. In the generation of prompts using the GCNN language model, we find that prompts are fairly generic compared to human prompts. Language models often struggle to model rare words accu- rately, as the probability distribution over the next word is dominated by more common words. This tends to produce similar prompts, particularly at
+the start — we see many prompts that start with the man . In contrast, many of the human prompts are very unique (e.g.  prompting stories in fantasy worlds such as Harry Potter and Game of Thrones) and the language model rarely produces the spe- cific vocabulary required by these settings.
+
+================================== Ai Message ==================================
+
+No — they pretrain a seq2seq model on the Writing Prompts dataset and use learned embeddings (embedding size 300 for the GCNN model and 256 for the Conv seq2seq).

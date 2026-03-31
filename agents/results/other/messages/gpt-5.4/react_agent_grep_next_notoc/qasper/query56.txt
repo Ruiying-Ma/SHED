@@ -1,0 +1,60 @@
+================================ Human Message =================================
+
+QUERY:
+On which datasets does LadaBERT achieve state-of-the-art?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_VbptlEQVP2Z7RT9fEdUdrrue)
+ Call ID: call_VbptlEQVP2Z7RT9fEdUdrrue
+  Args:
+    pattern: state-of-the-art|SOTA|LadaBERT|dataset|datasets
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+BERT is a cutting-edge language representation model pre-trained by a large corpus, which achieves superior performances on various natural language understanding tasks. However, a major blocking issue of applying BERT to online services is that it is memory-intensive and leads to unsatisfactory latency of user requests. Existing solutions leverage knowledge distilla- tion frameworks to learn smaller models that imitate the behaviors of BERT.  However, the train- ing procedure of knowledge distillation is expensive itself as it requires sufficient training data to imitate the teacher model. In this paper, we address this issue by proposing a hybrid solution named LadaBERT (Lightweight adaptation of BERT through hybrid model compression), which combines the advantages of different model compression methods, including weight pruning, matrix factorization and knowledge distillation.  LadaBERT achieves state-of-the-art accuracy on various public datasets while the training overheads can be reduced by an order of magnitude.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_yXCjF7GonLrbCyr7umbaIuy2)
+ Call ID: call_yXCjF7GonLrbCyr7umbaIuy2
+  Args:
+    pattern: public datasets|GLUE|SST|MNLI|QQP|QNLI|MRPC|RTE|CoLA|STS-B|state-of-the-art accuracy
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+BERT is a cutting-edge language representation model pre-trained by a large corpus, which achieves superior performances on various natural language understanding tasks. However, a major blocking issue of applying BERT to online services is that it is memory-intensive and leads to unsatisfactory latency of user requests. Existing solutions leverage knowledge distilla- tion frameworks to learn smaller models that imitate the behaviors of BERT.  However, the train- ing procedure of knowledge distillation is expensive itself as it requires sufficient training data to imitate the teacher model. In this paper, we address this issue by proposing a hybrid solution named LadaBERT (Lightweight adaptation of BERT through hybrid model compression), which combines the advantages of different model compression methods, including weight pruning, matrix factorization and knowledge distillation.  LadaBERT achieves state-of-the-art accuracy on various public datasets while the training overheads can be reduced by an order of magnitude.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_inHsxEGZRXhEr3nJ3VLNbciF)
+ Call ID: call_inHsxEGZRXhEr3nJ3VLNbciF
+  Args:
+    pattern: Table .*GLUE|MNLI|SST-2|MRPC|QNLI|QQP|RTE|CoLA|STS-B|public datasets
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+BERT is a cutting-edge language representation model pre-trained by a large corpus, which achieves superior performances on various natural language understanding tasks. However, a major blocking issue of applying BERT to online services is that it is memory-intensive and leads to unsatisfactory latency of user requests. Existing solutions leverage knowledge distilla- tion frameworks to learn smaller models that imitate the behaviors of BERT.  However, the train- ing procedure of knowledge distillation is expensive itself as it requires sufficient training data to imitate the teacher model. In this paper, we address this issue by proposing a hybrid solution named LadaBERT (Lightweight adaptation of BERT through hybrid model compression), which combines the advantages of different model compression methods, including weight pruning, matrix factorization and knowledge distillation.  LadaBERT achieves state-of-the-art accuracy on various public datasets while the training overheads can be reduced by an order of magnitude.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_sfOwM5rV3wWoZAZHEZYzG83d)
+ Call ID: call_sfOwM5rV3wWoZAZHEZYzG83d
+  Args:
+    pattern: Experiments|Results|Evaluation|dataset
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+BERT is a cutting-edge language representation model pre-trained by a large corpus, which achieves superior performances on various natural language understanding tasks. However, a major blocking issue of applying BERT to online services is that it is memory-intensive and leads to unsatisfactory latency of user requests. Existing solutions leverage knowledge distilla- tion frameworks to learn smaller models that imitate the behaviors of BERT.  However, the train- ing procedure of knowledge distillation is expensive itself as it requires sufficient training data to imitate the teacher model. In this paper, we address this issue by proposing a hybrid solution named LadaBERT (Lightweight adaptation of BERT through hybrid model compression), which combines the advantages of different model compression methods, including weight pruning, matrix factorization and knowledge distillation.  LadaBERT achieves state-of-the-art accuracy on various public datasets while the training overheads can be reduced by an order of magnitude.
+
+================================== Ai Message ==================================
+
+Unanswerable

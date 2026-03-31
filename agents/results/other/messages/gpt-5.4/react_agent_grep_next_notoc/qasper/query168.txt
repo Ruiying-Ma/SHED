@@ -1,0 +1,86 @@
+================================ Human Message =================================
+
+QUERY:
+What dataset was used in this challenge?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_Un66gCjz3fRj5WiZed2ovBB1)
+ Call ID: call_Un66gCjz3fRj5WiZed2ovBB1
+  Args:
+    pattern: challenge|dataset|data set
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+ABSTRACT
+This paper describes the systems submitted by the department of electronic engineering, institute of microelectronics of Tsinghua university and TsingMicro Co. Ltd. (THUEE) to the NIST 2019 speaker recognition evaluation CTS challenge. Six subsystems, including etdnn/ams, ftdnn/as, eftdnn/ams, resnet, multitask and c-vector are developed in this evaluation. Index Terms — NIST 2019 SRE CTS challenge, eftdnn, multi- task, c-vector, additive margin
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_xxwYC30rRjHbUTfxUZpiIRLf)
+ Call ID: call_xxwYC30rRjHbUTfxUZpiIRLf
+  Args:
+    pattern: NIST 2019 speaker recognition evaluation CTS challenge|CTS challenge|SRE CTS
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+ABSTRACT
+This paper describes the systems submitted by the department of electronic engineering, institute of microelectronics of Tsinghua university and TsingMicro Co. Ltd. (THUEE) to the NIST 2019 speaker recognition evaluation CTS challenge. Six subsystems, including etdnn/ams, ftdnn/as, eftdnn/ams, resnet, multitask and c-vector are developed in this evaluation. Index Terms — NIST 2019 SRE CTS challenge, eftdnn, multi- task, c-vector, additive margin
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_Cbq4PJnRZ8ZdQgEr7c2zmPuN)
+ Call ID: call_Cbq4PJnRZ8ZdQgEr7c2zmPuN
+  Args:
+    pattern: dataset|corpus|VoxCeleb|Fisher|Switchboard|SRE16|CMN2|Call My Net 2
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1. INTRODUCTION
+This paper describes the systems developed by the department of electronic engineering, institute of microelectronics of Tsinghua uni- versity and TsingMicro Co. Ltd. (THUEE) for the NIST 2019 speaker recognition evaluation (SRE) CTS challenge [1]. Six sub- systems, including etdnn/ams, ftdnn/as, eftdnn/ams, resnet, multi- task and c-vector are developed in this evaluation.  All the subsys- tems consists of a deep neural network followed by dimension de- duction, score normalization and calibration. For each system, we begin with a summary of the data usage, followed by a description of the system setup along with their hyperparameters. Finally, we report experimental results obtained by each subsystem and fusion system on the SRE18 development and SRE18 evaluation datasets.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_2dN08bHKGzETHvx21mZx8yZW)
+ Call ID: call_2dN08bHKGzETHvx21mZx8yZW
+  Args:
+    pattern: data usage|training data|datasets|evaluation datasets|development and evaluation datasets
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1. INTRODUCTION
+This paper describes the systems developed by the department of electronic engineering, institute of microelectronics of Tsinghua uni- versity and TsingMicro Co. Ltd. (THUEE) for the NIST 2019 speaker recognition evaluation (SRE) CTS challenge [1]. Six sub- systems, including etdnn/ams, ftdnn/as, eftdnn/ams, resnet, multi- task and c-vector are developed in this evaluation.  All the subsys- tems consists of a deep neural network followed by dimension de- duction, score normalization and calibration. For each system, we begin with a summary of the data usage, followed by a description of the system setup along with their hyperparameters. Finally, we report experimental results obtained by each subsystem and fusion system on the SRE18 development and SRE18 evaluation datasets.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_ngsFtxJpWAEparZzMiHFDwNX)
+ Call ID: call_ngsFtxJpWAEparZzMiHFDwNX
+  Args:
+    pattern: summary of the data usage|data usage
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1. INTRODUCTION
+This paper describes the systems developed by the department of electronic engineering, institute of microelectronics of Tsinghua uni- versity and TsingMicro Co. Ltd. (THUEE) for the NIST 2019 speaker recognition evaluation (SRE) CTS challenge [1]. Six sub- systems, including etdnn/ams, ftdnn/as, eftdnn/ams, resnet, multi- task and c-vector are developed in this evaluation.  All the subsys- tems consists of a deep neural network followed by dimension de- duction, score normalization and calibration. For each system, we begin with a summary of the data usage, followed by a description of the system setup along with their hyperparameters. Finally, we report experimental results obtained by each subsystem and fusion system on the SRE18 development and SRE18 evaluation datasets.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_B1hbySAHNqMERF4BMCn7UqqV)
+ Call ID: call_B1hbySAHNqMERF4BMCn7UqqV
+  Args:
+    pattern: 2\.|DATA|data
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1. INTRODUCTION
+This paper describes the systems developed by the department of electronic engineering, institute of microelectronics of Tsinghua uni- versity and TsingMicro Co. Ltd. (THUEE) for the NIST 2019 speaker recognition evaluation (SRE) CTS challenge [1]. Six sub- systems, including etdnn/ams, ftdnn/as, eftdnn/ams, resnet, multi- task and c-vector are developed in this evaluation.  All the subsys- tems consists of a deep neural network followed by dimension de- duction, score normalization and calibration. For each system, we begin with a summary of the data usage, followed by a description of the system setup along with their hyperparameters. Finally, we report experimental results obtained by each subsystem and fusion system on the SRE18 development and SRE18 evaluation datasets.
+
+================================== Ai Message ==================================
+
+Unanswerable

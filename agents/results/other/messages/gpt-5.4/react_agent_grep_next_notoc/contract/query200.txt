@@ -1,0 +1,20 @@
+================================ Human Message =================================
+
+HYPOTHESIS:
+Notice on compelled disclosure: Receiving Party shall notify Disclosing Party in case Receiving Party is required by law, regulation or judicial process to disclose any Confidential Information.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_xNKfav1n7uv8V8p3gbLy3k15)
+ Call ID: call_xNKfav1n7uv8V8p3gbLy3k15
+  Args:
+    pattern: (required by law|judicial process|regulation|compelled disclosure|notify .*disclos|disclose .*confidential information)
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+(iv) that Confidential Information has been requested or received,unless required to do so by law or by the order or ruling of a Court or tribunal or regulatory body or recognised stock exchange of competent jurisdiction, in which case, if the Receiving Party is required to disclose such Confidential Information it shall, unless prohibited from doing so, notify the Disclosing Party promptly in writing of that fact and, in any event, prior to making such disclosure.
+
+================================== Ai Message ==================================
+
+Entailment

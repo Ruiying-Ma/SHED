@@ -1,0 +1,469 @@
+================================ Human Message =================================
+
+HYPOTHESIS:
+Confidentiality of Agreement: Receiving Party shall not disclose the fact that Agreement was agreed or negotiated.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_35V7cPgy67mzdfzfK6LMetdR)
+ Call ID: call_35V7cPgy67mzdfzfK6LMetdR
+  Args:
+    pattern: disclose the fact|disclose that|disclose the existence|not disclose|existence of this Agreement|not disclose this Agreement|disclosure of the Agreement|negotiat|negotiat(ed|ing)|discuss the Agreement|reveal the Agreement
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+a) the fact that discussions and negotiations are taking place concerning the Purpose and the status of those discussions and negotiations;Page 1 of 5
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_MlxmCh3xe0hp3IBKaTtb8HMt)
+ Call ID: call_MlxmCh3xe0hp3IBKaTtb8HMt
+  Args:
+    pattern: the fact that discussions and negotiations are taking place|discussions and negotiations are taking place|status of those discussions
+    }:
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Tool 'grep_search_next' failed after 1 attempt with TypeError: grep_search_next() got an unexpected keyword argument '}'. Please try again.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_FqYNc11YqZATkgrrnD5x4ciF)
+ Call ID: call_FqYNc11YqZATkgrrnD5x4ciF
+  Args:
+    pattern: the fact that discussions and negotiations are taking place
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+a) the fact that discussions and negotiations are taking place concerning the Purpose and the status of those discussions and negotiations;Page 1 of 5
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_6WeOjYOmjztsfWlla28LQeq6)
+ Call ID: call_6WeOjYOmjztsfWlla28LQeq6
+  Args:
+    pattern: Receiving Party shall not|Receiving Party shall|shall not disclose|not disclose the fact|not disclose the existence|not disclose the
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+b) as may be required by an order of any court of competent jurisdiction or governmental body in which case the Receiving Party shall,to the extent permitted by law, use reasonable endeavours to provide the Disclosing Party with prompt written notice of any such requirement prior to any disclosure so that the Disclosing Party may seek a protection order or other appropriate remedy. If no protective order or remedy is obtained by the Disclosing Party, the Receiving Party shall disclose only that portion of the Confidential Information that it is legally required to disclose.Page 2 of 5
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_gABR3FCu0b5Azs6vhzsaO8ca)
+ Call ID: call_gABR3FCu0b5Azs6vhzsaO8ca
+  Args:
+    pattern: a) the fact that discussions and negotiations are taking place concerning the Purpose
+    }:
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Tool 'grep_search_next' failed after 1 attempt with TypeError: grep_search_next() got an unexpected keyword argument '}'. Please try again.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_vwAn9TMb1sqVvZwQ1GSEvMUI)
+ Call ID: call_vwAn9TMb1sqVvZwQ1GSEvMUI
+  Args:
+    pattern: a) the fact that discussions and negotiations are taking place concerning the Purpose and the status of those discussions and negotiations;
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Invalid regex pattern: unbalanced parenthesis at position 1
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_Kg6CfkQBOWwGzt93XOXl0fEm)
+ Call ID: call_Kg6CfkQBOWwGzt93XOXl0fEm
+  Args:
+    pattern: fact that discussions and negotiations are taking place concerning the Purpose and the status of those discussions and negotiations
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+a) the fact that discussions and negotiations are taking place concerning the Purpose and the status of those discussions and negotiations;Page 1 of 5
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_qpmc9qepEcMgUfD3lXof2Ffn)
+ Call ID: call_qpmc9qepEcMgUfD3lXof2Ffn
+  Args:
+    pattern: Confidential Information|Confidential Information means|definition of Confidential
+    }:
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Tool 'grep_search_next' failed after 1 attempt with TypeError: grep_search_next() got an unexpected keyword argument '}'. Please try again.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_61PffldUOiiOhq4Y7j079M1G)
+ Call ID: call_61PffldUOiiOhq4Y7j079M1G
+  Args:
+    pattern: Confidential Information|Confidential Information means|definition of Confidential
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+A.The Parties intend to enter into discussions relating to the Purpose which will involve the exchange of Confidential Information between them.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_ctnKpiN6Ry9yZ5pBn6bhhRvD)
+ Call ID: call_ctnKpiN6Ry9yZ5pBn6bhhRvD
+  Args:
+    pattern: Excluded from Confidential Information|exclude|Exclusions|except
+    }:
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Tool 'grep_search_next' failed after 1 attempt with TypeError: grep_search_next() got an unexpected keyword argument '}'. Please try again.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_YUT2mqyM3YufpxQoPUHmlbUF)
+ Call ID: call_YUT2mqyM3YufpxQoPUHmlbUF
+  Args:
+    pattern: Excluded from Confidential Information|Excluded from Confidential|Exclusions|are not Confidential|not confidential|does not include
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+e) the Parties agree in writing is not confidential.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_IOcEQXgJLU8rSYvd2eLGTDhN)
+ Call ID: call_IOcEQXgJLU8rSYvd2eLGTDhN
+  Args:
+    pattern: discussions and negotiations are taking place
+    }:
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Tool 'grep_search_next' failed after 1 attempt with TypeError: grep_search_next() got an unexpected keyword argument '}'. Please try again.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_91bmCsscbXIIp4oDJCzJAyqB)
+ Call ID: call_91bmCsscbXIIp4oDJCzJAyqB
+  Args:
+    pattern: a\)
+    }:
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Tool 'grep_search_next' failed after 1 attempt with TypeError: grep_search_next() got an unexpected keyword argument '}'. Please try again.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_Vjr0a8fNCdXLXG1W066mDa2d)
+ Call ID: call_Vjr0a8fNCdXLXG1W066mDa2d
+  Args:
+    pattern: a)
+    }:
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Tool 'grep_search_next' failed after 1 attempt with TypeError: grep_search_next() got an unexpected keyword argument '}'. Please try again.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_Rq93q6HHC4NwaIbf0MkKgX3a)
+ Call ID: call_Rq93q6HHC4NwaIbf0MkKgX3a
+  Args:
+    pattern: Purpose
+    }:
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Tool 'grep_search_next' failed after 1 attempt with TypeError: grep_search_next() got an unexpected keyword argument '}'. Please try again.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_TNrxhxvLdxYUNvi2TuqyvhCW)
+ Call ID: call_TNrxhxvLdxYUNvi2TuqyvhCW
+  Args:
+    pattern: Excluded
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_SLaG9gu5qiyUPt1fATYeZ48t)
+ Call ID: call_SLaG9gu5qiyUPt1fATYeZ48t
+  Args:
+    pattern: Receiving Party
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1. DEFINITIONS
+Affiliate : shall mean any other corporation or other form of business entity, which, directly or indirectly, controls, is controlled by, or is under common control with, a Party at any time during the term of this Agreement.  For purposes of this definition, the term “control” means direct or indirect beneficial ownership of more than 50% of the voting share or interest of the entity;
+Confidential Information : has the meaning given in clause 2 of this Agreement;
+ Disclosing Party : a Party to this Agreement which discloses its Confidential Information to the other Party;
+Purpose :  [[INSERT  DETAILS  e.g.  to  establish  a  business  relationship  in  respect  to  the  supply  of  [named  service provision or goods] from X, etc]];
+Receiving Party : a Party to this Agreement which receives the Confidential Information from the other Party;
+ Representatives : any employees, officers, directors, professional advisors or consultants in relation to each Party and any of its Affiliates, who are actively and directly engaged in the Purpose;
+Term : has the meaning given in clause 10.1 of this Agreement.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_gZZlkpf8nCp5jRpWbLUG5k3H)
+ Call ID: call_gZZlkpf8nCp5jRpWbLUG5k3H
+  Args:
+    pattern: 2. CONFIDENTIAL INFORMATION
+    }:
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Tool 'grep_search_next' failed after 1 attempt with TypeError: grep_search_next() got an unexpected keyword argument '}'. Please try again.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_sTtAD9BLlRanz4QohpVUlLP0)
+ Call ID: call_sTtAD9BLlRanz4QohpVUlLP0
+  Args:
+    pattern: 2. CONFIDENTIAL INFORMATION
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+2. CONFIDENTIAL INFORMATION
+2.1.Confidential Information means all confidential information relating to the Purpose which the Disclosing Party  or  any  of  its  Affiliates,  discloses  or  makes  available,  to  the  Receiving  Party  or  any  of  its  Affiliates, before, on or after the Effective Date. This includes:
+a) the fact that discussions and negotiations are taking place concerning the Purpose and the status of those discussions and negotiations;Page 1 of 5
+b) the terms of this Agreement;
+c) all  confidential  or  proprietary  information  relating  to:the  business,  affairs,  customers,  clients, suppliers, plans, business opportunities, finances, pricing, operations, processes, product information, techniques,  know-how,  technical  information,  design,  trade  secrets  and  findings  or  analysis  derived from Confidential Information, whether in tangible or intangible form.
+2.2. Confidential Information does not include information which:a) which  is  or  subsequently  becomes  public  knowledge  or  publicly  available  through  no  fault  of  the Receiving Party;or
+b) which  is  known  by  the  Receiving  Party  prior  to  the  time  of  receipt,as  evidenced  by  its  written records; or
+c) which  is  lawfully  obtained  by  the  Receiving  Party  from  a  third  party  and  is  not  subject  to  a  similar restriction on disclosure;
+d) which is independently developed by Receiving Party; or
+e) the Parties agree in writing is not confidential.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_IEKeu3EKOcMAxh5l6F59YeVw)
+ Call ID: call_IEKeu3EKOcMAxh5l6F59YeVw
+  Args:
+    pattern: 3.|3. OBLIGATIONS|Obligations of Receiving Party|Receiving Party will not|shall not disclose Confidential Information|use of Confidential Information
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+(1) NSK Europe Limited,registered number 2223191 whose registered office is at Belmont Place, Belmont Road, Maidenhead, Berkshire SL6 6TB, UK, (“ NSK ”)
+and
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_R8InDeoaScAa7b1vANMerFYU)
+ Call ID: call_R8InDeoaScAa7b1vANMerFYU
+  Args:
+    pattern: 3.1
+    }:
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Tool 'grep_search_next' failed after 1 attempt with TypeError: grep_search_next() got an unexpected keyword argument '}'. Please try again.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_Xpy1NE0mx4egl0ohgzZE5EZl)
+ Call ID: call_Xpy1NE0mx4egl0ohgzZE5EZl
+  Args:
+    pattern: 3.
+    }:
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Tool 'grep_search_next' failed after 1 attempt with TypeError: grep_search_next() got an unexpected keyword argument '}'. Please try again.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_56W8emCtzrsOJdZ2koSSP8KI)
+ Call ID: call_56W8emCtzrsOJdZ2koSSP8KI
+  Args:
+    pattern: 3. OBLIGATIONS
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_sM327y3LN2hMyL5x1OW8TLYg)
+ Call ID: call_sM327y3LN2hMyL5x1OW8TLYg
+  Args:
+    pattern: 3. The Receiving Party|The Receiving Party shall|shall not disclose the Confidential Information|use of Confidential Information
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_U3mMZb8NFelOt8kkYYIaJbVt)
+ Call ID: call_U3mMZb8NFelOt8kkYYIaJbVt
+  Args:
+    pattern: use Confidential Information only for the Purpose|used only for the Purpose|use only for the Purpose
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_LKxXOLOEOQFaldLvj8qgeZXv)
+ Call ID: call_LKxXOLOEOQFaldLvj8qgeZXv
+  Args:
+    pattern: not disclose the fact that discussions and negotiations are taking place|not disclose the fact that|not disclose that discussions|not disclose that negotiations|shall not disclose the fact
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_Hx07J6UaKnQh7OSpnttGoAFl)
+ Call ID: call_Hx07J6UaKnQh7OSpnttGoAFl
+  Args:
+    pattern: disclosing Party with prompt written notice|protective order|legally required to disclose
+    }:
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Tool 'grep_search_next' failed after 1 attempt with TypeError: grep_search_next() got an unexpected keyword argument '}'. Please try again.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_tDihnLV3UdDXxWHHjVgMynFw)
+ Call ID: call_tDihnLV3UdDXxWHHjVgMynFw
+  Args:
+    pattern: order of any court of competent jurisdiction or governmental body
+    }:
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Tool 'grep_search_next' failed after 1 attempt with TypeError: grep_search_next() got an unexpected keyword argument '}'. Please try again.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_eRel9Bh1eU14mUED6cenSLnP)
+ Call ID: call_eRel9Bh1eU14mUED6cenSLnP
+  Args:
+    pattern: order of any court of competent jurisdiction or governmental body
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+b) as may be required by an order of any court of competent jurisdiction or governmental body in which case the Receiving Party shall,to the extent permitted by law, use reasonable endeavours to provide the Disclosing Party with prompt written notice of any such requirement prior to any disclosure so that the Disclosing Party may seek a protection order or other appropriate remedy. If no protective order or remedy is obtained by the Disclosing Party, the Receiving Party shall disclose only that portion of the Confidential Information that it is legally required to disclose.Page 2 of 5
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_KE5yeRRZkMcoTsYUenJQHqes)
+ Call ID: call_KE5yeRRZkMcoTsYUenJQHqes
+  Args:
+    pattern: shall not
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+12.5. Severance.If any provision of this Agreement is or becomes invalid or unenforceable, it shall be deemed modified  to  the  minimum  extent  necessary  to  make  it  valid  and  enforceable.  Any  modification  to  a provision under this clause shall not affect the validity and enforceability of the rest of the Agreement.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_1NRqdr9lDqVMj0nKtYde0Iy2)
+ Call ID: call_1NRqdr9lDqVMj0nKtYde0Iy2
+  Args:
+    pattern: disclose
+    }:
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Tool 'grep_search_next' failed after 1 attempt with TypeError: grep_search_next() got an unexpected keyword argument '}'. Please try again.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_RkD7BzveBaGBD8JUWTjJ5vh7)
+ Call ID: call_RkD7BzveBaGBD8JUWTjJ5vh7
+  Args:
+    pattern: disclose
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1. DEFINITIONS
+Affiliate : shall mean any other corporation or other form of business entity, which, directly or indirectly, controls, is controlled by, or is under common control with, a Party at any time during the term of this Agreement.  For purposes of this definition, the term “control” means direct or indirect beneficial ownership of more than 50% of the voting share or interest of the entity;
+Confidential Information : has the meaning given in clause 2 of this Agreement;
+ Disclosing Party : a Party to this Agreement which discloses its Confidential Information to the other Party;
+Purpose :  [[INSERT  DETAILS  e.g.  to  establish  a  business  relationship  in  respect  to  the  supply  of  [named  service provision or goods] from X, etc]];
+Receiving Party : a Party to this Agreement which receives the Confidential Information from the other Party;
+ Representatives : any employees, officers, directors, professional advisors or consultants in relation to each Party and any of its Affiliates, who are actively and directly engaged in the Purpose;
+Term : has the meaning given in clause 10.1 of this Agreement.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_uDz2g4nGI92z3ahwkjseFqgc)
+ Call ID: call_uDz2g4nGI92z3ahwkjseFqgc
+  Args:
+    pattern: Confidential Information means all confidential information relating to the Purpose which the Disclosing Party  or  any  of  its  Affiliates,  discloses  or  makes  available,  to  the Receiving  Party
+    }:
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Tool 'grep_search_next' failed after 1 attempt with TypeError: grep_search_next() got an unexpected keyword argument '}'. Please try again.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_eDrnk8mGRDztskyN341PBal5)
+ Call ID: call_eDrnk8mGRDztskyN341PBal5
+  Args:
+    pattern: the terms of this Agreement;
+    }:
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Tool 'grep_search_next' failed after 1 attempt with TypeError: grep_search_next() got an unexpected keyword argument '}'. Please try again.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_e2wcnFCl74yc5VfJVXkpuuQC)
+ Call ID: call_e2wcnFCl74yc5VfJVXkpuuQC
+  Args:
+    pattern: shall[^\n]*disclos
+    }:
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Tool 'grep_search_next' failed after 1 attempt with TypeError: grep_search_next() got an unexpected keyword argument '}'. Please try again.
+
+================================== Ai Message ==================================
+
+Entailment

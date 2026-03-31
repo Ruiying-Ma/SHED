@@ -1,0 +1,32 @@
+================================ Human Message =================================
+
+HYPOTHESIS:
+Permissible acquirement of similar information: Receiving Party may acquire information similar to Confidential Information from a third party.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_2urLDNCmdPcn0QEKd2eP8M4T)
+ Call ID: call_2urLDNCmdPcn0QEKd2eP8M4T
+  Args:
+    pattern: third part|independent|similar information|residual|rightfully|lawful.*source|source other than|developed|received.*third
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+7. DISCLOSURES REQUIRED BY LAW. If Recipient is requested,ordered or required by a regulatory agency or any other  government  authority  or  a  court to disclose any Confidential Information, Recipient shall promptly notify Disclosing Party of such request, order or requirement so that Disclosing Party may have the opportunity to contest the disclosure,  including  seeking  a protective order,  or waive Recipient’s compliance with this Agreement.   If Recipient is (in the opinion of its counsel) compelled to disclose any Confidential Information, or else be liable for contempt or other  penalty  or be subject to claims from a third party, Recipient may disclose such Confidential Information without liability under this Agreement.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_UYwGdrQv1ZYpPdNCVz4hKl52)
+ Call ID: call_UYwGdrQv1ZYpPdNCVz4hKl52
+  Args:
+    pattern: third part|independent|similar information|residual|rightfully|lawful.*source|source other than|developed|received.*third
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+13. INDEPENDENT DEVELOPMENTS.Disclosing Party understands that Recipient may develop or have developed information internally, or receive  or have received  information from other parties that is  similar to the  Confidential Information.  Accordingly, nothing in this Agreement shall be construed as a representation that Recipient has not or  will not independently develop products that compete with the products or systems contemplated by the Confidential Information provided that it does so without breaching the terms of this Agreement.
+
+================================== Ai Message ==================================
+
+Entailment

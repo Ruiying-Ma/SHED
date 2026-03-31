@@ -1,0 +1,69 @@
+================================ Human Message =================================
+
+HYPOTHESIS:
+No solicitation: Receiving Party shall not solicit some of Disclosing Party's representatives.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_W7adNycgYMXAaxsaVfpx88eO)
+ Call ID: call_W7adNycgYMXAaxsaVfpx88eO
+  Args:
+    pattern: solicit|solicitation|non-solicit|representatives
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_8imcIfHqvYn8XQhTnhxgLMhq)
+ Call ID: call_8imcIfHqvYn8XQhTnhxgLMhq
+  Args:
+    pattern: employee|employees|hire|recruit|induce|staff|personnel
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+15.1 encourage or entice or incite or persuade any employee of the other (or any employee of any member of each other's group of companies or any entity in which either is interested) to terminate their employment by the other of them (or any member of its group of companies or any entity in which either is interested); and/or
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_F4FNRAbnqZIc1cNHOxOirvaM)
+ Call ID: call_F4FNRAbnqZIc1cNHOxOirvaM
+  Args:
+    pattern: 15\.1|15\.|encourage or entice or incite or persuade
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+15.1 encourage or entice or incite or persuade any employee of the other (or any employee of any member of each other's group of companies or any entity in which either is interested) to terminate their employment by the other of them (or any member of its group of companies or any entity in which either is interested); and/or
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_mgCZV8SrytsgW7m6jleBRvxE)
+ Call ID: call_mgCZV8SrytsgW7m6jleBRvxE
+  Args:
+    pattern: employee of the other|terminate their employment|and/or
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+12 BREACH
+In the event that a Party should breach the provisions of this Agreement, then the other Party shall be entitled to invoke all remedies available to it in law including without limitation the institution of urgent interim proceedings, an action for damages and/or specific performance and/or any other equitable relief for any threatened or actual breach of the provisions of this Agreement.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_ILRxu2YCG2DofT46UkRI0gBO)
+ Call ID: call_ILRxu2YCG2DofT46UkRI0gBO
+  Args:
+    pattern: encourage or entice or incite or persuade any employee of the other
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+15.1 encourage or entice or incite or persuade any employee of the other (or any employee of any member of each other's group of companies or any entity in which either is interested) to terminate their employment by the other of them (or any member of its group of companies or any entity in which either is interested); and/or
+
+================================== Ai Message ==================================
+
+Entailment

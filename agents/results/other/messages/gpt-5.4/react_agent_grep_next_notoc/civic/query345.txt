@@ -1,0 +1,50 @@
+================================ Human Message =================================
+
+QUERY:
+What is the type of the project 'PCH Median Improvements Project'?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_T3V9rPsSN2ifMrQK2tTWBEY5)
+ Call ID: call_T3V9rPsSN2ifMrQK2tTWBEY5
+  Args:
+    pattern: PCH Median Improvements Project
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+PCH Median Improvements Project
+¾ Updates:  An agreement for construction management services was approved by Council on March 14, 2022. Bids were opened and at the November 14 th Council  meeting  bids  will  be  rejected.    The  bids  came  in  higher than the available budget for the project.¾ Project Schedule:  Complete Design: March 2022
+ Advertise: TBD  Begin Construction: TBD
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_39zUrQF6GYIptkqveph3JxWq)
+ Call ID: call_39zUrQF6GYIptkqveph3JxWq
+  Args:
+    pattern: PCH Median Improvements Project|Type|capital|disaster
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+PCH Median Improvements Project
+¾ Updates:  An agreement for construction management services was approved by Council on March 14, 2022. Bids were opened and at the November 14 th Council  meeting  bids  will  be  rejected.    The  bids  came  in  higher than the available budget for the project.¾ Project Schedule:  Complete Design: March 2022
+ Advertise: TBD  Begin Construction: TBD
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_mT3MLrnSWRdcOgvlaKt0Ms0k)
+ Call ID: call_mT3MLrnSWRdcOgvlaKt0Ms0k
+  Args:
+    pattern: Capital Improvement Program|Disaster|PCH Median
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+PCH Median Improvements Project
+¾ Updates:  An agreement for construction management services was approved by Council on March 14, 2022. Bids were opened and at the November 14 th Council  meeting  bids  will  be  rejected.    The  bids  came  in  higher than the available budget for the project.¾ Project Schedule:  Complete Design: March 2022
+ Advertise: TBD  Begin Construction: TBD
+
+================================== Ai Message ==================================
+
+none

@@ -1,0 +1,109 @@
+================================ Human Message =================================
+
+QUERY:
+what are the baseline models?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_DHOY6bsCzAdjk3YG0pXaAnev)
+ Call ID: call_DHOY6bsCzAdjk3YG0pXaAnev
+  Args:
+    pattern: baseline
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Automatic sarcasm detection methods have traditionally been designed for maximum performance on a specific domain. This poses challenges for those wishing to transfer those ap- proaches to other existing or novel domains, which may be typified by very different language characteristics. We de- velop a general set of features and evaluate it under different training scenarios utilizing in-domain and/or out-of-domain training data.  The best-performing scenario, training on both while employing a domain adaptation step, achieves an F 1 of 0.780, which is well above baseline F 1 -measures of 0.515 and 0.345. We also show that the approach outperforms the best results from prior work on the same target domain.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_2eBz6hBl23JBmHYAe4joPMcA)
+ Call ID: call_2eBz6hBl23JBmHYAe4joPMcA
+  Args:
+    pattern: Baseline|baselines|baseline F1|baseline F 1|Baselines
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Automatic sarcasm detection methods have traditionally been designed for maximum performance on a specific domain. This poses challenges for those wishing to transfer those ap- proaches to other existing or novel domains, which may be typified by very different language characteristics. We de- velop a general set of features and evaluate it under different training scenarios utilizing in-domain and/or out-of-domain training data.  The best-performing scenario, training on both while employing a domain adaptation step, achieves an F 1 of 0.780, which is well above baseline F 1 -measures of 0.515 and 0.345. We also show that the approach outperforms the best results from prior work on the same target domain.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_nC8RfkDuGiY6BGlE5MrL6c3Y)
+ Call ID: call_nC8RfkDuGiY6BGlE5MrL6c3Y
+  Args:
+    pattern: baseline
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Introduction
+Sarcasm, a creative device used to communicate an intended meaning that is actually the opposite of its literal meaning, 1 is notoriously difficult to convey and interpret through text, in part because doing so relies heavily upon shared contex- tual understandings that can be marked more easily by al- tered prosody (e.g., emphasis upon certain words) or non- verbal signals (e.g., rolling one’s eyes).  It is a complex pro- cess even for humans, and in fact an inability to detect sar- casm has been linked with a number of neurocognitive dis- orders, including dementia (Kipps et al. 2009). It is similarly a challenging open task in natural language processing, and has direct implications to a number of other critical applica- tion areas, such as sentiment analysis. Most research on automatic sarcasm detection to date has focused on the Twitter domain, which boasts an am- ple source of publicly-available data, some of which is al- ready self-labeled by users for the presence of sarcasm (e.g., with #sarcasm).  However, Twitter is highly informal, space- restricted, and subject to frequent topic fluctuations from one post to the next due to the ebb and flow of current events—in short, it is not broadly representative of most text domains. Thus, sarcasm detectors trained using features designed for maximum Twitter performance are not necessarily transfer- able to other domains. Despite this, it is desirable to develop approaches that can harness the more generalizable informa- tion present in the abundance of Twitter data. In this work, we develop a set of domain-independent fea- tures for sarcasm detection and show that the features gen- erally perform well across text domains.  Further, we vali- date that domain adaptation can be applied to sarcasm de- tection to leverage patterns in out-of-domain training data, even when results from training only on that source domain data are extremely bad (far below baseline results), to im- prove over training on only the target data or over training on the simply combined dataset. Finally, we make a new dataset of sarcastic and non-sarcastic tweets available online as a resource to other researchers. 2
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_yvjtlu3bqOlieef0rvXuQyQQ)
+ Call ID: call_yvjtlu3bqOlieef0rvXuQyQQ
+  Args:
+    pattern: baseline
+    _source: document
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Tool 'grep_search_next' failed after 1 attempt with TypeError: grep_search_next() got an unexpected keyword argument '_source'. Please try again.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_TBFnPLZ7Um4g2f9K3OX23WEL)
+ Call ID: call_TBFnPLZ7Um4g2f9K3OX23WEL
+  Args:
+    pattern: baseline F 1|baseline F1|baseline F1-measures|baseline F 1 -measures
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Automatic sarcasm detection methods have traditionally been designed for maximum performance on a specific domain. This poses challenges for those wishing to transfer those ap- proaches to other existing or novel domains, which may be typified by very different language characteristics. We de- velop a general set of features and evaluate it under different training scenarios utilizing in-domain and/or out-of-domain training data.  The best-performing scenario, training on both while employing a domain adaptation step, achieves an F 1 of 0.780, which is well above baseline F 1 -measures of 0.515 and 0.345. We also show that the approach outperforms the best results from prior work on the same target domain.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_spQhkodnbTurkdsBHwPo2bEE)
+ Call ID: call_spQhkodnbTurkdsBHwPo2bEE
+  Args:
+    pattern: baseline
+    _source: doc
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Tool 'grep_search_next' failed after 1 attempt with TypeError: grep_search_next() got an unexpected keyword argument '_source'. Please try again.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_qyNO3gxyG6aEkvCCdmvz6y97)
+ Call ID: call_qyNO3gxyG6aEkvCCdmvz6y97
+  Args:
+    pattern: baseline
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Evaluation
+The features used for each train/test scenario are shown in the first column of Table 5. Twitter Features refers to all fea- tures listed in Table 3 preceded by the parenthetical (T) , and Amazon Features to all features preceded by (A) . General: Other Polarity includes the positive and negative percent- ages, average polarities, overall polarities, and largest polar- ity gap features from Table 4.  General: Subjectivity includes the % strongly subjective positive words, % weakly subjec- tive positive words, and their negative counterparts. We also include two baselines: the All Sarcasm case assumes that ev- ery instance is sarcastic, and the Random case randomly as- signs each instance as sarcastic or non-sarcastic. Results are reported for models trained only on Twitter, only on Amazon, on both training sets, and on both train- ing sets when Daum´e’s (2007) EasyAdapt technique is ap- plied, employing Twitter as the algorithm’s source domain and Amazon as its target domain.  EasyAdapt works by mod- ifying the feature space so that it contains three mappings of the original features: a general (source + target) version, a source-only version, and a target-only version. More specif- ically, assuming an input feature set X = R F for some F > 0 , where F is the number of features in the set, EasyAdapt transforms X to the augmented set, ˇ X = R 3 F .  The mappings Φ s , Φ t : X → ˇ X for the source and target domain data, respectively, are defined as Φ s ( x ) = h x , x , 0 i and Φ t ( x ) = h x , 0 , x i , where 0 = h 0 , ..., 0 i ∈ R F is the zero vector.  Refer to Daum´e (2007) for an in-depth discus-
+3 cs.waikato.ac.nz/ml/weka/
+4 Individual binary features for each of the sarcasm hashtags (5 features) and laughter tokens (9 features) were also included.5 Frequencies for computing PMI were from Google Web1T.Feature Description Most Polar Unigram The single most positive or negative unigram in the instance, according to AFINN.  Most Polar Score The score, ranging from -5 to +5, corresponding to the most polar unigram. % Strongly (Weakly) Subj. Pos. (Neg.) Words Four features: The number of words identified as strongly (weakly) subjective positive (negative) words in the instance according to MPQA, divided by the count of the instance’s words found in MPQA. Avg.  Polarity of the Instance (Liu05) The sum of the polarity scores for all words (positive words = +1 , negative words = − 1 ) in the instance included in Liu05, divided by the total number of words in the instance included in Liu05. Avg. Polarity of the Instance (MPQA) An analogue of the above, for MPQA. Strongly subjective pos. words are assigned a score of +2, weakly subjective pos.  words +1, weakly subjective neg. words -1, and strongly subjective neg. words -2. 6 Avg. Polarity of the Instance (AFINN) The sum of the polarity scores for all words in the instance included in the AFINN sentiment lexicon, divided by the total number of words in the instance included in that lexicon.  Overall Polarity of the Instance Three separate scores, corresponding to the sum of the polarity scores for all words in the Liu05, MPQA, and AFINN lexicons, respectively (scores are calculated as described above). % Positive (Negative) Words Six separate features, calculated by dividing the number of positive (or negative) words in the instance according to Liu05, MPQA, and AFINN, respectively, by the total number of words in the instance.  N-gram PMI Scores Four features corresponding to the PMI between the most polar unigram and the 1-, 2-, 3-, and 4-grams that immediately follow it.  Let p( w, W n ) be the probability of the sequence starting with unigram w and ending with the n-gram W n of size n , where C( w, W n ) is the number of occurrences of w immediately followed by W n , and N is the count of all n-grams of length n + 1 in the corpus.  Then, p( w, W n ) = 1 N C( w, W n ) , PMI( w, W n ) = log p( w, W n ) p( w, ∗ n ) × p( ∗ , W n ) (1) where ∗ n can be any n-gram of length n and ∗ can be any unigram. In tweets, hashtags are removed prior to calculating PMI (e.g. , “#love” becomes “love”), and any tokens beginning with “@” may be matched by any token (these are assumed to be mentions of another Twitter user by his or her username). All-Caps Words Two features, corresponding to the raw number of all-caps words in the instance, and the number of all-caps words divided by the total number of words in the instance. Consecutive Chars. The highest number of consecutive repeated characters in the instance (e.g. , “Sooooo” ⇒ 5 ). Consecutive Punct. The highest number of consecutive punctuation characters in the instance. Specific Character Features Two binary features: one is equal to 1 if the instance contains an exclamation mark, and the other is equal to 1 if the instance contains a question mark.  Largest Score Gap The most negative score in the instance, according to the AFINN lexicon, subtracted from the most positive score in the instance, according to the AFINN lexicon. Bag-of-Associated- Words (BOAW) Up to 200 features: training instances were divided into four groups (Sarcastic × Non-Sarcastic) × (Amazon × Twitter).  For each group, the 50 unigrams most strongly correlated with that class and domain were computed based on the PMI between the unigram and class label.  Specifically: PMI( w, l ) = log p( w,l ) p( w ) × p( l ) , where w is the unigram, l is a label, p( w, l ) is the joint probability of an instance containing w and being labeled l , p( w ) is the probability of w being in any instance, and p( l ) is the fraction of instances labeled l .  Probabilities were computed separately for Amazon and Twit- ter; stopwords are removed prior to calculating PMI. Plus-one smoothing was used for all probabilities. Bag-of-Common-Words (BOCW) Up to 200 features: training instances were divided into the same four groups as above. For each group the 50 most common unigrams were determined. Any duplicates across groups were then removed.Table 4: General Feature Set
+sion of this technique. Each model was tested on the Amazon test data (the model trained only on Twitter was also tested on the Twitter test set). Amazon reviews were selected as the target domain since the Twitter dataset was much larger than the Amazon dataset; this scenario is more consistent with the typically stated goal of domain adaptation (a large labeled out-of- domain source dataset and a small amount of labeled data in the target domain), and most clearly highlights the need for a domain-general approach. Finally, we include the best results reported by Buschmeier, Cimiano, and Klinger (2014) on the same Ama- zon dataset. For a more direct comparison between our work and theirs, we also report the results from using all of our
+features under the same classification conditions as theirs (10-fold cross-validation using scikit-learn ’s Logistic Re- gression, 7 tuning with an F 1 objective).  We refer to the latter case as Our Results, Same Classifier as Prior Best .
+Results
+The results, including each of the training scenarios noted earlier, are presented in Table 5. Precision, recall, and F 1 on the positive (sarcastic) class were recorded. The high- est F 1 achieved (0.780) among all cases was from training on the EasyAdapted Twitter and Amazon data. In compar- ison, training only on the Amazon reviews produced an F 1 of 0. 713 (training and testing only on Amazon reviews with our features but with the same classifier and cross-validation settings as Buschmeier, Cimiano, and Klinger (2014) led
+6 Part-of-speech is considered in MPQA; Amazon and Twitter data was tagged using Stanford CoreNLP (Manning et al. 2014) and the Twitter POS-tagger (Owoputi et al. 2013), respectively.7 scikit-learn.org
+ Test on Amazon Reviews Test on Twitter Train on Twitter Train on Both Train on Amazon EasyAdapt Train on Twitter P R F 1 P R F 1 P R F 1 P R F 1 P R F 1 Baseline: All Sarcasm .35 1.0 .515 .35 1.0 .515 .35 1.0 .515 .35 1.0 .515 .39 1.0 .562 Baseline: Random . 35 .35 .347 .35 .35 .347 .35 .35 .347 .35 .35 .347 .39 .39 .391 Twitter Features .32 .36 .337 .00 .00 .000 .00 .00 .000 .00 .00 .000 .57 .24 .341 Amazon Features .48 .26 .341 .76 .68 .715 .76 .67 .712 .76 .68 .715 .47 .14 .216 Gen.: Most Polar Word . 26 .30 .275 .43 .15 .222 .68 .20 .304 .52 .33 .406 .65 .38 .479 Gen.: Most Polar Score .26 .48 .335 .00 .00 .000 .59 .46 .516 .59 .46 .516 .56 .40 .466 General: Other Polarity .26 .36 .302 .35 .40 .374 .61 .69 .645 .55 .67 .601 .51 .58 . 542 General: Subjectivity .25 .02 .042 .25 .02 .042 .60 .36 .446 .59 .36 .443 .48 .15 .229 General: Syntactic .51 .26 .348 .69 .36 .470 .71 .43 .532 .65 .51 .568 .46 .17 .250 General: PMI Features .00 .00 .000 .25 .03 .061 .34 .14 .197 .42 .21 .277 . 60 .02 .030 General: BOAW .00 .00 .000 .00 .00 .000 .63 .20 .298 .60 .23 .331 .00 .00 .000 General: BOCW .47 .59 .523 .58 .16 .252 .59 .60 .594 .63 .46 .530 .59 .39 .467 All General Features .26 .32 .290 .42 .29 .340 .63 .69 .659 .69 .67 . 678 .55 .62 .582 All Features .25 .31 .276 .66 .54 .595 .66 .77 .713 .75 .82 .780 .55 .62 .583 Prior Best Results (Buschmeier, Cimiano, and Klinger 2014) .82 .69 .744 Our Results, Same Classifier as Prior Best .80 .71 .752
+Table 5: Test Results — Full Analysis
+to an F 1 of 0. 752, outperforming prior best results on that dataset). Training on both without EasyAdapt led to an F 1 of 0.595 (or 0.715 when training only on Amazon-specific features), and finally, training only on Twitter data led to an F 1 of 0.276. Training and testing on Twitter produced an F 1 of 0.583 when training on all features. 8
+
+================================== Ai Message ==================================
+
+The baselines are All Sarcasm (assumes every instance is sarcastic) and Random (randomly assigns each instance as sarcastic or non-sarcastic).

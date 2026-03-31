@@ -1,0 +1,68 @@
+================================ Human Message =================================
+
+HYPOTHESIS:
+No solicitation: Receiving Party shall not solicit some of Disclosing Party's representatives.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_NaemVrLMCpnfGspaX40TZNea)
+ Call ID: call_NaemVrLMCpnfGspaX40TZNea
+  Args:
+    pattern: solicit|solicitation|representatives|employees|personnel
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+a. limit disclosure of any Confidential Information to its directors, officers, employees,age e e e a i e  (c llec i el   Re e e a i e )  h o have a need to know such Confidential Information in connection with the Transaction, and only for that purpose;
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_hmiHEuH32gJUhg2Ft8GRJbB4)
+ Call ID: call_hmiHEuH32gJUhg2Ft8GRJbB4
+  Args:
+    pattern: solicit|solicitation|non-?solicit|hire|employees|representatives
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+a. limit disclosure of any Confidential Information to its directors, officers, employees,age e e e a i e  (c llec i el   Re e e a i e )  h o have a need to know such Confidential Information in connection with the Transaction, and only for that purpose;
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_QURTmpQljOApqzmFgE3RcI05)
+ Call ID: call_QURTmpQljOApqzmFgE3RcI05
+  Args:
+    pattern: customer|client|employee|solicit|hire|representative
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+a. limit disclosure of any Confidential Information to its directors, officers, employees,age e e e a i e  (c llec i el   Re e e a i e )  h o have a need to know such Confidential Information in connection with the Transaction, and only for that purpose;
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_F6WAjxbnSjruVSVYkIyfay4Z)
+ Call ID: call_F6WAjxbnSjruVSVYkIyfay4Z
+  Args:
+    pattern: covenant|non[- ]solicit|solicit|poach|employ|employees|officers|directors
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+a. limit disclosure of any Confidential Information to its directors, officers, employees,age e e e a i e  (c llec i el   Re e e a i e )  h o have a need to know such Confidential Information in connection with the Transaction, and only for that purpose;
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_UNiJUXBtZ6HIMamRLcPw9WHD)
+ Call ID: call_UNiJUXBtZ6HIMamRLcPw9WHD
+  Args:
+    pattern: not solicit|shall not solicit|solicit .* representatives|employees of|hire .* employees|induce .* employee
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+
+NotMentioned

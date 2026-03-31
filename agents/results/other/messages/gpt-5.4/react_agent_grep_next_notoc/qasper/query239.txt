@@ -1,0 +1,34 @@
+================================ Human Message =================================
+
+QUERY:
+What languages were included in this multilingual population?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_BQJlHQJW6x0J5dWnDUDssMjL)
+ Call ID: call_BQJlHQJW6x0J5dWnDUDssMjL
+  Args:
+    pattern: multilingual population|languages|population
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Mental health research can benefit increas- ingly fruitfully from computational linguis- tics methods, given the abundant availability of language data in the internet and advances of computational tools. This interdisciplinary project will collect and analyse social me- dia data of individuals diagnosed with bipolar disorder with regard to their recovery experi- ences.  Personal recovery - living a satisfying and contributing life along symptoms of se- vere mental health issues - so far has only been investigated qualitatively with structured in- terviews and quantitatively with standardised questionnaires with mainly English-speaking participants in Western countries.  Comple- mentary to this evidence, computational lin- guistic methods allow us to analyse first- person accounts shared online in large quan- tities, representing unstructured settings and a more heterogeneous, multilingual population, to draw a more complete picture of the aspects and mechanisms of personal recovery in bipo- lar disorder.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_yQwIqEXPPObg03GfgPOsgzYa)
+ Call ID: call_yQwIqEXPPObg03GfgPOsgzYa
+  Args:
+    pattern: English|Western|multilingual|language
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Mental health research can benefit increas- ingly fruitfully from computational linguis- tics methods, given the abundant availability of language data in the internet and advances of computational tools. This interdisciplinary project will collect and analyse social me- dia data of individuals diagnosed with bipolar disorder with regard to their recovery experi- ences.  Personal recovery - living a satisfying and contributing life along symptoms of se- vere mental health issues - so far has only been investigated qualitatively with structured in- terviews and quantitatively with standardised questionnaires with mainly English-speaking participants in Western countries.  Comple- mentary to this evidence, computational lin- guistic methods allow us to analyse first- person accounts shared online in large quan- tities, representing unstructured settings and a more heterogeneous, multilingual population, to draw a more complete picture of the aspects and mechanisms of personal recovery in bipo- lar disorder.
+
+================================== Ai Message ==================================
+
+Unanswerable

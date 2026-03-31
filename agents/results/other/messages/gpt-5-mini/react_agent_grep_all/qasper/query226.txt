@@ -1,0 +1,114 @@
+================================ Human Message =================================
+
+QUERY:
+Do any of their reviews contain translations for both Catalan and Basque?
+
+TABLE OF CONTENTS (TOC):
+1 | MultiBooked: A Corpus of Basque and Catalan Hotel Reviews Annotated for Aspect-level Sentiment Classification.
+1.1 | Abstract
+1.2 | 1. Introduction
+1.3 | 2. Related Work
+1.4 | 3. Data Collection
+1.5 | 4. Annotation
+1.5.1 | 4.1. Guidelines
+1.5.2 | 4.2. Process
+1.5.3 | 4.3. Dataset Characteristics
+1.5.4 | 4.4. Agreement Scores
+1.6 | 5. Difficult Examples
+1.7 | 6. Benchmarks
+1.8 | 7. Conclusion
+1.9 | 8. Bibliographical References
+1.10 | 9. Language Resource References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_all (call_WApjEAj7ekhWIaVlLHlwT0GK)
+ Call ID: call_WApjEAj7ekhWIaVlLHlwT0GK
+  Args:
+    pattern: translat|translation|translated|translations|translate
+
+================================= Tool Message =================================
+Name: grep_search_all
+
+No matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_all (call_QdrzOzdbSxhlQ3lNOZjzuTAm)
+ Call ID: call_QdrzOzdbSxhlQ3lNOZjzuTAm
+  Args:
+    pattern: English
+
+================================= Tool Message =================================
+Name: grep_search_all
+
+1.1 | Abstract
+While sentiment analysis has become an established field in the NLP community, research into languages other than English has been hindered by the lack of resources. Although much research in multi-lingual and cross-lingual sentiment analysis has focused on unsupervised or semi-supervised approaches, these still require a large number of resources and do not reach the performance of supervised approaches.  With this in mind, we introduce two datasets for supervised aspect-level sentiment analysis in Basque and Catalan, both of which are under-resourced languages. We provide high-quality annotations and benchmarks with the hope that they will be useful to the growing community of researchers working on these languages.Keywords: basque, catalan, sentiment analysis, aspect-level, under-resourced, opinion mining, cross-lingual
+
+1.2 | 1. Introduction
+Sentiment analysis has become an established field with a number of subfields (aspect-level sentiment analysis, so- cial media sentiment analysis, cross-lingual sentiment anal- ysis), all of which require some kind of annotated resource, either to train a machine-learning based classifier or to test the performance of proposed approaches.Although much research into multi-lingual and cross- lingual sentiment analysis has focused on unsuper- vised or semi-supervised approaches (A.R.  et al., 2012; Perez-Rosas et al., 2012; Gao et al., 2015), these tech- niques still require certain resources (linked wordnets, seed lexicon) and do not generally reach the performance of su- pervised approaches.In English the state-of-the-art for binary sentiment analysis often reaches nearly 90 percent accuracy (Tai et al. , 2015; Kim, 2014; Irsoy and Cardie, 2014), but for other lan- guages there is a marked drop in accuracy. This is mainly due to the lack of annotations and resources in these lan- guages. This is especially true of corpora annotated at aspect-level.  Unlike document- or tweet-level annotation, aspect-level annotation requires a large amount of effort from the annotators, which further reduces the likelihood of finding an aspect-level sentiment corpus in under-resourced languages. We are, however, aware of one corpus anno- tated for aspects in German (Klinger and Cimiano, 2014), although German is not a particularly low-resource lan- guage. The movement towards multi-lingual datasets for sentiment analysis is important because many languages offer differ- ent challenges, such as complex morphology or highly pro- ductive word formation, which can not be overcome by fo- cusing only on English data.The novelty of this work lies in creating corpora which cover both Basque and Catalan languages and are an- notated in such a way that they are compatible with similarly compiled corpora available in a number of languages (Agerri et al. , 2013). This allows for further research into cross-lingual sentiment analysis, as well as introducing the first resource for aspect-level sentiment analysis in Catalan and Basque. The corpus is available
+at http://hdl.handle.net/10230/33928 or https://jbarnesspain.github.io/resources/ .
+
+1.3 | 2. Related Work
+In English there are many datasets available for document- and sentence-level sentiment analysis across differ- ent domains and at different levels of annotation (Pang et al., 2002; Hu and Liu, 2004; Blitzer et al., 2007; Socher et al., 2013; Nakov et al., 2013).  These resources have been built up over a period of more than a decade and are currently necessary to achieve state-of-the-art perfor- mance. Corpora annotated at fine-grained levels (opinion- or aspect-level) require more effort from annotators, but are able to capture information which is not present at document- or sentence-level, such as nested opinions or differing polarities of different aspects of a single en- tity.  In English, the MPQA corpus (Wiebe et al., 2005) has been widely used in fine-grained opinion research. More recently, a number of SemEval tasks have concentrated on aspect-level sentiment analysis (Pontiki et al., 2014; Pontiki et al., 2015; Pontiki et al., 2016).  The Iberian peninsula contains two official languages (Por- tuguese and Spanish), as well as three co-official languages (Basque, Catalan, and Galician) and several smaller lan- guages (Aragonese, Gascon). The two official languages do have available resources for sentiment at tweet- level (Villena-Rom´an et al., 2013; Arruda et al. , 2015), as well as at aspect-level (Agerri et al., 2013; Villena-Rom´an et al., 2015; Almeida et al., 2015). The co-official languages, however, have almost none. The authors are aware of a small discourse-related sentiment corpus available in Basque (Alkorta et al. , 2015), as well as a stance corpus in Catalan (Bosco et al., 2016). These resources, however, are limited in size and scope.
+
+1.7 | 6. Benchmarks
+In order to provide a simple baseline, we frame the extrac- tion of opinion holders, targets, and phrases as a sequence labeling task and map the NAF tags to BIO tags for the opinions in each review. These tags serve as the gold labels which will need to be predicted at test time. We also per- form classification of the polarity of opinion expressions.  For the extraction of opinion holders, targets, and expres- sions we train a Conditional Random Field 4 (CRF) on standard features for supervised sequence labeling (word- , subword-, and part-of-speech information of the current word and previous words). For the classification of the po- larity of opinion expressions, we use a Bag-of-Words ap- proach to extract features and then train a linear SVM clas- sifier 5
+ For evaluation, we perform a 10-fold cross-validation with 80 percent of the data reserved for training during each fold. For extraction and classification, we report the weighted F 1 score. The results of the benchmark experiment (shown in Table 4) show that these simple baselines achieve results which are somewhat lower but still comparable to similar tasks in English (Irsoy and Cardie, 2014).  The drop is not surprising given that we use a relatively simple baseline system and due to the fact that Catalan and Basque have richer morphological systems than English, which were not exploited.Catalan Basque Targets .64 .57 Expressions .52 .54 Holders .56 .54 Polarity .80 .84
+ Table 4: Weighted F 1 scores for extraction of opinion tar- gets, expressions and holders, as well as the weighted F 1 for classification of polarity.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_all (call_A9cBGtqF6fEPFqQjbtZEzpQB)
+ Call ID: call_A9cBGtqF6fEPFqQjbtZEzpQB
+  Args:
+    pattern: review(s)?|reviewed|reviews
+
+================================= Tool Message =================================
+Name: grep_search_all
+
+1.4 | 3. Data Collection
+In order to improve the lack of data in low-resource lan- guages, we introduce two aspect-level sentiment datasets to the community, available for Catalan and Basque. To collect suitable corpora, we crawl hotel reviews from
+.www.booking.com . Booking.com allows you to search for reviews in Catalan, but it does not include Basque.  Therefore, for Basque we crawled reviews from a number of other websites that allow users to comment on their stay 1 Many of the reviews that we found through crawling are either 1) in Spanish, 2) include a mix of Spanish and the target language, or 3) do not contain any sentiment phrases. Therefore, we use a simple language identification method 2 in order to remove any Spanish or mixed reviews and also remove any reviews that are shorter than 7 tokens.  This finally gave us a total of 568 reviews in Catalan and 343 re- views in Basque, collected from November 2015 to January 2016.We preprocess them through a very light normalization, after which we perform tokenization, pos-tagging and lemmatization using Ixa-pipes (Agerri et al., 2014).Our final documents are in KAF/NAF format (Bosma et al. , 2009; Fokkens et al., 2014). This is a stand-off xml format originally from the Kyoto project (Bosma et al., 2009) and allows us to enrich our documents with many layers of linguistic information, such as the pos tag of a word, its lemma, whether it is a polar word, and if so, if it has an opinion holder or target.  The advantage of this format is that we do not have to change the original text in any way.
+
+1.5.1 | 4.1. Guidelines
+In the OpeNER annotation scheme 3 (see Table 1 for a short summary), an annotator reads a review and must first decide if there is any positive or negative attitudes in the sentence. If there are, they then decide if the sentence is on topic. Since these reviews are about hotels, we constrain the opin- ion targets and opinion expressions to those that deal with aspects of the hotel. Annotators should annotate the span of text which refers to:
+• opinion holders ,
+• opinion targets ,
+• and opinion expressions .If any opinion expression is found, the annotators must then also determine the polarity of the expression, which can be STRONG NEGATIVE , NEGATIVE , POSITIVE , or STRONG POSITIVE . As the opinion holder and targets are often im- plicit, we only require that each review has at least one an- notated opinion expression.Is there a positive / negative attitude? yes/no Is the sentence on topic ? yes/no Is it to the point?  yes/no IF YES TO ALL, ANNOTATE: What is the span of the expression? choose span Is the expression positive or negative? choose Is the expression strong? choose Is there an explicit target? yes/no If yes, what is the span? choose span Is there an explicit opinion holder yes/no If yes, what is the span? choose span
+Table 1: Simplified annotation guidelines..Figure 1: An opinion annotation following the annotation scheme detailed in Section 4. 1..For the strong positive and strong negative labels, annota- tors must use clues such as adverbial modifiers (’very bad’), inherently strong adjectives (’horrible’), and any use of cap- italization, repetition, or punctuation (’BAAAAD!!!!!’) in order to decide between the default polarity and the strong version.
+
+1.5.2 | 4.2. Process
+We used the KafAnnotator Tool (Agerri et al., 2013) to an- notate each review. This tool allows the user to select a span of tokens and to annotate them as any of the four la- bels mentioned in Section 4.1..The annotation of each corpus was performed in three phases: first, each annotator annotated a small number of reviews (20-50), after which they compared annotations and discussed any differences.  Second, the annotators an- notated half of the remaining reviews and met again to dis- cuss any new differences. Finally, they annotated the re- maining reviews. For cases of conflict after the final itera- tion, a third annotator decided between the two.The final Catalan corpus contains 567 annotated reviews and the final Basque corpus 343.
+
+1.5.3 | 4.3. Dataset Characteristics
+The reviews are typical hotel reviews, which often mention various aspects of the hotel or experience and the polarity towards these aspects. An example is shown in Example Statistics for the two corpora are shown in Table 2.1 We took reviews from a total of 35 different websites, including www.airbnb.com , www.atrapalo.com , www.nekatur.net , www.rentalia.es , www.toprural.es , and www.tripadvisor. com . 2 We use the count of stopwords to predict the probability that a review is written in Spanish, Catalan, or Basque. 3 http://www.opener-project.eu/
+Catalan Basque Number of Reviews 567 343 Average length in tokens 45 46.9 Number of Targets 2762 1775 Number of Expressions 2346 2328 Number of Holders 236 296
+Table 2: Corpus Statistics
+
+1.7 | 6. Benchmarks
+In order to provide a simple baseline, we frame the extrac- tion of opinion holders, targets, and phrases as a sequence labeling task and map the NAF tags to BIO tags for the opinions in each review. These tags serve as the gold labels which will need to be predicted at test time. We also per- form classification of the polarity of opinion expressions.  For the extraction of opinion holders, targets, and expres- sions we train a Conditional Random Field 4 (CRF) on standard features for supervised sequence labeling (word- , subword-, and part-of-speech information of the current word and previous words). For the classification of the po- larity of opinion expressions, we use a Bag-of-Words ap- proach to extract features and then train a linear SVM clas- sifier 5
+ For evaluation, we perform a 10-fold cross-validation with 80 percent of the data reserved for training during each fold. For extraction and classification, we report the weighted F 1 score. The results of the benchmark experiment (shown in Table 4) show that these simple baselines achieve results which are somewhat lower but still comparable to similar tasks in English (Irsoy and Cardie, 2014).  The drop is not surprising given that we use a relatively simple baseline system and due to the fact that Catalan and Basque have richer morphological systems than English, which were not exploited.Catalan Basque Targets .64 .57 Expressions .52 .54 Holders .56 .54 Polarity .80 .84
+ Table 4: Weighted F 1 scores for extraction of opinion tar- gets, expressions and holders, as well as the weighted F 1 for classification of polarity.
+
+1.8 | 7. Conclusion
+In this paper we have presented the MultiBooked corpus – a corpus of hotel reviews annotated for aspect-level senti- ment analysis available in Basque and Catalan. The aim of this annotation project is to allow researchers to en- able research on supervised aspect-level sentiment analysis in Basque and Catalan, as well as provide useful data for cross- and multi-lingual sentiment analysis.  We also pro- vide inter-annotator agreement scores and benchmarks, as well as making the corpus available to the community.
+
+1.9 | 8. Bibliographical References
+Agerri, R., Cuadros, M., Gaines, S.,R., Cuadros, M., Gaines, S., and Rigau, G. (2013). OpeNER: Open polarity enhanced named entity recog- nition. In Sociedad Espa ˜nola para el Procesamiento del Lenguaje Natural , volume 51, pages 215–218.
+Alkorta, J., Gojenola, K., Iruskieta, M.,J., Gojenola, K., Iruskieta, M., and Perez, A. (2015). Using relational discourse structure informa- tion in basque sentiment analysis. In Proceedings of the 5th Workshop on RST and Discourse Studies at SE- PLN(2015) , pages 1–10.
+Almeida, M. S. C., Pinto, C., Figueira,H., Mendes, P., and Martins, A. F. T. (2015). Aligning opinions: Cross- lingual opinion mining with dependencies. In Proceed- ings of the 53rd Annual Meeting of the Association for Computational Linguistics and the 7th International Joint Conference on Natural Language Processing (Vol- ume 1: Long Papers) , pages 408–418.
+A.R., B., Joshi, A., and Bhattacharyya, P.(2012). Cross- lingual sentiment analysis for Indian languages using linked wordnets. In Proceedings of COLING 2012: Posters , pages 73–82.
+Arruda, G. D. d., Roman, N. T., and Monteiro,A. M. (2015). An annotated corpus for sentiment analysis in political news. In Proceedings of the 2015 Symposium in Information and Human Language Technology , pages 101–110.
+Blitzer, J., Dredze, M., and Pereira, F.(2007). Biogra- phies, bollywood, boom-boxes and blenders: Domain adaptation for sentiment classification. In Proceedings of the 45th Annual Meeting of the Association of Com- putational Linguistics , pages 440–447.
+Bosco, C., Lai, M., Patti, V., Pardo,F. M. R., and Rosso, P. (2016). Tweeting in the debate about catalan elections. In Proceedings of the 2016 LREC workshop on Emotion and Sentiment Analysis Workshop (ESA) , pages 67–70.
+Bosma, W., Vossen, P., Soroa, A.,W., Vossen, P., Soroa, A., Rigau, G., Tesconi, M., Marchetti, A., Monachini, M., and Aliprandi, C. (2009). KAF: A generic semantic annotation format. In Pro- ceedings of the Generative Lexicon (GL2009) Workshop on Semantic Annotation , Pisa, Italy.
+Cohen, J. (1960). A coefficient of agreement for nominal scales.Educational and Psychological Measurements , 20:37–46.
+Fleiss, J. L. (1971).Measuring nominal scale agreement among many raters. Psychological Bulletin , 76:378– 382.
+Fokkens, A., Soroa, A., Beloki, Z.,A., Soroa, A., Beloki, Z., Ockeloen, N., Rigau, G., Robert van Hage, W., and Vossen, P. (2014). Naf and gaf: Linking linguistic annotations. In Proceedings 10th Joint ISO-ACL SIGSEM Workshop on Interoperable Semantic Annotation .
+Gao, D., Wei, F., Li, W., Liu, X.,D., Wei, F., Li, W., Liu, X., and Zhou, M. (2015). Cross-lingual sentiment lexicon learning with bilingual word graph label propagation. Computational Linguis- tics , 41(1):21–40, March.
+Hu, M. and Liu, B. (2004).Mining opinion features in customer reviews. In Proceedings of...(truncated)
+
+================================== Ai Message ==================================
+
+Unanswerable

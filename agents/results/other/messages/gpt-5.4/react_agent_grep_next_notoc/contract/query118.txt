@@ -1,0 +1,22 @@
+================================ Human Message =================================
+
+HYPOTHESIS:
+Limited use: Receiving Party shall not use any Confidential Information for any purpose other than the purposes stated in Agreement.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_YsHXjaoVuVxO5H19B065K9Qm)
+ Call ID: call_YsHXjaoVuVxO5H19B065K9Qm
+  Args:
+    pattern: (?i)use.*Confidential Information|purpose|purposes|Receiving Party
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+2.  Receiver’s Obligations.  Receiver shall:(i) hold the Confidential Information in strict confidence; (ii) use the Confidential Information only for the purposes as expressly directed by VIDAR; and (iii) provide such information only to those of its personnel who: (y) have a need to know the same to further VIDAR’s interests; and (z) become a party to and bound by a confidentiality agreement at least as restrictive as this Agreement prior to receiving any such information.   Receiver will not disclose Confidential Information to any party who do not meet the preceding requirements. Receiver shall use the same degree of care to protect and safeguard the confidentiality of Confidential Information as it uses to protect and safeguard the confidentiality of its own proprietary information, and Receiver represents, warrants and covenants to VIDAR that such degree of care is reasonably designed to protect the confidentiality of the Confidential Information.VIDAR Confidential
+Page 1 of 4
+18268-001 Rev B
+
+================================== Ai Message ==================================
+
+Entailment

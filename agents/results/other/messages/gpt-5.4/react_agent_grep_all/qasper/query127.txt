@@ -1,0 +1,56 @@
+================================ Human Message =================================
+
+QUERY:
+What baselines do they compare against?
+
+TABLE OF CONTENTS (TOC):
+1 | Hierarchical Neural Story Generation
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2 Writing Prompts Dataset
+1.4 | 3 Approach
+1.4.1 | 3.1 Hierarchical Story Generation
+1.4.2 | 3.2 Efficient Learning with Convolutional Sequence-to-Sequence Model
+1.4.3 | 3.3 Modeling Unbounded Context with Gated Multi-Scale Self-attention
+1.4.4 | 3.4 Improving Relevance to Input Prompt with Model Fusion
+1.5 | 4 Related Work
+1.5.1 | 4.1 Story Generation
+1.5.2 | 4.2 Hierarchical Text Generation
+1.5.3 | 4.3 Fusion Models
+1.6 | 5 Experimental Setup
+1.6.1 | 5.1 Baselines
+1.6.2 | 5.2 Fusion Training
+1.6.3 | 5.3 Training
+1.6.4 | 5.4 Generation
+1.6.5 | 5.5 Evaluation
+1.7 | 6 Results
+1.8 | 7 Discussion
+1.8.1 | 7.1 Generation Quality
+1.8.2 | 7.2 Use of Attention
+1.9 | 8 Conclusion
+1.10 | References
+1.11 | 9 Appendix of Model Architectures
+1.11.1 | 9.1 GCNN Language Model + Self-Attention
+1.11.2 | 9.2 Conv seq2seq + self-attention
+1.11.3 | 9.3 Ensemble: Conv seq2seq + self-attention
+1.11.4 | 9.4 Fusion: Conv seq2seq + self-attention
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_7Fc5GYJsA8S0szluNrnhuu50)
+ Call ID: call_7Fc5GYJsA8S0szluNrnhuu50
+  Args:
+    section_id: 1.6.1
+
+================================= Tool Message =================================
+Name: read_section
+
+5.1 Baselines
+We evaluate a number of baselines:
+(1) Language Models: Non-hierarchical models for story generation, which do not condition on the prompt. We use both the gated convolutional lan- guage (GCNN) model of Dauphin et al. ( 2017 ) and our additional self-attention mechanism.(2) seq2seq: using LSTMs and convolutional seq2seq architectures, and Conv seq2seq with de- coder self-attention. (3) Ensemble: an ensemble of two Conv seq2seq with self-attention models.(4) KNN: we also compare with a KNN model to find the closest prompt in the training set for each prompt in the test set. A TF-IDF vector for
+Model Valid Perplexity Test Perplexity Conv seq2seq 45.27 45.54 + self-attention 42.01 42.32 + multihead 40.12 40. 39 + multiscale 38.76 38.91 + gating 37.37 37.94
+Table 2: Effect of new attention mechanism. Gated multi-scale attention significantly improves the perplexity on the W RITING P ROMPTS dataset.each prompt was created using FASTTEXT ( Bo- janowski et al. , 2016 ) and FAISS ( Johnson et al. , 2017 ) was used for KNN search.  The retrieved story from the training set is limited to 150 words to match the length of generated stories.
+
+================================== Ai Message ==================================
+
+They compare against four baselines: (1) non-hierarchical language models for story generation that do not condition on the prompt, using the gated convolutional language model (GCNN) of Dauphin et al. (2017) and their additional self-attention mechanism; (2) seq2seq models using LSTMs, convolutional seq2seq architectures, and Conv seq2seq with decoder self-attention; (3) an ensemble of two Conv seq2seq with self-attention models; and (4) a KNN retrieval model that finds the closest prompt in the training set and returns the retrieved story.

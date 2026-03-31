@@ -1,0 +1,54 @@
+================================ Human Message =================================
+
+QUERY:
+What is the performance improvement of their method over state-of-the-art models on the used datasets? 
+
+TABLE OF CONTENTS (TOC):
+1 | Mitigating Annotation Artifacts in Natural Language Inference Datasets to Improve Cross-dataset Generalization Ability Guanhua Zhang 1 , 2 ∗ , Bing Bai 1 ∗ , Junqi Zhang 1 , Kun Bai 1 ,Conghui Zhu 2 , Tiejun Zhao 2 1 Cloud and Smart Industries Group, Tencent, China 2 Harbin Institute of Technology, China { guanhzhang,icebai,benjqzhang,kunbai } @tencent.com , { chzhu,tjzhao } @hit-mtlab.net
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2 Related Work
+1.4 | 3 Making Artifacts Unpredictable
+1.5 | 4 Experimental Results
+1.5.1 | 4.1 Evaluation Scheme
+1.5.2 | 4.2 Experiment Setup
+1.5.3 | 4.3 Can Artifacts Generalize Across Datasets?
+1.5.4 | 4.4 Debiasing Results
+1.6 | 5 Conclusion
+1.7 | References
+1.8 | A Detailed Assumptions and Proof of Theorem 1
+1.9 | B Experiment Setting
+1.9.1 | B.1 Hard-Easy Datasets Setting
+1.9.2 | B.2 Experiment Setup
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_K6ddqCAVOhhkHa0wJk1iMupS)
+ Call ID: call_K6ddqCAVOhhkHa0wJk1iMupS
+  Args:
+    section_id: 1.5.4
+
+================================= Tool Message =================================
+Name: read_section
+
+4.4 Debiasing Results
+Effectiveness of Debiasing Focusing on the re- sults when smooth equals 0 . 01 for SNLI and smooth equals 0 . 02 for MultiNLI, we observe that the AUC of Hyp for all testing sets are ap- proximately 0 . 5 , indicating Hyp ’s predictions are approximately equivalent to randomly guessing. Also, the gap between Hard and Easy for Norm significantly decreases comparing with the base- line.  With the smooth, we can conclude that our method effectively alleviates the bias pattern.With other smooth terms, our method still has more or less debiasing abilities. In those testing sets which are not neutral to the bias pattern, the AUC of Hyp always come closer to 0 . 5 compar- ing with the baseline with whatever smooth val- ues. Performances of Norm on Hard and Easy also come closer comparing with the baseline.  Norm trained with SNLI even exceed baseline in Hard with most smooth terms.From the results of Hyp , we can find a trend that the larger the smooth value is, the lower the level of debiasing is, while with a very small or even no smooth value, the AUC may be lower than 0 . 5 .  As mentioned before, we owe this to the imperfect estimation of P ( y | h ) , and we can conclude that a proper smooth value is a prerequisite for the best debiasing effect.Benefits of Debiasing Debiasing may improve models’ generalization ability from two aspects:
+(1) Mitigate the misleading effect of annotation artifacts. (2) Improve models’ semantic learning ability. When the annotation artifacts of the training set cannot be generalized to the testing set, which should be more common in the real-world, pre- dicting by artifacts may hurt models’ performance. Centering on the results of JOCI, in which the bias pattern of MultiNLI is misleading, we find that Norm trained with MultiNLI outperforms baseline after debiasing with all smooth values tested. Furthermore, debiasing can reduce models’ de- pendence on the bias pattern during training, thus force models to better learn semantic information to make predictions. Norm trained with SNLI exceed baseline in JOCI with smooth terms 0 . 01 and 0 . 1 . With larger smooth terms, Norm trained with both SNLI and MultiNLI exceeds baseline in SICK.  Given the fact that JOCI is almost neutral to artifacts in SNLI, and the bias pattern of both SNLI and MultiNLI are even predictive in SICK, we owe these promotions to that our method im- proves models’ semantic learning ability.As to other testing sets like SNLI, MMatch and MMismatch , we notice that the performance of Norm always decreases compared with the baseline.  As mentioned before, both SNLI and MultiNLI are prepared by Huamn Elicited , and their artifacts can be generalized across each other. We owe the drop to that the detrimental effect of mitigating the predictable bias pattern exceeds the beneficial effect of the improvement of semantic learning ability.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_SQvRAtNtIOfnBu8OLG0twUtG)
+ Call ID: call_SQvRAtNtIOfnBu8OLG0twUtG
+  Args:
+    pattern: state-of-the-art|SOTA|outperform[s]? .* state-of-the-art|improvement
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.5.4 | 4.4 Debiasing Results
+Effectiveness of Debiasing Focusing on the re- sults when smooth equals 0 . 01 for SNLI and smooth equals 0 . 02 for MultiNLI, we observe that the AUC of Hyp for all testing sets are ap- proximately 0 . 5 , indicating Hyp ’s predictions are approximately equivalent to randomly guessing. Also, the gap between Hard and Easy for Norm significantly decreases comparing with the base- line.  With the smooth, we can conclude that our method effectively alleviates the bias pattern.With other smooth terms, our method still has more or less debiasing abilities. In those testing sets which are not neutral to the bias pattern, the AUC of Hyp always come closer to 0 . 5 compar- ing with the baseline with whatever smooth val- ues. Performances of Norm on Hard and Easy also come closer comparing with the baseline.  Norm trained with SNLI even exceed baseline in Hard with most smooth terms.From the results of Hyp , we can find a trend that the larger the smooth value is, the lower the level of debiasing is, while with a very small or even no smooth value, the AUC may be lower than 0 . 5 .  As mentioned before, we owe this to the imperfect estimation of P ( y | h ) , and we can conclude that a proper smooth value is a prerequisite for the best debiasing effect.Benefits of Debiasing Debiasing may improve models’ generalization ability from two aspects:
+(1) Mitigate the misleading effect of annotation artifacts. (2) Improve models’ semantic learning ability. When the annotation artifacts of the training set cannot be generalized to the testing set, which should be more common in the real-world, pre- dicting by artifacts may hurt models’ performance. Centering on the results of JOCI, in which the bias pattern of MultiNLI is misleading, we find that Norm trained with MultiNLI outperforms baseline after debiasing with all smooth values tested. Furthermore, debiasing can reduce models’ de- pendence on the bias pattern during training, thus force models to better learn semantic information to make predictions. Norm trained with SNLI exceed baseline in JOCI with smooth terms 0 . 01 and 0 . 1 . With larger smooth terms, Norm trained with both SNLI and MultiNLI exceeds baseline in SICK.  Given the fact that JOCI is almost neutral to artifacts in SNLI, and the bias pattern of both SNLI and MultiNLI are even predictive in SICK, we owe these promotions to that our method im- proves models’ semantic learning ability.As to other testing sets like SNLI, MMatch and MMismatch , we notice that the performance of Norm always decreases compared with the baseline.  As mentioned before, both SNLI and MultiNLI are prepared by Huamn Elicited , and their artifacts can be generalized across each other. We owe the drop to that the detrimental effect of mitigating the predictable bias pattern exceeds the beneficial effect of the improvement of semantic learning ability.
+
+================================== Ai Message ==================================
+
+Unanswerable

@@ -1,0 +1,73 @@
+================================ Human Message =================================
+
+QUERY:
+How do they decide what is the semantic concept label of particular cluster?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_WurT9e3TTOV5IgFKYMlkXsst)
+ Call ID: call_WurT9e3TTOV5IgFKYMlkXsst
+  Args:
+    pattern: semantic concept label|cluster label|label of .*cluster|concept label|semantic concept
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+In this paper, we pose the question: do people talk about women and men in different ways? We introduce two datasets and a novel integra- tion of approaches for automatically inferring gender associations from language, discover- ing coherent word clusters, and labeling the clusters for the semantic concepts they repre- sent.  The datasets allow us to compare how people write about women and men in two dif- ferent settings - one set draws from celebrity news and the other from student reviews of computer science professors. We demonstrate that there are large-scale differences in the ways that people talk about women and men and that these differences vary across domains. Human evaluations show that our methods sig- nificantly outperform strong baselines.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_Navgq4dWA2htoJo9xlBPz76v)
+ Call ID: call_Navgq4dWA2htoJo9xlBPz76v
+  Args:
+    pattern: label(ing|ed)? the clusters|semantic concepts they represent|coherent word clusters|human evaluations
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+In this paper, we pose the question: do people talk about women and men in different ways? We introduce two datasets and a novel integra- tion of approaches for automatically inferring gender associations from language, discover- ing coherent word clusters, and labeling the clusters for the semantic concepts they repre- sent.  The datasets allow us to compare how people write about women and men in two dif- ferent settings - one set draws from celebrity news and the other from student reviews of computer science professors. We demonstrate that there are large-scale differences in the ways that people talk about women and men and that these differences vary across domains. Human evaluations show that our methods sig- nificantly outperform strong baselines.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_sOBu4PTKGGTINLFcAnhW5fW5)
+ Call ID: call_sOBu4PTKGGTINLFcAnhW5fW5
+  Args:
+    pattern: label.*cluster|cluster.*label|concept.*cluster|labeling.*semantic
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+In this paper, we pose the question: do people talk about women and men in different ways? We introduce two datasets and a novel integra- tion of approaches for automatically inferring gender associations from language, discover- ing coherent word clusters, and labeling the clusters for the semantic concepts they repre- sent.  The datasets allow us to compare how people write about women and men in two dif- ferent settings - one set draws from celebrity news and the other from student reviews of computer science professors. We demonstrate that there are large-scale differences in the ways that people talk about women and men and that these differences vary across domains. Human evaluations show that our methods sig- nificantly outperform strong baselines.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_5FgraFOXgID3nZx3bxObIrNf)
+ Call ID: call_5FgraFOXgID3nZx3bxObIrNf
+  Args:
+    pattern: LDA|topic|wordnet|hypernym|labeling method|cluster
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+In this paper, we pose the question: do people talk about women and men in different ways? We introduce two datasets and a novel integra- tion of approaches for automatically inferring gender associations from language, discover- ing coherent word clusters, and labeling the clusters for the semantic concepts they repre- sent.  The datasets allow us to compare how people write about women and men in two dif- ferent settings - one set draws from celebrity news and the other from student reviews of computer science professors. We demonstrate that there are large-scale differences in the ways that people talk about women and men and that these differences vary across domains. Human evaluations show that our methods sig- nificantly outperform strong baselines.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_qiE84jLjvu5u1SQog80RqaTP)
+ Call ID: call_qiE84jLjvu5u1SQog80RqaTP
+  Args:
+    pattern: WordNet|hypernym|FrameNet|label|taxonomy|concept
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+In this paper, we pose the question: do people talk about women and men in different ways? We introduce two datasets and a novel integra- tion of approaches for automatically inferring gender associations from language, discover- ing coherent word clusters, and labeling the clusters for the semantic concepts they repre- sent.  The datasets allow us to compare how people write about women and men in two dif- ferent settings - one set draws from celebrity news and the other from student reviews of computer science professors. We demonstrate that there are large-scale differences in the ways that people talk about women and men and that these differences vary across domains. Human evaluations show that our methods sig- nificantly outperform strong baselines.
+
+================================== Ai Message ==================================
+
+Unanswerable

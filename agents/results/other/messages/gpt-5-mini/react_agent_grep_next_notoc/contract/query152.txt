@@ -1,0 +1,230 @@
+================================ Human Message =================================
+
+HYPOTHESIS:
+Limited use: Receiving Party shall not use any Confidential Information for any purpose other than the purposes stated in Agreement.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_T04Pg71O0bH1UkxQDejF5Bjm)
+ Call ID: call_T04Pg71O0bH1UkxQDejF5Bjm
+  Args:
+    pattern: Receiving Party shall not use
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_noAGfMmxPfM19zkt6SEvhrZp)
+ Call ID: call_noAGfMmxPfM19zkt6SEvhrZp
+  Args:
+    pattern: use of Confidential Information|use any|use any Confidential|use.*Confidential Information|use Confidential|use the Confidential Information|purposes stated in Agreement|purpose other than
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+B.The  Parties  have  agreed  to  comply  with  this  Agreement  in  connection  with  the  disclosure  and  use  of Confidential Information.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_LGzDBkUKUy02GYIDvmzGx6se)
+ Call ID: call_LGzDBkUKUy02GYIDvmzGx6se
+  Args:
+    pattern: shall not use|not use any Confidential|only for the|for the purpose|purpose of|purpose stated|other than the purposes
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_qJg1lDjIbyR4wnp7TIRMJVQb)
+ Call ID: call_qJg1lDjIbyR4wnp7TIRMJVQb
+  Args:
+    pattern: Receiving Party|Recipient shall|Recipient will|use Confidential Information|use of Confidential Information|Confidential Information shall be used|for the purposes|purposes of this Agreement|limited to
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1. DEFINITIONS
+Affiliate : shall mean any other corporation or other form of business entity, which, directly or indirectly, controls, is controlled by, or is under common control with, a Party at any time during the term of this Agreement.  For purposes of this definition, the term “control” means direct or indirect beneficial ownership of more than 50% of the voting share or interest of the entity;
+Confidential Information : has the meaning given in clause 2 of this Agreement;
+ Disclosing Party : a Party to this Agreement which discloses its Confidential Information to the other Party;
+Purpose :  [[INSERT  DETAILS  e.g.  to  establish  a  business  relationship  in  respect  to  the  supply  of  [named  service provision or goods] from X, etc]];
+Receiving Party : a Party to this Agreement which receives the Confidential Information from the other Party;
+ Representatives : any employees, officers, directors, professional advisors or consultants in relation to each Party and any of its Affiliates, who are actively and directly engaged in the Purpose;
+Term : has the meaning given in clause 10.1 of this Agreement.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_OasVWvebVm9ZKoUmtRJXlYPY)
+ Call ID: call_OasVWvebVm9ZKoUmtRJXlYPY
+  Args:
+    pattern: 2. Confidential Information|2. Confidential|Confidential Information means|2 Confidential Information|means the Confidential Information|is confidential
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+2.1.Confidential Information means all confidential information relating to the Purpose which the Disclosing Party  or  any  of  its  Affiliates,  discloses  or  makes  available,  to  the  Receiving  Party  or  any  of  its  Affiliates, before, on or after the Effective Date. This includes:
+a) the fact that discussions and negotiations are taking place concerning the Purpose and the status of those discussions and negotiations;Page 1 of 5
+b) the terms of this Agreement;
+c) all  confidential  or  proprietary  information  relating  to:the  business,  affairs,  customers,  clients, suppliers, plans, business opportunities, finances, pricing, operations, processes, product information, techniques,  know-how,  technical  information,  design,  trade  secrets  and  findings  or  analysis  derived from Confidential Information, whether in tangible or intangible form.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_bbMD3XG7cDLMB0h5OsKdwHAD)
+ Call ID: call_bbMD3XG7cDLMB0h5OsKdwHAD
+  Args:
+    pattern: 2.2|2.3|use|use of Confidential Information|use Confidential Information|use the Confidential Information|use for the Purpose|limited to the Purpose|only for the Purpose
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+(1) NSK Europe Limited,registered number 2223191 whose registered office is at Belmont Place, Belmont Road, Maidenhead, Berkshire SL6 6TB, UK, (“ NSK ”)
+and
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_wdwL1DYeD2Pjeea86PMHYnqQ)
+ Call ID: call_wdwL1DYeD2Pjeea86PMHYnqQ
+  Args:
+    pattern: 3. Obligations of Receiving Party|Obligations of Receiving Party|Receiving Party shall|Receiving Party will|must not|not disclose|use only for the Purpose|use only for
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+c) not disclose or make available any Confidential Information in whole or in part to any person except as expressly permitted by and in accordance with this Agreement;and
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_MOBvsXqVerlqq7cnGzXzaSlh)
+ Call ID: call_MOBvsXqVerlqq7cnGzXzaSlh
+  Args:
+    pattern: 3.|Obligations|Confidential Information shall not|not use|use only|Purpose
+    maximumContextLines: 20
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Tool 'grep_search_next' failed after 1 attempt with TypeError: grep_search_next() got an unexpected keyword argument 'maximumContextLines'. Please try again.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_CixKVyWWUAb1Cqs9LJprq6at)
+ Call ID: call_CixKVyWWUAb1Cqs9LJprq6at
+  Args:
+    pattern: 3.|Obligations|not use|use only for the Purpose|use only for|only for the Purpose
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+(1) NSK Europe Limited,registered number 2223191 whose registered office is at Belmont Place, Belmont Road, Maidenhead, Berkshire SL6 6TB, UK, (“ NSK ”)
+and
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_0tUDy7WyBmUyyHPoTG2Y1FmU)
+ Call ID: call_0tUDy7WyBmUyyHPoTG2Y1FmU
+  Args:
+    pattern: shall not|not disclose|not be used|limited to|only for the Purpose|only to be used|use only
+    })}bash -lc :
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Tool 'grep_search_next' failed after 1 attempt with TypeError: grep_search_next() got an unexpected keyword argument '})}bash -lc '. Please try again.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_x3Q56CXE4YXdz8EenZe5qZGZ)
+ Call ID: call_x3Q56CXE4YXdz8EenZe5qZGZ
+  Args:
+    pattern: Purpose
+    })}bash -lc : }```
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Tool 'grep_search_next' failed after 1 attempt with TypeError: grep_search_next() got an unexpected keyword argument '})}bash -lc '. Please try again.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_K70H4O1clKWPetvPA0GuMuJw)
+ Call ID: call_K70H4O1clKWPetvPA0GuMuJw
+  Args:
+    pattern: use
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+B.The  Parties  have  agreed  to  comply  with  this  Agreement  in  connection  with  the  disclosure  and  use  of Confidential Information.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_9ichNgDAUSArePWAEzY9WTeb)
+ Call ID: call_9ichNgDAUSArePWAEzY9WTeb
+  Args:
+    pattern: Purpose
+    })}bash -lc : }
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Tool 'grep_search_next' failed after 1 attempt with TypeError: grep_search_next() got an unexpected keyword argument '})}bash -lc '. Please try again.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_veGMYfFW8vlXR8ZD4iDh8OhQ)
+ Call ID: call_veGMYfFW8vlXR8ZD4iDh8OhQ
+  Args:
+    pattern: Permitted|permit|permitted by|permitted to|as expressly permitted
+    })}bash -lc : }
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Tool 'grep_search_next' failed after 1 attempt with TypeError: grep_search_next() got an unexpected keyword argument '})}bash -lc '. Please try again.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_3MDN7fu1Qjsi5QgCi0uXkdto)
+ Call ID: call_3MDN7fu1Qjsi5QgCi0uXkdto
+  Args:
+    pattern: Purpose
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+A.The Parties intend to enter into discussions relating to the Purpose which will involve the exchange of Confidential Information between them.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_pFfkKsmRJQxU9JB0VDX3ewi6)
+ Call ID: call_pFfkKsmRJQxU9JB0VDX3ewi6
+  Args:
+    pattern: Representatives|employees, officers|actively and directly engaged in the Purpose
+    })}bash -lc : }
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Tool 'grep_search_next' failed after 1 attempt with TypeError: grep_search_next() got an unexpected keyword argument '})}bash -lc '. Please try again.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_7QFqvlNLkA3O5C67UfgJko1o)
+ Call ID: call_7QFqvlNLkA3O5C67UfgJko1o
+  Args:
+    pattern: for the Purpose
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+b) not use or exploit the Confidential Information in any way except for the Purpose;
+
+================================== Ai Message ==================================
+
+Entailment

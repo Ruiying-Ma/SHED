@@ -1,0 +1,114 @@
+================================ Human Message =================================
+
+QUERY:
+What is their definition of hate speech?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_n92TP91IObWHPPfabV28YMqz)
+ Call ID: call_n92TP91IObWHPPfabV28YMqz
+  Args:
+    pattern: hate speech
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Current research on hate speech analysis is typically oriented towards monolingual and single classification tasks. In this paper, we present a new multilingual multi-aspect hate speech analysis dataset and use it to test the current state-of-the-art multilingual multitask learning approaches. We evaluate our dataset in various classification settings, then we dis- cuss how to leverage our annotations in order to improve hate speech detection and classifi- cation in general.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_XVcUsryN7iL25rz6PPcNGEMN)
+ Call ID: call_XVcUsryN7iL25rz6PPcNGEMN
+  Args:
+    pattern: We define hate speech
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_voQ0Ua7tLz79q9EfcDHEQbIB)
+ Call ID: call_voQ0Ua7tLz79q9EfcDHEQbIB
+  Args:
+    pattern: definition
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+3.4 Pilot Dataset
+We initially put samples of 100 tweets in each of the three languages on Amazon Mechanical Turk. We showed the annotators the tweet along with lists of labels describing (a) whether it is direct or indirect hate speech; (b) if the tweet is danger- ous, offensive, hateful, disrespectful, confident or supported by some URL, fearful out of ignorance,
+7 We have also provided the annotators with the Urban Dictionary definitions of some slang English words they may not be aware of. or other; (c) the target attribute based on which it discriminates against people, specifically, race, ethnicity, nationality, gender, gender identity, sex- ual orientation, religious affiliation, disability, and other (“other” could refer to political ideologies or social classes.); (d) the name of its target group, and (e) whether the annotators feel anger, sadness, fear or nothing about the tweets.Each tweet has been labeled by three annota- tors.  We have provided them with additional text fields to fill in with labels or adjectives that would (1) better describe the tweet, (2) describe how they feel about it more accurately, and (3) name the group of people the tweet shows bias against.  We kept the most commonly used labels from our initial labelset, took off some of the initial class names and added frequently introduced labels, es- pecially the emotions of the annotators when read- ing the tweets and the names of the target groups.  For instance, after this step, we have ended up merging race, ethnicity, nationality into one label origin given common confusions we noticed and; added disgust and shock to the emotion labelset; and introduced socialists as a target group label since many annotators have suggested these labels.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_zEBrAZOhfTXBj7QTitmu9beE)
+ Call ID: call_zEBrAZOhfTXBj7QTitmu9beE
+  Args:
+    pattern: hate-speech
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_GrZugi1N88VEHa9o5MTn2jGN)
+ Call ID: call_GrZugi1N88VEHa9o5MTn2jGN
+  Args:
+    pattern: Hate speech
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1 Introduction
+With the expanding amount of text data generated on different social media platforms, current fil- ters are insufficient to prevent the spread of hate speech. Most internet users involved in a study conducted by the Pew Research Center report hav- ing been subjected to offensive name calling on- line or witnessed someone being physically threat- ened or harassed online. 1 Additionally, Amnesty International within Element AI have lately re- ported that many women politicians and journal- ists are assaulted every 30 seconds on Twitter.  2 This is despite the Twitter policy condemning the promotion of violence against people on the basis of race, ethnicity, national origin, sexual orienta- tion, gender identity, religious affiliation, age, dis- ability, or serious disease. 3 Hate speech may not represent the general opinion, yet it promotes the dehumanization of people who are typically from minority groups ( Soral et al. , 2017 ; Martin et al.  , 2012 ) and can incite hate crime ( Ross et al. , 2017 ).Moreover, although people of various linguistic backgrounds are exposed to hate speech ( Waseem
+et al. , 2017 ; Ross et al. , 2017 ), English is still at the center of existing work on toxic language anal- ysis.  Recently, some research studies have been conducted on languages such as German ( Kratzke , 2017 ), Arabic ( Albadi et al. , 2018 ), and Ital- ian ( Sanguinetti et al. , 2018 ). However, such stud- ies usually use monolingual corpora and do not contrast, or examine the correlations between on- line hate speech in different languages.  On the other hand, tasks involving more than one lan- guage such as the hatEval task 4 , which covers En- glish and Spanish, include only separate classifica- tion tasks, namely (a) women and immigrants as target groups, (b) individual or generic hate and, (c) aggressive or non-aggressive hate speech. Treating hate speech classification as a binary task may not be enough to inspect the motivation and the behavior of the users promoting it and, how people would react to it. For instance, the hateful tweets presented in Figure 1 show toxicity directed towards different targets, with or without using slurs, and generating several types of reac- tions. We believe that, in order to balance between truth and subjectivity, there are at least five impor- tant aspects in hate speech analysis.  Hence, our annotations indicate (a) whether the text is direct or indirect; (b) if it is offensive, disrespectful, hate- ful, fearful out of ignorance, abusive, or normal; (c) the attribute based on which it discriminates against an individual or a group of people; (d) the name of this group; and (e) how the annotators feel about its content within a range of negative to neutral sentiments.  To the best of our knowl- edge there are no other hate speech datasets that attempt to capture fear out of ignorance in hate- ful tweets or examine how people react to hate speech. We claim that our multi-aspect annotation schema would provide a valuable insight into sev-
+1 http://www.pewinternet.org/2017/07/11/online- harassment-2017/
+2 https://www.amnesty.org. uk/press-releases/women- abused-twitter-every-30-seconds-new-study
+3 https://help.twitter.com/en/rules-and-policies/hateful- conduct-policy
+4 https://competitions.codalab.org/competitions/19935
+Figure 1: Annotation examples in our dataset.eral linguistic and cultural differences and bias in hate speech. We use Amazon Mechanical Turk to label around 13,000 potentially derogatory tweets in English, French, and Arabic based on the above mentioned aspects and, regard each aspect as a prediction task. Since in natural language process- ing, there is a peculiar interest in multitask learn- ing, where different tasks can be used to help each other ( Collobert et al. , 2011 ; Ruder et al. , 2017 ; Hashimoto et al.  , 2017 ), we use a unified model to handle the annotated data in all three languages and five tasks. We adopt ( Ruder et al. , 2017 ) as a learning algorithm adapted to loosely related tasks such as our five annotated aspects and, use the Babylon cross-lingual embeddings ( Smith et al. , 2017 ) to align the three languages.  We compare the multilingual multitask learning settings with monolingual multitask, multilingual single-task, and monolingual single-task learning settings re- spectively. Then, we report the performance re- sults of the different settings and discuss how each task affects the remaining ones. We release our dataset and code to the community to extend re- search work on multilingual hate speech detection and classification. 5
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_Hcw5AH9C4jlKKwCUilZVE8tl)
+ Call ID: call_Hcw5AH9C4jlKKwCUilZVE8tl
+  Args:
+    pattern: We define
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+3.5 Final Dataset
+The final dataset is composed of a pilot corpus of 100 tweets per language, and comparable corpora of 5,647 English tweets, 4,014 French tweets, and 3,353 Arabic tweets. Each of the annotated as- pects represents a classification task of its own, that could either be evaluated independently, or, as intended in this paper, tested on how it impacts other tasks.  The different labels are designed to facilitate the study of the correlations between the explicitness of the tweet, the type of hostility it conveys, its target attribute, the group it dehuman- izes, how different people react to it, and the per- formance of multitask learning on the five tasks. We assigned each tweet to five annotators, then ap- plied majority voting to each of the labeling tasks.  Given the numbers of annotators and labels in each annotation sub-task, we allowed multilabel anno- tations in the most subjective classification tasks, namely the hostility type and the annotator’s senti- ment labels, in order to keep the right human-like approximations. If there are two annotators agree- ing on two labels respectively, we add both labels to the annotation.The average Krippendorff scores for inter-
+ Attribute Label En Fr Ar Directness Direct 530 2,198 1,684 Indirect 4,456 997 754 Hostility Abusive 671 1,056 610 Hateful 1,278 399 755 Offensive 4,020 1,690 1,151 Disrespectful 782 396 615 Fearful 562 388 41 Normal 1,359 1,124 1,197 Target Origin 2,448 2,266 877 Gender 638 27 548 Sexual Orientation 514 12 0 Religion 68 146 145 Disability 1,089 177 1 Other 890 1,386 1,782 Group Individual 497 918 915 Other 1,590 1,085 1,470 Women 878 62 722 Special needs 1,571 174 2 African descent 86 311 51 Annotator Disgust 3,469 602 778 Shock 2,151 1,179 917 Anger 2,955 531 356 Sadness 2,775 1,457 388 Fear 1,304 378 35 Confusion 1,747 446 115 Indifference 2,878 2,035 1,825 Total number of tweets 5,647 4,014 3,353
+ Table 2: The label distributions of each task. The counts of direct and indirect hate speech include all tweets except those that are single labeled as “normal”. Tweet and annotator’s sentiment (Annotator) are multi- label classification tasks, while target attribute (Target) and target group (Group) are not.annotator agreement (IAA) are 0.153, 0.244, and 0. 202 for English, French, and Arabic respec- tively, which are comparable to existing complex annotations ( Sanguinetti et al. , 2018 ) given the na- ture of the labeling tasks and the number of labels.We present the labelset the annotators refer to, and statistics of our annotated data in the follow- ing.Directness label Annotators determine the ex- plicitness of the tweet by labeling it as direct or indirect speech.  This should be based on whether the target is explicitly named, or less easily dis- cernible, especially if the tweet contains humor, metaphor, or figurative speech. Table 2 shows that even when partly using equivalent keywords to search for candidate tweets, there are still sig- nificant differences in the resulting data.Hostility type To identify the hostility type of the tweet, we stick to the following conventions: (1) if the tweet sounds dangerous, it should be la-
+ beled as abusive ; (2) according to the degree to which it spreads hate and the tone its author uses, it can be hateful , offensive or disrespectful ; (3) if the tweet expresses or spreads fear out of ignorance against a group of individuals, it should be labeled as fearful ; (4) otherwise it should be annotated as normal . We define this task to be multilabel.  Ta- ble 2 shows that hostility types are relatively con- sistent across different languages and offensive is the most frequent label.Target attribute After annotating the pilot dataset, we noticed common misconceptions re- garding race, ethnicity, and nationality, therefore we merged these attributes into one label ori- gin .  Then, we asked the annotators to determine whether the tweet insults or discriminates against people based on their (1) origin , (2) religious affil- iation , (3) gender , (4) sexual orientation , (5) spe- cial needs or (6) other .  Table 2 shows there are fewer tweets targeting disability in Arabic com- pared to English and French and no tweets insult- ing people based on their sexual orientation which may be due to the fact that the labels of gender, gender identity, and sexual orientation use almost the same wording. On the other hand, French con- tains a small number of tweets targeting people based on their gender in comparison to English and Arabic.  We have observed significant differ- ences in terms of target attributes in the three lan- guages. More data may help us examine the prob- lems affecting targets of different linguistic back- grounds.Target group We determined 16 common target groups tagged by the annotators after the first an- notation step.  The annotators had to decide on whether the tweet is aimed at women, people of African descent, Hispanics, gay people, Asians, Arabs, immigrants in general, refugees ; people of different religious affiliations such as Hindu, Christian, Jewish people, and Muslims ; or from political ideologies socialists, and others . We also provided the annotators with a category to cover hate directed towards one individual , which can- not be generalized.  In case the tweet targets more than one group of people, the annotators should choose the group which would be the most af- fected by it according to them. Table 1 shows the counts of the five categories out of 16 that commonly occur in the three languages. In fact, most of the tweets target individuals or fall into the
+“other” category.  In the latter case, they may target people with different political views such as liber- als or conservatives in English and French, or spe- cific ethnic groups such as Kurdish people in Ara- bic. English tweets tend to have more tweets tar- geting people with special needs, due to common language-specific demeaning terms used in con- versations where people insult one another. Ara- bic tweets contain more hateful comments towards women for the same reason.  On the other hand, the French corpus contains more tweets that are offen- sive towards African people, due to hateful com- ments generated by debates about immigrants.Sentiment of the annotator We claim that the choice of a suitable emotion representation model is key to this sub-task, given the subjective na- ture and social ground of the annotator’s sentiment analysis.  After collecting the annotation results of the pilot dataset regarding how people feel about the tweets, and observing the added categories, we adopted a range of sentiments that are in the nega- tive and neutral scales of the hourglass of emotions introduced by Cambria et al. ( 2011 ). This model includes sentiments that are connected to objec- tively assessed natural language opinions, and ex- cludes what is known as self-conscious or moral emotions such as shame and guilt.  Our labels in- clude shock , sadness , disgust , anger , fear , confu- sion in case of ambivalence, and indifference . This is the second multilabel task of our model.Table 2 shows more tweets making the anno- tators feel disgusted and angry in English, while annotators show more indifference in both French and Arabic.  A relatively more frequent label in both French and Arabic is shock, therefore reflect- ing what some of the annotators were feeling dur- ing the labeling process.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_MaE4ByUY5q1BbkDo0mLWt2wm)
+ Call ID: call_MaE4ByUY5q1BbkDo0mLWt2wm
+  Args:
+    pattern: promotes the dehumanization
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1 Introduction
+With the expanding amount of text data generated on different social media platforms, current fil- ters are insufficient to prevent the spread of hate speech. Most internet users involved in a study conducted by the Pew Research Center report hav- ing been subjected to offensive name calling on- line or witnessed someone being physically threat- ened or harassed online. 1 Additionally, Amnesty International within Element AI have lately re- ported that many women politicians and journal- ists are assaulted every 30 seconds on Twitter.  2 This is despite the Twitter policy condemning the promotion of violence against people on the basis of race, ethnicity, national origin, sexual orienta- tion, gender identity, religious affiliation, age, dis- ability, or serious disease. 3 Hate speech may not represent the general opinion, yet it promotes the dehumanization of people who are typically from minority groups ( Soral et al. , 2017 ; Martin et al.  , 2012 ) and can incite hate crime ( Ross et al. , 2017 ).Moreover, although people of various linguistic backgrounds are exposed to hate speech ( Waseem
+et al. , 2017 ; Ross et al. , 2017 ), English is still at the center of existing work on toxic language anal- ysis.  Recently, some research studies have been conducted on languages such as German ( Kratzke , 2017 ), Arabic ( Albadi et al. , 2018 ), and Ital- ian ( Sanguinetti et al. , 2018 ). However, such stud- ies usually use monolingual corpora and do not contrast, or examine the correlations between on- line hate speech in different languages.  On the other hand, tasks involving more than one lan- guage such as the hatEval task 4 , which covers En- glish and Spanish, include only separate classifica- tion tasks, namely (a) women and immigrants as target groups, (b) individual or generic hate and, (c) aggressive or non-aggressive hate speech. Treating hate speech classification as a binary task may not be enough to inspect the motivation and the behavior of the users promoting it and, how people would react to it. For instance, the hateful tweets presented in Figure 1 show toxicity directed towards different targets, with or without using slurs, and generating several types of reac- tions. We believe that, in order to balance between truth and subjectivity, there are at least five impor- tant aspects in hate speech analysis.  Hence, our annotations indicate (a) whether the text is direct or indirect; (b) if it is offensive, disrespectful, hate- ful, fearful out of ignorance, abusive, or normal; (c) the attribute based on which it discriminates against an individual or a group of people; (d) the name of this group; and (e) how the annotators feel about its content within a range of negative to neutral sentiments.  To the best of our knowl- edge there are no other hate speech datasets that attempt to capture fear out of ignorance in hate- ful tweets or examine how people react to hate speech. We claim that our multi-aspect annotation schema would provide a valuable insight into sev-
+1 http://www.pewinternet.org/2017/07/11/online- harassment-2017/
+2 https://www.amnesty.org. uk/press-releases/women- abused-twitter-every-30-seconds-new-study
+3 https://help.twitter.com/en/rules-and-policies/hateful- conduct-policy
+4 https://competitions.codalab.org/competitions/19935
+Figure 1: Annotation examples in our dataset.eral linguistic and cultural differences and bias in hate speech. We use Amazon Mechanical Turk to label around 13,000 potentially derogatory tweets in English, French, and Arabic based on the above mentioned aspects and, regard each aspect as a prediction task. Since in natural language process- ing, there is a peculiar interest in multitask learn- ing, where different tasks can be used to help each other ( Collobert et al. , 2011 ; Ruder et al. , 2017 ; Hashimoto et al.  , 2017 ), we use a unified model to handle the annotated data in all three languages and five tasks. We adopt ( Ruder et al. , 2017 ) as a learning algorithm adapted to loosely related tasks such as our five annotated aspects and, use the Babylon cross-lingual embeddings ( Smith et al. , 2017 ) to align the three languages.  We compare the multilingual multitask learning settings with monolingual multitask, multilingual single-task, and monolingual single-task learning settings re- spectively. Then, we report the performance re- sults of the different settings and discuss how each task affects the remaining ones. We release our dataset and code to the community to extend re- search work on multilingual hate speech detection and classification. 5
+
+================================== Ai Message ==================================
+
+They state that hate speech "promotes the dehumanization of people who are typically from minority groups and can incite hate crime."

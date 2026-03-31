@@ -1,0 +1,94 @@
+================================ Human Message =================================
+
+QUERY:
+Do they use pre-trained embeddings like BERT?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_XmxJ38D3WAGks86wdevRO8ud)
+ Call ID: call_XmxJ38D3WAGks86wdevRO8ud
+  Args:
+    pattern: BERT
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_pkQdUk4ZZpJ2REPLf17huWf7)
+ Call ID: call_pkQdUk4ZZpJ2REPLf17huWf7
+  Args:
+    pattern: pre-trained
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1 Introduction
+Story-telling is on the frontier of current text gen- eration technology: stories must remain themati- cally consistent across the complete document, re- quiring modeling very long range dependencies; stories require creativity; and stories need a high level plot, necessitating planning ahead rather than word-by-word generation ( Wiseman et al. , 2017 ). We tackle the challenges of story-telling with a hierarchical model, which first generates a sen- tence called the prompt describing the topic for the story, and then conditions on this prompt when generating the story. Conditioning on the prompt or premise makes it easier to generate consistent stories because they provide grounding for the overall plot. It also reduces the tendency of stan- dard sequence models to drift off topic.Prompt: The Mage, the Warrior, and the Priest
+ Story: A light breeze swept the ground, and carried with it still the distant scents of dust and time-worn stone. The Warrior led the way, heaving her mass of armour and mus- cle over the uneven terrain. She soon crested the last of the low embankments, which still bore the unmistakable fin- gerprints of haste and fear. She lifted herself up onto the top the rise, and looked out at the scene before her. [...]
+ Figure 1: Example prompt and beginning of a story from our dataset. We train a hierarchical model that first generates a prompt, and then con- ditions on the prompt when generating a story.We find that standard sequence-to-sequence (seq2seq) models ( Sutskever et al.  , 2014 ) applied to hierarchical story generation are prone to de- generating into language models that pay little at- tention to the writing prompt (a problem that has been noted in other domains, such as dialogue re- sponse generation ( Li et al. , 2015a )).  This failure is due to the complex and underspecified depen- dencies between the prompt and the story, which are much harder to model than the closer depen- dencies required for language modeling (for exam- ple, consider the subtle relationship between the first sentence and prompt in Figure 1 ).To improve the relevance of the generated story to its prompt, we introduce a fusion mechanism ( Sriram et al.  , 2017 ) where our model is trained on top of an pre-trained seq2seq model. To improve over the pre-trained model, the second model must focus on the link between the prompt and the story. For the first time, we show that fusion mechanisms can help seq2seq models build dependencies be- tween their input and output.Another major challenge in story generation is the inefficiency of modeling long documents with standard recurrent architectures—stories contain 734 words on average in our dataset.  We improve efficiency using a convolutional architecture, al-
+# Train Stories 272,600 # Test Stories 15,138 # Validation Stories 15,620 # Prompt Words 7.7M # Story Words 200M Average Length of Prompts 28.4 Average Length of Stories 734.5
+Table 1: Statistics of W RITING P ROMPTS dataset
+lowing whole stories to be encoded in parallel.  Existing convolutional architectures only encode a bounded amount of context ( Dauphin et al. , 2017 ), so we introduce a novel gated self-attention mech- anism that allows the model to condition on its previous outputs at different time-scales.To train our models, we gathered a large dataset of 303,358 human generated stories paired with writing prompts from an online forum.  Evaluating free form text is challenging, so we also introduce new evaluation metrics which isolate different as- pects of story generation.Experiments show that our fusion and self- attention mechanisms improve over existing tech- niques on both automated and human evaluation measures. Our new dataset and neural architec- tures allow for models which can creatively gen- erate longer, more consistent and more fluent pas- sages of text.  Human judges prefer our hierarchi- cal model’s stories twice as often as those of a non- hierarchical baseline.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_LhlzKhzwKouEAnyT40Fjz7Ay)
+ Call ID: call_LhlzKhzwKouEAnyT40Fjz7Ay
+  Args:
+    pattern: pre-trained seq2seq
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1 Introduction
+Story-telling is on the frontier of current text gen- eration technology: stories must remain themati- cally consistent across the complete document, re- quiring modeling very long range dependencies; stories require creativity; and stories need a high level plot, necessitating planning ahead rather than word-by-word generation ( Wiseman et al. , 2017 ). We tackle the challenges of story-telling with a hierarchical model, which first generates a sen- tence called the prompt describing the topic for the story, and then conditions on this prompt when generating the story. Conditioning on the prompt or premise makes it easier to generate consistent stories because they provide grounding for the overall plot. It also reduces the tendency of stan- dard sequence models to drift off topic.Prompt: The Mage, the Warrior, and the Priest
+ Story: A light breeze swept the ground, and carried with it still the distant scents of dust and time-worn stone. The Warrior led the way, heaving her mass of armour and mus- cle over the uneven terrain. She soon crested the last of the low embankments, which still bore the unmistakable fin- gerprints of haste and fear. She lifted herself up onto the top the rise, and looked out at the scene before her. [...]
+ Figure 1: Example prompt and beginning of a story from our dataset. We train a hierarchical model that first generates a prompt, and then con- ditions on the prompt when generating a story.We find that standard sequence-to-sequence (seq2seq) models ( Sutskever et al.  , 2014 ) applied to hierarchical story generation are prone to de- generating into language models that pay little at- tention to the writing prompt (a problem that has been noted in other domains, such as dialogue re- sponse generation ( Li et al. , 2015a )).  This failure is due to the complex and underspecified depen- dencies between the prompt and the story, which are much harder to model than the closer depen- dencies required for language modeling (for exam- ple, consider the subtle relationship between the first sentence and prompt in Figure 1 ).To improve the relevance of the generated story to its prompt, we introduce a fusion mechanism ( Sriram et al.  , 2017 ) where our model is trained on top of an pre-trained seq2seq model. To improve over the pre-trained model, the second model must focus on the link between the prompt and the story. For the first time, we show that fusion mechanisms can help seq2seq models build dependencies be- tween their input and output.Another major challenge in story generation is the inefficiency of modeling long documents with standard recurrent architectures—stories contain 734 words on average in our dataset.  We improve efficiency using a convolutional architecture, al-
+# Train Stories 272,600 # Test Stories 15,138 # Validation Stories 15,620 # Prompt Words 7.7M # Story Words 200M Average Length of Prompts 28.4 Average Length of Stories 734.5
+Table 1: Statistics of W RITING P ROMPTS dataset
+lowing whole stories to be encoded in parallel.  Existing convolutional architectures only encode a bounded amount of context ( Dauphin et al. , 2017 ), so we introduce a novel gated self-attention mech- anism that allows the model to condition on its previous outputs at different time-scales.To train our models, we gathered a large dataset of 303,358 human generated stories paired with writing prompts from an online forum.  Evaluating free form text is challenging, so we also introduce new evaluation metrics which isolate different as- pects of story generation.Experiments show that our fusion and self- attention mechanisms improve over existing tech- niques on both automated and human evaluation measures. Our new dataset and neural architec- tures allow for models which can creatively gen- erate longer, more consistent and more fluent pas- sages of text.  Human judges prefer our hierarchi- cal model’s stories twice as often as those of a non- hierarchical baseline.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_YWu7GL1EC1Mg0lNYWMKfc9tT)
+ Call ID: call_YWu7GL1EC1Mg0lNYWMKfc9tT
+  Args:
+    pattern: embed
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+9.1 GCNN Language Model + Self-Attention
+9 layers with hidden unit sizes 512 × 4 , 768 × 2 , 1024 × 3 and convolutional kernel widths 4 × 2 , 1 , 4 × 3 , 1 , 3 × 2 . Learning rate 1, momentum 0.99, dropout 0.1, embedding size 300, l2 normal- ization 1 e − 7 , 4 decoder self-attention heads.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_UqPQYhutOOtp3fVGFb1OMPkD)
+ Call ID: call_UqPQYhutOOtp3fVGFb1OMPkD
+  Args:
+    pattern: embedding
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+9.1 GCNN Language Model + Self-Attention
+9 layers with hidden unit sizes 512 × 4 , 768 × 2 , 1024 × 3 and convolutional kernel widths 4 × 2 , 1 , 4 × 3 , 1 , 3 × 2 . Learning rate 1, momentum 0.99, dropout 0.1, embedding size 300, l2 normal- ization 1 e − 7 , 4 decoder self-attention heads.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_69CamQbs0R0xjbKPuLmp2yLW)
+ Call ID: call_69CamQbs0R0xjbKPuLmp2yLW
+  Args:
+    pattern: word embedding
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+
+No; the paper does not use BERT—instead they train a fusion mechanism on top of a pre-trained seq2seq model and use 300-dimensional embeddings.

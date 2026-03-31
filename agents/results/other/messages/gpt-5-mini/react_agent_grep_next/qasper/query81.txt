@@ -1,0 +1,159 @@
+================================ Human Message =================================
+
+QUERY:
+What is symbolic rewriting?
+
+TABLE OF CONTENTS (TOC):
+1 | Can Neural Networks Learn Symbolic Rewriting?
+1.1 | Abstract
+1.2 | 1. Introduction
+1.3 | 2. Data
+1.3.1 | 2.1. The AIM data set
+1.3.2 | 2.2. The polynomial data set
+1.4 | 3. Experiments
+1.4.1 | 3.1. AIM data set
+1.4.2 | 3.2. Polynomial data set
+1.5 | 4. Conclusions and future work
+1.6 | 5. Update: Integration data sets from Facebook Research experiments
+1.7 | Acknowledgements
+1.8 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_sjlNsMFAaFmr9Iw9UwRCfzv1)
+ Call ID: call_sjlNsMFAaFmr9Iw9UwRCfzv1
+  Args:
+    pattern: symbolic rewriting
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1 | Abstract
+This work investigates if the current neural ar- chitectures are adequate for learning symbolic rewriting. Two kinds of data sets are proposed for this research – one based on automated proofs and the other being a synthetic set of polynomial terms. The experiments with use of the current neural machine translation models are performed and its results are discussed. Ideas for extending this line of research are proposed, and its rele- vance is motivated.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_3CLxdJwgGHOZGsmkeLEdstxf)
+ Call ID: call_3CLxdJwgGHOZGsmkeLEdstxf
+  Args:
+    pattern: Symbolic rewriting
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_3BossEguhtLbzyVp6qP0PAki)
+ Call ID: call_3BossEguhtLbzyVp6qP0PAki
+  Args:
+    pattern: rewrit
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1 | Abstract
+This work investigates if the current neural ar- chitectures are adequate for learning symbolic rewriting. Two kinds of data sets are proposed for this research – one based on automated proofs and the other being a synthetic set of polynomial terms. The experiments with use of the current neural machine translation models are performed and its results are discussed. Ideas for extending this line of research are proposed, and its rele- vance is motivated.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_65AB7MB3TVI2UZ7QaMkLTGDC)
+ Call ID: call_65AB7MB3TVI2UZ7QaMkLTGDC
+  Args:
+    section_id: 1.2
+
+================================= Tool Message =================================
+Name: read_section
+
+1. Introduction
+Neural networks (NNs) turned out to be very useful in sev- eral domains. In particular, one of the most spectacular ad- vances achieved with use of NNs has been natural language processing. One of the tasks in this domain is a translation between natural languages – neural machine translation (NMT) systems established here the state-of-the-art perfor- mance.  Recently, NMT produced first encouraging results in the autoformalization task ( Kaliszyk et al. , 2014 ; 2015 ; 2017 ; Wang et al. , 2018 ) where given an informal mathe- matical text in L A TEX the goal is to translate it to its for- mal (computer understandable) counterpart.  In particular, the NMT performance on a large synthetic L A TEX-to-Mizar dataset produced by a relatively sophisticated toolchain de- veloped for several decades ( Bancerek et al. , 2018 ) is sur- prisingly good ( Wang et al. , 2018 ), indicating that neural networks can learn quite complicated algorithms for sym- bolic data. This inspired us to pose a question: Can NMT models be used in the formal-to-formal setting?  In particu- lar: Can NMT models learn symbolic rewriting?The answer is relevant to various tasks in automated reasoning. For example, neural models could compete with symbolic methods such as inductive logic program- ming ( Muggleton & De Raedt , 1994 ) (ILP) that have been
+previously experimented with to learn simple rewrite tasks and theorem-proving heuristics from large formal cor- pora ( Urban , 1998 ).  Unlike (early) ILP, neural methods can, however, easily cope with large and rich datasets with- out combinatorial explosion.Our work is also an inquiry into the capabilities of NNs as such, in the spirit of works like ( Evans et al. , 2018 ).
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_aMztsI5zLwHPsj0DoavGXQLA)
+ Call ID: call_aMztsI5zLwHPsj0DoavGXQLA
+  Args:
+    pattern: rewrite
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.2 | 1. Introduction
+Neural networks (NNs) turned out to be very useful in sev- eral domains. In particular, one of the most spectacular ad- vances achieved with use of NNs has been natural language processing. One of the tasks in this domain is a translation between natural languages – neural machine translation (NMT) systems established here the state-of-the-art perfor- mance.  Recently, NMT produced first encouraging results in the autoformalization task ( Kaliszyk et al. , 2014 ; 2015 ; 2017 ; Wang et al. , 2018 ) where given an informal mathe- matical text in L A TEX the goal is to translate it to its for- mal (computer understandable) counterpart.  In particular, the NMT performance on a large synthetic L A TEX-to-Mizar dataset produced by a relatively sophisticated toolchain de- veloped for several decades ( Bancerek et al. , 2018 ) is sur- prisingly good ( Wang et al. , 2018 ), indicating that neural networks can learn quite complicated algorithms for sym- bolic data. This inspired us to pose a question: Can NMT models be used in the formal-to-formal setting?  In particu- lar: Can NMT models learn symbolic rewriting?The answer is relevant to various tasks in automated reasoning. For example, neural models could compete with symbolic methods such as inductive logic program- ming ( Muggleton & De Raedt , 1994 ) (ILP) that have been
+previously experimented with to learn simple rewrite tasks and theorem-proving heuristics from large formal cor- pora ( Urban , 1998 ).  Unlike (early) ILP, neural methods can, however, easily cope with large and rich datasets with- out combinatorial explosion.Our work is also an inquiry into the capabilities of NNs as such, in the spirit of works like ( Evans et al. , 2018 ).
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_ll2jYtM5du7HZzvGAadUP7L8)
+ Call ID: call_ll2jYtM5du7HZzvGAadUP7L8
+  Args:
+    section_id: 1.3.1
+
+================================= Tool Message =================================
+Name: read_section
+
+2.1. The AIM data set
+The data consists of sets of ground and nonground rewrites that came from Prover9 1 proofs of theorems about AIM loops produced by Veroff ( Kinyon et al. , 2013 ).Many of the inferences in the proofs are paramodulations from an equation and have the form
+s = t u [ θ ( s )] = v u [ θ ( t )] = v
+ where s, t, u, v are terms and θ is a substitution. For the most common equations s = t , we gathered corresponding pairs of terms u [ θ ( s )] , u [ θ ( t )] which were rewritten from one to another with s = t .  We put the pairs to separate data sets (depending on the corresponding s = t ): in total 8 data sets for ground rewrites (where θ is trivial) and 12 for nonground ones. The goal will be to learn rewriting for each of these 20 rules separately.Terms in the examples are treated as linear sequences of to- kens where tokens are single symbols (variable / constant / predicate names, brackets, commas).  Numbers of exam- ples in each of the data sets vary between 251 and 34101. Lengths of the sequences of tokens vary between 1 and 343, with the mean around 35. These 20 data sets were split into training, validation and test sets for our experiments ( 60% , 10% , 30% , respectively). * Equal contribution 1 University of Warsaw, Poland 2 Czech Technical University, Prague 3 University of Innsbruck, Aus- tria. Correspondence to: Bartosz Piotrowski < bartoszpi- otrowski@post.pl > , Josef Urban < josef.urban@gmail.com > .Presented at the ICML 2019 Workshop on Learning and Reason- ing with Graph-Structured Data Copyright 2019 by the author(s). 1 https://www.cs.unm.edu/˜mccune/prover9/
+Neural Rewriting
+Table 1. Example of a ground rewrite in the AIM data set. Rewrite rule: b(s(e, v1), e) = v1 Before rewriting: k(b(s(e, v1), e), v0) After rewriting: k(v1, v0)
+Table 2. Example of a nonground rewrite in the AIM data set.  Rewrite rule: o(V0, e) = V0 Before rewriting: t(v0, o(v1, o(v2, e))) After rewriting: t(v0, o(v1, v2))
+In Table 1 and Table 2 there are presented examples of pairs of AIM terms in TPTP ( Sutcliffe , 2017 ) format, before and after rewriting with, respectively, ground and nonground rewrite rules. 2
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_m8ufChPTFAtFGFpaFg9z9mLe)
+ Call ID: call_m8ufChPTFAtFGFpaFg9z9mLe
+  Args:
+    section_id: 1.3.2
+
+================================= Tool Message =================================
+Name: read_section
+
+2.2. The polynomial data set
+This is a synthetically created data set where the examples are pairs of equivalent polynomial terms. The first element of each pair is a polynomial in an arbitrary form, and the second element is the same polynomial in a normalized form. The arbitrary polynomials are created randomly in a recursive manner from a set of available (non-nullary) function symbols, variables and constants. First, one of the symbols is randomly chosen. If it is a constant or a variable, it is returned and the process terminates.  If a function sym- bol is chosen, its subterm(s) are constructed recursively in a similar way.The parameters of this process are set in such a way that it creates polynomial terms of average length around 25 sym- bols. Terms longer than 50 are filtered out. Several data sets of various difficulties were created by varying the number of available symbols. These were quite limited – at most 5 different variables and constants being a few first natural numbers.  The reason for this limited complexity of the in- put terms is because normalizing even a relatively simple polynomial can result in a very long term with very large constants – which is related especially to the operation of exponentiation in polynomials.Each data set consists of different 300 000 examples – see Table 3 for examples. These data sets were split 2 All the described AIM data are available at https://github. com/BartoszPiotrowski/ rewriting-with-NNs/tree/master/data/AIM
+Table 3. Examples in the polynomial data set. Before rewriting: After rewriting: (x*(x+1))+1 xˆ2+x+1 (2*y)+(1+(y*y)) yˆ2+2*y+1 (x+2)*(((2*x)+1)+(y+1)) 2*xˆ2+5*x+y+3
+ into training, validation and test sets for our experiments ( 60% , 10% , 30% , respectively). 3
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_ZgiQLwzYM28kldn17B0qI982)
+ Call ID: call_ZgiQLwzYM28kldn17B0qI982
+  Args:
+    section_id: 1.4
+
+================================= Tool Message =================================
+Name: read_section
+
+3. Experiments
+For experiments with both data sets, we used an established NMT architecture ( Luong et al. , 2017 ) based on LSTMs (long short-term memory cells) and implementing the at- tention mechanism. 4
+After a small grid search, we decided to inherit most of the hyperparameters of the model from the best re- sults achieved in ( Wang et al. , 2018 ) where L A TEX-to-Mizar translation is learned.  We used relatively small LSTM cells consisting of 2 layers with 128 units. The “scaled Luong” version of the attention mechanism was used, as well as dropout with rate equal 0 . 2 . The number of training steps was 10000 . (This setting was used for all our experiments described below.)
+3.1. AIM data set
+First, NMT models were trained for each of the 20 rewrite rules in the AIM data set. It turned out that the models, as long as the number of examples was greater than 1000 , were able to learn the rewriting task very well, reaching 90% of accuracy on separated test sets. This means that the task of applying a single rewrite step seems relatively easy to learn by NMT. See Table 4 for all the results. We also run an experiment on the joint set of all rewrite rules (consisting of 41396 examples). Here the task was more difficult as a model needed not only to apply rewriting correctly, but also choose “the right” rewrite rule applicable for a given term. Nevertheless, the performance was also very good, reaching 83% accuracy.
+3.2. Polynomial data set
+Then experiments on more challenging but also much larger data sets for polynomial normalization were per- formed. Depending on the difficulty of the data, accuracy on the test sets achieved in our experiments varied between 70% and 99% . The results in terms of accuracy are shown in Table 5 .This high performance of the model encouraged a closer inspection of the results. First, we checked if in the test sets
+3 The described polynomial data are available at https://github. com/BartoszPiotrowski/ rewriting-with-NNs/tree/master/data/ polynomial
+4 We also experimented with the Transformer model ( Vaswani et al. , 2017 ) but the results were worse. This could be due to a limited grid search we performed as Transformer is known to be very sensitive to hyperparameters.Neural Rewriting
+Table 4. Results of experiments with AIM data. (Names of the rules correspond to folder names in the Github repo. )
+Rule: Training examples: Test examples: Accuracy on test: abstrused1u 2472 1096 86.5% abstrused2u 2056 960 89.2% abstrused3u 1409 666 84.3% abstrused4u 1633 743 87.4% abstrused5u 2561 1190 89. 5% abstrused6u 81 40 12.5% abstrused7u 76 37 0.0% abstrused8u 79 39 2.5% abstrused9u 1724 817 86.7% abstrused10u 3353 1573 82.9% abstrused11u 10230 4604 79. 0% abstrused12u 7201 3153 87.2% instused1u 198 97 20.6% instused2u 196 87 25.2% instused3u 83 41 29.2% instused4u 105 47 2.1% instused5u 444 188 59.5% instused6u 1160 531 87. 5% instused7u 307 144 13.8% instused8u 116 54 3.7% union of all 41396 11826 83.2%
+there are input examples which differ from these in training sets only by renaming of variables. Indeed, for each of the data sets in test sets are 5 − 15% of such “renamed” examples.  After filtering them out, the measured accuracy drops – but only by 1 − 2% .An examination of the examples wrongly rewritten by the model was done. It turns out that the wrong outputs al- most always parse (in 97 − 99% of cases, they are legal polynomial terms). Notably, depending on the difficulty of the data set, as much as 18 − 64% of incorrect outputs are wrong only with respect to the constants in the terms.  (Typ- ically, the NMT model proposes too low constants com- pared to the correct ones.) Below 1% of wrong outputs is correct modulo variable renaming.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_r8OQarTjnqdw3I1sEW9wuteK)
+ Call ID: call_r8OQarTjnqdw3I1sEW9wuteK
+  Args:
+    pattern: symbolic
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1 | Abstract
+This work investigates if the current neural ar- chitectures are adequate for learning symbolic rewriting. Two kinds of data sets are proposed for this research – one based on automated proofs and the other being a synthetic set of polynomial terms. The experiments with use of the current neural machine translation models are performed and its results are discussed. Ideas for extending this line of research are proposed, and its rele- vance is motivated.
+
+================================== Ai Message ==================================
+
+Symbolic rewriting is transforming symbolic terms by applying rewrite rules (equations): given an equation s = t, in a context u and with a substitution θ a term u[θ(s)] is rewritten to u[θ(t)]. Examples in the paper include ground and nonground rewrites from Prover9 proofs and normalizing a polynomial term into a canonical form.

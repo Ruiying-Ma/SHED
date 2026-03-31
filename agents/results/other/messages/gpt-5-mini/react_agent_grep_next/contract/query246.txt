@@ -1,0 +1,153 @@
+================================ Human Message =================================
+
+HYPOTHESIS:
+Permissible post-agreement possession: Receiving Party may retain some Confidential Information even after the return or destruction of Confidential Information.
+
+TABLE OF CONTENTS (TOC):
+1 | NON-DISCLOSURE AGREEMENT
+1.1 | 1.  In connection with any transaction entered or contemplated to be entered pursua...
+1.2 | 2. Borrower shall use the Information solely in its credit,
+1.3 | 3. Borrower shall limit the distribution of the Information within the firm to only those credit,
+1.4 | 4.  Borrower shall maintain the Information in confidence and shall not disclose th...
+1.5 | 5.  If Borrower (or its employees or agents) breaches or threatens to breach this A...
+1.6 | 6. Borrower acknowledges that,
+1.7 | 7.  This Agreement shall be binding upon and shall inure to the benefit of the part...
+1.8 | 8. This Agreement shall be effective as of the date set forth above.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_NWZmRtXaaJ9GV4aNUZ3KJJFL)
+ Call ID: call_NWZmRtXaaJ9GV4aNUZ3KJJFL
+  Args:
+    pattern: return
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_i9tiopqKZdXyrdcq9JYqpxlt)
+ Call ID: call_i9tiopqKZdXyrdcq9JYqpxlt
+  Args:
+    pattern: retain
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_WFOArEsF0N6qLz0iLg2mmVNk)
+ Call ID: call_WFOArEsF0N6qLz0iLg2mmVNk
+  Args:
+    pattern: destroy
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_fW8bZImles5RZGiMObP8GPr2)
+ Call ID: call_fW8bZImles5RZGiMObP8GPr2
+  Args:
+    section_id: 1.1
+
+================================= Tool Message =================================
+Name: read_section
+
+1.In connection with any transaction entered or contemplated to be entered pursuant to the Borrowing Agreement, Lending Agent shall provide to the Borrower information regarding each Principal, including the Name, Tax or Government ID, address, and other specific identifying information, financial information, corporate structure and organization, and/or information concerning Loans entered into on behalf of specific Principals (collectively, the “Information”).
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_hzONwbQfAjj4fLt9lBI6yv32)
+ Call ID: call_hzONwbQfAjj4fLt9lBI6yv32
+  Args:
+    section_id: 1.2
+
+================================= Tool Message =================================
+Name: read_section
+
+2. Borrower shall use the Information solely in its credit,risk management and net capital processes, including, without limitation, functions such as concentration limit monitoring, compliance or legal review, or senior management oversight as Borrower may reasonably deem necessary to comply with regulatory requirements including, without limitation, regulatory capital computation, regulatory reporting and concentration limit monitoring .
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_FtAwPOohDCCwBTWttQGV4kvk)
+ Call ID: call_FtAwPOohDCCwBTWttQGV4kvk
+  Args:
+    section_id: 1.3
+
+================================= Tool Message =================================
+Name: read_section
+
+3. Borrower shall limit the distribution of the Information within the firm to only those credit,risk management, regulatory reporting and compliance areas who perform the functions described above. In particular, Borrower shall not permit the trading desks within the firm to have access to the Information, except and only to the extent that such trading desks are involved in the ordinary course of business in risk management functions. Borrower may also disclose the Information to its legal counsel.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_cr97MY7LneDGADblKVipnRNm)
+ Call ID: call_cr97MY7LneDGADblKVipnRNm
+  Args:
+    section_id: 1.4
+
+================================= Tool Message =================================
+Name: read_section
+
+4.Borrower shall maintain the Information in confidence and shall not disclose the information to any third party without the consent of Lending Agent; provided, however, that Borrower may disclose the Information to the extent required by
+Sample 2
+subpoena, court order, request from a regulatory body with jurisdiction over Borrower, or as otherwise required by law or regulation.  Borrower shall not be required to keep the Information confidential to the extent that the Information (a) becomes publicly known through means other than a breach of this Agreement by Borrower; (b) was in the possession of Borrower prior to receipt thereof from the Lending Agent; or (c) is independently learned, obtained or developed by Borrower without violating the terms of this Agreement.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_RyxF1hQj52wJHkUlxe2QedXY)
+ Call ID: call_RyxF1hQj52wJHkUlxe2QedXY
+  Args:
+    section_id: 1.5
+
+================================= Tool Message =================================
+Name: read_section
+
+5.If Borrower (or its employees or agents) breaches or threatens to breach this Agreement, Lending Agent may, in addition to any other remedies available, seek any equitable remedy it deems appropriate to enjoin an actual or threatened violation by Borrower.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_kI2qQh2IZhYmRVIzNL3JKcLS)
+ Call ID: call_kI2qQh2IZhYmRVIzNL3JKcLS
+  Args:
+    section_id: 1.6
+
+================================= Tool Message =================================
+Name: read_section
+
+6. Borrower acknowledges that,except with respect to information regarding loans entered into on behalf of  specific Principals, Lending Agent did not create or compile the Information and is merely forwarding information obtained from Principals. Accordingly, Borrower acknowledges that Lending Agent makes no representations or warranties regarding the accuracy or completeness of the Information and that Borrower is not relying on Lending Agent to have performed any review of the Information for accuracy or completeness.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_rvejDuuj2JOV5adHslmiO90L)
+ Call ID: call_rvejDuuj2JOV5adHslmiO90L
+  Args:
+    section_id: 1.7
+
+================================= Tool Message =================================
+Name: read_section
+
+7.This Agreement shall be binding upon and shall inure to the benefit of the parties hereto and their respective successors and permitted assigns. This Agreement shall be governed by the laws of the State of New York, without regard to its conflict of law principles. Borrower and Lending Agent hereby hereby irrevocably waive any and all rights to trial by jury in any legal proceeding arising out of or relating to this Agreement.  This Agreement constitutes the entire agreement and understanding between the parties and supersedes any and all prior agreements and understandings, oral or written, relating to the subject matter hereof. This Agreement may not be amended except by a writing signed by both parties hereto.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_ETYUnSf56N0sBNbamVEDJVrT)
+ Call ID: call_ETYUnSf56N0sBNbamVEDJVrT
+  Args:
+    section_id: 1.8
+
+================================= Tool Message =================================
+Name: read_section
+
+8. This Agreement shall be effective as of the date set forth above.The obligations hereunder shall expire upon the earlier to occur of (a) ___ years from the termination date of the last loan of securities outstanding under the Borrowing Agreement or (b) the date upon which the Information ceases to be confidential as set forth above.IN WITNESS WHEREOF, the parties have caused this Agreement to be duly executed by their respective authorized representatives as of the day and year first above written. ________________ [BORROWER] _______________________ [LENDING AGENT] By: ____________________________ Name: __________________________ Title: ___________________________ By: _____________________________ Name: __________________________ Title: ___________________________
+
+================================== Ai Message ==================================
+
+NotMentioned

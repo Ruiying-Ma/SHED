@@ -1,0 +1,208 @@
+================================ Human Message =================================
+
+HYPOTHESIS:
+Notice on compelled disclosure: Receiving Party shall notify Disclosing Party in case Receiving Party is required by law, regulation or judicial process to disclose any Confidential Information.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_LyeLoo4Uqky3BxErYAvS9mvY)
+ Call ID: call_LyeLoo4Uqky3BxErYAvS9mvY
+  Args:
+    pattern: required by law|compel|compelled|compulsion|judicial process|judicial|regulation to disclose|notify.*Disclosing Party|notice.*Disclosing Party|notify.*required by law
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_6PycJkBjR9dkzTXUbYcUrcng)
+ Call ID: call_6PycJkBjR9dkzTXUbYcUrcng
+  Args:
+    pattern: required.*disclos|required by|compel|compelled to|court order|judicial|subpoena|process to disclose|regulation|law, regulation|law or regulation|legal process|notify
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+5.The  Receiving  Party  will  adhere  to  all  Canadian  export  laws,  rules  and  regulations,  and  will  not export  or  re-export  any  technical  data  or  products  received  from  the  Disclosing  Party,  nor  will  the receiving party export or re-export the associated products of such technical data, to any restricted country and/or to any company, individual or government entity listed in the Table of Denial Orders published from time to time by the Canadian Government (called denied persons).
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_vOMY7R5fRl9vjyEDygPou2WN)
+ Call ID: call_vOMY7R5fRl9vjyEDygPou2WN
+  Args:
+    pattern: notify|notice|written notice|written|notify.*party|written notice.*party|written notice was|notify.*Disclosing|give.*notice
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+14. This Agreement constitutes the entire agreement, written or verbal,between the parties with respect to  the  terms  set  forth  herein.    This  Agreement  may  not  be  amended  except  in  writing  signed  by  a duly authorized representative of the respective parties.[The space below is intentionally left blank.]
+4
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_txNteeWEf5v35gRvcIICUwt7)
+ Call ID: call_txNteeWEf5v35gRvcIICUwt7
+  Args:
+    pattern: Confidential|Confidential Information|Receiving Party|Disclosing Party|disclose|Disclosure|disclosure
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+ATTACHMENTS
+Attachment “A”: Draft Non-Disclosure Agreement
+______________________________________________________________________________ A copy of this report can be obtained online at http://www.halifax.ca/council/agendasc/cagenda.html then choose the appropriate meeting date, or by contacting the Office of the Municipal Clerk at 490-4210, or Fax 490-4208.  Report Prepared by: David Greener, Senior Solicitor, Legal Services, 490-3960 Report Approved by: ________________________________________________ Martin Ward, Q.C., Acting Director, Legal Services, 490-3960 ______________________________________________________________________________
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_qnLncziumLXe6Tgh0zmwBVIB)
+ Call ID: call_qnLncziumLXe6Tgh0zmwBVIB
+  Args:
+    pattern: Receiving Party
+    options:
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Tool 'grep_search_next' failed after 1 attempt with TypeError: grep_search_next() got an unexpected keyword argument 'options'. Please try again.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_lQPjlRfAzUZ0H6OfaqA5EhoC)
+ Call ID: call_lQPjlRfAzUZ0H6OfaqA5EhoC
+  Args:
+    pattern: Receiving Party
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+(a) in the public domain other than by a breach of this Agreement by the Receiving Party;or
+2
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_kcReKuHzTijmKrt4PZmyat4Z)
+ Call ID: call_kcReKuHzTijmKrt4PZmyat4Z
+  Args:
+    pattern: Receiving Party
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+(c) rightfully known to the Receiving Party without any limitation on use or disclosure prior to its receipt from the Disclosing Party;or
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_297pnTzdYiGIwdLm7P8UoSEn)
+ Call ID: call_297pnTzdYiGIwdLm7P8UoSEn
+  Args:
+    pattern: Disclos
+    options:
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Tool 'grep_search_next' failed after 1 attempt with TypeError: grep_search_next() got an unexpected keyword argument 'options'. Please try again.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_ye6JZyzZFnafS8pXjOddM3Xj)
+ Call ID: call_ye6JZyzZFnafS8pXjOddM3Xj
+  Args:
+    pattern: Disclosing Party
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.  The  confidential,proprietary  and  trade  secret  information  of  the  Disclosing  Party  (hereinafter "Confidential Information") provided hereunder is any and all information, in whatever form (including electronic data) that will be disclosed to facilitate the potential transaction of business (related to the provision  of  SAP  Services  to  HRM)  between  the  Parties,  including,  but  not  limited  to, portions  or parts of the November 1, 2012 Agreement (including any schedules  or appendices) between the Province of Nova Scotia and IBM, each Party's disclosure of intellectual property, techniques, sketches,  drawings,  models,  inventions,  know-how,  processes,  apparatus,  equipment,  algorithms, software  programs,  software  source  documents,  and  formulae  related  to  the  current,  future  and proposed  products,  documents  and  services,  research,  experimental  work,  development,  design details and specifications, engineering, financial information, procurement requirements, purchasing, manufacturing,  licensing,  sales  or  service  customer  lists,  business  forecasts,  sales  and merchandizing, and marketing plans and information.   For purposes of this Agreement confidential, proprietary  and  trade  secret  information  of the  Province’s  SAP  Service  Provider  or  any  other Province’s  Service  Provider, any  parent  company,  subsidiary  or  affiliate  of  the  Disclosing  party shall be considered Confidential Information of the Disclosing Party for purposes of this Agreement.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_gJxlggSywY17BH8RQ2O8PvAD)
+ Call ID: call_gJxlggSywY17BH8RQ2O8PvAD
+  Args:
+    pattern: required by law
+    }```}```json_WRITE_ERROR_REAL_FUNCTION_SIGNATURE_UNKNOWN_HELP```},】compression_code_formatting_error_json.opendaylight]}]}Hello I'm seeing the tool crashed. I'll call again. Let's search for : {".} continuous pointless. I'll call tool again with simpler pattern.**IGNORE LAST**. Let's call with ": ". Hmm. I'll search for "}
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Tool 'grep_search_next' failed after 1 attempt with TypeError: grep_search_next() got an unexpected keyword argument '}```}```json_WRITE_ERROR_REAL_FUNCTION_SIGNATURE_UNKNOWN_HELP```},】compression_code_formatting_error_json.opendaylight]}]}Hello I'm seeing the tool crashed. I'll call again. Let's search for '. Please try again.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_PutY9IWYpKzT0SuwwmpLybYk)
+ Call ID: call_PutY9IWYpKzT0SuwwmpLybYk
+  Args:
+    pattern: subpoena
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_bmxaRSeppyz9E2pf0k7HQjcQ)
+ Call ID: call_bmxaRSeppyz9E2pf0k7HQjcQ
+  Args:
+    pattern: Exception|except|disclosure.*law|lawful|comply with law|comply with any law
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+14. This Agreement constitutes the entire agreement, written or verbal,between the parties with respect to  the  terms  set  forth  herein.    This  Agreement  may  not  be  amended  except  in  writing  signed  by  a duly authorized representative of the respective parties.[The space below is intentionally left blank.]
+4
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_cMvZ2SdhhgAeKA5v5r4l92qw)
+ Call ID: call_cMvZ2SdhhgAeKA5v5r4l92qw
+  Args:
+    pattern: except as required by
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_DLz4BJXeZaCiq0wbzl3XYDtZ)
+ Call ID: call_DLz4BJXeZaCiq0wbzl3XYDtZ
+  Args:
+    pattern: shall notify|shall give notice|notify the Disclosing|notify.*Disclosing|notify the other|give notice to|promptly notify|promptly notify the Disclosing|promptly notify the other party|notify Disclosing Party
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_OATAADwIxwu3inRmx7hjV3q9)
+ Call ID: call_OATAADwIxwu3inRmx7hjV3q9
+  Args:
+    pattern: disclosure to any third party|disclose to any third party|disclose any Confidential Information to any person
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_ydnBB7W71qSCc9MokEdo7tkJ)
+ Call ID: call_ydnBB7W71qSCc9MokEdo7tkJ
+  Args:
+    pattern: required.*by law.*to disclose|required by law to disclose|if required by law
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+
+NotMentioned

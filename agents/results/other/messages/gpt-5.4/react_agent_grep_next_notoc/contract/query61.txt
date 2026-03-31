@@ -1,0 +1,68 @@
+================================ Human Message =================================
+
+HYPOTHESIS:
+No solicitation: Receiving Party shall not solicit some of Disclosing Party's representatives.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_R5iAA93mcSxze8l7v3HL02yq)
+ Call ID: call_R5iAA93mcSxze8l7v3HL02yq
+  Args:
+    pattern: solicit|solicitation|representatives|employees|hire|recruit
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+a) all such information, of any kind whatsoever (whether in oral,written or electronic form, and including, but  not  limited  to,  technical,  commercial,  financial,  accounting,  legal  and  administrative  information) pertaining  to  the  Sale  of  the  Munt  and  the  Sellers  as  may  be  provided  to  the  Disclosee  and  their responsible managers, officers, employees, shareholders, members of the Board of Directors and advisors (including  financial,  legal  and  tax  advisors  and  auditors)  (“Representatives”),  by  the  Sellers,  their advisors or their representatives;
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_Kv2du2GQD02f3mgt9HEUnLih)
+ Call ID: call_Kv2du2GQD02f3mgt9HEUnLih
+  Args:
+    pattern: non-?solicit|solicit|hire|employee|representative
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+a) all such information, of any kind whatsoever (whether in oral,written or electronic form, and including, but  not  limited  to,  technical,  commercial,  financial,  accounting,  legal  and  administrative  information) pertaining  to  the  Sale  of  the  Munt  and  the  Sellers  as  may  be  provided  to  the  Disclosee  and  their responsible managers, officers, employees, shareholders, members of the Board of Directors and advisors (including  financial,  legal  and  tax  advisors  and  auditors)  (“Representatives”),  by  the  Sellers,  their advisors or their representatives;
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_aotCmwg1aeLc1egAsS6ebgkU)
+ Call ID: call_aotCmwg1aeLc1egAsS6ebgkU
+  Args:
+    pattern: non.?solicit|solicit
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_2A3EdPi9D9M6sroxy81yPxj2)
+ Call ID: call_2A3EdPi9D9M6sroxy81yPxj2
+  Args:
+    pattern: employee|employees|officers|directors|advisor|representatives
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+a) all such information, of any kind whatsoever (whether in oral,written or electronic form, and including, but  not  limited  to,  technical,  commercial,  financial,  accounting,  legal  and  administrative  information) pertaining  to  the  Sale  of  the  Munt  and  the  Sellers  as  may  be  provided  to  the  Disclosee  and  their responsible managers, officers, employees, shareholders, members of the Board of Directors and advisors (including  financial,  legal  and  tax  advisors  and  auditors)  (“Representatives”),  by  the  Sellers,  their advisors or their representatives;
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_7Oy0yNZDCXI7WhH6tbgV66Q3)
+ Call ID: call_7Oy0yNZDCXI7WhH6tbgV66Q3
+  Args:
+    pattern: not.*(contact|approach|deal|hire)|poach|entice|induce|employ
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+a) all such information, of any kind whatsoever (whether in oral,written or electronic form, and including, but  not  limited  to,  technical,  commercial,  financial,  accounting,  legal  and  administrative  information) pertaining  to  the  Sale  of  the  Munt  and  the  Sellers  as  may  be  provided  to  the  Disclosee  and  their responsible managers, officers, employees, shareholders, members of the Board of Directors and advisors (including  financial,  legal  and  tax  advisors  and  auditors)  (“Representatives”),  by  the  Sellers,  their advisors or their representatives;
+
+================================== Ai Message ==================================
+
+NotMentioned

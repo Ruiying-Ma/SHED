@@ -1,0 +1,171 @@
+================================ Human Message =================================
+
+HYPOTHESIS:
+No solicitation: Receiving Party shall not solicit some of Disclosing Party's representatives.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_Z4LrSgkzAhg8wVPUZYUjlidL)
+ Call ID: call_Z4LrSgkzAhg8wVPUZYUjlidL
+  Args:
+    pattern: solicit
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_ywDNApLy1YLAq7Njb7IdhYNc)
+ Call ID: call_ywDNApLy1YLAq7Njb7IdhYNc
+  Args:
+    pattern: Solicit
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_QVDmggGdov47r4oqSRCvQ9b3)
+ Call ID: call_QVDmggGdov47r4oqSRCvQ9b3
+  Args:
+    pattern: representative
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+16. INUREMENT.This Agreement shall inure to the benefit of the parties hereto and their respective “Affiliates” (as defined below), successors, assigns and legal representatives.  The parties agree that each party and its Affiliates may receive Confidential Information from and/or disclose Confidential Information to the other party and the other party's Affiliates, and that all such Confidential Information shall be governed by this Agreement.   Recipient shall be fully responsible to the Disclosing Party for any breach of this Agreement by the Recipient’s Affiliates.   “Affiliate”, as used herein, means an entity that directly or indirectly controls, is controlled by or is under common control with a party to this Agreement; and as used in this Section ”control”, “controls” or ”controlled” means: (i) fifty-one percent (51%) or more ownership or beneficial interest of income or capital of such entity; (ii) ownership of at least fifty-one percent (51%) of the voting power or voting equity; or (iii) the ability to otherwise direct or share management policies of such entity.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_2uOEV0KS9q49Fwh4mLSIj9Ug)
+ Call ID: call_2uOEV0KS9q49Fwh4mLSIj9Ug
+  Args:
+    pattern: solicit
+    _timeout: 120000
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Tool 'grep_search_next' failed after 1 attempt with TypeError: grep_search_next() got an unexpected keyword argument '_timeout'. Please try again.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_wqavpWu3eBpSPdH6xXHINls5)
+ Call ID: call_wqavpWu3eBpSPdH6xXHINls5
+  Args:
+    pattern: hire
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_QH0RAgPCS6RgAxpUTztNeG0A)
+ Call ID: call_QH0RAgPCS6RgAxpUTztNeG0A
+  Args:
+    pattern: employment
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_JHxTKJxpe0IOvaSyRg5Y6Q8B)
+ Call ID: call_JHxTKJxpe0IOvaSyRg5Y6Q8B
+  Args:
+    pattern: employee
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+2. PERIOD OF CONFIDENTIALITY AND NON-USE.The Recipient  will use Confidential Information only in connection with the Purpose as set forth in this Agreement.  Recipient shall use the same degree of care to avoid disclosure or use of the Confidential Information as it uses  for  its own confidential, proprietary and trade  secret information,  but  in  no  case use  less than a reasonable degree of care.   Recipient agrees to  limit disclosure of Confidential Information to employees and employees of Affiliates having a specific need to know such Confidential Information for the Purpose and in the case of Affiliates only to the extent that such Affiliate is under obligation to hold such information in confidence and is made aware of these terms and conditions.  Recipient will not disclose or permit access to Confidential Information to contract workers, consultants or contractors of Recipient or its Affiliates unless authorized by Disclosing Party in writing and on condition that such persons are bound by obligations of confidentiality inuring to the benefit of Disclosing Party and its Affiliates at least as restrictive as these terms and conditions.   Recipient  shall not without Disclosing Party’s prior written consent reverse engineer, disassemble or decompile any prototypes, software or other objects which embody the Disclosing Party’s Confidential Information to obtain access to Disclosing Party’s trade  secrets and to the extent such consent is granted Recipient shall receive and hold such Confidential Information subject to the terms of this Agreement.Bosch Automotive Service Solutions Inc. 28635 Mound Road Warren, Michigan 48092
+ Insert Full Corporate Name and Address of Counterparty
+Bosch North America Mutual NDA rev. 2017.03.31.IPR-NA
+Page 1 of 4
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_7yVNuCQrui6am5Cw7w88YNvb)
+ Call ID: call_7yVNuCQrui6am5Cw7w88YNvb
+  Args:
+    pattern: solicit
+    _retry: True
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Tool 'grep_search_next' failed after 1 attempt with TypeError: grep_search_next() got an unexpected keyword argument '_retry'. Please try again.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_Zryg1dd0lVk3yzzOTZuF7Pwi)
+ Call ID: call_Zryg1dd0lVk3yzzOTZuF7Pwi
+  Args:
+    pattern: representa
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+13. INDEPENDENT DEVELOPMENTS.Disclosing Party understands that Recipient may develop or have developed information internally, or receive  or have received  information from other parties that is  similar to the  Confidential Information.  Accordingly, nothing in this Agreement shall be construed as a representation that Recipient has not or  will not independently develop products that compete with the products or systems contemplated by the Confidential Information provided that it does so without breaching the terms of this Agreement.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_X8gs9LA97JQEatIJ0H36s6ad)
+ Call ID: call_X8gs9LA97JQEatIJ0H36s6ad
+  Args:
+    pattern: Non
+    _retry: True
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Tool 'grep_search_next' failed after 1 attempt with TypeError: grep_search_next() got an unexpected keyword argument '_retry'. Please try again.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_8slv0NYHBqeON6MljlLZO1m4)
+ Call ID: call_8slv0NYHBqeON6MljlLZO1m4
+  Args:
+    pattern: solicitation
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_iGMceEpfnavgK126axGkKdZA)
+ Call ID: call_iGMceEpfnavgK126axGkKdZA
+  Args:
+    pattern: recruit
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_vNVoncqtFkBgwEN5vGgHbuMF)
+ Call ID: call_vNVoncqtFkBgwEN5vGgHbuMF
+  Args:
+    pattern: solicit
+    _args: {}
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Tool 'grep_search_next' failed after 1 attempt with TypeError: grep_search_next() got an unexpected keyword argument '_args'. Please try again.
+
+================================== Ai Message ==================================
+
+NotMentioned

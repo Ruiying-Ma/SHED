@@ -1,0 +1,83 @@
+================================ Human Message =================================
+
+QUERY:
+what chinese dialects are explored?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_PVfH6HgUEbdcfXLn0yu7uTzl)
+ Call ID: call_PVfH6HgUEbdcfXLn0yu7uTzl
+  Args:
+    pattern: Chinese dialect|dialects|Mandarin|Cantonese|Wu|Min|Hakka|Gan|Xiang|Jin|dialect
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+In this paper, we present a two-stage language identification (LID) system based on a shallow ResNet14 followed by a sim- ple 2-layer recurrent neural network (RNN) architecture, which was used for Xunfei (iFlyTek) Chinese Dialect Recognition Challenge 1 and won the first place among 110 teams.  The sys- tem trains an acoustic model (AM) firstly with connectionist temporal classification (CTC) to recognize the given phonetic sequence annotation and then train another RNN to classify di- alect category by utilizing the intermediate features as inputs from the AM. Compared with a three-stage system we further explore, our results show that the two-stage system can achieve high accuracy for Chinese dialects recognition under both short utterance and long utterance conditions with less training time.  Index Terms : dialect recognition, convolutional recurrent neu- ral network, acoustic model
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_wYN0zQkjA1hQxUgFNDY4L1ka)
+ Call ID: call_wYN0zQkjA1hQxUgFNDY4L1ka
+  Args:
+    pattern: challenge|category|categories|dataset|data.*dialect|Chinese Dialect Recognition
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+In this paper, we present a two-stage language identification (LID) system based on a shallow ResNet14 followed by a sim- ple 2-layer recurrent neural network (RNN) architecture, which was used for Xunfei (iFlyTek) Chinese Dialect Recognition Challenge 1 and won the first place among 110 teams.  The sys- tem trains an acoustic model (AM) firstly with connectionist temporal classification (CTC) to recognize the given phonetic sequence annotation and then train another RNN to classify di- alect category by utilizing the intermediate features as inputs from the AM. Compared with a three-stage system we further explore, our results show that the two-stage system can achieve high accuracy for Chinese dialects recognition under both short utterance and long utterance conditions with less training time.  Index Terms : dialect recognition, convolutional recurrent neu- ral network, acoustic model
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_pUCeSQiNmWh1Ic1kTnfXSOuJ)
+ Call ID: call_pUCeSQiNmWh1Ic1kTnfXSOuJ
+  Args:
+    pattern: Hokkien|Sichuanese|Shanghainese|Cantonese|Mandarin|Minnan|Hakka|dialect category|10 dialect|9 dialect|5 dialect
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1. Introduction
+The aim of language identification (LID) is to determine the lan- guage of an utterance and can be defined as a variable-length se- quence classification task on the utterance-level. The task intro- duced in this paper is more challenging than general LID tasks cause we use a dialect database which contains 10 dialects in China.  The dialects’ regions are close to each other and they all belong to Chinese, so they have the same characters and similar pronunciations.Recently, the use of deep neural network (DNN) has been explored in LID tasks. The DNN is trained to discriminate in- dividual physical states of a tied-state triphone and then extract the bottleneck features to a back-end system for classification [1, 2, 3, 4].  End-to-end frameworks based on DNN later are trained for LID [5]. Other network architectures are success- fully applied to LID task, example for convolutional neural net- work (CNN) [6, 7], time delay neural network (TDNN) [8], RNN [9, 10, 11], and [12] has a CNN followed by an RNN structure, which is similar to ours.  They predict the final cate- gory of an utterance directly by the last fully connected layer, or derive the results by averaging the the frame-level posteri- ors. These frameworks just trained end-to-end to recognize lan- guages, but they do not consider the phonetic information con- cretely. On the other hand, in many utterance analyzing tasks such as acoustic speech recognition (ASR), speaker verification (SV) and our LID, only a simple task or a specific aim is focused on. However, an utterance always has multi-dimensional informa- tion such as content, emotion, speaker and language and there are some certain correlations between them.  Although the LID task is text-independent, which means the content of each utter- ance is totally different, different languages may have its own
+pronunciations or tones. Thus acoustic and language are two components in the LID task, [13, 14, 15, 16] use the bottleneck features from an ASR system and feed to another neural net- work for recognition.  Nevertheless, these ASR DNNs consti- tuted by fully connected layers adds significant computational complexity and also require labels of physical states of a tied- state triphone.Inspired by all this, we assume that the high-dim features extracted from the network will contain information of pronun- ciation and language category, so we combine the ASR method with our LID task and here are our main contributions:
+1.We explore a new Chinese dialect database by a two- stage LID system and achieve high accuracy of 89%. Our system won the first place in Xunfei (iFlyTek) Chi- nese Dialect Recognition Challenge, which attracted 110 teams joining in.
+2. Compared with other methods which recognize physical states or triphones,we train an AM end-to-end and use CTC [17] to recognize the phoneme sequence of an ut- terance directly.
+3.We use a specially designed ResNet14 followed by an RNN instead of using fully connected layers to develop the two-stage LID system. We train an AM in the first stage and then use the intermediate features from the AM as inputs to train an RNN to compute posteriors for LID in the second stage.
+4. We further investigate a three-stage system,we first train an AM to align the phoneme label and then train an- other AM to predict the phoneme of each frame, finally we use the intermediate features from the second-stage’s network to train an RNN. The results show that the per- formance is slightly worse than the two-stage system.The remainder of the paper is organized as follows.  Section 2 introduces some related works about ASR and section 3 intro- duces the ResNet14 structure and gives processing of the two multi-stage systems. We present details of the database and ini- tialization methods of the network in Section 4. The results of experiments and analysis are shown in Section 5. Lastly we give the conclusion and some future work in Section 6.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_ygyOdj5jrJhpT8pS5IWRBQRU)
+ Call ID: call_ygyOdj5jrJhpT8pS5IWRBQRU
+  Args:
+    pattern: 10 dialects|dialects are|includes|consists of|Anhui|Beijing|Shanghai|Guangdong|Sichuan|Henan|Hunan|Jiangxi|Fujian|dialect names
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1. Introduction
+The aim of language identification (LID) is to determine the lan- guage of an utterance and can be defined as a variable-length se- quence classification task on the utterance-level. The task intro- duced in this paper is more challenging than general LID tasks cause we use a dialect database which contains 10 dialects in China.  The dialects’ regions are close to each other and they all belong to Chinese, so they have the same characters and similar pronunciations.Recently, the use of deep neural network (DNN) has been explored in LID tasks. The DNN is trained to discriminate in- dividual physical states of a tied-state triphone and then extract the bottleneck features to a back-end system for classification [1, 2, 3, 4].  End-to-end frameworks based on DNN later are trained for LID [5]. Other network architectures are success- fully applied to LID task, example for convolutional neural net- work (CNN) [6, 7], time delay neural network (TDNN) [8], RNN [9, 10, 11], and [12] has a CNN followed by an RNN structure, which is similar to ours.  They predict the final cate- gory of an utterance directly by the last fully connected layer, or derive the results by averaging the the frame-level posteri- ors. These frameworks just trained end-to-end to recognize lan- guages, but they do not consider the phonetic information con- cretely. On the other hand, in many utterance analyzing tasks such as acoustic speech recognition (ASR), speaker verification (SV) and our LID, only a simple task or a specific aim is focused on. However, an utterance always has multi-dimensional informa- tion such as content, emotion, speaker and language and there are some certain correlations between them.  Although the LID task is text-independent, which means the content of each utter- ance is totally different, different languages may have its own
+pronunciations or tones. Thus acoustic and language are two components in the LID task, [13, 14, 15, 16] use the bottleneck features from an ASR system and feed to another neural net- work for recognition.  Nevertheless, these ASR DNNs consti- tuted by fully connected layers adds significant computational complexity and also require labels of physical states of a tied- state triphone.Inspired by all this, we assume that the high-dim features extracted from the network will contain information of pronun- ciation and language category, so we combine the ASR method with our LID task and here are our main contributions:
+1.We explore a new Chinese dialect database by a two- stage LID system and achieve high accuracy of 89%. Our system won the first place in Xunfei (iFlyTek) Chi- nese Dialect Recognition Challenge, which attracted 110 teams joining in.
+2. Compared with other methods which recognize physical states or triphones,we train an AM end-to-end and use CTC [17] to recognize the phoneme sequence of an ut- terance directly.
+3.We use a specially designed ResNet14 followed by an RNN instead of using fully connected layers to develop the two-stage LID system. We train an AM in the first stage and then use the intermediate features from the AM as inputs to train an RNN to compute posteriors for LID in the second stage.
+4. We further investigate a three-stage system,we first train an AM to align the phoneme label and then train an- other AM to predict the phoneme of each frame, finally we use the intermediate features from the second-stage’s network to train an RNN. The results show that the per- formance is slightly worse than the two-stage system.The remainder of the paper is organized as follows.  Section 2 introduces some related works about ASR and section 3 intro- duces the ResNet14 structure and gives processing of the two multi-stage systems. We present details of the database and ini- tialization methods of the network in Section 4. The results of experiments and analysis are shown in Section 5. Lastly we give the conclusion and some future work in Section 6.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_DYntB81LCaU5TIEHljFhkhRq)
+ Call ID: call_DYntB81LCaU5TIEHljFhkhRq
+  Args:
+    pattern: Section 4|database|data|train set|test set|development set|speaker|utterance|dialect
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+In this paper, we present a two-stage language identification (LID) system based on a shallow ResNet14 followed by a sim- ple 2-layer recurrent neural network (RNN) architecture, which was used for Xunfei (iFlyTek) Chinese Dialect Recognition Challenge 1 and won the first place among 110 teams.  The sys- tem trains an acoustic model (AM) firstly with connectionist temporal classification (CTC) to recognize the given phonetic sequence annotation and then train another RNN to classify di- alect category by utilizing the intermediate features as inputs from the AM. Compared with a three-stage system we further explore, our results show that the two-stage system can achieve high accuracy for Chinese dialects recognition under both short utterance and long utterance conditions with less training time.  Index Terms : dialect recognition, convolutional recurrent neu- ral network, acoustic model
+
+================================== Ai Message ==================================
+
+Unanswerable

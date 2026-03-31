@@ -1,0 +1,36 @@
+================================ Human Message =================================
+
+QUERY:
+Do the QA tuples fall under a specific domain?
+
+TABLE OF CONTENTS (TOC):
+1 | Time to Take Emoji Seriously: They Vastly Improve Casual Conversational Models
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2 Related work
+1.4 | 3 Emoji-rich datasets are hard to find
+1.5 | 4 Fine-tuning BERT with emoji support
+1.5.1 | 4.1 Tokenizing emoji
+1.5.2 | 4.2 Training and fine-tuning
+1.5.3 | 4.3 evaluation metrics
+1.6 | 5 Emoji provide additional context to response selec- tion models
+1.7 | 6 Conclusion and future work
+1.8 | Acknowledgements
+1.9 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_mZPKobRBzHR5SUETQYKKdj83)
+ Call ID: call_mZPKobRBzHR5SUETQYKKdj83
+  Args:
+    section_id: 1.4
+
+================================= Tool Message =================================
+Name: read_section
+
+3 Emoji-rich datasets are hard to find
+Emoji are commonly used in casual settings, like on social media or in casual conversa- tions. In conversations—as opposed to relatively context-free social media posts—an emoji alone can be an utterance by itself. And with a direct impact for some applica- tions, like customer support, we focus on conversational datasets. We hope the conver- sational community has the most direct benefit from these emoji-enabled models.  Of course, the conclusions we’ll draw don’t have to be limited to this field.Table 1 gives an overview of frequently used and interesting conversational datasets. The lacuna of emoji-rich reference datasets was already mentioned in Section 1 and is in our opinion one of the factors that emoji remain fairly underutilized.For our models, we’ll use a customer support dataset with a relatively high usage of emoji.  The dataset contains 2000 tuples collected by Hori and Hori [12] that are sourced from Twitter. They provide conversations, which consist of at least one ques- tion and one free-form answer. Some conversations are longer, in this case we ignored the previous context and only looked at the last tuple. This dataset illustrates that even when contacting companies, Twitter users keep using emoji relatively often, 8.75% of all utterances. The tweets were filtered on hyper links and personal identifiers, but Unicode emoji characters were preserved. As emoji are frequently used on Twitter, this resulted in a dataset with 170 of the 2000 tuples containing at least one emoji character.
+
+================================== Ai Message ==================================
+
+Yes — they are from a customer support dataset sourced from Twitter.

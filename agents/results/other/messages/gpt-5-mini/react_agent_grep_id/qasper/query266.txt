@@ -1,0 +1,111 @@
+================================ Human Message =================================
+
+QUERY:
+What results are obtained on the alternate datasets?
+
+TABLE OF CONTENTS (TOC):
+1 | A Low Dimensionality Representation for Language Variety Identification ?
+1.1 | 1 Introduction
+1.2 | 2 Low Dimensionality Representation
+1.3 | 3 Evaluation Framework
+1.3.1 | 3.1 HispaBlogs Corpus
+1.3.2 | 3.2 Alternative representations
+1.4 | 4 Experimental Results
+1.4.1 | 4.1 Machine learning algorithms comparison
+1.4.2 | 4.2 Preprocessing impact
+1.4.3 | 4.3 Language variety identification results
+1.4.4 | 4.4 Error analysis
+1.4.5 | 4.5 Most discriminating features
+1.4.6 | 4.6 Cost analysis
+1.4.7 | 4.7 Robustness
+1.5 | 5 Conclusions
+1.6 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_all (call_DuusXDzM5MwOtvCbT6ig0GiM)
+ Call ID: call_DuusXDzM5MwOtvCbT6ig0GiM
+  Args:
+    pattern: [Aa]lternate
+
+================================= Tool Message =================================
+Name: grep_search_all
+
+No matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_all (call_4FrjzyYxYJC6AHMb4CSQ1dZR)
+ Call ID: call_4FrjzyYxYJC6AHMb4CSQ1dZR
+  Args:
+    pattern: alternate datasets|alternate dataset|alternate data|alternate
+
+================================= Tool Message =================================
+Name: grep_search_all
+
+No matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_all (call_toGwsLm0LBIIjS85SLc3ZyVS)
+ Call ID: call_toGwsLm0LBIIjS85SLc3ZyVS
+  Args:
+    pattern: alternate|alternative datasets|alternate dataset|alternate corpora|other datasets|alternate data|additional datasets|Alt dataset|alternate set|datasets:|on the alternate
+
+================================= Tool Message =================================
+Name: grep_search_all
+
+No matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_all (call_Aj0JNWTf4jqGrJHcYtpXKz3b)
+ Call ID: call_Aj0JNWTf4jqGrJHcYtpXKz3b
+  Args:
+    pattern: [Aa]lternative
+
+================================= Tool Message =================================
+Name: grep_search_all
+
+1.3.2
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_QfaIFm9lNjwqPlM3EuJKh4LA)
+ Call ID: call_QfaIFm9lNjwqPlM3EuJKh4LA
+  Args:
+    section_id: 1.3.2
+
+================================= Tool Message =================================
+Name: read_section
+
+3.2 Alternative representations
+We are interested in investigating the impact of the proposed representation and com- pare its performance with state-of-the-art representations based on n -grams and with two approaches based on the recent and popular distributed representations of words by means of the continuous Skip-gram model [1].6 Using the LDR a document is represented by a total set of features equal to 6 multiplied by the number of categories (the 5 language varieties), in our case 30 features.  This is a considerable dimensionality reduction that may be helpful to deal with big data environments.7 The HispaBlogs dataset was collected by experts on social media from the Autoritas Con- sulting company (http://www.autoritas.net). Autoritas experts in the different countries se- lected popular bloggers related to politics, online marketing, technology or trends. The His- paBlogs dataset is publicly available at: https://github. com/autoritas/RD-Lab/tree/master/data/ HispaBlogs
+A Low Dimensionality Representation for Language Variety Identification
+5
+ Language Variety # Blogs/authors # Words # Words per post Training Test Training Test Training Test AR - Argentina 450 200 1,408,103 590,583 371 448 385 849 CL - Chile 450 200 1,081,478 298,386 313 465 225 597 ES - Spain 450 200 1,376,478 620,778 360 426 395 765 MX - Mexico 450 200 1,697,091 618,502 437 513 392 894 PE - Peru 450 200 1,602,195 373,262 410 466 257 627 TOTAL 2,250 1,000 7,164,935 2,501,511 380 466 334 764
+ Table 3. Number of posts, words and words per post (average and standard deviation) per language variety.State-of-the art representations State-of-the-art representations are mainly based on n -grams models, hence we tested character and word based ones, besides word with tf-idf weights. For each of them, we iterated n from 1 to 10 and selected 1,000, 5,000 and 10,000 most frequent grams.  The best results were obtained with the 10,000 most frequent BOW, character 4 -grams and tf-idf 2 -grams. Therefore, we will use them in the evaluation.Distributed representations Due to the increasing popularity of the distributed rep- resentations [4], we used the continuous Skip-gram model to generate distributed rep- resentations of words (e.g. n -dimensional vectors), with further refinements in order to use them with documents.  The continuous Skip-gram model [7,8] is an iterative algo- rithm which attempts to maximize the classification of the context surrounding a word. Formally, given a word w ( t ) , and its surrounding words w ( t − c ) , w ( t − c +1) , ... , w ( t + c ) inside a window of size 2 c + 1 , the training objective is to maximize the average of the log probability shown in Equation 5:
+1 T T X t =1 X − c ≤ j ≤ c,j 6 =0 log p ( w t + j | w t ) (5)
+ To estimate p ( w t + j | w t ) we used negative sampling [8] that is a simplified version of the Noise Contrastive Estimation (NCE) [3,9] which is only concerned with pre- serving vector quality in the context of Skip-gram learning. The basic idea is to use logistic regression to distinguish the target word W O from draws from a noise distribu- tion P n ( w ) , having k negative samples for each word.  Formally, the negative sampling estimates p ( w O | w I ) following Equation 6:
+log σ ( v 0 w O T v w I ) + k X i =1 E w i ∼ P n ( w ) log σ ( − v 0 w i T v w I ) (6)
+where σ ( x ) = 1 / (1 + exp( − x )) .  The experimental results in [8] show that this function obtains better results at the semantic level than hierarchical softmax [2] and NCE.In order to combine the word vectors to represent a complete sentence we used two approaches. First, given a list of word vectors ( w 1 , w 2 , ..., w n ) belonging to a document, we generated a vector representation v of its content by estimating the average of their
+ 6 Francisco Rangel, Marc Franco-Salvador, Paolo Rosso
+dimensions: v = n − 1 P n i =1 w i . We call this representation Skip-gram in the evaluation. In addition, we used Sentence vectors (SenVec) [5], a variant that follows Skip-gram architecture to train a special vector sv representing the sentence.  Basically, before each context window movement, SenVec uses a special vector sv in place of w ( t ) with the objective of maximizing the classification of the surrounding words. In consequence, sv will be a distributed vector of the complete sentence.Following state-of-the-art approach [5], in the evaluation we used a logistic classi- fier for both SenVec and Skip-gram approaches. 8
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_xODllq6k9VQ5WCn147vganjt)
+ Call ID: call_xODllq6k9VQ5WCn147vganjt
+  Args:
+    section_id: 1.4.7
+
+================================= Tool Message =================================
+Name: read_section
+
+4.7 Robustness
+In order to analyse the robustness of the low dimensionality representation to different languages, we experimented with the development set of the DSLCC corpus 11 from the Discriminating between Similar Languages task [12]. The corpus consists of 2,000 sen- tences per language or variety, with between 20 and 100 tokens per sentence, obtained from news headers.  In Table 9 we show the results obtained with the proposed represen- tation and the two distributed representations, Skip-gram and SenVec. It is important to notice that, in general, when a particular representation improves for one language is at cost of the other one. We can conclude that the three representations obtained compar- ative results and support the robustness of the low dimensionality representation.Language LDR Skip-gram SenVec Bulgarian 99. 9 100 100 Macedonian 99.9 100 100 Spain Spanish 84.7 82.1 86.3 Argentina Spanish 88.0 90.3 87.6 Portugal Portuguese 87.4 83.2 90.0 Brazilian Portuguese 90.0 94.5 87.6 Bosnian 78.0 80.3 74.4 Croatian 85.8 85.9 84. 7 Serbian 86.4 75.1 91.2 Indonesian 99.4 99.3 99.4 Malay 99.2 99.2 99.8 Czech 99.8 99.9 99.8 Slovak 99.3 100 99.3 Other languages 99.9 99.8 99.8
+Table 9. Accuracy results in the development set of the DSLCC.  The significance is marked in bold when some representation obtains significantly better results than the next best performing representation (e.g. results for SenVec in Portugal Portuguese are significantly higher than LDR, which at the same time are significantly higher than Skip-gram).
+
+================================== Ai Message ==================================
+
+The three representations obtained comparative results and support the robustness of the low dimensionality representation.

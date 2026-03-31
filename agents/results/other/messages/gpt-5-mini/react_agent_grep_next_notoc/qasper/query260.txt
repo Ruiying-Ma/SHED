@@ -1,0 +1,174 @@
+================================ Human Message =================================
+
+QUERY:
+How do you know the word alignments are correct?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_vRa26QpvvdP49rquKArTCxJe)
+ Call ID: call_vRa26QpvvdP49rquKArTCxJe
+  Args:
+    pattern: word align|alignments|How do you know the word alignments are correct|correct alignment|are correct|How do you know
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Due to the unparallelizable nature of the autoregressive factorization, AutoRegressive Translation (ART) models have to generate tokens sequentially during decoding and thus suffer from high inference latency. Non- AutoRegressive Translation (NART) models were proposed to reduce the inference time, but could only achieve inferior translation ac- curacy. In this paper, we proposed a novel approach to leveraging the hints from hidden states and word alignments to help the training of NART models.  The results achieve signif- icant improvement over previous NART mod- els for the WMT14 En-De and De-En datasets and are even comparable to a strong LSTM- based ART baseline but one order of magni- tude faster in inference.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_a44wJ7HgweTZW0wwSGutTiW4)
+ Call ID: call_a44wJ7HgweTZW0wwSGutTiW4
+  Args:
+    pattern: word alignment|word alignments|alignment|how do you know|How do you know|are correct
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Due to the unparallelizable nature of the autoregressive factorization, AutoRegressive Translation (ART) models have to generate tokens sequentially during decoding and thus suffer from high inference latency. Non- AutoRegressive Translation (NART) models were proposed to reduce the inference time, but could only achieve inferior translation ac- curacy. In this paper, we proposed a novel approach to leveraging the hints from hidden states and word alignments to help the training of NART models.  The results achieve signif- icant improvement over previous NART mod- els for the WMT14 En-De and De-En datasets and are even comparable to a strong LSTM- based ART baseline but one order of magni- tude faster in inference.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_kLggz2oHMtAzrHgNKYjr5Fzs)
+ Call ID: call_kLggz2oHMtAzrHgNKYjr5Fzs
+  Args:
+    pattern: How do you know the word alignments are correct
+    }EOF:
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Tool 'grep_search_next' failed after 1 attempt with TypeError: grep_search_next() got an unexpected keyword argument '}EOF'. Please try again.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_2xxPAHAFM8tWnjRrobsA2y0H)
+ Call ID: call_2xxPAHAFM8tWnjRrobsA2y0H
+  Args:
+    pattern: How do you know the word alignments are correct\?
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_WryaKVDogds2p7CYn9YC80wz)
+ Call ID: call_WryaKVDogds2p7CYn9YC80wz
+  Args:
+    pattern: word alignment
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Due to the unparallelizable nature of the autoregressive factorization, AutoRegressive Translation (ART) models have to generate tokens sequentially during decoding and thus suffer from high inference latency. Non- AutoRegressive Translation (NART) models were proposed to reduce the inference time, but could only achieve inferior translation ac- curacy. In this paper, we proposed a novel approach to leveraging the hints from hidden states and word alignments to help the training of NART models.  The results achieve signif- icant improvement over previous NART mod- els for the WMT14 En-De and De-En datasets and are even comparable to a strong LSTM- based ART baseline but one order of magni- tude faster in inference.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_0UBfPsa0rw6jvp6WC8B7WpeO)
+ Call ID: call_0UBfPsa0rw6jvp6WC8B7WpeO
+  Args:
+    pattern: alignment model|alignment models|fast_align|GIZA|aligner|alignment
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Due to the unparallelizable nature of the autoregressive factorization, AutoRegressive Translation (ART) models have to generate tokens sequentially during decoding and thus suffer from high inference latency. Non- AutoRegressive Translation (NART) models were proposed to reduce the inference time, but could only achieve inferior translation ac- curacy. In this paper, we proposed a novel approach to leveraging the hints from hidden states and word alignments to help the training of NART models.  The results achieve signif- icant improvement over previous NART mod- els for the WMT14 En-De and De-En datasets and are even comparable to a strong LSTM- based ART baseline but one order of magni- tude faster in inference.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_FfNNlFiRiMtCTYEF9BT4x9NS)
+ Call ID: call_FfNNlFiRiMtCTYEF9BT4x9NS
+  Args:
+    pattern: How do you know|correct|validation|evaluate|evaluate the alignment|verify alignment|quality of alignment|alignment is correct|are correct
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+C Extra Experimental Settings
+Dataset specifications The split of the train- ing/validation/test sets of the IWSLT14 dataset 4 contain about 153K/7K/7K sentence pairs, respec- tively. The training set of the WMT14 dataset 5
+3 Following ( Vaswani et al. , 2017 ; Gu et al.  , 2017 ) we also use positional embedding to model relative correlation be- tween positions and add it to word embedding in both source and target sides. The positional embedding is represented by a sinusoidal function of different frequencies to encode dif- ferent positions.  Specifically, the positional encoding e pos is computed as e pos ( j, k ) = sin( j/ 10000 k/d ) (for even k ) or cos( j/ 10000 k/d ) (for odd k ), where j is the position index and k is the dimension index of the embedding vector.4 https://wit3.fbk.eu/
+5 http://www.statmt.org/wmt14/translation-task
+ Source: ich weiß , dass wir es können , und soweit es mich betrifft ist das etwas , was die welt jetzt braucht . Target: i know that we can , and as far as i &apos;m concerned , that &apos;s something the world needs right now . ART: i know that we can , and as far as i &apos;m concerned , that &apos;s something that the world needs now .  NART w/o Hints: i know that we can it , , as as as as it it it is , it &apos;s something that the world needs now . NART w/ Hints: i know that we can do it and as as &apos;s m concerned , that &apos;s something that the world needs now . Source: jeden morgen fliegen sie 240 kilometer zur farm . Target: every morning , they fly 240 miles into the farm .  ART: every morning , they fly 240 miles to the farm . NART w/o Hints: every morning , you fly 240 miles to every morning . NART w/ Hints: every morning , they fly 240 miles to the farm . Source: aber bei youtube werden mehr als 48 stunden video pro minute hochgeladen . Target: but there are over 48 hours of video uploaded to youtube every minute .  ART: but on youtube , more than 48 hours of video are uploaded per minute . NART w/o Hints: but on youtube , uploaded than 48 hours hours of video per minute . NART w/ Hints: but on youtube , more than 48 hours video are uploaded per minute .Table 3: Cases on IWSLT14 De-En.contains 4.5M parallel sentence pairs.  New- stest2014 is used as the test set, and Newstest2013 is used as the validation set. In both datasets, to- kens are split into a 32000 word-piece dictionary ( Wu et al. , 2016 ) which is shared in source and target languages.Model specifications For the WMT14 dataset, we use the default network architecture of the base Transformer model in Vaswani et al.  ( 2017 ), which consists of a 6-layer encoder and 6-layer de- coder. The size of hidden nodes and embeddings are set to 512. For the IWSLT14 dataset, we use a smaller architecture, which consists of a 5-layer encoder, and a 5-layer decoder. The size of hid- den states and embeddings are set to 256 and the number of heads is set to 4. Hyperparameter specifications Hyperparame- ters ( τ, γ st , γ tr , λ, µ ) are determined to make the scales of three loss components similar after ini- tialization. Specifically, we use τ = 0 . 3 , γ st = 0 . 1 , γ tr = 0 . 9 , λ = 5 . 0 , µ = 1 . 0 for IWSLT14 De-En, τ = 0 .  3 , γ st = 0 . 5 , γ tr = 0 . 9 , λ = 5 . 0 , µ = 1 . 0 for WMT14 De-En and WMT14 En- De.BLEU scores We use the BLEU score ( Papineni et al. , 2002 ) as our evaluation measure.  During inference, we set C to 2 , − 2 , 2 for WMT14 En- De, De-En and IWSLT14 De-En datasets respec- tively, according to the average lengths of differ- ent languages in the training sets. When using the teacher to rescore, we set B = 4 and thus have 9 candidates in total. We also evaluate the average per-sentence decoding latencies on one NVIDIA
+ TITAN Xp GPU card by decoding on WMT14 En-De test sets with batch size 1 for our ART teacher model and NART models, and calculate the speedup based on them.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_NuOzJNIkqx426Fg1lo2859E8)
+ Call ID: call_NuOzJNIkqx426Fg1lo2859E8
+  Args:
+    pattern: fast_align|fast align|GIZA|Moses|alignment tool|aligner|IBM Model|alignment is|word alignments
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Due to the unparallelizable nature of the autoregressive factorization, AutoRegressive Translation (ART) models have to generate tokens sequentially during decoding and thus suffer from high inference latency. Non- AutoRegressive Translation (NART) models were proposed to reduce the inference time, but could only achieve inferior translation ac- curacy. In this paper, we proposed a novel approach to leveraging the hints from hidden states and word alignments to help the training of NART models.  The results achieve signif- icant improvement over previous NART mod- els for the WMT14 En-De and De-En datasets and are even comparable to a strong LSTM- based ART baseline but one order of magni- tude faster in inference.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_OHunzVrQ6l7eY7JIhM0pPAlJ)
+ Call ID: call_OHunzVrQ6l7eY7JIhM0pPAlJ
+  Args:
+    pattern: alignment|alignment|word align|word alignments|alignment model|alignment accuracy|alignment quality
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Due to the unparallelizable nature of the autoregressive factorization, AutoRegressive Translation (ART) models have to generate tokens sequentially during decoding and thus suffer from high inference latency. Non- AutoRegressive Translation (NART) models were proposed to reduce the inference time, but could only achieve inferior translation ac- curacy. In this paper, we proposed a novel approach to leveraging the hints from hidden states and word alignments to help the training of NART models.  The results achieve signif- icant improvement over previous NART mod- els for the WMT14 En-De and De-En datasets and are even comparable to a strong LSTM- based ART baseline but one order of magni- tude faster in inference.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_W60FD5BPmo9Esr2HlpdBEquZ)
+ Call ID: call_W60FD5BPmo9Esr2HlpdBEquZ
+  Args:
+    pattern: alignments are correct|correct align|verify|verified|human|manual|gold standard|oracle alignment
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+References
+Jimmy Lei Ba, Jamie Ryan Kiros, and Geoffrey E Hin- ton.2016. Layer normalization. arXiv preprint arXiv:1607.06450 .
+Dzmitry Bahdanau, Philemon Brakel, Kelvin Xu,Anirudh Goyal, Ryan Lowe, Joelle Pineau, Aaron Courville, and Yoshua Bengio. 2016. An actor-critic algorithm for sequence prediction. arXiv preprint arXiv:1607.07086 .
+Dzmitry Bahdanau, Kyunghyun Cho,and Yoshua Ben- gio. 2014. Neural machine translation by jointly learning to align and translate. arXiv preprint arXiv:1409.0473 .
+Sergey Edunov, Myle Ott, Michael Auli,David Grang- ier, and Marc’Aurelio Ranzato. 2017. Classical structured prediction losses for sequence to se- quence learning. arXiv preprint arXiv:1711.04956 .
+Jonas Gehring, Michael Auli, David Grangier,and Yann N Dauphin. 2016. A convolutional encoder model for neural machine translation. arXiv preprint arXiv:1611.02344 .
+Jonas Gehring, Michael Auli, David Grangier,De- nis Yarats, and Yann N Dauphin. 2017. Convolu- tional sequence to sequence learning. arXiv preprint arXiv:1705.03122 .
+Jiatao Gu, James Bradbury, Caiming Xiong,Vic- tor OK Li, and Richard Socher. 2017. Non- autoregressive neural machine translation. arXiv preprint arXiv:1711.02281 .
+Kaiming He, Xiangyu Zhang, Shaoqing Ren, and Jian Sun.2016. Deep residual learning for image recog- nition. In Proceedings of the IEEE conference on computer vision and pattern recognition , pages 770– 778.
+Geoffrey Hinton, Oriol Vinyals, and Jeff Dean.2015. Distilling the knowledge in a neural network. arXiv preprint arXiv:1503.02531 .
+Minghao Hu, Yuxing Peng, Furu Wei, Zhen Huang,Dongsheng Li, Nan Yang, and Ming Zhou. 2018. Attention-guided answer distillation for machine reading comprehension. arXiv preprint arXiv:1808.07644 .
+Po-Sen Huang, Chong Wang, Dengyong Zhou, and Li Deng.2017. Neural phrase-based machine trans- lation. arXiv preprint arXiv:1706.05565 .
+Łukasz Kaiser, Aurko Roy, Ashish Vaswani,Niki Pa- mar, Samy Bengio, Jakob Uszkoreit, and Noam Shazeer. 2018. Fast decoding in sequence mod- els using discrete latent variables. arXiv preprint arXiv:1803.03382 .
+Nal Kalchbrenner, Lasse Espeholt,Karen Simonyan, Aaron van den Oord, Alex Graves, and Koray Kavukcuoglu. 2016. Neural machine translation in linear time. arXiv preprint arXiv:1610.10099 .
+Yoon Kim and Alexander M Rush. 2016. Sequence- level knowledge distillation.arXiv preprint arXiv:1606.07947 .
+Jason Lee, Elman Mansimov, and Kyunghyun Cho.2018. Deterministic non-autoregressive neural se- quence modeling by iterative refinement. arXiv preprint arXiv:1802.06901 .
+Kishore Papineni, Salim Roukos, Todd Ward,and Wei- Jing Zhu. 2002. Bleu: a method for automatic eval- uation of machine translation. In Proceedings of the 40th annual meeting on association for compu- tational linguistics , pages 311–318. Association for Computational Linguistics.
+Adriana Romero, Nicolas Ballas,Samira Ebrahimi Ka- hou, Antoine Chassang, Carlo Gatta, and Yoshua Bengio. 2014. Fitnets: Hints for thin deep nets. arXiv preprint arXiv:1412.6550 .
+Christian Szegedy, Vincent Vanhoucke, Sergey Ioffe,Jon Shlens, and Zbigniew Wojna. 2016. Rethinking the inception architecture for computer vision. In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition , pages 2818–2826.
+Ashish Vaswani, Samy Bengio, Eugene Brevdo,Fran- cois Chollet, Aidan N. Gomez, Stephan Gouws, Llion Jones, Łukasz Kaiser, Nal Kalchbrenner, Niki Parmar, Ryan Sepassi, Noam Shazeer, and Jakob Uszkoreit. 2018. Tensor2tensor for neural machine translation . CoRR , abs/1803.07416.
+Ashish Vaswani, Noam Shazeer, Niki Parmar,Jakob Uszkoreit, Llion Jones, Aidan N Gomez, Łukasz Kaiser, and Illia Polosukhin. 2017. Attention is all you need. In Advances in Neural Information Pro- cessing Systems , pages 6000–6010.
+Yonghui Wu, Mike Schuster, Zhifeng Chen,Quoc V Le, Mohammad Norouzi, Wolfgang Macherey, Maxim Krikun, Yuan Cao, Qin Gao, Klaus Macherey, et al. 2016. Google’s neural ma- chine translation system: Bridging the gap between human and machine translation. arXiv preprint arXiv:1609.08144 .
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_TQHPI9oUaoM6RQQowOXI6mSj)
+ Call ID: call_TQHPI9oUaoM6RQQowOXI6mSj
+  Args:
+    pattern: align
+    }EOF:
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Tool 'grep_search_next' failed after 1 attempt with TypeError: grep_search_next() got an unexpected keyword argument '}EOF'. Please try again.
+
+================================== Ai Message ==================================
+
+Unanswerable

@@ -1,0 +1,171 @@
+================================ Human Message =================================
+
+HYPOTHESIS:
+Notice on compelled disclosure: Receiving Party shall notify Disclosing Party in case Receiving Party is required by law, regulation or judicial process to disclose any Confidential Information.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_qZMoIJCHubknBauL75P9V08I)
+ Call ID: call_qZMoIJCHubknBauL75P9V08I
+  Args:
+    pattern: required by law|judicial process|compelled disclosure|notify|notice|disclos|regulation
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+B.The  Parties  have  agreed  to  comply  with  this  Agreement  in  connection  with  the  disclosure  and  use  of Confidential Information.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_5PJ9x4DAxqIBpB6YFuIi3mdW)
+ Call ID: call_5PJ9x4DAxqIBpB6YFuIi3mdW
+  Args:
+    pattern: required by law|judicial process|compelled disclosure|notify|notice|disclos|regulation
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1. DEFINITIONS
+Affiliate : shall mean any other corporation or other form of business entity, which, directly or indirectly, controls, is controlled by, or is under common control with, a Party at any time during the term of this Agreement.  For purposes of this definition, the term “control” means direct or indirect beneficial ownership of more than 50% of the voting share or interest of the entity;
+Confidential Information : has the meaning given in clause 2 of this Agreement;
+ Disclosing Party : a Party to this Agreement which discloses its Confidential Information to the other Party;
+Purpose :  [[INSERT  DETAILS  e.g.  to  establish  a  business  relationship  in  respect  to  the  supply  of  [named  service provision or goods] from X, etc]];
+Receiving Party : a Party to this Agreement which receives the Confidential Information from the other Party;
+ Representatives : any employees, officers, directors, professional advisors or consultants in relation to each Party and any of its Affiliates, who are actively and directly engaged in the Purpose;
+Term : has the meaning given in clause 10.1 of this Agreement.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_CKdfSmeD59VbZd898eUAjamV)
+ Call ID: call_CKdfSmeD59VbZd898eUAjamV
+  Args:
+    pattern: required by law|judicial process|compelled disclosure|notify|notice|disclos|regulation
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+12.6. Notice.Any  notice  given  to  a  Party  under  or  in  connection  with  this  Agreement  shall  be  in  writing  and shall  be  delivered  by  hand,  by  pre-paid  first  class  post  or  by  a  reputable  next-day  courier  service  at  its registered office or principal  place of business or sent  by  email to the address specified by the Party in writing.  Any notice shall be deemed to have been received: if delivered by hand, at the time the notice is delivered  at  the  proper  address;  if  sent  by  pre-paid  first  class  post,  on  the  second  business  day  after posting; if by next-day courier service, at the time recorded by the courier; or if by email, at the time of transmission.  This clause does not apply to the service of any proceedings or other documents in any legal action or, where applicable, any arbitration or other method of dispute resolution.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_Qf076mv57IOpofcKew1l3ZVi)
+ Call ID: call_Qf076mv57IOpofcKew1l3ZVi
+  Args:
+    pattern: law|regulation|court|judicial|legal process|required.*disclos|must disclose|compelled
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+12.4. Waiver .No failure or delay by a Party to exercise any right or remedy provided under this Agreement or by law shall constitute a  waiver of that or any other right or remedy, nor shall it prevent or restrict the further exercise of that or any other right or remedy. No single or partial exercise of such right or remedy shall prevent or restrict the further exercise of that or any other right or remedy.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_Y1DLOuoCl9dwRQnB32X7WxTl)
+ Call ID: call_Y1DLOuoCl9dwRQnB32X7WxTl
+  Args:
+    pattern: except|permitted disclosure|required by applicable law|applicable law|government|authority|subpoena|tribunal|court order|disclose confidential information
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+b) not use or exploit the Confidential Information in any way except for the Purpose;
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_GqYo0lrypWr3SwkSogPodtG2)
+ Call ID: call_GqYo0lrypWr3SwkSogPodtG2
+  Args:
+    pattern: disclose
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1. DEFINITIONS
+Affiliate : shall mean any other corporation or other form of business entity, which, directly or indirectly, controls, is controlled by, or is under common control with, a Party at any time during the term of this Agreement.  For purposes of this definition, the term “control” means direct or indirect beneficial ownership of more than 50% of the voting share or interest of the entity;
+Confidential Information : has the meaning given in clause 2 of this Agreement;
+ Disclosing Party : a Party to this Agreement which discloses its Confidential Information to the other Party;
+Purpose :  [[INSERT  DETAILS  e.g.  to  establish  a  business  relationship  in  respect  to  the  supply  of  [named  service provision or goods] from X, etc]];
+Receiving Party : a Party to this Agreement which receives the Confidential Information from the other Party;
+ Representatives : any employees, officers, directors, professional advisors or consultants in relation to each Party and any of its Affiliates, who are actively and directly engaged in the Purpose;
+Term : has the meaning given in clause 10.1 of this Agreement.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_r3RwVb56cAFJr1EtoLH60njb)
+ Call ID: call_r3RwVb56cAFJr1EtoLH60njb
+  Args:
+    pattern: disclose
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+2.1.Confidential Information means all confidential information relating to the Purpose which the Disclosing Party  or  any  of  its  Affiliates,  discloses  or  makes  available,  to  the  Receiving  Party  or  any  of  its  Affiliates, before, on or after the Effective Date. This includes:
+a) the fact that discussions and negotiations are taking place concerning the Purpose and the status of those discussions and negotiations;Page 1 of 5
+b) the terms of this Agreement;
+c) all  confidential  or  proprietary  information  relating  to:the  business,  affairs,  customers,  clients, suppliers, plans, business opportunities, finances, pricing, operations, processes, product information, techniques,  know-how,  technical  information,  design,  trade  secrets  and  findings  or  analysis  derived from Confidential Information, whether in tangible or intangible form.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_1IRlcS2Fxy6ahV86YApyjXiS)
+ Call ID: call_1IRlcS2Fxy6ahV86YApyjXiS
+  Args:
+    pattern: disclose
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+c) not disclose or make available any Confidential Information in whole or in part to any person except as expressly permitted by and in accordance with this Agreement;and
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_VGcaivlUKtI2XD6sZT5IGLDn)
+ Call ID: call_VGcaivlUKtI2XD6sZT5IGLDn
+  Args:
+    pattern: expressly permitted|permitted by and in accordance|Representatives|required by law|court order|authority
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1. DEFINITIONS
+Affiliate : shall mean any other corporation or other form of business entity, which, directly or indirectly, controls, is controlled by, or is under common control with, a Party at any time during the term of this Agreement.  For purposes of this definition, the term “control” means direct or indirect beneficial ownership of more than 50% of the voting share or interest of the entity;
+Confidential Information : has the meaning given in clause 2 of this Agreement;
+ Disclosing Party : a Party to this Agreement which discloses its Confidential Information to the other Party;
+Purpose :  [[INSERT  DETAILS  e.g.  to  establish  a  business  relationship  in  respect  to  the  supply  of  [named  service provision or goods] from X, etc]];
+Receiving Party : a Party to this Agreement which receives the Confidential Information from the other Party;
+ Representatives : any employees, officers, directors, professional advisors or consultants in relation to each Party and any of its Affiliates, who are actively and directly engaged in the Purpose;
+Term : has the meaning given in clause 10.1 of this Agreement.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_k0WRydoZcpL5nsyBC39kTavO)
+ Call ID: call_k0WRydoZcpL5nsyBC39kTavO
+  Args:
+    pattern: Representatives|permitted
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1. DEFINITIONS
+Affiliate : shall mean any other corporation or other form of business entity, which, directly or indirectly, controls, is controlled by, or is under common control with, a Party at any time during the term of this Agreement.  For purposes of this definition, the term “control” means direct or indirect beneficial ownership of more than 50% of the voting share or interest of the entity;
+Confidential Information : has the meaning given in clause 2 of this Agreement;
+ Disclosing Party : a Party to this Agreement which discloses its Confidential Information to the other Party;
+Purpose :  [[INSERT  DETAILS  e.g.  to  establish  a  business  relationship  in  respect  to  the  supply  of  [named  service provision or goods] from X, etc]];
+Receiving Party : a Party to this Agreement which receives the Confidential Information from the other Party;
+ Representatives : any employees, officers, directors, professional advisors or consultants in relation to each Party and any of its Affiliates, who are actively and directly engaged in the Purpose;
+Term : has the meaning given in clause 10.1 of this Agreement.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_1Kkv3E8C4ISdZDTqUYa9MEJv)
+ Call ID: call_1Kkv3E8C4ISdZDTqUYa9MEJv
+  Args:
+    pattern: 3\.|4\.|5\.|6\.
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+12.3. Variation.No variation of this Agreement shall be effective unless it is in writing and signed by the Parties.
+
+================================== Ai Message ==================================
+
+NotMentioned

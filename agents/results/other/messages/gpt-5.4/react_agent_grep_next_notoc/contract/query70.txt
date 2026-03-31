@@ -1,0 +1,46 @@
+================================ Human Message =================================
+
+HYPOTHESIS:
+No licensing: Agreement shall not grant Receiving Party any right to Confidential Information.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_5lgFY8bBc0ixdC63R4VW9Ej7)
+ Call ID: call_5lgFY8bBc0ixdC63R4VW9Ej7
+  Args:
+    pattern: (?i)license|licensing|grant.*right|no right|confidential information
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+DISCUSSION
+It became apparent during these negotiations that HRM staff needed to be made aware of certain key terms of the PNS’ agreement with its SAP service provider in order to understand and be in a position to negotiate for appropriate service level standards.  The PNS has taken the position that it  cannot  disclose  this  and  other  information  to  HRM  unless  HRM  and  the  PNS  enter  into  a mutual Non-Disclosure Agreement. On July 26, 2013, the PNS forwarded a proposed Non-Disclosure Agreement to staff.  This Non- Disclosure  Agreement  permits  the  PNS  and  HRM  to  disclose  confidential  information  to  each other during the period of negotiations.   Any confidential information exchanged between HRM and the PNS “shall only be used for the purposes of facilitating the business relationship between the Parties” and once the agreement terminates each party must “promptly return or destroy” all confidential information received from the other party.It is the intention of HRM and the PNS to execute an agreement for the provision of SAP support services  before  September  9,  2013.     As  a  result,  staff  is  seeking  direction  on  this  matter  from Regional  Council  on  August  6,  2013,  rather  than  waiting  for  the  next  scheduled  meeting  of Regional Council on September 10, 2013.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_NMPIBzxNzFNuuVvRV6z4mOMe)
+ Call ID: call_NMPIBzxNzFNuuVvRV6z4mOMe
+  Args:
+    pattern: (?i)not grant|grant.*receiving party|receiving party.*right|right to .*confidential information|ownership|license
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+11.This  Agreement  shall  not  be  construed  as  creating  a  joint  venture,  partnership  or  other  form  of business  association  between  the  Parties,  nor  an  obligation  to  buy  or  sell  products  using  or incorporating  the  Confidential  Information,  nor  to  create  an  implied  or  express  license  from  either Party to the other.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_xsIpW0tuQyZVJgXAZ5PiRuFD)
+ Call ID: call_xsIpW0tuQyZVJgXAZ5PiRuFD
+  Args:
+    pattern: (?i)receive|receiving party|recipient|disclos.*party|license
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+DISCUSSION
+It became apparent during these negotiations that HRM staff needed to be made aware of certain key terms of the PNS’ agreement with its SAP service provider in order to understand and be in a position to negotiate for appropriate service level standards.  The PNS has taken the position that it  cannot  disclose  this  and  other  information  to  HRM  unless  HRM  and  the  PNS  enter  into  a mutual Non-Disclosure Agreement. On July 26, 2013, the PNS forwarded a proposed Non-Disclosure Agreement to staff.  This Non- Disclosure  Agreement  permits  the  PNS  and  HRM  to  disclose  confidential  information  to  each other during the period of negotiations.   Any confidential information exchanged between HRM and the PNS “shall only be used for the purposes of facilitating the business relationship between the Parties” and once the agreement terminates each party must “promptly return or destroy” all confidential information received from the other party.It is the intention of HRM and the PNS to execute an agreement for the provision of SAP support services  before  September  9,  2013.     As  a  result,  staff  is  seeking  direction  on  this  matter  from Regional  Council  on  August  6,  2013,  rather  than  waiting  for  the  next  scheduled  meeting  of Regional Council on September 10, 2013.
+
+================================== Ai Message ==================================
+
+Entailment

@@ -1,0 +1,215 @@
+================================ Human Message =================================
+
+HYPOTHESIS:
+No licensing: Agreement shall not grant Receiving Party any right to Confidential Information.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_PIsc6kB2YjFekNr5xRbLfUP7)
+ Call ID: call_PIsc6kB2YjFekNr5xRbLfUP7
+  Args:
+    pattern: grant|license|right to Confidential Information|Receiving Party
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.2.6 “Receiving Party” means the Party receiving Confidential Information;
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_2sdbc9QDJculcKoeGqLgShak)
+ Call ID: call_2sdbc9QDJculcKoeGqLgShak
+  Args:
+    pattern: grant|license|right to Confidential Information|Receiving Party
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+21.4 No indulgence which a Party (“the grantor”) may grant to the other Party (“the grantee”) shall constitute a waiver of any of the rights of the grantor, who shall not thereby be precluded from exercising any rights against the grantee which might have arisen in the past or which might arise in the future.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_E3o3SQwSCywVEUT9A0JMT1iy)
+ Call ID: call_E3o3SQwSCywVEUT9A0JMT1iy
+  Args:
+    pattern: proprietary rights|license|ownership|right, title|no rights|no license|grant.*rights
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+21.4 No indulgence which a Party (“the grantor”) may grant to the other Party (“the grantee”) shall constitute a waiver of any of the rights of the grantor, who shall not thereby be precluded from exercising any rights against the grantee which might have arisen in the past or which might arise in the future.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_cmZPBG9GMenrPpiPtutHOizO)
+ Call ID: call_cmZPBG9GMenrPpiPtutHOizO
+  Args:
+    pattern: intellectual property|license|no license|ownership|proprietary rights|title
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.4 Defined terms appearing in this Agreement in title case shall be given their meaning as defined, while the same terms appearing in lower case shall be interpreted in accordance with their plain English meaning, and shall, unless the context otherwise requires, include the terms as defined. Terms, acronyms and phrases not defined in this Agreement and known in an industry will be interpreted in accordance with their generally accepted meanings in such industry.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_Kum0K3ofoW6Wi1YiNVbfpvGJ)
+ Call ID: call_Kum0K3ofoW6Wi1YiNVbfpvGJ
+  Args:
+    pattern: grant.*(license|right)|no license|shall not grant|does not grant|not grant.*right
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+21.4 No indulgence which a Party (“the grantor”) may grant to the other Party (“the grantee”) shall constitute a waiver of any of the rights of the grantor, who shall not thereby be precluded from exercising any rights against the grantee which might have arisen in the past or which might arise in the future.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_VwgMFr8rRLxdhlaYy9Wu8RNr)
+ Call ID: call_VwgMFr8rRLxdhlaYy9Wu8RNr
+  Args:
+    pattern: Confidential Information
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.2.2 “Confidential Information” means any confidential information,documentation or data of whatever nature relating to a Party or its subsidiaries which may have been or which may be obtained by or disclosed to the other Party during the course of its relationship with such Party, whether in writing, in electronic form or pursuant to discussions, including without limitation:
+ trade secrets, know-how, marketing and advertising strategies, strategic objectives, planning or  ideas, research, business activities, business relationships, products or proposed products, proposals, pricing details, strategies, customer and client details, schematics, software, computer programmes and technology, operating procedures and methodologies, designs, drawings, functional and technical requirements and specifications and any other technical, business, financial or market information or any other information which may reasonably be regarded as being confidential and of a proprietary nature to such Party or any of its subsidiaries or holding companies and;
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_E28tBTUjbRYtGDBO1jergZWS)
+ Call ID: call_E28tBTUjbRYtGDBO1jergZWS
+  Args:
+    pattern: Confidential Information
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.2.3 “Disclosing Party” means the Party disclosing Confidential Information;
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_zH4k6OlrZGUvXGQBJIDRnfHW)
+ Call ID: call_zH4k6OlrZGUvXGQBJIDRnfHW
+  Args:
+    pattern: Confidential Information
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.2.6 “Receiving Party” means the Party receiving Confidential Information;
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_cEReVfwu7zGDt4fd7bNBJxm7)
+ Call ID: call_cEReVfwu7zGDt4fd7bNBJxm7
+  Args:
+    pattern: Confidential Information
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+2.3 The Parties are currently engaged in proprietary discussions pertaining to …………………………...3 The Parties are currently engaged in proprietary discussions pertaining to …………………………... This entails the disclosure of Confidential Information.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_sWmgcqqS9MsvunZXQAlGjsJ7)
+ Call ID: call_sWmgcqqS9MsvunZXQAlGjsJ7
+  Args:
+    pattern: Confidential Information
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+2.4 The Parties wish to record the terms and conditions upon which each shall disclose Confidential Information to the other, which terms and conditions shall constitute a binding and enforceable Agreement between the Parties and their agents.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_DW40OClWaVMGOY5UExW2G5JY)
+ Call ID: call_DW40OClWaVMGOY5UExW2G5JY
+  Args:
+    pattern: Confidential Information
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+2.5 This Agreement shall also bind the Parties, notwithstanding the Signature Date,in the event that either Party shall have disclosed any Confidential Information to the other Party prior to the Signature Date.6
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_IdvsEVYvn8rL2402zgkfINqB)
+ Call ID: call_IdvsEVYvn8rL2402zgkfINqB
+  Args:
+    pattern: Confidential Information
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+3.1 The Disclosing Party shall only disclose the Confidential Information to the Receiving Party to the extent deemed necessary or desirable by the Disclosing Party in its sole discretion.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_J2OppG6jM8XbSZYJMGxzjmFh)
+ Call ID: call_J2OppG6jM8XbSZYJMGxzjmFh
+  Args:
+    pattern: Confidential Information
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+3.3 The Receiving Party agrees that it will,during or after the course of their relationship and/or the term of this Agreement as described in clause 9, keep the Confidential Information in the strictest confidence and will not disclose it to any third party for any reason or purpose whatsoever without the prior written consent of the Disclosing Party, save in accordance with the provisions of this Agreement, and the Parties undertake to each other that their holding and subsidiary companies or agents shall be bound by the provisions of this Agreement.  For avoidance of doubt, in this Agreement “third party” means any party other than Client and AfriGIS and their holding and subsidiary companies or agents.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_vRhdUdk0YDXptZr18hPqOhHv)
+ Call ID: call_vRhdUdk0YDXptZr18hPqOhHv
+  Args:
+    pattern: Confidential Information
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+3.4 Notwithstanding anything to the contrary contained in this Agreement the Parties agree that the Confidential Information may be disclosed by the Receiving Party to its professional advisors on a need-to-know basis; provided that that Party takes whatever steps are necessary to procure that such professional advisors agree to abide by the terms of this Agreement to prevent the unauthorised disclosure of the Confidential Information to third parties.  For purposes of this clause, the Receiving Party’s professional advisers and employees, directors or managers shall be deemed to be acting, in the event of a breach, as that Party’s duly authorised agents.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_s1iniQ8t3G4VHpOAMRlBIoev)
+ Call ID: call_s1iniQ8t3G4VHpOAMRlBIoev
+  Args:
+    pattern: Confidential Information
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+3.5.1 not  to utilise,exploit or in any other manner whatsoever use the Confidential Information for any purpose whatsoever whether for its own benefit or for that of others without the prior written consent of the Disclosing Party;
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_24QOWOLTlbrn8u4xUIzIIayy)
+ Call ID: call_24QOWOLTlbrn8u4xUIzIIayy
+  Args:
+    pattern: Confidential Information
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+3.5.2 that the unauthorised disclosure of the Confidential Information to a third party may cause irreparable loss, harm and damage to the Disclosing Party. Accordingly, the Receiving Party indemnifies and
+7
+holds the Disclosing Party harmless against any loss, claim, harm or damage, of whatever  nature, suffered or sustained by the Disclosing Party pursuant to a breach by the Receiving Party of the provisions of this Agreement.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_KDoanX67iHXCNPnIpHe3TYBQ)
+ Call ID: call_KDoanX67iHXCNPnIpHe3TYBQ
+  Args:
+    pattern: Confidential Information
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+4.2 not to confer any rights to the Receiving Party of whatever nature in the Confidential Information.
+
+================================== Ai Message ==================================
+
+Entailment

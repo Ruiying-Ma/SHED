@@ -1,0 +1,156 @@
+================================ Human Message =================================
+
+QUERY:
+Do they use skip-gram word2vec?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_g23YgnBcezPaKTd8vIjYBcqO)
+ Call ID: call_g23YgnBcezPaKTd8vIjYBcqO
+  Args:
+    pattern: skip-gram
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1 Introduction
+The recent decade has witnessed the great suc- cess achieved by word representation in natu- ral language processing (NLP). It proves to be an integral part of most other NLP tasks, in which words have to be vectorized before input to the models. High quality word vectors have boosted the performance of many tasks, such as named entity recognition ( Pennington et al.  , 2014 ; Sienˇcnik , 2015 ), sentence completion ( Yogatama et al. , 2014 ; Liu et al. , 2015 ), part-of-speech tagging ( Ling et al. , 2015a , b ), sentiment analy- sis ( Tsvetkov et al. , 2015 ; Yu et al. , 2017 ), and ma- chine translation ( Sutskever et al.  , 2014 ; Johnson et al. , 2016 ). In a conventional way, word vectors are obtained from word-context co-occurrence matrices by either cascading the row and col- umn vectors ( Lund and Burgess , 1996 ) or applying singular value decomposition (SVD) ( Deerwester
+et al. , 1990 ).  However, these approaches are lim- ited by their sub-optimal linear structure of vector space and the highly increased memory require- ment when confronting huge vocabularies. Both problems have been solved by a popular model called Word2Vec ( Mikolov et al. , 2013b ), which utilizes two shallow neural networks, i.e. , skip- gram and continuous bag-of-words, to learn word vectors from large corpora.  The model is also ca- pable of capturing interesting linear relationships between word vectors.While Word2Vec makes a breakthrough in word representation, it has not been fully understood and its theoretical exploitation is still in demand. One aspect, which has always been ignored, is the choice of noise distribution for negative sam- pling. Word2Vec employs a smoothed unigram distribution with a power rate of 3/4 as the noise distribution.  The decision is made by empirical trials but has been widely adopted in subsequent work ( Levy et al. , 2015 ; Ling et al. , 2015a ; Yang et al. , 2017 ; Bamler and Mandt , 2017 ). However, the quality of learned word vectors is sensitive to the choice of noise distribution ( Gutmann and Hyv¨arinen , 2010 ; Levy et al.  , 2015 ) when using a moderate number (5 to 15) of negative samples, which is a common strategy for the tradeoff be- tween vector quality and computation costs.In this paper, we propose to employ a sub- sampled unigram distribution for negative sam- pling and demonstrate its capability of improving the linear relationships between word vectors.  Our contributions include three aspects: (1) We pro- pose the concept of semantics quantification and derive a suitable sub-sampling rate for the pro- posed distribution. (2) We demonstrate the ad- vantages of our noise distribution in both negative sampling and noise contrastive estimation by ex- tensive experiments. (3) We propose a semantics weighted model for the MSR sentence completion
+ Figure 1 : Illustration of the skip-gram and contin- uous bag-of-words (CBOW) architectures.task, resulting in considerable improvements.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_tWlcKQnbN95KrN9iG9NiYdNg)
+ Call ID: call_tWlcKQnbN95KrN9iG9NiYdNg
+  Args:
+    pattern: skip-gram
+    cursor: 0
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Tool 'grep_search_next' failed after 1 attempt with TypeError: grep_search_next() got an unexpected keyword argument 'cursor'. Please try again.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_UQVkSeDgA8s4Ns0DTG9UFg3w)
+ Call ID: call_UQVkSeDgA8s4Ns0DTG9UFg3w
+  Args:
+    pattern: skip-gram
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+2.1 Architectures
+Firstly, we briefly introduce the two architec- tures, i.e. , skip-gram (SG) and continuous bag- of-words (CBOW) in Word2Vec ( Mikolov et al. , 2013b ).  For a corpus with a word sequence w 1 , w 2 , · · · , w T , skip-gram predicts the context word w t + j given the center word w t , and maxi- mizes the average log probability,
+1 T T X t =1 X − c ≤ j ≤ c,j 6 =0 log p ( w t + j | w t ) , (1)
+ where c is the size of context window, and p ( w t + j | w t ) is defined by the full softmax function,
+p ( w O | w I ) = exp v 0> w O v w I P | V | w =1 exp ( v 0> w v w I ) , (2)
+ where v w and v 0 w are the vectors of the “input” and “output” words, and | V | is the size of vocabulary.As for CBOW, it predicts the center word based on the context words. The input vector is usu- ally the average of the context words’ vectors, i.e. , v w I = 1 2 c P − c ≤ j ≤ c,j 6 =0 v w t + j .
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_JQ2HVRtdAoWmzd07GXdyO7A0)
+ Call ID: call_JQ2HVRtdAoWmzd07GXdyO7A0
+  Args:
+    pattern: Word2Vec
+    cursor: 0
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Tool 'grep_search_next' failed after 1 attempt with TypeError: grep_search_next() got an unexpected keyword argument 'cursor'. Please try again.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_Vm6jCfu5eKWFlDmvegvouG1Q)
+ Call ID: call_Vm6jCfu5eKWFlDmvegvouG1Q
+  Args:
+    pattern: negative sampling
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Word2Vec is the most popular model for word representation and has been widely investi- gated in literature. However, its noise distribu- tion for negative sampling is decided by empir- ical trials and the optimality has always been ignored. We suggest that the distribution is a sub-optimal choice, and propose to use a sub- sampled unigram distribution for better nega- tive sampling.  Our contributions include: (1) proposing the concept of semantics quantifica- tion and deriving a suitable sub-sampling rate for the proposed distribution adaptive to dif- ferent training corpora; (2) demonstrating the advantages of our approach in both negative sampling and noise contrastive estimation by extensive evaluation tasks; and (3) proposing a semantics weighted model for the MSR sen- tence completion task, resulting in consider- able improvements.  Our work not only im- proves the quality of word vectors but also benefits current understanding of Word2Vec.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_MzG8LhFiwDh1m8iBEP46Wr80)
+ Call ID: call_MzG8LhFiwDh1m8iBEP46Wr80
+  Args:
+    pattern: skip-gram
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_9xOCkcBHooj5OX8HRPjkpJmy)
+ Call ID: call_9xOCkcBHooj5OX8HRPjkpJmy
+  Args:
+    pattern: SG
+    cursor: 0
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Tool 'grep_search_next' failed after 1 attempt with TypeError: grep_search_next() got an unexpected keyword argument 'cursor'. Please try again.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_0xCgS9qK2z8mDVgRtkdN3BRY)
+ Call ID: call_0xCgS9qK2z8mDVgRtkdN3BRY
+  Args:
+    pattern: Word2Vec
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Word2Vec is the most popular model for word representation and has been widely investi- gated in literature. However, its noise distribu- tion for negative sampling is decided by empir- ical trials and the optimality has always been ignored. We suggest that the distribution is a sub-optimal choice, and propose to use a sub- sampled unigram distribution for better nega- tive sampling.  Our contributions include: (1) proposing the concept of semantics quantifica- tion and deriving a suitable sub-sampling rate for the proposed distribution adaptive to dif- ferent training corpora; (2) demonstrating the advantages of our approach in both negative sampling and noise contrastive estimation by extensive evaluation tasks; and (3) proposing a semantics weighted model for the MSR sen- tence completion task, resulting in consider- able improvements.  Our work not only im- proves the quality of word vectors but also benefits current understanding of Word2Vec.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_98sY4weSoU8nCBBtrgz1MTDX)
+ Call ID: call_98sY4weSoU8nCBBtrgz1MTDX
+  Args:
+    pattern: negative sampling
+    cursor: 0
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Tool 'grep_search_next' failed after 1 attempt with TypeError: grep_search_next() got an unexpected keyword argument 'cursor'. Please try again.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_4cQmoE895iaHliKEufrkAexa)
+ Call ID: call_4cQmoE895iaHliKEufrkAexa
+  Args:
+    pattern: SGNS|skip-gram with negative|skipgram|skip gram|skipgram
+    cursor: 0
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Tool 'grep_search_next' failed after 1 attempt with TypeError: grep_search_next() got an unexpected keyword argument 'cursor'. Please try again.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_smdDh8A83aQ8lJqygu2rKdpy)
+ Call ID: call_smdDh8A83aQ8lJqygu2rKdpy
+  Args:
+    pattern: continuous bag
+    cursor: 0
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Tool 'grep_search_next' failed after 1 attempt with TypeError: grep_search_next() got an unexpected keyword argument 'cursor'. Please try again.
+
+================================== Ai Message ==================================
+
+Yes; they employ Word2Vec's skip-gram architecture (alongside CBOW).

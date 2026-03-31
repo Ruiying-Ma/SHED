@@ -1,0 +1,58 @@
+================================ Human Message =================================
+
+QUERY:
+what domains are explored?
+
+TABLE OF CONTENTS (TOC):
+1 | #SarcasmDetection is soooo general! Towards a Domain-Independent Approach for Detecting Sarcasm
+1.1 | Abstract
+1.2 | Introduction
+1.3 | Related Work
+1.3.1 | Sarcasm Detection on Twitter
+1.3.2 | Sarcasm Detection on Amazon Reviews
+1.4 | Methods
+1.4.1 | Data Collection
+1.4.2 | Features
+1.5 | Evaluation
+1.5.1 | Results
+1.6 | Discussion
+1.7 | Conclusions
+1.8 | Acknowledgments
+1.9 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_VETzJMcnCehHpBJCLe1dlpEm)
+ Call ID: call_VETzJMcnCehHpBJCLe1dlpEm
+  Args:
+    section_id: 1.1
+  read_section (call_fEq713fpP1Sh7OAWiOcvafIz)
+ Call ID: call_fEq713fpP1Sh7OAWiOcvafIz
+  Args:
+    section_id: 1.4.1
+  read_section (call_v1acvKtbMSCJ7IrUSM237Bnn)
+ Call ID: call_v1acvKtbMSCJ7IrUSM237Bnn
+  Args:
+    section_id: 1.2
+
+================================= Tool Message =================================
+Name: read_section
+
+Abstract
+Automatic sarcasm detection methods have traditionally been designed for maximum performance on a specific domain. This poses challenges for those wishing to transfer those ap- proaches to other existing or novel domains, which may be typified by very different language characteristics. We de- velop a general set of features and evaluate it under different training scenarios utilizing in-domain and/or out-of-domain training data.  The best-performing scenario, training on both while employing a domain adaptation step, achieves an F 1 of 0.780, which is well above baseline F 1 -measures of 0.515 and 0.345. We also show that the approach outperforms the best results from prior work on the same target domain.
+
+================================= Tool Message =================================
+Name: read_section
+
+Data Collection
+Data was taken from two domains: Twitter, and Amazon product reviews. The Amazon reviews were from the pub- licly available sarcasm corpus developed by Filatova (2012). To build our Twitter dataset, tweets containing exactly one of the trailing hashtags “#sarcasm,” “#happiness,” “#sad- ness,” “#anger,” “#surprise,” “#fear,” and “#disgust” were downloaded regularly during February and March 2016.  Tweets containing the latter six hashtags, corresponding to Ekman’s six basic emotions (Ekman 1992), were labeled as non-sarcastic. Those hashtags were chosen because their associated tweets were expected to still express opinions, similarly to sarcastic tweets, but in a non-sarcastic way.  Tweets containing #sarcasm were labeled as sarcastic; an- notating tweets with the #sarcasm hashtag as such is con- sistent with the vast majority of prior work in the Twitter domain (Gonz´alez-Ib´a˜nez, Muresan, and Wacholder 2011; Liebrecht, Kunneman, and van den Bosch 2013; May- nard and Greenwood 2014; Rajadesingan, Zafarani, and Liu 2015; Bamman and Smith 2015; Ghosh, Guo, and Muresan 2015; Amir et al.  2016).The downloaded tweets were filtered to remove retweets, “@replies,” and tweets containing links. Retweets were re- moved to avoid having duplicate copies of identical tweets in the dataset, @replies were removed in case the hashtag re- ferred to content in the tweet to which it replied rather than content in the tweet itself, and tweets with links were like- wise removed in case the hashtag referred to content in the link rather than in the tweet itself.  Requiring that the speci- fied hashtag trailed the rest of the tweet (it could only be fol- lowed by other hashtags) was done based on the observation that when sarcastic or emotional hashtags occur in the main tweet body, the tweet generally discusses sarcasm or the specified emotion, rather than actually expressing sarcasm or the specified emotion. Finally, requiring that only one of the specified hashtags trailed the tweet eliminated cases of ambiguity between sarcastic and non-sarcastic tweets.  All trailing “#sarcasm” or emotion hashtags were removed from the data before training and testing, and both datasets were randomly divided into training (80%) and testing (20%) sets. Further details are shown in Table 1.Resource Description Liu05 Opinion lexicon containing 2006 pos. words and 4783 neg. words (Liu, Hu, and Cheng 2005).  MPQA Subjectivity lexicon containing strongly or weakly subjective positive (2718) or negative (4910) words (Wilson, Wiebe, and Hoffmann 2005). AFINN Sentiment lexicon for microblogs (Hansen et al. 2011) containing 2477 words/phrases labeled with values from -5 (negative) to +5 (positive).  Google Web1T Large collection of n-grams and their frequencies scraped from the web (Brants and Franz 2006). Table 2: Lexical Resources
+
+================================= Tool Message =================================
+Name: read_section
+
+Introduction
+Sarcasm, a creative device used to communicate an intended meaning that is actually the opposite of its literal meaning, 1 is notoriously difficult to convey and interpret through text, in part because doing so relies heavily upon shared contex- tual understandings that can be marked more easily by al- tered prosody (e.g., emphasis upon certain words) or non- verbal signals (e.g., rolling one’s eyes).  It is a complex pro- cess even for humans, and in fact an inability to detect sar- casm has been linked with a number of neurocognitive dis- orders, including dementia (Kipps et al. 2009). It is similarly a challenging open task in natural language processing, and has direct implications to a number of other critical applica- tion areas, such as sentiment analysis. Most research on automatic sarcasm detection to date has focused on the Twitter domain, which boasts an am- ple source of publicly-available data, some of which is al- ready self-labeled by users for the presence of sarcasm (e.g., with #sarcasm).  However, Twitter is highly informal, space- restricted, and subject to frequent topic fluctuations from one post to the next due to the ebb and flow of current events—in short, it is not broadly representative of most text domains. Thus, sarcasm detectors trained using features designed for maximum Twitter performance are not necessarily transfer- able to other domains. Despite this, it is desirable to develop approaches that can harness the more generalizable informa- tion present in the abundance of Twitter data. In this work, we develop a set of domain-independent fea- tures for sarcasm detection and show that the features gen- erally perform well across text domains.  Further, we vali- date that domain adaptation can be applied to sarcasm de- tection to leverage patterns in out-of-domain training data, even when results from training only on that source domain data are extremely bad (far below baseline results), to im- prove over training on only the target data or over training on the simply combined dataset. Finally, we make a new dataset of sarcastic and non-sarcastic tweets available online as a resource to other researchers. 2
+
+================================== Ai Message ==================================
+
+Twitter and Amazon product reviews.

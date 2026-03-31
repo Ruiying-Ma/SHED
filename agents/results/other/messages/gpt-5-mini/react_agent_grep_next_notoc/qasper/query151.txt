@@ -1,0 +1,111 @@
+================================ Human Message =================================
+
+QUERY:
+What is the size of the corpus?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_2f87IUCGtL3EwTRjk9v8t3hZ)
+ Call ID: call_2f87IUCGtL3EwTRjk9v8t3hZ
+  Args:
+    pattern: corpus|corpus size|size of the corpus|size.*corpus|\bcorpus\b
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Adpositions are frequent markers of semantic relations, but they are highly ambiguous and vary significantly from language to language. Moreover, there is a dearth of annotated corpora for investigating the cross-linguistic variation of adposition semantics, or for building multilingual disambiguation systems. This paper presents a corpus in which all adpositions have been semantically annotated in Mandarin Chinese; to the best of our knowledge, this is the first Chinese corpus to be broadly annotated with adposition semantics.  Our approach adapts a framework that defined a general set of supersenses according to ostensibly language-independent semantic criteria, though its development focused primarily on English prepositions (Schneider et al., 2018). We find that the supersense categories are well-suited to Chinese adpositions despite syntactic differences from English. On a Mandarin translation of The Little Prince , we achieve high inter-annotator agreement and analyze semantic correspondences of adposition tokens in bitext. Keywords: adpositions, supersenses, Mandarin Chinese, corpus, annotation
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_XMm0uy2Fx8ChHyVZOwmXaTRH)
+ Call ID: call_XMm0uy2Fx8ChHyVZOwmXaTRH
+  Args:
+    pattern: Little Prince|Little Prince|translation of The Little Prince|The Little Prince
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Adpositions are frequent markers of semantic relations, but they are highly ambiguous and vary significantly from language to language. Moreover, there is a dearth of annotated corpora for investigating the cross-linguistic variation of adposition semantics, or for building multilingual disambiguation systems. This paper presents a corpus in which all adpositions have been semantically annotated in Mandarin Chinese; to the best of our knowledge, this is the first Chinese corpus to be broadly annotated with adposition semantics.  Our approach adapts a framework that defined a general set of supersenses according to ostensibly language-independent semantic criteria, though its development focused primarily on English prepositions (Schneider et al., 2018). We find that the supersense categories are well-suited to Chinese adpositions despite syntactic differences from English. On a Mandarin translation of The Little Prince , we achieve high inter-annotator agreement and analyze semantic correspondences of adposition tokens in bitext. Keywords: adpositions, supersenses, Mandarin Chinese, corpus, annotation
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_5YQm7f2OF25mVZKujkZoGhMT)
+ Call ID: call_5YQm7f2OF25mVZKujkZoGhMT
+  Args:
+    pattern: corpus size|tokens|token|types|number of adposition|annotation|size|words|characters|sentences|paragraphs
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Adpositions are frequent markers of semantic relations, but they are highly ambiguous and vary significantly from language to language. Moreover, there is a dearth of annotated corpora for investigating the cross-linguistic variation of adposition semantics, or for building multilingual disambiguation systems. This paper presents a corpus in which all adpositions have been semantically annotated in Mandarin Chinese; to the best of our knowledge, this is the first Chinese corpus to be broadly annotated with adposition semantics.  Our approach adapts a framework that defined a general set of supersenses according to ostensibly language-independent semantic criteria, though its development focused primarily on English prepositions (Schneider et al., 2018). We find that the supersense categories are well-suited to Chinese adpositions despite syntactic differences from English. On a Mandarin translation of The Little Prince , we achieve high inter-annotator agreement and analyze semantic correspondences of adposition tokens in bitext. Keywords: adpositions, supersenses, Mandarin Chinese, corpus, annotation
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_6P2gcrxlzpOPOY5IF5NpDexh)
+ Call ID: call_6P2gcrxlzpOPOY5IF5NpDexh
+  Args:
+    pattern: tokens|token|adposition tokens|adposition token|number of|annotat|corpus.*(size|tokens|sentences|words)
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Adpositions are frequent markers of semantic relations, but they are highly ambiguous and vary significantly from language to language. Moreover, there is a dearth of annotated corpora for investigating the cross-linguistic variation of adposition semantics, or for building multilingual disambiguation systems. This paper presents a corpus in which all adpositions have been semantically annotated in Mandarin Chinese; to the best of our knowledge, this is the first Chinese corpus to be broadly annotated with adposition semantics.  Our approach adapts a framework that defined a general set of supersenses according to ostensibly language-independent semantic criteria, though its development focused primarily on English prepositions (Schneider et al., 2018). We find that the supersense categories are well-suited to Chinese adpositions despite syntactic differences from English. On a Mandarin translation of The Little Prince , we achieve high inter-annotator agreement and analyze semantic correspondences of adposition tokens in bitext. Keywords: adpositions, supersenses, Mandarin Chinese, corpus, annotation
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_gnhuATJHHSzrxuxCXXdI0nph)
+ Call ID: call_gnhuATJHHSzrxuxCXXdI0nph
+  Args:
+    pattern: adposition|adpositions
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Adpositions are frequent markers of semantic relations, but they are highly ambiguous and vary significantly from language to language. Moreover, there is a dearth of annotated corpora for investigating the cross-linguistic variation of adposition semantics, or for building multilingual disambiguation systems. This paper presents a corpus in which all adpositions have been semantically annotated in Mandarin Chinese; to the best of our knowledge, this is the first Chinese corpus to be broadly annotated with adposition semantics.  Our approach adapts a framework that defined a general set of supersenses according to ostensibly language-independent semantic criteria, though its development focused primarily on English prepositions (Schneider et al., 2018). We find that the supersense categories are well-suited to Chinese adpositions despite syntactic differences from English. On a Mandarin translation of The Little Prince , we achieve high inter-annotator agreement and analyze semantic correspondences of adposition tokens in bitext. Keywords: adpositions, supersenses, Mandarin Chinese, corpus, annotation
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_53B41t2wLrY9UL5U9WGaAAYz)
+ Call ID: call_53B41t2wLrY9UL5U9WGaAAYz
+  Args:
+    pattern: \d+|\bsize\b|\bcorpus\b|100|1000|2000|5000|characters|sentences|words|annotat(ed|ion).*corpus
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Adpositions are frequent markers of semantic relations, but they are highly ambiguous and vary significantly from language to language. Moreover, there is a dearth of annotated corpora for investigating the cross-linguistic variation of adposition semantics, or for building multilingual disambiguation systems. This paper presents a corpus in which all adpositions have been semantically annotated in Mandarin Chinese; to the best of our knowledge, this is the first Chinese corpus to be broadly annotated with adposition semantics.  Our approach adapts a framework that defined a general set of supersenses according to ostensibly language-independent semantic criteria, though its development focused primarily on English prepositions (Schneider et al., 2018). We find that the supersense categories are well-suited to Chinese adpositions despite syntactic differences from English. On a Mandarin translation of The Little Prince , we achieve high inter-annotator agreement and analyze semantic correspondences of adposition tokens in bitext. Keywords: adpositions, supersenses, Mandarin Chinese, corpus, annotation
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_mWobYIqiCh40KBT6rRh7Qk52)
+ Call ID: call_mWobYIqiCh40KBT6rRh7Qk52
+  Args:
+    pattern: The Little Prince|Little Prince|Prince
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Adpositions are frequent markers of semantic relations, but they are highly ambiguous and vary significantly from language to language. Moreover, there is a dearth of annotated corpora for investigating the cross-linguistic variation of adposition semantics, or for building multilingual disambiguation systems. This paper presents a corpus in which all adpositions have been semantically annotated in Mandarin Chinese; to the best of our knowledge, this is the first Chinese corpus to be broadly annotated with adposition semantics.  Our approach adapts a framework that defined a general set of supersenses according to ostensibly language-independent semantic criteria, though its development focused primarily on English prepositions (Schneider et al., 2018). We find that the supersense categories are well-suited to Chinese adpositions despite syntactic differences from English. On a Mandarin translation of The Little Prince , we achieve high inter-annotator agreement and analyze semantic correspondences of adposition tokens in bitext. Keywords: adpositions, supersenses, Mandarin Chinese, corpus, annotation
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_50lscGRw7snjNX8ug2MWZybx)
+ Call ID: call_50lscGRw7snjNX8ug2MWZybx
+  Args:
+    pattern: size of the corpus|corpus size|size.*corpus|\bsize\b
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+
+Unanswerable

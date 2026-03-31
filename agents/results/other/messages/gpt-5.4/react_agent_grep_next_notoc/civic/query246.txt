@@ -1,0 +1,21 @@
+================================ Human Message =================================
+
+QUERY:
+What is the type of the project 'Corral Canyon Road Bridge Repairs (FEMA Project)'?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_2doX1zIb7seYc0NRRoqrHrR8)
+ Call ID: call_2doX1zIb7seYc0NRRoqrHrR8
+  Args:
+    pattern: Corral Canyon Road Bridge Repairs \(FEMA Project\)
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Corral Canyon Road Bridge Repairs (FEMA Project)
+¾ Project Description:  This project consisted of replacing fire damaged existing fencing and repairing the damaged embankment adjacent to the bridge.
+
+================================== Ai Message ==================================
+
+disaster

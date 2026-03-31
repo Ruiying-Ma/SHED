@@ -1,0 +1,48 @@
+================================ Human Message =================================
+
+QUERY:
+How is the event prediction task evaluated?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_Gl9tWm1wdK1B2YiMl5n0l75b)
+ Call ID: call_Gl9tWm1wdK1B2YiMl5n0l75b
+  Args:
+    pattern: event prediction|evaluate|evaluation
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Prior work has proposed effective methods to learn event representations that can capture syntactic and semantic information over text corpus, demonstrating their effectiveness for downstream tasks such as script event predic- tion. On the other hand, events extracted from raw texts lacks of commonsense knowledge, such as the intents and emotions of the event participants, which are useful for distinguish- ing event pairs when there are only subtle dif- ferences in their surface realizations.  To ad- dress this issue, this paper proposes to leverage external commonsense knowledge about the intent and sentiment of the event. Experiments on three event-related tasks, i.e. , event simi- larity, script event prediction and stock mar- ket prediction, show that our model obtains much better event embeddings for the tasks, achieving 78% improvements on hard similar- ity task, yielding more precise inferences on subsequent events under given contexts, and better accuracies in predicting the volatilities of the stock market 1 .
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_b6jCzGKzTHt1xoHXM2TXRfwW)
+ Call ID: call_b6jCzGKzTHt1xoHXM2TXRfwW
+  Args:
+    pattern: script event prediction|event prediction task
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Prior work has proposed effective methods to learn event representations that can capture syntactic and semantic information over text corpus, demonstrating their effectiveness for downstream tasks such as script event predic- tion. On the other hand, events extracted from raw texts lacks of commonsense knowledge, such as the intents and emotions of the event participants, which are useful for distinguish- ing event pairs when there are only subtle dif- ferences in their surface realizations.  To ad- dress this issue, this paper proposes to leverage external commonsense knowledge about the intent and sentiment of the event. Experiments on three event-related tasks, i.e. , event simi- larity, script event prediction and stock mar- ket prediction, show that our model obtains much better event embeddings for the tasks, achieving 78% improvements on hard similar- ity task, yielding more precise inferences on subsequent events under given contexts, and better accuracies in predicting the volatilities of the stock market 1 .
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_f5rO9f6eUBdCEQPYzQeLuuL3)
+ Call ID: call_f5rO9f6eUBdCEQPYzQeLuuL3
+  Args:
+    pattern: MCNC|Multiple Choice Narrative Cloze|Narrative Cloze|Recall@|accuracy
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+3.3 Script Event Prediction
+Event is a kind of important real-world knowl- edge. Learning effective event representations can be benefit for numerous applications. Script event prediction ( Chambers and Jurafsky , 2008 ) is a challenging event-based commonsense reasoning task, which is defined as giving an existing event context, one needs to choose the most reasonable subsequent event from a candidate list.Following Li et al.  ( 2018a ), we evaluate on the standard multiple choice narrative cloze (MCNC) dataset ( Granroth-Wilding and Clark , 2016 ). As SGNN proposed by Li et al. ( 2018a ) achieved state-of-the-art performances for this task, we
+Figure 5: Experimental results on S&P 500 index pre- diction. “+Int” means that we encode the intent infor- mation into the original event embeddings. use the framework of SGNN, and only replace their input event embeddings with our intent and sentiment-enhanced event embeddings.Wang et al. ( 2017 ) and Li et al. ( 2018a ) showed that script event prediction is a challenging prob- lem, and even 1% of accuracy improvement is very difficult. Experimental results shown in Ta- ble 3 demonstrate that we can achieve more than 1. 5% improvements in single model comparison and more than 1.4% improvements in multi-model integration comparison, just by replacing the in- put embeddings, which confirms that better event understanding can lead to better inference results. An interesting result is that the event embeddings only incorporated with intents achieved the best result against other baselines. This confirms that capturing people’s intents is helpful to infer their next plan.  In addition, we notice that the event embeddings only incorporated with sentiment also achieve better performance than SGNN. This is mainly because the emotional consistency does also contribute to predicate the subsequent event.
+
+================================== Ai Message ==================================
+
+It is evaluated on the standard multiple choice narrative cloze (MCNC) dataset, where given an existing event context, the model chooses the most reasonable subsequent event from a candidate list. Performance is reported in terms of accuracy.

@@ -1,0 +1,164 @@
+================================ Human Message =================================
+
+QUERY:
+What is the machine learning method used to make the predictions?
+
+TABLE OF CONTENTS (TOC):
+1 | Event Representation Learning Enhanced with External Commonsense Knowledge
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2 Commonsense Knowledge Enhanced Event Representations
+1.3.1 | 2.1 Low-Rank Tensors for Event Embedding
+1.3.2 | 2.2 Intent Embedding
+1.3.3 | 2.3 Sentiment Embedding
+1.3.4 | 2.4 Joint Event, Intent and Sentiment Embedding
+1.4 | 3 Experiments
+1.4.1 | 3.1 Baselines
+1.4.2 | 3.2 Event Similarity Evaluation
+1.4.2.1 | 3.2.1 Hard Similarity Task
+1.4.2.2 | 3.2.2 Transitive Sentence Similarity
+1.4.2.3 | 3.2.3 Results
+1.4.2.4 | 3.2.4 Case Study
+1.4.3 | 3.3 Script Event Prediction
+1.4.4 | 3.4 Stock Market Prediction
+1.5 | 4 Related Work
+1.6 | 5 Conclusion
+1.7 | Acknowledgments
+1.8 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_all (call_l8BaJDvcfjlAO3UP0S0VBk2b)
+ Call ID: call_l8BaJDvcfjlAO3UP0S0VBk2b
+  Args:
+    pattern: prediction
+
+================================= Tool Message =================================
+Name: grep_search_all
+
+1.1
+1.2
+1.4.2.4
+1.4.3
+1.4.4
+1.5
+1.6
+1.8
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_H9slU6w5jJ3Ko2qPsZmUMUbE)
+ Call ID: call_H9slU6w5jJ3Ko2qPsZmUMUbE
+  Args:
+    section_id: 1.4.3
+
+================================= Tool Message =================================
+Name: read_section
+
+3.3 Script Event Prediction
+Event is a kind of important real-world knowl- edge. Learning effective event representations can be benefit for numerous applications. Script event prediction ( Chambers and Jurafsky , 2008 ) is a challenging event-based commonsense reasoning task, which is defined as giving an existing event context, one needs to choose the most reasonable subsequent event from a candidate list.Following Li et al.  ( 2018a ), we evaluate on the standard multiple choice narrative cloze (MCNC) dataset ( Granroth-Wilding and Clark , 2016 ). As SGNN proposed by Li et al. ( 2018a ) achieved state-of-the-art performances for this task, we
+Figure 5: Experimental results on S&P 500 index pre- diction. “+Int” means that we encode the intent infor- mation into the original event embeddings. use the framework of SGNN, and only replace their input event embeddings with our intent and sentiment-enhanced event embeddings.Wang et al. ( 2017 ) and Li et al. ( 2018a ) showed that script event prediction is a challenging prob- lem, and even 1% of accuracy improvement is very difficult. Experimental results shown in Ta- ble 3 demonstrate that we can achieve more than 1. 5% improvements in single model comparison and more than 1.4% improvements in multi-model integration comparison, just by replacing the in- put embeddings, which confirms that better event understanding can lead to better inference results. An interesting result is that the event embeddings only incorporated with intents achieved the best result against other baselines. This confirms that capturing people’s intents is helpful to infer their next plan.  In addition, we notice that the event embeddings only incorporated with sentiment also achieve better performance than SGNN. This is mainly because the emotional consistency does also contribute to predicate the subsequent event.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_7KQ1SQf5CSvpD9FxCGOFUzc6)
+ Call ID: call_7KQ1SQf5CSvpD9FxCGOFUzc6
+  Args:
+    section_id: 1.4.4
+
+================================= Tool Message =================================
+Name: read_section
+
+3.4 Stock Market Prediction
+It has been shown that news events influence the trends of stock price movements ( Luss and d’Aspremont , 2012 ). As news events affect hu- man decisions and the volatility of stock prices is influenced by human trading, it is reasonable to
+say that events can influence the stock market. In this section, we compare with several event- driven stock market prediction baseline methods: (1) Word , Luss and d’Aspremont ( 2012 ) use bag- of-words represent news events for stock predic- tion; (2) Event , Ding et al. ( 2014 ) represent events by subject-predicate-object triples for stock pre- diction; (3) NTN , Ding et al.  ( 2015 ) learn contin- ues event vectors for stock prediction; (4) KGEB , Ding et al. ( 2016 ) incorporate knowledge graph into event vectors for stock prediction.Experimental results are shown in Figure 5 . We find that knowledge-driven event embedding is a competitive baseline method, which incorporates world knowledge to improve the performances of event embeddings on the stock prediction.  Sen- timent is often discussed in predicting stock mar- ket, as positive or negative news can affect peo- ple’s trading decision, which in turn influences the movement of stock market. In this study, we em- pirically show that event emotions are effective for improving the performance of stock prediction (+2.4%).
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_all (call_YGQodhGN3crPlZeHXe6j9n7u)
+ Call ID: call_YGQodhGN3crPlZeHXe6j9n7u
+  Args:
+    pattern: SGNN
+
+================================= Tool Message =================================
+Name: grep_search_all
+
+1.4.2.4
+1.4.3
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_oO3VIPiRFYjLbbe3XTrs35yR)
+ Call ID: call_oO3VIPiRFYjLbbe3XTrs35yR
+  Args:
+    section_id: 1.4.2.4
+
+================================= Tool Message =================================
+Name: read_section
+
+3.2.4 Case Study
+To further analyse the effects of intents and emo- tions on the event representation learning, we present case studies in Table 2 , which directly shows the changes of similarity scores before and
+2 To directly compare with baseline methods ( Weber et al. , 2018 ), this paper compares with averaged annotator scores, other than comparing with every annotator scores.Event1 Event 2 oScore mScore Event1 Event 2 oScore mScore man clears test he passed exam -0. 08 0.40 man passed car man passed exam 0.81 0.12 he grind corn cook chops beans 0.31 0.81 he grind corn he grind teeth 0.89 0.36 he made meal chef cooked pasta 0.51 0.85 chef cooked pasta chef cooked books 0.89 0.45 farmer load truck person packs car 0.58 0.83 farmer load truck farmer load gun 0. 93 0.55 player scored goal she carried team 0.19 0.44 she carried bread she carried team 0.59 0.09
+Table 2: Case study of the cosine similarity score changes with incorporating the intent and sentiment. oScore is the original cosine similarity score without intent and sentiment, and mScore is the modified cosine similarity score with intent and sentiment.Methods Acc (%) SGNN 52.45 SGNN+Int 53. 93 SGNN+Senti 53.57 SGNN+Int+Senti 53.88 SGNN+PairLSTM 52.71 SGNN+EventComp 54.15 SGNN+EventComp+PairLSTM 54.93 SGNN+PairLSTM+Int+Senti 54.14 SGNN+EventComp+Int+Senti 55.08 SGNN+EventComp+PairLSTM+Int+Senti 56.03
+ Table 3: Results of script event prediction on the test set. The improvement is significant at p < 0 . 05 . Acc is short for Accuracy.after incorporating intent and sentiment. For ex- ample, the original similarity score of two events “ chef cooked pasta ” and “ chef cooked books ” is very high (0.89) as they have high lexical overlap. However, their intents differ greatly.  The intent of “ chef cooked pasta ” is “ to hope his customer enjoying the delicious food ”, while the intent of “ chef cooked books ” is “ to falsify their financial statements ”. Enhanced with the intents, the sim- ilarity score of the above two events dramatically drops to 0.45. For another example, as the event pair “ man clears test ” and “ he passed exam ” share the same sentiment polarity, their similarity score is boosted from -0. 08 to 0.40.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_all (call_ILurnGUOJ02UIhPkrX8qPJvV)
+ Call ID: call_ILurnGUOJ02UIhPkrX8qPJvV
+  Args:
+    pattern: machine learning|method|model|predicti(ng|on) method|used to make|make the predictions|make predictions|prediction method|classifier|SVM|neural|LSTM|SGNN|PairLSTM|EventComp|NTN|Word , Luss
+    pattern_flags: i
+
+================================= Tool Message =================================
+Name: grep_search_all
+
+Tool 'grep_search_all' failed after 1 attempt with TypeError: grep_search_all() got an unexpected keyword argument 'pattern_flags'. Please try again.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_all (call_AOGoZFaac3Rlc9CzBTbR3dnE)
+ Call ID: call_AOGoZFaac3Rlc9CzBTbR3dnE
+  Args:
+    pattern: machine learning|method|model|predicti(ng|on) method|used to make|make the predictions|make predictions|prediction method|classifier|SVM|neural|LSTM|SGNN|PairLSTM|EventComp|NTN|Word , Luss
+
+================================= Tool Message =================================
+Name: grep_search_all
+
+1.1
+1.2
+1.3.1
+1.3.2
+1.3.3
+1.3.4
+1.4.1
+1.4.2.1
+1.4.2.2
+1.4.2.3
+1.4.2.4
+1.4.3
+1.4.4
+1.5
+1.8
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_mnDmAJl00VBRpPB9cmgZZrxA)
+ Call ID: call_mnDmAJl00VBRpPB9cmgZZrxA
+  Args:
+    section_id: 1.4.1
+
+================================= Tool Message =================================
+Name: read_section
+
+3.1 Baselines
+We compare the performance of our approach against a variety of event embedding models de-
+veloped in recent years. These models can be cat- egorized into three groups:
+• Averaging Baseline (Avg) This represents each event as the average of the constituent word vectors using pre-trained GloVe embed- dings ( Pennington et al., 2014 ).
+• Compositional Neural Network (Comp.NN) The distributed event representations are learned by concatenating the subject, predi- cate, and object embeddings into a two layer neural network ( Modi and Titov , 2013 ; Modi , 2016 ; Granroth-Wilding and Clark , 2016 ).
+• Element-wise Multiplicative Composition (EM Comp.) This method simply concate- nates the element-wise multiplications be- tween the verb and its subject/object.
+• Neural Tensor Network This line of work use tensors to learn the interactions between the predicate and its subject/object ( Ding et al., 2015 ; Weber et al. , 2018 ). Accord- ing to the different usage of tensors, we have three baseline methods: Role Factor Ten- sor ( Weber et al. , 2018 ) which represents the predicate as a tensor, Predicate Tensor ( Weber et al. , 2018 ) which uses two tensors learning the interactions between the predi- cate and its subject, and the predicate and its object, respectively, NTN ( Ding et al.  , 2015 ), which we used as the baseline event embed- ding model in this paper, and KGEB ( Ding et al. , 2016 ), which incorporates knowledge graph information in NTN.
+
+================================== Ai Message ==================================
+
+SGNN

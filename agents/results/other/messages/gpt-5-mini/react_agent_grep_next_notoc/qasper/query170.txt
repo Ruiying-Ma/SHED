@@ -1,0 +1,87 @@
+================================ Human Message =================================
+
+QUERY:
+Do they reduce language variation of text by enhancing frequencies?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_cvDREj2Raj70jywZsDD4JmA9)
+ Call ID: call_cvDREj2Raj70jywZsDD4JmA9
+  Args:
+    pattern: language variation
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_8KofEEGCbsFGbxV309E5K6kR)
+ Call ID: call_8KofEEGCbsFGbxV309E5K6kR
+  Args:
+    pattern: variation
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_98o8PWQhfYTwde79zHsEiAfD)
+ Call ID: call_98o8PWQhfYTwde79zHsEiAfD
+  Args:
+    pattern: frequency
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+4 Automatic Measures to Estimate the Quality of Topic Models
+To estimate the quality of topic models, we use two main automatic measures: topic coherence and kernel uniqueness. For human content analysis, measures of topic co- herence and kernel uniqueness are both important and complement each other. Topics can be coherent but have a lot of repetitions. On the other hand, generated topics can be very diverse, but incoherent within each topic.Topic coherence is an automatic metric of interpretability.  It was shown that the co- herence measure has a high correlation with the expert estimates of topic interpretability [10,19]. Mimno [10] described an experiment comparing expert evaluation of LDA- generated topics and automatic topic coherence measures. It was found that most "bad" topics consisted of words without clear relations between each other.4 Loukachevitch et al.Algorithm 1: LDA-SIM algorithm
+ Input: collection D , vocabulary W , number of topics | T | , initial { p ( w | t ) } and { p ( t | d ) } , sets of similar expressions S , hyperparameters { α t } and { β w } , n dw is the frequency of w in the document d Output: distributions { p ( w | t ) } and { p ( t | d ) } 1 while not meet the stop criterion do 2 for d ∈ D, w ∈ W, t ∈ T do 3 p ( t | d, w ) = p ( w | t ) p ( t | d ) P u ∈ T p ( w | u ) p ( u | d ) 4 for d ∈ D, w ∈ W, t ∈ T do 5 n ′ dw = n dw + P s ∈ S w n ds 6 p ( w | t ) = P d ∈ D n ′ dw p ( t | d,w )+ β w P d ∈ D P w ∈ d n ′ dw p ( t | d,w )+ P w ∈ W β w 7 p ( t | d ) = P w ∈ d n ′ dw p ( t | d,w )+ α t P w ∈ W P t ∈ T n ′ dw p ( t | d,w )+ P t ∈ T α t
+ Newman et al. [7] asked users to score topics on a 3-point scale, where 3=“useful” (coherent) and 1=“useless” (less coherent). They instructed the users that one indica- tor of usefulness is the ease by which one could think of a short label to describe a topic. Then several automatic measures, including WordNet-based measures and cor- pus co-occurrence measures, were compared.  It was found that the best automatic mea- sure having the largest correlation with human evaluation is word co-occurrence cal- culated as point-wise mutual information (PMI) on Wikipedia articles. Later Lau et al. [19] showed that normalized poinwise mutual information (NPMI) [20] calculated on Wikipedia articles correlates even more strongly with human scores.We calculate automatic topic coherence using two measure variants.  The coherence of a topic is the median PMI (NPMI) of word pairs representing the topic, usually it is calculated for n most probable elements (in our study ten elements) in the topic. The coherence of the model is the median of the topic coherence. To make this measure more objective, it should be calculated on an external corpus [19]. In our case, we use Wikipedia dumps. P M I ( w i , w j ) = log p ( w i , w j ) p ( w i ) p ( w j ) N P M I ( w i , w j ) = P M I ( w i , w j ) − log ( p ( w i , w j )) (1)
+Human-constructed topics usually have unique main words.  The measure of kernel uniqueness shows to what extent topics are different from each other and is calculated as the number of unique elements among most probable elements of topics (kernels) in relation to the whole number of elements in kernels.U ( Φ ) = | ∪ t kernel ( T i ) | P t ∈ T | kernel ( T i ) | (2)
+Combining Thesaurus Knowledge and Probabilistic Topic Models 5
+ If uniqueness of the topic kernels is closer to zero then many topics are similar to each other, contain the same words in their kernels. In this paper the kernel of a topic means the ten most probable words in the topic. We also calculated perplexity as the measure of language models. We use it for additional checking the model quality.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_8npz24skKulRUbyJa2BZc3wJ)
+ Call ID: call_8npz24skKulRUbyJa2BZc3wJ
+  Args:
+    pattern: enhanc
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+5 Use of Automatic Measures to Assess Combined Models
+For evaluating topics with automatic quality measures, we used several English text col- lections and one Russian collection (Table 1). We experiment with three thesauri: Word- Net 4 (155 thousand entries), information-retrieval thesaurus of the European Union Eu- roVoc (15161 terms) 5 , and Russian thesaurus RuThes (115 thousand entries) 6 [18]. Text collection Number of texts Number of words English part of 9672 ≈ 56 mln Europarl corpus English part of 23545 ≈ 53 mln JRC-Acquiz corpus ACL Anthology 10921 ≈ 48 mln Reference corpus NIPS Conference 17400 ≈ 5 mln Papers (2000–2012) Russian banking texts 10422 ≈ 32 mln
+Table 1. Text collections for experiments
+ At the preprocessing step, documents were processed by morphological analyzers. Also, we extracted noun groups as described in [17]. As baselines, we use the unigram LDA topic model and LDA topic model with added 1000 ngrams with maximal NC- value [21] extracted from the collection under analysis. As it was found before [15,17], the addition of ngrams without accounting relations between their components considerably worsens the perplexity because of the vocabu- lary growth (for perplexity the less is the better) and practically does not change other automatic quality measures (Table 2).We add the Wordnet data in the following steps.  At the first step, we include Word- Net synonyms (including multiword expressions) into the proposed similarity sets (LDA- Sim+WNsyn). At this step, frequencies of synonyms found in the same document are summed up in process LDA topic learning as described in Algorithm 1. We can see that the kernel uniqueness becomes very low, topics are very close to each other in content (Table 2: LDA-Sim+WNsyn).  At the second step, we add word direct relatives (hyponyms, hypernyms, etc.) to similarity sets. Now the frequencies of semantically related words are added up enhancing the contribution into all topics of the current document.4 https://wordnet.princeton.edu/
+5 http://eurovoc.europa.eu/drupal/
+6 http://www.labinform.ru/pub/ruthes/index_eng.htm
+ 6 Loukachevitch et al.Collection Method TC-PMI TC-NPMI Kernel Uniq Perplex. Europarl LDA unigram 1.20 0.24 0.33 1466 LDA+1000ngram 1.19 0.23 0.35 2497 LDA-Sim+WNsyn 1.05 0.26 0. 16 1715 LDA-Sim+WNsynrel 1.20 0.25 0.18 4984 LDA-Sim+WNsr/hyp 1.47 0.24 0.33 1502 LDA-Sim+WNsr/hyp+Ngrams 2.08 0.23 0.42 1929 LDA-Sim+WNsr/hyp+Ngrams/l 2.46 0.25 0. 43 1880 JRC LDA unigram 1.42 0.24 0.53 807 LDA+1000ngrams 1.46 0.22 0.56 1140 LDA-Sim+WNsyn 1.32 0.25 0.44 854 LDA-Sim+WNsynrel 1.26 0.27 0. 28 1367 LDA-Sim+WNsynrel/hyp 1.57 0.24 0.54 823 LDA-Sim+WNsr/hyp+Ngrams 1.54 0.19 0.64 1093 LDA-Sim+WNsr/hyp+Ngrams/l 1.58 0.18 0.68 1064 ACL LDA unigram 1.63 0.24 0. 51 1779 LDA+1000ngrams 1.55 0.23 0.51 2277 LDA-Sim+WNsyn 1.42 0.26 0.47 1853 LDA-Sim+WNsynrel 1.26 0.27 0.35 2554 LDA-Sim+WNsynrel/hyp 1.56 0.24 0. 51 1785 LDA-Sim+WNsr/hyp+Ngrams 2.72 0.28 0.69 2164 LDA-Sim+WNsr/hyp+Ngrams/l 3.04 0.28 0.76 2160 NIPS LDA unigram 1.60 0.24 0.41 1284 LDA+1000ngrams 1.54 0.24 0. 41 1969 LDA-Sim+WNsyn 1.34 0.26 0.39 1346 LDA-Sim+WNsynrel 1.20 0.27 0.29 2594 LDA-Sim+WNsynrel/hyp 1.78 0.25 0.43 1331 LDA-Sim+WNsr/hyp+Ngrams 3.18 0.31 0. 62 1740 LDA-Sim+WNsr/hyp+Ngrams/l 3.27 0.30 0.67 1741
+Table 2. Integration of WordNet into topic models
+ The Table 2 shows that these two steps lead to great degradation of the topic model in most measures in comparison to the initial unigram model: uniqueness of kernels abruptly decreases, perplexity at the second step grows by several times (Table 2: LDA- Sim+WNsynrel). It is evident that at this step the model has a poor quality. When we look at the topics, the cause of the problem seems to be clear.  We can see the over- generalization of the obtained topics. The topics are built around very general words such as "person", "organization", "year", etc. These words were initially frequent in the collection and then received additional frequencies from their frequent synonyms and related words. Then we suppose that these general words were used in texts to discuss specific events and objects, therefore, we change the constructions of the similarity sets in the following way: we do not add word hyponyms to its similarity set. Thus, hy- ponyms, which are usually more specific and concrete, should obtain additional fre- quencies from upper synsets and increase their contributions into the document topics.Combining Thesaurus Knowledge and Probabilistic Topic Models
+7
+ Collection Method TC-PMI TC-NPMI Kernel Uniq Perplex. Europarl LDA unigram 1.20 0.24 0.33 1466 LDA+1000ngram 1.19 0.23 0.35 2497 LDA-Sim+EVsyn 1.57 0.24 0.43 1655 LDA-Sim+EVsynrel 1.39 0.24 0. 35 1473 LDA-Sim+EVsr/hyp+Ngrams 2.51 0.26 0.50 1957 LDA-Sim+EVsr/hyp+Ngrams/l 2.5 0.25 0.45 1882 JRC LDA unigram 1.42 0.24 0.53 807 LDA+1000ngrams 1.46 0.22 0. 56 1140 LDA-Sim+EVsyn 1.65 0.25 0.57 857 LDA-Sim+EVsynrel 1.71 0.24 0.57 844 LDA-Sim+EVsr/hyp+Ngrams 1.91 0.21 0.68 1094 LDA-Sim+EVsr/hyp+Ngrams/l 1.5 0.18 0. 67 1061
+Table 3. Integration of EuroVoc into topic models
+But the frequencies and contribution of hypernyms into the topic of the document are not changed. And we see the great improvement of the model quality: the kernel unique- ness considerably improves, perplexity decreases to levels comparable with the unigram model, topic coherence characteristics also improve for most collections (Table 2:LDA- Sim+WNsynrel/hyp). We further use the WordNet-based similarity sets with n-grams having the same components as described in [17]. All measures significantly improve for all collections (Table 2:LDA-Sim+WNsr/hyp+Ngrams). At the last step, we try to apply the same approach to ngrams that was previously utilized to hyponym-hypernym relations: fre- quencies of shorter ngrams and words are summed to frequencies of longer ngrams but not vice versa.  In this case we try to increase the contribution of more specific longer ngrams into topics. It can be seen (Table 2) that the kernel uniqueness grows signifi- cantly, at this step it is 1.3-1.6 times greater than for the baseline models achieving 0.76 on the ACL collection (Table 2:LDA-Sim+WNsr/hyp+Ngrams/l). At the second series of the experiments, we applied EuroVoc information retrieval thesaurus to two European Union collections: Europarl and JRC. In content, the Eu- roVoc thesaurus is much smaller than WordNet, it contains terms from economic and political domains and does not include general abstract words. The results are shown in Table 3.  It can be seen that inclusion of EuroVoc synsets improves the topic coherence and increases kernel uniqueness (in contrast to results with WordNet). Adding ngrams further improves the topic coherence and kernel uniqueness.At last we experimented with the Russian banking collection and utilized RuThes thesaurus. In this case we obtained improvement already on RuThes synsets and again adding ngrams further improved topic coherence and kernel uniqueness (Table 4). It is worth noting that adding ngrams sometimes worsens the TC-NPMI measure, especially on the JRC collection. This is due to the fact that in these evaluation frame- works, the topics’ top elements contain a lot of multiword expressions, which rarely occur in Wikipedia, used for the coherence calculation, therefore the utilized automatic coherence measures can have insufficient evidence for correct estimates.8 Loukachevitch et al. Collection Processing TC-PMI TC-NPMI Kernel Uniq Perplex. Banking LDA unigram 1.81 0.29 0.54 1654 Collection LDA+1000ngrams 2.01 0.30 0.60 2497 LDA-Sim+RTsyn 2.03 0.29 0.63 2189 LDA-Sim+RTsr/hyp+Ngrams 2.72 0. 33 0.70 2396 LDA-SIM+RTsr/hyp+Ngrams/l 3.02 0.31 0.68 2311
+Table 4. The results obtained for Russian Banking collection
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_bdX289kzRhtOvuuxQIL4DQyd)
+ Call ID: call_bdX289kzRhtOvuuxQIL4DQyd
+  Args:
+    pattern: reduce|reducing|reduction|variation of text|language variation|variation of language
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+
+Yes; summing frequencies of semantically related words (synonyms and relatives) enhances the contribution of already frequent general words, causing over-generalization and a sharp decrease in kernel uniqueness (topics become very similar).

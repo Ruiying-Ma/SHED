@@ -1,0 +1,53 @@
+================================ Human Message =================================
+
+QUERY:
+What are the state-of-the-art systems?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_JcmGOEdmBDPuMxPIUQjh3EOd)
+ Call ID: call_JcmGOEdmBDPuMxPIUQjh3EOd
+  Args:
+    pattern: state-of-the-art|SOTA|systems
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1 Introduction
+Knowledge representation and reasoning (KRR) is the process of representing the domain knowledge in formal languages (e.g., SPARQL, Prolog) such that it can be used by expert systems to execute querying and reasoning services. KRR have been applied in many fields including financial regulations, medical diagnosis, laws, and so on. One major obstacle in KRR is the creation of large-scale knowledge bases with high quality.  For one thing, this requires the knowledge engineers (KEs) not only to have the background knowledge in a certain domain but have enough skills in knowledge representation as well. Unfortunately, qualified KEs are also in short supply. Therefore, it would be useful to build a tool that allows the domain experts without any background in logic to construct and query the knowledge base simply from text.Controlled natural languages (CNLs) [11] were developed as a technology that achieves this goal.  CNLs are designed based on natural languages (NLs) but with restricted syntax and interpretation rules that determine the unique meaning of the sentence. Representative CNLs include Attempto Controlled English [4] and PENG [18]. Each CNL is developed with a language parser which translates the English sentences into an intermediate structure, discourse representation structure (DRS) [10].  Based on the DRS structure, the language parsers further translate the DRS into the corresponding logical representa- tions, e.g., Answer Set Programming ( ASP ) [8] programs. One main issue with the aforementioned CNLs is that the systems do not provide enough background knowledge to preserve semantic equivalences of sentences that represent the same meaning but are expressed via different linguistic structures.  For in- stance, the sentences Mary buys a car and Mary makes a purchase of a car are translated into different logical representations by the current CNL parsers. As a result, if the user ask a question who is a buyer of a car , these systems will fail to find the answer.390
+KALM for Knowledge Authoring and Question Answering
+In this thesis proposal, I will present KALM [7, 6], a system for knowledge authoring and question answering.  KALM is superior to the current CNL systems in that KALM has a complex frame-semantic parser which can standardize the semantics of the sentences that express the same meaning via different linguistic structures. The frame-semantic parser is built based on FrameNet [9] and BabelNet [15] where FrameNet is used to capture the meaning of the sentence and BabelNet [15] is used to disambiguate the meaning of the extracted entities from the sentence.  Experiment results show that KALM achieves superior accuracy in knowledge authoring and question answering as compared to the state-of-the-art systems.The rest parts are organized as follows: Section 2 presents the KALM architecture, Section 3 presents KALM-QA, the question answering part of KALM, Section 4 shows the evaluation results, Section 5 discusses the related works, Section 6 shows the future work beyond the thesis, and Section 7 concludes the paper.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_thzUx4KUDCxhqYEHWlaH5Oju)
+ Call ID: call_thzUx4KUDCxhqYEHWlaH5Oju
+  Args:
+    pattern: state-of-the-art systems|compared to the state-of-the-art|baseline|related works
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1 Introduction
+Knowledge representation and reasoning (KRR) is the process of representing the domain knowledge in formal languages (e.g., SPARQL, Prolog) such that it can be used by expert systems to execute querying and reasoning services. KRR have been applied in many fields including financial regulations, medical diagnosis, laws, and so on. One major obstacle in KRR is the creation of large-scale knowledge bases with high quality.  For one thing, this requires the knowledge engineers (KEs) not only to have the background knowledge in a certain domain but have enough skills in knowledge representation as well. Unfortunately, qualified KEs are also in short supply. Therefore, it would be useful to build a tool that allows the domain experts without any background in logic to construct and query the knowledge base simply from text.Controlled natural languages (CNLs) [11] were developed as a technology that achieves this goal.  CNLs are designed based on natural languages (NLs) but with restricted syntax and interpretation rules that determine the unique meaning of the sentence. Representative CNLs include Attempto Controlled English [4] and PENG [18]. Each CNL is developed with a language parser which translates the English sentences into an intermediate structure, discourse representation structure (DRS) [10].  Based on the DRS structure, the language parsers further translate the DRS into the corresponding logical representa- tions, e.g., Answer Set Programming ( ASP ) [8] programs. One main issue with the aforementioned CNLs is that the systems do not provide enough background knowledge to preserve semantic equivalences of sentences that represent the same meaning but are expressed via different linguistic structures.  For in- stance, the sentences Mary buys a car and Mary makes a purchase of a car are translated into different logical representations by the current CNL parsers. As a result, if the user ask a question who is a buyer of a car , these systems will fail to find the answer.390
+KALM for Knowledge Authoring and Question Answering
+In this thesis proposal, I will present KALM [7, 6], a system for knowledge authoring and question answering.  KALM is superior to the current CNL systems in that KALM has a complex frame-semantic parser which can standardize the semantics of the sentences that express the same meaning via different linguistic structures. The frame-semantic parser is built based on FrameNet [9] and BabelNet [15] where FrameNet is used to capture the meaning of the sentence and BabelNet [15] is used to disambiguate the meaning of the extracted entities from the sentence.  Experiment results show that KALM achieves superior accuracy in knowledge authoring and question answering as compared to the state-of-the-art systems.The rest parts are organized as follows: Section 2 presents the KALM architecture, Section 3 presents KALM-QA, the question answering part of KALM, Section 4 shows the evaluation results, Section 5 discusses the related works, Section 6 shows the future work beyond the thesis, and Section 7 concludes the paper.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_ZbPtw6b2L7QnLZio8kYoW8v2)
+ Call ID: call_ZbPtw6b2L7QnLZio8kYoW8v2
+  Args:
+    pattern: Attempto Controlled English|PENG|ACE|systemT|Aqualog|state of the art|current CNL systems
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1 Introduction
+Knowledge representation and reasoning (KRR) is the process of representing the domain knowledge in formal languages (e.g., SPARQL, Prolog) such that it can be used by expert systems to execute querying and reasoning services. KRR have been applied in many fields including financial regulations, medical diagnosis, laws, and so on. One major obstacle in KRR is the creation of large-scale knowledge bases with high quality.  For one thing, this requires the knowledge engineers (KEs) not only to have the background knowledge in a certain domain but have enough skills in knowledge representation as well. Unfortunately, qualified KEs are also in short supply. Therefore, it would be useful to build a tool that allows the domain experts without any background in logic to construct and query the knowledge base simply from text.Controlled natural languages (CNLs) [11] were developed as a technology that achieves this goal.  CNLs are designed based on natural languages (NLs) but with restricted syntax and interpretation rules that determine the unique meaning of the sentence. Representative CNLs include Attempto Controlled English [4] and PENG [18]. Each CNL is developed with a language parser which translates the English sentences into an intermediate structure, discourse representation structure (DRS) [10].  Based on the DRS structure, the language parsers further translate the DRS into the corresponding logical representa- tions, e.g., Answer Set Programming ( ASP ) [8] programs. One main issue with the aforementioned CNLs is that the systems do not provide enough background knowledge to preserve semantic equivalences of sentences that represent the same meaning but are expressed via different linguistic structures.  For in- stance, the sentences Mary buys a car and Mary makes a purchase of a car are translated into different logical representations by the current CNL parsers. As a result, if the user ask a question who is a buyer of a car , these systems will fail to find the answer.390
+KALM for Knowledge Authoring and Question Answering
+In this thesis proposal, I will present KALM [7, 6], a system for knowledge authoring and question answering.  KALM is superior to the current CNL systems in that KALM has a complex frame-semantic parser which can standardize the semantics of the sentences that express the same meaning via different linguistic structures. The frame-semantic parser is built based on FrameNet [9] and BabelNet [15] where FrameNet is used to capture the meaning of the sentence and BabelNet [15] is used to disambiguate the meaning of the extracted entities from the sentence.  Experiment results show that KALM achieves superior accuracy in knowledge authoring and question answering as compared to the state-of-the-art systems.The rest parts are organized as follows: Section 2 presents the KALM architecture, Section 3 presents KALM-QA, the question answering part of KALM, Section 4 shows the evaluation results, Section 5 discusses the related works, Section 6 shows the future work beyond the thesis, and Section 7 concludes the paper.
+
+================================== Ai Message ==================================
+
+Attempto Controlled English and PENG.

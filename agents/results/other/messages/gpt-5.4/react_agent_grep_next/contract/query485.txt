@@ -1,0 +1,100 @@
+================================ Human Message =================================
+
+HYPOTHESIS:
+Inclusion of verbally conveyed information: Confidential Information may include verbally conveyed information.
+
+TABLE OF CONTENTS (TOC):
+1 | CONFIDENTIALITY AGREEMENT
+1.1 | BACKGROUND:
+1.2 | IT IS AGREED:
+1.2.1 | 1. In this Agreement, unless the context requires otherwise,
+1.2.1.1 | a.  the preparation and/or submission of any Proposals and related documents in res...
+1.2.1.2 | b. the Project Commissioning Process;
+1.2.1.3 | c. any activities related to the assessment of any Proposals for the Project; and
+1.2.1.4 | d. any related exchanges of Information, clarifications, clearances, discussions, due diligence,
+1.2.2 | 2.  The Receiving Party shall with regard to any Information disclosed pursuant to ...
+1.2.2.1 | a. hold the Information in confidence and,
+1.2.2.2 | b.  make copies of the Information (or any further information derived from the Inf...
+1.2.2.3 | c.  take all necessary and proper security precautions (and at least as great as th...
+1.2.2.4 | d. at the request and direction of the Disclosing Party, and without delay,
+1.2.3 | 3. The obligations set out in clause 2 shall not apply to Information that:
+1.2.3.1 | a. the Receiving Party can prove (using written or electronic records),
+1.2.3.2 | b.  is or becomes a part of the public domain through no wrongful act of the Receiv...
+1.2.3.3 | c.  the Receiving Party receives from a third party without similar obligations of ...
+1.2.3.4 | d. subject to clause 4,
+1.2.4 | 4.  If a Receiving Party believes it is required by law to disclose any Information...
+1.2.4.1 | a.  provide the Disclosing Party with prompt written notice of such requirement or ...
+1.2.4.2 | b.  where it is not permitted in law to notify the requirement for disclosure in ad...
+1.2.4.3 | c. co-operate with the Disclosing Party with respect to such matters,
+1.2.5 | 5.  The ETI shall be entitled to disclose or make available any Information it rece...
+1.2.5.1 | a. such of the ETI Affiliates,
+1.2.5.2 | b. the Department of Business, Innovation and Skills (or other relevant government department),
+1.2.6 | 6.  The ETI shall be entitled to disclose or make available any Information it rece...
+1.2.7 | 7.  Each Respondent shall be entitled to disclose or make available any Information...
+1.2.8 | 8.  Each Respondent shall be entitled to disclose or make available any Information...
+1.2.9 | 9.  Each Party as Receiving Party expressly agrees and accepts that except in the c...
+1.2.10 | 10.  The Parties agree that money damages would not be a sufficient remedy for any b...
+1.2.11 | 11.  No rights or obligations other than those expressly set out in this Agreement a...
+1.2.11.1 | a. constitutes an offer by or on behalf of the Disclosing Party; or
+1.2.11.2 | b.  confers upon the Receiving Party a licence or other transfer of rights in respe...
+1.2.11.3 | c.  affects the present or prospective rights of the Disclosing Party under the pat...
+1.2.12 | 12.  This Agreement represents the entire agreement between the Parties in relation ...
+1.2.13 | 13.  The Parties agree that the ETI may disclose that one or more of the Respondents...
+1.2.14 | 14.  This Agreement shall come into force on the Effective Date and shall continue i...
+1.2.15 | 15.  It is not intended that a third party (other than an ETI Affiliate) should have...
+1.2.16 | 16.  The rights of the Disclosing Party under this Agreement are in addition to and ...
+1.2.17 | 17. If any provision of this Agreement is or becomes illegal,
+1.2.17.1 | a. the legality,
+1.2.17.2 | b. the legality,
+1.2.18 | 18.  Nothing in this Agreement is intended to or shall operate to create a partnersh...
+1.2.19 | 19. Except as provided otherwise,
+1.2.20 | 20. This Agreement may be executed in any number of counterparts,
+1.2.21 | 21.  This Agreement shall be construed in accordance with and governed by English la...
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_YoIjMLPvAgUzmYCd6hVn2ilI)
+ Call ID: call_YoIjMLPvAgUzmYCd6hVn2ilI
+  Args:
+    pattern: (?i)verbal|verbally|oral|orally|written|electronic|Information means|Information" means|definition of Information
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.2.1.3 | c. any activities related to the assessment of any Proposals for the Project; and© 2016 Energy Technologies Institute LLP. The information in this document is the property of Energy Technologies Institute LLP and may not be copied or communicated to a third party or used for any purpose other than that for which it is supplied without the express written consent of Energy Technologies Institute LLP. www.eti.co.uk Delivering the UK’s Future Energy Technologies 2
+Non-Disclosure Agreement
+Energy Technologies Institute
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_L0nQ4yZwApvL4WyDXvUvFcgr)
+ Call ID: call_L0nQ4yZwApvL4WyDXvUvFcgr
+  Args:
+    section_id: 1.2.1
+
+================================= Tool Message =================================
+Name: read_section
+
+1. In this Agreement, unless the context requires otherwise,the following words shall have the following meanings:
+“Disclosing Party” means any Party that discloses Information pursuant to this Agreement;
+“Effective Date” means the date of execution of this Agreement;
+ “ETI Affiliates” means the Secretary of State for Business, Innovation and Skills (and any successor governmental department or agency from time to time) and any other entity which is entitled to appoint the directors or otherwise having the ability to direct management policies of the ETI (together with any affiliates of those entities), together with their respective officers, employees, agents and consultants;
+ “Information” means any and all confidential information or data exchanged, submitted or otherwise disclosed in respect of or further to the Purpose or prepared for or in relation to the Purpose, including but not limited to written proposal documentation, due diligence materials, contractual documentation, reports, and the fact that the Parties have entered into this Agreement and are discussing and considering a business relationship;
+ “Project” means the proposed project under the ETI’s Carbon Capture and Storage Programme entitled the “Salt Cavern Appraisal for Hydrogen and Gas Storage Project”;
+“Project Commissioning Process” means the ETI’s commissioning process for the Project as defined and as set out in the RFP or as later may be notified or published by the ETI;
+“Project Contract” means a Project Contract as such term is defined in the RFP;
+ “Proposal” means a Proposal as such term is defined in the RFP;
+“Purpose” means:
+a.the preparation and/or submission of any Proposals and related documents in response to the RFP;
+b. the Project Commissioning Process;
+c. any activities related to the assessment of any Proposals for the Project; and© 2016 Energy Technologies Institute LLP. The information in this document is the property of Energy Technologies Institute LLP and may not be copied or communicated to a third party or used for any purpose other than that for which it is supplied without the express written consent of Energy Technologies Institute LLP. www.eti.co.uk Delivering the UK’s Future Energy Technologies 2
+Non-Disclosure Agreement
+Energy Technologies Institute
+d. any related exchanges of Information, clarifications, clearances, discussions, due diligence,meetings, and/or negotiations in respect of the RFP, a Project Contract, the Project Commissioning Process and/or the Project;
+“Receiving Party” means any Party that receives Information pursuant to this Agreement;
+“RFP” means the request for proposals relating to the Project, issued by the ETI on 20 th April 2016; and
+ “Third Party IP” means any intellectual property rights that are not licensed or owned by a Respondent and identified by a Respondent as relevant to its Proposal.
+
+================================== Ai Message ==================================
+
+NotMentioned

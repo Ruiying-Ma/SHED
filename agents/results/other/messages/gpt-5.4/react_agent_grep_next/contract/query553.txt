@@ -1,0 +1,34 @@
+================================ Human Message =================================
+
+HYPOTHESIS:
+Inclusion of verbally conveyed information: Confidential Information may include verbally conveyed information.
+
+TABLE OF CONTENTS (TOC):
+1 | NON-DISCLOSURE AGREEMENT
+1.1 | 1.  “Confidential Information” means any and all confidential and/or proprietary in...
+1.2 | 2.  Confidential Information is disclosed to Receiving Party solely for the purpose...
+1.3 | 3.  Receiving Party shall protect the Confidential Information with at least the sa...
+1.4 | 4.  Receiving Party will immediately notify the Casino upon the discovery of any lo...
+1.5 | 5.  Receiving Party shall have no obligations under this Agreement with respect to ...
+1.6 | 6. Upon the request of Casino ,
+1.7 | 7.  Receiving Party shall not disclose any Confidential Information to any other pe...
+1.8 | 8. Waiver of any provision of this Agreement must be made in writing.
+1.9 | 9.  Neither party shall assign this Agreement to any third party without the prior ...
+1.10 | 10. This Agreement shall have a term of three (3) years.
+1.11 | 11.  The parties agree that a breach of this Agreement by the receiving party may ca...
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_XQS4PTwcYjMyBGtb7HoRMnEY)
+ Call ID: call_XQS4PTwcYjMyBGtb7HoRMnEY
+  Args:
+    section_id: 1.1
+
+================================= Tool Message =================================
+Name: read_section
+
+1.“Confidential Information” means any and all confidential and/or proprietary information disclosed by the Casino to the Receiving Party, which may include without limitation:  financial information, business information, marketing data, trade secrets, and other data, materials, products, plans, specifications, reports, manuals, computer software or programs, contractual relationships and other similar information delivered in any form or media.
+
+================================== Ai Message ==================================
+
+Entailment

@@ -1,0 +1,47 @@
+================================ Human Message =================================
+
+QUERY:
+How do the editors' annotations differ from those in existing datasets?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_n1r56WVaxuDHJisK6lErwDk6)
+ Call ID: call_n1r56WVaxuDHJisK6lErwDk6
+  Args:
+    pattern: editors?.*annotations?|existing datasets|dataset
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Keyphrase generation is the task of predicting a set of lexical units that conveys the main content of a source text. Existing datasets for keyphrase generation are only readily available for the scholarly domain and in- clude non-expert annotations. In this paper we present KPTimes , a large-scale dataset of news texts paired with editor-curated keyphrases. Exploring the dataset, we show how editors tag documents, and how their annotations differ from those found in ex- isting datasets.  We also train and evaluate state-of-the-art neural keyphrase genera- tion models on KPTimes to gain insights on how well they perform on the news domain. The dataset is available online at https://github.com/ygorg/KPTimes .
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_k89askAgKftVF9SLB6VMwMRO)
+ Call ID: call_k89askAgKftVF9SLB6VMwMRO
+  Args:
+    pattern: how editors tag documents|their annotations differ|non-expert annotations|editor-curated keyphrases
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Keyphrase generation is the task of predicting a set of lexical units that conveys the main content of a source text. Existing datasets for keyphrase generation are only readily available for the scholarly domain and in- clude non-expert annotations. In this paper we present KPTimes , a large-scale dataset of news texts paired with editor-curated keyphrases. Exploring the dataset, we show how editors tag documents, and how their annotations differ from those found in ex- isting datasets.  We also train and evaluate state-of-the-art neural keyphrase genera- tion models on KPTimes to gain insights on how well they perform on the news domain. The dataset is available online at https://github.com/ygorg/KPTimes .
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_Ea3YFAkwyUQ5kLCuBFfYENTb)
+ Call ID: call_Ea3YFAkwyUQ5kLCuBFfYENTb
+  Args:
+    pattern: non-expert
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Keyphrase generation is the task of predicting a set of lexical units that conveys the main content of a source text. Existing datasets for keyphrase generation are only readily available for the scholarly domain and in- clude non-expert annotations. In this paper we present KPTimes , a large-scale dataset of news texts paired with editor-curated keyphrases. Exploring the dataset, we show how editors tag documents, and how their annotations differ from those found in ex- isting datasets.  We also train and evaluate state-of-the-art neural keyphrase genera- tion models on KPTimes to gain insights on how well they perform on the news domain. The dataset is available online at https://github.com/ygorg/KPTimes .
+
+================================== Ai Message ==================================
+
+They are editor-curated keyphrases, whereas existing datasets include non-expert annotations.

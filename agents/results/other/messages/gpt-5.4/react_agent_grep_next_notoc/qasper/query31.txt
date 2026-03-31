@@ -1,0 +1,89 @@
+================================ Human Message =================================
+
+QUERY:
+Does the model consider both derivational and inflectional morphology?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_zslGVGVDWewiWhuG9hIOiYAs)
+ Call ID: call_zslGVGVDWewiWhuG9hIOiYAs
+  Args:
+    pattern: derivational|inflectional|morpholog
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Character-level models have become a popular approach specially for their acces- sibility and ability to handle unseen data. However, little is known on their ability to reveal the underlying morphological struc- ture of a word, which is a crucial skill for high-level semantic analysis tasks, such as semantic role labeling (SRL).  In this work, we train various types of SRL models that use word, character and morphology level information and analyze how performance of characters compare to words and mor- phology for several languages. We con- duct an in-depth error analysis for each morphological typology and analyze the strengths and limitations of character-level models that relate to out-of-domain data, training data size, long range dependen- cies and model complexity.  Our exhaus- tive analyses shed light on important char- acteristics of character-level models and their semantic capability.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_HoXpql69A2yKA1cWOXzcJn7c)
+ Call ID: call_HoXpql69A2yKA1cWOXzcJn7c
+  Args:
+    pattern: derivational|inflectional
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+4.1 Experimental Setup
+To fit the requirements of the SRL task and of our model, we performed the following:
+Spanish, Catalan: Multiword expressions (MWE) are represented as a single token, (e.g., Confederaci´on Francesa del Trabajo) , that causes notably long character sequences which are hard to handle by LSTMs. For the sake of memory efficiency and performance, we used an abbreviation (e.g. , CFdT) for each MWE during training and testing.Finnish: Original dataset defines its own format of semantic annotation, such as 17:PBArgM mod | 19:PBArgM mod meaning the node is an argument of 17 th and 19 th tokens with ArgM-mod (temporary modifier) semantic role. They have been converted into CoNLL-09 tabular format, where each predicate’s arguments are given in a specific column. Turkish: Words are splitted from derivational boundaries in the original dataset, where each in- flectional group is represented as a separate token. We first merge boundaries of the same word, i.e, tokens of the word , then we use our own ρ func- tion to split words into subwords.Training and Evaluation: We lowercase all to- kens beforehand and place special start and end of
+the token characters.  For all experiments, we ini- tialized weight parameters orthogonally and used one layer bi-LSTMs both for subword composi- tion and argument labeling with hidden size of 200. Subword embedding size is chosen as 200. We used gradient clipping and early stopping to prevent overfitting. Stochastic gradient descent is used as the optimizer.  The initial learning rate is set to 1 and reduced by half if scores on develop- ment set do not improve after 3 epochs. We use the provided splits and evaluate the results with the official evaluation script provided by CoNLL- 09 shared task. In this work (and in most of the recent SRL works), only the scores for argument labeling are reported, which may cause confusions for the readers while comparing with older SRL studies.  Most of the early SRL work report com- bined scores (argument labeling with predicate sense disambiguation (PSD)). However, PSD is considered a simpler task with higher F1 scores 3 . Therefore, we believe omitting PSD helps us gain more useful insights on character level models.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_AQyLHrKV96Em1jUa4e7G3NLW)
+ Call ID: call_AQyLHrKV96Em1jUa4e7G3NLW
+  Args:
+    pattern: inflectional group|derivational boundaries|split words into subwords|morphology level
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Character-level models have become a popular approach specially for their acces- sibility and ability to handle unseen data. However, little is known on their ability to reveal the underlying morphological struc- ture of a word, which is a crucial skill for high-level semantic analysis tasks, such as semantic role labeling (SRL).  In this work, we train various types of SRL models that use word, character and morphology level information and analyze how performance of characters compare to words and mor- phology for several languages. We con- duct an in-depth error analysis for each morphological typology and analyze the strengths and limitations of character-level models that relate to out-of-domain data, training data size, long range dependen- cies and model complexity.  Our exhaus- tive analyses shed light on important char- acteristics of character-level models and their semantic capability.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_au9pxwAg9Akvnbq7lUPRKjZ2)
+ Call ID: call_au9pxwAg9Akvnbq7lUPRKjZ2
+  Args:
+    pattern: Turkish|split words into subwords|inflectional group
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+References
+Nart Bedin Atalay, Kemal Oflazer, and Bilge Say.2003. The Annotation Process in the Turkish Treebank. In Proceedings of 4th International Workshop on Linguistically Interpreted Corpora, LINC at EACL 2003, Budapest, Hungary, April 13-14, 2003 .
+Yonatan Belinkov, Nadir Durrani, Fahim Dalvi,Hassan Sajjad, and James R. Glass. 2017. What do Neural Machine Translation Models Learn about Morphol- ogy? In Proceedings of the 55th Annual Meeting of the Association for Computational Linguistics, ACL 2017, Vancouver, Canada, July 30 - August 4, Vol- ume 1: Long Papers . pages 861–872.
+Ronan Collobert, Jason Weston, Leon Bottou, Michael Karlen,Koray Kavukcuoglu, and Pavel Kuksa. 2011. Natural Language Processing (almost) from Scratch. Journal of Machine Learning Research 12:2461–2505.
+Timothy Dozat, Peng Qi, and Christopher D Manning. 2017.Stanford’s Graph-based Neural Dependency Parser at the CoNLL 2017 Shared Task. Proceed- ings of the CoNLL 2017 Shared Task: Multilingual Parsing from Raw Text to Universal Dependencies pages 20–30.
+Nicholas FitzGerald, Oscar T¨ackstr¨om,Kuzman Ganchev, and Dipanjan Das. 2015. Semantic Role Labeling with Neural Network Factors. In EMNLP . pages 960–970.
+Felix A. Gers, J¨urgen A. Schmidhuber,and Fred A. Cummins. 2000. Learning to Forget: Continual Pre- diction with LSTM. Neural Comput. 12(10):2451– 2471.
+Alex Graves and J¨urgen Schmidhuber. 2005.Frame- wise phoneme classification with bidirectional LSTM and other neural network architectures. Neu- ral Networks 18(5-6):602–610.
+Jan Hajiˇc, Massimiliano Ciaramita,Richard Johans- son, Daisuke Kawahara, Maria Ant`onia Mart´ı, Llu´ıs M`arquez, Adam Meyers, Joakim Nivre, Sebastian Pad´o, Jan ˇStˇep´anek, Pavel Straˇn´ak, Mihai Surdeanu, Nianwen Xue, and Yi Zhang. 2009.  The CoNLL- 2009 Shared Task: Syntactic and Semantic De- pendencies in Multiple Languages. In Proceed- ings of the Thirteenth Conference on Computational Natural Language Learning: Shared Task . Asso- ciation for Computational Linguistics, Stroudsburg, PA, USA, CoNLL ’09, pages 1–18.
+Jan Hajiˇc, Massimiliano Ciaramita,Richard Johans- son, Adam Meyers, Jan ˇStˇep´anek, Joakim Nivre, Pavel Straˇn´ak, Mihai Surdeanu, Nianwen Xue, and Yi Zhang. 2012a. 2009 CoNLL Shared Task Part 1 LDC2012T04. Web Download.
+Jan Hajiˇc, Maria A. Mart´ı,Lluis Marquez, Joakim Nivre, Jan ˇStˇep´anek, Sebastian Pad´o, and Pavel Straˇn´ak. 2012b. 2009 CoNLL Shared Task Part 1 LDC2012T03. Web Download.
+Katri Haverinen, Jenna Kanerva, Samuel Kohonen, Anna Missila,Stina Ojala, Timo Viljanen, Veronika Laippala, and Filip Ginter. 2015. The Finnish Proposition Bank. Language Resources and Eval- uation 49(4):907–926.
+Luheng He, Kenton Lee, Mike Lewis,and Luke Zettle- moyer. 2017. Deep semantic role labeling: What works and what’s next. In Proceedings of the An- nual Meeting of the Association for Computational Linguistics .
+Yoon Kim, Yacine Jernite, David Sontag,and Alexan- der M Rush. 2016. Character-Aware Neural Lan- guage Models. In AAAI . pages 2741–2749.
+Jason Lee, Kyunghyun Cho, and Thomas Hofmann. 2017.Fully Character-Level Neural Machine Trans- lation without Explicit Segmentation. TACL 5:365– 378.
+Wang Ling, Tiago Luis, Luis Marujo,Ramon F As- tudillo, Silvio Amir, Chris Dyer, Alan W Black, and Isabel Trancoso. 2015. Finding function in form: Compositional character models for open vocabu- lary word representation. In EMNLP . pages 1520– 1530.
+Diego Marcheggiani, Anton Frolov, and Ivan Titov. 2017.A Simple and Accurate Syntax-Agnostic Neural Model for Dependency-based Semantic Role Labeling. In Proceedings of the 21st Conference on Computational Natural Language Learning (CoNLL 2017) . Association for Computational Linguistics, Vancouver, Canada, pages 411–420.
+Diego Marcheggiani and Ivan Titov. 2017.Encod- ing Sentences with Graph Convolutional Networks for Semantic Role Labeling. In Proceedings of the 2017 Conference on Empirical Methods in Natu- ral Language Processing . Association for Compu- tational Linguistics, Copenhagen, Denmark, pages 1507–1516.
+Kemal Oflazer, Bilge Say,Dilek Zeynep Hakkani-T¨ur, and G¨okhan T¨ur. 2003. Building a Turkish treebank. In Treebanks , Springer, pages 261–277.
+Barbara Plank, Anders Søgaard, and Yoav Goldberg. 2016.Multilingual Part-of-Speech Tagging with Bidirectional Long Short-Term Memory Models and Auxiliary Loss. In Proceedings of the 54th Annual Meeting of the Association for Computational Lin- guistics, ACL 2016, August 7-12, 2016, Berlin, Ger- many, Volume 2: Short Papers .
+G¨ozde G¨ul S¸ahin and Es¸ref Adalı.2017. Annotation of semantic roles for the Turkish Proposition Bank. Language Resources and Evaluation pages 1–34.
+Cicero D Santos and Bianca Zadrozny. 2014.Learning character-level representations for part-of-speech tagging. In Proceedings of the 31st International Conference on Machine Learning (ICML-14) . pages 1818–1826.
+Umut Sulubacak and G¨uls¸en Eryi˘git.2018. Imple- menting Universal Dependency, Morphology and Multiword Expression Annotation Standards for Turkish Language Processing. Turkish Journal of Electrical Engineering Computer Sciences pages 1– 23.
+Umut Sulubacak, Tu˘gba Pamay,and G¨uls¸en Eryi˘git. 2016. IMST: A Revisited Turkish Dependency Treebank. In Proceedings of the 1st International Conference on Turkic Computational Linguistics (TurCLing) at CICLing, Konya, Turkey, 2016 .
+Clara Vania and Adam Lopez. 2017.From Characters to Words to in Between: Do We Capture Morphol- ogy? In Proceedings of the 55th Annual Meeting of the Association for Computational Linguistics, ACL 2017, Vancouver, Canada, July 30 - August 4, Vol- ume 1: Long Papers . pages 2016–2027.
+Zhen Wang, Tingsong Jiang, Baobao Chang,and Zhi- fang Sui. 2015. Chinese Semantic Role Labeling with Bidirectional Recurrent Neural Networks. In EMNLP . pages 1626–1631.
+Jie Zhou and Wei Xu. 2015.End-to-end learning of semantic role labeling using recurrent neural net- works. In Proceedings of the Annual Meeting of the Association for Computational Linguistics . pages 1127–1137.
+G¨ozde G¨ul S¸ahin. 2016a.Framing of Verbs for Turk- ish PropBank. In In Proceedings of 1st Interna- tional Conference on Turkic Computational Linguis- tics, TurCLing .
+G¨ozde G¨ul S¸ahin. 2016b.Verb Sense Annotation for Turkish PropBank via Crowdsourcing. In Com- putational Linguistics and Intelligent Text Process- ing - 17th International Conference, CICLing 2016, Konya, Turkey, April 3-9, 2016, Revised Selected Pa- pers, Part I . pages 496–506.
+
+================================== Ai Message ==================================
+
+Yes. For Turkish, the paper states that the original dataset splits words at derivational boundaries and represents each inflectional group as a separate token, which they then merge and split into subwords.

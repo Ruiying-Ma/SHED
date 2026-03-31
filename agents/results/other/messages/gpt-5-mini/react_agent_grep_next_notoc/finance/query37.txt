@@ -1,0 +1,65 @@
+================================ Human Message =================================
+
+QUERY:
+Did AMD report customer concentration in FY22?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_34uMwguKxbJPLKQlKRes4ftb)
+ Call ID: call_34uMwguKxbJPLKQlKRes4ftb
+  Args:
+    pattern: customer concentration
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_y2K2ZSsjaoVlLCkQ47xgnv0Z)
+ Call ID: call_y2K2ZSsjaoVlLCkQ47xgnv0Z
+  Args:
+    pattern: FY22
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_kd9OmHN1oN90mbiWsoWzJYt1)
+ Call ID: call_kd9OmHN1oN90mbiWsoWzJYt1
+  Args:
+    pattern: fiscal 2022
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_vOrxqxyC6wRv3v1YFKFKqY9q)
+ Call ID: call_vOrxqxyC6wRv3v1YFKFKqY9q
+  Args:
+    pattern: 2022
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Customers
+Our  microprocessor  customers  consist  primarily  of  original  equipment  manufacturers  (OEMs),  large  public  cloud  service  providers,  original  design manufacturers  (ODMs),  system  integrators  and  independent  distributors  in  both  domestic  and  international  markets.  ODMs  provide  design  and/or manufacturing services to branded and unbranded private label resellers, OEMs and system builders.  Customers of our microprocessor products also include online and brick and mortar retailers. Our graphics product customers include the foregoing as well as add-in-board manufacturers (AIBs).Customers of our chipset products consist primarily of PC OEMs, often through ODMs or other contract manufacturers, who build the OEM motherboards, as well as desktop and server motherboard manufacturers who incorporate chipsets into their channel motherboards.  Our FPGA and Adaptive SOC products are sold to customers in a very wide range of markets such as Aerospace and Defense, Test and Measurement, Industrial, Automotive, Consumers, Broadcast, Communication  Infrastructure  and  Data  Center.  For  these  products  we  either  sell  directly  to  our  customers  or  through  a  network  of  distributors  and  OEM partners.  We are also developing a network of Value Added Resellers (VARs) and Integrated Solution Vendors (ISVs) for our Alveo products.We  work  closely  with  our  customers  to  define  product  features,  performance  and  timing  of  new  products  so  that  the  products  we  are  developing  meet  our customers’  needs.   We  also  employ  application  engineers  to  assist  our  customers  in  designing,  testing  and  qualifying  system  designs  that  incorporate  our products.  We  believe  that  our  commitment  to  customer  service  and  design  support  improves  our  customers’  time-to-market  and  fosters  relationships  that encourage customers to use the next generation of our products.8
+Table of Contents
+ We also work with our customers to create differentiated products that leverage our CPU, GPU and APU technology. Certain customers pay us non-recurring engineering fees for design and development services and a purchase price for the resulting products.One customer accounted for 16% of our consolidated net revenue for the year ended December 31, 2022. Sales to this customer consisted of sales of products from our Gaming segment. A loss of this customer would have a material adverse effect on our business.
+Original Equipment Manufacturers
+We focus on three types of OEM partners: multi-nationals, selected regional accounts and selected global and local system integrators, who target commercial and  consumer  end  customers  of  all  sizes.   Large  multi-nationals  and  regional  accounts  are  the  core  of  our  OEM  partners’  business;  however,  we  are increasingly focused on the VAR channel which resells OEM systems to the mid-market and the small and medium business (SMB) segments.  Additionally, we have  increased  our  focus  on  global  system  integrators,  which  resell  OEM  systems,  coupled  with  their  software  and  services  solutions  into  Enterprise,  high performance computing (HPC) and Cloud Service Provider Customers. Our OEM customers include numerous foreign and domestic manufacturers of servers and workstations, desktops, notebooks, PC motherboards and game consoles.
+Third-Party Distributors
+Our authorized channel distributors resell to sub-distributors and OEMs, ODMs, and other customers. Typically, distributors handle a wide variety of products, and  may  include  products  from  other  manufacturers  that  compete  with  our  products.  Distributors  typically  maintain  an  inventory  of  our  products.   In  most instances, our agreements with distributors protect their inventory of our products against price reductions and provide certain return rights with respect to any product  that  we  have  removed  from  our  price  book  or  otherwise  subject  to  discontinuation.  In  addition,  some  agreements  with  our  distributors  may  contain standard stock rotation provisions permitting limited product returns.
+Add-in-Board (AIB) Manufacturers and System Integrators
+We offer component-level graphics and chipset products to AIB manufacturers who in turn build and sell board-level products using our technology to system integrators  (SIs),  retail  buyers  and  sub  distributors.  Our  agreements  with AIBs  protect  their  inventory  of  our  products  against  price  reductions.  We  also  sell directly to our SI customers. SIs typically sell from positions of regional or product-based strength in the market.  They usually operate on short design cycles and  can  respond  quickly  with  new  technologies.  SIs  often  use  discrete  graphics  solutions  as  a  means  to  differentiate  their  products  and  add  value  to  their customers.
+
+================================== Ai Message ==================================
+
+Yes — one customer accounted for 16% of our consolidated net revenue for the year ended December 31, 2022.

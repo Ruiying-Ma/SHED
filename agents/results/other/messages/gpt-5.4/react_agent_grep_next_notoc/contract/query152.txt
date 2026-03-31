@@ -1,0 +1,75 @@
+================================ Human Message =================================
+
+HYPOTHESIS:
+Limited use: Receiving Party shall not use any Confidential Information for any purpose other than the purposes stated in Agreement.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_CGSpnYbNxKUYHr2AOOOskqBm)
+ Call ID: call_CGSpnYbNxKUYHr2AOOOskqBm
+  Args:
+    pattern: use|purpose|purposes|Confidential Information
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+A.The Parties intend to enter into discussions relating to the Purpose which will involve the exchange of Confidential Information between them.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_6WEMG4DyPU6C8dh6J4TF5rgB)
+ Call ID: call_6WEMG4DyPU6C8dh6J4TF5rgB
+  Args:
+    pattern: use|purpose|purposes|Confidential Information
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+B.The  Parties  have  agreed  to  comply  with  this  Agreement  in  connection  with  the  disclosure  and  use  of Confidential Information.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_8JaclyTeaaza6ND9UrX6XD1t)
+ Call ID: call_8JaclyTeaaza6ND9UrX6XD1t
+  Args:
+    pattern: use|purpose|purposes|Confidential Information
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1. DEFINITIONS
+Affiliate : shall mean any other corporation or other form of business entity, which, directly or indirectly, controls, is controlled by, or is under common control with, a Party at any time during the term of this Agreement.  For purposes of this definition, the term “control” means direct or indirect beneficial ownership of more than 50% of the voting share or interest of the entity;
+Confidential Information : has the meaning given in clause 2 of this Agreement;
+ Disclosing Party : a Party to this Agreement which discloses its Confidential Information to the other Party;
+Purpose :  [[INSERT  DETAILS  e.g.  to  establish  a  business  relationship  in  respect  to  the  supply  of  [named  service provision or goods] from X, etc]];
+Receiving Party : a Party to this Agreement which receives the Confidential Information from the other Party;
+ Representatives : any employees, officers, directors, professional advisors or consultants in relation to each Party and any of its Affiliates, who are actively and directly engaged in the Purpose;
+Term : has the meaning given in clause 10.1 of this Agreement.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_tOzHlKpsFzZM0FFqvChBe3OV)
+ Call ID: call_tOzHlKpsFzZM0FFqvChBe3OV
+  Args:
+    pattern: use|purpose|purposes|Confidential Information
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+12.5. Severance.If any provision of this Agreement is or becomes invalid or unenforceable, it shall be deemed modified  to  the  minimum  extent  necessary  to  make  it  valid  and  enforceable.  Any  modification  to  a provision under this clause shall not affect the validity and enforceability of the rest of the Agreement.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_nr3q0XpME5a2LzL5UgE3cDet)
+ Call ID: call_nr3q0XpME5a2LzL5UgE3cDet
+  Args:
+    pattern: shall not use|not use|solely for the Purpose|for the Purpose|for any purpose other than
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+b) not use or exploit the Confidential Information in any way except for the Purpose;
+
+================================== Ai Message ==================================
+
+Entailment

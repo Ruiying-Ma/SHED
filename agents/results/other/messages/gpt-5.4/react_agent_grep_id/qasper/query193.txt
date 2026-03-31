@@ -1,0 +1,85 @@
+================================ Human Message =================================
+
+QUERY:
+Is the morphology detection task evaluated?
+
+TABLE OF CONTENTS (TOC):
+1 | D ESIGN AND IMPLEMENTATION OF AN OPEN SOURCE G REEK POS T AGGER AND E NTITY R ECOGNIZER USING SPA C Y
+1.1 | A BSTRACT
+1.2 | 1. Introduction
+1.3 | 2. SpaCy’s deep learning model for POS tagging and Named Entity Recognition
+1.4 | 3. Creating a Greek POS Tagger using spaCy
+1.4.1 | 3.1. Dataset evaluation and selection
+1.4.2 | 3.2. Creation of the Tag Map with reference to Universal Dependencies
+1.4.3 | 3.3. POS Tagger training
+1.4.4 | 3.4. Evaluation and comparison of results
+1.5 | 4. Creating a state of the art Named Entity Recognizer using spaCy
+1.5.1 | 4.1. Dataset evaluation and selection
+1.5.2 | 4.2. Usage of Wikipedia dataset for training
+1.5.3 | 4.3. Evaluation and comparison of results
+1.6 | 5. Conclusions
+1.7 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_all (call_KbYLI30WfVUSFgKbKEn6vkzI)
+ Call ID: call_KbYLI30WfVUSFgKbKEn6vkzI
+  Args:
+    pattern: morpholog|morphology|evaluat
+
+================================= Tool Message =================================
+Name: grep_search_all
+
+1.1
+1.2
+1.3
+1.4.1
+1.4.2
+1.4.3
+1.4.4
+1.5.1
+1.5.3
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_BW92hQHd4xhoMc4XSpIXqcfA)
+ Call ID: call_BW92hQHd4xhoMc4XSpIXqcfA
+  Args:
+    section_id: 1.4.4
+  read_section (call_DHzquc2WwL8O6dIuMgt9J8pq)
+ Call ID: call_DHzquc2WwL8O6dIuMgt9J8pq
+  Args:
+    section_id: 1.4.2
+  read_section (call_vLhAyhLqjuN8tJVtb0HyK59E)
+ Call ID: call_vLhAyhLqjuN8tJVtb0HyK59E
+  Args:
+    section_id: 1.3
+
+================================= Tool Message =================================
+Name: read_section
+
+3.4. Evaluation and comparison of results
+In the first experiment the model was trained using pretrained vectors extracted from two different sources, Common Crawl and Wikipedia and can be found at the official FastText web page [9]. Both sources were trained on the same algorithm called FastText [10], an extension of Word2Vec that treats tokens as an average sum of sub-words and finds similarities of words based on their n-grams.  The configuration of the FastText model for Wikipedia vectors is according to [11], whilst the model for CC vectors is a position-weight CBOW 5 length n-grams with a window size of 5 tokens and 10 negative words. The file with the Common Crawl vectors consists of 2.000.000 tokens with 300 dimension, whereas the file with the Wikipedia vectors consists of 300.000 tokens with 300 dimension. The results can be viewed in the following table, with the first part describing the Common Crawl results and the second one the Wikipedia results.Classes (Common Crawl) Precision Recall F1 Score POS and morph classes 96.26 96.28 96.24 Only POS classes 98.75 98.75 98.75 Classes (Wikipedia) Precision Recall F1 Score POS and morph classes 85.90 84.27 84. 46 Only POS classes 90.09 89.40 89.44 T ABLE 1. Results based on Common Crawl pretrained vectors and based on Wikipedia pretrained vectors
+At the results, POS and morph classes refer to the tag labels explained in 3.2, whilst only POS classes relate to annotated labels that describe only the part of speech.  It is evident that even though the CC vectors are noisy, coming from a web source, they lead to better results than Wikipedia, possibly because they have a larger variety of tokens.In the next experiment, the dataset was used for the composition of embeddings for the part of speech tagger. The dataset was trained on a FastText model with the same parameters that extracted the Common Crawl vectors. As a result, 140.000 vectors with 300 dimension were exported.  It must be mentioned that the tagset with the morphological features was used.The values of the metrics in this case were almost as good and comparable to the CC ones. However, the model trained with a larger vocabulary had higher results. Also, the model with the dataset vectors did not have the flexibility to classify unknown words.3
+Vectors Precision Recall F1 Score Common Crawl Vectors 96.26 96.28 96.24 Dataset Vectors 95. 74 95.72 95.68
+T ABLE 2. Usage of pretrained vectors from dataset
+As a next step, the test set of the dataset was altered by replacing words with syntactical mistakes to test the tolerance of the model in OOV words. Suffixes of verbs were altered and vowels were replaced with others, affecting 20% of the tokens of the dataset. Using again the more complex tagset for training, the results can be found in Table 3. Test Set Precision Recall F1 Score Original Test Set 96.26 96.28 96.24 OOV Test Set 76.40 73.77 72.22 T ABLE 3. Performance of spaCy model in OOV words
+What can be concluded is that the model did not have a flexibility in OOV words. Of course, this can also be an advantage, meaning that the model recognized the mismatch of a wrong word with its class. One disadvantage that the previous model had is that for unknown words the model assigned a zero vector, affecting the testing results. In order to minimize this problem, the unknown words were first passed through a FastText model to get a vector from their subwords. The resulting vectors were imported in the vocabulary with the CC vectors before training. The model was also trained using as a vocabulary the unknown words and the tokens from the Common Crawl vectors, both buffered in the same FastText model.  Results are listed in Table 4.Vectors Precision Recall F1 Score Common Crawl Vectors 96.26 96.28 96.24 Common Crawl + FastText(OOV Vectors) 96.56 96.54 96.51 Common Crawl Vectors 96.26 96.28 96.24 FastText(Common Crawl + OOV Vectors) 96.16 96.15 96.11
+ T ABLE 4. Common Crawl pretrained + vectors annotated from out of vocabulary words and all vectors annotated from FastText (Common Crawl pretrained and from out of vocabulary words)
+It was noticed that the model performed better when using the vectors from different FastText models. It was expected that the second experiment would have performed better, as the tokens were inserted into the same FastText model and the vectors exported from both sources should match.
+
+================================= Tool Message =================================
+Name: read_section
+
+3.2. Creation of the Tag Map with reference to Universal Dependencies
+Different labels were found at the dataset and were matched to a label map, where for each label the part of the speech and their morphology are analyzed. In more detail, the first two characters refer to the part of speech and accordingly extend to more information about it.  The label map supports 16 standard part of speech tags: Adjective, Adposition, Adverb, Coordinating Conjuction, Determiner, Interjection, Noun, Numeral, Particle, Pronoun, Proper Noun, Punctuation, Subordinating Conjuction, Symbol, Verb and Other. Each tag describes morphological features of the word, depending on the part of the speech to which it refers like the gender, the number, and the case [7].  It must be mentioned that the extraction of morphological rules and the matching with the tags was done using the Greek version of the Universal Dependencies [8].
+
+================================= Tool Message =================================
+Name: read_section
+
+2. SpaCy’s deep learning model for POS tagging and Named Entity Recognition
+SpaCy uses a deep learning formula for implementing NLP models, summarised as “embed, encode, attend, predict”. In spaCy’s approach text is inserted in the model in the form of unique numerical values (ID) for every input that can represent a token of a corpus or a class of the NLP task (part of speech tag, named entity class).  At the embedding stage, features such as the prefix, the suffix, the shape and the lowercase form of a word are used for the extraction of hashed values that reflect word similarities.At this stage a vocabulary with hashed values and their vectors exist in the model. For the exploitation of adjacent vectors in the state of encoding, values pass through the Convolutional Neural Network (CNN) and get merged with their context. The result of the encoding process is a matrix of vectors that represents information.  Before the predic- tion of an ID, the matrix has to be passed through the Attention Layer of the CNN, using a query vector to summarize the input.At prediction, a Softmax function is used for the prediction of a super tag with part of speech and morphology infor- mation. Similarly for named entities, the available class is predicted. After the training process of the model, the CNN is able to be used for NLP tasks. In the latest release of spaCy the deep learning models are reported to be “10 times smaller, 20% more accurate and cheaper to run than the previous generation” [4]. The models are implemented using Thinc, spaCy’s machine learning library.
+
+================================== Ai Message ==================================
+
+Yes. Section 3.4 reports evaluation results for “POS and morph classes” with precision, recall, and F1 scores, so morphology detection is evaluated as part of the POS tagging task.

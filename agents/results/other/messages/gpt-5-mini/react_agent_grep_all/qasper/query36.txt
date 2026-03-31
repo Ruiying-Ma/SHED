@@ -1,0 +1,57 @@
+================================ Human Message =================================
+
+QUERY:
+What supervised baselines did they compare with?
+
+TABLE OF CONTENTS (TOC):
+1 | Look, Read and Enrich Learning from Scientific Figures and their Captions Jose Manuel Gomez-Perez , Raul Ortega Expert System Cogito Labs { jmgomez,rortega } @expertsystem.com
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2 Related work
+1.4 | 3 Figure-Caption Correspondence
+1.4.1 | 3.1 FCC Architecture and Model
+1.4.2 | 3.2 Semantic Embeddings
+1.5 | 4 Results and Discussion
+1.5.1 | 4.1 Datasets
+1.5.2 | 4.2 Figure-Caption Correspondence
+1.5.3 | 4.3 Image-Sentence Matching
+1.5.4 | 4.4 Caption and Figure Classification
+1.5.5 | 4.5 Textbook Question Answering (TQA) for Multi-Modal Machine Comprehension
+1.6 | 5 Qualitative Analysis
+1.7 | 6 Conclusions
+1.8 | Acknowledgments
+1.9 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_all (call_c2E6oAazuLsRSmEBbz3BS9oK)
+ Call ID: call_c2E6oAazuLsRSmEBbz3BS9oK
+  Args:
+    pattern: supervised|baseline|baselines|compared with|compared
+
+================================= Tool Message =================================
+Name: grep_search_all
+
+1.1 | Abstract
+Compared to natural images, understanding sci- entific figures is particularly hard for machines. However, there is a valuable source of informa- tion in scientific literature that until now has re- mained untapped: the correspondence between a figure and its caption. In this paper we investi- gate what can be learnt by looking at a large num- ber of figures and reading their captions, and in- troduce a figure-caption correspondence learning task that makes use of our observations.  Train- ing visual and language networks without super- vision other than pairs of unconstrained figures and captions is shown to successfully solve this task. We also show that transferring lexical and semantic knowledge from a knowledge graph sig- nificantly enriches the resulting features. Finally, we demonstrate the positive impact of such features in other tasks involving scientific text and figures, like multi-modal classification and machine com- prehension for question answering, outperforming supervised baselines and ad-hoc approaches.
+
+1.2 | 1 Introduction
+Scientific knowledge is heterogeneous and can present itself in many forms, including text, mathematical equations, fig- ures and tables. Like many other manifestations of human thought, the scientific discourse usually adopts the form of a narrative, a scientific publication where related knowledge is presented in mutually supportive ways over different modal- ities. In the case of scientific figures, like charts, images and diagrams, these are usually accompanied by a text paragraph, a caption, that elaborates on the analysis otherwise visually represented. In this paper, we make use of this observation and tap on the potential of learning from the enormous source of free su- pervision available in the scientific literature, with millions of figures and their captions. We build models that learn from the scientific discourse both visually and textually by simply looking at the figures and reading their explanatory captions, inspired in how humans learn by reading a scientific publica- tion. To this purpose, we explore how multi-modal scientific
+ knowledge can be learnt from the correspondence between figures and captions.The main contributions of this paper are the following:
+• An unsupervised Figure-Caption Correspondence task (FCC) that jointly learns text and visual features useful to address a range of tasks involving scientific text and figures.
+• A method to enrich such features with seman- tic knowledge transferred from structured knowledge graphs (KG).
+• A study of the complexity of figure-caption cor- respondence compared to classical image-sentence matching.
+• A qualitative and quantitative analysis of the learnt text and visual features through transfer learning tasks.
+• A corpus of scientific figures and captions extracted from SN SciGraph and AI2 Semantic Scholar.We present the FCC task in section 3, including the net- work architecture, training protocol, and how adding pre- trained word and semantic embeddings can enrich the result- ing text and visual features. In section 4, we first introduce our datasets and evaluate the performance of our method in the task it was trained to solve, the correspondence between scientific figures and captions.  Then, we relate our work to the state of the art in image-sentence matching and evaluate our approach in two challenging transfer learning tasks: cap- tion and figure classification and multi-modal machine com- prehension. In section 5 we perform a qualitative study that illustrates how the FCC task leads to detailed textual and vi- sual discrimination. Finally, in section 6 we conclude the pa- per and advance future work.
+
+1.4.1 | 3.1 FCC Architecture and Model
+We propose a 2-branch neural architecture (figure 1) that has three main parts: the vision and language subnetworks, re- spectively extracting visual and text features, and a fusion subnetwork that takes the resulting features from the visual and text blocks and uses them to evaluate figure-caption cor- respondence. The vision subnetwork follows a VGG-style [Simonyan and Zisserman, 2014] design, with 3x3 convolutional filters, 2x2 max-pooling layers with stride 2 and no padding.  It con- tains 4 blocks of conv+conv+pool layers, where inside each block the two convolutional layers have the same number of filters, while consecutive blocks have doubling number of fil- ters (64, 128, 256, 512). The input layer receives 224x224x3 images. The final layer produces a 512-D vector after 28x28 max-pooling.  Each convolutional layer is followed by batch normalization [Ioffe and Szegedy, 2015] and ReLU layers. Based on [Kim, 2014], the language subnetwork has 3 con- volutional blocks, each with 512 filters and a 5-element win- dow size with ReLU activation.  Each convolutional layer is followed by a 5-max pooling layer, except for the final layer, which produces a 512-D vector after 35-max pooling. The language subnetwork has a 300-D embeddings layer at the input, with a maximum sequence length of 1,000 tokens. The fusion subnetwork calculates the element-wise product of the 512-D visual and text feature vectors into a single vec- tor r to produce a 2-way classification output (correspond or not).  It has two fully connected layers, with ReLU and an intermediate feature size of 128-D. The probability of each choice is the softmax of r , i.e. ˆ y = sof tmax ( r ) ∈ R 2 . Dur- ing training, we minimize the negative log probability of the correct choice. This architecture enables the FCC task to learn visual and text features from scratch in a completely unsupervised man- ner, just by observing the correspondence of figures and cap- tions. Next, we extend it to enable the transfer of addi- tional pre-trained information. Here, we focus on adding pre- trained embeddings on the language branch, and then back- propagate to the visual features during FCC training.  Adding pre-trained visual features is also possible and indeed we also evaluate its impact in the FCC task in section 4.2.Let V be a vocabulary of words from a collection of docu- ments D . Also, let L be their lemmas, i.e. base forms without morphological or conjugational variations, and C the con- cepts (or senses) in a KG. Each word w k in V , e.g.  made , has one lemma l k ( make ) and may be linked to one or more concepts c k in C ( create or produce something ).For each word w k , the FCC task learns a d-D embedding ~ w k , which can be combined with pre-trained word ( ~ w 0 k ), lemma ( ~l k ) and concept ( ~ c k ) embeddings to produce a sin- gle vector ~t k .  If no pre-trained knowledge is transferred from an external source, then ~t k = ~ w k . Note that we previously lemmatize and disambiguate D against the KG in order to se- lect the right pre-trained lemma and concept embeddings for each particular occurrence of w k .  Equation 1 shows the dif- ferent combinations of learnt and pre-trained embeddings we consider: (a) learnt word embeddings only, (b) learnt and pre- trained word embeddings and (c) learnt word embeddings and pre-trained semantic embeddings, including both lemmas and concepts, in line with our recent findings presented in [De- naux and Gomez-Perez, 2019]. ~t k =      ~ w k ( a ) [ ~ w k ; ~ w 0 k ] ( b ) [ ~ w k ; ~l k ; ~ c k ] ( c ) (1)
+ In our experiments, concatenation proved optimal to com- bine the embeddings learnt by the network and the pre-trained embeddings, compared to other methods like summation, multiplication, average or learning a task-specific weighting of the different representations as in [Peters et al. , 2018].  Since some words may not have associated pre-trained word, lemma or concept embeddings, we pad these sequences with ∅ W , ∅ L and ∅ C , which are never included in the vocabu- lary. The dimensionality of ~t k is fixed to 300, i.e. the size of each sub-vector in configurations ( a ) , ( b ) and ( c ) is 300, 150 and 100, respectively.  In doing so, we aimed at limiting the number of trainable parameters and balance the contribution of each information source.In its most basic form, i.e.  configuration ( a ) , the FCC network has over 32M trainable parameters (28M in the lan- guage subnetwork, 4M in the vision subnetwork and 135K in the fusion subnetwork) and takes 12 hours to train on a single GPU Nvidia GeForce RTX 2080 Ti for a relatively small cor- pus (SN SciGraph, see section 4.1).  We used 10-fold cross validation, Adam optimization [Kingma and Ba, 2014] with learning rate 10 − 4 and weight decay 10 − 5 . The network was implemented 1 in Keras and TensorFlow, with batch size 32. The number of positive and negative cases is balanced within the batches.
+
+1.5.1 | 4.1 Datasets
+We have used the following datasets for training and evalua- tion:
+The Semantic Scholar corpus [Ammar et al. , 2018] (SemScholar) is a large dataset of scientific publications made available by AI2. From its 39M articles, we downloaded 3,3M PDFs (the rest were behind paywalls, did not have a link or it was broken) and extracted 12. 5M figures and cap- tions through PDFFigures2 [Clark and Divvala, 2016]. We randomly selected 500K papers to train the FCC task on their figures and captions and another 500K to train Vecsigrafo on the text of their titles and abstracts.Springer Nature’s SciGraph 3 contains 7M scientific pub- lications organized in 22 scientific fields or categories.  Since SciGraph does not provide a link to the PDF of the publica- tion, we selected the intersection with SemScholar, producing a smaller corpus of 80K papers (in addition to the 1M papers from SemScholar mentioned above) and 82K figures that we used for training certain FCC configurations and supervised baselines (section 4.2).The Textbook Question Answering corpus [Kembhavi et al.  , 2017] includes 1,076 lessons and 26,260 multi-modal test questions from middle school science curricul...(truncated)
+
+================================== Ai Message ==================================
+
+They compared with two supervised baselines: the direct combination baseline and the supervised pre-training baseline.

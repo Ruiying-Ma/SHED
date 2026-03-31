@@ -1,0 +1,85 @@
+================================ Human Message =================================
+
+QUERY:
+which models is their approach compared to?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_UoFfju8HId6DPslKwXopXUV5)
+ Call ID: call_UoFfju8HId6DPslKwXopXUV5
+  Args:
+    pattern: compared to|compare(d)? with|baseline|baselines|our approach|approach
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Modern text classification models are suscep- tible to adversarial examples, perturbed ver- sions of the original text indiscernible by hu- mans which get misclassified by the model. Recent works in NLP use rule-based synonym replacement strategies to generate adversarial examples. These strategies can lead to out- of-context and unnaturally complex token re- placements, which are easily identifiable by humans.  We present BAE , a black box attack for generating adversarial examples using con- textual perturbations from a BERT masked lan- guage model. BAE replaces and inserts to- kens in the original text by masking a por- tion of the text and leveraging the BERT-MLM to generate alternatives for the masked tokens.  Through automatic and human evaluations, we show that BAE performs a stronger attack, in addition to generating adversarial examples with improved grammaticality and semantic coherence as compared to prior work.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_R68BQzgajLwHpe7MAd5EK4BI)
+ Call ID: call_R68BQzgajLwHpe7MAd5EK4BI
+  Args:
+    pattern: TextFooler|PWWS|DeepWordBug|GAA|prior work|baseline
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Modern text classification models are suscep- tible to adversarial examples, perturbed ver- sions of the original text indiscernible by hu- mans which get misclassified by the model. Recent works in NLP use rule-based synonym replacement strategies to generate adversarial examples. These strategies can lead to out- of-context and unnaturally complex token re- placements, which are easily identifiable by humans.  We present BAE , a black box attack for generating adversarial examples using con- textual perturbations from a BERT masked lan- guage model. BAE replaces and inserts to- kens in the original text by masking a por- tion of the text and leveraging the BERT-MLM to generate alternatives for the masked tokens.  Through automatic and human evaluations, we show that BAE performs a stronger attack, in addition to generating adversarial examples with improved grammaticality and semantic coherence as compared to prior work.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_KylToMzGSfr9kuFRECkSl4EC)
+ Call ID: call_KylToMzGSfr9kuFRECkSl4EC
+  Args:
+    pattern: TextFooler|PWWS|DeepWordBug|GAA|Genetic|HotFlip|BERT-ATTACK|attack methods|compared
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Modern text classification models are suscep- tible to adversarial examples, perturbed ver- sions of the original text indiscernible by hu- mans which get misclassified by the model. Recent works in NLP use rule-based synonym replacement strategies to generate adversarial examples. These strategies can lead to out- of-context and unnaturally complex token re- placements, which are easily identifiable by humans.  We present BAE , a black box attack for generating adversarial examples using con- textual perturbations from a BERT masked lan- guage model. BAE replaces and inserts to- kens in the original text by masking a por- tion of the text and leveraging the BERT-MLM to generate alternatives for the masked tokens.  Through automatic and human evaluations, we show that BAE performs a stronger attack, in addition to generating adversarial examples with improved grammaticality and semantic coherence as compared to prior work.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_Z0XmZyYKuNGphcl2scelJRde)
+ Call ID: call_Z0XmZyYKuNGphcl2scelJRde
+  Args:
+    pattern: Table|Results|baselines|compare our|compared with|against
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1 Introduction
+Recent studies have exposed the vulnerability of ML models to adversarial attacks, small in- put perturbations which lead to misclassification by the model. Adversarial example generation in NLP ( Zhang et al. , 2019 ) is more challeng- ing than in commonly studied computer vision tasks ( Szegedy et al. , 2014 ; Kurakin et al. , 2017 ; Papernot et al.  , 2017 ) because of (i) the discrete nature of the input space and (ii) the need to ensure semantic coherence with the original text. A major bottleneck in applying gradient based ( Goodfellow et al. , 2015 ) or generator model ( Zhao et al. , 2018 ) based approaches to generate adversarial examples in NLP is the backward propagation of the pertur- bations from the continuous embedding space to the discrete token space. Figure 1: We use BERT-MLM to predict masked to- kens in the text for generating adversarial examples. The MASK token replaces a word ( BAE-R attack) or is inserted to the left/right of the word ( BAE-I ).Initial works for attacking text models relied on introducing errors at the character level ( Ebrahimi et al. , 2018 ; Gao et al.  , 2018 ) or adding and deleting words ( Li et al. , 2016 ; Liang et al. , 2017 ; Feng et al. , 2018 ) for creating adversarial examples. These techniques often result in unnatural looking adver- sarial examples which lack grammatical correct- ness, thereby being easily identifiable by humans.Rule-based synonym replacement strategies ( Alzantot et al. , 2018 ; Ren et al.  , 2019 ) have re- cently lead to more natural looking adversarial ex- amples. Jin et al. ( 2019 ) combine both these works by proposing TextFooler, a strong black-box attack baseline for text classification models. However, the adversarial examples generated by TextFooler solely account for the token level similarity via word embeddings, and not the overall sentence se- mantics.  This can lead to out-of-context and unnat- urally complex replacements (see Table 3 ), which are easily human-identifiable. Consider a simple example: “The restaurant service was poor ”. To- ken level synonym replacement of ‘poor’ may lead to an inappropriate choice such as ‘broke’, while a context-aware choice such as ‘terrible’ leads to better retention of semantics and grammaticality. Therefore, a token replacement strategy contin- gent on retaining sentence semantics using a pow-
+∗ Equal contribution by authors
+† Work completed as a graduate student at UW-Madison
+erful language model ( Devlin et al. , 2018 ; Radford et al. , 2019 ) can alleviate the errors made by ex- isting techniques for homonyms (tokens having multiple meanings).  In this paper, we present BAE (BERT-based Adversarial Examples), a novel tech- nique using the BERT masked language model (MLM) for word replacements to better fit the over- all context of the English language. In addition to replacing words, we also propose inserting new to- kens in the sentence to improve the attack strength of BAE .  These perturbations in the input sentence are achieved by masking a part of the input and using a LM to fill in the mask (See Figure 1 ).Our BAE attack beats the previous baselines by a large margin on empirical evaluation over multiple datasets and models. We show that, surprisingly, just a few replace/insert operations can reduce the accuracy of even a powerful BERT classifier by over 80% on some datasets.  Moreover, our human evaluation reveals the improved grammaticality of the adversarial examples generated by BAE over the baseline TextFooler, which can be attributed to the BERT-MLM. To the best of our knowledge, we are the first to use a LM for generating adversarial examples. We summarize our contributions as:
+• We propose BAE ,an adversarial example gen- eration technique using the BERT-MLM.
+• We introduce 4 BAE attack modes by replac- ing and inserting tokens,all of which are al- most always stronger than previous baselines on 7 text classification datasets.
+• Through human evaluation,we show that BAE yields adversarial examples with improved grammaticality and semantic coherence.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_fHZHQcFtV3UyUisOK1brd7UG)
+ Call ID: call_fHZHQcFtV3UyUisOK1brd7UG
+  Args:
+    pattern: TextFooler|Alzantot|Ren et al\.|baseline TextFooler|previous baselines
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1 Introduction
+Recent studies have exposed the vulnerability of ML models to adversarial attacks, small in- put perturbations which lead to misclassification by the model. Adversarial example generation in NLP ( Zhang et al. , 2019 ) is more challeng- ing than in commonly studied computer vision tasks ( Szegedy et al. , 2014 ; Kurakin et al. , 2017 ; Papernot et al.  , 2017 ) because of (i) the discrete nature of the input space and (ii) the need to ensure semantic coherence with the original text. A major bottleneck in applying gradient based ( Goodfellow et al. , 2015 ) or generator model ( Zhao et al. , 2018 ) based approaches to generate adversarial examples in NLP is the backward propagation of the pertur- bations from the continuous embedding space to the discrete token space. Figure 1: We use BERT-MLM to predict masked to- kens in the text for generating adversarial examples. The MASK token replaces a word ( BAE-R attack) or is inserted to the left/right of the word ( BAE-I ).Initial works for attacking text models relied on introducing errors at the character level ( Ebrahimi et al. , 2018 ; Gao et al.  , 2018 ) or adding and deleting words ( Li et al. , 2016 ; Liang et al. , 2017 ; Feng et al. , 2018 ) for creating adversarial examples. These techniques often result in unnatural looking adver- sarial examples which lack grammatical correct- ness, thereby being easily identifiable by humans.Rule-based synonym replacement strategies ( Alzantot et al. , 2018 ; Ren et al.  , 2019 ) have re- cently lead to more natural looking adversarial ex- amples. Jin et al. ( 2019 ) combine both these works by proposing TextFooler, a strong black-box attack baseline for text classification models. However, the adversarial examples generated by TextFooler solely account for the token level similarity via word embeddings, and not the overall sentence se- mantics.  This can lead to out-of-context and unnat- urally complex replacements (see Table 3 ), which are easily human-identifiable. Consider a simple example: “The restaurant service was poor ”. To- ken level synonym replacement of ‘poor’ may lead to an inappropriate choice such as ‘broke’, while a context-aware choice such as ‘terrible’ leads to better retention of semantics and grammaticality. Therefore, a token replacement strategy contin- gent on retaining sentence semantics using a pow-
+∗ Equal contribution by authors
+† Work completed as a graduate student at UW-Madison
+erful language model ( Devlin et al. , 2018 ; Radford et al. , 2019 ) can alleviate the errors made by ex- isting techniques for homonyms (tokens having multiple meanings).  In this paper, we present BAE (BERT-based Adversarial Examples), a novel tech- nique using the BERT masked language model (MLM) for word replacements to better fit the over- all context of the English language. In addition to replacing words, we also propose inserting new to- kens in the sentence to improve the attack strength of BAE .  These perturbations in the input sentence are achieved by masking a part of the input and using a LM to fill in the mask (See Figure 1 ).Our BAE attack beats the previous baselines by a large margin on empirical evaluation over multiple datasets and models. We show that, surprisingly, just a few replace/insert operations can reduce the accuracy of even a powerful BERT classifier by over 80% on some datasets.  Moreover, our human evaluation reveals the improved grammaticality of the adversarial examples generated by BAE over the baseline TextFooler, which can be attributed to the BERT-MLM. To the best of our knowledge, we are the first to use a LM for generating adversarial examples. We summarize our contributions as:
+• We propose BAE ,an adversarial example gen- eration technique using the BERT-MLM.
+• We introduce 4 BAE attack modes by replac- ing and inserting tokens,all of which are al- most always stronger than previous baselines on 7 text classification datasets.
+• Through human evaluation,we show that BAE yields adversarial examples with improved grammaticality and semantic coherence.
+
+================================== Ai Message ==================================
+
+TextFooler, and the rule-based synonym replacement strategies of Alzantot et al. (2018) and Ren et al. (2019).

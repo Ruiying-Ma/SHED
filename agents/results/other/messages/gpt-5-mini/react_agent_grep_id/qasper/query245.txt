@@ -1,0 +1,89 @@
+================================ Human Message =================================
+
+QUERY:
+what is the previous work they are comparing to?
+
+TABLE OF CONTENTS (TOC):
+1 | Improved English to Russian Translation by Neural Suffix Prediction Kai Song 1,2 , Yue Zhang 3 , Min Zhang 1 , Weihua Luo 2 1 Soochow University, Suzhou, China
+1.1 | Abstract
+1.2 | Introduction
+1.3 | Related Work
+1.3.1 | Translation Granularity
+1.3.2 | Morphology and MT
+1.4 | Background
+1.4.1 | Russian Morphology and Stemming
+1.4.2 | Neural Machine Translation Baselines
+1.5 | Target-Side Suffix Prediction
+1.5.1 | Training
+1.5.2 | Decoding
+1.6 | Experiments
+1.6.1 | Data
+1.6.2 | Baselines
+1.6.3 | Our System
+1.6.4 | Distributed Training
+1.6.5 | Results and Analysis
+1.7 | Conclusion
+1.8 | Acknowledgments
+1.9 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_all (call_ycIdlKCJL9TY9nwcDmzDx2gW)
+ Call ID: call_ycIdlKCJL9TY9nwcDmzDx2gW
+  Args:
+    pattern: previous work|previous studies|compare to|compared to|compared with|compared|previous
+
+================================= Tool Message =================================
+Name: grep_search_all
+
+1.1
+1.2
+1.4.2
+1.6.2
+1.6.5
+1.7
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_XoY7NAB2kCgbwvrA5h0PEjvd)
+ Call ID: call_XoY7NAB2kCgbwvrA5h0PEjvd
+  Args:
+    section_id: 1.6.2
+
+================================= Tool Message =================================
+Name: read_section
+
+Baselines
+Our RNN and Transformer baseline systems utilize BPE (Sennrich, Haddow, and Birch 2015b) to transfer the origi- nal word sequence to subword sequence on both the source and the target sides, since the subword method had a stable improvement compared with word based system, especially on morphologically rich languages. Besides, we compared our system with a fully character- based baseline system, which is an implementation of Lee, Cho, and Hofmann (2016)’s work, and is available on github 3 .We limit the source and target vocabularies to the most frequent 30K tokens for both English and Russian. For news domain, about 99.7% tokens are covered by the source side
+vocabulary, about 97. 0% target tokens are covered by the target side vocabulary.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_9kmmkOmpU0xdm76PHG3kDX2I)
+ Call ID: call_9kmmkOmpU0xdm76PHG3kDX2I
+  Args:
+    section_id: 1.2
+
+================================= Tool Message =================================
+Name: read_section
+
+Introduction
+Neural machine translation (NMT) (Bahdanau, Cho, and Bengio 2014) has shown better performance compared with statistic machine translation (Zens, Och, and Ney 2002). Such methods encode a source sentence into hidden states and generate target words sequentially by calculating a prob- ability distribution on the target-side vocabulary.  Most NMT systems limit target side vocabulary to a fixed size, consid- ering the limit of graphics memory size and high comput- ing complexity when predicting a word over the whole tar- get side vocabulary (e.g., 30K or 50K). In addition, a larger target-side vocabulary can also make the prediction task more difficult. Word-level NMT systems suffer the problem of out of vocabulary (OOV) words, particularly for morpho- logically rich languages.  For example, English to Russian machine translation faces a big challenge due to rich mor- phology of Russian words, which leads to much more OOV words than some other languages. Typically a specific tag is used to represent all OOV words, which is then translated during a post process (Luong et al. 2014). This can be harm- ful to the translation quality.There has been several methods to address this problem.  Some focused on translation granularity (Sennrich, Haddow, and Birch, 2015b; Lee, Cho, and Hofmann, 2016; Luong and
+Manning, 2016), while others (Jean et al., 2014; Mi, Wang, and Ittycheriah, 2016) effectively expand target side vocab- ulary.  However, though those methods can avoid OOV, none of them has explicitly modeled the target side morphology. When dealing with language pairs such as English-Russian, the number of different target side words is large due to the rich suffixes in Russian. The above methods are limited in distinguishing one suffix from another. Since the total number of different stems in a morpho- logically rich language is much less than the number of words, a natural perspective to make a better translation on a morphologically-rich target-side language is to model stems and suffixes separately. We design a simple method, which takes a two-step approach for the decoder. In particular, stem is first generated at each decoding step, before suffix is pre- dicted.  Two types of target side sequences are used during training, namely stem sequence and suffix sequence, which are extracted from the original target side word sequence, as shown in Figure 1. Sparsity is relieved since the number of stem types is much smaller than word types, and suffix types can be as small as several hundreds. Another advantage of this structure is that during the prediction of suffix, the pre- viously generated stem sequence can be considered, which can further improve the accuracy of suffix prediction. We empirically study this method and compare it with previous work on reducing OOV rates (Sennrich, Haddow, and Birch, 2015b; Lee, Cho, and Hofmann, 2016). Results show that our method gives significant improvement on the English to Russian translation task on two different domains and two popular NMT architectures.  We also verify our method on training data consisting of 50M bilingual sen- tences, which proves that this method works effectively on large-scale corpora.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_F2rArfeophdxDRy5cx2eU6h6)
+ Call ID: call_F2rArfeophdxDRy5cx2eU6h6
+  Args:
+    section_id: 1.1
+
+================================= Tool Message =================================
+Name: read_section
+
+Abstract
+Neural machine translation (NMT) suffers a performance de- ficiency when a limited vocabulary fails to cover the source or target side adequately, which happens frequently when dealing with morphologically rich languages. To address this problem, previous work focused on adjusting transla- tion granularity or expanding the vocabulary size. However, morphological information is relatively under-considered in NMT architectures, which may further improve translation quality.  We propose a novel method, which can not only re- duce data sparsity but also model morphology through a sim- ple but effective mechanism. By predicting the stem and suf- fix separately during decoding, our system achieves an im- provement of up to 1.98 BLEU compared with previous work on English to Russian translation. Our method is orthogo- nal to different NMT architectures and stably gains improve- ments on various domains.
+
+================================== Ai Message ==================================
+
+Sennrich, Haddow, and Birch (2015b) and Lee, Cho, and Hofmann (2016).

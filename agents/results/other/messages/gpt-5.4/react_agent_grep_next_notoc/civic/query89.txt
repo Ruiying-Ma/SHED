@@ -1,0 +1,22 @@
+================================ Human Message =================================
+
+QUERY:
+What is the type of the project 'Storm Drain Master Plan (FEMA Project)'?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_Jpx2Hn8qx2TfeIoOAX8bJ934)
+ Call ID: call_Jpx2Hn8qx2TfeIoOAX8bJ934
+  Args:
+    pattern: Storm Drain Master Plan \(FEMA Project\)
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Storm Drain Master Plan (FEMA Project)
+¾ Project Description:  This project is funded through a grant from FEMA after the Woolsey Fire.  The City will create a complete inventory of storm drains, culverts, debris basins, manholes, and other drainage structures within the City.¾ Updates:  Council approved an agreement in December for design services. A kick-off meeting was held in late December.¾ Estimated Schedule:
+ Completion Date:  Spring 2022
+
+================================== Ai Message ==================================
+
+disaster

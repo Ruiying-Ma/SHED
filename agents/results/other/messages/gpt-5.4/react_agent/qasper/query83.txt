@@ -1,0 +1,52 @@
+================================ Human Message =================================
+
+QUERY:
+On which corpora do they evaluate on?
+
+TABLE OF CONTENTS (TOC):
+1 | Toward Interpretable Topic Discovery via Anchored Correlation Explanation
+1.1 | Abstract
+1.2 | 1. Introduction
+1.3 | 2. Methods
+1.4 | 3. Related Work
+1.5 | 4. Results and Discussion
+1.5.1 | 4.1. 20 Newsgroups
+1.5.2 | 4.2. i2b2 Obesity Challenge 2008
+1.5.3 | 4.3. Anchored CorEx for Discriminative Tasks
+1.6 | 5. Conclusion
+1.7 | Acknowledgements
+1.8 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_nCEVUM4LDpXWM6MAsLK8OtE1)
+ Call ID: call_nCEVUM4LDpXWM6MAsLK8OtE1
+  Args:
+    section_id: 1.5
+
+================================= Tool Message =================================
+Name: read_section
+
+4. Results and Discussion
+To demonstrate the utility of Anchored CorEx, we run experiments on two document collections: 20 Newsgroups and the i2b2 2008 Obesity Challenge ( Uzuner , 2009 ) data set. Both corpora provide ground truth labels for latent classes that may be thought of as topics.102
+Toward Interpretable Topic Discovery via Anchored Correlation Explanation
+note useful water
+Figure 1. A hierarchical topic model learned by CorEx.  Anchored latent factors are labeled in red with anchor words marked with a “*”.
+4.1. 20 Newsgroups
+The 20 Newsgroups data set is suitable for a straightfor- ward evaluation of anchored topic models. The latent classes represent mutually exclusive categories, and each document is known to originate from a single category. We find that the correlation structure among the latent classes is less complex than in the Obesity Challenge data. Further, each category tends to exhibit some specialized vocabulary not used extensively in other categories (thus satisfying the anchor assumption from Arora et al. ( 2012 )). To prepare the data, we removed headers, footers, and quotes and reduced the vocabulary to the most frequent 20,000 words. Each document was represented as a binary bag-of-words vector. In all experiemnts, we used the standard training/test split. All CorEx models used three layers of 40, 3, and 1 factors. Figure 1 shows an example hierarchical topic model extracted by Anchored CorEx.
+4.2. i2b2 Obesity Challenge 2008
+The Obesity Challenge 2008 data set 1 includes 1237 dei- dentified clinical discharge summaries from the Partners HealthCare Research Patient Data Repository. All sum- maries have been labeled by clinical experts with obesity and 15 other conditions commonly comorbid with obesity, ranging from Coronary Artery Disease (663 positives) to Depression (247) to Hypertriglyceridemia (62). We preprocessed each document with a standard biomed- ical text pipeline that extracts common medical terms and phrases (grouping neighboring words where appropriate) and detecting negation (“not” is prepended to negated terms) ( Dai et al. , 2008 ; Chapman et al. , 2001 ). We converted each document to a binary bag-of-words with a vocabulary of 4114 (possibly negated) medical phrases.  We used the 60/40 training/test split from the competition.We are primarily interested in the ability of Anchored CorEx to extract latent topics that are unambiguously associated with the 16 known conditions. We train a series of CorEx models with 32 latent topics in the first layer, each using a different anchor strategy.  Table 1 shows the Obesity and Obstructive Sleep Apnea (OSA) topics for three iterations of Anchored CorEx with the ten most important terms (highest weighted connections to the latent factor) listed for each topic. Unsupervised CorEx (first row) does not discover any topics obviously related to obesity or OSA, so we choose the topics to which the terms obesity and obstructive sleep apnea are assigned.  No unambiguous Obesity or OSA topics emerge even as the number of latent factors is decreased or increased.In the second iteration (second row), we add the common name of each of the 16 diseases as an anchor to one factor (16 total). Adding obesity as an anchor produces a clear Obesity topic, including several medications known to cause weight gain (e.g., acebutolol , klonopin ).  The anchored OSA topic, however, is quite poor and in fact re- sembles the rather generic topic to which obstructive sleep apnea is assigned by Unsupervised CorEx. It includes many spurious or non-specific terms like drug .This is likely due to the fact that obesity is a major risk factor of OSA, and so OSA symptoms are highly correlated with obesity and its other symptoms.  Thus, the total correlation objective will attempt to group obesity and OSA-related terms together under a single latent factor. The sparse connection constraint mentioned in section 2 prevents them from being connected to multiple factors. Indeed, sleep apnea appears in the obesity topic, suggesting the two topics are competing to explain OSA terms. In the third iteration, we correct this by adding sleep apnea as a second anchor to the OSA topic, and the resulting topic is clearly associated with OSA, including terms related to respiratory problems and medications used to treat (or believed to increase risk for) OSA. There is no noticeable
+1 https://www.i2b2.org/NLP/DataSets/Main. php
+103
+Toward Interpretable Topic Discovery via Anchored Correlation Explanation
+ Obesity Obstructive Sleep Apnea Anchors Topic AUC Topic AUC not fever , not chill , not diarrhea , not dysuria , 0.600 use , drug , complication , allergy , 0. 686 not cough , not abdominal pain , not guarding , sodium , infection , furosemide, docusate , not rebound , not palpitation , not night sweats shortness of breath, esomeprazole One per topic obesity , sleep apnea , morbid obese, obese, 0.762 use , complication , drug , allergy , sodium , 0. 546 for each disease labor , acebutolol, vaginal bleeding , infection , furosemide, docusate , klonopin, valproic acid, bacteruria shortness of breath, obstructive sleep apnea Add second OSA obesity , morbid obese, obese, labor , 0.757 sleep apnea , obstructive sleep apnea , 0. 826 anchor not non-compliant, acebutolol, oxygen, duoneb, desaturation, singulair, vaginal bleeding , problem , pulmonary hypertension, hypoxemia, not deep venous thrombosis, overweight pap smear , vicodin
+Table 1. Evolution of Obesity and Obstructive Sleep Apnea (OSA) topics as anchors are added. Colors and font weight indicate anchors , spurious terms , and intruder terms from other known topics .  Multiword and negated terms are the result of the preprocessing pipeline.reduction in quality in the Obesity topic.
+4.3. Anchored CorEx for Discriminative Tasks
+In a series of follow-up experiments, we investigate the suitability of using anchored CorEx to perform weakly supervised classification. We interpret each anchored latent factor as a classifier for an associated class label and then compute test set F1 (using a threshold of 0.5) and area under the curve (AUC) scores (Obesity Challenge only).Anchors F 1 Anch F 1 U nsup Jesus 0.42 0.45 God 0. 49 0.43 Jesus,Christian 0.55 0.45 Naive Bayes 0.75
+Table 2. F1 scores on soc.religion.christianity .Table 2 compares the classification performance of Unsupervised and Anchored CorEx on the soc.religion.christianity category from 20 Newsgroups for different choices of anchors.  For both types of CorEx, the topic containing the corresponding terms is used as the classifier, but for Anchored CorEx those terms are also used as anchors when estimating the latent factor. Unsupervised CorEx does a reasonable job of discovering a coherent religion topic that already contains the terms God , Christian , and Jesus . However, using the terms Jesus and Christian as anchors yields a topic that better predicts the actual soc.religion.christianity category. Table 3 shows the Macro-AUC and F1 scores (averaged across all diseases) on the Obesity Challenge data for the final anchored CorEx model and a Naive Bayes (NB) baseline, in which we train a separate classifier for each
+Classifier Macro-AUC Macro-F1 Naive Bayes 0.7120 0.4638 Anchored CorEx 0.7445 0.5328
+Table 3. Classification performance on Obesity 2008. disease. Surprisingly, Anchored CorEx outperforms Naive Bayes (NB) by a large margin. Of course, Anchored CorEx is not a replacement for supervised learning: NB beats Anchored CorEx on 20 Newsgroups and does not represent a “strong” baseline for Obesity 2008 (teams scored above 0.7 in Macro-F1 during the competition).  It is nonetheless remarkable that Anchored CorEx performs as well as it does given that it is fundamentally unsupervised.
+
+================================== Ai Message ==================================
+
+20 Newsgroups and the i2b2 2008 Obesity Challenge dataset.

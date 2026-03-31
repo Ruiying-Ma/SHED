@@ -1,0 +1,185 @@
+================================ Human Message =================================
+
+QUERY:
+Considering the data in the balance sheet, what is Block's (formerly known as Square) FY2016 working capital ratio? Define working capital ratio as total current assets divided by total current liabilities. Round your answer to two decimal places.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_SOSOvhmefmgZ7vKZz4xG6saw)
+ Call ID: call_SOSOvhmefmgZ7vKZz4xG6saw
+  Args:
+    pattern: 2016
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Our Business
+We started Square in February 2009 to enable businesses (sellers) to accept card payments, an important capability that was previously inaccessible to many businesses.  However, sellers also need innovative solutions to thrive, and we have since expanded to provide additional products and services to provide these businesses with access to the same tools as large businesses.  This approach aligns with our purpose of economic empowerment, as everything we do should give sellers accessible, affordable tools to grow their businesses and participate in the economy. Square is a cohesive commerce ecosystem that helps our sellers start, run, and grow their businesses. We combine sophisticated software with affordable hardware to enable sellers to turn mobile devices and computing devices into powerful payment and point-of-sale solutions.  We have high seller acceptance rates and  fast  onboarding,  while  maintaining  low  risk  and  fraud  losses  as  a  result  of  our  approach  to  risk  management  that  emphasizes  data  science  and  machine learning.  We focus on technology and design to create products and services that are cohesive, fast, self-serve, and dependable. These attributes differentiate us in a fragmented industry that forces sellers to stitch together hardware, software, and payments services from multiple vendors. The foundation of our ecosystem is a full service, managed payments offering. Once a seller downloads the Square Point of Sale mobile app, they can quickly and easily take their first payment, because we can typically bring them onto our system in minutes.  With our offering, a seller can accept payments in person via magnetic stripe (a swipe), EMV (Europay, MasterCard, and Visa) (a dip), or NFC (Near Field Communication) (a tap); or online via Square Invoices, Square  Virtual  Terminal,  or  the  seller’s  website.   Once  on  our  system,  sellers  gain  access  to  technology  and  features  such  as  reporting  and  analytics,  next-day settlements,  digital  receipts,  payment  dispute  management  and  chargeback  protection,  and  Payment  Card  Industry  (PCI)  compliance.   On  the  consumer  (buyer) side, Square Cash offers individuals access to a fast, easy way to send and receive money electronically to and from individuals and businesses. Our commerce ecosystem also includes powerful point-of-sale software and services that help sellers make informed business decisions through the use of analytics and reporting.  As a result, sellers can manage orders, inventory, locations, employees, and payroll; engage and grow their sales with customers; and gain access to business loans. We monetize these features through either a per transaction fee, a subscription fee, or a service fee.  Some of these advanced point-of- sale  features  are  broadly  applicable  to  our  seller  base  and  include  Employee  Management  and  Customer  Engagement.   With  our  Square  Capital  service,  we facilitate  the offering of loans to sellers  based on their  payment  processing  history, and the product  is broadly applicable  across  our seller  base.  We have also extended our ecosystem to serve sellers with more specific needs.  Our Build with Square developer platform (APIs) allows businesses with individualized needs to customize their business solutions while processing payments on Square and taking advantage of all the services in our ecosystem, including integration with third- party  applications.   In  addition,  certain  verticals,  such  as  service  and  retail  sellers,  benefit  from  specific  features  such  as  Invoices,  Appointments,  and  Square Inventory.  We also serve sellers through Caviar, a food ordering service that helps restaurants reach new customers and increase sales without additional overhead. We have grown rapidly to serve millions of sellers that represent a diverse set of industries, including retail, services, and food-related businesses, and sizes, ranging from a single vendor at a farmers’ market to multi-location businesses.  These sellers also span geographies including the United States, Canada, Japan, and Australia. We believe the diversity of our sellers underscores the accessibility and flexibility of our offerings. In the year ended December 31, 2016 , we processed $49. 7 billion of Gross Payment Volume (GPV), which was generated by 1 billion card payments from approximately 245 million payment cards. We processed $35.6 billion and $23.8 billion of GPV in 2015 and 2014 , respectively. Our ability to add new sellers efficiently, and help them grow their business after they join our platform, has led to continued and sustained growth.  Our existing sellers also represent a sizable opportunity to up-sell and cross-sell products and services with little incremental sales and marketing expense.  Additionally, we are increasingly serving larger sellers, which we define as those that generate more than $125,000 in annualized GPV.  GPV from larger sellers represented 42% of our GPV in the fourth quarter of 2016, an increase from 39% in the fourth quarter of 2015. YearEndedDecember31, 2015to2016 2014to2015 2016 2015 2014 %Change %Change Gross Payment Volume (GPV) (in millions) $ 49,683   $ 35,643   $ 23,780 39% 50% Total net revenue $ 1,708,721   $ 1,267,118   $ 850,192 35% 49% Adjusted Revenue $ 686,618   $ 452,168   $ 276,310 52% 64% Net loss attributable to common stockholders $ (171,590)   $ (212,017)   $ (154,093) Adjusted EBITDA $ 44,887   $ (41,115)   $ (67,741) Net loss per share attributable to common stockholders: Basic $ (0. 50)   $ (1.24)   $ (1.08) Diluted $ (0.50)   $ (1.24)   $ (1.08) Adjusted Net Income (Loss) Per Share: Basic $ 0.04   $ (0.39)   $ (0.62) Diluted $ 0.04   $ (0.39)   $ (0.62)
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_dSL6LQXptynYDLBKFKbY8oJq)
+ Call ID: call_dSL6LQXptynYDLBKFKbY8oJq
+  Args:
+    pattern: Consolidated Balance Sheets
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_46FBoONbpicfAG77xew1gnUv)
+ Call ID: call_46FBoONbpicfAG77xew1gnUv
+  Args:
+    pattern: Total current assets
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_Hc8EOh06208OZxLhKJtjw6bO)
+ Call ID: call_Hc8EOh06208OZxLhKJtjw6bO
+  Args:
+    pattern: Current assets
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_tRTxgLxOS3SxUlqvWIVtIFzB)
+ Call ID: call_tRTxgLxOS3SxUlqvWIVtIFzB
+  Args:
+    pattern: Total current liabilities
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_kUk7BeVbLFrUzT6vlpaqxslY)
+ Call ID: call_kUk7BeVbLFrUzT6vlpaqxslY
+  Args:
+    pattern: Current liabilities
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_siVKjH1EuKvZfqoAkXESJwbl)
+ Call ID: call_siVKjH1EuKvZfqoAkXESJwbl
+  Args:
+    pattern: Total assets
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_IZXzR3vlXGSd13RXWKOu9A78)
+ Call ID: call_IZXzR3vlXGSd13RXWKOu9A78
+  Args:
+    pattern: Balance Sheets
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_f6xoRxybrgxOBRwfOJZASR2W)
+ Call ID: call_f6xoRxybrgxOBRwfOJZASR2W
+  Args:
+    pattern: CURRENT ASSETS
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_jb6ZKCTvLwmLwaIjY44XgJ9r)
+ Call ID: call_jb6ZKCTvLwmLwaIjY44XgJ9r
+  Args:
+    pattern: ASSETS
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+NOTE 8 - ACQUIRED INTANGIBLE ASSETS
+The following table presents the detail of acquired intangible assets as of the periods presented (in thousands):
+ BalanceatDecember31,2016 Cost Accumulated Amortization Net Patents $ 1,285   $ (454)   $ 831 Technology Assets 29,075 (14,702) 14,373 Customer Assets 7,745 (3,657) 4,088 Total $ 38,105   $ (18,813)   $ 19,292
+ BalanceatDecember31,2015 Cost Accumulated Amortization Net Patents $ 1,285   $ (348)   $ 937 Technology Assets 28,645 (6,644) 22,001 Customer Assets 6,645 (2,807) 3,838 Total $ 36,575   $ (9,799)   $ 26,776
+ The weighted average amortization periods for acquired patents, acquired technology, and customer intangible assets are approximately 13 years , 3 years , and 7 years , respectively.Amortization expense associated with other intangible assets was $9.0 million , $7. 5 million , and $2.1 million for the years ended December 31, 2016 , 2015 , and 2014 , respectively.89
+ The total estimated annual future amortization expense of these intangible assets as of  December 31, 2016 , are as follows (in thousands):
+2017 $ 7,380 2018 5,881 2019 3,097 2020 1,140 2021 696 Thereafter 1,098 Total $ 19,292
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_VAm9XbYBxMKax9Zuu3mbLx5k)
+ Call ID: call_VAm9XbYBxMKax9Zuu3mbLx5k
+  Args:
+    pattern: December 31, 2016
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Comparison of Years Ended December 31, 2016 and 2015
+Total net revenue for the year ended December 31, 2016 , increased by $ 441.6 million , or 35% , compared to the year ended December 31, 2015 .Transaction-based revenue for the year ended December 31, 2016 , increased by $ 405. 7 million , or 39% , compared to the year ended December 31, 2015 . This increase was attributable to growth in GPV processed of $14.0 billion , or 39% , to $49.7 billion from $35.6 billion .  We continue to benefit from positive dollar-based retention from our existing sellers, in addition to meaningful contributions from new sellers.Starbucks transaction-based revenue for the year ended December 31, 2016 , decreased by $63. 4 million , or 45% , compared to the year ended December 31, 2015 . Starbucks-related payment volume continued to decline throughout 2016 and during the fourth quarter of 2016, as Starbucks completed its previously announced transition to another payments solution provider.  Accordingly, we do not expect revenue from Starbucks to recur in the future.Subscription  and  services-based  revenue  for  the  year  ended  December  31,  2016  increased  by  $71. 3  million  ,  or  123% ,  compared  to  the  year ended December 31, 2015 .  The increase was primarily driven by continued growth and expansion of Square Capital and Caviar, and to a lesser extent, the launch and expansion  of  new  products  and  services,  including  Instant  Deposit.   During  the  year  ended  December  31,  2016  and  2015,  Square  Capital  and  Caviar  were  the largest  contributors  to  subscription  and  services-based  revenue.   Subscription  and  services-based  revenue  grew  to  8%  of  total  net  revenue  in  the  year  ended December 31, 2016 , up from 5% in the year ended December 31, 2015 . Hardware revenue for the year ended December 31, 2016 , increased by $27.9 million , or 171% , compared to the year ended December 31, 2015 .  The increase  primarily  reflected  growth  in  shipments  of  our  contactless  and  chip  reader  following  its  launch  in  the  fourth  quarter  of  2015.   To  a  lesser  extent,  we generated increased sales across all of our other paid hardware products, including Square Stand, our chip card reader, and third-party peripherals.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_RG7tou8AljfN2OJ7e01a5nG7)
+ Call ID: call_RG7tou8AljfN2OJ7e01a5nG7
+  Args:
+    pattern: Current liabilities\s*\(
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_nDJsRsKxYOpENSlDTo4P6M1a)
+ Call ID: call_nDJsRsKxYOpENSlDTo4P6M1a
+  Args:
+    pattern: Total liabilities
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_TQpHDchFKYgyRsf6O7C5QGGB)
+ Call ID: call_TQpHDchFKYgyRsf6O7C5QGGB
+  Args:
+    pattern: CONSOLIDATED BALANCE SHEETS
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+SQUARE, INC. CONSOLIDATED BALANCE SHEETS (In thousands, except share and per share data)
+December31, 2016 2015 Assets Current assets: Cash and cash equivalents $ 452,030   $ 461,329 Short-term investments 59,901 — Restricted cash 22,131 13,537 Settlements receivable 321,102 142,727 Customer funds held 43,574 9,446 Loans held for sale 42,144 604 Merchant cash advance receivable, net 4,212 36,473 Other current assets 56,331 41,447 Total current assets 1,001,425 705,563 Property and equipment, net 88,328 87,222 Goodwill 57,173 56,699 Acquired intangible assets, net 19,292 26,776 Long-term investments 27,366 — Restricted cash 14,584 14,686 Other assets 3,194 3,826 Total assets $ 1,211,362   $ 894,772 LiabilitiesandStockholders’Equity Current liabilities: Accounts payable $ 12,602   $ 18,869 Customers payable 388,058 215,365 Customer funds obligation 43,574 9,446 Accrued transaction losses 20,064 17,176 Accrued expenses 39,543 44,401 Other current liabilities 73,623 28,945 Total current liabilities 577,464 334,202 Debt (Note 11) — — Other liabilities 57,745 52,522 Total liabilities 635,209 386,724 Commitments and contingencies (Note 16) Stockholders’ equity: Preferred stock, $0. 0000001 par value: 100,000,000 shares authorized at December 31, 2016 and December 31, 2015. None issued and outstanding at December 31, 2016 and December 31, 2015. — — Class A common stock, $0. 0000001 par value: 1,000,000,000 shares authorized at December 31, 2016 and December 31, 2015; 198,746,620 and 31,717,133 issued and outstanding at December 31, 2016 and December 31, 2015, respectively.  — — Class B common stock, $0.0000001 par value: 500,000,000 shares authorized at December 31, 2016 and December 31, 2015; 165,800,756 and 303,232,312 issued and outstanding at December 31, 2016 and December 31, 2015, respectively.  — — Additional paid-in capital 1,357,381 1,116,882 Accumulated other comprehensive loss (1,989) (1,185) Accumulated deficit (779,239) (607,649) Total stockholders’ equity 576,153 508,048 Total liabilities and stockholders’ equity $ 1,211,362   $ 894,772 See accompanying notes to consolidated financial statements. 68
+
+================================== Ai Message ==================================
+
+1.73

@@ -1,0 +1,26 @@
+================================ Human Message =================================
+
+QUERY:
+which pretrained embeddings were experimented with?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_enPlx73IakpUsKM2WzAtskya)
+ Call ID: call_enPlx73IakpUsKM2WzAtskya
+  Args:
+    pattern: pretrained embeddings|pre-trained embeddings|pretrained embedding|pre-trained embedding|embeddings were experimented|which pretrained embeddings|pretrained word embeddings|GloVe|FastText|ELMo|BERT
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+5.1 Pre-trained word embeddings
+We study five pre-trained word embeddings 2 for our model:
+• word2vec is trained on Google News dataset (100 billion tokens).The model contains 300-dimensional vectors for 3 million words and phrases.
+• fastText is learned via skip-gram with sub- word information on Wikipedia text.The em- bedding representations in fastText are 300- dimensional vectors.
+• GloVe is a 300-dimensional word embedding model learned on aggregated global word- word co-occurrence statistics from Common Crawl (840 billion tokens).2 These embeddings are available at anonymous
+• Baroni uses a context-predict approach to learn a 400-dimensional semantic embedding model.It is trained on 2.8 billion tokens con- structed from ukWaC, the English Wikipedia and the British National Corpus.
+• SL999 is trained under the skip-gram objec- tive with negative sampling on word pairs from the paraphrase database PPDB .This 300-dimensional embedding model is tuned on SimLex-999 dataset ( Hill et al. , 2016 ).
+
+================================== Ai Message ==================================
+
+word2vec, fastText, GloVe, Baroni, and SL999.

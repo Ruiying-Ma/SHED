@@ -1,0 +1,51 @@
+================================ Human Message =================================
+
+QUERY:
+Which datasets do they use?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_4YdCWEqVMJUzbl7yKsU0ynM7)
+ Call ID: call_4YdCWEqVMJUzbl7yKsU0ynM7
+  Args:
+    pattern: [Dd]ataset
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+2.1 The Dataset
+The training data set has five features: ID, title, author, text , and label . The ID uniquely identifies the news article. The title and author are the title and author of the news article respectively. The text is the content of the article, and may be incomplete. The label indicates whether the article is reliable (real) or not (fake):
+label = 0 if reliable news 1 if fake news
+The training data set contains 20800 odd number of samples. The test data set does not have labels, so we do not use it. The test data set will be selected from the training data set randomly when we are evaluating our models.In our project, since we hypothesized that the text and the words used within the text are key to distinguish between real and fake news samples, we decided to investigate only the text column.2
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_sNR8XoyWxlJAhLvDDoGxMVSi)
+ Call ID: call_sNR8XoyWxlJAhLvDDoGxMVSi
+  Args:
+    pattern: dataset
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+2.6.3 Random Forest
+A random forest is an ensemble classifier that estimates based on the combination of different decision trees. So random forest will fit a number of decision tree classifiers on various subsamples of the dataset. A random best subsets are built by each tree in the forest. In the end, it gives the best subset of features among all the random subsets of features.In our project, 3 random forest algorithms have been applied with models count vectorizer, tfidf and word-to-vector.  Random forest algorithm requires 4 hyperparameters to tune, such as the number of trees in the forest (i.e., {200, 400, 800}); the maximum depth of the tree (i.e., {1,5,9}); the minimum number of samples required to be at a lead node (i.e. , {2, 4}); The minimum number of samples at each leaf node has the effect of smoothing the model, especially during regression; the minimum number of samples required to be at a leaf node (i.e., {5, 10}). All parameters are applied to grid search and in the end, the best set of parameters can be determined as we used K-fold cross validation with K = 3 .
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_0O3S59s4UGPd2ogItlhX6ELU)
+ Call ID: call_0O3S59s4UGPd2ogItlhX6ELU
+  Args:
+    pattern: training data
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+2.1 The Dataset
+The training data set has five features: ID, title, author, text , and label . The ID uniquely identifies the news article. The title and author are the title and author of the news article respectively. The text is the content of the article, and may be incomplete. The label indicates whether the article is reliable (real) or not (fake):
+label = 0 if reliable news 1 if fake news
+The training data set contains 20800 odd number of samples. The test data set does not have labels, so we do not use it. The test data set will be selected from the training data set randomly when we are evaluating our models.In our project, since we hypothesized that the text and the words used within the text are key to distinguish between real and fake news samples, we decided to investigate only the text column.2
+
+================================== Ai Message ==================================
+
+The training data set has five features: ID, title, author, text, and label and contains about 20,800 samples. The provided test data set has no labels so they do not use it and instead select the test set randomly from the training data when evaluating models.

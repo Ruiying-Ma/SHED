@@ -1,0 +1,104 @@
+================================ Human Message =================================
+
+QUERY:
+You are an investment banker and your only resource(s) to answer the following question is (are): the statement of financial position and the cash flow statement. Here's the question: what is the FY2015 operating cash flow ratio for Adobe? Operating cash flow ratio is defined as: cash from operations / total current liabilities. Round your answer to two decimal places.
+
+TABLE OF CONTENTS (TOC):
+1 | ADOBE SYSTEMS INCORPORATED FORM 10-K
+1.1 | PART I
+1.1.1 | ITEM 1. BUSINESS
+1.1.1.1 | BUSINESS OVERVIEW
+1.1.1.2 | SEGMENTS
+1.1.1.3 | PRODUCTS AND SERVICES OVERVIEW
+1.1.1.4 | COMPETITION
+1.1.1.5 | OPERATIONS
+1.1.1.6 | PRODUCT DEVELOPMENT
+1.1.1.7 | PRODUCT PROTECTION
+1.1.1.8 | EMPLOYEES
+1.1.1.9 | AVAILABLE INFORMATION
+1.1.1.10 | EXECUTIVE OFFICERS
+1.1.2 | ITEM 1A. RISK FACTORS
+1.1.3 | ITEM 1B. UNRESOLVED STAFF COMMENTS
+1.1.4 | ITEM 2. PROPERTIES
+1.1.5 | ITEM 3. LEGAL PROCEEDINGS
+1.1.6 | ITEM 4. MINE SAFETY DISCLOSURES
+1.2 | PART II
+1.2.1 | ITEM 5. MARKET FOR REGISTRANT’S COMMON EQUITY, RELATED STOCKHOLDER MATTERS AND ISSUER PURCHASES OF EQUITY SECURITIES
+1.2.2 | ITEM 6. SELECTED FINANCIAL DATA
+1.2.3 | ITEM 7. MANAGEMENT’S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF OPERATIONS
+1.2.3.1 | ACQUISITIONS
+1.2.3.2 | CRITICAL ACCOUNTING POLICIES AND ESTIMATES
+1.2.3.3 | RESULTS OF OPERATIONS
+1.2.3.3.1 | Financial Performance Summary for Fiscal 2015
+1.2.3.3.2 | Revenue (dollars in millions)
+1.2.3.3.3 | Cost of Revenue (dollars in millions)
+1.2.3.3.4 | Operating Expenses (dollars in millions)
+1.2.3.3.5 | Non-Operating Income (Expense), Net (dollars in millions)
+1.2.3.3.6 | Provision for Income Taxes (dollars in millions)
+1.2.3.4 | LIQUIDITY AND CAPITAL RESOURCES
+1.2.4 | ITEM 7A. QUANTITATIVE AND QUALITATIVE DISCLOSURES ABOUT MARKET RISK
+1.2.5 | ITEM 8. FINANCIAL STATEMENTS AND SUPPLEMENTARY DATA
+1.2.5.1 | CONSOLIDATED BALANCE SHEETS
+1.2.5.2 | CONSOLIDATED STATEMENTS OF INCOME
+1.2.5.3 | CONSOLIDATED STATEMENTS OF COMPREHENSIVE INCOME
+1.2.5.4 | CONSOLIDATED STATEMENTS OF STOCKHOLDERS’ EQUITY
+1.2.5.5 | CONSOLIDATED STATEMENTS OF CASH FLOWS
+1.2.5.6 | NOTES TO CONSOLIDATED FINANCIAL STATEMENTS
+1.2.5.6.1 | NOTE 1. BASIS OF PRESENTATION AND SIGNIFICANT ACCOUNTING POLICIES
+1.2.5.6.2 | NOTE 2. ACQUISITIONS
+1.2.5.6.3 | NOTE 3. CASH, CASH EQUIVALENTS AND SHORT-TERM INVESTMENTS
+1.2.5.6.4 | NOTE 4. FAIR VALUE MEASUREMENTS
+1.2.5.6.5 | NOTE 5. DERIVATIVES AND HEDGING ACTIVITIES
+1.2.5.6.6 | NOTE 6. PROPERTY AND EQUIPMENT
+1.2.5.6.7 | NOTE 7. GOODWILL AND PURCHASED AND OTHER INTANGIBLES
+1.2.5.6.8 | NOTE 8. ACCRUED EXPENSES
+1.2.5.6.9 | NOTE 9. INCOME TAXES
+1.2.5.6.10 | NOTE 10. RESTRUCTURING
+1.2.5.6.11 | NOTE 11. BENEFIT PLANS
+1.2.5.6.12 | NOTE 12. STOCK-BASED COMPENSATION
+1.2.5.6.13 | NOTE 13. STOCKHOLDERS’ EQUITY
+1.2.5.6.14 | NOTE 14. NET INCOME PER SHARE
+1.2.5.6.15 | NOTE 15. COMMITMENTS AND CONTINGENCIES
+1.2.5.6.16 | NOTE 16. DEBT
+1.2.5.6.17 | NOTE 17. NON-OPERATING INCOME (EXPENSE)
+1.2.5.6.18 | NOTE 18. INDUSTRY SEGMENT, GEOGRAPHIC INFORMATION AND SIGNIFICANT CUSTOMERS
+1.2.5.6.19 | NOTE 19. SELECTED QUARTERLY FINANCIAL DATA (unaudited)
+1.2.5.7 | REPORT OF INDEPENDENT REGISTERED PUBLIC ACCOUNTING FIRM
+1.2.6 | ITEM 9. CHANGES IN AND DISAGREEMENTS WITH ACCOUNTANTS ON ACCOUNTING AND FINANCIAL DISCLOSURE
+1.2.7 | ITEM 9A. CONTROLS AND PROCEDURES
+1.2.8 | ITEM 9B. OTHER INFORMATION
+1.3 | PART III
+1.3.1 | ITEM 10. DIRECTORS, EXECUTIVE OFFICERS AND CORPORATE GOVERNANCE
+1.3.2 | ITEM 11. EXECUTIVE COMPENSATION
+1.3.3 | ITEM 12. SECURITY OWNERSHIP OF CERTAIN BENEFICIAL OWNERS AND MANAGEMENT AND RELATED STOCKHOLDER MATTERS
+1.3.4 | ITEM 13. CERTAIN RELATIONSHIPS AND RELATED TRANSACTIONS, AND DIRECTOR INDEPENDENCE
+1.3.5 | ITEM 14. PRINCIPAL ACCOUNTING FEES AND SERVICES
+1.4 | PART IV
+1.4.1 | ITEM 15. EXHIBITS, FINANCIAL STATEMENT SCHEDULES
+1.5 | SIGNATURES
+1.6 | SUMMARY OF TRADEMARKS
+1.7 | INDEX TO EXHIBITS
+1.8 | Stock Performance Graph(*)
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_all (call_np6QM4FrtZrEDkfnZIEgzu4G)
+ Call ID: call_np6QM4FrtZrEDkfnZIEgzu4G
+  Args:
+    pattern: Net cash provided by operating activities|Cash provided by operating activities|Cash flows from operating activities|Net cash provided by operating activities.*2015|Total current liabilities|Current liabilities
+
+================================= Tool Message =================================
+Name: grep_search_all
+
+1.2.3.4 | LIQUIDITY AND CAPITAL RESOURCES
+This data should be read in conjunction with our Consolidated Statements of Cash Flows.As of (in millions) November 27, 2015 November 28, 2014 Cash and cash equivalents........................................................... .................................. $ 876.6 $ 1,117.4 Short-term investments ................................................... .............................................. $ 3,111.5 $ 2,622.1 Working capital...................................... ....................................................................... $ 2,608.3 $ 2,107.9 Stockholders’ equity........... ........................................................................................... $ 7,001. 6 $ 6,775.9 A summary of our cash flows is as follows: (in millions) Fiscal 2015 Fiscal 2014 Fiscal 2013 Net cash provided by operating activities............................................. $ 1,469.5 $ 1,287. 5 $ 1,151.7 Net cash used for investing activities ................................................... (1,488.4) (490.7) (1,177.8) Net cash used for financing activities.......... ......................................... (200.7) (507.3) (559.1) Effect of foreign currency exchange rates on cash and cash equivalents ................................. ........................................................... (21.2) (6.7) (5.2) Net increase (decrease) in cash and cash equivalents............... ............ $ (240.8) $ 282.8 $ (590.4)
+Our primary source of cash is receipts from revenue. The primary uses of cash are payroll related expenses, general operating expenses including marketing, travel and office rent, and cost of revenue. Other sources of cash are proceeds from the exercise of employee options and participation in the employee stock purchase plan.  Other uses of cash include our stock repurchase program, which is described below, business acquisitions and purchases of property and equipment.Cash Flows from Operating Activities
+For fiscal 2015, net cash provided by operating activities of $1.47 billion was primarily comprised of net income plus the net effect of non-cash items. The primary working capital sources of cash were net income coupled with increases in deferred revenue, income taxes payable and trade payables.  The increase in deferred revenue is primarily due to increased subscriptions for our team, individual and enterprise Creative Cloud offerings and increases in Digital Marketing hosted services. The increase in income taxes payable is primarily due to higher taxable income levels during fiscal 2015. Trade payables increased primarily due to the timing of payments to web services vendors as certain invoices were received in the final weeks of fiscal 2015.  The primary working capital uses of cash were increases in trade receivables which were principally due to higher revenue levels.For fiscal 2014, net cash provided by operating activities of $1.29 billion was primarily comprised of net income plus the net effect of non-cash items. The primary working capital sources of cash were net income coupled with increases in deferred revenue and accrued expenses.  The increase in deferred revenue was primarily due to increased subscription and ETLA activity for our individual, team and enterprise Creative Cloud offerings and increases in Digital Marketing and Digital Publishing hosted services,  offset  in  part  by  decreases  in  billings  for  our  maintenance  and  Creative  product  software  upgrade  plans  which  we discontinued in January 2013.  Accrued expenses increased primarily due to accruals for contract terminations and employee transition payments associated with business realignment initiatives implemented in the fourth quarter of fiscal 2014.For fiscal 2013, net cash provided by operating activities of $1.15 billion was primarily comprised of net income plus the net effect of non-cash items.  The primary working capital sources of cash were net income coupled with increases in deferred revenue  and  accrued  expenses  and  decreases  in  trade  receivables.  Deferred  revenue  increased  primarily  due  to  increased subscription and ETLA activity for our Creative Cloud offering and increases in Digital Marketing hosted services, offset in part by decreases in billings for our maintenance and Creative product software upgrade plans which were discontinued in January 2013.  Accrued expenses increased primarily due to amounts due under our fiscal 2013 annual incentive plan and sales commission accruals associated with higher achievement levels. Trade receivables declined primarily due to lower perpetual license revenue levels and improved collections compared to the fourth quarter of fiscal 2012.The primary working capital uses of cash for fiscal 2013 were decreases in taxes payable and increases in prepaid expenses and other assets.  The decrease in taxes payable was largely attributed to tax payments made combined with audit settlement adjustments, offset in part by tax expense and other adjustments during fiscal 2013. Prepaid expenses and other assets increased primarily due to increases in short-term income tax receivables related to the carryback of federal research and development and foreign tax credits in the fourth quarter of fiscal 2013.52
+Cash Flows from Investing Activities
+ For fiscal 2015, net cash used for investing activities of $1.49 billion was primarily due to purchases of short-term investments and our acquisition of Fotolia. Other uses of cash during fiscal 2015 represented purchases of property and equipment, and long- term investments and other assets. These cash outflows were offset in part by sales and maturities of short-term investments and proceeds received from the sale of certain property assets.  See Note 2 and Note 6 of our Consolidated Financial Statements for more detailed information regarding our acquisition of Fotolia and sale of property assets, respectively.For  fiscal  2014,  net  cash  used  for  investing  activities of  $490.7  million  was  primarily  due  to  purchases  of  short-term investments, purchases of property and equipment and a business acquisition.  These cash outflows were offset in part by sales and maturities of short-term investments.For fiscal 2013, net cash used for investing activities of $1.18 billion was primarily due to our acquisitions of Neolane and Behance.   Other  uses  of  cash  during  fiscal  2013  represented  purchases  of  short-term  investments,  purchases  of  property  and equipment associated with our construction projects in Oregon and India and purchases of long-term technology licenses. These cash outflows were offset in part by sales and maturities of short-term investments and the sale of certain property assets.  See Note 2 of our Notes to the Consolidated Financial Statements for more detailed information regarding our acquisitions of Neolane and Behance.Cash Flows from Financing Activities
+In January 2015, we issued $1 billion of 3.25% senior notes due February 1, 2025 (the “2025 Notes”). Our proceeds were approximately $989.3 million which is net of an issuance discount of $10.7 million.  The 2025 Notes rank equally with our other unsecured and unsubordinated indebtedness. In addition, we incurred issuance costs of $7.9 million in connection with our 2025 Notes. Both the discount and issuance costs are being amortized to interest expense over the term of the 2025 Notes using the effective interest method. We used $600 million of the proceeds from the 2025 Notes offering to repay the outstanding balance plus accrued and unpaid interest of the $600 million 3.25% senior notes due February 1, 2015 (“2015 Notes”). The remaining proceeds were used for general corporate purposes.  See Note 16 of our Consolidated Financial Statements for more detailed information. In addition to the 2025 Notes issuance and 2015 Notes repayment, other financing activities during fiscal 2015 include payments for our treasury stock repurchases and costs associated with the issuance of treasury stock, offset in part by proceeds from the issuance of treasury stock and excess tax benefits from stock-based compensation.For fiscal 2014 and 2013, net cash used for financing activities of $507.3 million and $559. 1 million, respectively, was primarily due to payments for our treasury stock repurchases and costs associated with the issuance of treasury stock, offset in part by proceeds from the issuance of treasury stock and excess tax benefits from stock-based compensation. See the section titled “Stock Repurchase Program” discussed below. We expect to continue our investing activities, including short-term and long-term investments, venture capital, facilities expansion  and  purchases  of  computer  systems  for  research  and  development,  sales  and  marketing,  product  support  and administrative staff. Furthermore, cash reserves may be used to repurchase stock under our stock repurchase program and to strategically acquire companies, products or technologies that are complementary to our business.Restructuring
+ During the past several years, we have initiated various restructuring plans. We consider our restructuring plans to be substantially complete.As of November 27, 2015, we have accrued total restructuring charges of $4.7 million, substantially all of which relate to the cost of closing redundant facilities and is expected to be paid under contract through fiscal 2021 for which approximately 75% will be paid through fiscal 2017.  During fiscal 2015, we made payments related to our restructuring plans totaling $18.2 million which consisted of $16.6 million in payments associated with termination benefits and contract terminations and the remaining payments related to the closing of redundant facilities.As of November 28, 2014, we had accrued total restructuring charges of $...(truncated)
+
+================================== Ai Message ==================================
+
+0.66

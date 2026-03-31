@@ -1,0 +1,78 @@
+================================ Human Message =================================
+
+QUERY:
+What metrics do they use?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_LaXCbgNj7p7WDj3TGAT1ZNxf)
+ Call ID: call_LaXCbgNj7p7WDj3TGAT1ZNxf
+  Args:
+    pattern: metric|metrics|Evaluation|evaluat|BLEU|ROUGE|accuracy|F1|perplexity
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1 Introduction
+Word Sense Disambiguation (WSD) is an important problem in Natural Lan- guage Processing (NLP), both in its own right and as a stepping stone to other advanced tasks in the NLP pipeline, applications such as machine translation [1] and question answering [2].  WSD specifically deals with identifying the correct sense of a word, among a set of given candidate senses for that word, when it is presented in a brief narrative (surrounding text) which is generally referred to as context . Consider the ambiguous word ‘ cold ’.  In the sentence “ He started to give me a cold shoulder after that experiment ”, the possible senses for cold can be cold temperature (S1), a cold sensation (S2), common cold (S3), or a negative emotional reaction (S4). Therefore, the ambiguous word cold is specified along with the sense set { S1, S2, S3, S4 } and our goal is to identify the correct sense
+ S4 (as the closest meaning) for this specific occurrence of cold after considering - the semantic and the syntactic information of - its context.In this effort, we develop our supervised WSD model that leverages a Bidirec- tional Long Short-Term Memory (BLSTM) network. This network works with neural sense vectors (i.e. sense embeddings ), which are learned during model training, and employs neural word vectors (i.e.  word embeddings ), which are learned through an unsupervised deep learning approach called GloVe (Global Vectors for word representation)[3] for the context words. By evaluating our one- model-fits-all WSD network over the public gold standard dataset of SensEval-3 [4], we demonstrate that the accuracy of our model in terms of F-measure is comparable with the state-of-the-art WSD algorithms’.We outline the organization of the rest of the paper as follows.  In Section 2, we briefly explore earlier efforts in WSD and discuss recent approaches that incorporate deep neural networks and word embeddings. Our main model that employs BLSTM with the sense and word embeddings is detailed in Section 3. We then present our experiments and results in Section 4 supported by a discussion on how to avoid some drawbacks of the current model in order to achieve higher accuracies and demand less number of training data which is desirable.  Finally, in Section 5, we conclude with some future research directions for the construction of sense embeddings as well as applications of such model in other domains such as biomedicine.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_8PXIraLrR4k0DcQaj9WvsJNT)
+ Call ID: call_8PXIraLrR4k0DcQaj9WvsJNT
+  Args:
+    pattern: F-measure|F measure|F1|accuracy in terms of|Accuracy|precision|recall|evaluation metrics|metrics used
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1 Introduction
+Word Sense Disambiguation (WSD) is an important problem in Natural Lan- guage Processing (NLP), both in its own right and as a stepping stone to other advanced tasks in the NLP pipeline, applications such as machine translation [1] and question answering [2].  WSD specifically deals with identifying the correct sense of a word, among a set of given candidate senses for that word, when it is presented in a brief narrative (surrounding text) which is generally referred to as context . Consider the ambiguous word ‘ cold ’.  In the sentence “ He started to give me a cold shoulder after that experiment ”, the possible senses for cold can be cold temperature (S1), a cold sensation (S2), common cold (S3), or a negative emotional reaction (S4). Therefore, the ambiguous word cold is specified along with the sense set { S1, S2, S3, S4 } and our goal is to identify the correct sense
+ S4 (as the closest meaning) for this specific occurrence of cold after considering - the semantic and the syntactic information of - its context.In this effort, we develop our supervised WSD model that leverages a Bidirec- tional Long Short-Term Memory (BLSTM) network. This network works with neural sense vectors (i.e. sense embeddings ), which are learned during model training, and employs neural word vectors (i.e.  word embeddings ), which are learned through an unsupervised deep learning approach called GloVe (Global Vectors for word representation)[3] for the context words. By evaluating our one- model-fits-all WSD network over the public gold standard dataset of SensEval-3 [4], we demonstrate that the accuracy of our model in terms of F-measure is comparable with the state-of-the-art WSD algorithms’.We outline the organization of the rest of the paper as follows.  In Section 2, we briefly explore earlier efforts in WSD and discuss recent approaches that incorporate deep neural networks and word embeddings. Our main model that employs BLSTM with the sense and word embeddings is detailed in Section 3. We then present our experiments and results in Section 4 supported by a discussion on how to avoid some drawbacks of the current model in order to achieve higher accuracies and demand less number of training data which is desirable.  Finally, in Section 5, we conclude with some future research directions for the construction of sense embeddings as well as applications of such model in other domains such as biomedicine.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_qWkLZncMU6ql4weLfO0tYOCW)
+ Call ID: call_qWkLZncMU6ql4weLfO0tYOCW
+  Args:
+    pattern: Section 4|Experiments|Results|Evaluation|dataset|SensEval-3|F-measure|F1-score
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1 Introduction
+Word Sense Disambiguation (WSD) is an important problem in Natural Lan- guage Processing (NLP), both in its own right and as a stepping stone to other advanced tasks in the NLP pipeline, applications such as machine translation [1] and question answering [2].  WSD specifically deals with identifying the correct sense of a word, among a set of given candidate senses for that word, when it is presented in a brief narrative (surrounding text) which is generally referred to as context . Consider the ambiguous word ‘ cold ’.  In the sentence “ He started to give me a cold shoulder after that experiment ”, the possible senses for cold can be cold temperature (S1), a cold sensation (S2), common cold (S3), or a negative emotional reaction (S4). Therefore, the ambiguous word cold is specified along with the sense set { S1, S2, S3, S4 } and our goal is to identify the correct sense
+ S4 (as the closest meaning) for this specific occurrence of cold after considering - the semantic and the syntactic information of - its context.In this effort, we develop our supervised WSD model that leverages a Bidirec- tional Long Short-Term Memory (BLSTM) network. This network works with neural sense vectors (i.e. sense embeddings ), which are learned during model training, and employs neural word vectors (i.e.  word embeddings ), which are learned through an unsupervised deep learning approach called GloVe (Global Vectors for word representation)[3] for the context words. By evaluating our one- model-fits-all WSD network over the public gold standard dataset of SensEval-3 [4], we demonstrate that the accuracy of our model in terms of F-measure is comparable with the state-of-the-art WSD algorithms’.We outline the organization of the rest of the paper as follows.  In Section 2, we briefly explore earlier efforts in WSD and discuss recent approaches that incorporate deep neural networks and word embeddings. Our main model that employs BLSTM with the sense and word embeddings is detailed in Section 3. We then present our experiments and results in Section 4 supported by a discussion on how to avoid some drawbacks of the current model in order to achieve higher accuracies and demand less number of training data which is desirable.  Finally, in Section 5, we conclude with some future research directions for the construction of sense embeddings as well as applications of such model in other domains such as biomedicine.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_d2H5xx5YHvLzxYlXqtDZ4YLm)
+ Call ID: call_d2H5xx5YHvLzxYlXqtDZ4YLm
+  Args:
+    pattern: precision|recall|F-measure|F-measure|F1|Accuracy|accuracy
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1 Introduction
+Word Sense Disambiguation (WSD) is an important problem in Natural Lan- guage Processing (NLP), both in its own right and as a stepping stone to other advanced tasks in the NLP pipeline, applications such as machine translation [1] and question answering [2].  WSD specifically deals with identifying the correct sense of a word, among a set of given candidate senses for that word, when it is presented in a brief narrative (surrounding text) which is generally referred to as context . Consider the ambiguous word ‘ cold ’.  In the sentence “ He started to give me a cold shoulder after that experiment ”, the possible senses for cold can be cold temperature (S1), a cold sensation (S2), common cold (S3), or a negative emotional reaction (S4). Therefore, the ambiguous word cold is specified along with the sense set { S1, S2, S3, S4 } and our goal is to identify the correct sense
+ S4 (as the closest meaning) for this specific occurrence of cold after considering - the semantic and the syntactic information of - its context.In this effort, we develop our supervised WSD model that leverages a Bidirec- tional Long Short-Term Memory (BLSTM) network. This network works with neural sense vectors (i.e. sense embeddings ), which are learned during model training, and employs neural word vectors (i.e.  word embeddings ), which are learned through an unsupervised deep learning approach called GloVe (Global Vectors for word representation)[3] for the context words. By evaluating our one- model-fits-all WSD network over the public gold standard dataset of SensEval-3 [4], we demonstrate that the accuracy of our model in terms of F-measure is comparable with the state-of-the-art WSD algorithms’.We outline the organization of the rest of the paper as follows.  In Section 2, we briefly explore earlier efforts in WSD and discuss recent approaches that incorporate deep neural networks and word embeddings. Our main model that employs BLSTM with the sense and word embeddings is detailed in Section 3. We then present our experiments and results in Section 4 supported by a discussion on how to avoid some drawbacks of the current model in order to achieve higher accuracies and demand less number of training data which is desirable.  Finally, in Section 5, we conclude with some future research directions for the construction of sense embeddings as well as applications of such model in other domains such as biomedicine.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_dtNSHVweMfMgbmGP3QKXAM89)
+ Call ID: call_dtNSHVweMfMgbmGP3QKXAM89
+  Args:
+    pattern: F-measure
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1 Introduction
+Word Sense Disambiguation (WSD) is an important problem in Natural Lan- guage Processing (NLP), both in its own right and as a stepping stone to other advanced tasks in the NLP pipeline, applications such as machine translation [1] and question answering [2].  WSD specifically deals with identifying the correct sense of a word, among a set of given candidate senses for that word, when it is presented in a brief narrative (surrounding text) which is generally referred to as context . Consider the ambiguous word ‘ cold ’.  In the sentence “ He started to give me a cold shoulder after that experiment ”, the possible senses for cold can be cold temperature (S1), a cold sensation (S2), common cold (S3), or a negative emotional reaction (S4). Therefore, the ambiguous word cold is specified along with the sense set { S1, S2, S3, S4 } and our goal is to identify the correct sense
+ S4 (as the closest meaning) for this specific occurrence of cold after considering - the semantic and the syntactic information of - its context.In this effort, we develop our supervised WSD model that leverages a Bidirec- tional Long Short-Term Memory (BLSTM) network. This network works with neural sense vectors (i.e. sense embeddings ), which are learned during model training, and employs neural word vectors (i.e.  word embeddings ), which are learned through an unsupervised deep learning approach called GloVe (Global Vectors for word representation)[3] for the context words. By evaluating our one- model-fits-all WSD network over the public gold standard dataset of SensEval-3 [4], we demonstrate that the accuracy of our model in terms of F-measure is comparable with the state-of-the-art WSD algorithms’.We outline the organization of the rest of the paper as follows.  In Section 2, we briefly explore earlier efforts in WSD and discuss recent approaches that incorporate deep neural networks and word embeddings. Our main model that employs BLSTM with the sense and word embeddings is detailed in Section 3. We then present our experiments and results in Section 4 supported by a discussion on how to avoid some drawbacks of the current model in order to achieve higher accuracies and demand less number of training data which is desirable.  Finally, in Section 5, we conclude with some future research directions for the construction of sense embeddings as well as applications of such model in other domains such as biomedicine.
+
+================================== Ai Message ==================================
+
+They use the F-measure.

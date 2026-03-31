@@ -1,0 +1,47 @@
+================================ Human Message =================================
+
+QUERY:
+Who are considered trained experts?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_wkCwBAv0paGMdfgFUxeHdiBa)
+ Call ID: call_wkCwBAv0paGMdfgFUxeHdiBa
+  Args:
+    pattern: trained experts|expert
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+This article compares two multimodal resources that consist of diagrams which describe topics in elementary school natural sciences. Both resources contain the same diagrams and represent their structure using graphs, but differ in terms of their annotation schema and how the annotations have been created – depending on the resource in question – either by crowd-sourced workers or trained experts.  This article reports on two experiments that evaluate how effectively crowd-sourced and expert-annotated graphs can represent the multimodal structure of diagrams for representation learning using various graph neural networks. The results show that the identity of diagram elements can be learned from their layout features, while the expert annotations provide better representations of diagram types.Keywords: multimodality, diagrams, graph neural networks, annotation, crowd-sourcing
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_FKhJ4BkfZgXXxbQHBSfuKMBN)
+ Call ID: call_FKhJ4BkfZgXXxbQHBSfuKMBN
+  Args:
+    pattern: crowd-sourced workers|trained experts|annotation schema
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+This article compares two multimodal resources that consist of diagrams which describe topics in elementary school natural sciences. Both resources contain the same diagrams and represent their structure using graphs, but differ in terms of their annotation schema and how the annotations have been created – depending on the resource in question – either by crowd-sourced workers or trained experts.  This article reports on two experiments that evaluate how effectively crowd-sourced and expert-annotated graphs can represent the multimodal structure of diagrams for representation learning using various graph neural networks. The results show that the identity of diagram elements can be learned from their layout features, while the expert annotations provide better representations of diagram types.Keywords: multimodality, diagrams, graph neural networks, annotation, crowd-sourcing
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_KVEVu6BDtWCeZ6DVLPmGVpN9)
+ Call ID: call_KVEVu6BDtWCeZ6DVLPmGVpN9
+  Args:
+    pattern: trained experts
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+This article compares two multimodal resources that consist of diagrams which describe topics in elementary school natural sciences. Both resources contain the same diagrams and represent their structure using graphs, but differ in terms of their annotation schema and how the annotations have been created – depending on the resource in question – either by crowd-sourced workers or trained experts.  This article reports on two experiments that evaluate how effectively crowd-sourced and expert-annotated graphs can represent the multimodal structure of diagrams for representation learning using various graph neural networks. The results show that the identity of diagram elements can be learned from their layout features, while the expert annotations provide better representations of diagram types.Keywords: multimodality, diagrams, graph neural networks, annotation, crowd-sourcing
+
+================================== Ai Message ==================================
+
+Unanswerable

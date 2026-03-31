@@ -1,0 +1,112 @@
+================================ Human Message =================================
+
+HYPOTHESIS:
+No licensing: Agreement shall not grant Receiving Party any right to Confidential Information.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_B6KNl1e5meHd6q827aQUoxQP)
+ Call ID: call_B6KNl1e5meHd6q827aQUoxQP
+  Args:
+    pattern: grant.*right|license|licen[sc]e|Receiving Party.*right|Confidential Information
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Clause 9
+Neither Party may assign or transfer (including but not limited to sublicense) any of its rights or obligations under  the  NDA.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_1ccER3sj7AGBqyPgiLJcAeCN)
+ Call ID: call_1ccER3sj7AGBqyPgiLJcAeCN
+  Args:
+    pattern: grant.*right|license|licen[sc]e|Receiving Party.*right|Confidential Information
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Clause 12
+The  NDA  shall become effective on the date on the date of signatures and shall be valid for a period of two years thereafter, when it shall automatically expire
+4
+unless otherwise  agreed  in writing  between the  parties.   However, all Confidential Information  exchanged  during the validity  hereof shall be subject to the obligations  and  restrictions  under the  NDA (including the  undertakings  in Clause 13 and  14 below) for a period of five years following  expiration  or other termination  of the  NDA.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_EVSmElHuzPwscaemdqgLDyGl)
+ Call ID: call_EVSmElHuzPwscaemdqgLDyGl
+  Args:
+    pattern: grant.*right|license|licen[sc]e|licen[sc]ing|ownership|title|proprietary
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Clause 9
+Neither Party may assign or transfer (including but not limited to sublicense) any of its rights or obligations under  the  NDA.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_22HoD6OTqLy3NXhmSnDR4DHy)
+ Call ID: call_22HoD6OTqLy3NXhmSnDR4DHy
+  Args:
+    pattern: grant.*right|license|licen[sc]e|licen[sc]ing|ownership|title|proprietary
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_BPsEVSocjnrbiUyJ4rMdKdpt)
+ Call ID: call_BPsEVSocjnrbiUyJ4rMdKdpt
+  Args:
+    pattern: disclos.*party|receiv.*party|no right|shall not grant|interest in|confidential information.*property|remain.*property
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Clause 1
+Confidential  Information  - information  of whatever  kind and  in whatever  form contained  (and includes  in particular  but without  prejudice to the generality  of the foregoing,  documents,  drawings, computerized  information,  films,  tapes, specifications,  designs,  models, equipment  or data of any kind) which  is clearly identified  by the  Disclosing  Party as confidential  by an appropriate  legend or if orally disclosed then  upon disclosure  or within  30 days of such oral disclosure identified  in writing  by the  Disclosing  Party as confidential. Disclosing  Party  - the  party from time to time disclosing  Confidential Information.1
+Receiving  Party  - the  party from time to time  receiving Confidential  Information.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_b6vYGmrgOwxFn5ud7Fv63LZt)
+ Call ID: call_b6vYGmrgOwxFn5ud7Fv63LZt
+  Args:
+    pattern: disclos.*party|receiv.*party|no right|shall not grant|interest in|confidential information.*property|remain.*property
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+a) that it shall treat the Confidential  Information directly or indirectly disclosed to it by the  Disclosing  Party as strictly confidential  and will  not without obtaining  the  prior written  consent  of the  Disclosing  Party disclose  any part of the Confidential  Information to any third  party,except where  compelled by law or regulation;
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_WrehYRQtXTYvbtj98dVPxmTH)
+ Call ID: call_WrehYRQtXTYvbtj98dVPxmTH
+  Args:
+    pattern: disclos.*party|receiv.*party|no right|shall not grant|interest in|confidential information.*property|remain.*property
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+c) disclosed to the  Receiving Party by a third party having the  right to disclose Confidential  Information  and without  restrictions  as to use or disclosure;or
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_Mu3yxWS7a80KpjVQr265gkQl)
+ Call ID: call_Mu3yxWS7a80KpjVQr265gkQl
+  Args:
+    pattern: disclos.*party|receiv.*party|no right|shall not grant|interest in|confidential information.*property|remain.*property
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Clause 4
+The  Confidential  Information shall remain the sole property of the Disclosing Party. The  Disclosing  Party makes  no representation,  warranty,  assurance,  or inducement,  express  or implied, as to the Confidential  Information's  adequacy, sufficiency,  or freedom  from  defect  of any kind, including  but not limited to, freedom  from  patent infringement  that  may result from  use of such know-how information,  nor shall the  Disclosing  Party incur any responsibility  or obligation by reason of such Confidential  Information,  except as specifically  provided herein. The  Receiving  Party shall  under no circumstances  obtain any right in the Disclosing  Party's patents, trademark  or know-how by reason of the  NDA.
+
+================================== Ai Message ==================================
+
+Entailment

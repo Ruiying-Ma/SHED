@@ -1,0 +1,32 @@
+================================ Human Message =================================
+
+HYPOTHESIS:
+Survival of obligations: Some obligations of Agreement may survive termination of Agreement.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_Y4e3ivd225HNe5802mJXY9Az)
+ Call ID: call_Y4e3ivd225HNe5802mJXY9Az
+  Args:
+    pattern: surviv
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_Vaj1NfoB0hdZSLo0H2oHHvzP)
+ Call ID: call_Vaj1NfoB0hdZSLo0H2oHHvzP
+  Args:
+    pattern: termination
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+10. Duration.This Agreement shall apply to any CONFIDENTIAL INFORMATION that may have been provided to the RECEIVING PARTY prior to or after the date hereof, and shall continue to govern the delivery of CONFIDENTIAL INFORMATION until terminated by written notice from either party to the other, except that the obligations of the parties hereunder with regard to CONFIDENTIAL INFORMATION disclosed prior to termination shall continue for a period for two (2) years thereafter.
+
+================================== Ai Message ==================================
+
+Entailment

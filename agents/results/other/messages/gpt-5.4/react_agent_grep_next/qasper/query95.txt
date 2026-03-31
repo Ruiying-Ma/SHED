@@ -1,0 +1,139 @@
+================================ Human Message =================================
+
+QUERY:
+Which translation pipelines do they use to compare against?
+
+TABLE OF CONTENTS (TOC):
+1 | XPersona: Evaluating Multilingual Personalized Chatbot Zhaojiang Lin ∗ , Zihan Liu ∗ , Genta Indra Winata ∗ , Samuel Cahyawijaya ∗ , Andrea Madotto ∗ , Yejin Bang, Etsuko Ishii, Pascale Fung Center for Artificial Intelligence Research (CAiRE)
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2 Related Work
+1.4 | 3 Data Collection
+1.5 | 4 Multilingual Personalized Conversational Models
+1.5.1 | 4.1 Model Architecture
+1.5.2 | 4.2 Training Strategy
+1.6 | 5 Experiments
+1.6.1 | 5.1 Evaluation Metrics
+1.6.2 | 5.2 Implementation Details
+1.6.3 | 5.3 Results and Discussion
+1.6.3.1 | 5.3.1 Quantitative Analysis
+1.6.3.2 | 5.3.2 Qualitative Analysis and Discussion
+1.7 | 6 Conclusion
+1.8 | References
+1.9 | A Dataset Collection
+1.9.1 | A.1 Annotation Instructions
+1.9.2 | A.2 Training Set Statistics
+1.10 | B Model Detail
+1.11 | C Human Evaluation
+1.12 | D Generated Samples
+1.12.1 | D.1 Mixed-language Samples
+1.12.2 | D.2 Model Comparison Samples
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_CeqwTRM3ZGCGNqAteaaUdWqR)
+ Call ID: call_CeqwTRM3ZGCGNqAteaaUdWqR
+  Args:
+    pattern: translation pipeline|translate|translation
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1 | Abstract
+Personalized dialogue systems are an essen- tial step toward better human-machine in- teraction. Existing personalized dialogue agents rely on properly designed conversa- tional datasets, which are mostly monolingual (e.g., English), which greatly limits the usage of conversational agents in other languages. In this paper, we propose a multi-lingual ex- tension of Persona-Chat ( Zhang et al. , 2018 ), namely XPersona.  Our dataset includes per- sona conversations in six different languages other than English for building and evaluating multilingual personalized agents. We experi- ment with both multilingual and cross-lingual trained baselines, and evaluate them against monolingual and translation-pipeline models using both automatic and human evaluation.  Experimental results show that the multilin- gual trained models outperform the translation- pipeline and that they are on par with the monolingual models, with the advantage of having a single model across multiple lan- guages. On the other hand, the state-of-the- art cross-lingual trained models achieve infe- rior performance to the other models, showing that cross-lingual conversation modeling is a challenging task.  We hope that our dataset and baselines 1 will accelerate research in multilin- gual dialogue systems.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_o4KaxUFXwsZL5fW6pNaeq5EU)
+ Call ID: call_o4KaxUFXwsZL5fW6pNaeq5EU
+  Args:
+    pattern: pipeline
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1 | Abstract
+Personalized dialogue systems are an essen- tial step toward better human-machine in- teraction. Existing personalized dialogue agents rely on properly designed conversa- tional datasets, which are mostly monolingual (e.g., English), which greatly limits the usage of conversational agents in other languages. In this paper, we propose a multi-lingual ex- tension of Persona-Chat ( Zhang et al. , 2018 ), namely XPersona.  Our dataset includes per- sona conversations in six different languages other than English for building and evaluating multilingual personalized agents. We experi- ment with both multilingual and cross-lingual trained baselines, and evaluate them against monolingual and translation-pipeline models using both automatic and human evaluation.  Experimental results show that the multilin- gual trained models outperform the translation- pipeline and that they are on par with the monolingual models, with the advantage of having a single model across multiple lan- guages. On the other hand, the state-of-the- art cross-lingual trained models achieve infe- rior performance to the other models, showing that cross-lingual conversation modeling is a challenging task.  We hope that our dataset and baselines 1 will accelerate research in multilin- gual dialogue systems.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_QDQzKvUESMRxazE9LlSHz4Q6)
+ Call ID: call_QDQzKvUESMRxazE9LlSHz4Q6
+  Args:
+    section_id: 1.6.3.1
+
+================================= Tool Message =================================
+Name: read_section
+
+5.3.1 Quantitative Analysis
+Table 3 compares monolingual, multilingual, and cross-lingual models in terms of BLEU and per- plexity in the human-translated test set. On both evaluation matrices, the causal decoder models out- perform the encoder-decoder models. We observe that the encoder-decoder model tends to overlook dialogue context and generate digressive responses. (Generated samples are available in Appendix D) We hypothesize that this is because the one-to- many problem ( Zhao et al.  , 2017 ) in open-domain conversation weakens the relation between encoder and decoder; thus the well pre-trained decoder (Bert) easily converges to a locally-optimal, and
+5 AdamW: Adam algorithm with weight decay
+6 The monolingual BERT pre-trained models are available in https://github.com/huggingface/transformers
+7 Available in https://github.com/CZWin32768/XNLG
+ learns to ignore the dialogue context from the en- coder and generate the response in an unconditional language model way. We leave the investigation of this problem to future work. On the other hand, M-CausalBert achieves a comparable or slightly better performance compared to CausalBert, which suggests that M-CausalBert leverages the data from other languages.  As expected, we observe a sig- nificant gap between the cross-lingual model and other models, which indicates that cross-lingual zero-shot conversation modeling is very challeng- ing.Table 4 shows the human evaluation result of comparing M-CausalBert (Multi) against the hu- man, translation-based Poly-encoder (Poly), and monolingual CausalBert (Mono).  The results il- lustrate that Multi outperforms Mono in English and Chinese, and is on par with Mono in other lan- guages. On the other hand, Poly shows a strong performance in English as it was pre-trained with a large-scale English conversation corpus. In con- trast, the performance of Poly drops in other lan- guages, which indicates that the imperfect transla- tion affects translation-based systems.  We also con- duct M-CausalBert (Multi) against XNLG (cross) human evaluation, and Multi achieve nearly 100 percent winning rate.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_1yox61USTwZq60WkCwHXgDRr)
+ Call ID: call_1yox61USTwZq60WkCwHXgDRr
+  Args:
+    pattern: Poly-encoder|translation-based|Poly
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.12.2 | D.2 Model Comparison Samples
+We randomly sample one self-chat dialogue exam- ples for each model in each language and report them in figure 5-37.System Persona
+System Persona
+i have two dogs. i like to work on vintage cars. my favorite music is country. i own two vintage mustangs. Dialogue Usr do you have any hobbies? En i like music, country is my favorite. you?  Zh 我 喜 欢 听 乡 村 音 乐 。 你 呢 (I like country music, you?) Fr je possède deux voitures anciennes et j’aime faire de l’artisanat (I have two vintage cars and I like to make crafts) It Ciao. mi piace lavorare su auto d’epoca e ascoltare musica country. (Hello.  I love working on vintage cars and listening to country music.) Jp こんにちは 。 私 は 大 学 にいます 、 (Hi, i really like it) Id Saya suka mendengarkan musik country, dan Anda? (I like listening to country music, and you? ) Ko ᄋ ᅡ ᆫ ᄂ ᅧ ᆼ , ᄂ ᅡ ᄂ ᅳ ᆫ ᄉ ᅥ ᆫᄉ ᅢ ᆼ ᄂ ᅵ ᆷ ᄋ ᅵᄋ ᅣ . (I have two vintage mustangs.) i love disneyland and mickey mouse.  i love to spend time with my family. i’m a baby delivery nurse. i walk three miles every day. Dialogue Usr what do you do in your free time? En i love to play with my family. how about you? Zh 我 主 要 是 在 家 里 (I just stay at home) Fr j’aime passer du temps avec ma famille et mon mari. (i love spending time with my family and my husband.) It Ciao.  Sono in pensione da quando ero un’infermiera. (Hello. I have been retired since I was a nurse.) Jp こんにちは 、 私 は 家 族 と 時 間 を 過 ごすのが 大 好 きです (Hi, i love spending time with my family) Id Saya suka berjalan 3 mil setiap hari dan Anda?  (I love walking 3 miles every day and you? ) Ko ᄋ ᅡ ᆫ ᄂ ᅧ ᆼ , ᄂ ᅡ ᄂ ᅳ ᆫ ᄀ ᅡ ᄌ ᅩ ᆨ ᄀ ᅪ ᄉ ᅵ ᄀ ᅡ ᆫ ᄋ ᅳ ᆯ ᄇ ᅩᄂ ᅢ ᄂ ᅳ ᆫ ᄀ ᅥ ᆺ ᄋ ᅳ ᆯᄌ ᅳ ᆯ ᄀ ᅵ ᆫ ᄃ ᅡ .  (Hi, I enjoy spending time with my family.)
+Table 8: One-to-many by M-CausalBert
+System Persona
+i am a cancer survivor. my parents were both very athletic. i got a new job just yesterday to be a life coach. i am a clean eater.Dialogue
+System Persona
+Usr こんにちは (Hello) Sys hey there how are you?  Usr 我 很 好 ， 我 是 一 名 学 生 ， 你 呢 ？ (I am good, I am a student, what about you?) Sys i am a full time student and have no job yet. Usr cosa Studi? (What do you study?) Sys oh i see. what are you studying? Usr l’informatique (computer science) Sys computer stuff. what is your favorite subject?  Usr i like machine learning. Sys i like to read and make fun of things. Usr Apa pekerjaan orang tuamu? (what do your parents do?) Sys i’m from cali, my parents were both athletic. Usr ᄋ ᅡ ᆫ ᄂ ᅧ ᆼ (Hello) Sys hello, how are you?  Usr 我 很 好 ， 刚刚 下 班 回 家 (I am good, just came home from work) Sys oh, cool. what do you do for work? Usr Sono un insegnante di inglese (I am English teacher.) Sys oh, that’s awesome! i hope to get a job soon. Usr quel âge avez-vous? (how old are you? ) Sys oh ok.  i’m only 13, but my brother is older than me Usr Apakah Anda pelajar? (are you a student?) Sys do you play soccer? i am a football player Usr no, i like to read Sys i like to ride the bus and play soccer
+my brother is older than me. i ride the bus to school. i’m on the soccer team. i am 13 years old.Dialogue
+ Table 9: Many-to-one by M-CausalBert
+i have a car that i like to use. do you have any hobbies? i do gardening, i love to garden i've five sons. they're my best friends. i have a husband, but he is trying to get me in shape how long have you been married? i have been married for over 6 years, but i am not a huge fan of clowns oh i see. do you have kids?  no, i work in a gas station, i work with my hands and have lots of friends oh. i like to coach little league baseball. i love to garden, i'm afraid of clowns due to childhood trauma Figure 5: English CausalBert nice, what are you studying in? i'm in school in my twenties. what about you? i'm a third grade student in college that's great! i love math. do you work?  no i just sing songs from the movie frozen that sounds fun. i just got back from school for chemistry. i like to sing in the way that i love singing songs from the movie frozen what kind of songs do you sing? i sing with mickey mouse every year, it is my favorite character that is cool. i have never heard of that song. not really , art is really the only thing i like doing . do you hike or surf ? i do both with my border collies .  other than my saturday routines on gettin my nails done , i love hiking nice ! i am getting ready for a big move in a couple months , going to california . i love cali , was just there a month ago with my family in san diego ? i am going to be moving there in a few months . yes ! i have been there a few times , nice place it really is ! san diego is expensive , but it looks great .  it is little expensive for some , but still cheaper than in some major cities Figure 7: English PolyEncoder i don't have any pets. i've a cat named toto. i am a student. what do you do? hi! i'm doing well. just got done shopping. i'm not sure. i'm too old for that. i'm a graphic designer. i want to be an artist one day. i am a girl. what do you do for work?  what do you do for work? i'm a computer programmer i like to eat junk food i am more of a beach type person. i'm a scientist.Figure 6: English M-CausalBert
+Figure 8: English M-Bert2Bert
+Figure 10: Chinese M-CausalBert
+Figure 12: Chinese M-Bert2Bert
+Figure 13: Chinese CrossLingual
+Figure 14: Italian CausalBert
+ Figure 15: Italian M-CausalBert
+Figure 16: Italian PolyEncoder
+Figure 17: Italian M-Bert2Bert
+Figure 18: Italian CrossLingual
+Figure 19: France CausalBert
+Figure 20: France M-CausalBert
+cool ! je regarde un film avec ma petite fille cool !  je regarde un film avec ma petite fille je ne peux pas attendre halloween pour que je puisse m'habiller as-tu un groupe préféré? les mines sont en tête de ligne je les aime tous, mais dernièrement mes filles m'ont fait du mal agréable ! j'ai ma propre agence de conseil en marketing, bien que petite ukr!  depuis la fin de la dernière saison, je vais chasser pour tuer le temps maintenant ukr! depuis la fin de la dernière saison, je vais chasser pour tuer le temps maintenant même ! mes filles sont trop jeunes pour aller à la chasse. Figure 21: France PolyEncoder iya nih! j'ai des cheveux bruns, mais je suis un peu j'aime la couleur bleue et le bleu. Je ne sais pas.  j'aime les chiens, mais je ne les ai pas, haha! je n'ai pas encore été touché par l'ouragan iya nih. je suis végétalien donc je mange beaucoup de viande. la musique country est cool. aimez - vous écouter de la musique? i'm en train de regarder les yeux verts, j'adore le vert c'est super.  je suis un étudiant à temps plein stephen king est un grand auteur. j'ai un cheval, il est mon meilleur ami. iya nih. je suis en train de me réveiller et de me détend i 'm a country . i 'm a my mari adopt. oh , i 'm a country . i 'm a country ? oh , i 'm a country . i 'm a my dog de berger .  oh , i 'm a country . i 'm a country ? Figure 23: France CrossLingual 私はあなたがすることを望みます ! 私はバーガーキングで 働いています。 ペットのカメがいますか いいえ、しません。あなたは ? 私は 4 歳です いいね !  私は 19 歳で、両親の家に引っ越すのを待ちきれま せん。 私の親友は隣に住んでいます 私はちょうどバーガーキングでアルバイトをしています。 私はペットのカメの⼈です 私は 19 歳です。ペットのカメを飼うことはできません。 ああ、私はあなたが何歳かを持っていると思います
+ Figure 22: France M-Bert2Bert
+Figure 24: Japanese CausalBert
+Figure 25: Japanese M-CausalBert
+Figure 26: Japanese PolyEncoder
+Figure 27: Japanese M-Bert2Bert
+Figure 28: Japanese CrossLingual
+Figure 30: Korean M-CausalBert
+Figure 31: Korean PolyEncoder
+Figure 32: Korean M-Bert2Bert
+ Figure 33: Indonesian CausalBert
+Figure 34: Indonesian M-CausalBert
+Figure 35: Indonesian PolyEncoder
+Figure 36: Indonesian M-Bert2Bert
+saya juga bertukar untuk menjadi perawat sukarang dan mata biru . di waktu luang i pernah melakukan pekerjaan sukarela . i am a lot to have a sukarawat .  i have a lot of sukarang and i have been doing a sukaren with my own friends . i love to live at the night . i have been working in a sukarela at night to pay for a sukarela . di waktu luang i pernah melakukan pekerjaan sukarela . i have been menikmati di sekitar orang sukarela . i have been a lot of sukarela .  i have been in the place to have a lot of sukarela and i have been a sukarela at the night .Figure 37: Indonesian CrossLingual
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_LuAGVWKm63ocqpznCwxmZBY2)
+ Call ID: call_LuAGVWKm63ocqpznCwxmZBY2
+  Args:
+    section_id: 1.6.2
+
+================================= Tool Message =================================
+Name: read_section
+
+5.2 Implementation Details
+Multilingual Models We use the "BERT-Base, Multilingual Cased" checkpoint, and we denote the multilingual encoder-decoder model as M- Bert2Bert ( ∼ 220M parameters) and causal de- coder model as M-CausalBert ( ∼ 110M param- eters). We fine-tune both models in the combined training set (English in Persona-chat ( Zhang et al.  , 2018 ), six languages in Xpersona) for five epochs with AdamW 5 optimizer and a learning rate of 6 . 25 e - 5 .Monolingual Models To verify whether the mul- tilingual agent will under-perform the monolingual agent in the monolingual conversational task, we build a monolingual encoder-decoder model and causal decoder model for each language.  For a fair comparison, we initialize the monolingual models with a pre-trained monolingual BERT 6 ( Devlin et al. , 2018 ; Cui et al. , 2019 ; Martin et al. , 2019 ). We denote the monolingual encoder-decoder model as Bert2Bert ( ∼ 220M parameters) and causal de- coder model as CausalBert ( ∼ 110M parameters).  Then we fine-tune each model in each language independently for the same number of epoch and optimizer as the multilingual model.Translation-based Models Another strong base- line we compare with is Poly-encoder ( Humeau et al. , 2019 ), a large-scale pre-trained retrieval model that has shown state-of-the-art performance in the English Persona-chat dataset ( Li et al. , 2019 ). We adapt this model to the other languages by us- ing the Google Translate API to translate target lan- guages (e.g., Chinese) query to English as the input to the model, then translate the English response back to the target language. Thus, the response generation flow is: target query → English query → English response → target response. We denote this model as Poly .Cross-lingual Models.  In the first pre-training stage, we use the pre-trained weights from XLMR- base ( Conneau et al. , 2019 ). Then, we follow the second pre-training stage of XNLG ( Chi et al. , 2019 ) for pre-training Italian, Japanese, Korean, Indonesia cross-lingual transferable models. For Chinese and French, we directly apply the pre- trained XNLG ( Chi et al. , 2019 ) weights 7 .  Then, the pre-trained models are fine-tune on English Per- sonaChat training set and early stop based on the perplexity on target language validation set.
+
+================================== Ai Message ==================================
+
+They compare against a translation-based Poly-encoder baseline. It translates the target-language query into English, feeds it to the English Poly-encoder, then translates the English response back to the target language: target query → English query → English response → target response.

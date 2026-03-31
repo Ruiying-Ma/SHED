@@ -1,0 +1,73 @@
+================================ Human Message =================================
+
+QUERY:
+By how much do they outperform state-of-the-art models on knowledge graph completion?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_HRzD20jkDsjecpRwQe4Z3RPv)
+ Call ID: call_HRzD20jkDsjecpRwQe4Z3RPv
+  Args:
+    pattern: knowledge graph completion|state-of-the-art|outperform
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+In this paper, we introduce an embedding model, named CapsE, exploring a capsule net- work to model relationship triples (subject, re- lation, object) . Our CapsE represents each triple as a 3-column matrix where each col- umn vector represents the embedding of an element in the triple. This 3-column matrix is then fed to a convolution layer where mul- tiple filters are operated to generate different feature maps.  These feature maps are recon- structed into corresponding capsules which are then routed to another capsule to produce a continuous vector. The length of this vector is used to measure the plausibility score of the triple. Our proposed CapsE obtains better performance than previous state-of-the-art em- bedding models for knowledge graph comple- tion on two benchmark datasets WN18RR and FB15k-237, and outperforms strong search personalization baselines on SEARCH17.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_msAvGcozaw4S2eY8GEgcE4hd)
+ Call ID: call_msAvGcozaw4S2eY8GEgcE4hd
+  Args:
+    pattern: WN18RR|FB15k-237|knowledge graph completion
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+In this paper, we introduce an embedding model, named CapsE, exploring a capsule net- work to model relationship triples (subject, re- lation, object) . Our CapsE represents each triple as a 3-column matrix where each col- umn vector represents the embedding of an element in the triple. This 3-column matrix is then fed to a convolution layer where mul- tiple filters are operated to generate different feature maps.  These feature maps are recon- structed into corresponding capsules which are then routed to another capsule to produce a continuous vector. The length of this vector is used to measure the plausibility score of the triple. Our proposed CapsE obtains better performance than previous state-of-the-art em- bedding models for knowledge graph comple- tion on two benchmark datasets WN18RR and FB15k-237, and outperforms strong search personalization baselines on SEARCH17.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_h0NARvuqt7SPjvvfueMNMO36)
+ Call ID: call_h0NARvuqt7SPjvvfueMNMO36
+  Args:
+    pattern: Table .*WN18RR|Table .*FB15k-237|MRR|Hits@10|state-of-the-art
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+In this paper, we introduce an embedding model, named CapsE, exploring a capsule net- work to model relationship triples (subject, re- lation, object) . Our CapsE represents each triple as a 3-column matrix where each col- umn vector represents the embedding of an element in the triple. This 3-column matrix is then fed to a convolution layer where mul- tiple filters are operated to generate different feature maps.  These feature maps are recon- structed into corresponding capsules which are then routed to another capsule to produce a continuous vector. The length of this vector is used to measure the plausibility score of the triple. Our proposed CapsE obtains better performance than previous state-of-the-art em- bedding models for knowledge graph comple- tion on two benchmark datasets WN18RR and FB15k-237, and outperforms strong search personalization baselines on SEARCH17.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_ucZccEZ9Fin8wFiXAlr1WzLn)
+ Call ID: call_ucZccEZ9Fin8wFiXAlr1WzLn
+  Args:
+    pattern: FB15k-237
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+In this paper, we introduce an embedding model, named CapsE, exploring a capsule net- work to model relationship triples (subject, re- lation, object) . Our CapsE represents each triple as a 3-column matrix where each col- umn vector represents the embedding of an element in the triple. This 3-column matrix is then fed to a convolution layer where mul- tiple filters are operated to generate different feature maps.  These feature maps are recon- structed into corresponding capsules which are then routed to another capsule to produce a continuous vector. The length of this vector is used to measure the plausibility score of the triple. Our proposed CapsE obtains better performance than previous state-of-the-art em- bedding models for knowledge graph comple- tion on two benchmark datasets WN18RR and FB15k-237, and outperforms strong search personalization baselines on SEARCH17.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_5k6F19w6GFvSpKoO6S7IOJCi)
+ Call ID: call_5k6F19w6GFvSpKoO6S7IOJCi
+  Args:
+    pattern: WN18RR
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+In this paper, we introduce an embedding model, named CapsE, exploring a capsule net- work to model relationship triples (subject, re- lation, object) . Our CapsE represents each triple as a 3-column matrix where each col- umn vector represents the embedding of an element in the triple. This 3-column matrix is then fed to a convolution layer where mul- tiple filters are operated to generate different feature maps.  These feature maps are recon- structed into corresponding capsules which are then routed to another capsule to produce a continuous vector. The length of this vector is used to measure the plausibility score of the triple. Our proposed CapsE obtains better performance than previous state-of-the-art em- bedding models for knowledge graph comple- tion on two benchmark datasets WN18RR and FB15k-237, and outperforms strong search personalization baselines on SEARCH17.
+
+================================== Ai Message ==================================
+
+Unanswerable

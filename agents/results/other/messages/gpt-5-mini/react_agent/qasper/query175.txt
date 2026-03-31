@@ -1,0 +1,34 @@
+================================ Human Message =================================
+
+QUERY:
+How many users does their dataset have?
+
+TABLE OF CONTENTS (TOC):
+1 | Automated Hate Speech Detection and the Problem of Offensive Language ∗ 1 2 1,3 4
+1.1 | Abstract
+1.2 | Introduction
+1.3 | Related Work
+1.4 | Data
+1.5 | Features
+1.6 | Model
+1.7 | Results
+1.8 | Conclusions
+1.9 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_f4mcKC8c5DYA5dUlRGEKEZJx)
+ Call ID: call_f4mcKC8c5DYA5dUlRGEKEZJx
+  Args:
+    section_id: 1.4
+
+================================= Tool Message =================================
+Name: read_section
+
+Data
+We begin with a hate speech lexicon containing words and phrases identified by internet users as hate speech, com- piled by Hatebase.org . Using the Twitter API we searched for tweets containing terms from the lexicon, resulting in a sample of tweets from 33,458 Twitter users. We extracted the time-line for each user, resulting in a set of 85.4 mil- lion tweets.  From this corpus we then took a random sam- ple of 25k tweets containing terms from the lexicon and had them manually coded by CrowdFlower (CF) workers. Work- ers were asked to label each tweet as one of three categories: hate speech, offensive but not hate speech, or neither offen- sive nor hate speech. They were provided with our defini- tion along with a paragraph explaining it in further detail.  Users were asked to think not just about the words appear- ing in a given tweet but about the context in which they were used. They were instructed that the presence of a particular word, however offensive, did not necessarily indicate a tweet is hate speech. Each tweet was coded by three or more peo- ple. The intercoder-agreement score provided by CF is 92%. We use the majority decision for each tweet to assign a la- bel.  Some tweets were not assigned labels as there was no majority class. This results in a sample of 24,802 labeled tweets.Only 5% of tweets were coded as hate speech by the ma- jority of coders and only 1.3% were coded unanimously, demonstrating the imprecision of the Hatebase lexicon. This
+is much lower than a comparable study using Twitter, where 11. 6% of tweets were flagged as hate speech (Burnap and Williams 2015), likely because we use a stricter criteria for hate speech. The majority of the tweets were considered to be offensive language (76% at 2/3, 53% at 3/3) and the remainder were considered to be non-offensive (16.6% at 2/3, 11.8% at 3/3).  We then constructed features from these tweets and used them to train a classifier.
+
+================================== Ai Message ==================================
+
+33,458 Twitter users.

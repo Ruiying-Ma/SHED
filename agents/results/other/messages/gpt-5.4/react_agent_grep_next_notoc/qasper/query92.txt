@@ -1,0 +1,60 @@
+================================ Human Message =================================
+
+QUERY:
+How did they select the 50 languages they test?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_WCTF9qtgFGymwRg6JzeGeibU)
+ Call ID: call_WCTF9qtgFGymwRg6JzeGeibU
+  Args:
+    pattern: 50 languages|fifty languages|selected.*languages|test.*languages|language selection|50
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+The recently proposed massively multilin- gual neural machine translation (NMT) sys- tem has been shown to be capable of trans- lating over 100 languages to and from En- glish within a single model ( Aharoni et al. , 2019 ). Its improved translation performance on low resource languages hints at poten- tial cross-lingual transfer capability for down- stream tasks.  In this paper, we evaluate the cross-lingual effectiveness of representations from the encoder of a massively multilingual NMT model on 5 downstream classification and sequence labeling tasks covering a di- verse set of over 50 languages. We compare against a strong baseline, multilingual BERT (mBERT) ( Devlin et al. , 2018 ), in different cross-lingual transfer learning scenarios and show gains in zero-shot transfer in 4 out of these 5 tasks.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_1lIvDe9Fh9umCplY3Ift7I7I)
+ Call ID: call_1lIvDe9Fh9umCplY3Ift7I7I
+  Args:
+    pattern: covering a diverse set of over 50 languages|languages.*tasks|We evaluate.*50 languages|dataset
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+The recently proposed massively multilin- gual neural machine translation (NMT) sys- tem has been shown to be capable of trans- lating over 100 languages to and from En- glish within a single model ( Aharoni et al. , 2019 ). Its improved translation performance on low resource languages hints at poten- tial cross-lingual transfer capability for down- stream tasks.  In this paper, we evaluate the cross-lingual effectiveness of representations from the encoder of a massively multilingual NMT model on 5 downstream classification and sequence labeling tasks covering a di- verse set of over 50 languages. We compare against a strong baseline, multilingual BERT (mBERT) ( Devlin et al. , 2018 ), in different cross-lingual transfer learning scenarios and show gains in zero-shot transfer in 4 out of these 5 tasks.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_YZqQ7vtSgfxfO2lpmrkfDeWv)
+ Call ID: call_YZqQ7vtSgfxfO2lpmrkfDeWv
+  Args:
+    pattern: languages include|We use .* languages|Table .* languages|XNLI|MLDoc|POS|NER|PAWS-X|50
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+The recently proposed massively multilin- gual neural machine translation (NMT) sys- tem has been shown to be capable of trans- lating over 100 languages to and from En- glish within a single model ( Aharoni et al. , 2019 ). Its improved translation performance on low resource languages hints at poten- tial cross-lingual transfer capability for down- stream tasks.  In this paper, we evaluate the cross-lingual effectiveness of representations from the encoder of a massively multilingual NMT model on 5 downstream classification and sequence labeling tasks covering a di- verse set of over 50 languages. We compare against a strong baseline, multilingual BERT (mBERT) ( Devlin et al. , 2018 ), in different cross-lingual transfer learning scenarios and show gains in zero-shot transfer in 4 out of these 5 tasks.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_yWyNVZIBD20qh4my08e0FtH6)
+ Call ID: call_yWyNVZIBD20qh4my08e0FtH6
+  Args:
+    pattern: Table 1|Table 2|Table 3|Appendix|language
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+The recently proposed massively multilin- gual neural machine translation (NMT) sys- tem has been shown to be capable of trans- lating over 100 languages to and from En- glish within a single model ( Aharoni et al. , 2019 ). Its improved translation performance on low resource languages hints at poten- tial cross-lingual transfer capability for down- stream tasks.  In this paper, we evaluate the cross-lingual effectiveness of representations from the encoder of a massively multilingual NMT model on 5 downstream classification and sequence labeling tasks covering a di- verse set of over 50 languages. We compare against a strong baseline, multilingual BERT (mBERT) ( Devlin et al. , 2018 ), in different cross-lingual transfer learning scenarios and show gains in zero-shot transfer in 4 out of these 5 tasks.
+
+================================== Ai Message ==================================
+
+Unanswerable

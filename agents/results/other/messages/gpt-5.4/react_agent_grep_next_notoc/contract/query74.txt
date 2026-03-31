@@ -1,0 +1,33 @@
+================================ Human Message =================================
+
+HYPOTHESIS:
+Survival of obligations: Some obligations of Agreement may survive termination of Agreement.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_dhmRr2z4ou18iCPPdaSSRfTf)
+ Call ID: call_dhmRr2z4ou18iCPPdaSSRfTf
+  Args:
+    pattern: surviv|termination|terminate|obligations
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+DISCUSSION
+It became apparent during these negotiations that HRM staff needed to be made aware of certain key terms of the PNS’ agreement with its SAP service provider in order to understand and be in a position to negotiate for appropriate service level standards.  The PNS has taken the position that it  cannot  disclose  this  and  other  information  to  HRM  unless  HRM  and  the  PNS  enter  into  a mutual Non-Disclosure Agreement. On July 26, 2013, the PNS forwarded a proposed Non-Disclosure Agreement to staff.  This Non- Disclosure  Agreement  permits  the  PNS  and  HRM  to  disclose  confidential  information  to  each other during the period of negotiations.   Any confidential information exchanged between HRM and the PNS “shall only be used for the purposes of facilitating the business relationship between the Parties” and once the agreement terminates each party must “promptly return or destroy” all confidential information received from the other party.It is the intention of HRM and the PNS to execute an agreement for the provision of SAP support services  before  September  9,  2013.     As  a  result,  staff  is  seeking  direction  on  this  matter  from Regional  Council  on  August  6,  2013,  rather  than  waiting  for  the  next  scheduled  meeting  of Regional Council on September 10, 2013.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_U8ewsyGYVEFQE1n6VF8lM2dw)
+ Call ID: call_U8ewsyGYVEFQE1n6VF8lM2dw
+  Args:
+    pattern: surviv
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+9.This  Agreement  will  terminate  on  the  date  and  time  the  Agreement  between  the  Parties  over  the provision  of  SAP  Services  is  terminated.     In  the  event  this  Agreement  is  terminated,  and  the Disclosing  Party  so  requests,  the  Receiving  Party  shall  promptly  return  or  destroy  (and  certify destruction of) all Confidential Information which it received from the  Disclosing Party along with all copies.   The obligations of the Receiving Party under this Agreement shall survive the termination of this Agreement or the return of the Confidential Information to the Disclosing Party.
+
+================================== Ai Message ==================================
+
+Entailment

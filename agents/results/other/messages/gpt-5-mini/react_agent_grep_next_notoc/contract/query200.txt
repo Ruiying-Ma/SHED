@@ -1,0 +1,171 @@
+================================ Human Message =================================
+
+HYPOTHESIS:
+Notice on compelled disclosure: Receiving Party shall notify Disclosing Party in case Receiving Party is required by law, regulation or judicial process to disclose any Confidential Information.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_UDjOj1CiLkmLMksDmBPiT20U)
+ Call ID: call_UDjOj1CiLkmLMksDmBPiT20U
+  Args:
+    pattern: required by law|compelled|judicial|regulation|notify|notice|required by|subpoena|disclose any Confidential Information
+    }EOF:
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Tool 'grep_search_next' failed after 1 attempt with TypeError: grep_search_next() got an unexpected keyword argument '}EOF'. Please try again.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_ixiRoR70CpFXQmKEj9TUvdBT)
+ Call ID: call_ixiRoR70CpFXQmKEj9TUvdBT
+  Args:
+    pattern: required by law|compelled|judicial|regulation|notify|notice|required by|subpoena|disclose any Confidential Information
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+11.1 Any notice or other communication to be given under this Agreement shall be in writing in English and signed by or on behalf of the Party giving it (or its representative) and shall be delivered by hand to the address or sent by fax to the fax number given in clause 11.2 (or such other address or fax number as the receiving Party has specified to the sending Party on at least 10 (ten) Business Days’ notice).
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_Z9k1VyHc5I3hPUHSfQQcruXZ)
+ Call ID: call_Z9k1VyHc5I3hPUHSfQQcruXZ
+  Args:
+    pattern: required by law|compelled|judicial|regulation|subpoena|court|disclos
+    }EOF:
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Tool 'grep_search_next' failed after 1 attempt with TypeError: grep_search_next() got an unexpected keyword argument '}EOF'. Please try again.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_9szgEqeTAVEjowGeVoEhb8dW)
+ Call ID: call_9szgEqeTAVEjowGeVoEhb8dW
+  Args:
+    pattern: required by law|compelled|judicial|regulation|subpoena|court|disclos
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+B.In order to facilitate those discussions the Parties may wish to disclose to each other certain Confidential Information (as herein defined).
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_DyogNNTUbzL79AR2EOuz2fUj)
+ Call ID: call_DyogNNTUbzL79AR2EOuz2fUj
+  Args:
+    pattern: disclos* Confidential Information|disclose any Confidential Information|compel|compelled|required by law|regulation|judicial|subpoena|court|notify Disclosing Party|notify|notice to Disclosing Party
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+14.1 The Parties irrevocably agree that the English courts shall have the exclusive jurisdiction to settle any dispute arising out of or in connection with this Agreement. Each Party agrees to waive any objection to the English courts, whether on the grounds of venue, or on the grounds that the forum is not appropriate.Signed by the Parties or their duly authorised representatives
+ Ready4S, Ltd Client: Suite 18 Equity Chambers, 249 High Street North, BH15 1DX Poole Address: Sign: Sign: Name: Mateusz Stanuszek Name: Effective Date:
+6
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_RTYEZ4GbbfsC5pFOby13BncS)
+ Call ID: call_RTYEZ4GbbfsC5pFOby13BncS
+  Args:
+    pattern: law|legal|required by|required to|court order|order of any court|statutory|compelled|subpoena|process
+    }EOF:
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Tool 'grep_search_next' failed after 1 attempt with TypeError: grep_search_next() got an unexpected keyword argument '}EOF'. Please try again.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_F6Vmt42B69depUlZKLZIdYiE)
+ Call ID: call_F6Vmt42B69depUlZKLZIdYiE
+  Args:
+    pattern: law|legal|required by|required to|court order|order of any court|statutory|compelled|subpoena|process
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+13.1 These terms and conditions shall be governed by and construed in all respects in accordance with the laws of England.5
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_bfXJX0ZlIwUW64sjtRnyIm6W)
+ Call ID: call_bfXJX0ZlIwUW64sjtRnyIm6W
+  Args:
+    pattern: Confidential|confidential|Confidential Information|confidential information
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+B.In order to facilitate those discussions the Parties may wish to disclose to each other certain Confidential Information (as herein defined).
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_djgutRbc3BBI3stTF4eXJx9D)
+ Call ID: call_djgutRbc3BBI3stTF4eXJx9D
+  Args:
+    pattern: required
+    }EOF:
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Tool 'grep_search_next' failed after 1 attempt with TypeError: grep_search_next() got an unexpected keyword argument '}EOF'. Please try again.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_U8QBbRxic5lCF09gNlYUan59)
+ Call ID: call_U8QBbRxic5lCF09gNlYUan59
+  Args:
+    pattern: required
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+4.1 A Receiving Party shall only disclose or reveal any Confidential Information disclosed to it to those of its Personnel who are required in the course of their duties to receive and consider the same in so far as is necessary to fulfil the Purpose.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_3jUfGWMRAYISRq1IQvUYCn3V)
+ Call ID: call_3jUfGWMRAYISRq1IQvUYCn3V
+  Args:
+    pattern: disclose
+    }EOF:
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Tool 'grep_search_next' failed after 1 attempt with TypeError: grep_search_next() got an unexpected keyword argument '}EOF'. Please try again.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_oMnarnzxum3EpTU1mhPAaq3o)
+ Call ID: call_oMnarnzxum3EpTU1mhPAaq3o
+  Args:
+    pattern: disclose
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+B.In order to facilitate those discussions the Parties may wish to disclose to each other certain Confidential Information (as herein defined).
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_GUyTKvI6ISQsb7Srq0H8Gub7)
+ Call ID: call_GUyTKvI6ISQsb7Srq0H8Gub7
+  Args:
+    pattern: Receiving Party shall notify|notify Disclosing|notify the Disclosing|notify the Disclosing Party|notice on compelled|notify Disclosing Party|compelled disclosure
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+(iv) that Confidential Information has been requested or received,unless required to do so by law or by the order or ruling of a Court or tribunal or regulatory body or recognised stock exchange of competent jurisdiction, in which case, if the Receiving Party is required to disclose such Confidential Information it shall, unless prohibited from doing so, notify the Disclosing Party promptly in writing of that fact and, in any event, prior to making such disclosure.
+
+================================== Ai Message ==================================
+
+Entailment

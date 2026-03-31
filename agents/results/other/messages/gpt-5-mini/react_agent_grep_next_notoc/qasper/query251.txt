@@ -1,0 +1,87 @@
+================================ Human Message =================================
+
+QUERY:
+What type of nerual keyphrase generation models are trained?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_olImK6jSHsJdx7Jrag47SIPW)
+ Call ID: call_olImK6jSHsJdx7Jrag47SIPW
+  Args:
+    pattern: neural keyphrase
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Keyphrase generation is the task of predicting a set of lexical units that conveys the main content of a source text. Existing datasets for keyphrase generation are only readily available for the scholarly domain and in- clude non-expert annotations. In this paper we present KPTimes , a large-scale dataset of news texts paired with editor-curated keyphrases. Exploring the dataset, we show how editors tag documents, and how their annotations differ from those found in ex- isting datasets.  We also train and evaluate state-of-the-art neural keyphrase genera- tion models on KPTimes to gain insights on how well they perform on the news domain. The dataset is available online at https://github.com/ygorg/KPTimes .
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_tmro2xADaKgdeqV2WtoP5xEu)
+ Call ID: call_tmro2xADaKgdeqV2WtoP5xEu
+  Args:
+    pattern: trained and evaluate|train and evaluate|We also train|trained on KPTimes|models on KPTimes|state-of-the-art neural
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Keyphrase generation is the task of predicting a set of lexical units that conveys the main content of a source text. Existing datasets for keyphrase generation are only readily available for the scholarly domain and in- clude non-expert annotations. In this paper we present KPTimes , a large-scale dataset of news texts paired with editor-curated keyphrases. Exploring the dataset, we show how editors tag documents, and how their annotations differ from those found in ex- isting datasets.  We also train and evaluate state-of-the-art neural keyphrase genera- tion models on KPTimes to gain insights on how well they perform on the news domain. The dataset is available online at https://github.com/ygorg/KPTimes .
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_iIBi1bCMdZt8BABReDpogrgD)
+ Call ID: call_iIBi1bCMdZt8BABReDpogrgD
+  Args:
+    pattern: neural keyphrase generation models|neural keyphrase|generation models|state-of-the-art|Seq2Seq
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Keyphrase generation is the task of predicting a set of lexical units that conveys the main content of a source text. Existing datasets for keyphrase generation are only readily available for the scholarly domain and in- clude non-expert annotations. In this paper we present KPTimes , a large-scale dataset of news texts paired with editor-curated keyphrases. Exploring the dataset, we show how editors tag documents, and how their annotations differ from those found in ex- isting datasets.  We also train and evaluate state-of-the-art neural keyphrase genera- tion models on KPTimes to gain insights on how well they perform on the news domain. The dataset is available online at https://github.com/ygorg/KPTimes .
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_HYgtRPzuiYTjuDW2tT5XVrCy)
+ Call ID: call_HYgtRPzuiYTjuDW2tT5XVrCy
+  Args:
+    pattern: Seq2Seq|seq2seq|CopyRNN|CopyNet|pointer|pointer-generator|RNN|Transformer|GRU|LSTM|Copy|generative models|neural
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Keyphrase generation is the task of predicting a set of lexical units that conveys the main content of a source text. Existing datasets for keyphrase generation are only readily available for the scholarly domain and in- clude non-expert annotations. In this paper we present KPTimes , a large-scale dataset of news texts paired with editor-curated keyphrases. Exploring the dataset, we show how editors tag documents, and how their annotations differ from those found in ex- isting datasets.  We also train and evaluate state-of-the-art neural keyphrase genera- tion models on KPTimes to gain insights on how well they perform on the news domain. The dataset is available online at https://github.com/ygorg/KPTimes .
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_9m4KvhEMhDqLAsL4vwPONkQn)
+ Call ID: call_9m4KvhEMhDqLAsL4vwPONkQn
+  Args:
+    pattern: We train
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+5 Performance of existing models
+We train and evaluate several keyphrase genera- tion models to understand the challenges of KPTi- mes and its usefulness for training models.
+5.1 Evaluation metrics
+We follow the common practice and evaluate the performance of each model in terms of f-measure (F 1 ) at the top N = 10 keyphrases, and apply stemming to reduce the number of mismatches. We also report the Mean Average Precision (MAP) scores of the ranked lists of keyphrases.
+5.2 Models
+Baseline: FirstPhrase
+Position is a strong feature for keyphrase extrac- tion, simply because texts are usually written so that the most important ideas go first ( Marcu , 1997 ). In news summarization for example, the lead baseline –that is, the first sentences from the document–, while incredibly simple, is still a com- petitive baseline ( Kedzie et al. , 2018 ).  Similar to the lead baseline, we compute the FirstPhrases baseline that extracts the first N keyphrase candi- dates 8 from a document.
+Baseline, unsupervised: MultipartiteRank
+The second baseline we consider, MultipartiteR- ank ( Boudin , 2018 ), represents the state-of-the- art in unsupervised graph-based keyphrase extrac- tion. It relies on a multipartite graph represen- tation to enforce topical diversity while ranking keyphrase candidates. Just as FirstPhrases, this model is bound to the content of the document and cannot generate missing keyphrases.  We use the implementation of MultipartiteRank available in pke 9 ( Boudin , 2016 ).
+State-of-the-art, supervised: CopyRNN
+The generative neural model we include in this study is CopyRNN ( Meng et al. , 2017 ), an encoder-decoder model that incorporates a copy- ing mechanism ( Gu et al. , 2016 ) in order to be able to generate phrases that rarely occur. When properly trained, this model was shown to be very effective in extracting keyphrases from scientific abstracts. CopyRNN has been further extended by ( Chen et al.  , 2018 ) to include correlation con- straints among keyphrases which we do not in- clude here as it yields comparable results.Two models were trained to bring evidence on the necessity to have datasets from multiple do- mains. CopySci was trained using scientific ab- stracts (KP20k) and CopyNews using newspaper articles ( KPTimes ), the two models use the same architecture.
+5.3 Results
+Model performances for each dataset are reported in Table 2 . Extractive baselines show the best re- sults for KPCrowd and DUC-2001 which is not surprising given that these datasets exhibit the
+8 Sequences of adjacent nouns with one or more preceding adjectives of length up to five words. 9 https://github.com/boudinfl/pke
+ KPCrowd DUC KPTimes JPTimes SemEval KP20k F @10 MAP F @10 MAP F @10 MAP F @10 MAP F @10 MAP F @10 MAP FirstPhrases 17.1 16.5 24.6 22.3 9.2 8.4 13.5 13.1 13.8 10.5 13.5 12.6 MultipartiteRank 18. 2 17.0 25.6 24.9 11.2 10.1 16.9 16.5 14.3 10.6 13.6 13.3 CopySci 15.5 11.1 12.7 9.7 11.0 10.6 18.9 19.8 20.3 13.8 25.4 28.7 CopyNews 8. 4 4.2 10.5 7.2 39.3 50.9 24.6 26.5 7.0 3.5 6.6 5.1
+Table 2: Performance on benchmark datasets composed of newspaper article, full scientific article and scientific article abstract. The generation models CopySci and CopyNews were trained respectively on KP20k and KPTimes . The dataset presented in this work are written in italic. lowest ratio of absent keyphrases. Neural-based models obtain the greatest performance, but only for the dataset on which they were trained. We therefore see that these models do not general- ize well across domains, confirming previous pre- liminary findings ( Meng et al. , 2017 ) and exacer- bating the need for further research on this topic.  Interestingly, CopyNews outperforms the other models on JPTimes and achieves very low scores for KPCrowd and DUC-2001, although all these datasets are from the same domain. This empha- sizes the differences that exist between the reader- and editor-assigned gold standard.  The score dif- ference may be explained by the ratio of absent keyphrases that differs greatly between the reader- annotated datasets and JPTimes (see Table 1 ), and thus question the use of these rather extractive datasets for evaluating keyphrase generation.Finally, we note that the performance of Copy- News on KPTimes is significantly higher than that of CopySci on KP20k, proving that a more uni- form and consistent annotation makes it easier to learn a good model.
+
+================================== Ai Message ==================================
+
+Generative encoder-decoder CopyRNN models with a copying mechanism: CopySci trained on KP20k (scientific abstracts) and CopyNews trained on KPTimes (newspaper articles).

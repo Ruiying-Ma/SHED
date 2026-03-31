@@ -1,0 +1,74 @@
+================================ Human Message =================================
+
+HYPOTHESIS:
+Inclusion of verbally conveyed information: Confidential Information may include verbally conveyed information.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_o5jRPT3ABUBFGFdwai9kvk8q)
+ Call ID: call_o5jRPT3ABUBFGFdwai9kvk8q
+  Args:
+    pattern: verbal|verbally|oral|orally|written|Confidential Information
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+7. DISCLOSURES REQUIRED BY LAW. If Recipient is requested,ordered or required by a regulatory agency or any other  government  authority  or  a  court to disclose any Confidential Information, Recipient shall promptly notify Disclosing Party of such request, order or requirement so that Disclosing Party may have the opportunity to contest the disclosure,  including  seeking  a protective order,  or waive Recipient’s compliance with this Agreement.   If Recipient is (in the opinion of its counsel) compelled to disclose any Confidential Information, or else be liable for contempt or other  penalty  or be subject to claims from a third party, Recipient may disclose such Confidential Information without liability under this Agreement.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_8PpAGu8NpG1iIjUwYK4YHIuO)
+ Call ID: call_8PpAGu8NpG1iIjUwYK4YHIuO
+  Args:
+    pattern: Confidential Information means|definition of Confidential Information|Confidential Information shall mean|confidential information includes|oral|orally|verbally
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+8. EXPORT LAWS. Neither party shall export, directly or indirectly,any of the Confidential Information to any country, person or entity which the US Government, at the time of export, requires an export license or other governmental approval without first obtaining such license or approval.  The Recipient shall first obtain the written consent of
+Bosch North America Mutual NDA rev. 2017.03.31.IPR-NA
+Page 2 of 4
+Disclosing Party prior to submitting any request for authority to export such Confidential Information.   For the purposes of this Agreement, export occurs when Confidential Information is transferred from one country to another by any means, including but not limited to physical shipments, FTP file transfers, e-mails, faxes, oral transfers or remote server access and an export may also occur when Confidential Information is transferred to or accessed by a person who is neither a citizen nor permanent resident of the country in which such transfer or access is taking place.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_Xed25fvHkdCf61PUoLo1bXTY)
+ Call ID: call_Xed25fvHkdCf61PUoLo1bXTY
+  Args:
+    pattern: 1\.|2\.|Definition|PURPOSE|Confidential Information
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+7. DISCLOSURES REQUIRED BY LAW. If Recipient is requested,ordered or required by a regulatory agency or any other  government  authority  or  a  court to disclose any Confidential Information, Recipient shall promptly notify Disclosing Party of such request, order or requirement so that Disclosing Party may have the opportunity to contest the disclosure,  including  seeking  a protective order,  or waive Recipient’s compliance with this Agreement.   If Recipient is (in the opinion of its counsel) compelled to disclose any Confidential Information, or else be liable for contempt or other  penalty  or be subject to claims from a third party, Recipient may disclose such Confidential Information without liability under this Agreement.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_gQyu8Cf0km4Mr6n43p41eXJ5)
+ Call ID: call_gQyu8Cf0km4Mr6n43p41eXJ5
+  Args:
+    pattern: marked|identified|oral transfers|oral|written summary|disclosed.*oral|in writing|written
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+8. EXPORT LAWS. Neither party shall export, directly or indirectly,any of the Confidential Information to any country, person or entity which the US Government, at the time of export, requires an export license or other governmental approval without first obtaining such license or approval.  The Recipient shall first obtain the written consent of
+Bosch North America Mutual NDA rev. 2017.03.31.IPR-NA
+Page 2 of 4
+Disclosing Party prior to submitting any request for authority to export such Confidential Information.   For the purposes of this Agreement, export occurs when Confidential Information is transferred from one country to another by any means, including but not limited to physical shipments, FTP file transfers, e-mails, faxes, oral transfers or remote server access and an export may also occur when Confidential Information is transferred to or accessed by a person who is neither a citizen nor permanent resident of the country in which such transfer or access is taking place.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_OM8nsQxphyeudrcDdGRzNJSZ)
+ Call ID: call_OM8nsQxphyeudrcDdGRzNJSZ
+  Args:
+    pattern: confidential.*oral|oral.*confidential|orally disclosed|verbally disclosed|disclosed verbally|disclosed orally
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1. CONFIDENTIAL INFORMATION.The term “Confidential Information” as used herein means all nonpublic information relating to the Subject Matter that is disclosed by either party, its Affiliates (as defined below), or their agents (where applicable, collectively referred to as the “Disclosing Party”), directly or indirectly, in writing, orally or by inspection of premises or tangible objects to the other party (the “Recipient”) that is: (i) marked confidential or proprietary, or (ii) given the nature of the information or the circumstances surrounding its disclosure, reasonably should be deemed confidential.   Confidential Information includes, but is  not limited to documents, drawings, models, apparatus, sketches, designs, schedules, product plans, marketing plans, technical procedures, manufacturing processes, software, prototypes, samples, methodologies, formulations,  trade secrets,  patent applications, know-how, experimental results, specifications and other business information.
+
+================================== Ai Message ==================================
+
+Entailment

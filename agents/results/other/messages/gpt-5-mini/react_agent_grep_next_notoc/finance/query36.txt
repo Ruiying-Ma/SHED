@@ -1,0 +1,57 @@
+================================ Human Message =================================
+
+QUERY:
+From FY21 to FY22, excluding Embedded, in which AMD reporting segment did sales proportionally increase the most?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_pJaXixnGMowMIGAwhb3YKa01)
+ Call ID: call_pJaXixnGMowMIGAwhb3YKa01
+  Args:
+    pattern: FY22
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_kyneZ3m8faWe7o9GwbC62tr6)
+ Call ID: call_kyneZ3m8faWe7o9GwbC62tr6
+  Args:
+    pattern: Embedded
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Embedded Segment
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_lA0gkSMO4a4YQxEhq6BOfUnu)
+ Call ID: call_lA0gkSMO4a4YQxEhq6BOfUnu
+  Args:
+    pattern: reporting segment
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Results of Operations
+During the second quarter of fiscal year 2022, we changed our reporting segments to align our financial reporting with how we manage our business in strategic end markets. This is consistent with how our Chief Operating Decision Maker (CODM) assesses our financial performance and allocates resources. As a result, we report our financial performance based on the following four reportable segments: Data Center, Client, Gaming, and Embedded. Additional information on our reportable segments is contained in Note 4 – Segment Reporting of the Notes to Financial Statements (Part II, Item 8 of this Form 10-K).Our operating results tend to vary seasonally. Historically, our net revenue has been generally higher in the second half of the year than in the first half of the year, although market conditions and product transitions could impact these trends. The following table provides a summary of net revenue and operating income (loss) by segment for 2022 and 2021:
+ Year Ended December 31, 2022 December 25, 2021 (In millions) Net revenue: Data Center $ 6,043  $ 3,694 Client 6,201 6,887 Gaming 6,805 5,607 Embedded 4,552 246 Total net revenue $ 23,601  $ 16,434 Operating income (loss): Data Center $ 1,848  $ 991 Client 1,190 2,088 Gaming 953 934 Embedded 2,252 44 All Other (4,979) (409) Total operating income (loss) $ 1,264  $ 3,648
+Data Center
+Data Center net revenue of $6 billion in 2022 increased by 64%, compared to net revenue of $3.7 billion in 2021. The increase was primarily driven by higher sales of our EPYC server processors.Data Center operating income was $1.8 billion in 2022, compared to operating income of $991 million in 2021. The increase in operating income was primarily driven by higher revenue, partially offset by higher operating expenses.  Operating expenses increased for the reasons outlined under “Expenses” below.
+Client
+Client  net  revenue  of  $6.2  billion  in  2022  decreased  by  10%,  compared  to  net  revenue  of  $6.9  billion  in  2021,  primarily  driven  by  a  24%  decrease  in  unit shipment,  partially  offset  by  a  19%  increase  in  average  selling  price.   The  decrease  in  unit  shipments  was  due  to  challenging  PC  market  conditions  and significant inventory correction across the PC supply chain experienced during the second half of 2022. The increase in average selling price was primarily driven by a richer mix of Ryzen mobile processor sales.Client operating income was $1.2 billion in 2022, compared to operating income of $2.1 billion in 2021.  The decrease in operating income was primarily driven by lower revenue and higher operating expenses. Operating expenses increased for the reasons outlined under “Expenses” below.45
+Table of Contents
+Gaming
+Gaming net revenue of $6.8 billion in 2022 increased by 21%, compared to net revenue of $5.6 billion in 2021. The increase in net revenue was driven by higher semi-custom product sales due to higher demand for gaming console SoCs, partially offset by lower gaming graphics sales due to a decrease in unit shipments driven by soft consumer demand given weakened macroeconomic conditions experienced in the second half of 2022. Gaming operating income was $953 million in 2022, compared to operating income of $934 million in 2021. The increase in operating income was primarily driven by higher revenue, partially offset by higher operating expenses. Operating expenses increased for the reasons outlined under “Expenses” below.
+Embedded
+Embedded net revenue of $4.6 billion in 2022 increased significantly, compared to net revenue of $246 million in 2021. The significant increase in net revenue was primarily driven by the inclusion of Xilinx embedded product revenue as a result of the acquisition of Xilinx in February 2022.Embedded operating income was $2.3 billion in 2022, compared to operating income of $44 million in 2021.  The significant increase in operating income was primarily driven by the inclusion of Xilinx embedded product revenue.
+All Other
+All Other operating loss of $5.0 billion in 2022 primarily consisted of $3.5 billion of amortization of acquisition-related intangibles, $1. 1 billion of stock-based compensation expense, and $452 million of acquisition-related costs, which primarily include transaction costs, amortization of Xilinx inventory fair value step- up adjustment, and depreciation related to the Xilinx fixed assets fair value step-up adjustment, certain compensation charges related to the acquisitions of Xilinx  and  Pensando,  and  licensing  gain.  All  Other  operating  loss  of  $409  million  in  2021  primarily  consisted  of  $379  million  of  stock-based  compensation expense and $42 million of acquisition-related costs.
+
+================================== Ai Message ==================================
+
+Data Center

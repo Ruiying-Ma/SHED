@@ -1,0 +1,48 @@
+================================ Human Message =================================
+
+QUERY:
+What do they mean by intrinsic geometry of spaces of learned representations?
+
+TABLE OF CONTENTS (TOC):
+1 | Improved Representation Learning for Predicting Commonsense Ontologies
+1.1 | Abstract
+1.2 | 1. Introduction
+1.3 | 2. Data
+1.4 | 3. Models
+1.4.1 | 3.1. Order Embeddings
+1.4.2 | 3.2. Joint Text and Order Embedding
+1.5 | 4. Long-Range Join and Meet Constraints
+1.6 | 5. Experiments
+1.6.1 | 5.1. Joint Text and Order Embedding
+1.6.2 | 5.2. Long-Range Join and Meet Constraints
+1.7 | 6. Conclusion and Future Work
+1.8 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_all (call_h16BP3MxyTNjMbOSN15HF1yd)
+ Call ID: call_h16BP3MxyTNjMbOSN15HF1yd
+  Args:
+    pattern: intrinsic geometry
+
+================================= Tool Message =================================
+Name: grep_search_all
+
+1.1
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_P3AC3NeSI8JSHfYYDV3WukT7)
+ Call ID: call_P3AC3NeSI8JSHfYYDV3WukT7
+  Args:
+    section_id: 1.1
+
+================================= Tool Message =================================
+Name: read_section
+
+Abstract
+Recent work in learning ontologies (hierarchical and partially-ordered structures) has leveraged the intrinsic geometry of spaces of learned rep- resentations to make predictions that automati- cally obey complex structural constraints. We explore two extensions of one such model, the order-embedding ( Vendrov et al. ) model for hi- erarchical relation learning, with an aim towards improved performance on text data for com- monsense knowledge representation.  Our first model jointly learns ordering relations and non- hierarchical knowledge in the form of raw text. Our second extension exploits the partial order structure of the training data to find long-distance triplet constraints among embeddings which are poorly enforced by the pairwise training proce- dure. We find that both incorporating free text and augmented training constraints improve over the original order-embedding model and other strong baselines.
+
+================================== Ai Message ==================================
+
+They mean leveraging the geometric properties of learned representation spaces to make predictions that automatically obey complex structural constraints, such as hierarchical and partially-ordered structures.

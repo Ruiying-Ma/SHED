@@ -1,0 +1,104 @@
+================================ Human Message =================================
+
+QUERY:
+what was the margin their system outperformed previous ones?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_WblXKNLhpZEVAk8J57WECdRG)
+ Call ID: call_WblXKNLhpZEVAk8J57WECdRG
+  Args:
+    pattern: outperformed|margin|previous
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Understanding open-domain text is one of the pri- mary challenges in natural language processing (NLP). Machine comprehension benchmarks eval- uate the system’s ability to understand text based on the text content only. In this work, we investigate machine comprehension on MCTest, a question an- swering (QA) benchmark. Prior work is mainly based on feature engineering approaches.  We come up with a neural network framework, named hier- archical attention-based convolutional neural net- work (HABCNN), to address this task without any manually designed features. Specifically, we ex- plore HABCNN for this task by two routes, one is through traditional joint modeling of document, question and answer, one is through textual entail- ment.  HABCNN employs an attention mechanism to detect key phrases, key sentences and key snip- pets that are relevant to answering the question. Ex- periments show that HABCNN outperforms prior deep learning approaches by a big margin.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_sTbERfKQ5ji52w6rYbYyMXac)
+ Call ID: call_sTbERfKQ5ji52w6rYbYyMXac
+  Args:
+    pattern: big margin|outperform|prior deep learning|previous
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Understanding open-domain text is one of the pri- mary challenges in natural language processing (NLP). Machine comprehension benchmarks eval- uate the system’s ability to understand text based on the text content only. In this work, we investigate machine comprehension on MCTest, a question an- swering (QA) benchmark. Prior work is mainly based on feature engineering approaches.  We come up with a neural network framework, named hier- archical attention-based convolutional neural net- work (HABCNN), to address this task without any manually designed features. Specifically, we ex- plore HABCNN for this task by two routes, one is through traditional joint modeling of document, question and answer, one is through textual entail- ment.  HABCNN employs an attention mechanism to detect key phrases, key sentences and key snip- pets that are relevant to answering the question. Ex- periments show that HABCNN outperforms prior deep learning approaches by a big margin.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_vjQ8szqEfEhLQN3B8Chs14r4)
+ Call ID: call_vjQ8szqEfEhLQN3B8Chs14r4
+  Args:
+    pattern: Table|accuracy|MCTest|deep learning|best
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Understanding open-domain text is one of the pri- mary challenges in natural language processing (NLP). Machine comprehension benchmarks eval- uate the system’s ability to understand text based on the text content only. In this work, we investigate machine comprehension on MCTest, a question an- swering (QA) benchmark. Prior work is mainly based on feature engineering approaches.  We come up with a neural network framework, named hier- archical attention-based convolutional neural net- work (HABCNN), to address this task without any manually designed features. Specifically, we ex- plore HABCNN for this task by two routes, one is through traditional joint modeling of document, question and answer, one is through textual entail- ment.  HABCNN employs an attention mechanism to detect key phrases, key sentences and key snip- pets that are relevant to answering the question. Ex- periments show that HABCNN outperforms prior deep learning approaches by a big margin.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_QMLzmzK50OETukcchgIYY2Rk)
+ Call ID: call_QMLzmzK50OETukcchgIYY2Rk
+  Args:
+    pattern: results|comparison|baseline|MCTest-
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+4.1 Dataset
+MCTest 1 has two subsets. MCTest-160 is a set of 160 items, each consisting of a document, four questions followed by one correct anwer and three incorrect answers (split into 70 train, 30 dev and 60 test) and MCTest-500 a set of 500 items (split into 300 train, 50 dev and 150 test).
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_dmFsY3M1c3fKNZE02unVJJIm)
+ Call ID: call_dmFsY3M1c3fKNZE02unVJJIm
+  Args:
+    pattern: experimental results|Table 1|Table 2|performance
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+4.2 Training Setup and Tricks
+Our training objective is to minimize the following ranking loss function:
+L ( d, a + , a − ) = max(0 , α + S ( d, a − ) − S ( d, a + )) (4)
+where S ( · , · ) is a matching score between two representation vectors. Cosine similarity is used throughout. α is a constant. For this common ranking loss, we also have two styles to utilize the data in view of each positive answer is accompa- nied with three negative answers.  One is treating ( d , a + , a − 1 , a − 2 , a − 3 ) as a training example, then our loss function can have three “max()” terms, each for a positive-negative pair; the other one is treating ( d , a + , a − i ) as an individual training example. In practice, we find the second way works better.  We conjecture that the second way has more training exam- ples, and positive answers are repeatedly used to balance the amounts of positive and negative answers.Multitask learning : Question typing is commonly used and proved to be very helpful in QA tasks [Sachan et al. , 2015]. Inspired, we stack a logistic regression layer over question representation r iq , with the purpose that this sub- task can favor the parameter tuning of the whole system, and
+ 1 http://requery.microsoft.com/mct
+k lr d 1 bs w L 2 α [1,3] 0.05 [90, 90] 1 [2,2] 0.0065 0.2
+Table 1: Hyperparameters.  k : top- k in attention-pooling for both CNN layers; lr: learning rate; d 1 : kernel size in CNN layers; bs: mini-batch size; w : filter width; L 2 : L 2 normal- ization; α : constant in loss function.finally the question is better recognized and is able to find the answer more accurately. To be specific, we classify questions into 12 classes: “how”, “how much”, “how many”, “what”, “who”, “where”, “which”, “when”, “whose”, “why”, “will” and “ other ”. The question label is created by querying for the label keyword in the question. If more than one keyword appears in a question, we adopt the one appearing earlier and the more specific one (e.g. , “how much”, not “how”). In case there is no match, the class “ other ” is assigned.We train with AdaGrad [Duchi et al. , 2011] and use 50- dimensional GloVe [Pennington et al. , 2014] to initialize word representations, 2 kept fixed during training. Table 1 gives hyperparameter values, tuned on dev. We consider two evaluation metrics: accuracy (proportion of questions correctly answered) and NDCG 4 [J¨arvelin and Kek¨al¨ainen, 2002]. Unlike accuracy which evaluates if the question is correctly answered or not, NDCG 4 , being a mea- sure of ranking quality, evaluates the position of the correct answer in our predicted ranking.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_lgPaOv1xj18lNH7XHZbaRVRH)
+ Call ID: call_lgPaOv1xj18lNH7XHZbaRVRH
+  Args:
+    pattern: Table 2|Table 3|accuracy .* NDCG|outperforms
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Understanding open-domain text is one of the pri- mary challenges in natural language processing (NLP). Machine comprehension benchmarks eval- uate the system’s ability to understand text based on the text content only. In this work, we investigate machine comprehension on MCTest, a question an- swering (QA) benchmark. Prior work is mainly based on feature engineering approaches.  We come up with a neural network framework, named hier- archical attention-based convolutional neural net- work (HABCNN), to address this task without any manually designed features. Specifically, we ex- plore HABCNN for this task by two routes, one is through traditional joint modeling of document, question and answer, one is through textual entail- ment.  HABCNN employs an attention mechanism to detect key phrases, key sentences and key snip- pets that are relevant to answering the question. Ex- periments show that HABCNN outperforms prior deep learning approaches by a big margin.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_R1xf1CTdSaeOopxk5HIPG4cY)
+ Call ID: call_R1xf1CTdSaeOopxk5HIPG4cY
+  Args:
+    pattern: deep learning approaches|QANTA|neural|Table
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Understanding open-domain text is one of the pri- mary challenges in natural language processing (NLP). Machine comprehension benchmarks eval- uate the system’s ability to understand text based on the text content only. In this work, we investigate machine comprehension on MCTest, a question an- swering (QA) benchmark. Prior work is mainly based on feature engineering approaches.  We come up with a neural network framework, named hier- archical attention-based convolutional neural net- work (HABCNN), to address this task without any manually designed features. Specifically, we ex- plore HABCNN for this task by two routes, one is through traditional joint modeling of document, question and answer, one is through textual entail- ment.  HABCNN employs an attention mechanism to detect key phrases, key sentences and key snip- pets that are relevant to answering the question. Ex- periments show that HABCNN outperforms prior deep learning approaches by a big margin.
+
+================================== Ai Message ==================================
+
+Unanswerable

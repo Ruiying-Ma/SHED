@@ -1,0 +1,238 @@
+================================ Human Message =================================
+
+QUERY:
+Which automated evaluation metrics are used?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_OB9lUDQKIsafeXazTRbV8qIL)
+ Call ID: call_OB9lUDQKIsafeXazTRbV8qIL
+  Args:
+    pattern: automated evaluation|automated metrics|automated evaluation metrics|evaluation metrics|automatic evaluation|automated evaluation metric
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1 Introduction
+Story-telling is on the frontier of current text gen- eration technology: stories must remain themati- cally consistent across the complete document, re- quiring modeling very long range dependencies; stories require creativity; and stories need a high level plot, necessitating planning ahead rather than word-by-word generation ( Wiseman et al. , 2017 ). We tackle the challenges of story-telling with a hierarchical model, which first generates a sen- tence called the prompt describing the topic for the story, and then conditions on this prompt when generating the story. Conditioning on the prompt or premise makes it easier to generate consistent stories because they provide grounding for the overall plot. It also reduces the tendency of stan- dard sequence models to drift off topic.Prompt: The Mage, the Warrior, and the Priest
+ Story: A light breeze swept the ground, and carried with it still the distant scents of dust and time-worn stone. The Warrior led the way, heaving her mass of armour and mus- cle over the uneven terrain. She soon crested the last of the low embankments, which still bore the unmistakable fin- gerprints of haste and fear. She lifted herself up onto the top the rise, and looked out at the scene before her. [...]
+ Figure 1: Example prompt and beginning of a story from our dataset. We train a hierarchical model that first generates a prompt, and then con- ditions on the prompt when generating a story.We find that standard sequence-to-sequence (seq2seq) models ( Sutskever et al.  , 2014 ) applied to hierarchical story generation are prone to de- generating into language models that pay little at- tention to the writing prompt (a problem that has been noted in other domains, such as dialogue re- sponse generation ( Li et al. , 2015a )).  This failure is due to the complex and underspecified depen- dencies between the prompt and the story, which are much harder to model than the closer depen- dencies required for language modeling (for exam- ple, consider the subtle relationship between the first sentence and prompt in Figure 1 ).To improve the relevance of the generated story to its prompt, we introduce a fusion mechanism ( Sriram et al.  , 2017 ) where our model is trained on top of an pre-trained seq2seq model. To improve over the pre-trained model, the second model must focus on the link between the prompt and the story. For the first time, we show that fusion mechanisms can help seq2seq models build dependencies be- tween their input and output.Another major challenge in story generation is the inefficiency of modeling long documents with standard recurrent architectures—stories contain 734 words on average in our dataset.  We improve efficiency using a convolutional architecture, al-
+# Train Stories 272,600 # Test Stories 15,138 # Validation Stories 15,620 # Prompt Words 7.7M # Story Words 200M Average Length of Prompts 28.4 Average Length of Stories 734.5
+Table 1: Statistics of W RITING P ROMPTS dataset
+lowing whole stories to be encoded in parallel.  Existing convolutional architectures only encode a bounded amount of context ( Dauphin et al. , 2017 ), so we introduce a novel gated self-attention mech- anism that allows the model to condition on its previous outputs at different time-scales.To train our models, we gathered a large dataset of 303,358 human generated stories paired with writing prompts from an online forum.  Evaluating free form text is challenging, so we also introduce new evaluation metrics which isolate different as- pects of story generation.Experiments show that our fusion and self- attention mechanisms improve over existing tech- niques on both automated and human evaluation measures. Our new dataset and neural architec- tures allow for models which can creatively gen- erate longer, more consistent and more fluent pas- sages of text.  Human judges prefer our hierarchi- cal model’s stories twice as often as those of a non- hierarchical baseline.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_KkUUPHrmfnFD7EenOPWQbexy)
+ Call ID: call_KkUUPHrmfnFD7EenOPWQbexy
+  Args:
+    pattern: automated
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+We explore story generation : creative sys- tems that can build coherent and fluent passages of text about a topic. We collect a large dataset of 300K human-written sto- ries paired with writing prompts from an online forum. Our dataset enables hierar- chical story generation, where the model first generates a premise, and then trans- forms it into a passage of text.  We gain further improvements with a novel form of model fusion that improves the relevance of the story to the prompt, and adding a new gated multi-scale self-attention mech- anism to model long-range context. Ex- periments show large improvements over strong baselines on both automated and human evaluations. Human judges prefer stories generated by our approach to those from a strong non-hierarchical model by a factor of two to one.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_a0YyD1ycxr8iIZvBZjLIuuqc)
+ Call ID: call_a0YyD1ycxr8iIZvBZjLIuuqc
+  Args:
+    pattern: evaluation metrics|new evaluation metrics|metrics|BLEU|METEOR|ROUGE|perplexity|distinct|Self-BLEU|BLEU-4|CIDEr
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1 Introduction
+Story-telling is on the frontier of current text gen- eration technology: stories must remain themati- cally consistent across the complete document, re- quiring modeling very long range dependencies; stories require creativity; and stories need a high level plot, necessitating planning ahead rather than word-by-word generation ( Wiseman et al. , 2017 ). We tackle the challenges of story-telling with a hierarchical model, which first generates a sen- tence called the prompt describing the topic for the story, and then conditions on this prompt when generating the story. Conditioning on the prompt or premise makes it easier to generate consistent stories because they provide grounding for the overall plot. It also reduces the tendency of stan- dard sequence models to drift off topic.Prompt: The Mage, the Warrior, and the Priest
+ Story: A light breeze swept the ground, and carried with it still the distant scents of dust and time-worn stone. The Warrior led the way, heaving her mass of armour and mus- cle over the uneven terrain. She soon crested the last of the low embankments, which still bore the unmistakable fin- gerprints of haste and fear. She lifted herself up onto the top the rise, and looked out at the scene before her. [...]
+ Figure 1: Example prompt and beginning of a story from our dataset. We train a hierarchical model that first generates a prompt, and then con- ditions on the prompt when generating a story.We find that standard sequence-to-sequence (seq2seq) models ( Sutskever et al.  , 2014 ) applied to hierarchical story generation are prone to de- generating into language models that pay little at- tention to the writing prompt (a problem that has been noted in other domains, such as dialogue re- sponse generation ( Li et al. , 2015a )).  This failure is due to the complex and underspecified depen- dencies between the prompt and the story, which are much harder to model than the closer depen- dencies required for language modeling (for exam- ple, consider the subtle relationship between the first sentence and prompt in Figure 1 ).To improve the relevance of the generated story to its prompt, we introduce a fusion mechanism ( Sriram et al.  , 2017 ) where our model is trained on top of an pre-trained seq2seq model. To improve over the pre-trained model, the second model must focus on the link between the prompt and the story. For the first time, we show that fusion mechanisms can help seq2seq models build dependencies be- tween their input and output.Another major challenge in story generation is the inefficiency of modeling long documents with standard recurrent architectures—stories contain 734 words on average in our dataset.  We improve efficiency using a convolutional architecture, al-
+# Train Stories 272,600 # Test Stories 15,138 # Validation Stories 15,620 # Prompt Words 7.7M # Story Words 200M Average Length of Prompts 28.4 Average Length of Stories 734.5
+Table 1: Statistics of W RITING P ROMPTS dataset
+lowing whole stories to be encoded in parallel.  Existing convolutional architectures only encode a bounded amount of context ( Dauphin et al. , 2017 ), so we introduce a novel gated self-attention mech- anism that allows the model to condition on its previous outputs at different time-scales.To train our models, we gathered a large dataset of 303,358 human generated stories paired with writing prompts from an online forum.  Evaluating free form text is challenging, so we also introduce new evaluation metrics which isolate different as- pects of story generation.Experiments show that our fusion and self- attention mechanisms improve over existing tech- niques on both automated and human evaluation measures. Our new dataset and neural architec- tures allow for models which can creatively gen- erate longer, more consistent and more fluent pas- sages of text.  Human judges prefer our hierarchi- cal model’s stories twice as often as those of a non- hierarchical baseline.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_LUYA8EbXkJCxgWwVWlMEnGl9)
+ Call ID: call_LUYA8EbXkJCxgWwVWlMEnGl9
+  Args:
+    pattern: automatic|automated evaluation metrics|human evaluation|human judges|BLEU-4|BLEU|perplexity|distinct-1|distinct-2|self-BLEU|Overlap|ROUGE|TF-IDF|precision|recall
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+We explore story generation : creative sys- tems that can build coherent and fluent passages of text about a topic. We collect a large dataset of 300K human-written sto- ries paired with writing prompts from an online forum. Our dataset enables hierar- chical story generation, where the model first generates a premise, and then trans- forms it into a passage of text.  We gain further improvements with a novel form of model fusion that improves the relevance of the story to the prompt, and adding a new gated multi-scale self-attention mech- anism to model long-range context. Ex- periments show large improvements over strong baselines on both automated and human evaluations. Human judges prefer stories generated by our approach to those from a strong non-hierarchical model by a factor of two to one.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_sCEiHnUJhwwmzKwUL7OwznfO)
+ Call ID: call_sCEiHnUJhwwmzKwUL7OwznfO
+  Args:
+    pattern: Table|Automatic|BLEU|Perplexity|Distinct|Self-BLEU|Cosine|Overlap|ROUGE|METEOR|CIDEr|embedding|Embedding|similarity|Story length|vocabulary|Novelty
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+References
+Jimmy Lei Ba, Jamie Ryan Kiros, and Geoffrey E Hin- ton.2016. Layer normalization. arXiv preprint arXiv:1607.06450 .
+Dzmitry Bahdanau, Kyunghyun Cho,and Yoshua Ben- gio. 2015. Neural machine translation by jointly learning to align and translate. International Con- ference on Learning Representation (ICLR) .
+Piotr Bojanowski, Edouard Grave, Armand Joulin,and Tomas Mikolov. 2016. Enriching word vec- tors with subword information. arXiv preprint arXiv:1607.04606 .
+Jan Chorowski and Navdeep Jaitly. 2016.Towards better decoding and language model integration in sequence to sequence models. arXiv preprint arXiv:1612.02695 .
+Yann N. Dauphin, Angela Fan, Michael Auli,and David Grangier. 2017. Language modeling with gated convolutional networks.Generation with Fusion of Conv seq2seq + Self-Attention
+Example Prompt 1: Aliens start abducting humans
+It has been two weeks, and the last of my kind has gone. It is only a matter of time until there will be nothing left. I’m not sure what the hell is going on... I can’t think. I can hear a distant scream.  I think of a strange, alien sound. I try to speak, but am interrupted by something, something that feels like a drum, I ca not tell. I mean I’m just a little bit older than an average human. But I can, and I can feel the vibrations . I hear the sound of a ship approaching. The ground quakes at the force of the impact, and a loud explosion shatters the silence.Example Prompt 2: The scientists have discovered something terrible . The scientist stood there, a little dazed as he stared.“What is it?” He asked.“This...this...Thing...This is a virus. A chemical that can destroy entire planet and it is a very small, complex, chemical that could destroy any planet.” The scientist replied. His lab assistant looked down at the tablet. “I’ve just discovered it. I can’t believe it.  It looks like it’s made of some sort of chemical that’s very dangerous.” “ Well, there’s a virus on the ground. It’s very effective...” “ I can’t believe what it is.” he said, pointing to the scientist . “ We don’t know what this thing is. We haven’t seen anything like it . We can’t even see anything like this. ” Dr. Jones stared at the scientist for a moment.  “What do you mean what does it do ?” “It...It ’s a monster.”
+Example Prompt 3: The silence before the storm comes
+“I’m sorry,” she said “I can’t do this anymore.”
+She sat in the grass, the grass blowing behind her as she sat staring at the sky. Her eyes were still closed but she was still staring at it.  Her hand was still shaking, her eyes closed as she watched the rain roll in and out of view. She could see the world through her eyelids now. Her hands were still shaking like she hadn’t eaten in days. Her fingers were still clenched tight and her fingers were now shaking. She wasn’t even sure if she was going to cry or if she just wanted to cry. It wasn’t until she was close enough to hear the words.“I ...I just... I need to...I ...” She was crying now and then, the rain was picking up. Her lips were shaking now and she could see that the storm was getting closer and closer. Her heart stopped when she heard the thunder. She knew it was coming. The storm was
+Generation with Language Model + Self-Attention Baseline
+Example 1:
+I’ve always been the curious type.  Growing up in the ghetto, I’ve been around for more than a year now. I still haven’t heard it on my own. I’m not sure if I’m a good person. But I’m not the only one. I’ve been to the hospital, but it’s not my first time. I’ve been to my psychiatrist’s journals before. “Hey, are you ... are you okay?” I asked. “Yes” I said. “What’s wrong? ” she replied, “I was just ... Doing something.” She said, “I’ve never been a bad person.”
+Example 2:
+The man was an accountant. He had to be. He had to be the next president. I looked back over the top and saw that his wife was crying in the kitchen. I looked at the clock. It seemed to be coming slower, but I knew if I did it would not be long before I was in my own home.  I wasn’t sure. I had a hard time finding the right words to say. I was about to leave when he suddenly became angry and began talking to me. “Hello, sir, I’m John. What is your name?” “My name is Manuel and I’m a journalist.” I said
+Table 5: Example stories generated by the proposed hierarchical fusion approach compared to stories generated by a language model.  Stories generated by the fusion model relate to the desired prompt and show increased coherence between sentences and ability to stay on one topic compared to the language modeling baseline.
+Jonas Gehring, Michael Auli, David Grangier, Denis Yarats,and Yann Dauphin. 2017. Convolutional se- quence to sequence learning.
+Caglar Gulcehre, Orhan Firat, Kelvin Xu,Kyunghyun Cho, Loic Barrault, Huei-Chi Lin, Fethi Bougares, Holger Schwenk, and Yoshua Bengio. 2015. On us- ing monolingual corpora in neural machine transla- tion. arXiv preprint arXiv:1503.03535 .
+Brent Harrison, Christopher Purdy, and Mark O Riedl. 2017.Toward automated story generation with markov chain monte carlo methods and deep neural networks.
+Parag Jain, Priyanka Agrawal, Abhijit Mishra,Mo- hak Sukhwani, Anirban Laha, and Karthik Sankara- narayanan. 2017. Story generation from sequence of independent short descriptions. arXiv preprint arXiv:1707.05501 .
+Jeff Johnson, Matthijs Douze, and Herv´e J´egou.2017. Billion-scale similarity search with gpus. arXiv preprint arXiv:1702.08734 .
+Rafal Jozefowicz, Oriol Vinyals, Mike Schuster,Noam Shazeer, and Yonghui Wu. 2016. Exploring the limits of language modeling. arXiv preprint arXiv:1602.02410 .
+Ryan Kiros, Yukun Zhu, Ruslan Salakhutdinov,Richard S Zemel, Antonio Torralba, Raquel Urta- sun, and Sanja Fidler. 2015. Skip-thought vectors. arXiv preprint arXiv:1506.06726 .
+Jiwei Li, Michel Galley, Chris Brockett, Jianfeng Gao,and Bill Dolan. 2015a. A diversity-promoting objective function for neural conversation models. arXiv preprint arXiv:1510.03055 .
+Jiwei Li, Minh-Thang Luong, and Dan Juraf- sky.2015b. A hierarchical neural autoencoder for paragraphs and documents. arXiv preprint arXiv:1506.01057 .
+Peter J. Liu, Mohammad Saleh, Etienne Pot, Ben Goodrich,Ryan Sepassi, Lukasz Kaiser, and Noam Shazeer. 2018. Generating wikipedia by summarizing long sequences. arXiv preprint arXiv:1801.10198 .
+Lara J Martin, Prithviraj Ammanabrolu,William Han- cock, Shruti Singh, Brent Harrison, and Mark O Riedl. 2017. Event representations for automated story generation with deep neural nets. arXiv preprint arXiv:1706.01331 .
+Razvan Pascanu, Tomas Mikolov, and Yoshua Bengio.2013. On the difficulty of training recurrent neural networks. In ICML .
+Prajit Ramachandran, Peter J Liu, and Quoc V Le.2016. Unsupervised pretraining for sequence to se- quence learning. arXiv preprint arXiv:1611.02683 .
+Melissa Roemmele. 2016. Writing stories with help from recurrent neural networks.In AAAI .
+Alexander M Rush, Sumit Chopra, and Jason We- ston.2015. A neural attention model for ab- stractive sentence summarization. arXiv preprint arXiv:1509.00685 .
+Louis Shao, Stephan Gouws, Denny Britz, Anna Goldie,Brian Strope, and Ray Kurzweil. 2017. Generating long and diverse responses with neural conversation models. arXiv preprint arXiv:1701.03185 .
+Anuroop Sriram, Heewoo Jun, Sanjeev Satheesh,and Adam Coates. 2017. Cold fusion: Training seq2seq models together with language models. arXiv preprint arXiv:1708.06426 .
+Sainbayar Sukhbaatar, Jason Weston, Rob Fergus, et al.2015. End-to-end memory networks. In Advances in neural information processing systems , pages 2440–2448.
+Ilya Sutskever, James Martens, George E. Dahl,and Geoffrey E. Hinton. 2013. On the importance of initialization and momentum in deep learning. In ICML .
+Ilya Sutskever, Oriol Vinyals, and Quoc V Le.2014. Sequence to sequence learning with neural net- works. In Neural Information Processing Systems (NIPS) .
+Ashish Vaswani, Noam Shazeer, Niki Parmar,Jakob Uszkoreit, Llion Jones, Aidan N Gomez, Łukasz Kaiser, and Illia Polosukhin. 2017. Attention is all you need. In Advances in Neural Information Pro- cessing Systems , pages 6000–6010.
+Ashwin K Vijayakumar, Michael Cogswell,Ram- prasath R Selvaraju, Qing Sun, Stefan Lee, David Crandall, and Dhruv Batra. 2016. Diverse beam search: Decoding diverse solutions from neural se- quence models. arXiv preprint arXiv:1610.02424 .
+Sam Wiseman, Stuart M Shieber, and Alexander M Rush. 2017.Challenges in data-to-document gen- eration. arXiv preprint arXiv:1707.08052 .
+Denis Yarats and Mike Lewis. 2017.Hierarchical text generation and planning for strategic dialogue. arXiv preprint arXiv:1712.05846 .
+Xingxing Zhang and Mirella Lapata. 2014.Chinese poetry generation with recurrent neural networks. In Proceedings of the 2014 Conference on Em- pirical Methods in Natural Language Processing (EMNLP) , pages 670–680.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_Mn0oO8hc5iN8Kzy3zJhkcLYt)
+ Call ID: call_Mn0oO8hc5iN8Kzy3zJhkcLYt
+  Args:
+    pattern: Evaluation|evaluations|automated evaluation metrics|automated evaluation|automatic evaluation metrics|Table 2|Table 3|Table 4
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+We explore story generation : creative sys- tems that can build coherent and fluent passages of text about a topic. We collect a large dataset of 300K human-written sto- ries paired with writing prompts from an online forum. Our dataset enables hierar- chical story generation, where the model first generates a premise, and then trans- forms it into a passage of text.  We gain further improvements with a novel form of model fusion that improves the relevance of the story to the prompt, and adding a new gated multi-scale self-attention mech- anism to model long-range context. Ex- periments show large improvements over strong baselines on both automated and human evaluations. Human judges prefer stories generated by our approach to those from a strong non-hierarchical model by a factor of two to one.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_UxJmbobOXokUbQmFkYMvwjzH)
+ Call ID: call_UxJmbobOXokUbQmFkYMvwjzH
+  Args:
+    pattern: Table 2|Table 3|Table 4|Automatic evaluation|Automatic metrics|Automatic
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+5.1 Baselines
+We evaluate a number of baselines:
+(1) Language Models: Non-hierarchical models for story generation, which do not condition on the prompt. We use both the gated convolutional lan- guage (GCNN) model of Dauphin et al. ( 2017 ) and our additional self-attention mechanism.(2) seq2seq: using LSTMs and convolutional seq2seq architectures, and Conv seq2seq with de- coder self-attention. (3) Ensemble: an ensemble of two Conv seq2seq with self-attention models.(4) KNN: we also compare with a KNN model to find the closest prompt in the training set for each prompt in the test set. A TF-IDF vector for
+Model Valid Perplexity Test Perplexity Conv seq2seq 45.27 45.54 + self-attention 42.01 42.32 + multihead 40.12 40. 39 + multiscale 38.76 38.91 + gating 37.37 37.94
+Table 2: Effect of new attention mechanism. Gated multi-scale attention significantly improves the perplexity on the W RITING P ROMPTS dataset.each prompt was created using FASTTEXT ( Bo- janowski et al. , 2016 ) and FAISS ( Johnson et al. , 2017 ) was used for KNN search.  The retrieved story from the training set is limited to 150 words to match the length of generated stories.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_yDydLkkjyLvKe36xULJFTuNp)
+ Call ID: call_yDydLkkjyLvKe36xULJFTuNp
+  Args:
+    pattern: Automatic Evaluation|Automated evaluation|automatic metrics|Distinct-1|Distinct-2|BLEU|Perplexity|Table 3|Table 4|human evaluation
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+We explore story generation : creative sys- tems that can build coherent and fluent passages of text about a topic. We collect a large dataset of 300K human-written sto- ries paired with writing prompts from an online forum. Our dataset enables hierar- chical story generation, where the model first generates a premise, and then trans- forms it into a passage of text.  We gain further improvements with a novel form of model fusion that improves the relevance of the story to the prompt, and adding a new gated multi-scale self-attention mech- anism to model long-range context. Ex- periments show large improvements over strong baselines on both automated and human evaluations. Human judges prefer stories generated by our approach to those from a strong non-hierarchical model by a factor of two to one.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_De2FQbfxqTF8x5vcHrOIXOq5)
+ Call ID: call_De2FQbfxqTF8x5vcHrOIXOq5
+  Args:
+    pattern: distinct-1
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_E48AkAjCDxK1XSFwLtJIy79k)
+ Call ID: call_E48AkAjCDxK1XSFwLtJIy79k
+  Args:
+    pattern: Perplexity|perplexity|Distinct|distinct|BLEU|BLEU-4|Self-BLEU|Self BLEU|novelty|Overlap|human judges|human evaluation
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+We explore story generation : creative sys- tems that can build coherent and fluent passages of text about a topic. We collect a large dataset of 300K human-written sto- ries paired with writing prompts from an online forum. Our dataset enables hierar- chical story generation, where the model first generates a premise, and then trans- forms it into a passage of text.  We gain further improvements with a novel form of model fusion that improves the relevance of the story to the prompt, and adding a new gated multi-scale self-attention mech- anism to model long-range context. Ex- periments show large improvements over strong baselines on both automated and human evaluations. Human judges prefer stories generated by our approach to those from a strong non-hierarchical model by a factor of two to one.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_nncsb7kun7XGfzqvq2doPP8e)
+ Call ID: call_nncsb7kun7XGfzqvq2doPP8e
+  Args:
+    pattern: Table 3|Table 4|automatic|Automatic evaluation metrics|automatic evaluation metrics|evaluation metrics which isolate different aspects|isolate different aspects|novel metrics|new evaluation metrics|isolate
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1 Introduction
+Story-telling is on the frontier of current text gen- eration technology: stories must remain themati- cally consistent across the complete document, re- quiring modeling very long range dependencies; stories require creativity; and stories need a high level plot, necessitating planning ahead rather than word-by-word generation ( Wiseman et al. , 2017 ). We tackle the challenges of story-telling with a hierarchical model, which first generates a sen- tence called the prompt describing the topic for the story, and then conditions on this prompt when generating the story. Conditioning on the prompt or premise makes it easier to generate consistent stories because they provide grounding for the overall plot. It also reduces the tendency of stan- dard sequence models to drift off topic.Prompt: The Mage, the Warrior, and the Priest
+ Story: A light breeze swept the ground, and carried with it still the distant scents of dust and time-worn stone. The Warrior led the way, heaving her mass of armour and mus- cle over the uneven terrain. She soon crested the last of the low embankments, which still bore the unmistakable fin- gerprints of haste and fear. She lifted herself up onto the top the rise, and looked out at the scene before her. [...]
+ Figure 1: Example prompt and beginning of a story from our dataset. We train a hierarchical model that first generates a prompt, and then con- ditions on the prompt when generating a story.We find that standard sequence-to-sequence (seq2seq) models ( Sutskever et al.  , 2014 ) applied to hierarchical story generation are prone to de- generating into language models that pay little at- tention to the writing prompt (a problem that has been noted in other domains, such as dialogue re- sponse generation ( Li et al. , 2015a )).  This failure is due to the complex and underspecified depen- dencies between the prompt and the story, which are much harder to model than the closer depen- dencies required for language modeling (for exam- ple, consider the subtle relationship between the first sentence and prompt in Figure 1 ).To improve the relevance of the generated story to its prompt, we introduce a fusion mechanism ( Sriram et al.  , 2017 ) where our model is trained on top of an pre-trained seq2seq model. To improve over the pre-trained model, the second model must focus on the link between the prompt and the story. For the first time, we show that fusion mechanisms can help seq2seq models build dependencies be- tween their input and output.Another major challenge in story generation is the inefficiency of modeling long documents with standard recurrent architectures—stories contain 734 words on average in our dataset.  We improve efficiency using a convolutional architecture, al-
+# Train Stories 272,600 # Test Stories 15,138 # Validation Stories 15,620 # Prompt Words 7.7M # Story Words 200M Average Length of Prompts 28.4 Average Length of Stories 734.5
+Table 1: Statistics of W RITING P ROMPTS dataset
+lowing whole stories to be encoded in parallel.  Existing convolutional architectures only encode a bounded amount of context ( Dauphin et al. , 2017 ), so we introduce a novel gated self-attention mech- anism that allows the model to condition on its previous outputs at different time-scales.To train our models, we gathered a large dataset of 303,358 human generated stories paired with writing prompts from an online forum.  Evaluating free form text is challenging, so we also introduce new evaluation metrics which isolate different as- pects of story generation.Experiments show that our fusion and self- attention mechanisms improve over existing tech- niques on both automated and human evaluation measures. Our new dataset and neural architec- tures allow for models which can creatively gen- erate longer, more consistent and more fluent pas- sages of text.  Human judges prefer our hierarchi- cal model’s stories twice as often as those of a non- hierarchical baseline.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_MPBozvLqCBvmd2M7TvuVSYgC)
+ Call ID: call_MPBozvLqCBvmd2M7TvuVSYgC
+  Args:
+    pattern: Table 3
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+5.4 Generation
+We generate stories from our models using a top-k random sampling scheme. At each timestep, the model generates the probability of each word in the vocabulary being the likely next word. We randomly sample from the k = 10 most likely candidates from this distribution. Then, subse- quent timesteps generate words based on the pre- viously selected words.  We find this sampling strategy substantially more effective than beam search, which tends to produce common phrases and repetitive text from the training set ( Vijayaku- mar et al. , 2016 ; Shao et al. , 2017 ). Sentences pro-
+Model # Parameters (mil) Valid Perplexity Test Perplexity GCNN LM 123.4 54.50 54.79 GCNN + self-attention LM 126.4 51.84 51. 18 LSTM seq2seq 110.3 46.83 46.79 Conv seq2seq 113.0 45.27 45.54 Conv seq2seq + self-attention 134.7 37.37 37.94 Ensemble: Conv seq2seq + self-attention 270.3 36.63 36.93 Fusion: Conv seq2seq + self-attention 255.4 36.08 36.56
+ Table 3: Perplexity on W RITING P ROMPTS . We dramatically improve over standard seq2seq models.Figure 5: Human accuracy at pairing stories with the prompts used to generate them. People find that our fusion model significantly improves the link between the prompt and generated stories.duced by beam search tend to be short and generic. Completely random sampling can introduce very unlikely words, which can damage generation as the model has not seen such mistakes at training time.  The restriction of sampling from the 10 most likely candidates reduces the risk of these low- probability samples.For each model, we tune a temperature parame- ter for the softmax at generation time. To ease hu- man evaluation, we generate stories of 150 words and do not generate unknown word tokens.For prompt generation, we use a self- attentive GCNN language model trained with the same prompt-side vocabulary as the sequence-to- sequence story generation models.  The language model to generate prompts has a validation per- plexity of 63.06. Prompt generation is conducted using the top-k random sampling from the 10 most likely candidates, and the prompt is completed when the language model generates the end of prompt token.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_aOgwKtza0JTWXOoT7699CYFn)
+ Call ID: call_aOgwKtza0JTWXOoT7699CYFn
+  Args:
+    pattern: Table 4|Automatic evaluation metrics|Table 4:
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+5.5 Evaluation
+We propose a number of evaluation metrics to quantify the performance of our models. Many commonly used metrics, such as BLEU for ma-
+Figure 6: Accuracy of prompt ranking. The fusion model most accurately pairs prompt and stories.Figure 7: Accuracy on the prompt/story pairing task vs. number of generated stories. Our genera- tive fusion model can produce many stories with- out degraded performance, while the KNN can only produce a limited number relevant stories. Model Human Preference Language model 32.68% Hierarchical Model 67.32%
+Table 4: Effect of Hierarchical Generation. Hu- man judges prefer stories that were generated hier- archically by first creating a premise and creating a full story based on it with a seq2seq model.Figure 8: Average weighting of each model in our Fusion model for the beginning of the generated story for the prompt Gates of Hell .  The fused model (orange) is primarily used for words which are closely related to the prompt, whereas generic words are generated by the pre-trained model (green).chine translation or ROUGE for summarization, compute an n-gram overlap between the generated text and the human text—however, in our open- ended generation setting, these are not useful. We do not aim to generate a specific story; we want to generate viable and novel stories.  We focus on measuring both the fluency of our models and their ability to adhere to the prompt.For automatic evaluation, we measure model perplexity on the test set and prompt ranking accu- racy . Perplexity is commonly used to evaluate the quality of language models, and it reflects how flu- ently the model can produce the correct next word given the preceding words. We use prompt rank- ing to assess how strongly a model’s output de- pends on its input.  Stories are decoded under 10 different prompts—9 randomly sampled prompts and 1 true corresponding prompt—and the like- lihood of the story given the various prompts is recorded. We measure the percentage of cases where the true prompt is the most likely to gen- erate the story. In our evaluation, we examined 1000 stories from the test set for each model.For human evaluation, we use Amazon Me- chanical Turk to conduct a triple pairing task .  We use each model to generate stories based on held- out prompts from the test set. Then, groups of three stories are presented to the human judges. The stories and their corresponding prompts are shuffled, and human evaluators are asked to se- lect the correct pairing for all three prompts. 105 stories per model are grouped into questions, and each question is evaluated by 15 judges.Lastly, we conduct human evaluation to evalu- ate the importance of hierarchical generation for story writing.  We use Amazon Mechanical Turk to compare the stories from hierarchical generation from a prompt with generation without a prompt. 400 pairs of stories were evaluated by 5 judges each in a blind test.
+
+================================== Ai Message ==================================
+
+Perplexity and prompt ranking accuracy.

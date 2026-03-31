@@ -1,0 +1,169 @@
+================================ Human Message =================================
+
+QUERY:
+what were the baselines?
+
+TABLE OF CONTENTS (TOC):
+1 | Advancing Speech Recognition With No Speech Or With Noisy Speech
+1.1 | I. I NTRODUCTION
+1.2 | II. A UTOMATIC S PEECH R ECOGNITION S YSTEM M ODELS
+1.2.1 | A. Connectionist Temporal Classification (CTC)
+1.2.2 | B. RNN Encoder-Decoder or Attention model
+1.3 | III. D ESIGN OF E XPERIMENTS FOR BUILDING THE DATABASE
+1.4 | IV. EEG AND S PEECH FEATURE EXTRACTION DETAILS
+1.5 | VI. R ESULTS
+1.6 | VII. C ONCLUSION AND F UTURE WORK
+1.7 | VIII. A CKNOWLEDGEMENT
+1.8 | R EFERENCES
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_all (call_xXn8ubDDBo3kypWs0IoHy0rh)
+ Call ID: call_xXn8ubDDBo3kypWs0IoHy0rh
+  Args:
+    pattern: [Bb]aseline
+
+================================= Tool Message =================================
+Name: grep_search_all
+
+No matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_all (call_wLuHoOvrRPZqtlQ06HvBBsIO)
+ Call ID: call_wLuHoOvrRPZqtlQ06HvBBsIO
+  Args:
+    pattern: CTC|Connectionist Temporal|Attention|RNN Encoder-Decoder|baseline|baselines
+
+================================= Tool Message =================================
+Name: grep_search_all
+
+1.1
+1.2.1
+1.2.2
+1.5
+1.6
+1.8
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_SghMS3fPAWJCOMTSoTQDhquq)
+ Call ID: call_SghMS3fPAWJCOMTSoTQDhquq
+  Args:
+    section_id: 1.5
+
+================================= Tool Message =================================
+Name: read_section
+
+VI. R ESULTS
+The attention model was predicting a word and CTC model was predicting a character at every time step, hence we used word error rate (WER) as performance metric to evaluate attention model and character error rate (CER) for CTC model for different feature sets as shown below.Table I and II shows the test time results for attention model for both the data sets when trained using EEG features and concatenation of EEG, acoustic features respectively.  As seen from the results the attention model gave lower WER when trained and tested on smaller number of sentences. As the vocabulary size increase, the WER also went up. We believe for the attention model to achieve lower WER for larger vocabulary size more number of training examples or larger training data set is required as large number of weights need to be adapted. Figure 3 shows the training loss convergence of our attention model.Table IV and V shows the results obtained using CTC model.  The error rates for CTC model also went up with the increase in vocabulary size for both the data sets. However the CTC model was trained for 500 epochs compared to 100 epochs for attention model to observe loss convergence and batch size was
+set to one for CTC model. Thus CTC model training was lot more time consuming than attention model.In [1] we have demonstrated that EEG sensors T7 and T8 features contributed most towards ASR performance.  Table VI shows the CTC model test time results when we trained the model using EEG features from only T7 and T8 sensors on the most noisy data set B. We observed that as vocabulary size increase, error rates were slightly lower than the error rates from Table IV where we used EEG features from all 31 sensors with dimension reduction. Table III shows the results for attention model when trained with EEG features from sensors T7 and T8 only on data set B.  We observed that error rates were higher in this case compared to the error rates reported in table II.Figures 4 shows the visualization of the attention weights when the attention model was trained and tested using only EEG features for Data set B. The plots shows the EEG feature importance ( attention) distribution across time steps for predicting first sentence and it indicates that attention model was not able to attend properly to EEG features, which might be another reason for giving higher WER.Fig. 3.  Training loss convergence for attention model using only EEG features for first 10 sentences from data set A
+Fig. 4. Visualization of attention weights for the first sentence
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_VMEnsb0LhGZP89pxXm9l75IE)
+ Call ID: call_VMEnsb0LhGZP89pxXm9l75IE
+  Args:
+    section_id: 1.2.1
+
+================================= Tool Message =================================
+Name: read_section
+
+A. Connectionist Temporal Classification (CTC)
+The main ideas behind CTC based ASR were first intro- duced in the following papers [9], [10]. In our work we used a single layer gated recurrent unit (GRU) [11] with 128 hidden units as encoder for the CTC network. The decoder consists of a combination of a dense layer ( fully connected layer) and a softmax activation. Output at every time step of the GRU layer is fed into the decoder network.  The number of time steps of the GRU encoder is equal to product of the sampling frequency of the input features and the length of the input sequence. Since different speakers have different rate of speech, we used dynamic recurrent neural network (RNN) cell. There is no fixed value for time steps of the encoder. Usually the number of time steps of the encoder ( T ) is greater than the length of output tokens for a continuous speech recognition problem.  A RNN based CTC network tries to make length of output tokens equal to T by allowing the repetition of output prediction unit tokens and by introducing a special token called blank token [9] across all the frames. We used CTC loss function with adam optimizer [12] and during inference time we used CTC beam search decoder.We now explain the loss function used in our CTC model.  Consider training data set X with training examples ~ x 1 , · · · , ~ x m and the corresponding label set Y with target vectors ~ y 1 , · · · , ~ y m . Consider any training example, label pair ( x , y ). Let the number of time steps of the RNN encoder for ( x , y ) is T . In case of character based CTC model, the RNN predicts a character at every time step.  Whereas in word based CTC model, the RNN predicts a word at every time step. For the sake of simplicity, let us assume that length of target vector y is equal to T . Let the probability vector output by the RNN at each time step t be − → z t and let k th value of z t be denoted by z t [ k ] .  The probability that model outputs y on input x is given by P r ( y | x ) = Q T t =1 z t [ y [ t ]] . During the training phase, we would like to maximize the conditional probability P r ( y | x ) , and thereby define the loss function as − log P r ( y | x ) . In case when the length of y is less than T , we extend the target vector y by repeating a few of its values and by introducing blank token ( ) to create a target vector of length T . Let the possible extensions of y be denoted by a 1 , a 2 , · · · , a ` .  For example, when y = [ c, u, t ] and T = 4 , the possible extensions are a 1 = [ c, c, u, t ] , a 2 = [ c, u, u, t ] , a 3 = [ c, u, t, t ] , a 4 = [ , c, u, t ] , a 5 = [ c, , u, t ] , a 6 = [ c, u, , t ] and a 7 = [ c, u, t, ] .  We then define P r ( y | x ) as P ` i =1 P r ( a i | x ) . In our work we used character based CTC ASR model. CTC assumes the conditional independence constraint that output predictions are independent given the entire input sequence.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_V9loe3iAoqBaCk6EPUc4OycO)
+ Call ID: call_V9loe3iAoqBaCk6EPUc4OycO
+  Args:
+    section_id: 1.2.2
+
+================================= Tool Message =================================
+Name: read_section
+
+B. RNN Encoder-Decoder or Attention model
+RNN encoder - decoder ASR model consists of a RNN en- coder and a RNN decoder with attention mechanism [13]–[15]. The number of time steps of the encoder is equal to the product of sampling frequency of the input features and the length of input sequence. There is no fixed value for time steps in our case. We used dynamic RNN cell. We used a single layer GRU with 128 hidden units for both encoder and decoder. A
+ dense layer followed by softmax activation is used after the decoder GRU to get the prediction probabilities. Dense layer performs an affine transformation. The number of time steps of the decoder GRU is same as the number of words present in the sentence for a given training example.  Training objective is to maximize the log probability of the ordered conditionals, ie: log P r ( Y 1 | X )+log P r ( Y 2 | X, Y 1 )+log P r ( Y 3 | X, Y 1 , Y 2 ) · · · + log P r ( Y u | X, Y 1 , · · · · · · , Y u ) , where X is input feature vector, Y i 's are the labels for the ordered words present in that training example and u is the length of the output label sentence for that example.  Cross entropy was used as the loss function with adam as the optimizer. We used teacher forcing algorithm [16] to train the model. During inference time we used beam search decoder.We now explain the attention mechanism used in our atten- tion model. Consider any training example, label pair ( x , y ). Let the number of times steps of encoder GRU for that example be T .  The GRU encoder will transform the input features ( x 1 , x 2 , · · · · · · , x T ) into hidden output feature vectors ( ~ h 1 , ~ h 2 , · · · · · · , ~ h T ). Let k th word label in ~ y (sentence) be y k , then to predict y k at decoder time step k , context vector c k is computed and fed into the decoder GRU.  c k is computed as P T t =1 ~ h t α k,t , where α k,t is the attention weight vector satisfying the property P T t =1 α k , t = 1 .α k,t can be intuitively seen as a measure of how much attention y k must pay to ~ h t , t = { 1 , 2 , 3 , · · · · · · , T } .  α k,t is mathematically defined as sof tmax ( score ( ~ h t , ~ h s − 1 )) , where ~ h s − 1 is hidden state of the decoder GRU at time step k − 1 . The way of computing value for score ( ~ h t , ~ h s − 1 ) depends on the type of attention used.  In this work, we used bahdanau’s additive style attention [14], which defines score ( ~ h t , ~ h s − 1 ) as V · tanh ( W 1 · ~ h t + W 2 · ~ h s − 1 ) where V, W 1 and W 2 are learnable parameters during training of the model.Fig. 1. EEG channel locations for the cap used in our experiments
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_YmdmkickdxRU8t7V3eiZdv5S)
+ Call ID: call_YmdmkickdxRU8t7V3eiZdv5S
+  Args:
+    section_id: 1.1
+
+================================= Tool Message =================================
+Name: read_section
+
+I. I NTRODUCTION
+Electroencephalography (EEG) is a non invasive way of measuring electrical activity of human brain. In [1] we demonstrated deep learning based automatic speech recognition (ASR) using EEG signals for a limited English vocabulary of four words and five vowels. In this paper we extend our work for a much larger English vocabulary and we use state-of-art end-to-end continuous speech recognition models to perform recognition. In our prior work we predicted isolated words and vowels. ASR systems forms the front end or back end in many cutting edge voice activated technologies like Amazon Alexa, Apple Siri, Windows Cortana, Samsung Bixby etc. Unfortunately these systems are trained to recognize text only from acoustic features. This limits technology accessibility to people with speaking disabilities and disorders. The research work presented in this paper tries to address this issue by investigating speech recognition using only EEG signals with no acoustic input and also by combining EEG features along with traditional acoustic features to perform recognition.  We believe the former will help with speech restoration for people who can not speak at all and the latter will help people who are having speaking disabilities like broken or discontinued speech etc to use voice activated technologies with better user experience there by helping in improving technology accessibility.ASR performance is degraded in presence of noisy speech and in real life situations most of the speech is noisy. Inspired from the unique robustness to environmental artifacts exhibited by the human auditory cortex [2], [3] we used very
+ noisy speech data for this work and demonstrated lower word error rate (WER) for smaller corpus using EEG features, concatenation of EEG features and acoustic features.In [4] authors decode imagined speech from EEG using synthetic EEG data and connectionist temporal classification (CTC) network but in our work we use real EEG data, use EEG data recorded along with acoustics.  In [5] authors perform envisioned speech recognition using random forest classifier but in our case we use end to end state of art models and perform recognition for noisy speech. In [6] authors demonstrate speech recognition using electrocorticography (ECoG) signals, which are invasive in nature but in our work we use non invasive EEG signals.This work is mainly motivated by the results explained in [1], [4], [7], [8].  In [7] the authors used classification approach for identifying phonological categories in imagined and silent speech but in our work we used continuous speech recognition state of art models and our models were predicting words, characters at each time step. Similarly in [8] neural network based classification approach was used for predicting phonemes. Major contribution of this paper is the demonstration of end to end continuous noisy speech recognition using only EEG features and this paper further validates the concepts introduced in [1] for a much larger English corpus.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_Dz6Ik9RCo6xZjmMHpvgih1UD)
+ Call ID: call_Dz6Ik9RCo6xZjmMHpvgih1UD
+  Args:
+    section_id: 1.6
+
+================================= Tool Message =================================
+Name: read_section
+
+VII. C ONCLUSION AND F UTURE WORK
+In this paper we demonstrated the feasibility of using EEG features, concatenation of EEG and acoustic features for performing noisy continuous speech recognition. To our best knowledge this is the first time a continuous noisy speech
+Fig. 5. Training loss convergence for CTC model using only EEG features for first 3 sentences from data set B
+ Number of Sentences Number of unique words contained EEG (WER %) EEG + MFCC (WER %) 3 19 0 0 5 29 37.03 45.1 7 42 58.9 51.1 10 59 63.11 71.2 15 84 82.7 79 20 106 87.3 80 TABLE I
+ WER ON TEST SET FOR ATTENTION MODEL FOR D ATA SET A
+Number of Sentences Number of unique words contained EEG (WER %) EEG + MFCC (WER %) 3 19 0 0 5 29 44.4 41.9 7 42 52.8 55 10 59 68 71 15 84 82.7 83 20 106 86.4 86 TABLE II
+ WER ON TEST SET FOR ATTENTION MODEL FOR D ATA SET B
+Number of Sentences Number of unique words contained EEG (WER %) 3 19 35.2 5 29 59.2 7 42 71.7 10 59 77.1 TABLE III
+WER ON TEST SET FOR ATTENTION MODEL FOR D ATA SET B USING EEG FEATURES FROM ONLY T7 AND T8 ELECTRODES
+recognition is demonstrated using only EEG features.  For both attention and CTC model we observed that as the vocabulary size increase, concatenating acoustic features with EEG features will help in reducing the test time error rates. We further plan to publish our speech EEG data base used in this work to help advancement of research in this area. For future work, we plan to build a much larger speech EEG data base and also perform experiments with data collected
+ Number of Sentences Number of unique words contained EEG (CER%) EEG + MFCC (CER%) 3 19 26.3 53 5 29 68.7 61.2 7 42 66 64.2 10 59 67.2 66 15 84 74.3 68.2 20 106 77.5 67.9 TABLE IV
+ CER ON TEST SET FOR CTC MODEL FOR D ATA SET B
+Number of Sentences Number of unique words contained EEG (CER%) EEG + MFCC (CER%) 3 19 45.8 10.27 5 29 45 47 7 42 61.02 63 10 59 70 61 15 84 75.4 64.3 20 106 73.91 67. 09 TABLE V
+CER ON TEST SET FOR CTC MODEL FOR D ATA SET A
+Number of Sentences Number of unique words contained EEG (CER %) 3 19 40.5 5 29 60.3 7 42 65 10 59 65.7 TABLE VI
+CER ON TEST SET FOR CTC MODEL FOR D ATA SET B USING EEG FEATURES FROM ONLY T7 AND T8 ELECTRODES
+ Number of Sentences Number of unique words contained MFCC (CER%) EEG + MFCC (CER%) 15 84 65.42 64.3 20 106 67.85 67.09 TABLE VII
+CER ON TEST SET FOR CTC MODEL FOR D ATA SET A FOR MFCC-EEG FUSION FOR LARGER VOCABULARY SIZE
+ Number of Sentences Number of unique words contained MFCC (CER%) EEG + MFCC (CER%) 15 84 65.7 68.2 20 106 67.9 67.9 TABLE VIII
+CER ON TEST SET FOR CTC MODEL FOR D ATA SET B FOR MFCC-EEG FUSION FOR LARGER VOCABULARY SIZE
+from subjects with speaking disabilities. We will also investigate whether it is possible to improve the attention model results by tuning hyper parameters to improve the model’s ability to condition on the input,improve CTC model results by training with more number of examples and by using external language model during inference time.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_all (call_AUv6OmoLJwcgMjdUTu9dq5t0)
+ Call ID: call_AUv6OmoLJwcgMjdUTu9dq5t0
+  Args:
+    pattern: MFCC|acoustic|baseline|baseline|baselines
+
+================================= Tool Message =================================
+Name: grep_search_all
+
+1.1
+1.2
+1.4
+1.5
+1.6
+1.8
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_v0IZB7B3OeUs7dK3cpZ8bBrv)
+ Call ID: call_v0IZB7B3OeUs7dK3cpZ8bBrv
+  Args:
+    section_id: 1.4
+
+================================= Tool Message =================================
+Name: read_section
+
+IV. EEG AND S PEECH FEATURE EXTRACTION DETAILS
+EEG signals were sampled at 1000Hz and a fourth order IIR band pass filter with cut off frequencies 0.1Hz and 70Hz was applied. A notch filter with cut off frequency 60 Hz was used to remove the power line noise.  EEGlab’s [18] Independent component analysis (ICA) toolbox was used to remove other biological signal artifacts like electrocardiography (ECG), electromyography (EMG), electrooculography (EOG) etc from the EEG signals. We extracted five statistical features for EEG, namely root mean square, zero crossing rate,moving window average,kurtosis and power spectral entropy [1].  So in total we extracted 31(channels) X 5 or 155 features for EEG signals.The EEG features were extracted at a sampling frequency of 100Hz for each EEG channel.We used spectral entropy because it captures the spectral ( frequency domain) and signal complexity information of EEG. It is also a widely used feature in EEG signal analysis [19]. Similarly zero crossing rate was chosen as it is a commonly used feature both for speech recognition and bio signal analysis.  Remaining features were chosen to capture time domain statistical information. We performed lot of experiments to identify this set of features. Initially we used only spectral entropy and zero crossing rate but we noticed that the performance of the ASR system went up when we added the remaining additional features.The recorded speech signal was sampled at 16KHz frequency. We extracted Mel-frequency cepstrum coefficients (MFCC) as features for speech signal.  We first extracted MFCC 13 features and then computed first and second order differentials (delta and delta-delta) thus having total MFCC 39 features. The MFCC features were also sampled at 100Hz same as the sampling frequency of EEG features to avoid seq2seq problem.V. EEG F EATURE D IMENSION R EDUCTION A LGORITHM D ETAILS
+ After extracting EEG and acoustic features as explained in the previous section, we used non linear methods to do feature dimension reduction in order to obtain set of EEG features which are better representation of acoustic features. We reduced the 155 EEG features to a dimension of 30 by applying Kernel Principle Component Analysis (KPCA) [20].We plotted cumulative explained variance versus number of components to identify the right feature dimension as shown in Figure 2.  We used KPCA with polynomial kernel of degree 3 [1]. We further computed delta, delta and delta of those 30 EEG features, thus the final feature dimension of EEG was 90 (30 times 3) for both the data sets.The non linear dimension reduction of EEG features helped in improving the performance of ASR.
+
+================================== Ai Message ==================================
+
+Unanswerable

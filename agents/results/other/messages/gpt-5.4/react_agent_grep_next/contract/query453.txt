@@ -1,0 +1,44 @@
+================================ Human Message =================================
+
+HYPOTHESIS:
+Sharing with third-parties: Receiving Party may share some Confidential Information with some third-parties (including consultants, agents and professional advisors).
+
+TABLE OF CONTENTS (TOC):
+1 | WHEREAS THE PARTIES CONFIRM THAT:
+2 | THE PARTIES HAVE THEREFORE AGREED AS FOLLOWS:
+2.1 | 1. Disclosure of Information
+2.1.1 | a.  A Party may disclose to the other Party information with a view to negotiating ...
+2.1.2 | b. The  Information,  including  any  material  support  containing  Information,
+2.1.3 | c. For any disputes arising from the supply,
+2.2 | 2. Use of Information
+2.2.1 | a.  The receiving Party undertakes not to use the Information  disclosed to it for ...
+2.2.2 | b.  The  Parties  shall  disclose  the  Information  to  their  employees,  Affilia...
+2.2.3 | c.  The obligations specified in this Article shall not apply to Information for wh...
+2.2.3.1 | i.  was known to the receiving Party on a non-confidential basis prior to its discl...
+2.2.3.2 | ii.  is  publicly  known  at  the  time  of  disclosure  or  thereafter  becomes  pu...
+2.2.3.3 | iii. becomes known to the receiving Party through disclosure by sources other than the disclosing Party,
+2.3 | 3. Applicable law and arbitration
+2.3.1 | a.  The Parties shall first attempt to settle amicably any dispute arising out of t...
+2.3.2 | b. This  Agreement shall be governed  by the laws of  [ … ],
+2.3.3 | c.  If at any time any provision of this Agreement is or becomes invalid or illegal...
+2.4 | 4. Assignment
+2.4.1 | a.  This Agreement may not be assigned by a Party hereto without the express writte...
+2.5 | 5. Other
+2.5.1 | a.  No  amendment or  modification  of this Agreement shall be valid  or  binding o...
+2.5.2 | b.  This Agreement shall be valid when signed by duly authorised representatives of...
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_pD2z1Wjs66cGCV4xCvLxTc6D)
+ Call ID: call_pD2z1Wjs66cGCV4xCvLxTc6D
+  Args:
+    section_id: 2.2.2
+
+================================= Tool Message =================================
+Name: read_section
+
+b.The  Parties  shall  disclose  the  Information  to  their  employees,  Affiliates,  external  experts and/or  consultants  only  on  a  need  to  know  basis  and  only  to  the  extent  absolutely necessary  for  the  Purpose.     Each  Party  shall  require  that  its  external  experts  and/or consultants also have such policies and procedures in place to ensure their compliance with these confidentiality obligations.
+
+================================== Ai Message ==================================
+
+Entailment

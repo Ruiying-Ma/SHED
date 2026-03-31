@@ -1,0 +1,110 @@
+================================ Human Message =================================
+
+QUERY:
+What is the type of the project 'Trancas Canyon Park Slope Stabilization Project (CalJPIA Project)'?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_ErLoBQ7XFGLXy4J4SD4bwCRO)
+ Call ID: call_ErLoBQ7XFGLXy4J4SD4bwCRO
+  Args:
+    pattern: Trancas Canyon Park Slope Stabilization Project \(CalJPIA Project\)
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Trancas Canyon Park Slope Stabilization Project (CalJPIA Project)
+¾ Updates:
+ The project consultant has started the design of this project.¾
+Project Schedule:  Complete Design: Summer 2021
+ Begin Construction: Summer/Fall 2021
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_glSNbor3iOWsUUnYsHnKq3lu)
+ Call ID: call_glSNbor3iOWsUUnYsHnKq3lu
+  Args:
+    pattern: CalJPIA Project
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Broad Beach Road Water Quality Infrastructure Repairs (CalJPIA Project)
+¾
+Updates:  The project consultant has started the design of the project.¾
+Project Schedule:  Complete Design: Summer 2021  Begin Construction: Fall 2021
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_dHaiNEqt5IfaNZNaqQclEWPL)
+ Call ID: call_dHaiNEqt5IfaNZNaqQclEWPL
+  Args:
+    pattern: Project Type|Type:
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_MHHGC0pShCD8MXJKBxiOlJ1g)
+ Call ID: call_MHHGC0pShCD8MXJKBxiOlJ1g
+  Args:
+    pattern: Trancas Canyon
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Trancas Canyon Park Planting and Irrigation Repairs (CalJPIA/FEMA Project)
+¾ Updates:
+ The project consultant has started the design of this project.¾
+Project Schedule:  Complete Design: Summer 2021
+ Begin Construction: Summer/Fall 2021
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_V7rFqGTO0IT54xbg43vvM2r6)
+ Call ID: call_V7rFqGTO0IT54xbg43vvM2r6
+  Args:
+    pattern: capital|disaster
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_7HPbkdQ8SZjwy0UHI9SUhVKN)
+ Call ID: call_7HPbkdQ8SZjwy0UHI9SUhVKN
+  Args:
+    pattern: CalJPIA
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Broad Beach Road Water Quality Infrastructure Repairs (CalJPIA Project)
+¾
+Updates:  The project consultant has started the design of the project.¾
+Project Schedule:  Complete Design: Summer 2021  Begin Construction: Fall 2021
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_ry3otOOiXd94p8taN5kRzgss)
+ Call ID: call_ry3otOOiXd94p8taN5kRzgss
+  Args:
+    pattern: Trancas Canyon Park Slope Stabilization
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Trancas Canyon Park Slope Stabilization Project (CalJPIA Project)
+¾ Updates:
+ The project consultant has started the design of this project.¾
+Project Schedule:  Complete Design: Summer 2021
+ Begin Construction: Summer/Fall 2021
+
+================================== Ai Message ==================================
+
+none

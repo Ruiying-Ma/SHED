@@ -1,0 +1,88 @@
+================================ Human Message =================================
+
+QUERY:
+Where did the joke data come from?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_52r1r2fetPAS22Uqxp2chPnO)
+ Call ID: call_52r1r2fetPAS22Uqxp2chPnO
+  Args:
+    pattern: joke|humor|dataset|data
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Generating humor and quotes are very challeng- ing problems in the field of computational linguis- tics and are often tackled separately. In this paper, we present a controlled Long Short-Term Memory (LSTM) architecture which is trained with categor- ical data like jokes and quotes together by pass- ing category as an input along with the sequence of words.  The idea is that a single neural net will learn the structure of both jokes and quotes to gen- erate them on demand according to input category. Importantly, we believe the neural net has more knowledge as it’s trained on different datasets and hence will enable it to generate more creative jokes or quotes from the mixture of information. May the network generate a funny inspirational joke!
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_dFStpTM5kC3rFrt3U9Zq7HGp)
+ Call ID: call_dFStpTM5kC3rFrt3U9Zq7HGp
+  Args:
+    pattern: joke
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Generating humor and quotes are very challeng- ing problems in the field of computational linguis- tics and are often tackled separately. In this paper, we present a controlled Long Short-Term Memory (LSTM) architecture which is trained with categor- ical data like jokes and quotes together by pass- ing category as an input along with the sequence of words.  The idea is that a single neural net will learn the structure of both jokes and quotes to gen- erate them on demand according to input category. Importantly, we believe the neural net has more knowledge as it’s trained on different datasets and hence will enable it to generate more creative jokes or quotes from the mixture of information. May the network generate a funny inspirational joke!
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_M49MHNHHLXj1fcaey6min7ab)
+ Call ID: call_M49MHNHHLXj1fcaey6min7ab
+  Args:
+    pattern: dataset
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Generating humor and quotes are very challeng- ing problems in the field of computational linguis- tics and are often tackled separately. In this paper, we present a controlled Long Short-Term Memory (LSTM) architecture which is trained with categor- ical data like jokes and quotes together by pass- ing category as an input along with the sequence of words.  The idea is that a single neural net will learn the structure of both jokes and quotes to gen- erate them on demand according to input category. Importantly, we believe the neural net has more knowledge as it’s trained on different datasets and hence will enable it to generate more creative jokes or quotes from the mixture of information. May the network generate a funny inspirational joke!
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_7Ikv854RlT0vheJsJsUfiVpB)
+ Call ID: call_7Ikv854RlT0vheJsJsUfiVpB
+  Args:
+    pattern: Corpus|corpus|data collection|source|sources|downloaded|scrap|reddit|api
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1 Introduction
+Generating texts containing human sentiments is one of the most challenging tasks in natural language processing. Among the human emotions, research on the characteristics of humor, the linguistic properties of humor and its interpre- tation by human cognition is an active field of study.Detailed studies have been conducted to identify the struc- ture and principles of humor using mathematical models and generate fixed formulaic jokes using unsupervised learning from big data [Petrovic, 2013].  Recurrent Neural Networks are popular for text generation tasks and they were used for humor generation [He Ren, 2017]. The technique described in the later paper was to give the topic words (proper nouns tagged by part-of-speech tagger) as input and generate jokes on them. We believe training models with jokes and non- jokes in a supervised manner will give it more contextual data to inference from and generate creative content. A controlled LSTM can be used to train a network in a su- pervised way on multiple categorical data like jokes, quotes, and tweets by augmenting the category tag to the input word at every time-step. This way the neural net can learn the dif- ference in the semantics of a joke and quote and generate more creative content using the mix of knowledge gained by
+training in a supervised manner on multiple categorical data.  We show how our model is able to generate a joke vs quote depending on the category input for the same prefix of words. We also found that a network trained on the combined dataset generated fewer offensive jokes compared to the one trained on just the jokes (as the jokes scraped from the internet were offensive with high probability). This is the first time anyone has used controlled LSTM architecture to generate texts with different sentiments.  We show how the network learns to in- troduce incongruities in the generated text (making it funny) when asked to generate a joke as opposed to a quote (which is inspirational).With the current resurgence of deep-neural networks and its astounding success in natural language gen- eration, our paper tries to achieve the above goal.Finally, we trained our model with three categories of data namely: jokes, quotes, and tweets.  We show that the network is able to generate texts belonging to the specific category when we pass the category as input along with the seed text.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_35DPkKekPHJC11uwSdpn93rW)
+ Call ID: call_35DPkKekPHJC11uwSdpn93rW
+  Args:
+    pattern: scraped|internet|quotes|tweets|jokes scraped
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Generating humor and quotes are very challeng- ing problems in the field of computational linguis- tics and are often tackled separately. In this paper, we present a controlled Long Short-Term Memory (LSTM) architecture which is trained with categor- ical data like jokes and quotes together by pass- ing category as an input along with the sequence of words.  The idea is that a single neural net will learn the structure of both jokes and quotes to gen- erate them on demand according to input category. Importantly, we believe the neural net has more knowledge as it’s trained on different datasets and hence will enable it to generate more creative jokes or quotes from the mixture of information. May the network generate a funny inspirational joke!
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_wyYxElq3bBBk1LA1tDrM07Ns)
+ Call ID: call_wyYxElq3bBBk1LA1tDrM07Ns
+  Args:
+    pattern: scraped
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1 Introduction
+Generating texts containing human sentiments is one of the most challenging tasks in natural language processing. Among the human emotions, research on the characteristics of humor, the linguistic properties of humor and its interpre- tation by human cognition is an active field of study.Detailed studies have been conducted to identify the struc- ture and principles of humor using mathematical models and generate fixed formulaic jokes using unsupervised learning from big data [Petrovic, 2013].  Recurrent Neural Networks are popular for text generation tasks and they were used for humor generation [He Ren, 2017]. The technique described in the later paper was to give the topic words (proper nouns tagged by part-of-speech tagger) as input and generate jokes on them. We believe training models with jokes and non- jokes in a supervised manner will give it more contextual data to inference from and generate creative content. A controlled LSTM can be used to train a network in a su- pervised way on multiple categorical data like jokes, quotes, and tweets by augmenting the category tag to the input word at every time-step. This way the neural net can learn the dif- ference in the semantics of a joke and quote and generate more creative content using the mix of knowledge gained by
+training in a supervised manner on multiple categorical data.  We show how our model is able to generate a joke vs quote depending on the category input for the same prefix of words. We also found that a network trained on the combined dataset generated fewer offensive jokes compared to the one trained on just the jokes (as the jokes scraped from the internet were offensive with high probability). This is the first time anyone has used controlled LSTM architecture to generate texts with different sentiments.  We show how the network learns to in- troduce incongruities in the generated text (making it funny) when asked to generate a joke as opposed to a quote (which is inspirational).With the current resurgence of deep-neural networks and its astounding success in natural language gen- eration, our paper tries to achieve the above goal.Finally, we trained our model with three categories of data namely: jokes, quotes, and tweets.  We show that the network is able to generate texts belonging to the specific category when we pass the category as input along with the seed text.
+
+================================== Ai Message ==================================
+
+The jokes were scraped from the internet.

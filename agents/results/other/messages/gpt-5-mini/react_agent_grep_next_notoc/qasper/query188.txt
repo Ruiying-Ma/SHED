@@ -1,0 +1,86 @@
+================================ Human Message =================================
+
+QUERY:
+what datasets have been used for this task?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_MZgiCME46jWFqpA5FUFun3bY)
+ Call ID: call_MZgiCME46jWFqpA5FUFun3bY
+  Args:
+    pattern: dataset|datasets|Data set|Data Set|corpus|Corpora|Corpora:
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+I. I NTRODUCTION
+Part-of-speech (POS) tagging is a process to tag tokens in a string with their corresponding part-of-speech (e.g., noun, verb, etc). POS tagging is considered as one of the most basic tasks in NLP, as it is usually the first component in an NLP pipeline.  This is because POS tags are shown to be useful features in various NLP tasks, such as named entity recognition [1], [2], machine translation [3], [4] and constituency parsing [5]. Therefore, for any language, building a successful NLP system usually requires a well- performing POS tagger.There are quite a number of research on Indonesian POS tagging [6], [7], [8], [9].  However, almost all of them are not evaluated on a common dataset. Even when they are, their train-test split are not the same. This lack of a common benchmark dataset makes a fair comparison among these works difficult. Moreover, despite the success of neural network models for English POS tagging [10], [11], the use of neural networks is generally unexplored for Indonesian.  As a result, published results may not re- flect the actual state-of-the-art performance of Indonesian POS tagger.In this work, we explored different neural network architectures for Indonesian POS tagging. We evaluated our experiments on the IDN Tagged Corpus [12]. Our best model achieves 97.47 F 1 score, a new state-of-the- art result for Indonesian POS tagging on the dataset. We release the dataset split that we used to serve as a benchmark for future work.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_CAkfGRx8mj07YtD7uiwxCyQp)
+ Call ID: call_CAkfGRx8mj07YtD7uiwxCyQp
+  Args:
+    pattern: IDN Tagged Corpus
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+I. I NTRODUCTION
+Part-of-speech (POS) tagging is a process to tag tokens in a string with their corresponding part-of-speech (e.g., noun, verb, etc). POS tagging is considered as one of the most basic tasks in NLP, as it is usually the first component in an NLP pipeline.  This is because POS tags are shown to be useful features in various NLP tasks, such as named entity recognition [1], [2], machine translation [3], [4] and constituency parsing [5]. Therefore, for any language, building a successful NLP system usually requires a well- performing POS tagger.There are quite a number of research on Indonesian POS tagging [6], [7], [8], [9].  However, almost all of them are not evaluated on a common dataset. Even when they are, their train-test split are not the same. This lack of a common benchmark dataset makes a fair comparison among these works difficult. Moreover, despite the success of neural network models for English POS tagging [10], [11], the use of neural networks is generally unexplored for Indonesian.  As a result, published results may not re- flect the actual state-of-the-art performance of Indonesian POS tagger.In this work, we explored different neural network architectures for Indonesian POS tagging. We evaluated our experiments on the IDN Tagged Corpus [12]. Our best model achieves 97.47 F 1 score, a new state-of-the- art result for Indonesian POS tagging on the dataset. We release the dataset split that we used to serve as a benchmark for future work.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_nnQDJRH2dnEOaNkdHHsEvVSm)
+ Call ID: call_nnQDJRH2dnEOaNkdHHsEvVSm
+  Args:
+    pattern: dataset split|split that we used|benchmark|release the dataset split|We release the dataset split
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+I. I NTRODUCTION
+Part-of-speech (POS) tagging is a process to tag tokens in a string with their corresponding part-of-speech (e.g., noun, verb, etc). POS tagging is considered as one of the most basic tasks in NLP, as it is usually the first component in an NLP pipeline.  This is because POS tags are shown to be useful features in various NLP tasks, such as named entity recognition [1], [2], machine translation [3], [4] and constituency parsing [5]. Therefore, for any language, building a successful NLP system usually requires a well- performing POS tagger.There are quite a number of research on Indonesian POS tagging [6], [7], [8], [9].  However, almost all of them are not evaluated on a common dataset. Even when they are, their train-test split are not the same. This lack of a common benchmark dataset makes a fair comparison among these works difficult. Moreover, despite the success of neural network models for English POS tagging [10], [11], the use of neural networks is generally unexplored for Indonesian.  As a result, published results may not re- flect the actual state-of-the-art performance of Indonesian POS tagger.In this work, we explored different neural network architectures for Indonesian POS tagging. We evaluated our experiments on the IDN Tagged Corpus [12]. Our best model achieves 97.47 F 1 score, a new state-of-the- art result for Indonesian POS tagging on the dataset. We release the dataset split that we used to serve as a benchmark for future work.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_uFm2BcILDbbW4GXhVagfQ1re)
+ Call ID: call_uFm2BcILDbbW4GXhVagfQ1re
+  Args:
+    pattern: Dataset|Data|Corpora|IDN Tagged|IDN Tagged Corpus|Indonesian POS|corpus|dataset
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+I. I NTRODUCTION
+Part-of-speech (POS) tagging is a process to tag tokens in a string with their corresponding part-of-speech (e.g., noun, verb, etc). POS tagging is considered as one of the most basic tasks in NLP, as it is usually the first component in an NLP pipeline.  This is because POS tags are shown to be useful features in various NLP tasks, such as named entity recognition [1], [2], machine translation [3], [4] and constituency parsing [5]. Therefore, for any language, building a successful NLP system usually requires a well- performing POS tagger.There are quite a number of research on Indonesian POS tagging [6], [7], [8], [9].  However, almost all of them are not evaluated on a common dataset. Even when they are, their train-test split are not the same. This lack of a common benchmark dataset makes a fair comparison among these works difficult. Moreover, despite the success of neural network models for English POS tagging [10], [11], the use of neural networks is generally unexplored for Indonesian.  As a result, published results may not re- flect the actual state-of-the-art performance of Indonesian POS tagger.In this work, we explored different neural network architectures for Indonesian POS tagging. We evaluated our experiments on the IDN Tagged Corpus [12]. Our best model achieves 97.47 F 1 score, a new state-of-the- art result for Indonesian POS tagging on the dataset. We release the dataset split that we used to serve as a benchmark for future work.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_VxBwQWrs621KPWO4BZks2SHm)
+ Call ID: call_VxBwQWrs621KPWO4BZks2SHm
+  Args:
+    pattern: Corpus|corpus
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+I. I NTRODUCTION
+Part-of-speech (POS) tagging is a process to tag tokens in a string with their corresponding part-of-speech (e.g., noun, verb, etc). POS tagging is considered as one of the most basic tasks in NLP, as it is usually the first component in an NLP pipeline.  This is because POS tags are shown to be useful features in various NLP tasks, such as named entity recognition [1], [2], machine translation [3], [4] and constituency parsing [5]. Therefore, for any language, building a successful NLP system usually requires a well- performing POS tagger.There are quite a number of research on Indonesian POS tagging [6], [7], [8], [9].  However, almost all of them are not evaluated on a common dataset. Even when they are, their train-test split are not the same. This lack of a common benchmark dataset makes a fair comparison among these works difficult. Moreover, despite the success of neural network models for English POS tagging [10], [11], the use of neural networks is generally unexplored for Indonesian.  As a result, published results may not re- flect the actual state-of-the-art performance of Indonesian POS tagger.In this work, we explored different neural network architectures for Indonesian POS tagging. We evaluated our experiments on the IDN Tagged Corpus [12]. Our best model achieves 97.47 F 1 score, a new state-of-the- art result for Indonesian POS tagging on the dataset. We release the dataset split that we used to serve as a benchmark for future work.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_4aPs36unXUb1XnjlKiIvw8si)
+ Call ID: call_4aPs36unXUb1XnjlKiIvw8si
+  Args:
+    pattern: \bData\b|\bdata\b|\bDataset\b|\bdataset\b
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+I. I NTRODUCTION
+Part-of-speech (POS) tagging is a process to tag tokens in a string with their corresponding part-of-speech (e.g., noun, verb, etc). POS tagging is considered as one of the most basic tasks in NLP, as it is usually the first component in an NLP pipeline.  This is because POS tags are shown to be useful features in various NLP tasks, such as named entity recognition [1], [2], machine translation [3], [4] and constituency parsing [5]. Therefore, for any language, building a successful NLP system usually requires a well- performing POS tagger.There are quite a number of research on Indonesian POS tagging [6], [7], [8], [9].  However, almost all of them are not evaluated on a common dataset. Even when they are, their train-test split are not the same. This lack of a common benchmark dataset makes a fair comparison among these works difficult. Moreover, despite the success of neural network models for English POS tagging [10], [11], the use of neural networks is generally unexplored for Indonesian.  As a result, published results may not re- flect the actual state-of-the-art performance of Indonesian POS tagger.In this work, we explored different neural network architectures for Indonesian POS tagging. We evaluated our experiments on the IDN Tagged Corpus [12]. Our best model achieves 97.47 F 1 score, a new state-of-the- art result for Indonesian POS tagging on the dataset. We release the dataset split that we used to serve as a benchmark for future work.
+
+================================== Ai Message ==================================
+
+IDN Tagged Corpus.

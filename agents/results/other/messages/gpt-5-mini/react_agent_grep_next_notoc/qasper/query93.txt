@@ -1,0 +1,21 @@
+================================ Human Message =================================
+
+QUERY:
+What kind of evaluations do use to evaluate dialogue?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_pGXaE9fmtFzWX8t7JhrXlQRJ)
+ Call ID: call_pGXaE9fmtFzWX8t7JhrXlQRJ
+  Args:
+    pattern: evaluate dialogue|evaluat.*dialogue|evaluations .*dialogue|evaluation(s)? to evaluate dialogue|evaluate.*dialogue
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Personalized dialogue systems are an essen- tial step toward better human-machine in- teraction. Existing personalized dialogue agents rely on properly designed conversa- tional datasets, which are mostly monolingual (e.g., English), which greatly limits the usage of conversational agents in other languages. In this paper, we propose a multi-lingual ex- tension of Persona-Chat ( Zhang et al. , 2018 ), namely XPersona.  Our dataset includes per- sona conversations in six different languages other than English for building and evaluating multilingual personalized agents. We experi- ment with both multilingual and cross-lingual trained baselines, and evaluate them against monolingual and translation-pipeline models using both automatic and human evaluation.  Experimental results show that the multilin- gual trained models outperform the translation- pipeline and that they are on par with the monolingual models, with the advantage of having a single model across multiple lan- guages. On the other hand, the state-of-the- art cross-lingual trained models achieve infe- rior performance to the other models, showing that cross-lingual conversation modeling is a challenging task.  We hope that our dataset and baselines 1 will accelerate research in multilin- gual dialogue systems.
+
+================================== Ai Message ==================================
+
+Both automatic and human evaluation.

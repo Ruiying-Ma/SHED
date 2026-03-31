@@ -1,0 +1,36 @@
+================================ Human Message =================================
+
+HYPOTHESIS:
+Limited use: Receiving Party shall not use any Confidential Information for any purpose other than the purposes stated in Agreement.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_3v1TbY9PAVnyN4x56jgRSnMN)
+ Call ID: call_3v1TbY9PAVnyN4x56jgRSnMN
+  Args:
+    pattern: Receiving Party shall not use
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_V7GpoNPMcGKHcDSgZB7asnQW)
+ Call ID: call_V7GpoNPMcGKHcDSgZB7asnQW
+  Args:
+    pattern: Limited use|use any Confidential Information for any purpose|shall not use|Purpose|Purpose of Agreement|for any purpose other than
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+5 RESTRICTIONS ON DISCLOSURE AND USE OF THE CONFIDENTIAL INFORMATION
+The Receiving Party undertakes not to use the Confidential Information for any purpose other than –
+5.1 that for which it is disclosed;
+5.2 in accordance with the provisions of this Agreement; and
+5.3 in accordance with applicable data privacy legislation, as amended from time to time.
+
+================================== Ai Message ==================================
+
+Entailment

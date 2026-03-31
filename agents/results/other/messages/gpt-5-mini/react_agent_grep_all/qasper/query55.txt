@@ -1,0 +1,58 @@
+================================ Human Message =================================
+
+QUERY:
+Do they evaluate which compression method yields the most gains?
+
+TABLE OF CONTENTS (TOC):
+1 | LadaBERT: Lightweight Adaptation of BERT through Hybrid Model Compression Yihuan Mao 1, ∗ , Yujing Wang 2,3, † , Chufan Wu 1 , Chen Zhang 2 , Yang Wang 2 Quanlu Zhang 2 , Yaming Yang 2 , Yunhai Tong 3 , Jing Bai 2
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2 Related Work
+1.3.1 | 2.1 Model compression algorithms
+1.3.2 | 2.2 BERT model compression
+1.4 | 3 Lightweight Adaptation of BERT
+1.4.1 | 3.1 Overview
+1.4.2 | 3.2 Matrix factorization
+1.4.3 | 3.3 Weight pruning
+1.4.4 | 3.4 Knowledge distillation
+1.5 | 4 Experiments
+1.5.1 | 4.1 Datasets & Baselines
+1.5.2 | 4.2 Setup
+1.5.3 | 4.3 Performance Comparison
+1.5.4 | 4.4 Learning curve comparison
+1.5.5 | 4.5 Effect of low-rank + sparsity
+1.6 | 5 Conclusion
+1.7 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_all (call_xh75mrRSxvEebzfiTgB7lwx4)
+ Call ID: call_xh75mrRSxvEebzfiTgB7lwx4
+  Args:
+    pattern: which compression|most gains|evaluate which|which method|yields the most|compare.*compression|Effect of low-rank|low-rank \+ sparsity|which.*gains
+
+================================= Tool Message =================================
+Name: grep_search_all
+
+1.5.1 | 4.1 Datasets & Baselines
+We compare LadaBERT with state-of-the-art model compression approaches on five public datasets of different tasks of natural language understanding, including sentiment classification (SST-2), natural lan- guage inference (MNLI-m, MNLI-mm, QNLI) and pairwise semantic equivalence (QQP). The statistics of these datasets are described in Table 1.Task #Train #Dev.  #Test #Class SST-2 67,350 873 1,822 2 QQP 363,871 40,432 390,965 2 MNLI-m 392,703 9,816 9,797 3 MNLI-mm 392,703 9,833 9,848 3 QNLI 104,744 5,464 5,464 2
+Table 1: Dataset Statistics
+ The baseline approaches are summarized below.
+• Weight pruning and Matrix factorization are two simple baselines described in Section 3.3. We evaluate both pruning methods in an iterative manner until the target compression ratio is reached.
+• Hybrid pruning is a combination of matrix factorization and weight pruning,which conducts it- erative weight pruning on the basis of SVD-based matrix factorization. It is performed iteratively until the desired compression ratio is achieved.
+• BERT-FT ,BERT-KD and BERT-PKD are reported in (Sun et al., 2019), where BERT-FT directly fine-tunes the model via supervision labels, BERT-KD is the vanilla knowledge distillation algo- rithm (Hinton et al., 2015), and BERT-PKD stands for Patient Knowledge Distillation proposed in (Sun et al., 2019).  The student model is composed of 3 Transformer layers, resulting in a 2 . 5 × compression ratio. Each layer has the same hidden size as the pre-trained teacher, so the initial parameters of student model can be inherited from the corresponding teacher.
+• TinyBERT (Jiao et al.,2019) instantiates a tiny student model, which has totally 14.5M parameters ( 7 . 5 × compression ratio) composed of 4 layers, 312 hidden units, 1200 intermediate size and 12 heads. For a fair comparison, we reproduce the TinyBERT pipeline 1 without general distillation and data augmentation, which is time-exhaustive and resource-consuming.
+• BERT-Small has the same model architecture as TinyBERT,but is directly pre-trained by the offi- cial BERT pipeline. The performance values are copied from (Jiao et al., 2019) for reference.
+• Distilled-BiLSTM (Tang et al.,2019) leverages a single-layer bidirectional-LSTM as the student model, where the hidden units and intermediate size are set to be 300 and 400 respectively, resulting in a 10 . 8 × compression ratio. This model requires an expensive training process similar to vanilla BERT.
+
+1.5.4 | 4.4 Learning curve comparison
+To further demonstrate the efficiency of LadaBERT, we visualize the learning curves on MNLI-m and QQP datasets in Figure 3 and 4, where LadaBERT-3 is compared to the strongest baseline, TinyBERT, under 7 . 5 × compression ratio. As shown in the figures, LadaBERT-3 achieves good performances much faster and results in a better convergence point.  After training 2 × 10 4 steps (batches) on MNLI-m dataset, the performance of LadaBERT-3 is already comparable to TinyBERT after convergence (approximately 2 × 10 5 steps), achieving nearly 10 times acceleration. And on QQP dataset, both performance improve- ment and training speed acceleration are very significant. This clearly shows the superiority of combining matrix factorization, weight pruning and knowledge distillation in a collaborative manner.  On the other hand, TinyBERT is based on pure knowledge distillation, so the learning speed is much slower.
+
+1.5.5 | 4.5 Effect of low-rank + sparsity
+In this paper, we demonstrate that a combination of matrix factorization and weight pruning is better than single solutions for BERT-oriented model compression. Similar phenomena has been reported in computer vision, showing that low-rank and sparsity are complementary to each other (Yu et al., 2017). Here we provide another explanation to support our observation.Figure 5: Distribution of pruning errors
+ In Figure 5, we visualize the distribution of element biases for a weight matrix in the neu- ral network after pruning to 20% of its orig- inal parameter size. For illustration, we con- sider the matrix initialized by real pretrained BERT weights, and the pruning process is done at once. We define the biases to be calculated by Bias ij = ˆ M ij − M ij , where ˆ M denotes the weight matrix after pruning. The yellow line in Figure 5 shows the distribu- tion of biases generated by pure weight pruning, which has a sudden drop at the pruning thresh- old. The orange line represents for pure SVD pruning, which turns out to be smoother and is aligned with Gaussian distribution. The blue
+line shows the result of hybrid pruning, which conducts weight pruning on the decomposed matrices. First, we apply SVD-based matrix factorization to reduce 60% of total parameters.  Then, weight pruning is applied on the decomposed matrices by 50%, resulting in 20% parameters while the bias distribution changes slightly. As visualized in Figure 5, it has smaller mean and deviation of bias distribution than that of pure matrix factorization. In addition, it seems that a smoother weight distribution is more feasi- ble for the fine-tuning procedure. Therefore, it is reasonable that a hybrid model compression approach is advantageous than pure weight pruning.
+
+================================== Ai Message ==================================
+
+Yes — they compare pruning, matrix factorization, hybrid pruning, and knowledge-distillation baselines and find that combining matrix factorization, weight pruning and knowledge distillation (hybrid) yields the most gains.

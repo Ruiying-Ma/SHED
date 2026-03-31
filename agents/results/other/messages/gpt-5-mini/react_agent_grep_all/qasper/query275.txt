@@ -1,0 +1,58 @@
+================================ Human Message =================================
+
+QUERY:
+How are the embeddings evaluated in the human judgement comparison?
+
+TABLE OF CONTENTS (TOC):
+1 | A Joint Model for Word Embedding and Word Morphology Kris Cao and Marek Rei Computer Lab University of Cambridge United Kingdom kc391@cam.ac.uk
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2 Related Work
+1.3.1 | 2.1 Morphemic analysis and semantics
+1.3.2 | 2.2 Character-level models
+1.4 | 3 The Char2Vec model
+1.4.1 | 3.1 Capturing morphology via attention
+1.5 | 4 Experiments
+1.5.1 | 4.1 Morphological awareness
+1.5.2 | 4.2 Capturing semantic similarity
+1.5.3 | 4.3 Capturing syntactic and semantic regularity
+1.6 | 5 Discussion
+1.7 | 6 Conclusion
+1.8 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_all (call_nR2taa9gHfYNwqmWP3tQZYFj)
+ Call ID: call_nR2taa9gHfYNwqmWP3tQZYFj
+  Args:
+    pattern: human|judg|judgement|judgment|human judgement|human judgment
+
+================================= Tool Message =================================
+Name: grep_search_all
+
+1.1 | Abstract
+This paper presents a joint model for performing unsupervised morphologi- cal analysis on words, and learning a character-level composition function from morphemes to word embeddings. Our model splits individual words into segments, and weights each segment according to its ability to predict context words. Our morphological analysis is comparable to dedicated morphological analyzers at the task of morpheme bound- ary recovery, and also performs better than word-based embedding models at the task of syntactic analogy answering.  Finally, we show that incorporating morphology explicitly into character-level models help them produce embeddings for unseen words which correlate better with human judgments.
+
+1.3.2 | 2.2 Character-level models
+Another approach to go beyond words is based on on character-level neural network models. Both recurrent and convolutional architectures for de- riving word representations from characters have been used, and results in downstream tasks such as language modelling and POS tagging have been promising, with reductions in word perplexity for language modelling and state-of-the-art English POS tagging accuracy (Ling et al., 2015; Kim et al., 2016). Ballesteros et al.  (2015) train a character-level model for parsing. Zhang et al. (2015) do away with words completely, and train a convolutional neural network to do text classifi- cation directly from characters.Excitingly, character-level models seem to cap- ture morphological effects. Examining nearest neighbours of morphologically complex words in character-aware models often shows other words with the same morphology (Ling et al., 2015; Kim et al. , 2016). Furthermore, morphosyntactic fea- tures such as capitalization and suffix information have long been used in tasks such as POS tagging (Xu et al., 2015; Toutanova et al., 2003). By ex- plicitly modelling these features, one might expect good performance gains in many NLP tasks.What is less clear is how well these models learn word semantics.  Classical word embedding models seem to capture word semantics, and the nearest neighbours of a given word are typically semantically related words (Mikolov et al., 2013a; Mnih and Kavukcuoglu, 2013). In addition, the correlation between model word similarity scores and human similarity judgments is typically high (Levy et al., 2015). However, no previous work (to our knowledge) evaluates the similarity judgments
+ Figure 1: A graphical illustration of SGNS. The target vector for ‘dog’ is learned to have high inner product with the context vectors for words seen in the context of ‘dog’ (no shading), while having low inner product with random negatively sampled words (shaded)
+of character-level models against human annota- tors.
+
+1.5.1 | 4.1 Morphological awareness
+The main innovation of our Char2Vec model com- pared to existing recurrent character-level models is the capability to split words and model each half independently. Here we test whether our model segmentations correspond to gold-standard mor- phological analyses.We obtained morphological analyses for all the words in our training vocabulary which were in the English Lexicon Project (Balota et al., 2007). We then converted these into surface-level segmenta-
+ tions using heuristic affix-matching, and used this as a gold-standard morphemic analysis. We ended up with 14682 words, of which 7867 have at least two morphemes and 1138 have at least three.Evaluating morphological segmentation is a long-debated issue (Cotterell et al., 2016).  Tra- ditional hard morphological analyzers are nor- mally evaluated on border F 1 – that is, how many morpheme borders are recovered. However, our model does not actually posit any hard morpheme borders. Instead, it just associates each charac- ter boundary with a weight. Therefore, we treat the problem of recovering intra-word morpheme boundaries as a ranking problem.  We rank each inter-character boundary of a word according to our model weights, and then evaluate whether our model ranks morpheme boundaries above non- morpheme boundaries.We use mean average precision (MAP) as our evaluation metric. We first calculate precision at N for each word, until all the gold standard mor- pheme boundaries have been recovered. Then, we average over N to obtain the average precision (AP) for that word.  We then calculate the mean of the APs across all words to obtain the MAP for the model.We report results of a random baseline as a point of comparison, which randomly places morpheme boundaries inside the word. We also report the results of the Porter stemmer 4 , where we place a morpheme boundary at the end of the stem, then randomly thereafter.Finally, we trained Morfessor 2. 0 5 (Creutz and Lagus, 2007) on our corpus, using an initial ran- dom split value of 0.9, and stopping training when the difference in loss between successive epochs is less than 0.1% of the total loss. We then used our trained Morfessor model to predict mor- pheme boundaries 6 , and randomly permuted the morpheme boundaries and ranked them ahead of randomly permuted non-morpheme boundaries to calculate MAP. As the test set is dominated by words with sim- ple morphology, we also extracted all the morpho- logically rich words with 3 or more morphemes, and created a separate evaluation on this subsec- tion. We report the results in Table 1.1 available at mattmahoney.net/dc/text8 2 We use the Gensim implementation: https://radimrehurek.com/gensim/
+ 3 We experimented with updating the initialized context lookup tables, and with randomly initialized context lookups, but found they were influenced too much by orthographic similarity from the character encoder.4 We used the NLTK implementation
+5 We used the Python implementation
+6 We found Morfessor to be quite conservative by default in its segmentations. The 2nd ranked segmentation gave bet- ter MAPs, which are the results we describe.Model All word MAP Rich-morphology MAP Random 0. 233 0.261 Porter Stemmer 0.705 0.446 Morfessor 0.631 0.500 Char2Vec 0.593 0.586
+Table 1: Results at retrieving intra-word mor- pheme boundaries. Word Model analysis Gold-standard analysis carrying carry | ing carry | ing leninism lenin | ism lenin | ism lesbianism lesbia | nism lesbian | ism buses buse | s bus | es government gove | rnment govern | ment
+Table 2: Some model morphological analyses for words with two morphemes, where we take the highest inter-word weight as the split point for the word. As the results show, our model performs the best out of all the methods at analysing morpho- logically rich words with multiple morphemes. On these words, our model even outperforms Morfes- sor, which is explicitly designed as a morpholog- ical analyzer. This shows that our model learns splits which correspond well to human morpho- logical analysis, even though we build no morpho- logical knowledge into our model.  However, when evaluating on all words, the Porter stemmer has a great advantage, as it is rule-based and able to give just the stem of words with great precision, which is effectively giving a canonical segmentation for words with just 2 morphemes.We show some model analyses against the gold standard in Table 2.
+
+1.5.2 | 4.2 Capturing semantic similarity
+Next, we tested our model similarity scores against human similarity judgments. For these datasets, human annotators are asked to judge how similar two words are on a fixed scale. Model word vectors are evaluated based on ranking the word pairs according to their cosine similarity, and then measuring the correlation (using Spearman’s ρ ) between model judgments and human judg- ments (Levy et al., 2015).We use the WordSim353 dataset (Finkelstein et al. , 2002), the test split of the MEN dataset (Bruni et al., 2014), and the Rare Word (RW) dataset (Lu- ong et al., 2013). The word pairs in the Word-
+Model WordSim353 MEN Test RW PPMI-SVD 0.607 0.601 0.293 SGNS 0.667 0.557 0.388 C2V-NO-ATT 0. 361 0.298 0.317 CHAR2VEC 0.345 0.322 0.282
+Table 3: Similarity correlations of in-vocabulary word pairs between the models and human anno- tators.Model WordSim353 MEN Test RW RW OOV C2V-NO-ATT 0.358 0.292 0.273 0.233 CHAR2VEC 0.340 0.318 0.264 0. 243
+Table 4: Similarity correlations of all word pairs between the character-level models and human an- notators. RW OOV indicates results specifically on pairs in the RW dataset with at least one word not seen in the training corpus.Sim353 and MEN datasets are typically simple, commonly occurring words denoting basic con- cepts, whereas the RW dataset contains many mor- phologically derived words which have low corpus frequencies.  This is reflected by how many of the test pairs in each dataset contain out of vocabu- lary (OOV) items: 3/353 and 6/1000 of the word pairs in WordSim353 and MEN, compared with 1083/2034 for the RW dataset.We report results for in-corpus word pairs in Ta- ble 3, and for all word pairs for those models able to predict vectors for unseen words in Table 4. Overall, word-based embedding models learn vectors that correlate better with human judg- ments, particularly for morphologically simple words. However, character-based models are competitive with word-based models on the RW dataset. While the words in this dataset appear rarely in our corpus (of the in-corpus words, over half appear fewer than 100 times), each morpheme may be common, and the character-level models can use this information.  We note that on the entire RW dataset (of which over half contain an OOV word), the character-based models still perform reasonably. We also note that on word pairs in the RW test containing at least one OOV word, the full Char2Vec model outperforms the C2V model without morphology.  This suggests that character- based embedding models are learning to morpho- logically analyse complex word forms, even on unseen words, and that giving the model the cap...(truncated)
+
+================================== Ai Message ==================================
+
+Model word vectors are evaluated by ranking the word pairs according to their cosine similarity and measuring the correlation (Spearman’s ρ) between these model rankings and human judgments.

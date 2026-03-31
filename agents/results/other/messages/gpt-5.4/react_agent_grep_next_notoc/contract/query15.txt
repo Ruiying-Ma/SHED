@@ -1,0 +1,20 @@
+================================ Human Message =================================
+
+HYPOTHESIS:
+Sharing with employees: Receiving Party may share some Confidential Information with some of Receiving Party's employees.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_UdcYqe2pHrpw8d7JRIXa5i7W)
+ Call ID: call_UdcYqe2pHrpw8d7JRIXa5i7W
+  Args:
+    pattern: employee|employees|personnel|representatives|agents|staff|need to know|need-to-know
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+a. limit disclosure of any Confidential Information to its directors, officers, employees,age e e e a i e  (c llec i el   Re e e a i e )  h o have a need to know such Confidential Information in connection with the Transaction, and only for that purpose;
+
+================================== Ai Message ==================================
+
+Entailment

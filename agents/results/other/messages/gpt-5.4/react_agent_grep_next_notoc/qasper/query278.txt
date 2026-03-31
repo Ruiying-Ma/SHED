@@ -1,0 +1,39 @@
+================================ Human Message =================================
+
+QUERY:
+what are the baselines?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_LLryRqdLQAPO5yzlndcgUaAa)
+ Call ID: call_LLryRqdLQAPO5yzlndcgUaAa
+  Args:
+    pattern: [Bb]aseline
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+4.2. Experimental setup
+We convert the raw audio to 40-dimensional log Mel-filterbank coefficients with a frame-length of 25 ms, mean-normalized over the whole utterance. Then we stack all the log-mel fil- terbank features and feed it into the neural network, which is implemented in PyTorch. No voice activity detection (VAD) or other data augmentation approaches are applied.  During the training process, we use Adam as the optimization method and set different learning rates and weight decay in different stages. We do not set dropout while training AM but set the dropout value=0.5 while training the LID network (the last stage).Figure 3: Data distribution of time
+ The baseline we use for comparison is a one-stage RNN system, the RNN structure is the same as the last stage con- taining 2-layer BLSTM and directly trained to recognize dialect category. In the process of evaluation, we compute the accuracy of the two sub-tasks and the whole test set to evaluate the per- formance of each system.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_ry06zJT6MBJShgAA8lYA9Jh2)
+ Call ID: call_ry06zJT6MBJShgAA8lYA9Jh2
+  Args:
+    pattern: comparison|compare|baseline we use|one-stage
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+2. Related works
+ASR [18] task enables the recognition and translation of spo- ken language into text. Traditionally, we can train an AM based on frame-wise cross-entropy loss to recognize phoneme, which requires tedious label alignment procedure such as Hidden Markov Model and Gaussian Mixture Model (HMM-GMM) paradigm. Then we can use a pronunciation model and a lan- guage model to transfer into text. In the latter case, CTC is used in training end-to-end ASR network [19, 20, 21], which means that we do not have to align
+1 Website: http://challenge.xfyun.cn/aicompetition/global
+Table 1: Our ResNet14 structure, which has only 5.36 million parameters compared to the standard ResNet-18 (11.26 million)
+ Layer Channels Blocks Output size Conv1 64 N/A T 2 × 64 × 20 Maxpool N/A N/A T 4 × 64 × 10 Res Conv1 64 2 T 4 × 64 × 5 Res Conv2 128 2 T 4 × 128 × 3 Res Conv3 256 1 T 4 × 256 × 2 Res Conv4 512 1 T 4 × 512 × 1 BLSTM1 N/A N/A T 4 × 512 BLSTM2 N/A N/A T 4 × 512 Output N/A N/A T 4 × N
+ the phoneme label before training. CNN followed by RNN architectures have shown strong ability in dealing sequence- related problems such as sense text recognition [22] and ASR [23]. These make the ASR network easy to train and perform better with fewer parameters. [24, 25] further add residual links to the CNN and RNN respectively and both make significant progress.
+
+================================== Ai Message ==================================
+
+The baseline is a one-stage RNN system with the same RNN structure as the last stage, containing a 2-layer BLSTM, and it is directly trained to recognize dialect category.

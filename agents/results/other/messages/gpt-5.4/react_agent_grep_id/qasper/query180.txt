@@ -1,0 +1,78 @@
+================================ Human Message =================================
+
+QUERY:
+Could the proposed training framework be applied to other NLP problems?
+
+TABLE OF CONTENTS (TOC):
+1 | Mitigating Annotation Artifacts in Natural Language Inference Datasets to Improve Cross-dataset Generalization Ability Guanhua Zhang 1 , 2 ∗ , Bing Bai 1 ∗ , Junqi Zhang 1 , Kun Bai 1 ,Conghui Zhu 2 , Tiejun Zhao 2 1 Cloud and Smart Industries Group, Tencent, China 2 Harbin Institute of Technology, China { guanhzhang,icebai,benjqzhang,kunbai } @tencent.com , { chzhu,tjzhao } @hit-mtlab.net
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2 Related Work
+1.4 | 3 Making Artifacts Unpredictable
+1.5 | 4 Experimental Results
+1.5.1 | 4.1 Evaluation Scheme
+1.5.2 | 4.2 Experiment Setup
+1.5.3 | 4.3 Can Artifacts Generalize Across Datasets?
+1.5.4 | 4.4 Debiasing Results
+1.6 | 5 Conclusion
+1.7 | References
+1.8 | A Detailed Assumptions and Proof of Theorem 1
+1.9 | B Experiment Setting
+1.9.1 | B.1 Hard-Easy Datasets Setting
+1.9.2 | B.2 Experiment Setup
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_KwTHuVzlqUBsZ6hmloJcywtE)
+ Call ID: call_KwTHuVzlqUBsZ6hmloJcywtE
+  Args:
+    section_id: 1.6
+
+================================= Tool Message =================================
+Name: read_section
+
+5 Conclusion
+In this paper, we take a close look at the annota- tion artifacts in NLI datasets. We find that the bias pattern could be predictive or misleading in cross- dataset testing. Furthermore, we propose a debias- ing framework and experiments demonstrate that it can effectively mitigate the impacts of the bias pattern and improve the cross-dataset generaliza- tion ability of models. However, it remains an open problem that how we should treat the an- notation artifacts .  We cannot assert whether the bias pattern should not exist at all or it is actually some kind of nature. We hope that our findings will encourage more explorations on reliable eval- uation protocols for NLI models.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_all (call_euQ2DezZxObmg0HxRO8nrljb)
+ Call ID: call_euQ2DezZxObmg0HxRO8nrljb
+  Args:
+    pattern: other NLP|other tasks|other problems|can be applied|framework.*applied|generaliz
+
+================================= Tool Message =================================
+Name: grep_search_all
+
+1.1
+1.2
+1.5.3
+1.5.4
+1.6
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_FPSxK8kxsLy7teDaMVE2M375)
+ Call ID: call_FPSxK8kxsLy7teDaMVE2M375
+  Args:
+    section_id: 1.1
+  read_section (call_A9zeylXQON5zTcGAPw5xEHSw)
+ Call ID: call_A9zeylXQON5zTcGAPw5xEHSw
+  Args:
+    section_id: 1.2
+
+================================= Tool Message =================================
+Name: read_section
+
+Abstract
+Natural language inference (NLI) aims at pre- dicting the relationship between a given pair of premise and hypothesis. However, several works have found that there widely exists a bias pattern called annotation artifacts in NLI datasets, making it possible to identify the la- bel only by looking at the hypothesis. This irregularity makes the evaluation results over- estimated and affects models’ generalization ability. In this paper, we consider a more trust- worthy setting, i.e.  , cross-dataset evaluation. We explore the impacts of annotation artifacts in cross-dataset testing. Furthermore, we pro- pose a training framework to mitigate the im- pacts of the bias pattern. Experimental results demonstrate that our methods can alleviate the negative effect of the artifacts and improve the generalization ability of models.
+
+================================= Tool Message =================================
+Name: read_section
+
+1 Introduction
+Natural language inference (NLI) is a widely- studied problem in natural language processing. It aims at comparing a pair of sentences ( i.e. a premise and a hypothesis ), and inferring the relationship between them ( i.e. , entailment , neutral and contradiction ). Large-scaled datasets like SNLI ( Bowman et al. , 2015 ) and MultiNLI ( Williams et al.  , 2018 ) have been cre- ated by crowd-sourcing and fertilized NLI re- search substantially.However, several works ( Gururangan et al. , 2018 ; Tsuchiya , 2018 ; Wang et al. , 2018 ) have pointed out that crowd-sourcing workers have brought a bias pattern named annotation artifacts in these NLI datasets.  Such artifacts in hypotheses can reveal the labels and make it possible to pre- dict the labels solely by looking at the hypotheses. For example, models trained on SNLI with only the hypotheses can achieve an accuracy of 67.0%, despite the always predicting the majority-class baseline is only 34.3% ( Gururangan et al. , 2018 ).Classifiers trained on NLI datasets are supposed to make predictions by understanding the semantic relationships between given sentence pairs.  How- ever, it is shown that models are unintention- ally utilizing the annotation artifacts ( Wang et al. , 2018 ; Gururangan et al. , 2018 ). If the evaluation is conducted under a similar distribution as the train- ing data, e.g. , with the given testing set, models will enjoy additional advantages, making the eval- uation results over-estimated.  On the other hand, if the bias pattern cannot be generalized to the real- world, it may introduce noise to models, thus hurt- ing the generalization ability.In this paper, we use cross-dataset testing to better assess models’ generalization ability. We investigate the impacts of annotation artifacts in cross-dataset testing.  Furthermore, we propose an easy-adopting debiasing training framework, which doesn’t require any additional data or an- notations, and apply it to the high-performing Densely Interactive Inference Network (DIIN; Gong et al. , 2017 ). Experiments show that our method can effectively mitigate the bias pattern and improve the cross-dataset generalization abil- ity of models.  To the best of our knowledge, our work is the first attempt to alleviate the annotation artifacts without any extra resources.
+
+================================== Ai Message ==================================
+
+Unanswerable

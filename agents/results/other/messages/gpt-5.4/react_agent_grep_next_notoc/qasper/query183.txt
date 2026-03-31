@@ -1,0 +1,172 @@
+================================ Human Message =================================
+
+QUERY:
+Which was the most helpful strategy?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_j0MbunAFo3fD4nUNhgMe6BBd)
+ Call ID: call_j0MbunAFo3fD4nUNhgMe6BBd
+  Args:
+    pattern: most helpful|helpful strategy|strategy
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1 Introduction
+Micro-blogging social media platforms have become very popular in recent years. One of the most popular platforms is Twitter, which allows users to broadcast short texts (i.e., 140 characters initially, and 280 characters in a recent platform update) in real time with almost no restrictions on content. Twitter is a source of peoples attitudes, opinions, and thoughts toward the things that happen in
+2 Y. Zhao et al.their daily life.  Twitter data are publicly accessible through Twitter applica- tion programming interface (API); and there are several tools to download and process these data. Twitter is being increasingly used as a valuable instrument for surveillance research and predictive analytics in many fields including epi- demiology, psychology, and social sciences. For example, Bian et al. explored the relation between promotional information and laypeoples discussion on Twit- ter by using topic modeling and sentiment analysis [1]. Zhao et al.  assessed the mental health signals among sexual and gender minorities using Twitter data [2]. Twitter data can be used to study and predict population-level targets, such as disease incidence [3], political trends [4], earthquake detection [5], and crime perdition [6], and individual-level outcomes or life events, such as job loss [7], depression [8], and adverse events [9].  Since tweets are unstructured textual data, natural language processing (NLP) and machine learning, especially deep learn- ing nowadays, are often used for preprocessing and analytics. However, for many studies [10–12], especially those that analyze individual-level targets, manual annotations of several thousands of tweets, often by experts, is needed to cre- ate gold-standard training datasets, to be fed to the NLP and machine learning tools for subsequent, reliable automated processing of millions of tweets.  Manual annotation is obviously labor intense and time consuming.Crowdsourcing can scale up manual labor by distributing tasks to a large set of workers working in parallel instead of a single people working serially [13]. Commercial platforms such as Amazons Mechanical Turk (MTurk, https://www. mturk. com/), make it easy to recruit a large crowd of people working remotely to perform time consuming manual tasks such as entity resolution [14,15], image or sentiment annotation [16, 17]. The annotation tasks published on MTurk can be done on a piecework basis and, given the very large pool of workers usually available (even by selecting a subset of those who have, say, a college degree), the tasks can be done almost immediately.  However, any crowdsourcing service that solely relies on human workers will eventually be expensive when large datasets are needed, that is often the case when creating training datasets for NLP and deep learning tasks. Therefore, reducing the training dataset size (without losing performance and quality) would also improve efficiency while contain costs.Query optimization techniques (e.g., active learning) can reduce the number of tweets that need to be labeled, while yielding comparable performance for the downstream machine learning tasks [18–20].  Active learning algorithms have been widely applied in various areas including NLP [21] and image processing [22]. In a pool-based active learning scenario, data samples for training a machine learning algorithm (e.g., a classifier for identifying job loss events) are drawn from a pool of unlabeled data according to some forms of informativeness measure (a.k.a. active learning strategies [23]), and then the most informative instances are selected to be annotated.  For a classification task, in essence, an active learning strategy should be able to pick the best samples to be labelled that will improve the classification performance the most.In this study, we integrated active learning into a crowdsourcing pipeline for the classification of life events based on individual tweets. We analyzed the
+Crowdsourcing with Active Learning in Life Events Classification
+3
+ quality of crowdsourcing annotations and then experimented with different ma- chine/deep learning classifiers combined with different active learning strategies to answer the following two research questions (RQs):
+• RQ1.How does (1) the amount of time that a human worker spends on and (2) the number of workers assigned to each annotation task impact the quality of an-notation results?
+• RQ2.Which active learning strategy is most efficient and cost-effective to build event classification models using Twitter data?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_ep1FcI6xqL4MXoLjRml786Do)
+ Call ID: call_ep1FcI6xqL4MXoLjRml786Do
+  Args:
+    pattern: RQ2|active learning strategy|most efficient|cost-effective
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1 Introduction
+Micro-blogging social media platforms have become very popular in recent years. One of the most popular platforms is Twitter, which allows users to broadcast short texts (i.e., 140 characters initially, and 280 characters in a recent platform update) in real time with almost no restrictions on content. Twitter is a source of peoples attitudes, opinions, and thoughts toward the things that happen in
+2 Y. Zhao et al.their daily life.  Twitter data are publicly accessible through Twitter applica- tion programming interface (API); and there are several tools to download and process these data. Twitter is being increasingly used as a valuable instrument for surveillance research and predictive analytics in many fields including epi- demiology, psychology, and social sciences. For example, Bian et al. explored the relation between promotional information and laypeoples discussion on Twit- ter by using topic modeling and sentiment analysis [1]. Zhao et al.  assessed the mental health signals among sexual and gender minorities using Twitter data [2]. Twitter data can be used to study and predict population-level targets, such as disease incidence [3], political trends [4], earthquake detection [5], and crime perdition [6], and individual-level outcomes or life events, such as job loss [7], depression [8], and adverse events [9].  Since tweets are unstructured textual data, natural language processing (NLP) and machine learning, especially deep learn- ing nowadays, are often used for preprocessing and analytics. However, for many studies [10–12], especially those that analyze individual-level targets, manual annotations of several thousands of tweets, often by experts, is needed to cre- ate gold-standard training datasets, to be fed to the NLP and machine learning tools for subsequent, reliable automated processing of millions of tweets.  Manual annotation is obviously labor intense and time consuming.Crowdsourcing can scale up manual labor by distributing tasks to a large set of workers working in parallel instead of a single people working serially [13]. Commercial platforms such as Amazons Mechanical Turk (MTurk, https://www. mturk. com/), make it easy to recruit a large crowd of people working remotely to perform time consuming manual tasks such as entity resolution [14,15], image or sentiment annotation [16, 17]. The annotation tasks published on MTurk can be done on a piecework basis and, given the very large pool of workers usually available (even by selecting a subset of those who have, say, a college degree), the tasks can be done almost immediately.  However, any crowdsourcing service that solely relies on human workers will eventually be expensive when large datasets are needed, that is often the case when creating training datasets for NLP and deep learning tasks. Therefore, reducing the training dataset size (without losing performance and quality) would also improve efficiency while contain costs.Query optimization techniques (e.g., active learning) can reduce the number of tweets that need to be labeled, while yielding comparable performance for the downstream machine learning tasks [18–20].  Active learning algorithms have been widely applied in various areas including NLP [21] and image processing [22]. In a pool-based active learning scenario, data samples for training a machine learning algorithm (e.g., a classifier for identifying job loss events) are drawn from a pool of unlabeled data according to some forms of informativeness measure (a.k.a. active learning strategies [23]), and then the most informative instances are selected to be annotated.  For a classification task, in essence, an active learning strategy should be able to pick the best samples to be labelled that will improve the classification performance the most.In this study, we integrated active learning into a crowdsourcing pipeline for the classification of life events based on individual tweets. We analyzed the
+Crowdsourcing with Active Learning in Life Events Classification
+3
+ quality of crowdsourcing annotations and then experimented with different ma- chine/deep learning classifiers combined with different active learning strategies to answer the following two research questions (RQs):
+• RQ1.How does (1) the amount of time that a human worker spends on and (2) the number of workers assigned to each annotation task impact the quality of an-notation results?
+• RQ2.Which active learning strategy is most efficient and cost-effective to build event classification models using Twitter data?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_uPLuq2dOUnZ4c5sEli5WF6I7)
+ Call ID: call_uPLuq2dOUnZ4c5sEli5WF6I7
+  Args:
+    pattern: least confidence|margin|entropy|random|strategy.*performed|performed best|helpful
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+2.1 Data Collection
+Our data were collected from two data sources based on a list of job loss-related keywords. The keywords were developed using a snowball sampling process, where we started with an initial list of 8 keywords that indicates a job-loss event (e.g., got fired and lost my job). Using these keywords, we then queried (1) Twit- ters own search engine (i.e., https://twitter.com/search-home? lang=en), and (2) a database of public random tweets that we have collected using the Twitter steaming application programming interface (API) from January 1, 2013 to De- cember 30, 2017, to identify job loss-related tweets. We then manually reviewed a sample of randomly selected tweets to discover new job loss-related keywords. We repeated the search then review process iteratively until no new keywords
+4 Y. Zhao et al.were found.  Through this process, we found 33 keywords from the historical ran- dom tweet database and 57 keywords through Twitter web search. We then (1) not only collected tweets based on the over-all of 68 unique keywords from the historical random tweet database, but also (2) crawled new Twitter data using Twitter search API from December 10, 2018 to December 26, 2018 (17 days).
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_UHgi8LRBcYg9qlmgM1lieFpd)
+ Call ID: call_UHgi8LRBcYg9qlmgM1lieFpd
+  Args:
+    pattern: least confidence|margin|entropy|random
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+2.1 Data Collection
+Our data were collected from two data sources based on a list of job loss-related keywords. The keywords were developed using a snowball sampling process, where we started with an initial list of 8 keywords that indicates a job-loss event (e.g., got fired and lost my job). Using these keywords, we then queried (1) Twit- ters own search engine (i.e., https://twitter.com/search-home? lang=en), and (2) a database of public random tweets that we have collected using the Twitter steaming application programming interface (API) from January 1, 2013 to De- cember 30, 2017, to identify job loss-related tweets. We then manually reviewed a sample of randomly selected tweets to discover new job loss-related keywords. We repeated the search then review process iteratively until no new keywords
+4 Y. Zhao et al.were found.  Through this process, we found 33 keywords from the historical ran- dom tweet database and 57 keywords through Twitter web search. We then (1) not only collected tweets based on the over-all of 68 unique keywords from the historical random tweet database, but also (2) crawled new Twitter data using Twitter search API from December 10, 2018 to December 26, 2018 (17 days).
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_okg7WlOZOiYgaxYU9fDKje87)
+ Call ID: call_okg7WlOZOiYgaxYU9fDKje87
+  Args:
+    pattern: Conclusion|Results|Discussion|active learning
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1 Introduction
+Micro-blogging social media platforms have become very popular in recent years. One of the most popular platforms is Twitter, which allows users to broadcast short texts (i.e., 140 characters initially, and 280 characters in a recent platform update) in real time with almost no restrictions on content. Twitter is a source of peoples attitudes, opinions, and thoughts toward the things that happen in
+2 Y. Zhao et al.their daily life.  Twitter data are publicly accessible through Twitter applica- tion programming interface (API); and there are several tools to download and process these data. Twitter is being increasingly used as a valuable instrument for surveillance research and predictive analytics in many fields including epi- demiology, psychology, and social sciences. For example, Bian et al. explored the relation between promotional information and laypeoples discussion on Twit- ter by using topic modeling and sentiment analysis [1]. Zhao et al.  assessed the mental health signals among sexual and gender minorities using Twitter data [2]. Twitter data can be used to study and predict population-level targets, such as disease incidence [3], political trends [4], earthquake detection [5], and crime perdition [6], and individual-level outcomes or life events, such as job loss [7], depression [8], and adverse events [9].  Since tweets are unstructured textual data, natural language processing (NLP) and machine learning, especially deep learn- ing nowadays, are often used for preprocessing and analytics. However, for many studies [10–12], especially those that analyze individual-level targets, manual annotations of several thousands of tweets, often by experts, is needed to cre- ate gold-standard training datasets, to be fed to the NLP and machine learning tools for subsequent, reliable automated processing of millions of tweets.  Manual annotation is obviously labor intense and time consuming.Crowdsourcing can scale up manual labor by distributing tasks to a large set of workers working in parallel instead of a single people working serially [13]. Commercial platforms such as Amazons Mechanical Turk (MTurk, https://www. mturk. com/), make it easy to recruit a large crowd of people working remotely to perform time consuming manual tasks such as entity resolution [14,15], image or sentiment annotation [16, 17]. The annotation tasks published on MTurk can be done on a piecework basis and, given the very large pool of workers usually available (even by selecting a subset of those who have, say, a college degree), the tasks can be done almost immediately.  However, any crowdsourcing service that solely relies on human workers will eventually be expensive when large datasets are needed, that is often the case when creating training datasets for NLP and deep learning tasks. Therefore, reducing the training dataset size (without losing performance and quality) would also improve efficiency while contain costs.Query optimization techniques (e.g., active learning) can reduce the number of tweets that need to be labeled, while yielding comparable performance for the downstream machine learning tasks [18–20].  Active learning algorithms have been widely applied in various areas including NLP [21] and image processing [22]. In a pool-based active learning scenario, data samples for training a machine learning algorithm (e.g., a classifier for identifying job loss events) are drawn from a pool of unlabeled data according to some forms of informativeness measure (a.k.a. active learning strategies [23]), and then the most informative instances are selected to be annotated.  For a classification task, in essence, an active learning strategy should be able to pick the best samples to be labelled that will improve the classification performance the most.In this study, we integrated active learning into a crowdsourcing pipeline for the classification of life events based on individual tweets. We analyzed the
+Crowdsourcing with Active Learning in Life Events Classification
+3
+ quality of crowdsourcing annotations and then experimented with different ma- chine/deep learning classifiers combined with different active learning strategies to answer the following two research questions (RQs):
+• RQ1.How does (1) the amount of time that a human worker spends on and (2) the number of workers assigned to each annotation task impact the quality of an-notation results?
+• RQ2.Which active learning strategy is most efficient and cost-effective to build event classification models using Twitter data?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_FWkjnZfseoktdMG8nC5n7HfI)
+ Call ID: call_FWkjnZfseoktdMG8nC5n7HfI
+  Args:
+    pattern: uncertainty|confidence|entropy|margin|least.*confidence|random sampling|query by committee
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+2.3 Classifier Selection
+Machine learning and deep learning have been wildly used in classification of tweets tasks. We evaluated 8 different classifiers: 4 traditional machine learning models (i.e., logistic regress [LR], Nave Bayes [NB], random forest [RF], and support vector machine [SVM]) and 4 deep learning models (i.e. , convolutional neural network [CNN], recurrent neural network [RNN], long short-term memory [LSTM] RNN, and gated recurrent unit [GRU] RNN). 3,000 tweets out of 7,220 Amazon MTurk annotated dataset was used for classifier training (n = 2,000) and testing (n = 1,000). The rest of MTurk annotated dataset were used for the subsequent active learning experiments.  Each classifier was trained 10 times and 95 confidence intervals (CI) for mean value were reported. We explored two language models as the features for the classifiers (i.e., n-gram and word- embedding). All the machine learning classifiers were developed with n-gram features; while we used both n-gram and word-embedding features on the CNN classifier to test which feature set is more suitable for deep learning classifiers.  CNN classifier with word embedding features had a better performance which is consistent with other studies [25, 26] We then selected one machine learning and one deep learning classifiers based on the prediction performance (i.e., F-score). Logistic regression was used as the baseline classifier.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_nUtUXB5QVU1VsNh0LZkekBkD)
+ Call ID: call_nUtUXB5QVU1VsNh0LZkekBkD
+  Args:
+    pattern: 2\.4|2\.5|3\.|4\.|5\.|6\.
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+2.4 Pool-based Active Learning
+In pool-based sampling for active learning, instances are drawn from a pool of samples according to some sort of informativeness measure, and then the most informative instances are selected to be annotated. This is the most common sce- nario in active learning studies [27]. The informativeness measures of the pool instances are called active learning strategies (or query strategies). We evalu- ated 4 active learning strategies (i.e., least confident, entropy, vote entropy and
+ Crowdsourcing with Active Learning in Life Events Classification 5
+KL divergence). Fig 1. C shows the workflow of our pool-based active learning experiments: for a given active learning strategy and classifiers trained with an initial set of training data (1) the classifiers make predictions of the remaining to-be-labelled dataset; (2) a set of samples is selected using the specific active learning strategy and annotated by human reviewers; (3) the classifiers are re- trained with the newly annotated set of tweets. We repeated this process itera- tively until the pool of data exhausts.  For the least confident and entropy active learning strategies, we used the best performed machine learn-ing classifier and the best performed deep learning classifier plus the baseline classifier (LR). Note that vote entropy and KL divergence are query-by-committee strategies, which were tested upon three deep learning classifiers (i.e., CNN, RNN and LSTM) and three machine learning classifiers (i.e., LR, RF, and SVM) as two separate committees, respectively.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_TFsJBM9KyRdX3Qrlv2ZSWAqN)
+ Call ID: call_TFsJBM9KyRdX3Qrlv2ZSWAqN
+  Args:
+    pattern: F-score|annotation savings|cost-effective|efficient|least confident|entropy|vote entropy|KL divergence
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1 Introduction
+Micro-blogging social media platforms have become very popular in recent years. One of the most popular platforms is Twitter, which allows users to broadcast short texts (i.e., 140 characters initially, and 280 characters in a recent platform update) in real time with almost no restrictions on content. Twitter is a source of peoples attitudes, opinions, and thoughts toward the things that happen in
+2 Y. Zhao et al.their daily life.  Twitter data are publicly accessible through Twitter applica- tion programming interface (API); and there are several tools to download and process these data. Twitter is being increasingly used as a valuable instrument for surveillance research and predictive analytics in many fields including epi- demiology, psychology, and social sciences. For example, Bian et al. explored the relation between promotional information and laypeoples discussion on Twit- ter by using topic modeling and sentiment analysis [1]. Zhao et al.  assessed the mental health signals among sexual and gender minorities using Twitter data [2]. Twitter data can be used to study and predict population-level targets, such as disease incidence [3], political trends [4], earthquake detection [5], and crime perdition [6], and individual-level outcomes or life events, such as job loss [7], depression [8], and adverse events [9].  Since tweets are unstructured textual data, natural language processing (NLP) and machine learning, especially deep learn- ing nowadays, are often used for preprocessing and analytics. However, for many studies [10–12], especially those that analyze individual-level targets, manual annotations of several thousands of tweets, often by experts, is needed to cre- ate gold-standard training datasets, to be fed to the NLP and machine learning tools for subsequent, reliable automated processing of millions of tweets.  Manual annotation is obviously labor intense and time consuming.Crowdsourcing can scale up manual labor by distributing tasks to a large set of workers working in parallel instead of a single people working serially [13]. Commercial platforms such as Amazons Mechanical Turk (MTurk, https://www. mturk. com/), make it easy to recruit a large crowd of people working remotely to perform time consuming manual tasks such as entity resolution [14,15], image or sentiment annotation [16, 17]. The annotation tasks published on MTurk can be done on a piecework basis and, given the very large pool of workers usually available (even by selecting a subset of those who have, say, a college degree), the tasks can be done almost immediately.  However, any crowdsourcing service that solely relies on human workers will eventually be expensive when large datasets are needed, that is often the case when creating training datasets for NLP and deep learning tasks. Therefore, reducing the training dataset size (without losing performance and quality) would also improve efficiency while contain costs.Query optimization techniques (e.g., active learning) can reduce the number of tweets that need to be labeled, while yielding comparable performance for the downstream machine learning tasks [18–20].  Active learning algorithms have been widely applied in various areas including NLP [21] and image processing [22]. In a pool-based active learning scenario, data samples for training a machine learning algorithm (e.g., a classifier for identifying job loss events) are drawn from a pool of unlabeled data according to some forms of informativeness measure (a.k.a. active learning strategies [23]), and then the most informative instances are selected to be annotated.  For a classification task, in essence, an active learning strategy should be able to pick the best samples to be labelled that will improve the classification performance the most.In this study, we integrated active learning into a crowdsourcing pipeline for the classification of life events based on individual tweets. We analyzed the
+Crowdsourcing with Active Learning in Life Events Classification
+3
+ quality of crowdsourcing annotations and then experimented with different ma- chine/deep learning classifiers combined with different active learning strategies to answer the following two research questions (RQs):
+• RQ1.How does (1) the amount of time that a human worker spends on and (2) the number of workers assigned to each annotation task impact the quality of an-notation results?
+• RQ2.Which active learning strategy is most efficient and cost-effective to build event classification models using Twitter data?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_wwYm6MMgcW5jYaULbBRcNiCt)
+ Call ID: call_wwYm6MMgcW5jYaULbBRcNiCt
+  Args:
+    pattern: annotation savings|savings|achieved.*F-score|Figure|Table
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+3.1 Data Collection
+Our data came from two different sources as shown in Table 1 . First, we collected 2,803,164 tweets using the Twitter search API [28] from December 10, 2018 to December 26, 2018 base on a list of job loss-related keywords (n = 68). After filtering out duplicates and non-English tweets, 1,952,079 tweets were left.  Second, we used the same list of keywords to identify relevant tweets from a database of historical random public tweets we collected from January 1, 2013 to December 30, 2017. We found 1,733,905 relevant tweets from this database. Due to the different mechanisms behind the two Twitter APIs (i.e., streaming API vs. search API), the volumes of the tweets from the two data sources were significantly different.  For the Twitter search API, users can retrieve most of the public tweets related to the provided keywords within 10 to 14 days before the time of data collection; while the Twitter streaming API returns a random sample (i.e., roughly 1% to 20% varying across the years) of all public tweets at the time and covers a wide range of topics. After integrating the tweets from the two data sources, there were 3,685,984 unique tweets. Table 1: Descriptive statistics of job loss-related tweets from our two data sources.  Data source Year # of tweets # of English tweets Historical random public tweet database 2013 434,624 293,664 2014 468,432 279,876 2015 401,861 228,301 2016 591,948 322,459 2017 1,299,006 609,605 Collected through Twitter search API 2018 2,803,164 1,952,079 Total 5,999,035 3,685,984
+ 6 Y. Zhao et al.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_mnFkggFFgPbg5M0O5uWg3L2c)
+ Call ID: call_mnFkggFFgPbg5M0O5uWg3L2c
+  Args:
+    pattern: 3\.4|3\.5|4 Discussion|5 Conclusion|Table 2|Table 3|Table 4
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+3.3 RQ2. Which active learning strategy is most efficient and cost-effective to build event classification models using Twitter data?
+We randomly selected 3,000 tweets from the 7,220 MTurk annotated dataset to build the initial classifiers. Two thousands out of 3,000 tweets were used to train the clas-sifiers and the rest 1,000 tweets were used as independent test dataset to benchmark their performance. We explored 4 machine learning classifiers (i.e. , Logistic Regression [LR], Nave Bayes [NB], Random Forest [RF], and Support Vector Machine [SVM]) and 4 deep learning classifiers (i.e., Convolutional Neural Network [CNN], Recurrent Neural Network [RNN], Long Short-Term Memory [LSTM], and Gated Recurrent Unit [GRU]). Each classifier was trained 10 times. The performance was measured in terms of precision, recall, and F-score.  95% confidence intervals (CIs) of the mean F-score across the ten runs were also reported. Table 2 shows the perfor-mance of classifiers. We chose logistic re- gression as the baseline model. RF and CNN were chosen for subsequent active learning experiments, since they outperformed other machine learning and deep learning classifiers.Table 2: The performance of machine learning and deep learning classifiers.  Feature Model name Precision Recall F-score 95% CIs of F-score N-gram Baseline LR 0.75 0.75 0.74 (0.74, 0.75) Machine learning NB 0.73 0.73 0.72 (0.72, 0.73) RF 0.74 0.74 0.74 (0.74, 0.75) SVM 0.73 0. 73 0.72 (0.71, 0.73) Deep learning CNN 0.71 0.71 0.72 (0.71, 0.73) Word- embedding CNN 0.79 0.79 0.79 (0.77, 0.80) RNN 0.75 0.75 0.74 (0.74, 0.75) LSTM 0.72 0. 72 0.71 (0.69, 0.72) LSTM (GRU) 0.75 0.75 0.74 (0.72, 0.76)
+We implemented a pool-based active learning pipeline to test which classifier and active learning strategy is most efficient to build up an event classification classifier of Twitter data. We queried the top 300 most informative tweets from the rest of the pool (i.e. , excluding the tweets used for training the classifiers)
+8 Y. Zhao et al.at each iteration. Table 3 shows the active learning and classifier combinations that we evaluated. The performance of the classifiers was measured by F-score. Fig 3 shows the results of the different active learning strategies combined with LR (i.e., the baseline), RF (i.e., the best performed machine learning model), and CNN (i.e., the best performed deep learning model).  For both machine learn- ing models (i.e., LR and RF), using the entropy strategy can reach the optimal performance the quickest (i.e., the least amount of tweets). While, the least confident algorithm does not have any clear advantages compared with random selection. For deep learning model (i.e., CNN), none of the active learning strate- gies tested are useful to improve the CNN classifiers performance.  Fig 4 shows the results of query-by-committee algorithms (i.e., vote entropy and KL diver- gence) combined with machine learning and deep learning ensemble classifiers. Query-by-committee algorithms are slightly better than random selection when it applied to machine learning ensemble classifier. However, query-by-committee algorithms are not useful for the deep learning ensemble classifier.Table 3: The active learning strategy and classifier combinations tested.  Model Query strategies LR Random query, least confident, entropy RF Random query, least confident, entropy CNN Random query, least confident, entropy Ensemble 1 Vote entropy, KL divergence 1 machine learning ensemble classifier: LR, RF, and SVM.,Deep learning ensemble classifier: CNN, RNN, and LSTM
+Fig. 3: The performance of active learning strategies combined with linear regression, random forest, and convolutional neural network.Crowdsourcing with Active Learning in Life Events Classification
+ 9
+Fig. 4: The performance of active learning strategies combined with machine learning and deep learning ensemble classifiers.
+
+================================== Ai Message ==================================
+
+Entropy was the most helpful strategy: for both machine learning models (LR and RF), it reached the optimal performance the quickest using the fewest tweets. Least confident had no clear advantage over random selection, and none of the tested active learning strategies were useful for CNN.

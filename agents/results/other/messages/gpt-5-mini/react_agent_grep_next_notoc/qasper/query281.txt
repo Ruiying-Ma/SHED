@@ -1,0 +1,114 @@
+================================ Human Message =================================
+
+QUERY:
+Which neural machine translation model was used?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_b1O9YwtGdGjCkjgsaLoyYkUu)
+ Call ID: call_b1O9YwtGdGjCkjgsaLoyYkUu
+  Args:
+    pattern: neural machine translation
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+We describe two entries from the Cambridge University Engineering Department to the BEA 2019 Shared Task on grammatical er- ror correction. Our submission to the low- resource track is based on prior work on us- ing finite state transducers together with strong neural language models.  Our system for the restricted track is a purely neural system con- sisting of neural language models and neural machine translation models trained with back- translation and a combination of checkpoint averaging and fine-tuning – without the help of any additional tools like spell checkers. The latter system has been used inside a separate system combination entry in cooperation with the Cambridge University Computer Lab.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_JUn1Bzi4UdYtrxYlUD04twio)
+ Call ID: call_JUn1Bzi4UdYtrxYlUD04twio
+  Args:
+    pattern: model was used
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_BwTw5MzSiPEQJJnrCB6WjEZy)
+ Call ID: call_BwTw5MzSiPEQJJnrCB6WjEZy
+  Args:
+    pattern: neural machine
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+We describe two entries from the Cambridge University Engineering Department to the BEA 2019 Shared Task on grammatical er- ror correction. Our submission to the low- resource track is based on prior work on us- ing finite state transducers together with strong neural language models.  Our system for the restricted track is a purely neural system con- sisting of neural language models and neural machine translation models trained with back- translation and a combination of checkpoint averaging and fine-tuning – without the help of any additional tools like spell checkers. The latter system has been used inside a separate system combination entry in cooperation with the Cambridge University Computer Lab.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_6F4EkVdt2bi5Q0IVtA1mWtJC)
+ Call ID: call_6F4EkVdt2bi5Q0IVtA1mWtJC
+  Args:
+    pattern: model
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+We describe two entries from the Cambridge University Engineering Department to the BEA 2019 Shared Task on grammatical er- ror correction. Our submission to the low- resource track is based on prior work on us- ing finite state transducers together with strong neural language models.  Our system for the restricted track is a purely neural system con- sisting of neural language models and neural machine translation models trained with back- translation and a combination of checkpoint averaging and fine-tuning – without the help of any additional tools like spell checkers. The latter system has been used inside a separate system combination entry in cooperation with the Cambridge University Computer Lab.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_srcZ8TVt1QltxAtG9cKAqsPy)
+ Call ID: call_srcZ8TVt1QltxAtG9cKAqsPy
+  Args:
+    pattern: Transformer
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1 Introduction
+The automatic correction of errors in text [ In a such situaction → In such a situation ] is receiv- ing more and more attention from the natural lan- guage processing community. A series of compe- titions has been devoted to grammatical error cor- rection (GEC): the CoNLL-2013 shared task ( Ng et al. , 2013 ), the CoNLL-2014 shared task ( Ng et al.  , 2014 ), and finally the BEA 2019 shared task ( Bryant et al. , 2019 ). This paper presents the contributions from the Cambridge University En- gineering Department to the latest GEC competi- tion at the BEA 2019 workshop.We submitted systems to two different tracks. The low-resource track did not permit the use of parallel training data except a small develop- ment set with around 4K sentence pairs.  For our low-resource system we extended our prior work on finite state transducer based GEC ( Stahlberg et al. , 2019 ) to handle new error types such as punctuation errors as well as insertions and dele- tions of a small number of frequent words. For the restricted track , the organizers provided 1.2M
+pairs (560K without identity mappings) of cor- rected and uncorrected sentences.  Our goal on the restricted track was to explore the potential of purely neural models for grammatical error cor- rection. 1 We confirm the results of Kasewa et al. ( 2018 ) and report substantial gains by applying back-translation ( Sennrich et al. , 2016b ) to GEC – a data augmentation technique common in ma- chine translation. Furthermore, we noticed that large parts of the training data do not match the target domain.  We mitigated the domain gap by over-sampling the in-domain training corpus, and by fine-tuning through continued training. Our final model is an ensemble of four neural ma- chine translation (NMT) models and two neural language models (LMs) with Transformer archi- tecture ( Vaswani et al. , 2017 ).  Our purely neu- ral system was also part of the joint submission with the Cambridge University Computer Lab de- scribed by Yuan et al. ( 2019 ).
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_8qrPSHesLoQmh7eaHAwpBrEk)
+ Call ID: call_8qrPSHesLoQmh7eaHAwpBrEk
+  Args:
+    pattern: Marian|Sockeye|fairseq|OpenNMT|Tensor2Tensor|Transformer architecture|ensemble of four
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1 Introduction
+The automatic correction of errors in text [ In a such situaction → In such a situation ] is receiv- ing more and more attention from the natural lan- guage processing community. A series of compe- titions has been devoted to grammatical error cor- rection (GEC): the CoNLL-2013 shared task ( Ng et al. , 2013 ), the CoNLL-2014 shared task ( Ng et al.  , 2014 ), and finally the BEA 2019 shared task ( Bryant et al. , 2019 ). This paper presents the contributions from the Cambridge University En- gineering Department to the latest GEC competi- tion at the BEA 2019 workshop.We submitted systems to two different tracks. The low-resource track did not permit the use of parallel training data except a small develop- ment set with around 4K sentence pairs.  For our low-resource system we extended our prior work on finite state transducer based GEC ( Stahlberg et al. , 2019 ) to handle new error types such as punctuation errors as well as insertions and dele- tions of a small number of frequent words. For the restricted track , the organizers provided 1.2M
+pairs (560K without identity mappings) of cor- rected and uncorrected sentences.  Our goal on the restricted track was to explore the potential of purely neural models for grammatical error cor- rection. 1 We confirm the results of Kasewa et al. ( 2018 ) and report substantial gains by applying back-translation ( Sennrich et al. , 2016b ) to GEC – a data augmentation technique common in ma- chine translation. Furthermore, we noticed that large parts of the training data do not match the target domain.  We mitigated the domain gap by over-sampling the in-domain training corpus, and by fine-tuning through continued training. Our final model is an ensemble of four neural ma- chine translation (NMT) models and two neural language models (LMs) with Transformer archi- tecture ( Vaswani et al. , 2017 ).  Our purely neu- ral system was also part of the joint submission with the Cambridge University Computer Lab de- scribed by Yuan et al. ( 2019 ).
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_Bb72hWcXFA2hbu7jUSP8nJhD)
+ Call ID: call_Bb72hWcXFA2hbu7jUSP8nJhD
+  Args:
+    pattern: We used|we used|implementation|trained with|training toolkit|Marian|Tensor2Tensor|fairseq|OpenNMT|implementation details
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+We describe two entries from the Cambridge University Engineering Department to the BEA 2019 Shared Task on grammatical er- ror correction. Our submission to the low- resource track is based on prior work on us- ing finite state transducers together with strong neural language models.  Our system for the restricted track is a purely neural system con- sisting of neural language models and neural machine translation models trained with back- translation and a combination of checkpoint averaging and fine-tuning – without the help of any additional tools like spell checkers. The latter system has been used inside a separate system combination entry in cooperation with the Cambridge University Computer Lab.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_lnXvGs455mRTalibBYJZbI2S)
+ Call ID: call_lnXvGs455mRTalibBYJZbI2S
+  Args:
+    pattern: implementation details|Implementation|training|toolkit|Marian-NMT|Marian|implementation is based|We used the|we employed|used the|framework|frameworks
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1 Introduction
+The automatic correction of errors in text [ In a such situaction → In such a situation ] is receiv- ing more and more attention from the natural lan- guage processing community. A series of compe- titions has been devoted to grammatical error cor- rection (GEC): the CoNLL-2013 shared task ( Ng et al. , 2013 ), the CoNLL-2014 shared task ( Ng et al.  , 2014 ), and finally the BEA 2019 shared task ( Bryant et al. , 2019 ). This paper presents the contributions from the Cambridge University En- gineering Department to the latest GEC competi- tion at the BEA 2019 workshop.We submitted systems to two different tracks. The low-resource track did not permit the use of parallel training data except a small develop- ment set with around 4K sentence pairs.  For our low-resource system we extended our prior work on finite state transducer based GEC ( Stahlberg et al. , 2019 ) to handle new error types such as punctuation errors as well as insertions and dele- tions of a small number of frequent words. For the restricted track , the organizers provided 1.2M
+pairs (560K without identity mappings) of cor- rected and uncorrected sentences.  Our goal on the restricted track was to explore the potential of purely neural models for grammatical error cor- rection. 1 We confirm the results of Kasewa et al. ( 2018 ) and report substantial gains by applying back-translation ( Sennrich et al. , 2016b ) to GEC – a data augmentation technique common in ma- chine translation. Furthermore, we noticed that large parts of the training data do not match the target domain.  We mitigated the domain gap by over-sampling the in-domain training corpus, and by fine-tuning through continued training. Our final model is an ensemble of four neural ma- chine translation (NMT) models and two neural language models (LMs) with Transformer archi- tecture ( Vaswani et al. , 2017 ).  Our purely neu- ral system was also part of the joint submission with the Cambridge University Computer Lab de- scribed by Yuan et al. ( 2019 ).
+
+================================== Ai Message ==================================
+
+They used neural machine translation models with the Transformer architecture.

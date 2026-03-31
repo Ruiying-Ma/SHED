@@ -1,0 +1,128 @@
+================================ Human Message =================================
+
+HYPOTHESIS:
+Survival of obligations: Some obligations of Agreement may survive termination of Agreement.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_Vp5ECK52JSinWhe0DPoUXdPA)
+ Call ID: call_Vp5ECK52JSinWhe0DPoUXdPA
+  Args:
+    pattern: survive
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_gnyM388Kt7ltUubc1QtlEiQV)
+ Call ID: call_gnyM388Kt7ltUubc1QtlEiQV
+  Args:
+    pattern: survival
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_t3bAGLY3izLKrVUwi3k8WCtu)
+ Call ID: call_t3bAGLY3izLKrVUwi3k8WCtu
+  Args:
+    pattern: terminate
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_nlhQgEgqPHyCAXAUpo2b04ck)
+ Call ID: call_nlhQgEgqPHyCAXAUpo2b04ck
+  Args:
+    pattern: termination
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+I.the  completion  or  termination  of  the  dealings  between  the  parties  contemplated hereunder; or
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_MpRUy0Q0bYhfdohp9STAAtv7)
+ Call ID: call_MpRUy0Q0bYhfdohp9STAAtv7
+  Args:
+    pattern: completion  or  termination  of  the  dealings
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+I.the  completion  or  termination  of  the  dealings  between  the  parties  contemplated hereunder; or
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_wP8JLcbjoJNzRzKMzjzVAUBF)
+ Call ID: call_wP8JLcbjoJNzRzKMzjzVAUBF
+  Args:
+    pattern: effect of termination
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_EhZIZeQTim5HSIiqO2M5BcWd)
+ Call ID: call_EhZIZeQTim5HSIiqO2M5BcWd
+  Args:
+    pattern: survived|survive|survives|surviving|survival|remain in effect|continue to|remain effective|remain in force|after termination|after the termination|termination of this|after this Agreement
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+b. N i h a di g  he  f eg i g,he  a ie   d h ld  i   c fide ce Confidential Information that was disclosed during term shall remain in effect indefinitely.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_WzJPL6hL0ryCu3wZJORfezkV)
+ Call ID: call_WzJPL6hL0ryCu3wZJORfezkV
+  Args:
+    pattern: Confidential Information that was disclosed during term shall remain in effect indefinitely
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+b. N i h a di g  he  f eg i g,he  a ie   d h ld  i   c fide ce Confidential Information that was disclosed during term shall remain in effect indefinitely.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_HM1viAnNOfEsLL5LUGl4fadB)
+ Call ID: call_HM1viAnNOfEsLL5LUGl4fadB
+  Args:
+    pattern: indefinitely
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+b. N i h a di g  he  f eg i g,he  a ie   d h ld  i   c fide ce Confidential Information that was disclosed during term shall remain in effect indefinitely.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_Kt7iKAjL58fIlQNVrkJ0cQjc)
+ Call ID: call_Kt7iKAjL58fIlQNVrkJ0cQjc
+  Args:
+    pattern: Confidential Information
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+b. N i h a di g  he  f eg i g,he  a ie   d h ld  i   c fide ce Confidential Information that was disclosed during term shall remain in effect indefinitely.
+
+================================== Ai Message ==================================
+
+Entailment

@@ -1,0 +1,83 @@
+================================ Human Message =================================
+
+QUERY:
+What ad-hoc approaches are explored?
+
+TABLE OF CONTENTS (TOC):
+1 | Look, Read and Enrich Learning from Scientific Figures and their Captions Jose Manuel Gomez-Perez , Raul Ortega Expert System Cogito Labs { jmgomez,rortega } @expertsystem.com
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2 Related work
+1.4 | 3 Figure-Caption Correspondence
+1.4.1 | 3.1 FCC Architecture and Model
+1.4.2 | 3.2 Semantic Embeddings
+1.5 | 4 Results and Discussion
+1.5.1 | 4.1 Datasets
+1.5.2 | 4.2 Figure-Caption Correspondence
+1.5.3 | 4.3 Image-Sentence Matching
+1.5.4 | 4.4 Caption and Figure Classification
+1.5.5 | 4.5 Textbook Question Answering (TQA) for Multi-Modal Machine Comprehension
+1.6 | 5 Qualitative Analysis
+1.7 | 6 Conclusions
+1.8 | Acknowledgments
+1.9 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_all (call_gOiPOXL7gSUYAtgw5zi7Lbk9)
+ Call ID: call_gOiPOXL7gSUYAtgw5zi7Lbk9
+  Args:
+    pattern: ad-?hoc
+
+================================= Tool Message =================================
+Name: grep_search_all
+
+1.1 | Abstract
+Compared to natural images, understanding sci- entific figures is particularly hard for machines. However, there is a valuable source of informa- tion in scientific literature that until now has re- mained untapped: the correspondence between a figure and its caption. In this paper we investi- gate what can be learnt by looking at a large num- ber of figures and reading their captions, and in- troduce a figure-caption correspondence learning task that makes use of our observations.  Train- ing visual and language networks without super- vision other than pairs of unconstrained figures and captions is shown to successfully solve this task. We also show that transferring lexical and semantic knowledge from a knowledge graph sig- nificantly enriches the resulting features. Finally, we demonstrate the positive impact of such features in other tasks involving scientific text and figures, like multi-modal classification and machine com- prehension for question answering, outperforming supervised baselines and ad-hoc approaches.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_all (call_U7ktv6rn7X7xQBDynVsQcgWc)
+ Call ID: call_U7ktv6rn7X7xQBDynVsQcgWc
+  Args:
+    pattern: ad hoc|ad-hoc|adhoc
+
+================================= Tool Message =================================
+Name: grep_search_all
+
+1.1 | Abstract
+Compared to natural images, understanding sci- entific figures is particularly hard for machines. However, there is a valuable source of informa- tion in scientific literature that until now has re- mained untapped: the correspondence between a figure and its caption. In this paper we investi- gate what can be learnt by looking at a large num- ber of figures and reading their captions, and in- troduce a figure-caption correspondence learning task that makes use of our observations.  Train- ing visual and language networks without super- vision other than pairs of unconstrained figures and captions is shown to successfully solve this task. We also show that transferring lexical and semantic knowledge from a knowledge graph sig- nificantly enriches the resulting features. Finally, we demonstrate the positive impact of such features in other tasks involving scientific text and figures, like multi-modal classification and machine com- prehension for question answering, outperforming supervised baselines and ad-hoc approaches.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_all (call_9j4jmbTAtANR8FDgDY54uhOy)
+ Call ID: call_9j4jmbTAtANR8FDgDY54uhOy
+  Args:
+    pattern: approaches|ad-hoc|baseline|heuristic|Simple|TF-IDF|tf-idf|ngram|n-gram|bag-of|BoW|SVM|Logistic
+
+================================= Tool Message =================================
+Name: grep_search_all
+
+1.1 | Abstract
+Compared to natural images, understanding sci- entific figures is particularly hard for machines. However, there is a valuable source of informa- tion in scientific literature that until now has re- mained untapped: the correspondence between a figure and its caption. In this paper we investi- gate what can be learnt by looking at a large num- ber of figures and reading their captions, and in- troduce a figure-caption correspondence learning task that makes use of our observations.  Train- ing visual and language networks without super- vision other than pairs of unconstrained figures and captions is shown to successfully solve this task. We also show that transferring lexical and semantic knowledge from a knowledge graph sig- nificantly enriches the resulting features. Finally, we demonstrate the positive impact of such features in other tasks involving scientific text and figures, like multi-modal classification and machine com- prehension for question answering, outperforming supervised baselines and ad-hoc approaches.
+
+1.3 | 2 Related work
+Understanding natural images has been a major area of re- search in computer vision, with well established datasets like ImageNet [Deng et al. , 2009], Flickr8K [Hodosh et al. , 2013], Flickr30K [Young et al. , 2014] and COCO [Lin et al. , 2014].  However, reasoning with other visual representations like scientific figures and diagrams has not received the same attention yet and entails additional challenges: Scientific fig- ures are more abstract and symbolic, their captions tend to be significantly longer and use specialized lexicon, and the
+relation between a scientific figure and its caption is unique, i.e. in a scientific publication there is only one caption that corresponds with one figure and vice versa. The FCC task presented herein is a form of co- training [Blum and Mitchell, 1998] where there are two views of the data and each view provides complementary informa- tion. Similar two-branch neural architectures focus on image- sentence [Wang et al. , 2018; Eisenschtat and Wolf, 2017] and audio-video [Arandjelovic and Zisserman, 2017] matching.  Others like [Socher et al. , 2013] learn common embeddings from images and text. However, in such cases one or both networks are typically pre-trained.Focused on geometry, [Seo et al. , 2014] maximize the agreement between text and visual data. In [Burns et al.  , 2018], the authors apply machine vision and natural lan- guage processing to extract data from figures and their asso- ciated text in bio-curation tasks. In [Kembhavi et al. , 2016], they parse diagram components and connectors as a Diagram Parse Graph (DPG), semantically interpret the DPG and use the model to answer diagram questions.  While we rely on the correspondence between figures and captions, they train a specific classifier for each component and connector type and yet another model to ground the semantics of the DPG in each domain, like food webs or water cycles.Knowledge fusion approaches like [Thoma et al. , 2017] investigate the potential of complementing KG embeddings with text and natural images by integrating information across the three modalities in a single latent representation.  They assume pre-trained entity representations exist in each indi- vidual modality, e.g. the visual features encoding the image of a ball, the word embeddings associated to the token ”ball”, and the KG embeddings related to the ball entity, which are then stitched together.  In contrast, FCC co-trains text and vi- sual features from figures and their captions and supports the enrichment of such features with lexical and semantic knowl- edge transferred from a KG during the training of the FCC task.
+
+1.5.1 | 4.1 Datasets
+We have used the following datasets for training and evalua- tion:
+The Semantic Scholar corpus [Ammar et al. , 2018] (SemScholar) is a large dataset of scientific publications made available by AI2. From its 39M articles, we downloaded 3,3M PDFs (the rest were behind paywalls, did not have a link or it was broken) and extracted 12. 5M figures and cap- tions through PDFFigures2 [Clark and Divvala, 2016]. We randomly selected 500K papers to train the FCC task on their figures and captions and another 500K to train Vecsigrafo on the text of their titles and abstracts.Springer Nature’s SciGraph 3 contains 7M scientific pub- lications organized in 22 scientific fields or categories.  Since SciGraph does not provide a link to the PDF of the publica- tion, we selected the intersection with SemScholar, producing a smaller corpus of 80K papers (in addition to the 1M papers from SemScholar mentioned above) and 82K figures that we used for training certain FCC configurations and supervised baselines (section 4.2).The Textbook Question Answering corpus [Kembhavi et al.  , 2017] includes 1,076 lessons and 26,260 multi-modal test questions from middle school science curricula. Its complex- ity and scope make it a challenging textual and visual ques- tion answering dataset.Wikipedia. We used the January 2018 English Wikipedia dataset as one of the corpora on which to train Vecsigrafo. As opposed to SciGraph or SemScholar, specific of the scientific
+ 1 All the code and data, including the corpora extracted from Sci- Graph and Semantic Scholar, are available through https://github. com/hybridNLP/look read and enrich
+2 See our tutorial on hybrid NLP at http://expertsystemlab.com/ hybridNLP18
+3 https://www.springernature.com/gp/researchers/scigraph
+Corpus Word rep. Acc vgg . Acc. Direct SciGraph ~ w k 60. 30 Pre-train ~ w k 68.40 F CC 1 SciGraph ~ w k 78.09 78.48 F CC 2 [ ~ w k ; ~ w 0 k sem ] 79.75 80.35 F CC 3 [ ~ w k ; ~l k holE ; ~ c k holE ] 78.64 78. 08 F CC 4 [ ~ w k ; ~l k wiki ; ~ c k wiki ] 79.71 80.50 F CC 5 [ ~ w k ; ~l k sem ; ~ c k sem ] 80.50 81.97 F CC 6 SemScholar ~ w k 80.42 81.44 F CC 7 [ ~ w k ; ~l k sem ; ~ c k sem ] 82.21 84. 34
+Table 1: FCC and supervised baselines results (% accuracy).domain, Wikipedia is a source of general-purpose informa- tion.Flickr30K and COCO , as image-sentence matching benchmarks.
+
+1.5.2 | 4.2 Figure-Caption Correspondence
+We evaluate our method in the task it was trained to solve: de- termining whether a figure and a caption correspond. We also compare the performance of the FCC task against two super- vised baselines, training them on a classification task against the SciGraph taxonomy. For such baselines we first train the vision and language networks independently and then com- bine them. The feature extraction parts of both networks are the same as described in section 3.1.  On top of them, we at- tach a fully connected layer with 128 neurons and ReLU ac- tivation and a softmax layer, with as many neurons as target classes.The direct combination baseline computes the figure- caption correspondence through the scalar product between the softmax outputs of both networks. If it exceeds a thresh- old, which we heuristically fixed on 0.325, the result is positive.  The supervised pre-training baseline freezes the weights of the feature extraction trunks from the two trained networks, assembles them in the FCC architecture as shown in section 3.1, and trains the FCC task on the fully connected layers. While direct combination provides a notion of the agreement between the two branches, supervised pre-training is the most similar supervised approach to our method.Table 1 shows the results of the FCC task and the super- vised baselines.  F CC k denotes the corpus and word rep- resentation used to train the FCC task. Acc vgg shows the accuracy after replacing our visual branch with pre-trained VGG16 features learnt on ImageNet. This provides an esti- mate of how specific of the scientific domain scientific figures and therefore the resulting visual features can be, compared to natural images.  As the table shows, the results obtained using pre-trained visual features are clearly worse in general (only slightly better in F CC 3 ), suggesting that the visual in- formation contained in scientific figures indeed differs from natural images.We trained the FCC network on two different scientific corpora: SciGraph ( F CC 1 − 5 ) and SemScholar ( F CC 6 − 7 ).  Both F CC 1 and F CC 6 learnt their own word representations without transfer of any pre-trained knowledge. Even in its
+most basic form our approach substantially improves over the supervised baselines, confirming that the visual and language branches learn from each other and also that figure-caption correspondence is an effective source of free supervision. Adding pre-trained knowledge at the input layer of the language subnetwork provides an additional boost, particu- larly with lemma and concept embeddings from Vecsigrafo ( F CC 5 ). Vecsigrafo clearly outperformed HolE ( F CC 3 ), which was also beaten by pre-trained fastText [Bojanowski et al. , 2017] word embeddings ( F CC 2 ) trained on SemScholar.  Since graph-based KG embedding approaches like HolE only generate embeddings of the artifacts explicitly contained in the KG, this may indicate that Sensigrafo, the KG used in this task, provides a partial coverage of the scientific domain, as could be expected since we are using an off-the-shelf ver- sion. Deeper inspection shows that HolE only covers 20% of the lemmas in the SciGraph vocabulary.  On the other hand, Vecsigrafo, trained on the same KG, also captures lexical in- formation from the text corpora it is trained on, Wikipedia or SemScholar, raising lemma coverage to 42% and 47%, re- spectively.Although the size of Wikipedia is almost triple of our Sem- Scholar corpus, training Vecsigrafo on the latter resulted in better FCC accuracy ( F CC 4 vs.  F CC 5 ), suggesting that domain relevance is more significant than sheer volume, in line with our previous findings in [Garcia and Gomez-Perez, 2018]. Training FCC on SemScholar, much larger than Sci-...(truncated)
+
+================================== Ai Message ==================================
+
+Unanswerable

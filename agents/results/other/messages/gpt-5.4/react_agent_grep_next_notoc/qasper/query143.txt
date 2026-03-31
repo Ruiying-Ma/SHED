@@ -1,0 +1,34 @@
+================================ Human Message =================================
+
+QUERY:
+What type of quotes is this system trying to generate?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_ekQOfelE6dYOdQxbT0BtIZad)
+ Call ID: call_ekQOfelE6dYOdQxbT0BtIZad
+  Args:
+    pattern: quote|quotes|quotation
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Generating humor and quotes are very challeng- ing problems in the field of computational linguis- tics and are often tackled separately. In this paper, we present a controlled Long Short-Term Memory (LSTM) architecture which is trained with categor- ical data like jokes and quotes together by pass- ing category as an input along with the sequence of words.  The idea is that a single neural net will learn the structure of both jokes and quotes to gen- erate them on demand according to input category. Importantly, we believe the neural net has more knowledge as it’s trained on different datasets and hence will enable it to generate more creative jokes or quotes from the mixture of information. May the network generate a funny inspirational joke!
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_NWCp6bHRjO8Imkhc3tIBd3tv)
+ Call ID: call_NWCp6bHRjO8Imkhc3tIBd3tv
+  Args:
+    pattern: inspirational|quote
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Generating humor and quotes are very challeng- ing problems in the field of computational linguis- tics and are often tackled separately. In this paper, we present a controlled Long Short-Term Memory (LSTM) architecture which is trained with categor- ical data like jokes and quotes together by pass- ing category as an input along with the sequence of words.  The idea is that a single neural net will learn the structure of both jokes and quotes to gen- erate them on demand according to input category. Importantly, we believe the neural net has more knowledge as it’s trained on different datasets and hence will enable it to generate more creative jokes or quotes from the mixture of information. May the network generate a funny inspirational joke!
+
+================================== Ai Message ==================================
+
+Inspirational quotes.

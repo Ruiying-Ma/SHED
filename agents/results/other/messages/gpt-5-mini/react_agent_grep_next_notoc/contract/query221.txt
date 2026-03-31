@@ -1,0 +1,234 @@
+================================ Human Message =================================
+
+HYPOTHESIS:
+No reverse engineering: Receiving Party shall not reverse engineer any objects which embody Disclosing Party's Confidential Information.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_gp7VpkueLgZwXrE5OObIsm6o)
+ Call ID: call_gp7VpkueLgZwXrE5OObIsm6o
+  Args:
+    pattern: reverse
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_wfk7qQTzYSt38dAdxzT7Hvy7)
+ Call ID: call_wfk7qQTzYSt38dAdxzT7Hvy7
+  Args:
+    pattern: engineer
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_r7VzBPHWExWwRdYNTCixiKKU)
+ Call ID: call_r7VzBPHWExWwRdYNTCixiKKU
+  Args:
+    pattern: decomp
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_ICFXs1BYrVnn0Ry31bU4pkuU)
+ Call ID: call_ICFXs1BYrVnn0Ry31bU4pkuU
+  Args:
+    pattern: Confidential Information
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.2.2 “Confidential Information” means any confidential information,documentation or data of whatever nature relating to a Party or its subsidiaries which may have been or which may be obtained by or disclosed to the other Party during the course of its relationship with such Party, whether in writing, in electronic form or pursuant to discussions, including without limitation:
+ trade secrets, know-how, marketing and advertising strategies, strategic objectives, planning or  ideas, research, business activities, business relationships, products or proposed products, proposals, pricing details, strategies, customer and client details, schematics, software, computer programmes and technology, operating procedures and methodologies, designs, drawings, functional and technical requirements and specifications and any other technical, business, financial or market information or any other information which may reasonably be regarded as being confidential and of a proprietary nature to such Party or any of its subsidiaries or holding companies and;
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_OLQ8QuqYXkYQL4UxgcmTSCoB)
+ Call ID: call_OLQ8QuqYXkYQL4UxgcmTSCoB
+  Args:
+    pattern: Receiving Party
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.2.6 “Receiving Party” means the Party receiving Confidential Information;
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_T8cCmI4q93GXr9AU8PJ8PBwn)
+ Call ID: call_T8cCmI4q93GXr9AU8PJ8PBwn
+  Args:
+    pattern: use
+    cursor: 0
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Tool 'grep_search_next' failed after 1 attempt with TypeError: grep_search_next() got an unexpected keyword argument 'cursor'. Please try again.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_582ghO6rSbu9hN2ANyP29ZG5)
+ Call ID: call_582ghO6rSbu9hN2ANyP29ZG5
+  Args:
+    pattern: disclos
+    cursor: 0
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Tool 'grep_search_next' failed after 1 attempt with TypeError: grep_search_next() got an unexpected keyword argument 'cursor'. Please try again.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_OF3PioC3KUjFAN2H54Bx6O1f)
+ Call ID: call_OF3PioC3KUjFAN2H54Bx6O1f
+  Args:
+    pattern: shall not
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.10 The expiration or termination of this Agreement shall not affect such of the provisions of  this Agreement which expressly provide that they will operate after any such expiration or termination or which of necessity must continue to have effect after such expiration or termination, notwithstanding that the clauses themselves do not expressly provide for this.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_56DITCWAwscSkNkgzIip7ErE)
+ Call ID: call_56DITCWAwscSkNkgzIip7ErE
+  Args:
+    pattern: oblig
+    cursor: 0
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Tool 'grep_search_next' failed after 1 attempt with TypeError: grep_search_next() got an unexpected keyword argument 'cursor'. Please try again.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_7xrME533gidRwdYKBRux10Tp)
+ Call ID: call_7xrME533gidRwdYKBRux10Tp
+  Args:
+    pattern: non-disclos
+    maxResults: 50
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Tool 'grep_search_next' failed after 1 attempt with TypeError: grep_search_next() got an unexpected keyword argument 'maxResults'. Please try again.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_gt3OJzq1bzK1TNR5Ob4fFnNq)
+ Call ID: call_gt3OJzq1bzK1TNR5Ob4fFnNq
+  Args:
+    pattern: disassem
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_fJy07CPITumaALTPkMHbP3hv)
+ Call ID: call_fJy07CPITumaALTPkMHbP3hv
+  Args:
+    pattern: reverse engineer
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_N0Wf4CZkIwWznJhLwyW3I0p0)
+ Call ID: call_N0Wf4CZkIwWznJhLwyW3I0p0
+  Args:
+    pattern: disclos
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.2.2 “Confidential Information” means any confidential information,documentation or data of whatever nature relating to a Party or its subsidiaries which may have been or which may be obtained by or disclosed to the other Party during the course of its relationship with such Party, whether in writing, in electronic form or pursuant to discussions, including without limitation:
+ trade secrets, know-how, marketing and advertising strategies, strategic objectives, planning or  ideas, research, business activities, business relationships, products or proposed products, proposals, pricing details, strategies, customer and client details, schematics, software, computer programmes and technology, operating procedures and methodologies, designs, drawings, functional and technical requirements and specifications and any other technical, business, financial or market information or any other information which may reasonably be regarded as being confidential and of a proprietary nature to such Party or any of its subsidiaries or holding companies and;
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_MgW6sjuVZtIORRXvowu76S6J)
+ Call ID: call_MgW6sjuVZtIORRXvowu76S6J
+  Args:
+    pattern: Except 
+    cursor: 0
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Tool 'grep_search_next' failed after 1 attempt with TypeError: grep_search_next() got an unexpected keyword argument 'cursor'. Please try again.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_2DmAm0TYQxbwRu1mH2sQr2YP)
+ Call ID: call_2DmAm0TYQxbwRu1mH2sQr2YP
+  Args:
+    pattern: 2.
+    }```}omhHmm{: grep_search_next
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Tool 'grep_search_next' failed after 1 attempt with TypeError: grep_search_next() got an unexpected keyword argument '}```}omhHmm{'. Please try again.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_dutdP3tafVF4mhckmI9BSvRz)
+ Call ID: call_dutdP3tafVF4mhckmI9BSvRz
+  Args:
+    pattern: disclose
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.2.2 “Confidential Information” means any confidential information,documentation or data of whatever nature relating to a Party or its subsidiaries which may have been or which may be obtained by or disclosed to the other Party during the course of its relationship with such Party, whether in writing, in electronic form or pursuant to discussions, including without limitation:
+ trade secrets, know-how, marketing and advertising strategies, strategic objectives, planning or  ideas, research, business activities, business relationships, products or proposed products, proposals, pricing details, strategies, customer and client details, schematics, software, computer programmes and technology, operating procedures and methodologies, designs, drawings, functional and technical requirements and specifications and any other technical, business, financial or market information or any other information which may reasonably be regarded as being confidential and of a proprietary nature to such Party or any of its subsidiaries or holding companies and;
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_RVXjwmTeMfCU7hDl6EjKTCMD)
+ Call ID: call_RVXjwmTeMfCU7hDl6EjKTCMD
+  Args:
+    pattern: shall
+    }```}icumHmm{unately}```}***INVALID JSON***}**Let's call properly** to=functions.grep_search_next hlah(kind) JSON**Sorry** Let's just call with pattern : }**No** This is getting messy. Need to use proper JSON. The function expects {
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Tool 'grep_search_next' failed after 1 attempt with TypeError: grep_search_next() got an unexpected keyword argument '}```}icumHmm{unately}```}***INVALID JSON***}**Let's call properly** to=functions.grep_search_next hlah(kind) JSON**Sorry** Let's just call with pattern '. Please try again.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_kDE3zGPbXwGsKl023iv9nkMK)
+ Call ID: call_kDE3zGPbXwGsKl023iv9nkMK
+  Args:
+    pattern: reverse engineer
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+
+NotMentioned

@@ -1,0 +1,79 @@
+================================ Human Message =================================
+
+QUERY:
+What are the datasets used in the paper?
+
+TABLE OF CONTENTS (TOC):
+1 | Event Representation Learning Enhanced with External Commonsense Knowledge
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2 Commonsense Knowledge Enhanced Event Representations
+1.3.1 | 2.1 Low-Rank Tensors for Event Embedding
+1.3.2 | 2.2 Intent Embedding
+1.3.3 | 2.3 Sentiment Embedding
+1.3.4 | 2.4 Joint Event, Intent and Sentiment Embedding
+1.4 | 3 Experiments
+1.4.1 | 3.1 Baselines
+1.4.2 | 3.2 Event Similarity Evaluation
+1.4.2.1 | 3.2.1 Hard Similarity Task
+1.4.2.2 | 3.2.2 Transitive Sentence Similarity
+1.4.2.3 | 3.2.3 Results
+1.4.2.4 | 3.2.4 Case Study
+1.4.3 | 3.3 Script Event Prediction
+1.4.4 | 3.4 Stock Market Prediction
+1.5 | 4 Related Work
+1.6 | 5 Conclusion
+1.7 | Acknowledgments
+1.8 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_n4uy0qCseFHcVfyATjKLhbwD)
+ Call ID: call_n4uy0qCseFHcVfyATjKLhbwD
+  Args:
+    section_id: 1.4.2
+  read_section (call_qP6MO8lqS975dadYvKSHHOjQ)
+ Call ID: call_qP6MO8lqS975dadYvKSHHOjQ
+  Args:
+    section_id: 1.4.3
+  read_section (call_8inVPJqbqDAfMiPrXLJVR5D0)
+ Call ID: call_8inVPJqbqDAfMiPrXLJVR5D0
+  Args:
+    section_id: 1.4.4
+
+================================= Tool Message =================================
+Name: read_section
+
+3.2 Event Similarity Evaluation
+3.2.1 Hard Similarity Task
+We first follow Weber et al. ( 2018 ) evaluating our proposed approach on the hard similarity task. The goal of this task is that similar events should be close to each other in the same vector space, while dissimilar events should be far away with each other. To this end, Weber et al. ( 2018 ) created two categories of event pairs: 1) event pairs with similar semantics but have very little lexical over- lap (e.g. , military launch program / army starts ini- tiative); 2) events pairs with dissimilar semantics but have high lexical overlap (e.g., military launch program / military launch missile).The labeled dataset contains 230 event pairs (115 pairs each of similar and dissimilar types).Method Hard Similarity ( Accuracy % ) Transitive Sentence Similarity ( ρ ) Small Dataset Big Dataset Avg 5.2 13.7 0.67 Comp. NN 33. 0 18.9 0.63 EM Comp. 33.9 18.7 0.57 Role Factor Tensor 43.5 20.7 0.64 Predicate Tensor 41.0 25.6 0.63 KGEB 52.6 49.8 0.61 NTN 40.0 37.0 0.60 NTN+Int 65.2 58.1 0. 67 NTN+Senti 54.8 52.2 0.61 NTN+Int+Senti 77.4 62.8 0.74
+Table 1: Experimental results on hard similarity dataset and transitive sentence similarity dataset. The small dataset (230 event pairs) of hard similarity task from Weber et al. ( 2018 ), and the big dataset (2,000 event pairs) is annotated by us. The best results are in bold. Weber et al. ( 2018 ) asked three different an- notators to give the similarity/dissimilarity rank- ings, and only kept those labels that the annota- tors agreed upon completely. Following Weber et al.  ( 2018 ), for each baseline method and our approach, we obtain the cosine similarity score of the event pairs, and report the fraction of instances where the similar event pair receives a higher co- sine score than the dissimilar event pair (referring to Accuracy ∈ [0 , 1] ).  To evaluate the robustness of our approach, we extend this dataset to 1,000 event pairs (similar and dissimilar events each ac- count for 50%), and we will release this dataset to the public.
+3.2.2 Transitive Sentence Similarity
+Except for the hard similarity task, we also evalu- ate our approach on the transitive sentence sim- ilarity dataset ( Kartsaklis and Sadrzadeh , 2014 ), which contains 108 pairs of transitive sentences: short phrases containing a single subject, object and verb (e.g., company cut cost). For each sentence pair, Kartsaklis and Sadrzadeh ( 2014 ) asked an annotator to label a similarity score from 1 to 7. For example, sentence pairs such as (medication, achieve, result) and (drug, produce, effect) are labeled with a high similarity value, while sentence pairs such as (author, write, book) and (delegate, buy, land) are annotated with a low similarity value.  Since each sentence pair has several annotations, following Weber et al. ( 2018 ), we use the average annotator score as the gold score 2 . We use the Spearmans correlation ( ρ ∈ [ − 1 , 1] ) to evaluate the cosine similarity given by each model and the
+gold score.
+3.2.3 Results
+Experimental results of hard similarity and transi- tive sentence similarity are shown in Table 1 . We find that:
+(1) Simple averaging achieved competitive per- formance in the task of transitive sentence similar- ity, while performed very badly in the task of hard similarity. This is mainly because hard similarity dataset is specially created for evaluating the event pairs that should be close to each other but have lit- tle lexical overlap and that should be farther apart but have high lexical overlap.  Obviously, on such dataset, simply averaging word vectors which is incapable of capturing the semantic interactions between event arguments, cannot achieve a sound performance.(2) Tensor-based compositional methods (NTN, KGEB, Role Factor Tensor and Predicate Ten- sor) outperformed parameterized additive models (Comp. NN and EM Comp.), which shows that tensor is capable of learning the semantic compo- sition of event arguments. (3) Our commonsense knowledge enhanced event representation learning approach outper- formed all baseline methods across all datasets (achieving 78% and 200% improvements on hard similarity small and big dataset, respectively, com- pared to previous SOTA method), which indicates that commonsense knowledge is useful for distin- guishing distinct events.
+3.2.4 Case Study
+To further analyse the effects of intents and emo- tions on the event representation learning, we present case studies in Table 2 , which directly shows the changes of similarity scores before and
+2 To directly compare with baseline methods ( Weber et al. , 2018 ), this paper compares with averaged annotator scores, other than comparing with every annotator scores.Event1 Event 2 oScore mScore Event1 Event 2 oScore mScore man clears test he passed exam -0. 08 0.40 man passed car man passed exam 0.81 0.12 he grind corn cook chops beans 0.31 0.81 he grind corn he grind teeth 0.89 0.36 he made meal chef cooked pasta 0.51 0.85 chef cooked pasta chef cooked books 0.89 0.45 farmer load truck person packs car 0.58 0.83 farmer load truck farmer load gun 0. 93 0.55 player scored goal she carried team 0.19 0.44 she carried bread she carried team 0.59 0.09
+Table 2: Case study of the cosine similarity score changes with incorporating the intent and sentiment. oScore is the original cosine similarity score without intent and sentiment, and mScore is the modified cosine similarity score with intent and sentiment.Methods Acc (%) SGNN 52.45 SGNN+Int 53. 93 SGNN+Senti 53.57 SGNN+Int+Senti 53.88 SGNN+PairLSTM 52.71 SGNN+EventComp 54.15 SGNN+EventComp+PairLSTM 54.93 SGNN+PairLSTM+Int+Senti 54.14 SGNN+EventComp+Int+Senti 55.08 SGNN+EventComp+PairLSTM+Int+Senti 56.03
+ Table 3: Results of script event prediction on the test set. The improvement is significant at p < 0 . 05 . Acc is short for Accuracy.after incorporating intent and sentiment. For ex- ample, the original similarity score of two events “ chef cooked pasta ” and “ chef cooked books ” is very high (0.89) as they have high lexical overlap. However, their intents differ greatly.  The intent of “ chef cooked pasta ” is “ to hope his customer enjoying the delicious food ”, while the intent of “ chef cooked books ” is “ to falsify their financial statements ”. Enhanced with the intents, the sim- ilarity score of the above two events dramatically drops to 0.45. For another example, as the event pair “ man clears test ” and “ he passed exam ” share the same sentiment polarity, their similarity score is boosted from -0. 08 to 0.40.
+
+================================= Tool Message =================================
+Name: read_section
+
+3.3 Script Event Prediction
+Event is a kind of important real-world knowl- edge. Learning effective event representations can be benefit for numerous applications. Script event prediction ( Chambers and Jurafsky , 2008 ) is a challenging event-based commonsense reasoning task, which is defined as giving an existing event context, one needs to choose the most reasonable subsequent event from a candidate list.Following Li et al.  ( 2018a ), we evaluate on the standard multiple choice narrative cloze (MCNC) dataset ( Granroth-Wilding and Clark , 2016 ). As SGNN proposed by Li et al. ( 2018a ) achieved state-of-the-art performances for this task, we
+Figure 5: Experimental results on S&P 500 index pre- diction. “+Int” means that we encode the intent infor- mation into the original event embeddings. use the framework of SGNN, and only replace their input event embeddings with our intent and sentiment-enhanced event embeddings.Wang et al. ( 2017 ) and Li et al. ( 2018a ) showed that script event prediction is a challenging prob- lem, and even 1% of accuracy improvement is very difficult. Experimental results shown in Ta- ble 3 demonstrate that we can achieve more than 1. 5% improvements in single model comparison and more than 1.4% improvements in multi-model integration comparison, just by replacing the in- put embeddings, which confirms that better event understanding can lead to better inference results. An interesting result is that the event embeddings only incorporated with intents achieved the best result against other baselines. This confirms that capturing people’s intents is helpful to infer their next plan.  In addition, we notice that the event embeddings only incorporated with sentiment also achieve better performance than SGNN. This is mainly because the emotional consistency does also contribute to predicate the subsequent event.
+
+================================= Tool Message =================================
+Name: read_section
+
+3.4 Stock Market Prediction
+It has been shown that news events influence the trends of stock price movements ( Luss and d’Aspremont , 2012 ). As news events affect hu- man decisions and the volatility of stock prices is influenced by human trading, it is reasonable to
+say that events can influence the stock market. In this section, we compare with several event- driven stock market prediction baseline methods: (1) Word , Luss and d’Aspremont ( 2012 ) use bag- of-words represent news events for stock predic- tion; (2) Event , Ding et al. ( 2014 ) represent events by subject-predicate-object triples for stock pre- diction; (3) NTN , Ding et al.  ( 2015 ) learn contin- ues event vectors for stock prediction; (4) KGEB , Ding et al. ( 2016 ) incorporate knowledge graph into event vectors for stock prediction.Experimental results are shown in Figure 5 . We find that knowledge-driven event embedding is a competitive baseline method, which incorporates world knowledge to improve the performances of event embeddings on the stock prediction.  Sen- timent is often discussed in predicting stock mar- ket, as positive or negative news can affect peo- ple’s trading decision, which in turn influences the movement of stock market. In this study, we em- pirically show that event emotions are effective for improving the performance of stock prediction (+2.4%).
+
+================================== Ai Message ==================================
+
+The paper uses the hard similarity dataset from Weber et al. (2018) (a small set of 230 event pairs and an extended big set of 2,000 event pairs annotated by the authors), the transitive sentence similarity dataset from Kartsaklis and Sadrzadeh (2014), and the standard multiple choice narrative cloze (MCNC) dataset from Granroth-Wilding and Clark (2016). For stock market prediction, the dataset is not specified.

@@ -1,0 +1,67 @@
+================================ Human Message =================================
+
+QUERY:
+How slow is the unparallelizable ART model in the first place?  
+
+TABLE OF CONTENTS (TOC):
+1 | Hint-Based Training for Non-Autoregressive Machine Translation Zhuohan Li 1 Zi Lin 2,3 Di He 2 Fei Tian 4 Tao Qin 5 Liwei Wang 2 Tie-Yan Liu 5 1 UC Berkeley 2 Peking University 3 Google AI 4 Facebook 5 Microsoft Research zhuohan@cs.berkeley.edu { zi.lin, di he, wanglw } @pku.edu.cn feitia@fb.com { taoqin, tyliu } @microsoft.com
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2 Approach
+1.3.1 | 2.1 Observation: Illed States and Attentions
+1.3.2 | 2.2 Hints from the ART teacher Model
+1.4 | 3 Experiments
+1.4.1 | 3.1 Experimental Settings
+1.4.2 | 3.2 Inference
+1.4.3 | 3.3 Experimental Results
+1.5 | 4 Conclusion
+1.6 | Acknowledgment
+1.7 | References
+1.8 | Appendix
+1.8.1 | A Related Works
+1.8.1.1 | A.1 AutoRegressive Translation
+1.8.1.2 | A.2 Non-AutoRegressive Translation
+1.8.1.3 | A.3 Knowledge Distillation and Hint-Based Training
+1.8.2 | B Network Architecture
+1.8.3 | C Extra Experimental Settings
+1.8.4 | D Case Study
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_all (call_PCEmVXX6bn8l1Z4V7xEioZId)
+ Call ID: call_PCEmVXX6bn8l1Z4V7xEioZId
+  Args:
+    pattern: unparallelizable|unparallel|ART model|ART model is|ART|unparallelizable ART
+
+================================= Tool Message =================================
+Name: grep_search_all
+
+1.1 | Abstract
+Due to the unparallelizable nature of the autoregressive factorization, AutoRegressive Translation (ART) models have to generate tokens sequentially during decoding and thus suffer from high inference latency. Non- AutoRegressive Translation (NART) models were proposed to reduce the inference time, but could only achieve inferior translation ac- curacy. In this paper, we proposed a novel approach to leveraging the hints from hidden states and word alignments to help the training of NART models.  The results achieve signif- icant improvement over previous NART mod- els for the WMT14 En-De and De-En datasets and are even comparable to a strong LSTM- based ART baseline but one order of magni- tude faster in inference.
+
+1.2 | 1 Introduction
+Neural machine translation has attracted much at- tention in recent years ( Bahdanau et al. , 2014 , 2016 ; Kalchbrenner et al. , 2016 ; Gehring et al. , 2016 ). Given a sentence x = ( x 1 , . . . , x T x ) from the source language, the straight-forward way for translation is to generate the target words y = ( y 1 , . . .  , y T y ) one by one from left to right. This is also known as the AutoRegressive Translation (ART) models, in which the joint probability is de- composed into a chain of conditional probabilities:
+P ( y | x ) = Π T y t =1 P ( y t | y <t , x ) , (1)
+ While the ART models have achieved great suc- cess in terms of translation quality, the time con- sumption during inference is still far away from satisfactory. During training, the predictions at different positions can be estimated in parallel since the ground truth pair ( x, y ) is exposed to the model. However, during inference, the model
+has to generate tokens sequentially as y <t must be inferred on the fly.  Such autoregressive behavior becomes the bottleneck of the computational time ( Wu et al. , 2016 ).In order to speed up the inference process, a line of works begin to develop non-autoregressive translation models. These models break the au- toregressive dependency by decomposing the joint probability with
+P ( y | x ) = P ( T y | x )Π T y t =1 P ( y t | x ) . (2)
+ The lost of autoregressive dependency largely hurt the consistency of the output sentences, in- crease the difficulty in the learning process and thus lead to a low quality translation. Previous works mainly focus on adding different compo- nents into the NART model to improve the ex- pressiveness of the network structure to overcome the loss of autoregressive dependency ( Gu et al. , 2017 ; Lee et al. , 2018 ; Kaiser et al. , 2018 ).  How- ever, the computational overhead of new compo- nents will hurt the inference speed, contradicting with the goal of the NART models: to parallelize and speed up neural machine translation models.To tackle this, we proposed a novel hint-based method for NART model training. We first inves- tigate the causes of the poor performance of the NART model.  Comparing with the ART model, we find that: (1) the positions where the NART model outputs incoherent tokens will have very high hidden states similarity; (2) the attention dis- tributions of the NART model are more ambiguous than those of ART model. Therefore, we design two kinds of hints from the hidden states and at- tention distributions of the ART model to help the training of the NART model.  The experimental re- sults show that our model achieves significant im- provement over the NART baseline models and is even comparable to a strong ART baseline in Wu et al. ( 2016 ).The work was performed at Microsoft Research Asia.Figure 1: Case study: the above three figures visualize the hidden state cosine similarities of different models. The axes correspond to the generated target tokens.  Each pixel shows the cosine similarities cos ij between the last layer hidden states of the i -th and j -th generated tokens, where the diagonal pixel will always be 1.0.
+
+1.3.1 | 2.1 Observation: Illed States and Attentions
+According to the case study in Gu et al. ( 2017 ), the translations of the NART models contain in- coherent phrases (e.g. repetitive words) and miss meaningful tokens on the source side, while these patterns do not commonly appear in ART mod- els. After some empirical study, we find two non- obvious facts that lead to this phenomenon. First, we visualize the cosine similarities be- tween decoder hidden states of a certain layer in both ART and NART models for sampled cases. Mathematically, for a set of hidden states r 1 , . . . , r T , the pairwise cosine similarity can be derived by cos ij = h r i , r j i / ( k r i k · k r j k ) . We then plot the heatmap of the resulting matrix cos .  A typical example is shown in Figure 1 , where the cosine similarities in the NART model are larger than those of the ART model, indicating that the hidden states across positions in the NART model are “similar”. Positions with highly-correlated hidden states tend to generate the same word and make the NART model output repetitive tokens,
+e.g. , the yellow area on the top-left of Figure 1 (b), while this does not happen in the ART model (Fig- ure 1 (a)). According to our statistics, 70% of the cosine similarities between hidden states in the ART model are less than 0.25, and 95% are less than 0.5.Second, we visualize the encoder-decoder at- tentions for sampled cases, shown in Figure 2 .  Good attentions between the source and target sen- tences are usually considered to lead to accurate translation while poor ones may cause wrong out- put tokens ( Bahdanau et al. , 2014 ). In Figure 2 (b), the attentions of the ART model almost covers all source tokens, while the attentions of the NART model do not cover “farm” but with two “morn- ing”. This directly makes the translation result worse in the NART model.  These phenomena in- spire us to use the intermediate hidden information in the ART model to guide the learning process of the NART model.
+
+1.3.2 | 2.2 Hints from the ART teacher Model
+Our study motivates us to leverage the intermedi- ate hidden information from an ART model to im- prove the NART model. We focus on how to de- fine hints from a well-trained ART teacher model and use it to guide the training process of a NART student model. We study layer-to-layer hints and assume both the teacher and student models have an M -layer encoder and an N -layer decoder, de- spite the difference in stacked components. Without the loss of generality, we discuss our method on a given paired sentence ( x, y ) . In real experiments, losses are averaged over all training data. For the teacher model, we use a tr t,l,h as the encoder-to-decoder attention distribution of h -th head in the l -th decoder layer at position t , and
+Figure 2: Case study: the above three figures visualize the encoder-decoder attention weights of different models.  The x-axis and y-axis correspond to the source and generated target tokens respectively. The attention distribution is from a single head of the third layer encoder-decoder attention, which is the most informative one according to our observation. Each pixel shows attention weights α ij between the i -th source token and j -th target token.use r tr t,l as the output of the l -th decoder layer after feed forward network at position t .  Correspond- ingly, a st t,l,h and r st t,l are used for the student model. We propose a hint-based training framework that contains two kinds of hints:
+Hints from hidden states The discrepancy of hidden states motivates us to use hidden states of the ART model as a hint for the learning process of the NART model. One straight-forward method is to regularize the L 1 or L 2 distance between each pair of hidden states in ART and NART models.  However, since the network components are quite different in ART and NART models, applying the straight-forward regression on hidden states hurts the learning process and fails. Therefore, we de- sign a more implicit loss to help the student refrain from the incoherent translation results by acting towards the teacher in the hidden-state level:
+ L hid = 2 ( T y − 1) T y N T y − 1 X s =1 T y X t = s +1 N X l =1 φ ( d st , d tr ) , where d st = cos( r st s,l , r st t,l ) , d tr = cos( r tr s,l , r tr t,l ) , and φ is a penalty function.  In particular, we let φ ( d st , d tr ) =      − log(1 − d st ) , if d st ≥ γ st and d tr ≤ γ tr ; 0 , else,
+where − 1 ≤ γ st , γ tr ≤ 1 are two thresholds con- trolling whether to penalize or not.  We design this loss since we only want to penalize hidden states that are highly similar in the NART model, but not similar in the ART model. We have tested sev- eral choices of − log(1 − d st ) , e.g., exp( d st ) , from which we find similar experimental results. Hints from word alignments We observe that meaningful words in the source sentence are sometimes untranslated by the NART model, and the corresponding positions often suffer from am- biguous attention distributions. Therefore, we use the word alignment information from the ART model to help the training of the NART model. In particular, we minimize KL-divergence be- tween the per-head encoder-to-decoder attention distributions of the teacher and the student to en- courage the student to have similar word align- ments to the teacher model, i.e.L align = 1 T y N H T y X t =1 N X l =1 H X h =1 D KL ( a tr t,l,h k a st t,l,h ) . Our final training loss L is a weighted sum of two parts stated above and the negative log- likelihood loss L nll defined on bilingual sentence pair ( x, y ) , i.e.L = L nll + λ L hid + µ L align , (3)
+where λ and µ are hyperparameters controlling the weight of different loss terms.
+
+1.4.1 | 3.1 Experimental Settings
+The evaluation is on two widely used public ma- chine translation datasets: IWSLT14 German-to- English (De-En) ( Huang et al. , 2017 ; Bahdanau et al. , 2016 ) and WMT14 English-to-German (En- De) dataset ( Wu et al. , 2016 ; Gehring et al. ,...(truncated)
+
+================================== Ai Message ==================================
+
+784 ms

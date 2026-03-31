@@ -1,0 +1,60 @@
+================================ Human Message =================================
+
+QUERY:
+Do they separately evaluate performance of their learned representations (before forwarding them to the CNN layer)?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_lWUSC6FBeGobdyULcSYpm3JT)
+ Call ID: call_lWUSC6FBeGobdyULcSYpm3JT
+  Args:
+    pattern: representation|representations|CNN layer|evaluate performance|learned
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Neural network based approaches for sentence relation modeling automatically generate hidden matching features from raw sentence pairs. However, the qual- ity of matching feature representation may not be satisfied due to complex semantic relations such as entailment or contradic- tion. To address this challenge, we pro- pose a new deep neural network architec- ture that jointly leverage pre-trained word embedding and auxiliary character embed- ding to learn sentence meanings.  The two kinds of word sequence representations as inputs into multi-layer bidirectional LSTM to learn enhanced sentence repre- sentation. After that, we construct match- ing features followed by another temporal CNN to learn high-level hidden matching feature representations. Experimental re- sults demonstrate that our approach con- sistently outperforms the existing methods on standard evaluation datasets.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_kJ3JGrrXSY0CGzu10Tm9vy4K)
+ Call ID: call_kJ3JGrrXSY0CGzu10Tm9vy4K
+  Args:
+    pattern: evaluate|evaluation|experimental results|ablation|representations
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Neural network based approaches for sentence relation modeling automatically generate hidden matching features from raw sentence pairs. However, the qual- ity of matching feature representation may not be satisfied due to complex semantic relations such as entailment or contradic- tion. To address this challenge, we pro- pose a new deep neural network architec- ture that jointly leverage pre-trained word embedding and auxiliary character embed- ding to learn sentence meanings.  The two kinds of word sequence representations as inputs into multi-layer bidirectional LSTM to learn enhanced sentence repre- sentation. After that, we construct match- ing features followed by another temporal CNN to learn high-level hidden matching feature representations. Experimental re- sults demonstrate that our approach con- sistently outperforms the existing methods on standard evaluation datasets.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_2MDKsQWo46kNR1S1cUH3NzYM)
+ Call ID: call_2MDKsQWo46kNR1S1cUH3NzYM
+  Args:
+    pattern: CNN
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Neural network based approaches for sentence relation modeling automatically generate hidden matching features from raw sentence pairs. However, the qual- ity of matching feature representation may not be satisfied due to complex semantic relations such as entailment or contradic- tion. To address this challenge, we pro- pose a new deep neural network architec- ture that jointly leverage pre-trained word embedding and auxiliary character embed- ding to learn sentence meanings.  The two kinds of word sequence representations as inputs into multi-layer bidirectional LSTM to learn enhanced sentence repre- sentation. After that, we construct match- ing features followed by another temporal CNN to learn high-level hidden matching feature representations. Experimental re- sults demonstrate that our approach con- sistently outperforms the existing methods on standard evaluation datasets.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_qxfMDYGR0QzgDLfrRe3eij3Z)
+ Call ID: call_qxfMDYGR0QzgDLfrRe3eij3Z
+  Args:
+    pattern: experiment|results|dataset|performance
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Neural network based approaches for sentence relation modeling automatically generate hidden matching features from raw sentence pairs. However, the qual- ity of matching feature representation may not be satisfied due to complex semantic relations such as entailment or contradic- tion. To address this challenge, we pro- pose a new deep neural network architec- ture that jointly leverage pre-trained word embedding and auxiliary character embed- ding to learn sentence meanings.  The two kinds of word sequence representations as inputs into multi-layer bidirectional LSTM to learn enhanced sentence repre- sentation. After that, we construct match- ing features followed by another temporal CNN to learn high-level hidden matching feature representations. Experimental re- sults demonstrate that our approach con- sistently outperforms the existing methods on standard evaluation datasets.
+
+================================== Ai Message ==================================
+
+Unanswerable

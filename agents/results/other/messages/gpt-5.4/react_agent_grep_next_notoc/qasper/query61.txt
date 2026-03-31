@@ -1,0 +1,47 @@
+================================ Human Message =================================
+
+QUERY:
+What do they mean by intrinsic geometry of spaces of learned representations?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_m1qD6lcA53EWC7EDjszn0xj2)
+ Call ID: call_m1qD6lcA53EWC7EDjszn0xj2
+  Args:
+    pattern: intrinsic geometry|learned representations|geometry of spaces
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Recent work in learning ontologies (hierarchical and partially-ordered structures) has leveraged the intrinsic geometry of spaces of learned rep- resentations to make predictions that automati- cally obey complex structural constraints. We explore two extensions of one such model, the order-embedding ( Vendrov et al. ) model for hi- erarchical relation learning, with an aim towards improved performance on text data for com- monsense knowledge representation.  Our first model jointly learns ordering relations and non- hierarchical knowledge in the form of raw text. Our second extension exploits the partial order structure of the training data to find long-distance triplet constraints among embeddings which are poorly enforced by the pairwise training proce- dure. We find that both incorporating free text and augmented training constraints improve over the original order-embedding model and other strong baselines.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_16uuDfJZTJANrcC0TbwCtKaR)
+ Call ID: call_16uuDfJZTJANrcC0TbwCtKaR
+  Args:
+    pattern: order-embedding|partial order|hierarchical relation learning
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Recent work in learning ontologies (hierarchical and partially-ordered structures) has leveraged the intrinsic geometry of spaces of learned rep- resentations to make predictions that automati- cally obey complex structural constraints. We explore two extensions of one such model, the order-embedding ( Vendrov et al. ) model for hi- erarchical relation learning, with an aim towards improved performance on text data for com- monsense knowledge representation.  Our first model jointly learns ordering relations and non- hierarchical knowledge in the form of raw text. Our second extension exploits the partial order structure of the training data to find long-distance triplet constraints among embeddings which are poorly enforced by the pairwise training proce- dure. We find that both incorporating free text and augmented training constraints improve over the original order-embedding model and other strong baselines.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_QE8JWpeDr5CBAcvsSPYIaQBX)
+ Call ID: call_QE8JWpeDr5CBAcvsSPYIaQBX
+  Args:
+    pattern: automatically obey complex structural constraints|geometry
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Recent work in learning ontologies (hierarchical and partially-ordered structures) has leveraged the intrinsic geometry of spaces of learned rep- resentations to make predictions that automati- cally obey complex structural constraints. We explore two extensions of one such model, the order-embedding ( Vendrov et al. ) model for hi- erarchical relation learning, with an aim towards improved performance on text data for com- monsense knowledge representation.  Our first model jointly learns ordering relations and non- hierarchical knowledge in the form of raw text. Our second extension exploits the partial order structure of the training data to find long-distance triplet constraints among embeddings which are poorly enforced by the pairwise training proce- dure. We find that both incorporating free text and augmented training constraints improve over the original order-embedding model and other strong baselines.
+
+================================== Ai Message ==================================
+
+They mean the built-in geometric structure of the learned embedding space that can be used to make predictions which automatically obey complex structural constraints, especially hierarchical and partially ordered relations. In this paper, this refers to spaces used by order-embeddings for hierarchical relation learning.

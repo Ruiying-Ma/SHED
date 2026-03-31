@@ -1,0 +1,131 @@
+================================ Human Message =================================
+
+HYPOTHESIS:
+Permissible copy: Receiving Party may create a copy of some Confidential Information in some circumstances.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_HoLNWDMPpvggAO2TqdAuqMJU)
+ Call ID: call_HoLNWDMPpvggAO2TqdAuqMJU
+  Args:
+    pattern: cop(y|ies|ied|ing)|duplicate|reproduc
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_FC7BTdr7WeLd7I2D3NvxAhc4)
+ Call ID: call_FC7BTdr7WeLd7I2D3NvxAhc4
+  Args:
+    pattern: Confidential Information|Receiving Party|disclos
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.2.2 “Confidential Information” means any confidential information,documentation or data of whatever nature relating to a Party or its subsidiaries which may have been or which may be obtained by or disclosed to the other Party during the course of its relationship with such Party, whether in writing, in electronic form or pursuant to discussions, including without limitation:
+ trade secrets, know-how, marketing and advertising strategies, strategic objectives, planning or  ideas, research, business activities, business relationships, products or proposed products, proposals, pricing details, strategies, customer and client details, schematics, software, computer programmes and technology, operating procedures and methodologies, designs, drawings, functional and technical requirements and specifications and any other technical, business, financial or market information or any other information which may reasonably be regarded as being confidential and of a proprietary nature to such Party or any of its subsidiaries or holding companies and;
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_rfysuRYmiPyPEx6kiPog4jtS)
+ Call ID: call_rfysuRYmiPyPEx6kiPog4jtS
+  Args:
+    pattern: return|destroy|erase|delete|copies
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+19.2 This Agreement shall be validly signed notwithstanding that the signature page is signed by the Parties in different locations and returned by email.  In these circumstances the Parties shall endeavour to circulate the original Agreement for signature, but the failure to do so  shall not invalidate this Agreement or change the date of its signature or coming into force.13
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_sNdyI6b7NQSmcathnzB0SJhF)
+ Call ID: call_sNdyI6b7NQSmcathnzB0SJhF
+  Args:
+    pattern: (retain|keep|store|record|notes|extract|summary|summar|copy)
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1 The head notes to the clauses of this Agreement are for reference purposes only and shall in no way govern or affect the interpretation of nor modify nor amplify the terms of this Agreement nor any clause hereof.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_Z78NNl9SgGuWDr59jOal0muP)
+ Call ID: call_Z78NNl9SgGuWDr59jOal0muP
+  Args:
+    pattern: shall not.*(copy|reproduc|duplicate)|may.*(copy|reproduc|duplicate)|copies of Confidential Information|copy of Confidential Information
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_6De8nmuWs68tGs9hl1PHwgGR)
+ Call ID: call_6De8nmuWs68tGs9hl1PHwgGR
+  Args:
+    pattern: return|destroy|deliver|surrender|materials|documents|information
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.2.2 “Confidential Information” means any confidential information,documentation or data of whatever nature relating to a Party or its subsidiaries which may have been or which may be obtained by or disclosed to the other Party during the course of its relationship with such Party, whether in writing, in electronic form or pursuant to discussions, including without limitation:
+ trade secrets, know-how, marketing and advertising strategies, strategic objectives, planning or  ideas, research, business activities, business relationships, products or proposed products, proposals, pricing details, strategies, customer and client details, schematics, software, computer programmes and technology, operating procedures and methodologies, designs, drawings, functional and technical requirements and specifications and any other technical, business, financial or market information or any other information which may reasonably be regarded as being confidential and of a proprietary nature to such Party or any of its subsidiaries or holding companies and;
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_2IF0m18f5fOe1XwRRsKItIcE)
+ Call ID: call_2IF0m18f5fOe1XwRRsKItIcE
+  Args:
+    pattern: use.*Confidential Information|disclose.*Confidential Information|obligations|Receiving Party
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.2.6 “Receiving Party” means the Party receiving Confidential Information;
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_b5qrmVKGH4TtYsoqv0POstEu)
+ Call ID: call_b5qrmVKGH4TtYsoqv0POstEu
+  Args:
+    pattern: (Receiving Party|recipient).*(shall|must|may)|Confidential Information.*(shall|must|may)
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.2.2 “Confidential Information” means any confidential information,documentation or data of whatever nature relating to a Party or its subsidiaries which may have been or which may be obtained by or disclosed to the other Party during the course of its relationship with such Party, whether in writing, in electronic form or pursuant to discussions, including without limitation:
+ trade secrets, know-how, marketing and advertising strategies, strategic objectives, planning or  ideas, research, business activities, business relationships, products or proposed products, proposals, pricing details, strategies, customer and client details, schematics, software, computer programmes and technology, operating procedures and methodologies, designs, drawings, functional and technical requirements and specifications and any other technical, business, financial or market information or any other information which may reasonably be regarded as being confidential and of a proprietary nature to such Party or any of its subsidiaries or holding companies and;
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_Y1nGOx9ov8aIPt8EyV6zvpI7)
+ Call ID: call_Y1nGOx9ov8aIPt8EyV6zvpI7
+  Args:
+    pattern: 4\.|5\.|6\.|7\.|8\.|9\.|10\.|11\.|12\.|13\.
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+11.1 it has the legal capacity and has taken all necessary corporate action required to empower and authorise it to enter into and implement this Agreement on the terms and conditions herein set out;
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_QN1OtstLzlCcyPBr0iP6cEDD)
+ Call ID: call_QN1OtstLzlCcyPBr0iP6cEDD
+  Args:
+    pattern: (return|destroy|copy|copies|duplicate|reproduce|notes|extract|summary|record).*Confidential Information
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+2.4 The Parties wish to record the terms and conditions upon which each shall disclose Confidential Information to the other, which terms and conditions shall constitute a binding and enforceable Agreement between the Parties and their agents.
+
+================================== Ai Message ==================================
+
+NotMentioned

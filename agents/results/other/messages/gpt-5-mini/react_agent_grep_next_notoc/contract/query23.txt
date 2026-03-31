@@ -1,0 +1,20 @@
+================================ Human Message =================================
+
+HYPOTHESIS:
+Survival of obligations: Some obligations of Agreement may survive termination of Agreement.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_wJqEu8Of8ibdKPA7KH1SXgZz)
+ Call ID: call_wJqEu8Of8ibdKPA7KH1SXgZz
+  Args:
+    pattern: surviv
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+19. SURVIVAL. Sections  1, 2, 3,4, 5, 6,  17,  18,  19  and  any  sections  (or parts thereof)  which,  by their nature, are intended to survive termination shall survive termination of this Agreement.
+
+================================== Ai Message ==================================
+
+Entailment

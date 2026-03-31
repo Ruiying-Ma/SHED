@@ -1,0 +1,20 @@
+================================ Human Message =================================
+
+HYPOTHESIS:
+Survival of obligations: Some obligations of Agreement may survive termination of Agreement.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_y58YQpJL6C8pabz8Vcr4Z10p)
+ Call ID: call_y58YQpJL6C8pabz8Vcr4Z10p
+  Args:
+    pattern: surviv|termination|expire|obligations survive|continue in effect
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+2.3 A Receiving Party’s obligations in respect of Confidential Information made available by the Disclosing Party pursuant to this Agreement shall continue notwithstanding the termination of the Purpose.
+
+================================== Ai Message ==================================
+
+Entailment

@@ -1,0 +1,42 @@
+================================ Human Message =================================
+
+QUERY:
+What models are explored in this paper?
+
+TABLE OF CONTENTS (TOC):
+1 | Fake News Detection with Different Models
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2 Methods
+1.3.1 | 2.1 The Dataset
+1.3.2 | 2.2 Data Pre-processing
+1.3.2.1 | 2.2.1 Removed numbers
+1.3.2.2 | 2.2.2 Removed punctuation and special characters
+1.3.2.3 | 2.2.3 Removed stop words
+1.3.3 | 2.3 Data Distribution
+1.3.3.1 | 2.3.1 Sentiment Polarity
+1.3.3.2 | 2.3.2 Part of Speech Distribution
+1.3.3.3 | 2.3.3 Unigram and Bigram
+1.3.4 | 2.4 Unsupervised Pre-training to encode our texts into numeric representations
+1.3.4.1 | 2.4.1 Natural Language Processing Models
+1.3.4.2 | 2.4.2 CountVectorizer
+1.3.4.3 | 2.4.3 TF-IDFVectorizer
+1.3.4.4 | 2.4.4 Word2Vec
+1.3.5 | 2.5 Outlier Removal
+1.3.6 | 2.6 Fine-tuning
+1.3.6.1 | 2.6.1 Artificial Neural Network (ANN)
+1.3.6.2 | 2.6.2 Long Short Term Memory networks (LSTMs)
+1.3.6.3 | 2.6.3 Random Forest
+1.3.6.4 | 2.6.4 Logistic Regression
+1.3.6.5 | 2.6.5 Support Vector Machine (SVM)
+1.4 | 3 Results
+1.5 | 4 Discussion
+1.6 | 5 Conclusion
+1.7 | 6 Appendix
+1.8 | Github Repo
+1.9 | Author Contributions
+1.10 | References
+
+================================== Ai Message ==================================
+
+They explore CountVectorizer, TF‑IDFVectorizer, and Word2Vec for unsupervised pre‑training, and fine‑tune Artificial Neural Network (ANN), Long Short Term Memory networks (LSTMs), Random Forest, Logistic Regression, and Support Vector Machine (SVM).

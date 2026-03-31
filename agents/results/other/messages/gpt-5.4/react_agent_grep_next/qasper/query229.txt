@@ -1,0 +1,69 @@
+================================ Human Message =================================
+
+QUERY:
+How does sentence construction component works?
+
+TABLE OF CONTENTS (TOC):
+1 | Natural Language Generation for Non-Expert Users
+1.1 | 1 Introduction
+1.2 | 2 Background: Grammatical Framework
+1.3 | 3 Method
+1.3.1 | 3.1 Sentence Structure Recognition
+1.3.2 | 3.2 Sentence Components Recognition
+1.3.3 | 3.3 GF Grammar Encoder
+1.3.4 | 3.4 GF Grammar Exporter
+1.4 | 4 Experiments
+1.4.1 | 4.1 NLG for Annotated Ontologies
+1.4.2 | 4.2 Intermediate Representation for Wiki Pages
+1.5 | 5 Related Works
+1.6 | 6 Conclusions and Future Work
+1.7 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_NibAOlXGFYzPtC8q4nlwm4Ze)
+ Call ID: call_NibAOlXGFYzPtC8q4nlwm4Ze
+  Args:
+    pattern: sentence construction|construct.*sentence|Sentence Components Recognition|components
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.2 | 2 Background: Grammatical Framework
+The Grammatical Framework (GF) [19] is a system used for working with grammars. The GF Resource Grammar Library (RGL) 4 covering syntax of various languages is the standard library for GF. A GF program has two main parts. The first part is the Abstract syntax which defines what meanings can be expressed by a grammar. The abstract syntax defines categories (i.e., types of meaning) and functions (i.e., meaning-building components).  An example of an abstract syntax:
+Listing 1: Abstract syntax abstract People = { flags startcat = Message ; cat Message ; People ; Action ; Entity ; fun simple_sent : People -> Action -> Entity -> Message ; Bill : People; Play : Action; Soccer : Entity ; }
+Here, Message , People , Action and Entity are types of meanings. startcat flag states that Message is the default start category for parsing and generation.  simple_sent is a function accepting 3 parameters, of type People , Action , Entity . This function returns a meaning of Message category. Intuitively, each function in the abstract syntax represents a rule in a grammar. The combination of rules used to construct a meaning type can be seen as a syntax tree.The second part is composed of one or more concrete syntax specifications. Each concrete syntax defines the representation of meanings in each output language.  For example, to demostrate the idea that one meaning can be represented by different concrete syntaxes, we create two concrete syntaxes for two different languages: English and Italian. To translate a sentence to different languages, we only need to provide the strings representing each word in corresponding languages. The GF libraries will take
+4 https://www.grammaticalframework.org/lib/doc/synopsis/index.html
+282
+Natural Language Generation for Non-Expert Users
+ responsibility to concatenate the provided strings according to the language grammar to create a complete sentence, which is the representations of the meaning, in the targeted language. The corresponding concrete syntaxes that map functions in the abstract grammar above to strings in English and in Italian is:
+Listing 2: Concrete English and Italian syntaxes
+ concrete PeopleEng of People = open SyntaxEng, ParadigmsEng, ConstructorsEng in { lincat Message = Cl ; People = NP ; Action = V2 ; Entity = NP ; lin simple_sent People Action Entity = mkCl People (mkVP Action Entity) ; Bill = mkNP Bill_N; Play = play_V2; Soccer = mkNP soccer_N; oper Bill_N = mkN "Bill" "Bill"; play_V2 = mkV2 "play"; soccer_N = mkN "soccer"; } concrete PeopleIta of People = open SyntaxIta, ParadigmsIta, ConstructorsIta in { lincat Message = Cl ; People = NP ; Action = V2 ; Entity = NP ; lin simple_sent People Action Entity = mkCl People (mkVP Action Entity) ; Bill = mkNP Bill_N; Play = play_V2; Soccer = mkNP soccer_N ; oper Bill_N = mkN "Bill"; play_V2 = mkV2 "giocare"; soccer_N = mkN "calcio" ; }
+ In these concrete syntaxes, the linearization type definition ( lincat ) states that Message , People , Action and Entity are type Cl (clause), NP (noun phrase), V2 (two-place verb), and NP respectively. Linearization definitions ( lin ) indicate what strings are assigned to each of the meanings defined in the abstract syntax. To reduce same string declaration, the operator ( oper ) section defines some placeholders for strings that can be used in linearization.  The mkNP , mkN , mkV2 , etc. are standard constructors from ConstructorsEng/Jpn library which returns an object of the type NP , N or V2 respectively.GF has been used in a variety of applications, such as query-answering systems, voice communi- cation, language learning, text analysis and translation, natural language generation [20, 2], automatic translation 5 . The translation from English to Italian can be performed as follows in the GF API:
+parse -lang=PeopleEng "Bill plays soccer" | linearize -lang=PeopleIta Bill gioca calcio
+The above command line produces a syntax tree of the sentence “Bill plays soccer” then turn that tree into a PeopleIta sentence (in Italian) which is displayed in the second line. Figure 1 shows the meaning in the abstract syntax is represented in Japanese and in Italian, i. e. the two strings represent the same meaning.5 The MOLTO project: http://www.molto-project.eu
+V.D. Nguyen, T. C. Son & E. Pontelli
+283
+Figure 1: Google translation for the Japanese sentence generated by GF. The two sentences in English and in Italian are the two representations of the meaning encoded in the abstract syntax.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_KoJmyPdkdWue9vOlXcdWuvQk)
+ Call ID: call_KoJmyPdkdWue9vOlXcdWuvQk
+  Args:
+    section_id: 1.3.2
+
+================================= Tool Message =================================
+Name: read_section
+
+3.2 Sentence Components Recognition
+The goal of this step is to identify the relationship between elements of a sentence structure and chunks of words in a sentence from the POS tags and the dependency-based parse tree. For example, the sentence “Bill plays a game” is encoded by a structure #2 and we expect that Bill , plays , and game correspond to the subject, verb, and object, respectively.We begin with recognizing the main words (components) that play the most important roles in the sentence based on a given sentence structure.  This is achieved by program Π 2 (Listing 4). The first four rules of Π 2 determine the main subject and verb of the sentence whose structure is #1, #2, #3, or #5. Structure #4 requires a special treatment since the components following tobe can be of different forms.  For instance, in “Cathy is gorgeous,” the part after tobe is an adjective, but in “Cathy is a beautiful girl,” the part after tobe is a noun, though, with adjective beautiful . This is done using the four last rules of Π 2 .Listing 4: Program Π 2 2 { sub(S); verb(V) } :- nsubj(V,S).  3 { sub(S); obj(O); verb(V) } :- nsubj(V,S), dobj(V,O). 2 { sub(S); verb(V) } :- nsubjpass(V,S), auxpass(V,TOBE). 4 { sub(S); obj(O); verb_1(V1); verb_2(V2) } :- nsubj(V1,S), xcomp(V1,V2), dobj(V2,O).  2 { sub(S); adj(O) } :- nsubj(O,S), pos_tag(O,jj). 2 { sub(S); obj(O) } :- nsubj(O,S), pos_tag(O,nn). 2 { sub(S); obj(O) } :- nsubj(O,S), pos_tag(O,nns). 2 { sub(S); obj(O) } :- nsubj(O,S), pos_tag(O,cd). The result of program Π 2 is an one-to-one mapping of some of the words in the sentence into the importaint components of a sentence, called main components, i.e. subject, object and verb. The mapping is constructed by using the core arguments in Universal Dependency Relations 11 . Since not every word in the sentence is in a core argument relation, there are some words in the sentence that are not in the domain of the mapping that Π 2 produces.  We denote these words are complement components. To identify these words, we encode the Non-core dependents and Nominal dependents from Universal Dependency Relations into the set of rules in program Π 3 .Program Π 3 (Listing 5), together with the atoms extracted from the dependency-based parse tree such as compound ( P , N ) ( N is compound noun at the position P in the sentence), amod ( P , J ) ( J is an adjective modifier), etc. , is used to identify the complement components of the main components computed by Π 2 while maintaining the structure of the sentence created by Π 1 . For example, a complement of a noun could be another noun (as “board” in “board game”), or an adjective (as “popular” in “popular board game”), or a preposition (as “for adults” in “board game for adults”).11 https://universaldependencies.org/u/dep/
+286
+ Natural Language Generation for Non-Expert Users
+Structure GF rules #1 NP → VP → Cl #2 NP → V2 → NP → Cl #3 NP → VV → V2 → NP → Cl #4 NP → AP → Cl and NP → NP → Cl #5 NP → passiveVP → Cl
+Table 2: GF Rules Assigned to Each Structure
+Listing 5: Program Π 3 noun_compound(N) :- compound(pos,N).  adj_mod(JJ) :- amod(pos,JJ). noun_conjunction(N) :- conj(pos,N). preposition(COMP,IN) :- nmod(pos,COMP), case(COMP,IN). adverbial_modifier(ADV) :- advmod(pos,ADV).The input of Program Π 3 is the position ( pos ) of the word in the sentence. Program Π 3 is called whenever there is a new complement component discovered.  That way of recursive calls is to identify the maximal chunk of the words that support the main components of the sentence. The result of this module is a list of vocabularies for the next steps.
+
+================================== Ai Message ==================================
+
+It works by identifying the relationship between sentence-structure elements and word chunks using POS tags and a dependency-based parse tree, first finding the main components—subject, verb, and object—via program Π2 based on the recognized sentence structure and core Universal Dependency relations. Then program Π3 recursively identifies complement components from non-core and nominal dependents (such as compound nouns, adjective modifiers, conjunctions, prepositional phrases, and adverbial modifiers) to build maximal word chunks supporting the main components, producing a vocabulary list for the next steps.

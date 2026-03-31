@@ -1,0 +1,53 @@
+================================ Human Message =================================
+
+QUERY:
+By how much do they outperform previous state-of-the-art in terms of top-n precision?
+
+TABLE OF CONTENTS (TOC):
+1 | Self-Attention Enhanced Selective Gate with Entity-Aware Embedding for Distantly Supervised Relation Extraction
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2 Proposed Approach
+1.3.1 | 2.1 Entity-Aware Embedding
+1.3.2 | 2.2 Self-Attention Enhanced Neural Network
+1.3.3 | 2.3 Selective Gate
+1.3.4 | 2.4 Model Learning
+1.4 | 3 Experiments
+1.4.1 | 3.1 Relation Extraction Performance
+1.4.2 | 3.2 Ablation Study
+1.4.3 | 3.3 Case Study
+1.4.4 | 3.4 Error Analysis
+1.5 | 4 Conclusion
+1.6 | Acknowledgements
+1.7 | References
+1.8 | A Related Work
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_all (call_UIPDp4A8PooqyuwNnieLhY3R)
+ Call ID: call_UIPDp4A8PooqyuwNnieLhY3R
+  Args:
+    pattern: top-\w*|top n|top-n|top n precision|top-n precision|top-1|top-5|top-10|top 5 precision|top 10 precision
+
+================================= Tool Message =================================
+Name: grep_search_all
+
+1.1 | Abstract
+Distantly supervised relation extraction intrinsically suffers from noisy labels due to the strong assumption of distant su- pervision. Most prior works adopt a selective attention mech- anism over sentences in a bag to denoise from wrongly la- beled data, which however could be incompetent when there is only one sentence in a bag.  In this paper, we propose a brand-new light-weight neural framework to address the dis- tantly supervised relation extraction problem and alleviate the defects in previous selective attention framework.  Specif- ically, in the proposed framework, 1) we use an entity-aware word embedding method to integrate both relative position information and head/tail entity embeddings, aiming to high- light the essence of entities for this task; 2) we develop a self-attention mechanism to capture the rich contextual de- pendencies as a complement for local dependencies captured by piecewise CNN; and 3) instead of using selective attention, we design a pooling-equipped gate, which is based on rich contextual representations, as an aggregator to generate bag- level representation for final relation classification.  Compared to selective attention, one major advantage of the proposed gating mechanism is that, it performs stably and promisingly even if only one sentence appears in a bag and thus keeps the consistency across all training examples. The experiments on NYT dataset demonstrate that our approach achieves a new state-of-the-art performance in terms of both AUC and top-n precision metrics.
+
+1.2 | 1 Introduction
+Relation extraction (RE) is one of the most fundamental tasks in natural language processing, and its goal is to iden- tify the relationship between a given pair of entities in a sen- tence. Typically, a large-scale training dataset with clean la- bels is required to train a reliable relation extraction model. However, it is time-consuming and labor-intensive to anno- tate such data by crowdsourcing. To overcome the lack of labeled training data, Mintz et al.  (2009) presents a distant supervision approach that automatically generates a large- scale, labeled training set by aligning entities in knowledge graph (e.g. Freebase (Bollacker et al. 2008)) to correspond-
+Bag consisting of one sentence Label Correct After moving back to New York , Miriam was the victim of a seem- ingly racially motivated attack ... place lived True ...  he faced, walking Bill Mueller and giving up singles to Mark Bell- horn and Johnny Damon . place lived False
+Table 1: Two examples of one-sentence bag, which are correctly and wrongly labeled by distant supervision respectively.ing entity mentions in natural language sentences. This ap- proach is based on a strong assumption that, any sentence containing two entities should be labeled according to the re- lationship of the two entities on the given knowledge graph.  However, this assumption does not always hold. Sometimes the same two entities in different sentences with various con- texts cannot express a consistent relationship as described in the knowledge graph, which certainly results in wrongly la- beled problem.To alleviate the aformentioned problem, Riedel, Yao, and McCallum (2010) proposes a multi-instance learning frame- work, which relaxes the strong assumption to expressed-at- least-one assumption.  In plainer terms, this means any pos- sible relation between two entities hold true in at least one distantly-labeled sentence rather than all of the them that contains those two entities. In particular, instead of gener- ating a sentence-level label, this framework assigns a label to a bag of sentences containing a common entity pair, and the label is a relationship of the entity pair on knowledge graph.  Recently, based on the labeled data at bag level, a line of works (Zeng et al. 2015; Du et al. 2018; Lin et al. 2016; Han et al. 2018; Ye and Ling 2019) under selective attention framework (Lin et al. 2016) let model implicitly focus on the correctly labeled sentence(s) by an attention mechanism and thus learn a stable and robust model from the noisy data. However, such selective attention framework is vulnera- ble to situations where a bag is merely comprised of one single sentence labeled; and what is worse, the only one sentence possibly expresses inconsistent relation informa- tion with the bag-level label. This scenario is not uncom-
+∗ Corresponding author
+Copyright c 2020, Association for the Advancement of Artificial Intelligence (www.aaai.org). All rights reserved.mon.  For a popular distantly supervised relation extraction benchmark, e.g., NYT dataset (Riedel, Yao, and McCallum 2010), up to 80% of its training examples (i.e., bags) are one-sentence bags. From our data inspection, we randomly sample 100 one-sentence bags and find 35% of them is in- correctly labeled. Two examples of one-sentence bag are shown in Table 1.  These results indicate that, in training phrase the selective attention module is enforced to output a single-valued scalar for 80% examples, leading to an ill- trained attention module and thus hurting the performance.Motivated by aforementioned observations, in this paper, we propose a novel Se lective G ate (SeG) framework for dis- tantly supervised relation extraction. In the proposed frame- work, 1) we employ both the entity embeddings and relative position embeddings (Zeng et al.  2014) for relation extrac- tion, and an entity-aware embedding approach is proposed to dynamically integrate entity information into each word embedding, yielding more expressively-powerful represen- tations for downstream modules; 2) to strengthen the capa- bility of widely-used piecewise CNN (PCNN) (Zeng et al. 2015) on capturing long-term dependency (Yu et al.  2018), we develop a light-weight self-attention (Lin et al. 2017; Shen et al. 2018) mechanism to capture rich dependency in- formation and consequently enhance the capability of neu- ral network via producing complementary representation for PCNN; and 3) based on preceding versatile features, we de- sign a selective gate to aggregate sentence-level representa- tions into bag-level one and alleviate intrinsic issues appear- ing in selective attention. Compared to the baseline framework (i.e., selective at- tention for multi-instance learning), SeG is able to pro- duce entity-aware embeddings and rich-contextual represen- tations to facilitate downstream aggregation modules that stably learn from noisy training data. Moreover, SeG uses gate mechanism with pooling to overcome problem occur- ring in selective attention, which is caused by one-sentence bags.  In addition, it still keeps a light-weight structure to en- sure the scalability of this model.The experiments and extensive ablation studies on New York Time dataset (Riedel, Yao, and McCallum 2010) show that our proposed framework achieves a new state-of-the- art performance regarding both AUC and top-n precision metrics for distantly supervised relation extraction task, and also verify the significance of each proposed module.  Par- ticularly, the proposed framework can achieve AUC of 0.51, which outperforms selective attention baseline by 0.14 and improves previous state-of-the-art approach by 0.09.
+
+1.4.1 | 3.1 Relation Extraction Performance
+We first compare our proposed SeG with aforementioned approaches in Table 2 for top-N precision (i.e., P@N). As shown in the top panel of the table, our proposed model SeG can consistently and significantly outperform baseline (i.e., PCNN+ATT) and all recently-promoted works in terms of all P@N metric. Compared to PCNN with selective atten- tion (i.e. , PCNN+ATT), our proposed SeG can significantly improve the performance by 23.6% in terms of P@N mean for all sentences; even if a soft label technique is applied (i.e., PCNN+ATT+SL) to alleviate wrongly labeled prob- lem, our performance improvement is also very significant, i.e., 7.8%.Compared to previous state-of-the-art approaches (i.e.,
+ Approach AUC PCNN+HATT 0.42 PCNN+ATT-RA+BAG-ATT 0.42 SeG (ours) 0.51
+Table 3: Model comparison regarding the AUC value. The com- parative results are reported by Han et al. (2018) and Ye and Ling (2019) respectively.Approach AUC Acc. PCNN 0.36 83% PCNN+ATT 0. 35 78% SeG(ours) 0.48 90%
+Table 4: Model that is trained and tested on extracted one sentence bags from NYT dataset comparison regarding the AUC value and Acc., where Acc. is accuracy on non-NA sentences.PCNN+HATT and PCNN+BAG-ATT), the proposed model can also outperform them by a large margin, i.e., 10.3% and 5. 3% , even if they propose sophisticated techniques to han- dle the noisy training data. These verify the effectiveness of our approach over previous works when solving the wrongly labeled problem that frequently appears in distantly super- vised relation extraction.Moreover, for proposed approach and comparative ones, we also show AUC curves and available numerical values in Figure 2 and Table 3 respectively.  The empirical results for AUC are coherent with those of P@N, which shows that, our proposed approach can significantly improve pre- vious ones and reach a new state-of-the-art performance by handling wrongly labeled problem using context-aware se- lective gate mechanism. Specifically, our approach substan- tially improves both PCNN+HATT and PCNN+BAG-ATT by 21.4% in aspect of AUC for precision-recall.
+
+================================== Ai Message ==================================
+
+10.3% and 5.3%.

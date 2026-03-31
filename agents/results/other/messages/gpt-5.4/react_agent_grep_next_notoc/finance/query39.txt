@@ -1,0 +1,72 @@
+================================ Human Message =================================
+
+QUERY:
+What are the geographies that American Express primarily operates in as of 2022?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_nYaLF7zXcbBE2s75nD5HMxBy)
+ Call ID: call_nYaLF7zXcbBE2s75nD5HMxBy
+  Args:
+    pattern: primarily operate|primary.*geograph|geograph
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Diverse Customer Base and Global Footprint
+Our broad and diverse customer base spans consumers, small businesses, mid-sized companies and large corporations around the world. The following chart provides a summary of our diverse set of customers and broad geographic footprint based on worldwide network volumes:
+3
+Table of Contents
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_HCdspP1j5vGFevdHVdBjZPSG)
+ Call ID: call_HCdspP1j5vGFevdHVdBjZPSG
+  Args:
+    pattern: geograph
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Diverse Customer Base and Global Footprint
+Our broad and diverse customer base spans consumers, small businesses, mid-sized companies and large corporations around the world. The following chart provides a summary of our diverse set of customers and broad geographic footprint based on worldwide network volumes:
+3
+Table of Contents
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_5cs5gjtWMIeLbTjOCFaxBI04)
+ Call ID: call_5cs5gjtWMIeLbTjOCFaxBI04
+  Args:
+    pattern: worldwide network volumes|US Consumer Services|International Card Services|Global Merchant
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Diverse Customer Base and Global Footprint
+Our broad and diverse customer base spans consumers, small businesses, mid-sized companies and large corporations around the world. The following chart provides a summary of our diverse set of customers and broad geographic footprint based on worldwide network volumes:
+3
+Table of Contents
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_FO6UYkCCswe4zhRI7G99JklF)
+ Call ID: call_FO6UYkCCswe4zhRI7G99JklF
+  Args:
+    pattern: United States|Europe|Asia|Latin America|Japan|Australia|Canada
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Card Issuing Businesses
+Our global proprietary card-issuing businesses are conducted through our USCS, CS and ICS reportable operating segments. We offer a broad set of card products, rewards and services to a diverse consumer and commercial customer base, in the United States and internationally. We acquire and retain high- spending, engaged and creditworthy Card Members by:
+• Designing innovative products and features that appeal to our target customer base and meet their spending and borrowing needs
+ • Using incentives to drive spending on our various card products and increase customer engagement, including our Membership Rewards program, cash-back reward features, interest rates offered on deposits and participation in loyalty programs sponsored by our cobrand and other partners
+• Providing digital and mobile services and an array of benefits and experiences across card products, such as airport lounge access, dining experiences and other travel and lifestyle benefits
+• Creating world-class service experiences by delivering exceptional customer care
+ • Developing a wide range of partner relationships, including with other corporations and institutions that sponsor certain of our cards under cobrand arrangements and provide benefits and services to our Card Members
+Over the last several years, we have focused on broadening the appeal of our products to attract new customers, particularly Millennial and Gen Z customers, as well as expanding our position with small and mid-sized enterprise (SME) customers by providing more ways to help them manage and grow their businesses.  We have also introduced new adjacent products that complement our existing products, such as our business checking and consumer rewards checking account products and new digital capabilities, which in part result from our acquisitions of Kabbage, Resy and acompay. Additionally, we have evolved our card issuing businesses by bringing together our consumer, SME and large commercial issuing activities outside of the United States into a new ICS organization to enable a greater focus on local priorities.  Jurisdictions that represent a significant portion of our billed business outside of the United States include the United Kingdom (UK), the European Union (EU), Australia, Japan, Canada and Mexico.For the year ended December 31, 2022, worldwide billed business (spending on American Express cards issued by us) was $1,338 billion and at December 31, 2022, we had 76.7 million proprietary cards-in-force worldwide.
+
+================================== Ai Message ==================================
+
+American Express primarily operates in the United States and internationally. Jurisdictions that represent a significant portion of its billed business outside of the United States include the United Kingdom, the European Union, Australia, Japan, Canada and Mexico.

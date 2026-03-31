@@ -1,0 +1,92 @@
+================================ Human Message =================================
+
+QUERY:
+Do any of their reviews contain translations for both Catalan and Basque?
+
+TABLE OF CONTENTS (TOC):
+1 | MultiBooked: A Corpus of Basque and Catalan Hotel Reviews Annotated for Aspect-level Sentiment Classification.
+1.1 | Abstract
+1.2 | 1. Introduction
+1.3 | 2. Related Work
+1.4 | 3. Data Collection
+1.5 | 4. Annotation
+1.5.1 | 4.1. Guidelines
+1.5.2 | 4.2. Process
+1.5.3 | 4.3. Dataset Characteristics
+1.5.4 | 4.4. Agreement Scores
+1.6 | 5. Difficult Examples
+1.7 | 6. Benchmarks
+1.8 | 7. Conclusion
+1.9 | 8. Bibliographical References
+1.10 | 9. Language Resource References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_1VBQtBed37OlTqO2VXN0tS3A)
+ Call ID: call_1VBQtBed37OlTqO2VXN0tS3A
+  Args:
+    pattern: translation|translated|translations
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_vSneXRegNYeMXcUrv11N2SjR)
+ Call ID: call_vSneXRegNYeMXcUrv11N2SjR
+  Args:
+    section_id: 1.4
+
+================================= Tool Message =================================
+Name: read_section
+
+3. Data Collection
+In order to improve the lack of data in low-resource lan- guages, we introduce two aspect-level sentiment datasets to the community, available for Catalan and Basque. To collect suitable corpora, we crawl hotel reviews from
+.www.booking.com . Booking.com allows you to search for reviews in Catalan, but it does not include Basque.  Therefore, for Basque we crawled reviews from a number of other websites that allow users to comment on their stay 1 Many of the reviews that we found through crawling are either 1) in Spanish, 2) include a mix of Spanish and the target language, or 3) do not contain any sentiment phrases. Therefore, we use a simple language identification method 2 in order to remove any Spanish or mixed reviews and also remove any reviews that are shorter than 7 tokens.  This finally gave us a total of 568 reviews in Catalan and 343 re- views in Basque, collected from November 2015 to January 2016.We preprocess them through a very light normalization, after which we perform tokenization, pos-tagging and lemmatization using Ixa-pipes (Agerri et al., 2014).Our final documents are in KAF/NAF format (Bosma et al. , 2009; Fokkens et al., 2014). This is a stand-off xml format originally from the Kyoto project (Bosma et al., 2009) and allows us to enrich our documents with many layers of linguistic information, such as the pos tag of a word, its lemma, whether it is a polar word, and if so, if it has an opinion holder or target.  The advantage of this format is that we do not have to change the original text in any way.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_FGGGsnzoqH5pq7PTJGQAjNOb)
+ Call ID: call_FGGGsnzoqH5pq7PTJGQAjNOb
+  Args:
+    pattern: English|Spanish|Catalan|Basque.*translation|parallel|same review
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1 | Abstract
+While sentiment analysis has become an established field in the NLP community, research into languages other than English has been hindered by the lack of resources. Although much research in multi-lingual and cross-lingual sentiment analysis has focused on unsupervised or semi-supervised approaches, these still require a large number of resources and do not reach the performance of supervised approaches.  With this in mind, we introduce two datasets for supervised aspect-level sentiment analysis in Basque and Catalan, both of which are under-resourced languages. We provide high-quality annotations and benchmarks with the hope that they will be useful to the growing community of researchers working on these languages.Keywords: basque, catalan, sentiment analysis, aspect-level, under-resourced, opinion mining, cross-lingual
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_r6QpqErjzAR3ldVVBCCtsrAD)
+ Call ID: call_r6QpqErjzAR3ldVVBCCtsrAD
+  Args:
+    section_id: 1.5.3
+
+================================= Tool Message =================================
+Name: read_section
+
+4.3. Dataset Characteristics
+The reviews are typical hotel reviews, which often mention various aspects of the hotel or experience and the polarity towards these aspects. An example is shown in Example Statistics for the two corpora are shown in Table 2.1 We took reviews from a total of 35 different websites, including www.airbnb.com , www.atrapalo.com , www.nekatur.net , www.rentalia.es , www.toprural.es , and www.tripadvisor. com . 2 We use the count of stopwords to predict the probability that a review is written in Spanish, Catalan, or Basque. 3 http://www.opener-project.eu/
+Catalan Basque Number of Reviews 567 343 Average length in tokens 45 46.9 Number of Targets 2762 1775 Number of Expressions 2346 2328 Number of Holders 236 296
+Table 2: Corpus Statistics
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_SF5NyOmWjg3xJblywEhtxmtf)
+ Call ID: call_SF5NyOmWjg3xJblywEhtxmtf
+  Args:
+    section_id: 1.1
+
+================================= Tool Message =================================
+Name: read_section
+
+Abstract
+While sentiment analysis has become an established field in the NLP community, research into languages other than English has been hindered by the lack of resources. Although much research in multi-lingual and cross-lingual sentiment analysis has focused on unsupervised or semi-supervised approaches, these still require a large number of resources and do not reach the performance of supervised approaches.  With this in mind, we introduce two datasets for supervised aspect-level sentiment analysis in Basque and Catalan, both of which are under-resourced languages. We provide high-quality annotations and benchmarks with the hope that they will be useful to the growing community of researchers working on these languages.Keywords: basque, catalan, sentiment analysis, aspect-level, under-resourced, opinion mining, cross-lingual
+
+================================== Ai Message ==================================
+
+Unanswerable

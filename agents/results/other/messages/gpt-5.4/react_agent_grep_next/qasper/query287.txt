@@ -1,0 +1,80 @@
+================================ Human Message =================================
+
+QUERY:
+How is subjective text automatically neutralized?
+
+TABLE OF CONTENTS (TOC):
+1 | Automatically Neutralizing Subjective Bias in Text Reid Pryzant, 1 Richard Diehl Martinez, 1 Nathan Dass, 1 Sadao Kurohashi, 2 Dan Jurafsky, 1 Diyi Yang 3
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2 Wiki Neutrality Corpus (WNC)
+1.3.1 | 2.1 Dataset Properties
+1.4 | 3 Methods for Neutralizing Text
+1.4.1 | • t = [ w t 1 , ..., w t m ] is a target sequence and the neutralized version of s .
+1.4.2 | 3.1 MODULAR
+1.4.3 | 3.2 CONCURRENT
+1.5 | 4 Experiments
+1.5.1 | 4.1 Experimental Protocol
+1.5.2 | 4.2 Wikipedia (WNC)
+1.5.3 | 4.3 Real-world Media
+1.6 | 5 Error Analysis
+1.7 | 6 Algorithmic Analysis
+1.7.1 | 6.1 Detecting Subjectivity
+1.7.2 | 6.2 Join Embedding
+1.8 | 7 Related Work
+1.9 | 8 Conclusion and Future Work
+1.10 | 9 Acknowledgements
+1.11 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_NeFFsKqIjeDNMa2F9dtFWxv1)
+ Call ID: call_NeFFsKqIjeDNMa2F9dtFWxv1
+  Args:
+    section_id: 1.1
+
+================================= Tool Message =================================
+Name: read_section
+
+Abstract
+Texts like news, encyclopedias, and some social media strive for objectivity. Yet bias in the form of inappropriate subjectiv- ity — introducing attitudes via framing, presupposing truth, and casting doubt — remains ubiquitous. This kind of bias erodes our collective trust and fuels social conflict. To address this issue, we introduce a novel testbed for natural language generation: automatically bringing inappropriately subjective text into a neutral point of view (“neutralizing” biased text).  We also offer the first parallel corpus of biased language. The corpus contains 180,000 sentence pairs and originates from Wikipedia edits that removed various framings, presupposi- tions, and attitudes from biased sentences. Last, we propose two strong encoder-decoder baselines for the task. A straight- forward yet opaque CONCURRENT system uses a BERT en- coder to identify subjective words as part of the generation process.  An interpretable and controllable MODULAR algo- rithm separates these steps, using (1) a BERT-based classifier to identify problematic words and (2) a novel join embed- ding through which the classifier can edit the hidden states of the encoder. Large-scale human evaluation across four do- mains (encyclopedias, news headlines, books, and political speeches) suggests that these algorithms are a first step to- wards the automatic identification and reduction of bias.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_WgvXXBQ2QOcdl1vMmRC26wBJ)
+ Call ID: call_WgvXXBQ2QOcdl1vMmRC26wBJ
+  Args:
+    section_id: 1.4
+
+================================= Tool Message =================================
+Name: read_section
+
+3 Methods for Neutralizing Text
+We propose the task of neutralizing text, in which the algo- rithm is given an input sentence and must produce an output sentence whose meaning is as similar as possible to the input but with the subjective bias removed.We propose two algorithms for this task, each with its own benefits. A MODULAR algorithm enables human control and interpretability. A CONCURRENT algorithm is simple to train and operate.We adopt the following notation:
+ Figure 2: The detection module uses discrete features f i and BERT embedding b i to calculate logit y i .
+• s = [ w s 1 , ...,..., w s n ] is a source sequence of subjectively bi- ased text.
+• t = [ w t 1 , ..., w t m ] is a target sequence and the neutralized version of s .
+3.1 MODULAR
+The first algorithm we are proposing is called MODULAR . It has two stages: BERT-based detection and LSTM-based editing. We pretrain a model for each stage and then com- bine them into a joint system for end-to-end fine tuning on the overall neutralizing task. We proceed to describe each module. Detection Module The detection module is a neural se- quence tagger that estimates p i , the probability that each in- put word w s i is subjectively biased (Figure 2).Module description. Each p i is calculated according to
+p i = σ ( b i W b + e i W e + b ) (1)
+• b i ∈ R b represents w s i ’s semantic meaning.It is a contextualized word vector produced by BERT, a trans- former encoder that has been pre-trained as a masked lan- guage model (Devlin et al. 2019). To leverage the bias- topic relationship uncovered in Section 2.1, we prepend a token indicating an article’s topic category ( <arts> , <sports> , etc) to s . The word vectors for these tokens are learned from scratch.
+• e i represents expert features of bias proposed by (Re- casens,Danescu-Niculescu-Mizil, and Jurafsky 2013): e i = ReLU ( f i W in ) (2)
+W in ∈ R f × h is a matrix of learned parameters, and f i is a vector of discrete features 4 .
+• W b ∈ R b , W e ∈ R h ,and b ∈ R are learnable parame- ters.Module pre-training. We train this module using diffs 5 be- tween the source and target text. A label p ∗ i is 1 if w s i was deleted or modified as part of the neutralizing process. A label is 0 if the associated word was unchanged during edit- ing, i.e. it occurs in both the source and target text. The loss
+3 https://en.wikipedia. org/wiki/Wikipedia:WikiProject Council/Directory
+4 Such as lexicons of hedges, factives, assertives, implicatives, and subjective words; see code release.5 https://github.com/paulgb/simplediff
+Figure 3: The MODULAR system uses join embedding v to reconcile the detector’s predictions with an encoder-decoder architecture. The greater a word’s probability, the more of v is mixed into that word’s hidden state. is calculated as the average negative log likelihood of the labels:
+L = − 1 n n X i =1 h p ∗ i log p i + (1 − p ∗ i ) log(1 − p i ) i
+Editing Module The editing module takes a subjective source sentence s and is trained to edit it into a more neutral compliment t .Module description.  This module is based on a sequence-to-sequence neural machine translation model (Luong, Pham, and Manning 2015). A bi-LSTM encoder turns s into a sequence of hidden states H = ( h 1 , ..., h n ) (Hochreiter and Schmidhuber 1997). Next, an LSTM de- coder generates text one token at a time by repeatedly at- tending to H and producing probability distributions over the vocabulary.  We also add two mechanisms from the sum- marization literature (See, Liu, and Manning 2017). The first is a copy mechanism, where the model’s final output for timestep i becomes a weighted combination of the predicted vocabulary distribution and attentional distribution from that timestep. The second is a coverage mechanism which incor- porates the sum of previous attention distributions into the final loss function to discourage the model from re-attending to a word and repeating itself.Module pre-training.  We pre-train the decoder as a lan- guage model of neutral text using the neutral portion of WNC (Section 2). Doing so expresses a data-driven prior about how target sentences should read.  We accomplish this with a denoising autoencoder objective (Hill, Cho, and Ko- rhonen 2016) and maximizing the conditional log probabil- ity of reconstructing a sequence x from a corrupted ver- sion of itself e x using noise model C ( log p ( x | e x ) where e x = C ( x ) ).Our C is similar to (Lample et al. 2018).  We slightly shuf- fle x such that x i ’s index in e x is randomly selected from [ i − k, i + k ] . We then drop words with probability p . For our experiments, we set k = 3 and p = 0 . 25 .Final System Once the detection and editing modules have been pre-trained, we join them and fine-tune together as an end to end system for translating s into t . This is done with a novel join embedding mechanism that lets the detector control the editor (Figure 3). The join em- bedding is a vector v ∈ R h that we add to each encoder hidden state in the editing module. This operation is gated by the detector’s output probabilities p = ( p 1 , ..., p n ) . Note that the same v is applied across all timesteps.h 0 i = h i + p i · v (3)
+ We proceed to condition the decoder on the new hidden states H 0 = ( h 0 1 , ..., h 0 n ) which have varying amounts of v in them. Intuitively, v is enriching the hidden states of words that the detector identified as subjective. This tells the decoder what language should be changed and what is safe to be be copied during the neutralization process. Error signals are allowed to flow backwards into both the encoder and detector, creating an end-to-end system from the two modules. To fine-tune the parameters of the joint system, we use a token-weighted loss function that scales the loss on neutralized words (i.e. words unique to t ) by a factor of α : m
+ L ( s, t ) = − X i =1 λ ( w t i , s ) log p ( w t i | s, w t <i ) + c λ ( w t i , s ) = α : w t i 6∈ s 1 : otherwise
+Note that c is a term from the coverage mechanism (Sec- tion 3.1). We use α = 1 . 3 in our experiments.  Intuitively, this loss function incorporates an inductive bias of the neu- tralizing process: the source and target have a high degree of lexical similarity but the goal is to learn the structure of their differences , not simply copying words into the output (something a pre-trained autoencoder should already have knowledge of). This loss function is related to previous work on grammar correction (Junczys-Dowmunt et al.  2018), and cost-sensitive learning (Zhou and Liu 2006).
+3.2 CONCURRENT
+Our second algorithm takes the problematic source s and di- rectly generates a neutralized ˆ t . While this renders the sys- tem easier to train and operate, it limits interpretability and controllability.Model description . The CONCURRENT system is an encoder-decoder neural network. The encoder is BERT. The decoder is the same as that of Section 3.1: an attentional LSTM with copy and coverage mechanisms. The decoder’s inputs are set to:
+• Hidden states H = W H B , where B = ( b 1 , ...,where B = ( b 1 , ..., b n ) ∈ R b × n is the BERT-embedded source and W H ∈ R h × b is a matrix of learned parameters.
+• Initial states c 0 = W c 0 P b i /n and h 0 = W h 0 P b i /n .W c 0 ∈ R h × b and W h 0 ∈ R h × b are learned matrices.Model training . The CONCURRENT model is pre-trained with the same autoencoding procedure described in Section 3.1. It is then fine-tuned as a subjective-to-neutral translation system with the same loss function described in Section 3.1.Method BLEU Accuracy Fluency Bias Meaning Source Copy 91.33 0. 00 - - - Detector (always delete biased word) 92.43* 38.19* -0.253* -0.324* 1.108* Detector (predict substitution from biased word) 92.51 36.57* -0.233* -0.327* 1.139* Delete Retrieve (ST) (Li et al. 2018) 88.46* 14.50* -0.209* -0. 456* 1.294* Back Translation (ST) (Prabhumoye et al. 2018) 84.95* 9.92* -0.359* -0.390* 1.126* Transformer (MT) (Vaswani et al. 2017) 86.40* 24.34* -0.259* -0.458* 0. 905* Seq2Seq (MT) (Luong, Pham, and Manning 2015) 89.03* 23.93 -0.423* -0.436* 1.294* Base 89.13 24.01 - - - + loss 90.32* 24.10 - - - + loss + pretrain 92.89* 34. 76* - - - + loss + pretrain + detector ( MODULAR ) 93.52* 45.80 * -0.078 -0.467 * 0.996* + loss + pretrain + BERT ( CONCURRENT ) 93.94 44.87 0.132 -0.423* 0.758 * Target copy 100.0 100.0 -0.077 -0.551* 1.128*
+ Table 4: Bias neutralization performance. ST indicates a style transfer system. MT indicates a machine translation system. For quantitative metrics, rows with asterisks are significantly different than the preceding row. For qualitative metrics, rows with asterisks are significantly different from zero. Higher is preferable for fluency , while lower is preferable for bias and meaning .
+
+================================== Ai Message ==================================
+
+Subjective text is automatically neutralized by treating it as a translation task: given a biased source sentence, the system generates an output with similar meaning but with subjective bias removed. The paper proposes two encoder-decoder methods: MODULAR, which first uses a BERT-based classifier to detect subjective words and then an LSTM editor with a join embedding to revise them, and CONCURRENT, which uses a BERT encoder and LSTM decoder to generate the neutral version directly.

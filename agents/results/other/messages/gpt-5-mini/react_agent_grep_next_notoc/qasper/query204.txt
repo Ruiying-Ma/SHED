@@ -1,0 +1,87 @@
+================================ Human Message =================================
+
+QUERY:
+what boosting techniques were used?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_0OXukJ8M3ZjX2pTuslOj6Izw)
+ Call ID: call_0OXukJ8M3ZjX2pTuslOj6Izw
+  Args:
+    pattern: boost
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+In this paper, we investigate a new approach to Population, Intervention and Outcome (PIO) element detection, a common task in Evidence Based Medicine (EBM). The purpose of this study is two-fold: to build a training dataset for PIO element detection with minimum redun- dancy and ambiguity and to investigate pos- sible options in utilizing state of the art em- bedding methods for the task of PIO element detection.  For the former purpose, we build a new and improved dataset by investigating the shortcomings of previously released datasets. For the latter purpose, we leverage the state of the art text embedding, Bidirectional Encoder Representations from Transformers (BERT), and build a multi-label classifier. We show that choosing a domain specific pre-trained embedding further optimizes the performance of the classifier. Furthermore, we show that the model could be enhanced by using ensem- ble methods and boosting techniques provided that features are adequately chosen.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_6Inave3R7FNqYE7KsXzN4pJO)
+ Call ID: call_6Inave3R7FNqYE7KsXzN4pJO
+  Args:
+    pattern: boosting
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+In this paper, we investigate a new approach to Population, Intervention and Outcome (PIO) element detection, a common task in Evidence Based Medicine (EBM). The purpose of this study is two-fold: to build a training dataset for PIO element detection with minimum redun- dancy and ambiguity and to investigate pos- sible options in utilizing state of the art em- bedding methods for the task of PIO element detection.  For the former purpose, we build a new and improved dataset by investigating the shortcomings of previously released datasets. For the latter purpose, we leverage the state of the art text embedding, Bidirectional Encoder Representations from Transformers (BERT), and build a multi-label classifier. We show that choosing a domain specific pre-trained embedding further optimizes the performance of the classifier. Furthermore, we show that the model could be enhanced by using ensem- ble methods and boosting techniques provided that features are adequately chosen.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_zCOYH8KatP5NTi2n0qtXpCie)
+ Call ID: call_zCOYH8KatP5NTi2n0qtXpCie
+  Args:
+    pattern: AdaBoost|XGBoost|Gradient|LightGBM|CatBoost|boosted|boosting|Boost
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+In this paper, we investigate a new approach to Population, Intervention and Outcome (PIO) element detection, a common task in Evidence Based Medicine (EBM). The purpose of this study is two-fold: to build a training dataset for PIO element detection with minimum redun- dancy and ambiguity and to investigate pos- sible options in utilizing state of the art em- bedding methods for the task of PIO element detection.  For the former purpose, we build a new and improved dataset by investigating the shortcomings of previously released datasets. For the latter purpose, we leverage the state of the art text embedding, Bidirectional Encoder Representations from Transformers (BERT), and build a multi-label classifier. We show that choosing a domain specific pre-trained embedding further optimizes the performance of the classifier. Furthermore, we show that the model could be enhanced by using ensem- ble methods and boosting techniques provided that features are adequately chosen.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_88BHFgWFG46OZZe4LcEoGPrW)
+ Call ID: call_88BHFgWFG46OZZe4LcEoGPrW
+  Args:
+    pattern: AdaBoost
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_W0UhAB0kq0r0OAMVAO84NZN2)
+ Call ID: call_W0UhAB0kq0r0OAMVAO84NZN2
+  Args:
+    pattern: XGBoost
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_XdEzfuhJBwBEJrKicW6cUTmS)
+ Call ID: call_XdEzfuhJBwBEJrKicW6cUTmS
+  Args:
+    pattern: Gradient Boost|GradientBoost|LightGBM|CatBoost
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+4.2 Model Boosting
+We further applied ensemble methods to enhance the model. This approach consists of combin-
+Figure 3: An illustration of the LGBM framework: : combining the two base models and the TF-IDF and QIEF features.ing predictions from base classifiers with features of the input data to increase the accuracy of the model ( Merz , 1999 ).We investigate an important family of ensemble methods known as boosting, and more specifically
+Model ROC AUC F1 BERT 0. 9951 0.9666 BioBERT 0.9971 0.9697 BERT + TF-IDF + QIEF 0.9981 0.9784 BioBERT + TF-IDF + QIEF 0.9996 0.9793 BERT + BioBERT + TF-IDF + QIEF 0.9998 0.9866
+ Table 2: Performance of the classifiers in terms of ROC AUC and F1 scores.a Light Gradient Boosting Machine (LGBM) al- gorithm, which consists of an implementation of fast gradient boosting on decision trees. In this study, we use a library implemented by Microsoft ( Ke et al. , 2017 ). In our model, we learn a linear combination of the prediction given by the base classifiers and the input text features to predict the labels.  As features, we consider the average term frequency-inverse document frequency (TF-IDF) score for each instance and the frequency of occur- rence of quantitative information elements (QIEF) (e.g. percentage, population, dose of medicine). Finally, the output of the binary cross entropy with logits layer (predicted probabilities for the three classes) and the feature information are fed to the LGBM. We train the base classifier using the original training dataset, using 60% of the whole data as training dataset, and use a five-fold cross- validation framework to train the LGBM on the remaining 40% of the data to avoid any informa- tion leakage. We train the LGBM on four folds and test on the excluded one and repeat the pro- cess for all five folds. The results of the LGBM classifier for the dif- ferent boosting frameworks and the scores from the base classifiers are illustrated in Table 2 . The highest average ROC AUC score of 0.9998 is ob- tained in the case of combining the two base learn- ers along with the TF-IDF and QIEF features.
+
+================================== Ai Message ==================================
+
+They used ensemble methods and, more specifically, the Light Gradient Boosting Machine (LGBM).

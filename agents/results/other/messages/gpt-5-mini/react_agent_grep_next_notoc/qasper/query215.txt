@@ -1,0 +1,104 @@
+================================ Human Message =================================
+
+QUERY:
+what was the previous best results model?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_ZBaBBniYBFE6tYS3oHDJlBZN)
+ Call ID: call_ZBaBBniYBFE6tYS3oHDJlBZN
+  Args:
+    pattern: previous best
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_VwwLw19sSSWL0K1reLG5RJcm)
+ Call ID: call_VwwLw19sSSWL0K1reLG5RJcm
+  Args:
+    pattern: best results model
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_HpmXm4LkTQgGoSlH5xiXDjfK)
+ Call ID: call_HpmXm4LkTQgGoSlH5xiXDjfK
+  Args:
+    pattern: previous best results
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_Ag5jnRUHJArf5JLOsXhetMFk)
+ Call ID: call_Ag5jnRUHJArf5JLOsXhetMFk
+  Args:
+    pattern: previous best
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_BVKWTOeRvWyYcH6M4fVf1JrC)
+ Call ID: call_BVKWTOeRvWyYcH6M4fVf1JrC
+  Args:
+    pattern: previous
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Discussion
+When testing on Amazon reviews, the worst-performing case was that in which the classifier was trained only on Twitter data (it did not manage to outperform either base- line). This underscores the inherent variations in the data across the two domains; despite the fact that many of the features were deliberately designed to be generalizable and robust to domain-specific idiosyncrasies, the different trends across domains still confused the classifier. However, combining all of that same Twitter data with a much smaller amount of Amazon data (3998 Twitter train- ing instances relative to 1003 Amazon training instances) and applying EasyAdapt to the combined dataset performed quite well ( F 1 =0.780). The classifier was able to take advan- tage of a wealth of additional Twitter samples that had led to terrible performance on their own ( F 1 =0.276).  Thus, the high performance demonstrated when the EasyAdapt algo- rithm is applied to the training data from the two domains is particularly impressive. It shows that more data is indeed better data—provided that the proper features are selected and the classifier is properly guided in handling it.Overall, the system cut the error rate from .256 to .220, representing a 14% relative reduction in error over prior best results on the Amazon dataset. Our results testing on
+ Figure 1: Example from Amazon Product Reviews
+Twitter are not directly comparable to others, since prior work’s datasets could not be released; however, our re- sults ( F 1 =0.583) are in line with those reported previously (Riloff et al. (2013): F 1 =0.51; Davidov, Tsur, and Rappoport (2010): F 1 =0.545).  Additionally, our Twitter data did not contain many indicators shown to be discriminative in the past (leading our general features to be better predictors of sarcasm even when training/testing entirely within the do- main), and our focus in developing features was on general performance rather than performance on Twitter specifically.Both datasets were somewhat noisy. Many full-length re- views that were marked as “sarcastic” were only partially so, and included other sentences that were not sarcastic at all.  This may have been particularly problematic when strong polarity was present in those sentences. An example of this is shown in Figure 1, where the highlighted portion of the re- view indicates the sarcastic segment submitted by the anno- tator, and awesome , the most polar word in the entire review (circled), is outside that highlighted sentence. Since tweets are self-labeled, users’ own varying defini- tions of sarcasm lead to some extreme idiosyncrasies in the kinds of tweets labeled as sarcastic. Sarcastic tweets were also often dependent upon outside context. Some examples include (#sarcasm tags were removed in the actual dataset): “My daughter’s 5th grade play went over as professional, flawless, and well rehearsed as a Trump speech.  #sarcasm,” “#MilanAlessandria Mario Balotelli scored the fifth goal in the 5-0 win. He should play for the #Azzurri at #EURO2016.8 Further analysis of the Twitter-specific features revealed that contains sarcasm hashtag, contains sarcastic smiley, and con- tains sarcasm indicator phrase all led to F 1 = 0 .  0 when used indi- vidually; although these performed quite well in prior work, our Twitter dataset did not contain the indicators with high enough fre- quency to have any impact on the overall classification outcome.#sarcasm,” and “Good morning #sarcasm.”
+ Finally, some past research has found that it is more diffi- cult to discriminate between sarcastic and non-sarcastic texts when the non-sarcastic texts contain sentiment (Gonz´alez- Ib´a˜nez, Muresan, and Wacholder 2011; Ghosh, Guo, and Muresan 2015).  Since our non-sarcastic tweets are emotionally-charged, our classifier may have exhibited lower performance than it would have with only neutral non- sarcastic tweets. Since distinguishing between literal and sarcastic sentiment is useful for real-world applications of sarcasm detection, we consider the presence of sentiment in our dataset to be a worthwhile challenge.Regarding the general features developed for this work, the polarity- and subjectivity-based features performed well, while performance using only PMI features was lower.  PMI scores in particular may have been negatively impacted by common Twitter characteristics, such as the trend to join keywords together in hashtags, and the use of acronyms that are unconventional in other domains. These issues could be addressed to some extent in the future via word segmenta- tion tools, spell-checkers, and acronym expansion.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_2Feh79zGXPbzFz03N3wCoq4n)
+ Call ID: call_2Feh79zGXPbzFz03N3wCoq4n
+  Args:
+    pattern: prior best
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Results
+The results, including each of the training scenarios noted earlier, are presented in Table 5. Precision, recall, and F 1 on the positive (sarcastic) class were recorded. The high- est F 1 achieved (0.780) among all cases was from training on the EasyAdapted Twitter and Amazon data. In compar- ison, training only on the Amazon reviews produced an F 1 of 0. 713 (training and testing only on Amazon reviews with our features but with the same classifier and cross-validation settings as Buschmeier, Cimiano, and Klinger (2014) led
+6 Part-of-speech is considered in MPQA; Amazon and Twitter data was tagged using Stanford CoreNLP (Manning et al. 2014) and the Twitter POS-tagger (Owoputi et al. 2013), respectively.7 scikit-learn.org
+ Test on Amazon Reviews Test on Twitter Train on Twitter Train on Both Train on Amazon EasyAdapt Train on Twitter P R F 1 P R F 1 P R F 1 P R F 1 P R F 1 Baseline: All Sarcasm .35 1.0 .515 .35 1.0 .515 .35 1.0 .515 .35 1.0 .515 .39 1.0 .562 Baseline: Random . 35 .35 .347 .35 .35 .347 .35 .35 .347 .35 .35 .347 .39 .39 .391 Twitter Features .32 .36 .337 .00 .00 .000 .00 .00 .000 .00 .00 .000 .57 .24 .341 Amazon Features .48 .26 .341 .76 .68 .715 .76 .67 .712 .76 .68 .715 .47 .14 .216 Gen.: Most Polar Word . 26 .30 .275 .43 .15 .222 .68 .20 .304 .52 .33 .406 .65 .38 .479 Gen.: Most Polar Score .26 .48 .335 .00 .00 .000 .59 .46 .516 .59 .46 .516 .56 .40 .466 General: Other Polarity .26 .36 .302 .35 .40 .374 .61 .69 .645 .55 .67 .601 .51 .58 . 542 General: Subjectivity .25 .02 .042 .25 .02 .042 .60 .36 .446 .59 .36 .443 .48 .15 .229 General: Syntactic .51 .26 .348 .69 .36 .470 .71 .43 .532 .65 .51 .568 .46 .17 .250 General: PMI Features .00 .00 .000 .25 .03 .061 .34 .14 .197 .42 .21 .277 . 60 .02 .030 General: BOAW .00 .00 .000 .00 .00 .000 .63 .20 .298 .60 .23 .331 .00 .00 .000 General: BOCW .47 .59 .523 .58 .16 .252 .59 .60 .594 .63 .46 .530 .59 .39 .467 All General Features .26 .32 .290 .42 .29 .340 .63 .69 .659 .69 .67 . 678 .55 .62 .582 All Features .25 .31 .276 .66 .54 .595 .66 .77 .713 .75 .82 .780 .55 .62 .583 Prior Best Results (Buschmeier, Cimiano, and Klinger 2014) .82 .69 .744 Our Results, Same Classifier as Prior Best .80 .71 .752
+Table 5: Test Results — Full Analysis
+to an F 1 of 0. 752, outperforming prior best results on that dataset). Training on both without EasyAdapt led to an F 1 of 0.595 (or 0.715 when training only on Amazon-specific features), and finally, training only on Twitter data led to an F 1 of 0.276. Training and testing on Twitter produced an F 1 of 0.583 when training on all features. 8
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_Npyc0O4eugxlYuU0ScViRWzh)
+ Call ID: call_Npyc0O4eugxlYuU0ScViRWzh
+  Args:
+    pattern: Buschmeier
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Sarcasm Detection on Amazon Reviews
+Research on automatic sarcasm detection in other domains has been limited, but recently a publicly-available corpus of sarcastic and non-sarcastic Amazon product reviews was re- leased by Filatova (2012) to facilitate research. Buschmeier, Cimiano, and Klinger (2014) test many feature combina- tions on this dataset, including those based on metadata (e.g. , Amazon star rating), sentiment, grammar, the presence of interjections (e.g., “wow”) or laughter (e.g., through ono- matopoeia or acronyms such as “lol”), the presence of emoti- cons, and bag-of-words features. Their highest F 1 (0. 744) is achieved using all of these with a logistic regression clas- sifier; however, using only the star rating, they still achieve an F 1 of 0.717.  This highlights the need for high-performing, general features for sarcasm detection; metadata features are highly domain-specific, and even bag-of-words trends may be unique to certain domains (“trump” was one of the most common unigrams in our own Twitter training set, but only occurred once across all Amazon product reviews). Prior to the release of Filatova’s dataset, Davidov, Tsur, and Rappoport (2010) developed a semi-supervised ap- proach to classify tweets or Amazon reviews as sarcastic or non-sarcastic by clustering samples based on grammatical features and the full or partial presence of automatically- extracted text patterns. They evaluated their work on a sam-
+Sarcastic (Train/Test) Non-Sar.  (Train/Test) Twitter 1959 (1568/391) 3039 (2430/609) Amazon 437 (350/87) 817 (653/164) Table 1: Twitter and Amazon Dataset Distributions
+ple of the classified instances annotated by anonymous users on Amazon Mechanical Turk.  They tested several different seed sets with their approach, one of which contained a mix- ture of positive Amazon reviews, positive #sarcasm-tagged tweets, and a manually-selected sample of negative tweets. Although they did not report test results on Amazon reviews using this seed set, they did report test results on #sarcasm- tagged tweets, achieving an F-measure of 0.545.  Their work is the closest to ours, because it attempts to harness training samples from both the Twitter and Amazon review domains.
+
+================================== Ai Message ==================================
+
+The prior best results model was the logistic regression classifier used by Buschmeier, Cimiano, and Klinger (2014) with all features.

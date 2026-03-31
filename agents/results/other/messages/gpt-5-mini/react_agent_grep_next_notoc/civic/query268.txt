@@ -1,0 +1,99 @@
+================================ Human Message =================================
+
+QUERY:
+What is the type of the project 'Guardrail Replacement Citywide (FEMA Project)'?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_j4Ukv9cFkZZygqTQ2ENZvKWl)
+ Call ID: call_j4Ukv9cFkZZygqTQ2ENZvKWl
+  Args:
+    pattern: Guardrail Replacement Citywide
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_Uo2CTRtQ7pvrc88wSJjomVho)
+ Call ID: call_Uo2CTRtQ7pvrc88wSJjomVho
+  Args:
+    pattern: Guardrail|FEMA
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Latigo  Canyon  Road  Roadway/Retaining  Wall Improvements  (FEMA  Project)
+¾
+Updates:
+ Staff is finalizing the design of this project.  Staff  is  also  working  with  FEMA/CalOES  to  substitute  the  existing timber with non-combustible  materials.¾ Project Schedule  Complete  Design: Fall 2021
+ Begin Construction:  Winter 2021
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_riQ606mRbnoP5l9SoE55n6gt)
+ Call ID: call_riQ606mRbnoP5l9SoE55n6gt
+  Args:
+    pattern: Guardrail Replacement
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_T3cx1dJVknRv5Jxo4TaFf65G)
+ Call ID: call_T3cx1dJVknRv5Jxo4TaFf65G
+  Args:
+    pattern: FEMA Project
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Corral Canyon  Road  Bridge  Repairs  (FEMA Project)
+¾ Project Description:  This project consisted of replacing fire damaged  existing fencing and repairing  the damaged  embankment  adjacent  to the bridge.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_JsilyEFjWbvHPWMQ1B8EDsuz)
+ Call ID: call_JsilyEFjWbvHPWMQ1B8EDsuz
+  Args:
+    pattern: Citywide
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Guardrail  Replacement  Citywide (FEMA  Project)
+¾ Project  Description:    This  project  consisted  of  replacing  the  damaged guardrail throughout  the City as a result of the Woolsey Fire.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_ut4GCpIDF9xYV1tuJYp5rxGj)
+ Call ID: call_ut4GCpIDF9xYV1tuJYp5rxGj
+  Args:
+    pattern: Guardrail  Replacement  Citywide \(FEMA  Project\)
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Guardrail  Replacement  Citywide (FEMA  Project)
+¾ Project  Description:    This  project  consisted  of  replacing  the  damaged guardrail throughout  the City as a result of the Woolsey Fire.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_JZsTUGkjKd8QD3C6lkCTj9X8)
+ Call ID: call_JZsTUGkjKd8QD3C6lkCTj9X8
+  Args:
+    pattern: Project Status:|Status:|Type:
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+
+disaster

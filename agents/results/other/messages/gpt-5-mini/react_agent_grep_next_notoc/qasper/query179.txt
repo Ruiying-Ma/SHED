@@ -1,0 +1,146 @@
+================================ Human Message =================================
+
+QUERY:
+What is the performance improvement of their method over state-of-the-art models on the used datasets?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_OgNI3DimF30MAlnaq4pusffD)
+ Call ID: call_OgNI3DimF30MAlnaq4pusffD
+  Args:
+    pattern: state-of-the-art
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_kR90rB2ZY4bzpUFTO20w6pv4)
+ Call ID: call_kR90rB2ZY4bzpUFTO20w6pv4
+  Args:
+    pattern: performance improvement
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_r02hdUSKVq4GQ3ABbtiLrKU8)
+ Call ID: call_r02hdUSKVq4GQ3ABbtiLrKU8
+  Args:
+    pattern: improv
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Natural language inference (NLI) aims at pre- dicting the relationship between a given pair of premise and hypothesis. However, several works have found that there widely exists a bias pattern called annotation artifacts in NLI datasets, making it possible to identify the la- bel only by looking at the hypothesis. This irregularity makes the evaluation results over- estimated and affects models’ generalization ability. In this paper, we consider a more trust- worthy setting, i.e.  , cross-dataset evaluation. We explore the impacts of annotation artifacts in cross-dataset testing. Furthermore, we pro- pose a training framework to mitigate the im- pacts of the bias pattern. Experimental results demonstrate that our methods can alleviate the negative effect of the artifacts and improve the generalization ability of models.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_83VDNmE5PoS8NRGFa25Y0FM6)
+ Call ID: call_83VDNmE5PoS8NRGFa25Y0FM6
+  Args:
+    pattern: datasets
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Natural language inference (NLI) aims at pre- dicting the relationship between a given pair of premise and hypothesis. However, several works have found that there widely exists a bias pattern called annotation artifacts in NLI datasets, making it possible to identify the la- bel only by looking at the hypothesis. This irregularity makes the evaluation results over- estimated and affects models’ generalization ability. In this paper, we consider a more trust- worthy setting, i.e.  , cross-dataset evaluation. We explore the impacts of annotation artifacts in cross-dataset testing. Furthermore, we pro- pose a training framework to mitigate the im- pacts of the bias pattern. Experimental results demonstrate that our methods can alleviate the negative effect of the artifacts and improve the generalization ability of models.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_px4Oil8RXhMDTiYMORN4GmBs)
+ Call ID: call_px4Oil8RXhMDTiYMORN4GmBs
+  Args:
+    pattern: cross-dataset
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Natural language inference (NLI) aims at pre- dicting the relationship between a given pair of premise and hypothesis. However, several works have found that there widely exists a bias pattern called annotation artifacts in NLI datasets, making it possible to identify the la- bel only by looking at the hypothesis. This irregularity makes the evaluation results over- estimated and affects models’ generalization ability. In this paper, we consider a more trust- worthy setting, i.e.  , cross-dataset evaluation. We explore the impacts of annotation artifacts in cross-dataset testing. Furthermore, we pro- pose a training framework to mitigate the im- pacts of the bias pattern. Experimental results demonstrate that our methods can alleviate the negative effect of the artifacts and improve the generalization ability of models.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_qUWZ5wfMaoVtOZa5UMo2BMTN)
+ Call ID: call_qUWZ5wfMaoVtOZa5UMo2BMTN
+  Args:
+    pattern: Experimental results
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Natural language inference (NLI) aims at pre- dicting the relationship between a given pair of premise and hypothesis. However, several works have found that there widely exists a bias pattern called annotation artifacts in NLI datasets, making it possible to identify the la- bel only by looking at the hypothesis. This irregularity makes the evaluation results over- estimated and affects models’ generalization ability. In this paper, we consider a more trust- worthy setting, i.e.  , cross-dataset evaluation. We explore the impacts of annotation artifacts in cross-dataset testing. Furthermore, we pro- pose a training framework to mitigate the im- pacts of the bias pattern. Experimental results demonstrate that our methods can alleviate the negative effect of the artifacts and improve the generalization ability of models.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_wtuHGOr8XlRc3nO3Nq5Eujft)
+ Call ID: call_wtuHGOr8XlRc3nO3Nq5Eujft
+  Args:
+    pattern: Our methods
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_wbY4FBVcY3jPbWCeEq32B8Tv)
+ Call ID: call_wbY4FBVcY3jPbWCeEq32B8Tv
+  Args:
+    pattern: method
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Natural language inference (NLI) aims at pre- dicting the relationship between a given pair of premise and hypothesis. However, several works have found that there widely exists a bias pattern called annotation artifacts in NLI datasets, making it possible to identify the la- bel only by looking at the hypothesis. This irregularity makes the evaluation results over- estimated and affects models’ generalization ability. In this paper, we consider a more trust- worthy setting, i.e.  , cross-dataset evaluation. We explore the impacts of annotation artifacts in cross-dataset testing. Furthermore, we pro- pose a training framework to mitigate the im- pacts of the bias pattern. Experimental results demonstrate that our methods can alleviate the negative effect of the artifacts and improve the generalization ability of models.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_e4Nr7KXzz25NoeMdCGR4PpYP)
+ Call ID: call_e4Nr7KXzz25NoeMdCGR4PpYP
+  Args:
+    pattern: state of the art
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_sxFIKcZ4LkEGFQkZDpQfiKR1)
+ Call ID: call_sxFIKcZ4LkEGFQkZDpQfiKR1
+  Args:
+    pattern: SOTA
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_ys7fUIkRZSFgIqYEE2JPX1co)
+ Call ID: call_ys7fUIkRZSFgIqYEE2JPX1co
+  Args:
+    pattern: improve the generalization ability
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Natural language inference (NLI) aims at pre- dicting the relationship between a given pair of premise and hypothesis. However, several works have found that there widely exists a bias pattern called annotation artifacts in NLI datasets, making it possible to identify the la- bel only by looking at the hypothesis. This irregularity makes the evaluation results over- estimated and affects models’ generalization ability. In this paper, we consider a more trust- worthy setting, i.e.  , cross-dataset evaluation. We explore the impacts of annotation artifacts in cross-dataset testing. Furthermore, we pro- pose a training framework to mitigate the im- pacts of the bias pattern. Experimental results demonstrate that our methods can alleviate the negative effect of the artifacts and improve the generalization ability of models.
+
+================================== Ai Message ==================================
+
+Unanswerable

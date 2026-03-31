@@ -1,0 +1,151 @@
+================================ Human Message =================================
+
+QUERY:
+Identify and list the names of all projects that are in the specified status 'not started' and simultaneously of the type 'disaster'.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_xIq2VddumEJggUmJyeN0WcqN)
+ Call ID: call_xIq2VddumEJggUmJyeN0WcqN
+  Args:
+    pattern: status\s*[:=]\s*['"]not started['"]
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_vWhFYX1yFmK06sYaNp3o2UnU)
+ Call ID: call_vWhFYX1yFmK06sYaNp3o2UnU
+  Args:
+    pattern: not started
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_8W6UONzqhebqy8Z6eXYHdSkp)
+ Call ID: call_8W6UONzqhebqy8Z6eXYHdSkp
+  Args:
+    pattern: disaster
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_ZisANpE13yyR3QDUHtWbcsK6)
+ Call ID: call_ZisANpE13yyR3QDUHtWbcsK6
+  Args:
+    pattern: status
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Public Works Commission Agenda Report
+To: Chair Simmens and Members of the Public Works Commission Prepared by: Troy Spayd, Assistant Public Works Director/City Engineer Approved by: Rob DuBoux, Public Works Director/City Engineer Date prepared:   March 17, 2022 Meeting date: March 23, 2022 Subject: Capital Improvement Projects and Disaster Recovery Projects Status Report
+ RECOMMENDED ACTION: Receive and file report on the status of the City’s current and upcoming Capital Improvements Projects and Disaster Recovery Projects. DISCUSSION:  Staff will provide a status update on the following active projects in the Fiscal Year 2021-2022 Capital Improvement Program:
+Capital Improvement Projects (Design)
+Marie Canyon Green Streets
+¾ Updates:
+ A  hydrology  report  was  prepared  and  will  be  used  to  size  the  pre- manufactured  biofilters.  City  staff  reviewed  multiple  biofilter manufacturers for filters that will work in the proposed project area. The final  design  is  complete  and  the  project  will  be  advertised  for construction bids. ¾ Project Schedule:
+ Complete Design: March 2022
+  Begin Construction: Summer 2022
+PCH Median Improvements Project ¾ Updates:  The project was approved by the Planning Commission on September 8, 2021. This project requires Caltrans approval since the work will be on  Pacific  Coast  Highway.  The  project  reports  and  plans  are  being routed through Caltrans for final approval.  The project will have final approval by the end of the March.  The project will be advertised for
+Page 1 of 8
+Agenda Item # 4.A.construction  bids  after  approval.    An  agreement  for  construction management services was approved by Council on March 14, 2022. ¾ Project Schedule:  Complete Design: March 2022
+ Advertise: Spring/Summer 2022  Begin Construction: Summer 2022
+PCH Signal Synchronization System Improvements Project
+¾ Updates:  This project will be presented to the Planning Commission in May 2022. This project requires Caltrans approval since the work will be on PCH. The  project  reports  and  plans  are  being  routed  through  Caltrans  for final approval.  It is anticipated that the project will have final approval by  March  2022.    The  project  will  be  advertised  for  construction  bids shortly after final approval.   If possible, the construction of this project will begin in conjunction with the PCH Median Improvement ¾ Project Schedule:  Complete Final Design: Spring 2022  Advertise: Summer 2022  Award Contract and Begin Construction: Summer 2022
+Westward Beach Road Improvements Project
+¾
+Updates:  The  design  plans  were  approved  by  Planning  Commission  on September 20, 2021. At the December 13, 2021, City Council meeting, Council directed staff to withdraw the proposed project and associated Coastal Development Permit and directed the Public Works and Public Safety  Commissions  to  review  the  project  to  develop  project alternatives.     A  joint  Public  Works  and  Public  Safety  Commission meeting  was  held  on  January  20,  2022  and  February  23,  2022  and project alternatives were presented to the commissions.  City staff will present the recommended design alternatives to Council on March 28, 2022.  The  direction  received  from  the  four  motions  passed  included rehabilitation of the roadway to max 8' from R/W, add share road with bicycles  pavement  markings,  delineated  parallel  parking  spaces  and speed  humps.  There  is  room  to  add  a  pathway  within  the  R/W  per Council's direction. ¾ Project Schedule:  Complete Design: Summer 2022  Begin Construction: Fall/Winter 2022
+Page 2 of 8
+Agenda Item # 4.A.
+Civic Center Water Treatment Facility Phase 2
+¾ Updates:  Individual letters were mailed to all properties within Phase 2 with their preliminary  estimated  assessments  in  July  2021.    Staff  has  been communicating  with  the  property  owners  regarding  their  proposed assessments. The MOU has been amended modifying the deadline to the formation of the assessment district to June 30, 2022. A new request for further modification of the schedule has been requested.  Staff mailed easement documents to property owners for review and execution in July and has followed up with an additional letter to those property owners.¾
+Project Schedule:
+ Complete Design: December 2021
+ Advertise for Bidding: December 2022  Begin Construction: Spring 2023
+Bluffs Park Shade Structure
+¾ Project Description:  This project consists of the installation of four single-post shade structures at Malibu Bluffs Park.¾ Updates:
+ Staff  received  bids  on  February  24,  2022.    Award  of  contract  is scheduled for the April 11, 2022 Council meeting.¾
+Estimated Schedule:  Complete Design: February 2022  Begin Construction: Spring 2022
+Permanent Skate Park
+¾ Project  Description:    This  project  includes  designing  and  constructing  a permanent skate park located on the Crummer/Case Court parcel adjacent to Malibu Bluffs Park.  The project would include parking and additional site amenities such as trash cans, benches, tables, and restrooms.¾ Updates:
+ In May 2021, the Council approved funding for additional engineering work related to the project.  Staff has worked with the consultant over the past several months to complete the engineering work, and the final draft plans are expected to be completed in early 2022. The Planning Commission  will  then  review  the  project  in  Spring  2022  before  final review by the Council.¾ Estimated Schedule:
+ Complete Design: Spring 2022  Begin Construction:  To be determined
+Page 3 of 8
+Agenda Item # 4. A.
+PCH at Trancas Canyon Road Right Turn Lane ¾ Project Description:  This project consists of installing a new westbound right turn lane at the intersection of PCH and Trancas Canyon Road. ¾ Updates:
+ Staff  reviewed  proposals  for  engineering  design  services  and  has selected a qualified consultant.  It is anticipated that the agreement will go to Council in April 2022 after the Funding Agreement is issued by Metro.¾ Estimated Schedule:  Begin Design: Late Spring 2022
+Capital Improvement Projects (Construction)
+The City does not have projects in construction at this time.
+Capital Improvement Projects (Not Started)
+Vehicle Protection Devices
+¾ Project Description:  Per Malibu Municipal Code Section 17.48.070 requires vehicle impact protection devices to be installed for all parking spaces located adjacent  to  any  outdoor  pedestrian  seating  area.    There  are  two  locations within the City’s right-of-way  and City-owned property that would require a vehicle impact protection device.
+Legacy Park Paver Repair Project
+¾ Project Description:  This project will consist of removing and repairing a large section  of  pavers  in  Legacy  Park.  The  pavers  have  become  uneven  and damaged in several areas
+Malibu Bluffs Park South Walkway
+¾ Project Description:  This project will include replacing the existing sidewalk located on the south side of Malibu Bluffs Park.
+Trancas Playground Resurfacing
+¾ Project Description:  The project will include removing and replacing the upper layer of the playground surfacing at Trancas Canyon Park.
+PCH Median Improvements at Paradise Cove and Zuma Beach
+¾ Project Description:  This project was identified in the 2015 PCH Safety Study and includes installing new raised medians and improvements.  New raised medians are proposed east and west of PCH and Paradise Cove Road.  The proposed improvements also include the relocation of the existing bus stop and new signage.   The project will also include the installation of new raised medians on PCH in the areas where the double yellow lines exist in the vicinity of Zuma Beach, specifically where the yellow paddles are installed.Page 4 of 8
+Agenda Item # 4.A.
+Capital Improvement Projects (Completed)
+Civic Center Way Improvements ¾ Updates:  The  contractor  completed  the  project  and  Council  accepted  this project as complete at the September 13th City Council Meeting.
+Civic Center Stormwater Diversion Structure
+¾ Updates:  The  contractor has completed the storm drain improvements on Civic Center Way.  The improvements modified the existing concrete channel underneath Civic Center Way by adding a 3’ concrete curb adjacent to the existing flap gates.  The new curb prevents brackish water intrusion into the City’s Civic Center Stormwater Treatment Facility. This project was accepted by the Council at the January 24, 2022 meeting.
+2021 Annual Street Maintenance
+¾ Updates: This project included resurfacing Malibu Road, Broad Beach Road, Latigo  Canyon  Road,  Corral  Canyon  Road,  Webb  Way,  Rambla  Pacifico Street  and  Vista  Pacifica  with  a  slurry  seal  treatment  and  adding  speed humps to Birdview Avenue.  This project was identified in the City’s Pavement Management Plan.  This project was accepted by the Council at the January 24, 2022 meeting.
+Disaster Projects (Design)
+Broad Beach Road Water Quality Infrastructure Repairs (CalJPIA Project)
+¾
+Updates:  The project consultant prepared the specifications for the project. Staff is finalizing the bid documents.¾ Project Schedule:  Complete Design: March 2022
+ Advertise: Spring 2022  Begin Construction: Summer 2022
+Latigo Canyon Road Roadway/Retaining Wall Improvements (FEMA Project)
+¾ Updates:  Staff is finalizing the design of this project.  Staff  is  also  working  with  FEMA/CalOES  to  substitute  the  existing timber with non-combustible materials. ¾
+Project Schedule  Complete Design: April 2022  Advertise: Spring 2022  Begin Construction: Spring 2022
+Page 5 of 8
+Agenda Item # 4.A.
+Trancas Canyon Park Planting and Irrigation Repairs (CalJPIA/FEMA Project)
+¾ Updates:
+ The project consultant has started the design of this project.¾
+Project Schedule:  Complete Design: Spring 2022
+ Begin Construction: Summer 2022
+Tr...(truncated)
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_L2sWNNmmQ2RQeW7SKs63bnKQ)
+ Call ID: call_L2sWNNmmQ2RQeW7SKs63bnKQ
+  Args:
+    pattern: Not Started
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Capital Improvement Projects (Not Started)
+Vehicle Protection Devices
+¾ Project Description:  Per Malibu Municipal Code Section 17.48.070 requires vehicle impact protection devices to be installed for all parking spaces located adjacent  to  any  outdoor  pedestrian  seating  area.    There  are  two  locations within the City’s right-of-way  and City-owned property that would require a vehicle impact protection device.
+Legacy Park Paver Repair Project
+¾ Project Description:  This project will consist of removing and repairing a large section  of  pavers  in  Legacy  Park.  The  pavers  have  become  uneven  and damaged in several areas
+Malibu Bluffs Park South Walkway
+¾ Project Description:  This project will include replacing the existing sidewalk located on the south side of Malibu Bluffs Park.
+Trancas Playground Resurfacing
+¾ Project Description:  The project will include removing and replacing the upper layer of the playground surfacing at Trancas Canyon Park.
+PCH Median Improvements at Paradise Cove and Zuma Beach
+¾ Project Description:  This project was identified in the 2015 PCH Safety Study and includes installing new raised medians and improvements.  New raised medians are proposed east and west of PCH and Paradise Cove Road.  The proposed improvements also include the relocation of the existing bus stop and new signage.   The project will also include the installation of new raised medians on PCH in the areas where the double yellow lines exist in the vicinity of Zuma Beach, specifically where the yellow paddles are installed.Page 4 of 8
+Agenda Item # 4.A.
+
+================================== Ai Message ==================================
+
+none

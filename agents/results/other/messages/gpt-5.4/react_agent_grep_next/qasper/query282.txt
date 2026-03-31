@@ -1,0 +1,78 @@
+================================ Human Message =================================
+
+QUERY:
+What position did this entry finish in, in the overall shared task?
+
+TABLE OF CONTENTS (TOC):
+1 | The CUED’s Grammatical Error Correction Systems for BEA-2019
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2 Low-resource Track Submission 2.1 FST-based Grammatical Error Correction
+1.3.1 | 2.2 Experimental Setup
+1.3.2 | 2.3 Results
+1.3.3 | 2.4 Differences Between CoNLL-2014 and BEA-2019 Dev
+1.4 | 3 Restricted Track Submission
+1.4.1 | 3.1 Experimental Setup
+1.5 | 4 Conclusion
+1.6 | Acknowledgments
+1.7 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_Pl9Nic3AQJf8A2Z2nyIXP2lR)
+ Call ID: call_Pl9Nic3AQJf8A2Z2nyIXP2lR
+  Args:
+    pattern: (?i)shared task|finish|position|rank|placed|overall
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1 | Abstract
+We describe two entries from the Cambridge University Engineering Department to the BEA 2019 Shared Task on grammatical er- ror correction. Our submission to the low- resource track is based on prior work on us- ing finite state transducers together with strong neural language models.  Our system for the restricted track is a purely neural system con- sisting of neural language models and neural machine translation models trained with back- translation and a combination of checkpoint averaging and fine-tuning – without the help of any additional tools like spell checkers. The latter system has been used inside a separate system combination entry in cooperation with the Cambridge University Computer Lab.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_MyjSCkN4xHormnrPmeSMMCl1)
+ Call ID: call_MyjSCkN4xHormnrPmeSMMCl1
+  Args:
+    pattern: (?i)second|third|first|fourth|fifth|rank|ranking|place|placed|position
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.3.3 | 2.4 Differences Between CoNLL-2014 and BEA-2019 Dev
+Our results in Tab. 2 differ significantly between the CoNLL-2014 test set and the BEA-2019 dev set. Allowing insertions is beneficial on BEA- 2019 Dev but decreases the M2 score on CoNLL- 2014. Increasing the beam size improves our sys- tem by 3.28 points on CoNLL-2014 while the im-
+3 http://www.statmt.org/wmt19/ translation-task. html
+Per Sentence Per Word CoNLL BEA CoNLL BEA Missing 0.35 0.46 1.51% 2.30% Replacement 1.52 1.31 6.62% 6.57% Unnecessary 0.42 0.19 1.83% 0.98% Total 2.29 1.96 9.95% 9.86%
+ Table 3: Number of correction types in CoNLL-2014 and BEA-2019 Dev references.pact on BEA-2019 Dev is smaller (+0.85 points). These differences can be partially explained by comparing the error type frequencies in the refer- ence annotations in both test sets (Tab. 3 ). Samples in CoNLL-2014 generally need more corrections per sentence than in BEA-2019 Dev.  More im- portantly, the CoNLL-2014 test set contains fewer missing words, but much more unnecessary words than BEA-2019 Dev. This mismatch tempers with tuning as we explicitly tune insertion and deletion penalties.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_gXcaDb0LupSaYx0LeEdNgdgJ)
+ Call ID: call_gXcaDb0LupSaYx0LeEdNgdgJ
+  Args:
+    section_id: 1.5
+
+================================= Tool Message =================================
+Name: read_section
+
+4 Conclusion
+We participated in the BEA 2019 Shared Task on grammatical error correction with submissions to the low-resource and the restricted track. Our low- resource system is an extension of prior work on FST-based GEC ( Stahlberg et al. , 2019 ) to allow insertions and deletions. Our restricted track sub- mission is a purely neural system based on stan- dard NMT and LM architectures.  We pointed out the similarity between GEC and machine trans- lation, and demonstrated that several techniques which originate from MT research such as over- sampling, back-translation, and fine-tuning, are also useful for GEC. Our models have been used in a joint submission with the Cambridge Univer- sity Computer Lab ( Yuan et al. , 2019 ). NMT Fine-tuning LM CoNLL-2014 BEA-2019 Dev P R M2 P R ERRANT Best published: Zhao et al. ( 2019 ) 71.57 38.65 61.15 n/a 1x 64.04 35.74 55.28 45.86 26.46 40.00 1x X 66.57 35.21 56.50 51. 57 27.49 43.88 1x X 2x 61.53 40.44 55.72 48.30 33.08 44.23 4x X 70.37 35.12 58.60 55.84 27.80 46.47 4x X 2x 66.89 39.85 58.90 53.17 32.89 47.34
+ Table 10: Final results on the restricted track with B IG models and back-translation.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_SVO5EWvaVmPjVioYG9WvR9jT)
+ Call ID: call_SVO5EWvaVmPjVioYG9WvR9jT
+  Args:
+    pattern: (?i)official|leaderboard|track|ranked|ranking|finished|overall shared task|shared task results
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1 | Abstract
+We describe two entries from the Cambridge University Engineering Department to the BEA 2019 Shared Task on grammatical er- ror correction. Our submission to the low- resource track is based on prior work on us- ing finite state transducers together with strong neural language models.  Our system for the restricted track is a purely neural system con- sisting of neural language models and neural machine translation models trained with back- translation and a combination of checkpoint averaging and fine-tuning – without the help of any additional tools like spell checkers. The latter system has been used inside a separate system combination entry in cooperation with the Cambridge University Computer Lab.
+
+================================== Ai Message ==================================
+
+Unanswerable

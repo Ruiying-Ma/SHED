@@ -1,0 +1,98 @@
+================================ Human Message =================================
+
+QUERY:
+What corpus did they use?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_in5mKR8BVZNwslXK8Z2Peg2q)
+ Call ID: call_in5mKR8BVZNwslXK8Z2Peg2q
+  Args:
+    pattern: corpus
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Graphical emoji are ubiquitous in modern-day online conversations. So is a single thumbs-up emoji able to signify an agreement, without any words. We argue that the current state-of-the-art systems are ill-equipped to correctly interpret these emoji, especially in a conversational context. However, in a casual context, the benefits might be high: a better understanding of users’ utterances and more natural, emoji-rich responses. With this in mind, we modify BERT to fully support emoji, both from the Unicode Standard and custom emoji. This modified BERT is then trained on a corpus of question-answer (QA) tuples with a high number of emoji, where we’re able to increase the 1-of-100 accuracy from 12.7% for the current state-of-the-art to 17.8% for our model with emoji support.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_NVDtLKhykmfCkwb9f2aWkdCh)
+ Call ID: call_NVDtLKhykmfCkwb9f2aWkdCh
+  Args:
+    pattern: question-answer|QA tuples|dataset|corpus of|corpus
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Graphical emoji are ubiquitous in modern-day online conversations. So is a single thumbs-up emoji able to signify an agreement, without any words. We argue that the current state-of-the-art systems are ill-equipped to correctly interpret these emoji, especially in a conversational context. However, in a casual context, the benefits might be high: a better understanding of users’ utterances and more natural, emoji-rich responses. With this in mind, we modify BERT to fully support emoji, both from the Unicode Standard and custom emoji. This modified BERT is then trained on a corpus of question-answer (QA) tuples with a high number of emoji, where we’re able to increase the 1-of-100 accuracy from 12.7% for the current state-of-the-art to 17.8% for our model with emoji support.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_vW9uzOpnSTM51tEqVzFmRL1P)
+ Call ID: call_vW9uzOpnSTM51tEqVzFmRL1P
+  Args:
+    pattern: corpus of question-answer|QA tuples|question-answer (QA)
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Graphical emoji are ubiquitous in modern-day online conversations. So is a single thumbs-up emoji able to signify an agreement, without any words. We argue that the current state-of-the-art systems are ill-equipped to correctly interpret these emoji, especially in a conversational context. However, in a casual context, the benefits might be high: a better understanding of users’ utterances and more natural, emoji-rich responses. With this in mind, we modify BERT to fully support emoji, both from the Unicode Standard and custom emoji. This modified BERT is then trained on a corpus of question-answer (QA) tuples with a high number of emoji, where we’re able to increase the 1-of-100 accuracy from 12.7% for the current state-of-the-art to 17.8% for our model with emoji support.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_sB23e8THRByfTZxsTnf099yh)
+ Call ID: call_sB23e8THRByfTZxsTnf099yh
+  Args:
+    pattern: Corpus|corpus|dataset|Datasets|data set
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Graphical emoji are ubiquitous in modern-day online conversations. So is a single thumbs-up emoji able to signify an agreement, without any words. We argue that the current state-of-the-art systems are ill-equipped to correctly interpret these emoji, especially in a conversational context. However, in a casual context, the benefits might be high: a better understanding of users’ utterances and more natural, emoji-rich responses. With this in mind, we modify BERT to fully support emoji, both from the Unicode Standard and custom emoji. This modified BERT is then trained on a corpus of question-answer (QA) tuples with a high number of emoji, where we’re able to increase the 1-of-100 accuracy from 12.7% for the current state-of-the-art to 17.8% for our model with emoji support.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_34AYnJC1bvrtU5A482IxOOU9)
+ Call ID: call_34AYnJC1bvrtU5A482IxOOU9
+  Args:
+    pattern: question-answer
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Graphical emoji are ubiquitous in modern-day online conversations. So is a single thumbs-up emoji able to signify an agreement, without any words. We argue that the current state-of-the-art systems are ill-equipped to correctly interpret these emoji, especially in a conversational context. However, in a casual context, the benefits might be high: a better understanding of users’ utterances and more natural, emoji-rich responses. With this in mind, we modify BERT to fully support emoji, both from the Unicode Standard and custom emoji. This modified BERT is then trained on a corpus of question-answer (QA) tuples with a high number of emoji, where we’re able to increase the 1-of-100 accuracy from 12.7% for the current state-of-the-art to 17.8% for our model with emoji support.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_kPevgEevL0PH3CoSzKzXBPhI)
+ Call ID: call_kPevgEevL0PH3CoSzKzXBPhI
+  Args:
+    pattern: QA tuples|question-answer tuples|question answer tuples|question-answer (QA) tuples|Q-A tuples
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_X7U37brGowI9TCajDgYP06Kn)
+ Call ID: call_X7U37brGowI9TCajDgYP06Kn
+  Args:
+    pattern: we used|we use|we trained|we train|trained on|trained
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Graphical emoji are ubiquitous in modern-day online conversations. So is a single thumbs-up emoji able to signify an agreement, without any words. We argue that the current state-of-the-art systems are ill-equipped to correctly interpret these emoji, especially in a conversational context. However, in a casual context, the benefits might be high: a better understanding of users’ utterances and more natural, emoji-rich responses. With this in mind, we modify BERT to fully support emoji, both from the Unicode Standard and custom emoji. This modified BERT is then trained on a corpus of question-answer (QA) tuples with a high number of emoji, where we’re able to increase the 1-of-100 accuracy from 12.7% for the current state-of-the-art to 17.8% for our model with emoji support.
+
+================================== Ai Message ==================================
+
+A corpus of question-answer (QA) tuples with a high number of emoji.

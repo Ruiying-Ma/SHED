@@ -1,0 +1,71 @@
+================================ Human Message =================================
+
+HYPOTHESIS:
+Limited use: Receiving Party shall not use any Confidential Information for any purpose other than the purposes stated in Agreement.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_bMNUOaQxRcgxVGNQN7ssjEpg)
+ Call ID: call_bMNUOaQxRcgxVGNQN7ssjEpg
+  Args:
+    pattern: use any Confidential|use.*Confidential Information|purpose|purposes stated in Agreement|use for any purpose|only for the purposes|receiving party shall not use|use for any purpose other than
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+2.1 No Use:Recipient agrees not to use the Confidential Information in any way or under any circumstances share the same, in writing or through any other means, with any Third Party.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_xsyBivgWvXOvm3aYduTEAdHh)
+ Call ID: call_xsyBivgWvXOvm3aYduTEAdHh
+  Args:
+    pattern: Purpose|purposes|Permitted|Permitted Use|use for the purposes|for the purpose
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+4. Term  and  Termination.The  term  of  this  Agreement  shall  commence  on  the
+Effective Date i.e. the date of signing the Agreement for the Purpose and continue for such a period until and unless the Discloser terminates the Agreement or the Premises is relocated or vacated or abandoned, whichever is earlier.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_8ihgDpYcmMXiUJvRK7cVzbMb)
+ Call ID: call_8ihgDpYcmMXiUJvRK7cVzbMb
+  Args:
+    pattern: 2.1|No Use|Recipient agrees not to use|Confidential Information in any way
+    }]}This request looks malformed; please provide valid JSON.}]}I'll retry. अभिनेत्री to=functions.grep_search_next اهشически<meta code  Ok I'm going to re-call correctly. Sorry. Let's call for :  but must be valid JSON. I'll call pattern
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Tool 'grep_search_next' failed after 1 attempt with TypeError: grep_search_next() got an unexpected keyword argument '}]}This request looks malformed; please provide valid JSON.}]}I'll retry. अभिनेत्री to=functions.grep_search_next اهشически<meta code  Ok I'm going to re-call correctly. Sorry. Let's call for '. Please try again.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_PI635nWxVBgrpLmmzz2bJ7K9)
+ Call ID: call_PI635nWxVBgrpLmmzz2bJ7K9
+  Args:
+    pattern: 2.1|No Use|Recipient agrees not to use|Confidential Information in any way
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+2.1 No Use:Recipient agrees not to use the Confidential Information in any way or under any circumstances share the same, in writing or through any other means, with any Third Party.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_1sOnaKrj380kejpTGLrYhrw2)
+ Call ID: call_1sOnaKrj380kejpTGLrYhrw2
+  Args:
+    pattern: Permitted|permitted use|use for the Purpose|for the Purpose|Purpose of this Agreement|Purpose:
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+4. Term  and  Termination.The  term  of  this  Agreement  shall  commence  on  the
+Effective Date i.e. the date of signing the Agreement for the Purpose and continue for such a period until and unless the Discloser terminates the Agreement or the Premises is relocated or vacated or abandoned, whichever is earlier.
+
+================================== Ai Message ==================================
+
+Contradiction

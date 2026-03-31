@@ -1,0 +1,97 @@
+================================ Human Message =================================
+
+QUERY:
+Do they separately evaluate performance of their learned representations (before forwarding them to the CNN layer)?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_kVomOkRr19uTKOJ3iipKsGEo)
+ Call ID: call_kVomOkRr19uTKOJ3iipKsGEo
+  Args:
+    pattern: CNN layer
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+5.4 Tree LSTM vs Sequence LSTM
+In this experiment, we will compare tree LSTM with sequential LSTM. A limitation of the se- quence LSTM architectures is that they only al- low for strictly sequential information propaga- tion. However, tree LSTMs allow richer network topologies where each LSTM unit is able to in- corporate information from multiple child units.  As in standard LSTM units, each Tree-LSTM unit (indexed by j ) contains input and output gates i j and o j , a memory cell c j and hidden state h j . The difference between the standard LSTM unit and tree LSTM units is that gating vectors and memory cell updates are dependent on the states of possibly many child units. Additionally, instead of a single forget gate, the tree LSTM unit contains one for- get gate f jk for each child k .  This allows the tree LSTM unit to selectively incorporate information
+Method Pearson Correlation Features Reported in MaxEnt 0.799 137 (Lai and Hockenmaier, 2014) Decision tree 0.804 214 (Jimenez et al., 2014) RNN 0.827 N/A StanfordNLP run5 Logical Inference 0.827 32 (Bjerva et al. , 2014) MaxEnt, SVM, kNN, GB, RF 0.828 72 (Zhao et al., 2014) WordEmbedding+MB-LSTM+Temp-CNN 0.849 0 Our implementation CharCNN+MB-LSTM+Temp-CNN 0.851 0 Our implementation
+Table 1: Semantic Relatedness Task Comparison.Method Accuracy Features Reported in SVM 0. 823 41 (Proisl and Evert, 2014) Decision tree 0.831 214 (Jimenez et al., 2014) MaxEnt, SVM, kNN, GB, RF 0.836 72 (Zhao et al., 2014) WordEmbedding+MB-LSTM+Temp-CNN 0.838 0 Our implementation CharCNN+MB-LSTM+Temp-CNN 0. 842 0 Our implementation MaxEnt 0.846 137 (Lai and Hockenmaier, 2014)
+Table 2: Textual Entailment Task Comparison.from each child.We use dependency tree child-sum tree LSTM proposed by (Tai et al., 2015) as our baseline. Given a tree, let C ( j ) denote the set of children of node j . The child-sum tree LSTM transition equa- tions are the following:
+ ˜ h j = X k ∈ C ( j ) h k , i j = σ ( W ( i ) x j + U ( i ) ˜ h j + b ( i ) ) , f jk = σ ( W ( f ) x j + U ( f ) h k + b ( f ) ) , o j = σ ( W ( o ) x j + U ( o ) ˜ h j + b ( o ) ) , u j = tanh( W ( u ) x j + U ( u ) ˜ h j + b ( u ) ) , c j = i j u j + f jk c k , h j = o j tanh( c j ) .  (18)
+Table 3 show the comparisons between tree and sequential based methods. We can see that, if we don’t deploy CNN, simple Tree LSTM yields bet- ter result than traditional LSTM, but worse than Bidirectional LSTM. This is reasonable due to the fact that Bidirectional LSTM can enhance sen- tence representation by concatenating forward and backward representations. We found that adding CNN layer will decrease the accuracy in this sce- nario.  Because when feeding into CNN, we have to reshape the feature planes otherwise convolu- tion will not work. For example, we set convo- lution kernel width as 2, the input 2D tensor will
+have the shape lager than 2. To boost performance with CNN, we need more matching features. We found Multi-layer Bidirectional LSTM can incor- porate more features and achieve best performance compared with single-layer Bidirectional LSTM. Method Accuracy Pearson Dep-Tree LSTM 0.833 0.849 Dep-Tree LSTM + CNN 0.798 0.822 LSTM 0.812 0.833 LSTM + CNN 0.776 0.810 1-Bidirectional LSTM 0.834 0.848 1-Bidirectional LSTM+ CNN 0.821 0.846
+Table 3: Results of Tree LSTM vs Sequence LSTM on auxiliary char embedding.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_LBcmHjfIMUuPLyeJZFy3uuHK)
+ Call ID: call_LBcmHjfIMUuPLyeJZFy3uuHK
+  Args:
+    pattern: learned representations
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_8qbRV1gMhUZIo03qYDcRDWUB)
+ Call ID: call_8qbRV1gMhUZIo03qYDcRDWUB
+  Args:
+    pattern: evaluate performance of their learned representations
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_M6IewbHexAQg1K4XJcA8VdM2)
+ Call ID: call_M6IewbHexAQg1K4XJcA8VdM2
+  Args:
+    pattern: representations (before forwarding them to the CNN)
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_jluGwZDIWAdHHx6l3NiwbTnP)
+ Call ID: call_jluGwZDIWAdHHx6l3NiwbTnP
+  Args:
+    pattern: representation
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Neural network based approaches for sentence relation modeling automatically generate hidden matching features from raw sentence pairs. However, the qual- ity of matching feature representation may not be satisfied due to complex semantic relations such as entailment or contradic- tion. To address this challenge, we pro- pose a new deep neural network architec- ture that jointly leverage pre-trained word embedding and auxiliary character embed- ding to learn sentence meanings.  The two kinds of word sequence representations as inputs into multi-layer bidirectional LSTM to learn enhanced sentence repre- sentation. After that, we construct match- ing features followed by another temporal CNN to learn high-level hidden matching feature representations. Experimental re- sults demonstrate that our approach con- sistently outperforms the existing methods on standard evaluation datasets.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_5Bb76jGVlyIAI8nykmiJfAPE)
+ Call ID: call_5Bb76jGVlyIAI8nykmiJfAPE
+  Args:
+    pattern: feeding into CNN
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+5.4 Tree LSTM vs Sequence LSTM
+In this experiment, we will compare tree LSTM with sequential LSTM. A limitation of the se- quence LSTM architectures is that they only al- low for strictly sequential information propaga- tion. However, tree LSTMs allow richer network topologies where each LSTM unit is able to in- corporate information from multiple child units.  As in standard LSTM units, each Tree-LSTM unit (indexed by j ) contains input and output gates i j and o j , a memory cell c j and hidden state h j . The difference between the standard LSTM unit and tree LSTM units is that gating vectors and memory cell updates are dependent on the states of possibly many child units. Additionally, instead of a single forget gate, the tree LSTM unit contains one for- get gate f jk for each child k .  This allows the tree LSTM unit to selectively incorporate information
+Method Pearson Correlation Features Reported in MaxEnt 0.799 137 (Lai and Hockenmaier, 2014) Decision tree 0.804 214 (Jimenez et al., 2014) RNN 0.827 N/A StanfordNLP run5 Logical Inference 0.827 32 (Bjerva et al. , 2014) MaxEnt, SVM, kNN, GB, RF 0.828 72 (Zhao et al., 2014) WordEmbedding+MB-LSTM+Temp-CNN 0.849 0 Our implementation CharCNN+MB-LSTM+Temp-CNN 0.851 0 Our implementation
+Table 1: Semantic Relatedness Task Comparison.Method Accuracy Features Reported in SVM 0. 823 41 (Proisl and Evert, 2014) Decision tree 0.831 214 (Jimenez et al., 2014) MaxEnt, SVM, kNN, GB, RF 0.836 72 (Zhao et al., 2014) WordEmbedding+MB-LSTM+Temp-CNN 0.838 0 Our implementation CharCNN+MB-LSTM+Temp-CNN 0. 842 0 Our implementation MaxEnt 0.846 137 (Lai and Hockenmaier, 2014)
+Table 2: Textual Entailment Task Comparison.from each child.We use dependency tree child-sum tree LSTM proposed by (Tai et al., 2015) as our baseline. Given a tree, let C ( j ) denote the set of children of node j . The child-sum tree LSTM transition equa- tions are the following:
+ ˜ h j = X k ∈ C ( j ) h k , i j = σ ( W ( i ) x j + U ( i ) ˜ h j + b ( i ) ) , f jk = σ ( W ( f ) x j + U ( f ) h k + b ( f ) ) , o j = σ ( W ( o ) x j + U ( o ) ˜ h j + b ( o ) ) , u j = tanh( W ( u ) x j + U ( u ) ˜ h j + b ( u ) ) , c j = i j u j + f jk c k , h j = o j tanh( c j ) .  (18)
+Table 3 show the comparisons between tree and sequential based methods. We can see that, if we don’t deploy CNN, simple Tree LSTM yields bet- ter result than traditional LSTM, but worse than Bidirectional LSTM. This is reasonable due to the fact that Bidirectional LSTM can enhance sen- tence representation by concatenating forward and backward representations. We found that adding CNN layer will decrease the accuracy in this sce- nario.  Because when feeding into CNN, we have to reshape the feature planes otherwise convolu- tion will not work. For example, we set convo- lution kernel width as 2, the input 2D tensor will
+have the shape lager than 2. To boost performance with CNN, we need more matching features. We found Multi-layer Bidirectional LSTM can incor- porate more features and achieve best performance compared with single-layer Bidirectional LSTM. Method Accuracy Pearson Dep-Tree LSTM 0.833 0.849 Dep-Tree LSTM + CNN 0.798 0.822 LSTM 0.812 0.833 LSTM + CNN 0.776 0.810 1-Bidirectional LSTM 0.834 0.848 1-Bidirectional LSTM+ CNN 0.821 0.846
+Table 3: Results of Tree LSTM vs Sequence LSTM on auxiliary char embedding.
+
+================================== Ai Message ==================================
+
+Yes — they report performance of LSTM/Tree-LSTM representations without CNN (see Table 3: Dep-Tree LSTM, LSTM, 1-Bidirectional LSTM and their +CNN counterparts).

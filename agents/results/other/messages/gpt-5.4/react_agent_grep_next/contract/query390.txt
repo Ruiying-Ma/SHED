@@ -1,0 +1,46 @@
+================================ Human Message =================================
+
+HYPOTHESIS:
+Limited use: Receiving Party shall not use any Confidential Information for any purpose other than the purposes stated in Agreement.
+
+TABLE OF CONTENTS (TOC):
+1 | Buyer Confidential Non-Disclosure Agreement Broker Disclosure
+1.1 | 1 .  ( a ) That any information pro vi ded on an y business is sensiti v e and co n ...
+1.1.1 | (b) Not to disclose,
+1.1.2 | (c) Not to contact the business owners or their landlords, emplo ye e s ,
+1.1.3 | (d) Not to circum v ent or interfe r e with Broker ' s contract w ith the S e ll e r in any w a y ,
+1.2 | 2.  That all i nforma t ion re g arding bus i n e ss e s for s a le is pro v id e d...
+1.3 | 3 . That should I / we enter into an agreement to purchase a business ,
+1.4 | 4. That Broker is not an agent for me / us ,
+1.5 | 5. I / we acknowledge that we will receive confidential information about the Seller ' s business ,
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_RL9H47boWbkVWIzy4jWWnl8W)
+ Call ID: call_RL9H47boWbkVWIzy4jWWnl8W
+  Args:
+    section_id: 1.5
+
+================================= Tool Message =================================
+Name: read_section
+
+5. I / we acknowledge that we will receive confidential information about the Seller ' s business ,operations , customers, and employees and agree not to start a business similar to the sellers listed above and not to solicit or contact Seller's employees or customers for a period of three years from the date herein . In the event Buyer for whatever reason does not purchase the business , Buyer agrees to immediately return to Broker an y and all materials related to Seller wi thout reta i ning an y copies. I / w e ackno w ledge that I / we ha v e rec e i v ed an e x act copy of this Agreement and that I / we ha v e read th i s Agreement carefull y and full y understand it. Signature Date B r oker Signature Compan y Name Print Na me Print Name Street Addre s s Stree t Address Cit y , State , Zip Cit y , State , Z i p Signature Date Agent for BBG Broker Date Print Name Street Address City , State , Zip 6148 Lee Highway, Suite 116 • Chattanooga, TN 37421· Tel: 423-710-1814· Fax: 423-710-1817· www. baconbusines s group.com
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_8p2sOQIdUMrYgfBefCxBCldS)
+ Call ID: call_8p2sOQIdUMrYgfBefCxBCldS
+  Args:
+    section_id: 1.1
+
+================================= Tool Message =================================
+Name: read_section
+
+1 .( a ) That any information pro vi ded on an y business is sensiti v e and co n fidential , and that its disclosure to others ma y be damaging to the businesse s and their owners .
+(b) Not to disclose,for a period of th r ee years from the date I / we sign this Non-Disclosure Agreement , an y i nformation regarding these businesses to any other person who has not also signed this Agreement , e x cept to secure the advise and recommendations of my business advisors (accountants , attorneys , etc . ) "Information" as used in this Agreement shall include the fact that the businesses are for sale , plus any other data provided.
+(c) Not to contact the business owners or their landlords, emplo ye e s ,suppl i ers or customers except through Broker. All correspondence , i nqu i ries , offers to purchase and negotiat i ons relating to the purchase or lease of an y business presented b y Broker w ill be conducted e x clusi v el y through Broker .
+(d) Not to circum v ent or interfe r e with Broker ' s contract w ith the S e ll e r in any w a y ,I / we understand that if I / w e interfere with Broker ' s contract r ight to i ts fee from Seller , I / we may be persona l l y liable to Broker for pa y ment of the Sel l er ' s fee .  We und e rstand that should I / we become a manager or oth e rwise c onnect with an y of the businesses shown or offered to me / us for sale , or should I / we bu y, trade , lease or e x change an y of the busin es ses di sclosed to me / us , then a fee will be due to B r oker .  I/w e un d erstand that i f I / we make the purchase thr o ugh Broker , I / we w i l l not be liab l e for th e fe e to be paid b y S e ller to Broker .
+
+================================== Ai Message ==================================
+
+NotMentioned

@@ -1,0 +1,25 @@
+================================ Human Message =================================
+
+QUERY:
+What blackmarket services do they look at?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_yuPrxrcOP2uZghNUijMN7vXi)
+ Call ID: call_yuPrxrcOP2uZghNUijMN7vXi
+  Args:
+    pattern: blackmarket|black market|services
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+I. I NTRODUCTION
+Twitter is an important medium for people and companies to promote their products, ideologies, or to reach out and connect with other people in the form of micro-conversations. Twitter provides users with multiple ways of showing their support towards a tweet in the form of Likes, Retweets and Quotes . These content-level appraisals help in spreading the content further and act as a measure of users’ agreement on the value of the content.  The count of these content-level appraisals therefore determines the influence of a particular tweet and its author. This has led to the creation of certain blackmarket ser- vices such as FreeFollowers (https://www.freefollowers.io/), Like4Like (https://like4like.org/), YouLikeHits (https://www. youlikehits.com/), JustRetweet (http://justretweet. com), which allow users to post their tweets in order to gain inorganic appraisals in the form of Likes, Retweets and Quotes [1], [2].TABLE I A N EXAMPLE OF A COLLUSIVE AND A GENUINE TWEET .Blackmarket Tweet
+Appingine offers your custom app development in amazing price. This EASTER gives life to your idea.  Call: 800-xxx-xxxx visit: https://**shortlink** #Easter Weekend #iosdev # AndroidDev #gamedev #webdev #appdev #Easter https://**shortlink** Genuine Tweet
+Google vows to double podcast audience with new Android app **shortlink** via @usatoday
+ There has been a lot of research on the detection of fraudulent activities on Twitter such as detection of bots [3], fake followers [4], collusive retweeters [1], [2], and social spam [5]. However, the problem of detecting tweets that are posted to these blackmarket services has not been tackled before. The tweets submitted to blackmarket services are not necessarily spam or promotional tweets.  As we observe in our data, there is some intersection between spammers and blackmarket users since spammers may also try to gain more appraisals by using these services. However, existing spam tweet detection approaches do not work that well in identifying individual tweets as blackmarket tweets (as shown in Table II).Table I shows a sample tweet that was posted on a black- market service and another sample tweet that was not.  In this paper, we make the first attempt to detect tweets that are posted on blackmarket services. Our aim is to build a system that can flag tweets soon after they are posted, which is why we do not consider temporal features such as the number of retweets or likes that a tweet keeps gaining over time. Instead, we only rely on the features and representations extracted from the content of the tweets. We curate a novel dataset of tweets that have been posted to blackmarket services, and a corresponding set of tweets that haven’t. We propose a multitask learning approach to combine properties from the characterization of blackmarket tweets via traditional feature extraction, with a deep learning based feature representation of the tweets. We train a neural network which takes as input both the traditional feature representation
+ This paper has been accepted at IEEE/ACM International Conference on Advances in Social Networks Analysis and Mining (ASONAM) 2019.as well as the deep learning based representation generated using the Tweet2Vec model [6], and utilizes cross-stitch units [7] to learn an optimal combination of shared and task-specific knowledge via soft parameter sharing.We show that our multitask learning approach outperforms Twitter spam detection approaches, as well as state-of-the- art classifiers by 14. 1% (in terms of F1-score), achieving an F1-score of 0.89 on our dataset. In short, the contributions of the paper are threefold: a new dataset, characterization of blackmarket tweets, and a novel multitask learning framework to detect tweets posted on blackmarket services.
+
+================================== Ai Message ==================================
+
+FreeFollowers, Like4Like, YouLikeHits, and JustRetweet.

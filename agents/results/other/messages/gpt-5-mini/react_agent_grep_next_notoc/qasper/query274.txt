@@ -1,0 +1,21 @@
+================================ Human Message =================================
+
+QUERY:
+What languages do they apply the model to?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_y6XXsygwtNmJMpiLNbB5LR4o)
+ Call ID: call_y6XXsygwtNmJMpiLNbB5LR4o
+  Args:
+    pattern: languages
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+5 Discussion
+We only report results for English. However, En- glish is a morphologically impoverished language, with little inflection and relatively few productive patterns of derivation. Our morphology test set re- flects this, with over half the words consisting of a simple morpheme, and over 90% having at most 2 morphemes.This is unfortunate for our model, as it performs better on words with richer morphology.  It gives consistently more accurate morphological analy- ses for these words compared to standard base- lines, and matches word-level models for seman- tic similarity on rare words with rich morphol- ogy. In addition, it seems to learn morphosyntactic features to help solve the syntactic analogy task. Most of all, it is language-agnostic, and easy to port across different languages.  We thus expect our model to perform even better for languages with a richer morphology than English, such as Turkish and German.
+
+================================== Ai Message ==================================
+
+English

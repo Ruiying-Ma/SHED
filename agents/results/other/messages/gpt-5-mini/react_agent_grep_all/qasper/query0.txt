@@ -1,0 +1,49 @@
+================================ Human Message =================================
+
+QUERY:
+How big is the ANTISCAM dataset? 
+
+TABLE OF CONTENTS (TOC):
+1 | End-to-End Trainable Non-Collaborative Dialog System
+1.1 | Abstract
+1.2 | Introduction
+1.3 | Related Work
+1.4 | Non-Collaborative Task Annotation Scheme
+1.5 | Datasets
+1.5.1 | A NTI S CAM Dataset
+1.5.2 | P ERSUASION F OR G OOD Dataset
+1.6 | Model
+1.6.1 | Background
+1.6.2 | Intent and Semantic Slot Classifiers
+1.6.3 | Response Generation
+1.6.4 | Response Filtering
+1.7 | Experiments
+1.7.1 | Baseline Models
+1.7.2 | Automatic Evaluation Metrics
+1.7.3 | Human Evaluation Metrics
+1.8 | Results and Analysis
+1.9 | Conclusion and Future Work
+1.10 | Acknowledgements
+1.11 | Appendix
+1.11.1 | Anti-Scam Collection Setting
+1.11.2 | Training details
+1.11.3 | Example Dialog
+1.12 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_koQO2QghgQ5sARZCYi9ssNF1)
+ Call ID: call_koQO2QghgQ5sARZCYi9ssNF1
+  Args:
+    section_id: 1.5.1
+
+================================= Tool Message =================================
+Name: read_section
+
+A NTI S CAM Dataset
+To enrich available non-collaborative task datasets, we cre- ated a corpus of human-human anti-scam dialogs in order to learn human elicitation strategies. We chose a popular Amazon customer service scam scenario to collect dialogs between users and attackers who aim to collect users infor- mation. We posted a role-playing task on the Amazon Me- chanical Turk platform and collected a typing conversation dataset named A NTI S CAM . We collected 220 human-human dialogs.  The average conversation length is 12.45 turns and the average utterance length is 11.13 words. Only 172 out of 220 users successfully identified their partner as an attacker, suggesting that the attackers are well trained and not too easily identifiable. We recruited two expert annotators who
+have linguistic training to annotate 3,044 sentences in 100 dialogs, achieving a 0.874 averaged weighted kappa value.
+
+================================== Ai Message ==================================
+
+The ANTISCAM dataset contains 220 human-human dialogs.

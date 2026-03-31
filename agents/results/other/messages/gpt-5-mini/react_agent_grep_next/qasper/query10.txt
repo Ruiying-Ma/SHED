@@ -1,0 +1,100 @@
+================================ Human Message =================================
+
+QUERY:
+How do they define rumors?
+
+TABLE OF CONTENTS (TOC):
+1 | Spotting Rumors via Novelty Detection Yumeng Qin International School of Software Wuhan University yumeng.qin@whu.edu.cn Dominik Wurzer School of Informatics University of Edinburgh s1157979@sms.ed.ac.uk
+1.1 | Abstract
+1.2 | 1 Introduction
+1.2.1 | Novelty based Features
+1.2.2 | Pseudo Feedback for Detection/Classification
+1.2.3 | 1.1 Related Work
+1.3 | 2 Rumour Detection
+1.3.1 | 2.1 Problem Statement
+1.3.2 | 2.2 Novelty-based Features
+1.3.3 | 2.3 Novelty Feature Construction
+1.3.4 | 2.4 Pseudo Feedback
+1.3.4.1 | Training Pseudo Feedback Features
+1.4 | 3 Experiments
+1.4.1 | 3.1 Evaluation metrics
+1.4.2 | 3.2 Data set
+1.4.3 | 3.3 Rumour detection effectiveness
+1.4.4 | 3.4 Feature analysis
+1.4.4.1 | Novelty based Features
+1.4.4.2 | Pseudo Feedbaack
+1.4.5 | 3.5 Detecting unpopular rumours
+1.4.6 | 3.6 Efficiency and Scalability
+1.5 | 4 Conclusion
+1.6 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_m0eqvtSXLxbgrSrLZGckWFbk)
+ Call ID: call_m0eqvtSXLxbgrSrLZGckWFbk
+  Args:
+    section_id: 1.3.1
+
+================================= Tool Message =================================
+Name: read_section
+
+2.1 Problem Statement
+We frame the Real-time Rumour Detection task as a classification problem that assesses a docu- ment’s likelihood of becoming a future rumour at the time of its publication. Consequently, prediction takes place in real-time with a single pass over the data.More formally, we denote by d t the docu- ment that arrives from stream S : { d 0 , d 1 , ...d n } at time t .  Upon arrival of document d t we compute its corresponding feature vector f d,t . Given f d,t and the previously obtained weigh vector w we compute the rumour score RS d,t = w T × f d,t . The rumour prediction is based on a fixed thresh- olding strategy with respect to θ . We predict that message d t is likely to become a rumour if its rumour score exceeds the detection threshold RS d,t > θ .  The optimal parameter setting for weight vector w and detection threshold θ are learned on a test to maximise prediction accuracy.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_5bC1Ez1NzezKW3qrrpFXl6Kb)
+ Call ID: call_5bC1Ez1NzezKW3qrrpFXl6Kb
+  Args:
+    pattern: rumour
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1 | Abstract
+Rumour detection is hard because the most accurate systems operate retrospectively, only recognising rumours once they have collected repeated signals. By then the rumours might have already spread and caused harm. We introduce a new cate- gory of features based on novelty, tailored to detect rumours early on. To compen- sate for the absence of repeated signals, we make use of news wire as an addi- tional data source.  Unconfirmed (novel) information with respect to the news arti- cles is considered as an indication of ru- mours. Additionally we introduce pseudo feedback, which assumes that documents that are similar to previous rumours, are more likely to also be a rumour. Compari- son with other real-time approaches shows that novelty based features in conjunc- tion with pseudo feedback perform signif- icantly better, when detecting rumours in- stantly after their publication.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_qzBkV3tVg8BWaIFysaFt8YEn)
+ Call ID: call_qzBkV3tVg8BWaIFysaFt8YEn
+  Args:
+    pattern: We define rumor|We define rumour|rumor is|rumour is
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.3.2 | 2.2 Novelty-based Features
+To increase instantaneous detection performance, we compensate for the absence of future informa- tion by consulting additional data sources. In par-
+ticular, we make use of news wire articles, which are considered to be of high credibility. This is reasonable as according to Petrovic et. al (2013), in the majority of cases, news wires lead social media for reporting news.  When a message ar- rives from a social media stream, we build features based on its novelty with respect to the confirmed information in the trusted sources. In a nutshell, the presence of information unconfirmed by the official media is construed as an indication of be- ing a rumour. Note that this closely resembles the definition of what a rumour is.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_vsm0tiXH2eDDqgGPNj2gIN06)
+ Call ID: call_vsm0tiXH2eDDqgGPNj2gIN06
+  Args:
+    section_id: 1.1
+
+================================= Tool Message =================================
+Name: read_section
+
+Abstract
+Rumour detection is hard because the most accurate systems operate retrospectively, only recognising rumours once they have collected repeated signals. By then the rumours might have already spread and caused harm. We introduce a new cate- gory of features based on novelty, tailored to detect rumours early on. To compen- sate for the absence of repeated signals, we make use of news wire as an addi- tional data source.  Unconfirmed (novel) information with respect to the news arti- cles is considered as an indication of ru- mours. Additionally we introduce pseudo feedback, which assumes that documents that are similar to previous rumours, are more likely to also be a rumour. Compari- son with other real-time approaches shows that novelty based features in conjunc- tion with pseudo feedback perform signif- icantly better, when detecting rumours in- stantly after their publication.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_zc8Mr2bMpNPCyk6Req5G0nwM)
+ Call ID: call_zc8Mr2bMpNPCyk6Req5G0nwM
+  Args:
+    pattern: unconfirmed|unconfirmed \(novel\)|presence of information unconfirmed|definition of what a rumour is
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.3.2 | 2.2 Novelty-based Features
+To increase instantaneous detection performance, we compensate for the absence of future informa- tion by consulting additional data sources. In par-
+ticular, we make use of news wire articles, which are considered to be of high credibility. This is reasonable as according to Petrovic et. al (2013), in the majority of cases, news wires lead social media for reporting news.  When a message ar- rives from a social media stream, we build features based on its novelty with respect to the confirmed information in the trusted sources. In a nutshell, the presence of information unconfirmed by the official media is construed as an indication of be- ing a rumour. Note that this closely resembles the definition of what a rumour is.
+
+================================== Ai Message ==================================
+
+They define rumours as unconfirmed (novel) information with respect to trusted news wire / official media.

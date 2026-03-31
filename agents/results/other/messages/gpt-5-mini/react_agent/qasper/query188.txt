@@ -1,0 +1,37 @@
+================================ Human Message =================================
+
+QUERY:
+what datasets have been used for this task?
+
+TABLE OF CONTENTS (TOC):
+1 | Toward a Standardized and More Accurate Indonesian Part-of-Speech Tagging
+1.1 | I. I NTRODUCTION
+1.2 | II. R ELATED W ORK
+1.3 | III. M ETHODOLOGY
+1.3.1 | A. Dataset
+1.3.2 | B. Baselines
+1.3.3 | C. Comparisons
+1.3.4 | D. Experiments Setup
+1.3.5 | E. Evaluation
+1.4 | IV. R ESULTS AND D ISCUSSION
+1.5 | V. C ONCLUSION
+1.6 | R EFERENCES
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_Z1wamBwFWSc2MFz0H2RIJdW7)
+ Call ID: call_Z1wamBwFWSc2MFz0H2RIJdW7
+  Args:
+    section_id: 1.3.1
+
+================================= Tool Message =================================
+Name: read_section
+
+A. Dataset
+We used the IDN Tagged Corpus proposed in [12]. The corpus contains 10K sentences and 250K tokens that are tagged manually. Due to the small size, 3 we used 5-fold cross-validation to split the corpus into training, development, and test sets. We did not split multi-word expressions but treated them as if they are a single token.1 http://www.panl10n.net
+2 https://github. com/famrashel/idn-tagged-corpus
+3 As a comparison, Penn Treebank corpus for English has 40K sen- tences.c 2018 IEEE. Personal use of this material is permitted.  Permission from IEEE must be obtained for all other uses, in any current or future media, including reprinting/republishing this material for advertising or promotional purposes, creating new collective works, for resale or redistribution to servers or lists, or reuse of any copyrighted component or this work in other works. The final version of this article is available at https://doi.org/10.1109/IALP.2018.8629236. All 5 folds of the dataset are available publicly 4 to serve as a benchmark for future work.
+
+================================== Ai Message ==================================
+
+The IDN Tagged Corpus (10K sentences, 250K tokens).

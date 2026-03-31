@@ -1,0 +1,34 @@
+================================ Human Message =================================
+
+QUERY:
+what dataset was used for training?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_IpuvdCFHqyGbAfrWEpG9MtmU)
+ Call ID: call_IpuvdCFHqyGbAfrWEpG9MtmU
+  Args:
+    pattern: (?i)train|training|dataset|corpus|data
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Multimodal language models attempt to in- corporate non-linguistic features for the lan- guage modeling task. In this work, we extend a standard recurrent neural network (RNN) language model with features derived from videos. We train our models on data that is two orders-of-magnitude bigger than datasets used in prior work. We perform a thorough ex- ploration of model architectures for combining visual and text features.  Our experiments on two corpora ( YouCookII and 20bn-something- something-v2 ) show that the best performing architecture consists of middle fusion of visual and text features, yielding over 25% relative improvement in perplexity. We report analy- sis that provides insights into why our multi- modal language model improves upon a stan- dard RNN language model.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_xI7NvXclx2EtFvwrPfBgKShW)
+ Call ID: call_xI7NvXclx2EtFvwrPfBgKShW
+  Args:
+    pattern: (?i)YouCookII|something-something|20bn|training set|train set|corpora
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Multimodal language models attempt to in- corporate non-linguistic features for the lan- guage modeling task. In this work, we extend a standard recurrent neural network (RNN) language model with features derived from videos. We train our models on data that is two orders-of-magnitude bigger than datasets used in prior work. We perform a thorough ex- ploration of model architectures for combining visual and text features.  Our experiments on two corpora ( YouCookII and 20bn-something- something-v2 ) show that the best performing architecture consists of middle fusion of visual and text features, yielding over 25% relative improvement in perplexity. We report analy- sis that provides insights into why our multi- modal language model improves upon a stan- dard RNN language model.
+
+================================== Ai Message ==================================
+
+YouCookII and 20bn-something-something-v2.

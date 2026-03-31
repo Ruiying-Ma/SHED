@@ -1,0 +1,48 @@
+================================ Human Message =================================
+
+HYPOTHESIS:
+No solicitation: Receiving Party shall not solicit some of Disclosing Party's representatives.
+
+TABLE OF CONTENTS (TOC):
+1 | NON-DISCLOSURE AGREEMENT
+1.1 | 1.  “Confidential Information” means any and all confidential and/or proprietary in...
+1.2 | 2.  Confidential Information is disclosed to Receiving Party solely for the purpose...
+1.3 | 3.  Receiving Party shall protect the Confidential Information with at least the sa...
+1.4 | 4.  Receiving Party will immediately notify the Casino upon the discovery of any lo...
+1.5 | 5.  Receiving Party shall have no obligations under this Agreement with respect to ...
+1.6 | 6. Upon the request of Casino ,
+1.7 | 7.  Receiving Party shall not disclose any Confidential Information to any other pe...
+1.8 | 8. Waiver of any provision of this Agreement must be made in writing.
+1.9 | 9.  Neither party shall assign this Agreement to any third party without the prior ...
+1.10 | 10. This Agreement shall have a term of three (3) years.
+1.11 | 11.  The parties agree that a breach of this Agreement by the receiving party may ca...
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_uFtRMTc44JwPmYTlXX8tpeXu)
+ Call ID: call_uFtRMTc44JwPmYTlXX8tpeXu
+  Args:
+    pattern: solicit|solicitation|representatives|employees|customers
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.11 | 11.The parties agree that a breach of this Agreement by the receiving party may cause irreparable damage to the Casino and hereby agree that Casino will be entitled to seek injunctive relief or other equitable relief to remedy or prevent any threatened or actual breach of this Agreement.IN WITNESS WHEREOF, the parties have caused this Agreement to be executed by their duly authorized representatives. RECEIVING PARTY: BY: _____________________________ DATE: __________________________ CASINO : BY: _____________________________ DATE: __________________________
+Page 2
+Revised 06/27/2017
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_AHeYUwz6JgqS0FV7xvhjlBRE)
+ Call ID: call_AHeYUwz6JgqS0FV7xvhjlBRE
+  Args:
+    section_id: 1.7
+
+================================= Tool Message =================================
+Name: read_section
+
+7.Receiving Party shall not disclose any Confidential Information to any other person or entity other than as provided herein, without Casino ’s prior written consent.   Neither party nor any of its representatives shall contact, either directly or indirectly, any governmental official, lender or other third party (other than a representative as provided herein) to discuss the Project or the business or the assets of the other party, or a potential business transaction with or concerning the other party, without first obtaining the written consent of the other party.
+
+================================== Ai Message ==================================
+
+NotMentioned

@@ -1,0 +1,98 @@
+================================ Human Message =================================
+
+QUERY:
+Where do the news texts come from?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_DTssaXNswYbKCGgEP5HJqfMN)
+ Call ID: call_DTssaXNswYbKCGgEP5HJqfMN
+  Args:
+    pattern: news text|news texts|news|corpus|dataset
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Keyphrase generation is the task of predicting a set of lexical units that conveys the main content of a source text. Existing datasets for keyphrase generation are only readily available for the scholarly domain and in- clude non-expert annotations. In this paper we present KPTimes , a large-scale dataset of news texts paired with editor-curated keyphrases. Exploring the dataset, we show how editors tag documents, and how their annotations differ from those found in ex- isting datasets.  We also train and evaluate state-of-the-art neural keyphrase genera- tion models on KPTimes to gain insights on how well they perform on the news domain. The dataset is available online at https://github.com/ygorg/KPTimes .
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_mOcQ2JHz5gG3z9RdbaboxpQK)
+ Call ID: call_mOcQ2JHz5gG3z9RdbaboxpQK
+  Args:
+    pattern: editor-curated|editors|tag documents|dataset
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Keyphrase generation is the task of predicting a set of lexical units that conveys the main content of a source text. Existing datasets for keyphrase generation are only readily available for the scholarly domain and in- clude non-expert annotations. In this paper we present KPTimes , a large-scale dataset of news texts paired with editor-curated keyphrases. Exploring the dataset, we show how editors tag documents, and how their annotations differ from those found in ex- isting datasets.  We also train and evaluate state-of-the-art neural keyphrase genera- tion models on KPTimes to gain insights on how well they perform on the news domain. The dataset is available online at https://github.com/ygorg/KPTimes .
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_fC2XE76DnHNyhTMQaBKVKy9l)
+ Call ID: call_fC2XE76DnHNyhTMQaBKVKy9l
+  Args:
+    pattern: The dataset|KPTimes|source|from
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Keyphrase generation is the task of predicting a set of lexical units that conveys the main content of a source text. Existing datasets for keyphrase generation are only readily available for the scholarly domain and in- clude non-expert annotations. In this paper we present KPTimes , a large-scale dataset of news texts paired with editor-curated keyphrases. Exploring the dataset, we show how editors tag documents, and how their annotations differ from those found in ex- isting datasets.  We also train and evaluate state-of-the-art neural keyphrase genera- tion models on KPTimes to gain insights on how well they perform on the news domain. The dataset is available online at https://github.com/ygorg/KPTimes .
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_zpwXeTeSg3ai4SYpR3V9W5Hf)
+ Call ID: call_zpwXeTeSg3ai4SYpR3V9W5Hf
+  Args:
+    pattern: New York Times|NYT|times
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1 Introduction
+Keyphrases are single or multi-word lexical units that best summarise a document ( Evans and Zhai , 1996 ). As such, they are of great importance for indexing, categorising and browsing digital li- braries ( Witten et al. , 2009 ). Yet, very few doc- uments have keyphrases assigned, thus raising the need for automatic keyphrase generation sys- tems.  This task falls under the task of automatic keyphrase extraction which can also be the sub- task of finding keyphrases that only appear in the input document. Generating keyphrases can be seen as a particular instantiation of text summa- rization, where the goal is not to produce a well- formed piece of text, but a coherent set of phrases that convey the most salient information.  Those phrases may or may not appear in the document, the latter requiring some form of abstraction to be generated. State-of-the-art systems for this task rely on recurrent neural networks ( Meng et al. , 2017 ; Chen et al. , 2018 , 2019 ), and hence re- quire large amounts of annotated training data to
+achieve good performance.  As gold annotated data is expensive and difficult to obtain ( Mao and Lu , 2017 ), previous works focused on readily avail- able scientific abstracts and used author-assigned keyphrases as a proxy for expert annotations.  However, this poses two major issues: 1) neu- ral models for keyphrase generation do not gen- eralize well across domains, thus limiting their use in practice; 2) author-assigned keyphrases ex- hibit strong consistency issues that negatively im- pacts the model’s performance.  There is there- fore a great need for annotated data from different sources, that is both sufficiently large to support the training of neural-based models and that com- prises gold-standard labels provided by experts. In this study, we address this need by providing KP- Times , a dataset made of 279 923 news articles that comes with editor-assigned keyphrases. Online news are particularly relevant to keyphrase generation since they are a natural fit for faceted navigation ( Tunkelang , 2009 ) or topic de- tection and tracking ( Allan , 2012 ). Also, and not less importantly, they are available in large quan- tities and are sometimes accompanied by meta- data containing human-assigned keyphrases ini- tially intended for search engines.  Here, we di- vert these annotations from their primary pur- pose, and use them as gold-standard labels to au- tomatically build our dataset. More precisely, we collect data by crawling selected news web- sites and use heuristics to draw texts paired with gold keyphrases. We then explore the resulting dataset to better understand how editors tag doc- uments, and how these expert annotations differ from author-assigned keyphrases found in schol- arly documents.  Finally, we analyse the per- formance of state-of-the-art keyphrase generation models and investigate their transferability to the news domain and the impact of domain shift.Muslim Women in Hijab Break Barriers: ‘Take the Good With the Bad’
+When Ginella Massa, a Toronto-based TV reporter, recently accepted a request to host an evening newscast, she was not planning or expecting to make history for wearing a hijab.  She was just cov- ering for a colleague who wanted to go to a hockey game. And that’s how Ms. Massa, who works at CityNews in Toronto, became the first Canadian woman to host a newscast from a large media com- pany while wearing the head scarf. [...] This new trend of inclusion occurs amid a more sinister one, as reported hate crimes against Muslims are on the rise in the United States and Canada . The F.B. I. says that a surge in hate crimes against Muslims has led to an overall increase in hate crimes in the United States; Muslims have borne the brunt of the increase with 257 recorded attacks. [...] In Canada , where Ms.  Massa has lived since she was a year old, the number of reported hate crimes has dropped slightly overall, but the number of recorded attacks against Muslims has grown: 99 attacks were re- ported in 2014, according to an analysis by the news site Global News of data from Statistics Canada , a government agency. [...]
+keywords: US; Islam; Fashion; Muslim Veiling; Women and Girls; ( News media , journalism); Hate crime ; Canada
+ Figure 1: Sample document from KPTimes (id: 0296216). Keyphrases (or part of) appearing in the document are colored.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_zuDdAxGuFgOVwaK41K4uWb3A)
+ Call ID: call_zuDdAxGuFgOVwaK41K4uWb3A
+  Args:
+    pattern: selected news web-sites|selected news websites|collect data by crawling|web-sites|news websites
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1 Introduction
+Keyphrases are single or multi-word lexical units that best summarise a document ( Evans and Zhai , 1996 ). As such, they are of great importance for indexing, categorising and browsing digital li- braries ( Witten et al. , 2009 ). Yet, very few doc- uments have keyphrases assigned, thus raising the need for automatic keyphrase generation sys- tems.  This task falls under the task of automatic keyphrase extraction which can also be the sub- task of finding keyphrases that only appear in the input document. Generating keyphrases can be seen as a particular instantiation of text summa- rization, where the goal is not to produce a well- formed piece of text, but a coherent set of phrases that convey the most salient information.  Those phrases may or may not appear in the document, the latter requiring some form of abstraction to be generated. State-of-the-art systems for this task rely on recurrent neural networks ( Meng et al. , 2017 ; Chen et al. , 2018 , 2019 ), and hence re- quire large amounts of annotated training data to
+achieve good performance.  As gold annotated data is expensive and difficult to obtain ( Mao and Lu , 2017 ), previous works focused on readily avail- able scientific abstracts and used author-assigned keyphrases as a proxy for expert annotations.  However, this poses two major issues: 1) neu- ral models for keyphrase generation do not gen- eralize well across domains, thus limiting their use in practice; 2) author-assigned keyphrases ex- hibit strong consistency issues that negatively im- pacts the model’s performance.  There is there- fore a great need for annotated data from different sources, that is both sufficiently large to support the training of neural-based models and that com- prises gold-standard labels provided by experts. In this study, we address this need by providing KP- Times , a dataset made of 279 923 news articles that comes with editor-assigned keyphrases. Online news are particularly relevant to keyphrase generation since they are a natural fit for faceted navigation ( Tunkelang , 2009 ) or topic de- tection and tracking ( Allan , 2012 ). Also, and not less importantly, they are available in large quan- tities and are sometimes accompanied by meta- data containing human-assigned keyphrases ini- tially intended for search engines.  Here, we di- vert these annotations from their primary pur- pose, and use them as gold-standard labels to au- tomatically build our dataset. More precisely, we collect data by crawling selected news web- sites and use heuristics to draw texts paired with gold keyphrases. We then explore the resulting dataset to better understand how editors tag doc- uments, and how these expert annotations differ from author-assigned keyphrases found in schol- arly documents.  Finally, we analyse the per- formance of state-of-the-art keyphrase generation models and investigate their transferability to the news domain and the impact of domain shift.Muslim Women in Hijab Break Barriers: ‘Take the Good With the Bad’
+When Ginella Massa, a Toronto-based TV reporter, recently accepted a request to host an evening newscast, she was not planning or expecting to make history for wearing a hijab.  She was just cov- ering for a colleague who wanted to go to a hockey game. And that’s how Ms. Massa, who works at CityNews in Toronto, became the first Canadian woman to host a newscast from a large media com- pany while wearing the head scarf. [...] This new trend of inclusion occurs amid a more sinister one, as reported hate crimes against Muslims are on the rise in the United States and Canada . The F.B. I. says that a surge in hate crimes against Muslims has led to an overall increase in hate crimes in the United States; Muslims have borne the brunt of the increase with 257 recorded attacks. [...] In Canada , where Ms.  Massa has lived since she was a year old, the number of reported hate crimes has dropped slightly overall, but the number of recorded attacks against Muslims has grown: 99 attacks were re- ported in 2014, according to an analysis by the news site Global News of data from Statistics Canada , a government agency. [...]
+keywords: US; Islam; Fashion; Muslim Veiling; Women and Girls; ( News media , journalism); Hate crime ; Canada
+ Figure 1: Sample document from KPTimes (id: 0296216). Keyphrases (or part of) appearing in the document are colored.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_vquBMDQJyOCPzatzGUAoyUFm)
+ Call ID: call_vquBMDQJyOCPzatzGUAoyUFm
+  Args:
+    pattern: The New York Times|New York Times|CityNews|selected news web
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1 Introduction
+Keyphrases are single or multi-word lexical units that best summarise a document ( Evans and Zhai , 1996 ). As such, they are of great importance for indexing, categorising and browsing digital li- braries ( Witten et al. , 2009 ). Yet, very few doc- uments have keyphrases assigned, thus raising the need for automatic keyphrase generation sys- tems.  This task falls under the task of automatic keyphrase extraction which can also be the sub- task of finding keyphrases that only appear in the input document. Generating keyphrases can be seen as a particular instantiation of text summa- rization, where the goal is not to produce a well- formed piece of text, but a coherent set of phrases that convey the most salient information.  Those phrases may or may not appear in the document, the latter requiring some form of abstraction to be generated. State-of-the-art systems for this task rely on recurrent neural networks ( Meng et al. , 2017 ; Chen et al. , 2018 , 2019 ), and hence re- quire large amounts of annotated training data to
+achieve good performance.  As gold annotated data is expensive and difficult to obtain ( Mao and Lu , 2017 ), previous works focused on readily avail- able scientific abstracts and used author-assigned keyphrases as a proxy for expert annotations.  However, this poses two major issues: 1) neu- ral models for keyphrase generation do not gen- eralize well across domains, thus limiting their use in practice; 2) author-assigned keyphrases ex- hibit strong consistency issues that negatively im- pacts the model’s performance.  There is there- fore a great need for annotated data from different sources, that is both sufficiently large to support the training of neural-based models and that com- prises gold-standard labels provided by experts. In this study, we address this need by providing KP- Times , a dataset made of 279 923 news articles that comes with editor-assigned keyphrases. Online news are particularly relevant to keyphrase generation since they are a natural fit for faceted navigation ( Tunkelang , 2009 ) or topic de- tection and tracking ( Allan , 2012 ). Also, and not less importantly, they are available in large quan- tities and are sometimes accompanied by meta- data containing human-assigned keyphrases ini- tially intended for search engines.  Here, we di- vert these annotations from their primary pur- pose, and use them as gold-standard labels to au- tomatically build our dataset. More precisely, we collect data by crawling selected news web- sites and use heuristics to draw texts paired with gold keyphrases. We then explore the resulting dataset to better understand how editors tag doc- uments, and how these expert annotations differ from author-assigned keyphrases found in schol- arly documents.  Finally, we analyse the per- formance of state-of-the-art keyphrase generation models and investigate their transferability to the news domain and the impact of domain shift.Muslim Women in Hijab Break Barriers: ‘Take the Good With the Bad’
+When Ginella Massa, a Toronto-based TV reporter, recently accepted a request to host an evening newscast, she was not planning or expecting to make history for wearing a hijab.  She was just cov- ering for a colleague who wanted to go to a hockey game. And that’s how Ms. Massa, who works at CityNews in Toronto, became the first Canadian woman to host a newscast from a large media com- pany while wearing the head scarf. [...] This new trend of inclusion occurs amid a more sinister one, as reported hate crimes against Muslims are on the rise in the United States and Canada . The F.B. I. says that a surge in hate crimes against Muslims has led to an overall increase in hate crimes in the United States; Muslims have borne the brunt of the increase with 257 recorded attacks. [...] In Canada , where Ms.  Massa has lived since she was a year old, the number of reported hate crimes has dropped slightly overall, but the number of recorded attacks against Muslims has grown: 99 attacks were re- ported in 2014, according to an analysis by the news site Global News of data from Statistics Canada , a government agency. [...]
+keywords: US; Islam; Fashion; Muslim Veiling; Women and Girls; ( News media , journalism); Hate crime ; Canada
+ Figure 1: Sample document from KPTimes (id: 0296216). Keyphrases (or part of) appearing in the document are colored.
+
+================================== Ai Message ==================================
+
+They come from selected news websites that were crawled to collect texts paired with editor-assigned keyphrases.

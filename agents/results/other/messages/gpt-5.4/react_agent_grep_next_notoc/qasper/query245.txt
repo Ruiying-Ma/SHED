@@ -1,0 +1,60 @@
+================================ Human Message =================================
+
+QUERY:
+what is the previous work they are comparing to?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_ZGECzvz4Ir7c0xEKPh2JSSXF)
+ Call ID: call_ZGECzvz4Ir7c0xEKPh2JSSXF
+  Args:
+    pattern: (?i)previous work|compare|comparison|baseline|related work
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Neural machine translation (NMT) suffers a performance de- ficiency when a limited vocabulary fails to cover the source or target side adequately, which happens frequently when dealing with morphologically rich languages. To address this problem, previous work focused on adjusting transla- tion granularity or expanding the vocabulary size. However, morphological information is relatively under-considered in NMT architectures, which may further improve translation quality.  We propose a novel method, which can not only re- duce data sparsity but also model morphology through a sim- ple but effective mechanism. By predicting the stem and suf- fix separately during decoding, our system achieves an im- provement of up to 1.98 BLEU compared with previous work on English to Russian translation. Our method is orthogo- nal to different NMT architectures and stably gains improve- ments on various domains.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_LcFA1cxXXhEelJxDpceF8Qev)
+ Call ID: call_LcFA1cxXXhEelJxDpceF8Qev
+  Args:
+    pattern: (?i)English to Russian|Russian|BLEU
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Neural machine translation (NMT) suffers a performance de- ficiency when a limited vocabulary fails to cover the source or target side adequately, which happens frequently when dealing with morphologically rich languages. To address this problem, previous work focused on adjusting transla- tion granularity or expanding the vocabulary size. However, morphological information is relatively under-considered in NMT architectures, which may further improve translation quality.  We propose a novel method, which can not only re- duce data sparsity but also model morphology through a sim- ple but effective mechanism. By predicting the stem and suf- fix separately during decoding, our system achieves an im- provement of up to 1.98 BLEU compared with previous work on English to Russian translation. Our method is orthogo- nal to different NMT architectures and stably gains improve- ments on various domains.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_K2fNe8bwkjJNtVtuqmfqcpaX)
+ Call ID: call_K2fNe8bwkjJNtVtuqmfqcpaX
+  Args:
+    pattern: (?i)related work|previous work focused|granularity|vocabulary size|BPE|character
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Neural machine translation (NMT) suffers a performance de- ficiency when a limited vocabulary fails to cover the source or target side adequately, which happens frequently when dealing with morphologically rich languages. To address this problem, previous work focused on adjusting transla- tion granularity or expanding the vocabulary size. However, morphological information is relatively under-considered in NMT architectures, which may further improve translation quality.  We propose a novel method, which can not only re- duce data sparsity but also model morphology through a sim- ple but effective mechanism. By predicting the stem and suf- fix separately during decoding, our system achieves an im- provement of up to 1.98 BLEU compared with previous work on English to Russian translation. Our method is orthogo- nal to different NMT architectures and stably gains improve- ments on various domains.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_A0JIiKO1D6Uh8aqkhn79chAc)
+ Call ID: call_A0JIiKO1D6Uh8aqkhn79chAc
+  Args:
+    pattern: (?i)Sennrich|Luong|baseline|compared with previous work|1\.98
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Abstract
+Neural machine translation (NMT) suffers a performance de- ficiency when a limited vocabulary fails to cover the source or target side adequately, which happens frequently when dealing with morphologically rich languages. To address this problem, previous work focused on adjusting transla- tion granularity or expanding the vocabulary size. However, morphological information is relatively under-considered in NMT architectures, which may further improve translation quality.  We propose a novel method, which can not only re- duce data sparsity but also model morphology through a sim- ple but effective mechanism. By predicting the stem and suf- fix separately during decoding, our system achieves an im- provement of up to 1.98 BLEU compared with previous work on English to Russian translation. Our method is orthogo- nal to different NMT architectures and stably gains improve- ments on various domains.
+
+================================== Ai Message ==================================
+
+Previous work focused on adjusting translation granularity or expanding the vocabulary size.

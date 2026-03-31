@@ -1,0 +1,40 @@
+================================ Human Message =================================
+
+QUERY:
+What is the type of the project 'Trancas Canyon Park Planting and Irrigation Repairs (FEMA/CalOES Project)'?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_Jg3ipO6YyELw4nb0bvPbza2I)
+ Call ID: call_Jg3ipO6YyELw4nb0bvPbza2I
+  Args:
+    pattern: Trancas Canyon Park Planting and Irrigation Repairs \(FEMA/CalOES Project\)
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Trancas Canyon Park Planting and Irrigation Repairs (FEMA/CalOES Project)
+¾ Updates:
+ The project consultant has started the design of this project.¾ Project Schedule
+ Complete Design: Summer 2021
+ Begin Construction: Summer/Fall 2021
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_59YBUOU16159a7b8CPVPPE5K)
+ Call ID: call_59YBUOU16159a7b8CPVPPE5K
+  Args:
+    pattern: FEMA|CalOES|disaster|capital
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Latigo  Canyon  Road  Roadway/Retaining  Wall  Improvements  (FEMA/CalOES Project)
+¾ Updates:
+ Staff is finalizing the design of this project.  Staff  is  also  working  with  FEMA/CalOES  to  substitute  the  existing timber with non-combustible materials.¾ Project Schedule
+ Complete Design: Spring 2021
+ Begin Construction: Summer 2021
+
+================================== Ai Message ==================================
+
+disaster

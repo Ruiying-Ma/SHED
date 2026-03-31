@@ -1,0 +1,62 @@
+================================ Human Message =================================
+
+QUERY:
+What are the types of chinese poetry that are generated?
+
+TABLE OF CONTENTS (TOC):
+1 | Generating Major Types of Chinese Classical Poetry in a Uniformed Framework
+1.1 | Abstract
+1.2 | 1. Introduction
+1.2.1 | 1.1. SHI
+1.2.2 | 1.2. CI
+1.3 | 2. Related Work
+1.4 | 3. Model
+1.4.1 | 3.1. Pre-processing
+1.4.2 | 3.2. Basic Model
+1.4.3 | 3.3. Enhanced Model
+1.5 | 4. Experiment
+1.5.1 | 4.1. Experiment Setup
+1.5.2 | 4.2. Performance Comparison of the Two Models in Form
+1.5.3 | 4.3. Effect of the Stanza Separation
+1.5.4 | 4.4. Case Observation
+1.6 | 5. Conclusion and Future Works
+1.7 | 6. Acknowledgements
+1.8 | 7. References
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_8hQng164scsi1mQ0nl7AKIHE)
+ Call ID: call_8hQng164scsi1mQ0nl7AKIHE
+  Args:
+    section_id: 1.1
+  read_section (call_T5vhInqLuCgl4h2ZjmbZHNWP)
+ Call ID: call_T5vhInqLuCgl4h2ZjmbZHNWP
+  Args:
+    section_id: 1.2.1
+  read_section (call_edwCe4kBWnza2S993qjNQwAh)
+ Call ID: call_edwCe4kBWnza2S993qjNQwAh
+  Args:
+    section_id: 1.2.2
+
+================================= Tool Message =================================
+Name: read_section
+
+Abstract
+Poetry generation is an interesting research topic in the field of text generation. As one of the most valuable literary and cultural heritages of China, Chinese classical poetry is very familiar and loved by Chinese people from generation to generation. It has many particular characteristics in its language structure, ranging from form, sound to meaning, thus is regarded as an ideal testing task for text generation. In this paper, we propose a GPT-2 based uniformed framework for generating major types of Chinese classical poems.  We define a unified format for formulating all types of training samples by integrating detailed form information, then present a simple form- stressed weighting method in GPT-2 to strengthen the control to the form of the generated poems, with special emphasis on those forms with longer body length. Preliminary experimental results show this enhanced model can generate Chinese classical poems of major types with high quality in both form and content, validating the effectiveness of the proposed strategy.  The model has been incorporated into Jiuge, the most influential Chinese classical poetry generation system developed by Tsinghua University (Guo et al., 2019).
+
+================================= Tool Message =================================
+Name: read_section
+
+1.1. SHI
+The majority of SHI has a fixed number of lines and a fixed and identical number of characters for all lines. Two major forms of SHI are Jueju and Lvshi with four lines and eight lines accordingly. Jueju and Lvshi are further divided into Wuyan Jueju and Qiyan Jueju as well as Wuyan Lvshi and Qiyan Lvshi where Wuyan means five characters each line and Qiyan means seven characters.  Figure 1 is a famous
+Figure 1: An example of SHI with Wuyan Jueju as its form. The array of small boxes, usually each surrounds a Chinese character, illustrates the form requirement in the number of lines and the number of characters per line for a poem. A full correspondence between character and box, no more and no less, indicates this basic form requirement is satis- fied by the given poem. classical poem of Wuyan Jueju . In addition, Lvshi has a strict requirement for the two-sentence pairs composed of < the third line, the fourth line > and < the fifth line, the sixth line > : they must satisfy the requirement of Duizhang , this is, a strict parallel matching for both part of speech and sense of every character in two lines. This obviously increases the difficulty of poem composition.According to CCPC1. 0, Wuyan Jueju , Qiyan Jueju , Wuyan Lvshi , and Qiyan Lvshi constitute 67.96% of SHI, with 4.26%, 22.57%, 15.99%, and 25.14% respectively.∗ Corresponding author
+
+================================= Tool Message =================================
+Name: read_section
+
+1.2. CI
+CI is another primary type of Chinese poetry. In contrast to SHI, CI has nearly one thousand forms. Each form of CI (it is called Cipai scholarly) is defined by a fixed number of lines for the poem and, a fixed number of characters for a particular line which usually varies for different lines.  The above settings for different Cipai are very distinct, for in- stance, the Cipai of Busuanzi contains 8 lines and 44 char- acters, as shown in Figure 2, whereas the Cipai of Man- jianghong contains 22 lines and 94 characters. The high diversity regarding the forms of CI further significantly in- creases the difficulty of poem composition. We observe the statistical distribution of all the forms (Cipai) of CI over CCPC1.0. It roughly follows Zipf’s law (Zipf, 1949). There exists a long tail in the distribution where a lot of Cipai only has a few instances which are far less enough for a computational model (algorithm) to learn its forms. So we choose the top frequent 121 forms of CI, constituting 80% of CCPC1. 0, as the focus for CI in this research.As can be seen from the above analysis, the greatest chal- lenge for machine generation of Chinese classical poems lies in how to make machine capable of following the uni- versal principles underlying the writing of Chinese classical poems. The to-date research cannot deal with this chal- lenge well.  Most of the work so far mainly targeted at automatic generation of Jueju (including Wuyan Jueju and Qiyan Jueju ), for an obvious reason that it is much easier for an algorithm to handle the requirements of form, the- matic coherence and integrity in the scenario of four lines than that in the scenario of Lvshi with eight lines, let alone much more complicated scenarios, i.e., CI, are taken into account.  In fact, the research on the automatic generation of CI is just at the very beginning stage.In this paper, we propose a uniformed computational frame- work that tries to generate major types of Chinese classi- cal poems with two major forms of SHI, Jueju , and Lvshi , as well as 121 major forms (Cipai) of CI using a single model. Preliminary experimental results validate the ef- fectiveness of the proposed framework.  The implemented model has been incorporated into Jiuge (Guo et al., 2019), the most influential Chinese classical poetry generation sys- tem developed by Tsinghua University (refer to http: //jiuge.thunlp.cn/ ).
+
+================================== Ai Message ==================================
+
+SHI and CI. For SHI, the generated forms are Jueju and Lvshi, including Wuyan Jueju, Qiyan Jueju, Wuyan Lvshi, and Qiyan Lvshi; for CI, the system generates 121 major forms of CI (Cipai).

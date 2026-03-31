@@ -1,0 +1,127 @@
+================================ Human Message =================================
+
+QUERY:
+What is the performance of the best model in the sign language recognition task?
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_6VGYCDqPOchbstbrJyEbmkdl)
+ Call ID: call_6VGYCDqPOchbstbrJyEbmkdl
+  Args:
+    pattern: sign language recognition
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+II. L ITERATURE R EVIEW
+Most sign language recognition systems use RGB video data as input. These approaches model sequential dependencies using Hidden Markov Models (HMM). Zafrullah et al. [8] used colored gloves (worn on hands) during data collection and developed an HMM based framework for ASL phrase verification. They also used hand crafted features from Kinect skeletal data and accelerometers worn on hand [9]. Huang et al.  [2] demonstrated the effectiveness of using Convolutional neural network (CNN) with RGB video data for sign language recognition. Three dimensional CNN have been used to extract spatio-temporal features from video [3]. Similar architecture was implemented for Italian gestures [10]. Sun et al. [4] hypothesized that not all RGB frames in a video are equally important and assigned a binary latent variable to each frame
+1 Contact author for the details. 2 IRB protocol 1338304-2: For privacy purposes we can only make the skeletal data and hand patches publicly available.in training videos for indicating the importance of a frame within a latent support vector machine model. Zaki et al. [11] proposed two new features with existing hand crafted features and developed the system using HMM based approach.  Some researchers have used appearance-based features and divided the approach into sub units of RGB and tracking data, with a HMM model for recognition [12].Compared to RGB methods, skeletal data has received little attention in ASL recognition. However, in a closely similar human action recognition task, a significant amount of work has been done using body joint location related data. Shahroudy et al. [13] published the largest dataset for human activity recognition.  They proposed an extension of long short term memory (LSTM) model which leverages group motion of several body joints to recognize human activity from skeletal data. A different adaptation of the LSTM model was proposed by Liu et al. [14] where spatial interaction among joints was considered in addition to the temporal dynamics. Veeriah et al. [15] proposed a LSTM network to capture the salient motion pattern of body joints.  This method takes into account the derivative of motion states associated with different body joints. Some have treated the whole body as a hierarchical configuration of different body parts and proposed a hierarchi- cal RNN to recognize human activities [6]. Several attention based models were proposed for human activity analysis [16], [17]. Some prior works converted skeleton sequences of body joints or RGB videos into an image representation and then applied state-of-the-art image recognition models [18], [19].  Motivated by the success of skeletal data in human activity recognition, we investigate its suitability for recognizing ASL signs.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_vvxpdKUX8ivq7l1GdpJZmTMG)
+ Call ID: call_vvxpdKUX8ivq7l1GdpJZmTMG
+  Args:
+    pattern: sign language recognition task
+    }```}####### Assistance Great;padding I'm going to call tool again but need correct pattern. Let's search for : ### Sorry. We'll search for 'best model' or 'best' within results.```
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Tool 'grep_search_next' failed after 1 attempt with TypeError: grep_search_next() got an unexpected keyword argument '}```}####### Assistance Great;padding I'm going to call tool again but need correct pattern. Let's search for '. Please try again.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_zdOYgXp1bekTDiekxGWpdlk2)
+ Call ID: call_zdOYgXp1bekTDiekxGWpdlk2
+  Args:
+    pattern: best model
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_afZsuEPEaPb8sVSxbR6sG5KG)
+ Call ID: call_afZsuEPEaPb8sVSxbR6sG5KG
+  Args:
+    pattern: recognition task
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+II. L ITERATURE R EVIEW
+Most sign language recognition systems use RGB video data as input. These approaches model sequential dependencies using Hidden Markov Models (HMM). Zafrullah et al. [8] used colored gloves (worn on hands) during data collection and developed an HMM based framework for ASL phrase verification. They also used hand crafted features from Kinect skeletal data and accelerometers worn on hand [9]. Huang et al.  [2] demonstrated the effectiveness of using Convolutional neural network (CNN) with RGB video data for sign language recognition. Three dimensional CNN have been used to extract spatio-temporal features from video [3]. Similar architecture was implemented for Italian gestures [10]. Sun et al. [4] hypothesized that not all RGB frames in a video are equally important and assigned a binary latent variable to each frame
+1 Contact author for the details. 2 IRB protocol 1338304-2: For privacy purposes we can only make the skeletal data and hand patches publicly available.in training videos for indicating the importance of a frame within a latent support vector machine model. Zaki et al. [11] proposed two new features with existing hand crafted features and developed the system using HMM based approach.  Some researchers have used appearance-based features and divided the approach into sub units of RGB and tracking data, with a HMM model for recognition [12].Compared to RGB methods, skeletal data has received little attention in ASL recognition. However, in a closely similar human action recognition task, a significant amount of work has been done using body joint location related data. Shahroudy et al. [13] published the largest dataset for human activity recognition.  They proposed an extension of long short term memory (LSTM) model which leverages group motion of several body joints to recognize human activity from skeletal data. A different adaptation of the LSTM model was proposed by Liu et al. [14] where spatial interaction among joints was considered in addition to the temporal dynamics. Veeriah et al. [15] proposed a LSTM network to capture the salient motion pattern of body joints.  This method takes into account the derivative of motion states associated with different body joints. Some have treated the whole body as a hierarchical configuration of different body parts and proposed a hierarchi- cal RNN to recognize human activities [6]. Several attention based models were proposed for human activity analysis [16], [17]. Some prior works converted skeleton sequences of body joints or RGB videos into an image representation and then applied state-of-the-art image recognition models [18], [19].  Motivated by the success of skeletal data in human activity recognition, we investigate its suitability for recognizing ASL signs.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_iSSioeVhd4ro8BFVhMvmhPvu)
+ Call ID: call_iSSioeVhd4ro8BFVhMvmhPvu
+  Args:
+    pattern: ASL
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+I. I NTRODUCTION
+According to The National Institute on Deafness, one in thousand infants is born deaf. An additional one to six per thousand are born with hearing loss at different levels [1]. Sign language is commonly used by Deaf and Hard-of- Hearing (DHH) persons to communicate via hand gestures. An automatic sign language recognizer enables an ASL user to translate the sign language to written text or speech, allowing them to communicate with people who are not familiar with ASL.  There is a tremendous rise in the popularity of personal digital assistants; available on user’s personal and wearable devices (Google Now, Amazon Alexa and Apple Siri, etc.) and also in the form of standalone devices (Amazon Echo and Google Home smart speakers). These devices are primarily controlled through voice, and hence, their functionality is not readily available to DHH users. An automatic sign recognizer can also enable the interaction between a DHH user and a digital assistant. Most current systems have capability of ASL recognition with RGB video data [2]–[4]. An ASL sign is performed by a combination of hand gestures, facial expressions and postures of the body. Sequential motion of specific body locations (such as hand-tip, neck and arm) provide informative cues about a sign. Using video data, it is difficult to extract different body locations and associated motion sequences from a series of RGB frames.  Microsoft Kinect is a 3D camera sensor which can use the depth information of a person to capture 3D coordinates of his/her body location across a video. This sequence of 3D body location is referred by skeletal data [5]. To the best of our knowledge, there is no publicly available skeletal dataset in literature for ASL recognition.With skeletal data, an ASL sign can be seen as a sequence of 3D coordinates or a 3D time series [6].  Recurrent neural networks (RNN) have shown strong performance for sequen- tial modeling [7]. In this work, we investigate the impact of RGB video data in recognition accuracy when combined with skeletal data. We also propose a combined RNN network with a simple spatial data augmentation technique. In summary, the contributions of this work are:
+• We propose an RNN architecture with a novel spatial data augmentation technique.
+• We propose an architecture which uses both RGB and skeletal data to improve recognition accuracy.
+• We introduce and publicly release a multi–modal dataset for ASL called GMU-ASL51.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_VMLjVSY6r1G7jRgO7ouogMSz)
+ Call ID: call_VMLjVSY6r1G7jRgO7ouogMSz
+  Args:
+    pattern: sign language recognition task
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_b981KN11VGN2DJAJCg3ivAWd)
+ Call ID: call_b981KN11VGN2DJAJCg3ivAWd
+  Args:
+    pattern: performance of the best model
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_bygS7yMsT9oQusx0GQtxLOOq)
+ Call ID: call_bygS7yMsT9oQusx0GQtxLOOq
+  Args:
+    pattern: results
+    }]}ERROR}### Need to call with valid pattern string### Let's search for 'Experiments' or 'Results' or 'Accuracy'.}'}]}'}]} }ERROR### I'm going to properly call tool. Sorry. Let's search for 'Results' pattern.}')}]} to=functions.grep_search_next ഭidence JSON I'm messing. I'll call with pattern : . Hmm. Need to send valid JSON only. I'll call grep_search_next with pattern
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+Tool 'grep_search_next' failed after 1 attempt with TypeError: grep_search_next() got an unexpected keyword argument '}]}ERROR}### Need to call with valid pattern string### Let's search for 'Experiments' or 'Results' or 'Accuracy'.}'}]}'}]} }ERROR### I'm going to properly call tool. Sorry. Let's search for 'Results' pattern.}')}]} to=functions.grep_search_next ഭidence JSON I'm messing. I'll call with pattern '. Please try again.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_lb1BJwY9kCBDVaM5awoOtavZ)
+ Call ID: call_lb1BJwY9kCBDVaM5awoOtavZ
+  Args:
+    pattern: Accuracy
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+D. Baseline Methods
+We use support vector machines and random forest for baseline comparison. The baseline models utilize skeletal data in each axis for every joint in building the following features per sample: Mean, Area, Skew, Kurtosis, Motion Energy, Range and Variance over the frames [26]. We have 6 upper body joints and 3 axes per joint and 7 features for each giving a total of 126 (7 × 6 × 3) features per sample. TABLE I A VERAGE CROSS SUBJECT (CS) ACCURACY ACROSS ALL TEST SUBJECTS FOR DIFFERENT PROPOSED ARCHITECTURES AND BASELINES . S TANDARD DEVIATION ACROSS TEST SUBJECTS ’ ACCURACY IS ALSO SHOWN .Methods Accuracy (CS) Std.  Deviation SVM 62% 10% Random Forest 66% 8% 3D CNN 52% 12% AI-LSTM 73% 6% Max CNN-LSTM 75% 7% Spatial AI-LSTM 81% 6%
+
+================================== Ai Message ==================================
+
+The best model (Spatial AI-LSTM) achieved 81% cross-subject accuracy with a 6% standard deviation.

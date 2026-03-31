@@ -1,0 +1,41 @@
+================================ Human Message =================================
+
+QUERY:
+What types of agreement relations do they explore?
+
+TABLE OF CONTENTS (TOC):
+1 | Does BERT agree? Evaluating knowledge of structure dependence through agreement relations
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2 Structure-dependent agreement relations
+1.4 | 3 Data
+1.4.1 | 3.1 Cloze data
+1.4.2 | 3.2 Feature data
+1.5 | 4 Experiment
+1.6 | 5 Results
+1.7 | 6 Related work
+1.8 | 7 Conclusions & future work
+1.9 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_VYEth8H739drHfCbeqlNs0ZN)
+ Call ID: call_VYEth8H739drHfCbeqlNs0ZN
+  Args:
+    section_id: 1.3
+
+================================= Tool Message =================================
+Name: read_section
+
+2 Structure-dependent agreement relations
+Agreement phenomena are an important and cross-linguistically common property of natural languages, and as such have been extensively stud- ied in syntax and morphology ( Corbett , 2006 ). 1 Languages often express grammatical features, such as number and gender, through inflectional morphology. An agreement relation is a mor- phophonologically overt co-variance in feature values between two words in a syntactic relation- ship ( Preminger , 2014 ).  In other words, agreement refers to when the morphosyntactic features of one word are reflected in its syntactic dependents. In this way, agreement relations are overt markers of covert syntactic structure. Thus, evaluating a model’s ability to capture agreement relations is also an evaluation of its ability to capture syntac- tic structure. Following Corbett ( 2003 ), we call the syntac- tically dependent word the “target” of the agree- ment relation, and the word with which it agrees we call the “controller”. An example of an agree- ment relation in English is given in ( 1 ), in which the inflected form of the verb BE ( are ) reflects the plural number of its syntactic head keys .  In all ex- amples in this section, the controller and target are given in bold. In this example, keys is the con- troller and are is the target of the agreement rela- tion.(1) The keys to the door are on the table.The agreement relation in ( 1 ) is between a sub- ject and its verb, but there are other types of agree-
+ment relations.  In addition to subject-verb agree- ment, three other types of agreement relations are cross-linguistically common: agreement of noun with i) determiner, ii) attributive adjective and iii) predicate adjective ( Baker , 2008 ). The latter two types are distinguished by whether the adjective modifies the noun within a noun phrase or whether it is predicated of the subject of a clause.  The first two types are sometimes categorized as nominal concord rather than agreement, but for our pur- poses this is merely a difference in terminology.The morphosyntactic feature in the agreement relation in ( 1 ) is number, a feature that is cross- linguistically common in agreement systems. In addition to number, the most commonly involved in agreement relations are gender, case and person ( Baker , 2008 ). With its comparatively limited inflectional mor- phology, English only exhibits subject-verb and determiner agreement (in demonstratives, “this” vs. “these”) and even then only agrees for num- ber. Languages with richer inflectional morphol- ogy tend to display more agreement types and in- volve more features. French, for example, em- ploys all four types of agreement relations.  Ex- amples are given in ( 2 )-( 5 ). The subject and verb in ( 2 ) agree for number, while the noun and deter- miner in ( 3 ), the noun and attributive adjective in ( 4 ) and the subject and predicated adjective in ( 5 ) agree for both number and gender.(2) Les cl´es de la porte se trouvent sur la table.‘The keys to the door are on the table.’
+ (3) Je peux voir les cl´es .‘I can see the keys.’
+(4) Je ne veux plus les cl´es totalement cass´ees . ‘I no longer want the completely broken keys.’
+(5) Les cl´es de la porte sont cass´ees .‘The keys to the door are broken.’
+ Previous work using agreement relations to as- sess knowledge of syntactic structure in mod- ern neural networks has focussed on subject-verb agreement in number ( Goldberg , 2019 ; Gulordava et al. , 2018 ; Linzen et al. , 2016 ). In our work, we study all four types of agreement relations and
+1 For a comprehensive bibliography, see http:// www.smg.surrey.ac.uk/projects/agreement/ bibliography/ . all four features discussed above. Moreover, pre- vious work using any method to assess BERT’s knowledge of syntactic structure has focussed ex- clusively on the single-language English model ( Hewitt and Manning , 2019 ; Goldberg , 2019 ; Ten- ney et al. , 2019 ; Lin et al. , 2019 ; Jawahar et al. , 2019 ; Clark et al. , 2019 ).  We expand this line of work to 26 languages. Not all languages in our sample exhibit all four types of agreement nor use all four features examined, but they all exhibit at least one of the agreement types involving at least one of the features.
+
+================================== Ai Message ==================================
+
+They explore subject-verb agreement, noun-determiner agreement, noun-attributive-adjective agreement, and subject-predicate-adjective agreement.

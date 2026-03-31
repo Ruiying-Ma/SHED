@@ -1,0 +1,76 @@
+================================ Human Message =================================
+
+QUERY:
+How do they decide what is the semantic concept label of particular cluster?
+
+TABLE OF CONTENTS (TOC):
+1 | Automatically Inferring Gender Associations from Language
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2 Related Work
+1.4 | 3 Data Collection
+1.5 | 4 Inferring Word-Level Associations
+1.5.1 | 4.1 Methods
+1.5.2 | 4.2 Findings
+1.6 | 5 Clustering & Cluster Labeling
+1.6.1 | 5.1 Methods
+1.6.2 | 5.2 Findings
+1.7 | 6 Human Evaluations
+1.8 | 7 Conclusion
+1.9 | References
+1.10 | A Appendix
+1.10.1 | A.1 Word-Level Results
+1.10.2 | A.2 Clustering and Cluster Labeling Results
+1.10.3 | A.3 Human Evaluation Results
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_jtnCuZuenvxq66qduNjLR8uJ)
+ Call ID: call_jtnCuZuenvxq66qduNjLR8uJ
+  Args:
+    pattern: semantic concept label
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_mvf2UCtQtpjvE9I657ZZPOx3)
+ Call ID: call_mvf2UCtQtpjvE9I657ZZPOx3
+  Args:
+    pattern: cluster
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1 | Abstract
+In this paper, we pose the question: do people talk about women and men in different ways? We introduce two datasets and a novel integra- tion of approaches for automatically inferring gender associations from language, discover- ing coherent word clusters, and labeling the clusters for the semantic concepts they repre- sent.  The datasets allow us to compare how people write about women and men in two dif- ferent settings - one set draws from celebrity news and the other from student reviews of computer science professors. We demonstrate that there are large-scale differences in the ways that people talk about women and men and that these differences vary across domains. Human evaluations show that our methods sig- nificantly outperform strong baselines.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_uHNLM8dL9U9xYNcicjQ955QH)
+ Call ID: call_uHNLM8dL9U9xYNcicjQ955QH
+  Args:
+    pattern: 5 Clustering & Cluster Labeling
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.6 | 5 Clustering & Cluster Labeling
+With word-level associations in hand, our next goals were to discover coherent clusters among the words and to automatically label those clusters.
+5.1 Methods
+First, we trained domain-specific word embed- dings using the Word2Vec ( Mikolov et al. , 2013 ) CBOW model ( w ∈ R 100 ). Then, we used k- means clustering to cluster the embeddings of the gender-associated words. Since k-means may con- verge at local optima, we ran the algorithm 50 times and kept the model with the lowest sum of squared errors. To automatically label the clusters, we com- bined the grounded knowledge of WordNet ( Miller , 1995 ) and context-sensitive strengths of domain-specific word embeddings. Our algo-
+rithm is similar to Poostchi and Piccardi 2018 ’s approach, but we extend their method by introduc- ing domain-specific word embeddings for cluster- ing as well as a new technique for sense disam- biguation.  Given a cluster, our algorithm proceeds with the following three steps:
+1. Sense disambiguation :The goal is to as- sign each cluster word to one of its WordNet synsets; let S represent the collection of cho- sen synsets. We know that these words have been clustered in domain-specific embedding space, which means that in the context of the domain, these words are very close semanti- cally. Thus, we choose S ∗ that minimizes the total distance between its synsets.
+2. Candidate label generation : In this step, we generate L ,the set of possible cluster labels. Our approach is simple: we take the union of all hypernyms of the synsets in S ∗ .
+3. Candidate label ranking : Here, we rank the synsets in L .We want labels that are as close to all of the synsets in S ∗ as possible; thus, we score the candidate labels by the sum of their distances to each synset in S ∗ and we rank them from least to most distance.In steps 1 and 3, we use WordNet pathwise dis- tance, but we encourage the exploration of other distance representations as well.
+5.2 Findings
+Table 3 displays a sample of our results – we find that the clusters are coherent in context and the la- bels seem reasonable. In the next section, we dis- cuss human evaluations that we conducted to more rigorously evaluate the output, but first we discuss the value of these methods toward analysis.At the word-level, we hypothesized that in the celebrity domain, women were more associated with appearance and men with creating content.  Now, we can validate those hypotheses against la- beled clusters – indeed, there is a cluster labeled clothing that is 100% female (i.e. 100% words are female-associated), and a 80% male cluster labeled movie . Likewise, in the professor do- main, we had guessed that women are associated with communication and men with knowledge, and there is a 100% female cluster labeled commu- nication and a 89% male cluster labeled cognition .  Thus, cluster labeling proves to be very effective at
+Domain Sample Words in Cluster F:M Top 3 Pred.  Cluster Labels Celeb gown, top, dress, pant, skirt, neckline 25:0 covering, cloth covering, clothing film, release, role, character, project 4:16 movie, show, event boyfriend, beau, hubby, wife, girlfriend 15:7 lover, person, relative Professor response, email, contact, answer 13:0 statement, message, communication material, concept, topic, stuff, subject 1:8 content, idea, cognition teacher, woman, lady, prof, guy, dude 5:7 man, adult, woman
+ Table 3: Sample of our clusters and predicted cluster labels. We include in the Appendix a more comprehensive table of our results. F:M refers to the ratio of female-associated to male-associated words in the cluster.pulling out the patterns that we believed we saw at the word-level, but could not formally validate. The clusters we mentioned so far all lean heav- ily toward one gender association or the other, but some clusters are interesting precisely be- cause they do not lean heavily – this allows us to see where semantic groupings do not align exactly with gender association.  For example, in the celebrity domain, there is a cluster la- beled lover that has a mix of female-associated words (“boyfriend,” “beau,” “hubby”) and male- associated words (“wife,” “girlfriend”). Jointly leveraging cluster labels and gender associations allows us to see that in the semantic context of hav- ing a lover , women are typically associated with male figures and men with female figures, which reflects heteronormativity in society.
+
+================================== Ai Message ==================================
+
+They assign each cluster word to a WordNet synset by choosing S* that minimizes the total distance between synsets, generate candidate labels L as the union of all hypernyms of the synsets in S*, and rank those candidates by the sum of their WordNet pathwise distances to the synsets in S*, selecting the label with the least total distance.
