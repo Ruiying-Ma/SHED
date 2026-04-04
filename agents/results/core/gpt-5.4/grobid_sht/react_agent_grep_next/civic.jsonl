@@ -1,0 +1,205 @@
+{"is_success": true, "message": "design", "latency": 2.2120180130004883, "input_tokens": 2251, "cached_tokens": 2688, "output_tokens": 33, "id": 0}
+{"is_success": true, "message": "design", "latency": 1.6925830841064453, "input_tokens": 4930, "cached_tokens": 0, "output_tokens": 30, "id": 1}
+{"is_success": true, "message": "none", "latency": 2.502345561981201, "input_tokens": 730, "cached_tokens": 4096, "output_tokens": 51, "id": 2}
+{"is_success": true, "message": "not started", "latency": 1.0385878086090088, "input_tokens": 284, "cached_tokens": 1280, "output_tokens": 6, "id": 3}
+{"is_success": true, "message": "not started", "latency": 1.7804906368255615, "input_tokens": 537, "cached_tokens": 2688, "output_tokens": 28, "id": 4}
+{"is_success": true, "message": "none", "latency": 2.0965137481689453, "input_tokens": 1880, "cached_tokens": 1280, "output_tokens": 27, "id": 5}
+{"is_success": true, "message": "none", "latency": 4.142563581466675, "input_tokens": 1118, "cached_tokens": 5504, "output_tokens": 76, "id": 6}
+{"is_success": true, "message": "capital", "latency": 1.9826691150665283, "input_tokens": 537, "cached_tokens": 2688, "output_tokens": 27, "id": 7}
+{"is_success": true, "message": "capital", "latency": 2.239335536956787, "input_tokens": 500, "cached_tokens": 2688, "output_tokens": 24, "id": 8}
+{"is_success": true, "message": "disaster", "latency": 1.770246982574463, "input_tokens": 499, "cached_tokens": 2688, "output_tokens": 25, "id": 9}
+{"is_success": true, "message": "none", "latency": 2.0284206867218018, "input_tokens": 352, "cached_tokens": 2688, "output_tokens": 49, "id": 20}
+{"is_success": true, "message": "none", "latency": 2.7039029598236084, "input_tokens": 336, "cached_tokens": 2688, "output_tokens": 41, "id": 21}
+{"is_success": true, "message": "none", "latency": 1.7062268257141113, "input_tokens": 428, "cached_tokens": 2560, "output_tokens": 27, "id": 22}
+{"is_success": true, "message": "none", "latency": 1.8978235721588135, "input_tokens": 335, "cached_tokens": 2688, "output_tokens": 38, "id": 23}
+{"is_success": true, "message": "design", "latency": 1.8439443111419678, "input_tokens": 1270, "cached_tokens": 2560, "output_tokens": 32, "id": 24}
+{"is_success": true, "message": "none", "latency": 1.6549546718597412, "input_tokens": 434, "cached_tokens": 2560, "output_tokens": 29, "id": 25}
+{"is_success": true, "message": "none", "latency": 1.9198124408721924, "input_tokens": 434, "cached_tokens": 2560, "output_tokens": 31, "id": 26}
+{"is_success": true, "message": "capital", "latency": 1.7044835090637207, "input_tokens": 598, "cached_tokens": 2560, "output_tokens": 24, "id": 27}
+{"is_success": true, "message": "none", "latency": 1.841026782989502, "input_tokens": 312, "cached_tokens": 2688, "output_tokens": 31, "id": 28}
+{"is_success": true, "message": "capital", "latency": 1.7035753726959229, "input_tokens": 1264, "cached_tokens": 2560, "output_tokens": 30, "id": 29}
+{"is_success": true, "message": "design", "latency": 3.1802821159362793, "input_tokens": 1231, "cached_tokens": 2560, "output_tokens": 30, "id": 40}
+{"is_success": true, "message": "none", "latency": 2.164141893386841, "input_tokens": 425, "cached_tokens": 2560, "output_tokens": 42, "id": 41}
+{"is_success": true, "message": "none", "latency": 1.7007830142974854, "input_tokens": 397, "cached_tokens": 2560, "output_tokens": 30, "id": 42}
+{"is_success": true, "message": "none", "latency": 3.0935542583465576, "input_tokens": 414, "cached_tokens": 2560, "output_tokens": 41, "id": 43}
+{"is_success": true, "message": "design", "latency": 1.9866087436676025, "input_tokens": 1231, "cached_tokens": 2560, "output_tokens": 30, "id": 44}
+{"is_success": true, "message": "none", "latency": 1.9566400051116943, "input_tokens": 414, "cached_tokens": 2560, "output_tokens": 41, "id": 45}
+{"is_success": true, "message": "none", "latency": 2.698214530944824, "input_tokens": 319, "cached_tokens": 2688, "output_tokens": 56, "id": 46}
+{"is_success": true, "message": "none", "latency": 2.5124340057373047, "input_tokens": 414, "cached_tokens": 2560, "output_tokens": 43, "id": 47}
+{"is_success": true, "message": "none", "latency": 1.9142310619354248, "input_tokens": 424, "cached_tokens": 2560, "output_tokens": 41, "id": 48}
+{"is_success": true, "message": "capital", "latency": 2.408046245574951, "input_tokens": 1225, "cached_tokens": 2560, "output_tokens": 28, "id": 49}
+{"is_success": true, "message": "none", "latency": 1.6989202499389648, "input_tokens": 344, "cached_tokens": 2560, "output_tokens": 29, "id": 60}
+{"is_success": true, "message": "none", "latency": 2.0086238384246826, "input_tokens": 356, "cached_tokens": 2560, "output_tokens": 33, "id": 61}
+{"is_success": true, "message": "none", "latency": 1.6923925876617432, "input_tokens": 362, "cached_tokens": 2560, "output_tokens": 35, "id": 62}
+{"is_success": true, "message": "none", "latency": 1.8496623039245605, "input_tokens": 356, "cached_tokens": 2560, "output_tokens": 33, "id": 63}
+{"is_success": true, "message": "none", "latency": 1.6967380046844482, "input_tokens": 347, "cached_tokens": 2560, "output_tokens": 30, "id": 64}
+{"is_success": true, "message": "none", "latency": 1.8856532573699951, "input_tokens": 347, "cached_tokens": 2560, "output_tokens": 30, "id": 65}
+{"is_success": true, "message": "none", "latency": 2.8971564769744873, "input_tokens": 347, "cached_tokens": 2560, "output_tokens": 30, "id": 66}
+{"is_success": true, "message": "none", "latency": 2.4733033180236816, "input_tokens": 344, "cached_tokens": 2560, "output_tokens": 29, "id": 67}
+{"is_success": true, "message": "none", "latency": 3.590106725692749, "input_tokens": 589, "cached_tokens": 3840, "output_tokens": 54, "id": 68}
+{"is_success": true, "message": "none", "latency": 2.9502830505371094, "input_tokens": 471, "cached_tokens": 3968, "output_tokens": 60, "id": 69}
+{"is_success": true, "message": "design", "latency": 2.17345929145813, "input_tokens": 2105, "cached_tokens": 2560, "output_tokens": 48, "id": 80}
+{"is_success": true, "message": "not started", "latency": 1.18717360496521, "input_tokens": 261, "cached_tokens": 1280, "output_tokens": 6, "id": 81}
+{"is_success": true, "message": "none", "latency": 2.158479928970337, "input_tokens": 600, "cached_tokens": 2560, "output_tokens": 55, "id": 83}
+{"is_success": true, "message": "none", "latency": 1.783430814743042, "input_tokens": 447, "cached_tokens": 2688, "output_tokens": 40, "id": 84}
+{"is_success": true, "message": "capital", "latency": 2.2969729900360107, "input_tokens": 576, "cached_tokens": 2688, "output_tokens": 24, "id": 85}
+{"is_success": true, "message": "capital", "latency": 1.7557682991027832, "input_tokens": 1947, "cached_tokens": 2688, "output_tokens": 24, "id": 86}
+{"is_success": true, "message": "capital", "latency": 1.7322032451629639, "input_tokens": 1948, "cached_tokens": 2688, "output_tokens": 29, "id": 87}
+{"is_success": true, "message": "capital", "latency": 1.0728063583374023, "input_tokens": 258, "cached_tokens": 1280, "output_tokens": 5, "id": 88}
+{"is_success": true, "message": "none", "latency": 1.8169395923614502, "input_tokens": 570, "cached_tokens": 2560, "output_tokens": 39, "id": 89}
+{"is_success": true, "message": "none", "latency": 1.7275941371917725, "input_tokens": 404, "cached_tokens": 2560, "output_tokens": 29, "id": 100}
+{"is_success": true, "message": "design", "latency": 1.6601173877716064, "input_tokens": 426, "cached_tokens": 2560, "output_tokens": 24, "id": 101}
+{"is_success": true, "message": "none", "latency": 1.9893360137939453, "input_tokens": 419, "cached_tokens": 2560, "output_tokens": 34, "id": 102}
+{"is_success": true, "message": "none", "latency": 1.9418160915374756, "input_tokens": 410, "cached_tokens": 2560, "output_tokens": 31, "id": 103}
+{"is_success": true, "message": "none", "latency": 2.1754541397094727, "input_tokens": 404, "cached_tokens": 2560, "output_tokens": 29, "id": 104}
+{"is_success": true, "message": "capital", "latency": 2.2643117904663086, "input_tokens": 1384, "cached_tokens": 2560, "output_tokens": 27, "id": 105}
+{"is_success": true, "message": "capital", "latency": 1.743638038635254, "input_tokens": 1387, "cached_tokens": 2560, "output_tokens": 28, "id": 106}
+{"is_success": true, "message": "capital", "latency": 3.3867359161376953, "input_tokens": 2489, "cached_tokens": 4992, "output_tokens": 70, "id": 107}
+{"is_success": true, "message": "none", "latency": 1.7311198711395264, "input_tokens": 422, "cached_tokens": 2560, "output_tokens": 35, "id": 108}
+{"is_success": true, "message": "capital", "latency": 2.134751081466675, "input_tokens": 1402, "cached_tokens": 2560, "output_tokens": 33, "id": 109}
+{"is_success": true, "message": "design", "latency": 3.1345794200897217, "input_tokens": 1560, "cached_tokens": 3968, "output_tokens": 49, "id": 120}
+{"is_success": true, "message": "none", "latency": 2.361769437789917, "input_tokens": 440, "cached_tokens": 2560, "output_tokens": 45, "id": 121}
+{"is_success": true, "message": "none", "latency": 1.8549070358276367, "input_tokens": 303, "cached_tokens": 2688, "output_tokens": 40, "id": 122}
+{"is_success": true, "message": "none", "latency": 3.516597032546997, "input_tokens": 317, "cached_tokens": 2688, "output_tokens": 50, "id": 123}
+{"is_success": true, "message": "none", "latency": 2.387356996536255, "input_tokens": 401, "cached_tokens": 2560, "output_tokens": 28, "id": 124}
+{"is_success": true, "message": "none", "latency": 2.9528090953826904, "input_tokens": 407, "cached_tokens": 2560, "output_tokens": 32, "id": 125}
+{"is_success": true, "message": "none", "latency": 2.336625814437866, "input_tokens": 1583, "cached_tokens": 1408, "output_tokens": 40, "id": 126}
+{"is_success": true, "message": "none", "latency": 3.2255232334136963, "input_tokens": 425, "cached_tokens": 2560, "output_tokens": 38, "id": 127}
+{"is_success": true, "message": "none", "latency": 2.0615437030792236, "input_tokens": 312, "cached_tokens": 2688, "output_tokens": 45, "id": 128}
+{"is_success": true, "message": "none", "latency": 3.9206600189208984, "input_tokens": 1614, "cached_tokens": 4864, "output_tokens": 66, "id": 129}
+{"is_success": true, "message": "none", "latency": 2.061347007751465, "input_tokens": 329, "cached_tokens": 2688, "output_tokens": 40, "id": 140}
+{"is_success": true, "message": "none", "latency": 1.9685113430023193, "input_tokens": 428, "cached_tokens": 2560, "output_tokens": 27, "id": 141}
+{"is_success": true, "message": "none", "latency": 2.3620553016662598, "input_tokens": 347, "cached_tokens": 2688, "output_tokens": 50, "id": 142}
+{"is_success": true, "message": "none", "latency": 2.009894847869873, "input_tokens": 1745, "cached_tokens": 1280, "output_tokens": 36, "id": 143}
+{"is_success": true, "message": "none", "latency": 2.217008590698242, "input_tokens": 1717, "cached_tokens": 1280, "output_tokens": 30, "id": 144}
+{"is_success": true, "message": "none", "latency": 2.2803380489349365, "input_tokens": 339, "cached_tokens": 2688, "output_tokens": 42, "id": 145}
+{"is_success": true, "message": "none", "latency": 4.4283318519592285, "input_tokens": 653, "cached_tokens": 3968, "output_tokens": 49, "id": 146}
+{"is_success": true, "message": "none", "latency": 1.7390460968017578, "input_tokens": 428, "cached_tokens": 2560, "output_tokens": 27, "id": 147}
+{"is_success": true, "message": "none", "latency": 1.6774036884307861, "input_tokens": 437, "cached_tokens": 2560, "output_tokens": 30, "id": 148}
+{"is_success": true, "message": "capital", "latency": 2.8316776752471924, "input_tokens": 478, "cached_tokens": 2560, "output_tokens": 24, "id": 149}
+{"is_success": true, "message": "design", "latency": 2.8220319747924805, "input_tokens": 386, "cached_tokens": 2688, "output_tokens": 24, "id": 160}
+{"is_success": true, "message": "none", "latency": 5.382880926132202, "input_tokens": 391, "cached_tokens": 2688, "output_tokens": 48, "id": 161}
+{"is_success": true, "message": "design", "latency": 2.2559688091278076, "input_tokens": 429, "cached_tokens": 2688, "output_tokens": 24, "id": 162}
+{"is_success": true, "message": "design", "latency": 1.9456753730773926, "input_tokens": 1368, "cached_tokens": 2688, "output_tokens": 27, "id": 163}
+{"is_success": true, "message": "design", "latency": 1.960071086883545, "input_tokens": 439, "cached_tokens": 2688, "output_tokens": 24, "id": 164}
+{"is_success": true, "message": "none", "latency": 2.7702252864837646, "input_tokens": 580, "cached_tokens": 4096, "output_tokens": 70, "id": 165}
+{"is_success": true, "message": "capital", "latency": 1.728553056716919, "input_tokens": 1380, "cached_tokens": 2688, "output_tokens": 31, "id": 166}
+{"is_success": true, "message": "capital", "latency": 2.957528591156006, "input_tokens": 429, "cached_tokens": 2688, "output_tokens": 24, "id": 167}
+{"is_success": true, "message": "none", "latency": 2.4447124004364014, "input_tokens": 360, "cached_tokens": 2688, "output_tokens": 29, "id": 168}
+{"is_success": true, "message": "capital", "latency": 1.7530410289764404, "input_tokens": 1368, "cached_tokens": 2688, "output_tokens": 27, "id": 169}
+{"is_success": true, "message": "design", "latency": 1.7244985103607178, "input_tokens": 1372, "cached_tokens": 2560, "output_tokens": 24, "id": 180}
+{"is_success": true, "message": "completed", "latency": 2.820563793182373, "input_tokens": 1384, "cached_tokens": 2560, "output_tokens": 29, "id": 181}
+{"is_success": true, "message": "none", "latency": 2.324369192123413, "input_tokens": 413, "cached_tokens": 2560, "output_tokens": 30, "id": 182}
+{"is_success": true, "message": "completed", "latency": 3.5147531032562256, "input_tokens": 2477, "cached_tokens": 4992, "output_tokens": 62, "id": 183}
+{"is_success": true, "message": "none", "latency": 2.008425712585449, "input_tokens": 422, "cached_tokens": 2560, "output_tokens": 35, "id": 184}
+{"is_success": true, "message": "capital", "latency": 1.764460563659668, "input_tokens": 1384, "cached_tokens": 2560, "output_tokens": 29, "id": 185}
+{"is_success": true, "message": "none", "latency": 6.5997467041015625, "input_tokens": 872, "cached_tokens": 5760, "output_tokens": 90, "id": 186}
+{"is_success": true, "message": "disaster", "latency": 5.125250816345215, "input_tokens": 3063, "cached_tokens": 8320, "output_tokens": 129, "id": 187}
+{"is_success": true, "message": "capital", "latency": 2.9703667163848877, "input_tokens": 2570, "cached_tokens": 4864, "output_tokens": 49, "id": 188}
+{"is_success": true, "message": "disaster", "latency": 4.612519264221191, "input_tokens": 4635, "cached_tokens": 7424, "output_tokens": 119, "id": 189}
+{"is_success": true, "message": "none", "latency": 2.6822614669799805, "input_tokens": 365, "cached_tokens": 2560, "output_tokens": 34, "id": 200}
+{"is_success": true, "message": "none", "latency": 1.8569507598876953, "input_tokens": 350, "cached_tokens": 2560, "output_tokens": 29, "id": 202}
+{"is_success": true, "message": "design", "latency": 2.608234405517578, "input_tokens": 1526, "cached_tokens": 2560, "output_tokens": 27, "id": 203}
+{"is_success": true, "message": "none", "latency": 2.251915216445923, "input_tokens": 1714, "cached_tokens": 1280, "output_tokens": 31, "id": 220}
+{"is_success": true, "message": "none", "latency": 2.4631452560424805, "input_tokens": 431, "cached_tokens": 2560, "output_tokens": 30, "id": 221}
+{"is_success": true, "message": "design", "latency": 2.9249205589294434, "input_tokens": 2306, "cached_tokens": 2688, "output_tokens": 52, "id": 222}
+{"is_success": true, "message": "none", "latency": 2.132706880569458, "input_tokens": 428, "cached_tokens": 2560, "output_tokens": 29, "id": 223}
+{"is_success": true, "message": "none", "latency": 1.9498438835144043, "input_tokens": 425, "cached_tokens": 2560, "output_tokens": 28, "id": 224}
+{"is_success": true, "message": "none", "latency": 4.022786378860474, "input_tokens": 2738, "cached_tokens": 7296, "output_tokens": 72, "id": 225}
+{"is_success": true, "message": "disaster", "latency": 2.8396520614624023, "input_tokens": 2294, "cached_tokens": 2688, "output_tokens": 45, "id": 226}
+{"is_success": true, "message": "none", "latency": 2.3122365474700928, "input_tokens": 452, "cached_tokens": 2560, "output_tokens": 41, "id": 227}
+{"is_success": true, "message": "capital", "latency": 3.74086594581604, "input_tokens": 2590, "cached_tokens": 5888, "output_tokens": 59, "id": 228}
+{"is_success": true, "message": "disaster", "latency": 1.9969871044158936, "input_tokens": 2285, "cached_tokens": 2688, "output_tokens": 44, "id": 229}
+{"is_success": true, "message": "none", "latency": 1.8549628257751465, "input_tokens": 312, "cached_tokens": 2688, "output_tokens": 33, "id": 240}
+{"is_success": true, "message": "none", "latency": 2.73740553855896, "input_tokens": 333, "cached_tokens": 2688, "output_tokens": 42, "id": 241}
+{"is_success": true, "message": "design", "latency": 2.7525875568389893, "input_tokens": 739, "cached_tokens": 3968, "output_tokens": 52, "id": 242}
+{"is_success": true, "message": "none", "latency": 1.6696982383728027, "input_tokens": 436, "cached_tokens": 2560, "output_tokens": 29, "id": 243}
+{"is_success": true, "message": "not started", "latency": 2.7833139896392822, "input_tokens": 3682, "cached_tokens": 3840, "output_tokens": 47, "id": 244}
+{"is_success": true, "message": "none", "latency": 1.6652567386627197, "input_tokens": 428, "cached_tokens": 2560, "output_tokens": 29, "id": 245}
+{"is_success": true, "message": "disaster", "latency": 5.432189464569092, "input_tokens": 2449, "cached_tokens": 5120, "output_tokens": 60, "id": 246}
+{"is_success": true, "message": "none", "latency": 2.1611838340759277, "input_tokens": 336, "cached_tokens": 2688, "output_tokens": 45, "id": 247}
+{"is_success": true, "message": "disaster", "latency": 4.5159912109375, "input_tokens": 2456, "cached_tokens": 5120, "output_tokens": 65, "id": 248}
+{"is_success": true, "message": "none", "latency": 1.8517684936523438, "input_tokens": 431, "cached_tokens": 2560, "output_tokens": 30, "id": 249}
+{"is_success": true, "message": "none", "latency": 3.1395490169525146, "input_tokens": 3132, "cached_tokens": 3968, "output_tokens": 74, "id": 260}
+{"is_success": true, "message": "none", "latency": 2.266961097717285, "input_tokens": 301, "cached_tokens": 2688, "output_tokens": 44, "id": 261}
+{"is_success": true, "message": "none", "latency": 3.5971505641937256, "input_tokens": 1833, "cached_tokens": 5248, "output_tokens": 69, "id": 262}
+{"is_success": true, "message": "disaster", "latency": 1.6481127738952637, "input_tokens": 465, "cached_tokens": 2560, "output_tokens": 25, "id": 265}
+{"is_success": true, "message": "none", "latency": 1.8450562953948975, "input_tokens": 403, "cached_tokens": 2560, "output_tokens": 28, "id": 266}
+{"is_success": true, "message": "none", "latency": 4.369522333145142, "input_tokens": 1718, "cached_tokens": 5376, "output_tokens": 72, "id": 267}
+{"is_success": true, "message": "none", "latency": 3.7853450775146484, "input_tokens": 421, "cached_tokens": 2560, "output_tokens": 36, "id": 268}
+{"is_success": true, "message": "none", "latency": 1.6308143138885498, "input_tokens": 471, "cached_tokens": 2560, "output_tokens": 24, "id": 269}
+{"is_success": true, "message": "design", "latency": 2.1117732524871826, "input_tokens": 1575, "cached_tokens": 2560, "output_tokens": 36, "id": 280}
+{"is_success": true, "message": "design", "latency": 2.3492562770843506, "input_tokens": 1560, "cached_tokens": 2560, "output_tokens": 24, "id": 281}
+{"is_success": true, "message": "none", "latency": 2.3445487022399902, "input_tokens": 382, "cached_tokens": 2560, "output_tokens": 29, "id": 283}
+{"is_success": true, "message": "not started", "latency": 2.041496753692627, "input_tokens": 1571, "cached_tokens": 2560, "output_tokens": 33, "id": 284}
+{"is_success": true, "message": "none", "latency": 2.903904438018799, "input_tokens": 1717, "cached_tokens": 5120, "output_tokens": 49, "id": 286}
+{"is_success": true, "message": "capital", "latency": 1.9080190658569336, "input_tokens": 1562, "cached_tokens": 2560, "output_tokens": 29, "id": 287}
+{"is_success": true, "message": "capital", "latency": 2.388033151626587, "input_tokens": 1565, "cached_tokens": 2560, "output_tokens": 30, "id": 288}
+{"is_success": true, "message": "capital", "latency": 2.57474946975708, "input_tokens": 1573, "cached_tokens": 2560, "output_tokens": 38, "id": 289}
+{"is_success": true, "message": "none", "latency": 3.001164674758911, "input_tokens": 376, "cached_tokens": 2560, "output_tokens": 31, "id": 301}
+{"is_success": true, "message": "design", "latency": 1.7444541454315186, "input_tokens": 1328, "cached_tokens": 2560, "output_tokens": 29, "id": 302}
+{"is_success": true, "message": "none", "latency": 2.363715410232544, "input_tokens": 376, "cached_tokens": 2560, "output_tokens": 31, "id": 303}
+{"is_success": true, "message": "not started", "latency": 1.8906853199005127, "input_tokens": 1325, "cached_tokens": 2560, "output_tokens": 29, "id": 304}
+{"is_success": true, "message": "none", "latency": 4.050175666809082, "input_tokens": 765, "cached_tokens": 3968, "output_tokens": 73, "id": 320}
+{"is_success": true, "message": "none", "latency": 1.8920414447784424, "input_tokens": 378, "cached_tokens": 2688, "output_tokens": 33, "id": 321}
+{"is_success": true, "message": "none", "latency": 1.7488312721252441, "input_tokens": 521, "cached_tokens": 2560, "output_tokens": 40, "id": 322}
+{"is_success": true, "message": "design", "latency": 2.185640335083008, "input_tokens": 1802, "cached_tokens": 2688, "output_tokens": 30, "id": 323}
+{"is_success": true, "message": "design", "latency": 1.8227169513702393, "input_tokens": 398, "cached_tokens": 2688, "output_tokens": 24, "id": 324}
+{"is_success": true, "message": "none", "latency": 1.858506202697754, "input_tokens": 509, "cached_tokens": 2560, "output_tokens": 36, "id": 325}
+{"is_success": true, "message": "none", "latency": 2.0801737308502197, "input_tokens": 389, "cached_tokens": 2688, "output_tokens": 44, "id": 326}
+{"is_success": true, "message": "none", "latency": 6.280809640884399, "input_tokens": 2186, "cached_tokens": 8448, "output_tokens": 90, "id": 327}
+{"is_success": true, "message": "none", "latency": 3.691460132598877, "input_tokens": 398, "cached_tokens": 2688, "output_tokens": 47, "id": 328}
+{"is_success": true, "message": "none", "latency": 1.9003360271453857, "input_tokens": 393, "cached_tokens": 2688, "output_tokens": 40, "id": 329}
+{"is_success": true, "message": "not started", "latency": 1.7678265571594238, "input_tokens": 495, "cached_tokens": 2688, "output_tokens": 25, "id": 340}
+{"is_success": true, "message": "completed", "latency": 2.024167776107788, "input_tokens": 1427, "cached_tokens": 2560, "output_tokens": 31, "id": 341}
+{"is_success": true, "message": "none", "latency": 1.9342172145843506, "input_tokens": 524, "cached_tokens": 2560, "output_tokens": 29, "id": 342}
+{"is_success": true, "message": "none", "latency": 4.342291593551636, "input_tokens": 2540, "cached_tokens": 7424, "output_tokens": 93, "id": 343}
+{"is_success": true, "message": "not started", "latency": 1.8130102157592773, "input_tokens": 633, "cached_tokens": 2560, "output_tokens": 25, "id": 344}
+{"is_success": true, "message": "capital", "latency": 1.644458293914795, "input_tokens": 495, "cached_tokens": 2688, "output_tokens": 24, "id": 345}
+{"is_success": true, "message": "capital", "latency": 2.929880142211914, "input_tokens": 424, "cached_tokens": 2688, "output_tokens": 24, "id": 346}
+{"is_success": true, "message": "none", "latency": 2.221468925476074, "input_tokens": 429, "cached_tokens": 2688, "output_tokens": 42, "id": 347}
+{"is_success": true, "message": "none", "latency": 1.8229448795318604, "input_tokens": 423, "cached_tokens": 2688, "output_tokens": 40, "id": 348}
+{"is_success": true, "message": "none", "latency": 1.6929826736450195, "input_tokens": 399, "cached_tokens": 2688, "output_tokens": 34, "id": 349}
+{"is_success": true, "message": "not started", "latency": 1.6887433528900146, "input_tokens": 427, "cached_tokens": 2688, "output_tokens": 28, "id": 360}
+{"is_success": true, "message": "design", "latency": 2.6607537269592285, "input_tokens": 1839, "cached_tokens": 2688, "output_tokens": 29, "id": 361}
+{"is_success": true, "message": "none", "latency": 4.012212514877319, "input_tokens": 2349, "cached_tokens": 6912, "output_tokens": 83, "id": 362}
+{"is_success": true, "message": "design", "latency": 4.152921199798584, "input_tokens": 1989, "cached_tokens": 5632, "output_tokens": 71, "id": 363}
+{"is_success": true, "message": "design", "latency": 2.1170010566711426, "input_tokens": 1844, "cached_tokens": 2688, "output_tokens": 36, "id": 364}
+{"is_success": true, "message": "none", "latency": 1.9571614265441895, "input_tokens": 399, "cached_tokens": 2688, "output_tokens": 48, "id": 365}
+{"is_success": true, "message": "disaster", "latency": 1.969433069229126, "input_tokens": 1983, "cached_tokens": 2560, "output_tokens": 46, "id": 366}
+{"is_success": true, "message": "none", "latency": 2.139357805252075, "input_tokens": 365, "cached_tokens": 2688, "output_tokens": 28, "id": 367}
+{"is_success": true, "message": "disaster", "latency": 2.0586466789245605, "input_tokens": 1825, "cached_tokens": 2688, "output_tokens": 28, "id": 368}
+{"is_success": true, "message": "none", "latency": 1.951223611831665, "input_tokens": 395, "cached_tokens": 2688, "output_tokens": 40, "id": 369}
+{"is_success": true, "message": "Vehicle Protection Devices Project", "latency": 2.4385833740234375, "input_tokens": 557, "cached_tokens": 2688, "output_tokens": 27, "id": 380}
+{"is_success": true, "message": "none", "latency": 7.870630741119385, "input_tokens": 4657, "cached_tokens": 9344, "output_tokens": 116, "id": 381}
+{"is_success": true, "message": "none", "latency": 4.814063310623169, "input_tokens": 2655, "cached_tokens": 8448, "output_tokens": 103, "id": 382}
+{"is_success": true, "message": "Outdoor Warning Sirens (FEMA)", "latency": 4.253044366836548, "input_tokens": 2790, "cached_tokens": 6400, "output_tokens": 97, "id": 383}
+{"is_success": true, "message": "none", "latency": 5.555190563201904, "input_tokens": 3583, "cached_tokens": 8448, "output_tokens": 88, "id": 384}
+{"is_success": true, "message": "none", "latency": 2.1472160816192627, "input_tokens": 421, "cached_tokens": 2560, "output_tokens": 32, "id": 385}
+{"is_success": true, "message": "none", "latency": 0.9951555728912354, "input_tokens": 162, "cached_tokens": 1280, "output_tokens": 5, "id": 386}
+{"is_success": true, "message": "none", "latency": 0.8372421264648438, "input_tokens": 162, "cached_tokens": 1280, "output_tokens": 5, "id": 387}
+{"is_success": true, "message": "none", "latency": 10.876031160354614, "input_tokens": 2842, "cached_tokens": 14080, "output_tokens": 157, "id": 388}
+{"is_success": true, "message": "Annual Street Maintenance; Bluffs Park Shade Structure", "latency": 6.155360221862793, "input_tokens": 3884, "cached_tokens": 9856, "output_tokens": 114, "id": 390}
+{"is_success": true, "message": "none", "latency": 3.996288299560547, "input_tokens": 2724, "cached_tokens": 6400, "output_tokens": 73, "id": 391}
+{"is_success": true, "message": "Outdoor Warning Sirens (FEMA Project)", "latency": 4.14116644859314, "input_tokens": 2828, "cached_tokens": 6272, "output_tokens": 80, "id": 392}
+{"is_success": true, "message": "PCH Signal Synchronization System Improvements Project", "latency": 3.7145626544952393, "input_tokens": 1868, "cached_tokens": 6272, "output_tokens": 69, "id": 393}
+{"is_success": true, "message": "Outdoor Warning Sirens (FEMA Project)", "latency": 7.128287076950073, "input_tokens": 2151, "cached_tokens": 11264, "output_tokens": 108, "id": 394}
+{"is_success": true, "message": "Outdoor Warning Sirens (FEMA Project)", "latency": 5.285843133926392, "input_tokens": 2491, "cached_tokens": 7936, "output_tokens": 139, "id": 395}
+{"is_success": true, "message": "none", "latency": 5.171851873397827, "input_tokens": 2767, "cached_tokens": 6656, "output_tokens": 92, "id": 396}
+{"is_success": true, "message": "Permanent Skate Park; Michael Landon Center HVAC Replacement Project; Bluffs Park Shade Structure", "latency": 12.14003849029541, "input_tokens": 5645, "cached_tokens": 22144, "output_tokens": 283, "id": 397}
+{"is_success": true, "message": "Outdoor Warning Sirens (FEMA Project)", "latency": 6.3319315910339355, "input_tokens": 2348, "cached_tokens": 9856, "output_tokens": 124, "id": 399}
+{"is_success": true, "message": "none", "latency": 3.130112409591675, "input_tokens": 2864, "cached_tokens": 5120, "output_tokens": 47, "id": 400}
+{"is_success": true, "message": "Trancas Canyon Park Planting and Irrigation Repairs (CalJPIA/FEMA Project); Broad Beach Road Water Quality Infrastructure Repairs (CalJPIA Project); Trancas Canyon Park Slope Stabilization Project (CalJPIA Project); Point Dume Decomposed Granite Walkway Repair Project", "latency": 2.6884520053863525, "input_tokens": 2287, "cached_tokens": 2688, "output_tokens": 90, "id": 402}
+{"is_success": true, "message": "none", "latency": 3.323699474334717, "input_tokens": 4598, "cached_tokens": 5888, "output_tokens": 73, "id": 403}
+{"is_success": true, "message": "none", "latency": 4.316376686096191, "input_tokens": 1064, "cached_tokens": 5376, "output_tokens": 62, "id": 404}
+{"is_success": true, "message": "Outdoor Warning Sirens (FEMA Project)", "latency": 3.000391960144043, "input_tokens": 733, "cached_tokens": 3968, "output_tokens": 51, "id": 405}
+{"is_success": true, "message": "none", "latency": 3.7360072135925293, "input_tokens": 2196, "cached_tokens": 5504, "output_tokens": 62, "id": 407}
+{"is_success": true, "message": "none", "latency": 2.8406453132629395, "input_tokens": 420, "cached_tokens": 2560, "output_tokens": 24, "id": 408}
+{"is_success": true, "message": "none", "latency": 1.7025604248046875, "input_tokens": 1576, "cached_tokens": 2560, "output_tokens": 24, "id": 409}
+{"is_success": true, "message": "none", "latency": 2.8863399028778076, "input_tokens": 2550, "cached_tokens": 3840, "output_tokens": 50, "id": 410}
+{"is_success": true, "message": "Outdoor Warning Sirens (FEMA Project)", "latency": 6.990276575088501, "input_tokens": 3147, "cached_tokens": 11520, "output_tokens": 186, "id": 412}
+{"is_success": true, "message": "PCH Signal Synchronization System Improvements Project", "latency": 18.55473518371582, "input_tokens": 9480, "cached_tokens": 18304, "output_tokens": 295, "id": 413}
+{"is_success": true, "message": "none", "latency": 4.0676209926605225, "input_tokens": 2534, "cached_tokens": 7424, "output_tokens": 74, "id": 414}
+{"is_success": true, "message": "none", "latency": 3.0745480060577393, "input_tokens": 1410, "cached_tokens": 6016, "output_tokens": 67, "id": 415}
+{"is_success": true, "message": "Vehicle Protection Devices Project; Legacy Park Paver Repair Project; Malibu Bluffs Park South Walkway; Trancas Playground Resurfacing; PCH Overhead Warning Signs", "latency": 6.0459043979644775, "input_tokens": 1153, "cached_tokens": 9088, "output_tokens": 132, "id": 416}
+{"is_success": true, "message": "none", "latency": 8.677165269851685, "input_tokens": 3987, "cached_tokens": 13696, "output_tokens": 157, "id": 417}

@@ -1,0 +1,60 @@
+================================ Human Message =================================
+
+QUERY:
+who annotated the new dataset?
+
+TABLE OF CONTENTS (TOC):
+1 | Enhancing PIO Element Detection in Medical Text Using Contextualized Embedding
+1.1 | Abstract
+1.1.1 | 1 Introduction
+1.1.1.1 | 2 Datasets
+1.1.1.1.1 | 3 BERT-Based Classiﬁcation Model
+1.1.1.1.1.1 | 3.1 Background
+1.1.1.1.1.1.1 | 3.2 The Model
+1.1.1.1.1.1.1.1 | 4 Results
+1.1.1.1.1.1.1.1.1 | 4.1 Performance Comparison
+1.1.1.1.1.1.1.1.1.1 | 4.2 Model Boosting
+1.1.1.1.1.1.1.1.1.1.1 | 5 Discussion and Conclusion
+1.1.1.1.1.1.1.1.1.1.1.1 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_TmnAewm69ty14C4rYekTNejs)
+ Call ID: call_TmnAewm69ty14C4rYekTNejs
+  Args:
+    section_id: 1.1.1.1
+
+================================= Tool Message =================================
+Name: read_section
+
+2 Datasets
+In this study, we introduce PICONET, a multi- label dataset consisting of sequences with labels Population/Problem (P), Intervention (I), and Out- come (O). This dataset was created by collecting structured abstracts from PubMed and carefully choosing abstract headings representative of the desired categories. The present approach is an im- provement over a similar approach used in ( Jin and Szolovits , 2018 ). Our aim was to perform automatic labeling while removing as much ambiguity as possible. We performed a search on April 11, 2019 on PubMed for 363,078 structured abstracts with the following filters: Article Types (Clinical Trial), Species (Humans), and Languages (En- glish).  Structured abstract sections from PubMed have labels such as introduction, goals, study de- sign, findings, or discussion; however, the major- ity of these labels are not useful for P, I, and O ex- traction since most are general (e.g. methods ) and do not isolate a specific P, I, O sequence.  There- fore, in order to narrow down abstract sections that correspond to the P label, for example, we needed to find a subset of labels such as, but not limited to population , patients , and subjects . We performed a lemmatization of the abstract section labels in order to cluster similar categories such as subject and subjects .  Using this approach, we carefully chose candidate labels for each P, I, and O, and manually looked at a small number of samples for each label to determine if text was representative.Since our goal was to collect sequences that are uniquely representative of a description of Pop- ulation, Intervention, and Outcome, we avoided a keyword-based approach such as in ( Jin and Szolovits , 2018 ). For example, using a keyword-
+ Category Sentences I 22818 I O 7 I P 337 O 10994 P 30106 P O 13 NEGATIVE 32053
+Table 1: Number of occurrences of each category P, I and O in abstracts. based approach would yield a sequence labeled population and methods with the label P, but such abstract sections were not purely about the popu- lation and contained information about the inter- ventions and study design making them poor can- didates for a P label. Thus, we were able to ex- tract portions of abstracts pertaining to P, I, and O categories while minimizing ambiguity and re- dundancy.  Moreover, in the dataset from ( Jin and Szolovits , 2018 ), a section labeled as P that con- tained more than one sentence would be split into multiple P sentences to be included in the dataset. We avoided this approach and kept the full abstract sections.  The full abstracts were kept in conjunc- tion with our belief that keeping the full section retains more feature-rich sequences for each se- quence, and that individual sentences from long abstract sections can be poor candidates for the corresponding label.For sections with labels such as population and intervention , we created a mutli-label. We also included negative examples by taking sentences from sections with headings such as aim .  Further- more, we cleaned the remaining data with various approaches including, but not limited to, language identification, removal of missing values, cleaning unicode characters, and filtering for sequences be- tween 5 and 200 words, inclusive.
+3 BERT-Based Classiﬁcation Model
+3.1 Background
+BERT (Bidirectional Encoder Representations from Transformers) is a deep bidirectional atten- tion text embedding model. The idea behind this model is to pre-train a bidirectional representation by jointly conditioning on both left and right con- texts in all layers using a transformer ( Vaswani et al. , 2017 ; Devlin et al. , 2018 ). Like any other
+language model, BERT can be pre-trained on dif- ferent contexts.  A contextualized representation is generally optimized for downstream NLP tasks.Since its release, BERT has been pre-trained on a multitude of corpora. In the following, we de- scribe different BERT embedding versions used for our classification problem. The first version is based on the original BERT release ( Devlin et al. , 2018 ). This model is pre-trained on the BooksCor- pus (800M words) ( Zhu et al.  , 2015 ) and En- glish Wikipedia (2,500M words). For Wikipedia, text passages were extracted while lists were ig- nored. The second version is BioBERT ( Lee et al. , 2019 ), which was trained on biomedical corpora: PubMed (4.5B words) and PMC (13.5B words).
+3.2 The Model
+The classification model is built on top of the BERT representation by adding a dense layer cor- responding to the multi-label classifier with three output neurons corresponding to PIO labels. In order to insure that independent probabilities are assigned to the labels, as a loss function we have chosen the binary cross entropy with logits (BCE- WithLogits) defined by
+ E = − n X i =1 ( t i log ( y i ) + (1 − t i ) log (1 − y i )); (1)
+where t and y are the target and output vectors, re- spectively; n is the number of independent targets (n=3). The outputs are computed by applying the logistic function to the weighted sums of the last hidden layer activations, s,
+y i = 1 1 + e − s i , (2)
+ s i = X j =1 h j w ji . (3)
+For the original BERT model, we have cho- sen the smallest uncased model, Bert-Base. The model has 12 attention layers and all texts are con- verted to lowercase by the tokenizer ( Devlin et al. , 2018 ). The architecture of the model is illustrated in Figure 1 . Using this framework, we trained the model using the two pretrained embedding models de- scribed in the previous section. It is worth to men- tion that the embedding is contextualized during the training phase. For both models, the pretrained embedding layer is frozen during the first epoch
+(the embedding vectors are not updated). After the first epoch, the embedding layer is unfrozen and the vectors are fine-tuned for the classifica- tion task during training.  The advantage of this approach is that few parameters need to be learned from scratch ( Howard and Ruder , 2018 ; Radford et al. , 2018 ; Devlin et al. , 2018 ).Figure 1: Structure of the classifier.
+4 Results
+4.1 Performance Comparison
+In order to quantify the performance of the clas- sification model, we computed the precision and recall scores. On average, it was found that the model leads to better results when trained using the BioBERT embedding. In addition, the perfor- mance of the PIO classifier was measured by av- eraging the three Area Under Receiver Operating Characteristic Curve (ROC AUC) scores for P, I, and O. The ROC AUC score of 0. 9951 was ob- tained by the model using the general BERT em- bedding. This score was improved to 0.9971 when using the BioBERT model pre-trained on medical context. The results are illustrated in Figure 2 .
+4.2 Model Boosting
+We further applied ensemble methods to enhance the model. This approach consists of combin-
+Figure 3: An illustration of the LGBM framework: : combining the two base models and the TF-IDF and QIEF features.ing predictions from base classifiers with features of the input data to increase the accuracy of the model ( Merz , 1999 ).We investigate an important family of ensemble methods known as boosting, and more specifically
+Model ROC AUC F1 BERT 0. 9951 0.9666 BioBERT 0.9971 0.9697 BERT + TF-IDF + QIEF 0.9981 0.9784 BioBERT + TF-IDF + QIEF 0.9996 0.9793 BERT + BioBERT + TF-IDF + QIEF 0.9998 0.9866
+ Table 2: Performance of the classifiers in terms of ROC AUC and F1 scores.a Light Gradient Boosting Machine (LGBM) al- gorithm, which consists of an implementation of fast gradient boosting on decision trees. In this study, we use a library implemented by Microsoft ( Ke et al. , 2017 ). In our model, we learn a linear combination of the prediction given by the base classifiers and the input text features to predict the labels.  As features, we consider the average term frequency-inverse document frequency (TF-IDF) score for each instance and the frequency of occur- rence of quantitative information elements (QIEF) (e.g. percentage, population, dose of medicine). Finally, the output of the binary cross entropy with logits layer (predicted probabilities for the three classes) and the feature information are fed to the LGBM. We train the base classifier using the original training dataset, using 60% of the whole data as training dataset, and use a five-fold cross- validation framework to train the LGBM on the remaining 40% of the data to avoid any informa- tion leakage. We train the LGBM on four folds and test on the excluded one and repeat the pro- cess for all five folds. The results of the LGBM classifier for the dif- ferent boosting frameworks and the scores from the base classifiers are illustrated in Table 2 . The highest average ROC AUC score of 0.9998 is ob- tained in the case of combining the two base learn- ers along with the TF-IDF and QIEF features.
+5 Discussion and Conclusion
+In this paper, we presented an improved method- ology to extract PIO elements, with reduced ambi- guity, from abstracts of medical papers. The pro- posed technique was used to build a dataset of PIO elements that we call PICONET. We further pro- posed a model of PIO elements classification us- ing state of the art BERT embedding. It has been shown that using the contextualized BioBERT em- bedding improved the accuracy of the classifier.  This result reinforces the idea of the importance of
+embedding contextualization in subsequent classi- fication tasks in this specific context.In order to enhance the accuracy of the model, we investigated an ensemble method based on the LGBM algorithm.  We trained the LGBM model, with the above models as base learners, to opti- mize the classification by learning a linear combi- nation of the predicted probabilities, for the three classes, with the TF-IDF and QIEF scores. The results indicate that these text features were ade- quate for boosting the contextualized classification mode...(truncated)
+
+================================== Ai Message ==================================
+
+Unanswerable

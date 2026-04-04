@@ -1,0 +1,48 @@
+================================ Human Message =================================
+
+QUERY:
+How is intent annotated?
+
+TABLE OF CONTENTS (TOC):
+1 | End-to-End Trainable Non-Collaborative Dialog System
+1.1 | Abstract
+1.2 | Introduction
+1.3 | Related Work
+1.4 | Non-Collaborative Task Annotation Scheme
+1.5 | Datasets
+1.6 | ANTISCAM Dataset
+1.7 | PERSUASIONFORGOOD Dataset
+1.8 | Model Background
+1.9 | Intent and Semantic Slot Classifiers
+1.10 | Response Generation
+1.11 | Response Filtering
+1.12 | Experiments
+1.13 | Baseline Models
+1.14 | Automatic Evaluation Metrics
+1.15 | Human Evaluation Metrics
+1.16 | Results and Analysis
+1.17 | Conclusion and Future Work
+1.18 | Acknowledgements
+1.19 | Appendix Anti-Scam Collection Setting
+1.20 | Training details
+1.21 | Example Dialog
+1.22 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_YsVYxd3P6BTbrIhfI1KOAAFb)
+ Call ID: call_YsVYxd3P6BTbrIhfI1KOAAFb
+  Args:
+    section_id: 1.4
+
+================================= Tool Message =================================
+Name: read_section
+
+Non-Collaborative Task Annotation Scheme
+To decouple syntactic and semantic information in utterances and provide detailed supervision, we design a hierarchical intent annotation scheme for non-collaborative tasks.We first separate on-task and off-task intents. As on-task intents are key actions that can vary among different tasks, we need to specifically define on-task intents for each task. On the other hand, since off-task content is too general to design task-specific intents, we choose common dialog acts as the categories.  The advantage of this hierarchical annotation scheme is apparent when starting a new non-collaborative task: we only need to focus on designing the on-task categories and semantic slots which are the same as traditional task-oriented dialog systems. Consequently, we don't have to worry about the off-task annotation design since the offtask category is universal. In the intent annotation scheme shown in Table 1 , we list the designed intent annotation scheme for the newly collected ANTISCAM dataset and the PERSUASIONFOR-GOOD dataset. We first define on-task intents for the datasets, which are key actions in the task. Since our AN-TISCAM focuses on understanding and reacting towards elicitations, we define elicitation, providing information and refusal as on-task intents.  In the PERSUASIONFOR-GOOD dataset, we define nine on-task intents in Table 1 based on the original PERSUASIONFORGOOD dialog act annotation scheme. All these intents are related to donation actions, which are salient on-task intents in the persuasion task. The off-task intents are the same for both tasks, including six general intents and six additional social intents.  General intents are more closely related to the syntactic meaning of the sentence (open question, yes no question, positive answer, negative answer, responsive statement, and nonresponsive statement) while social intents are common social actions (greeting, closing, apology, thanking,respond to thank, and hold). <table><tr><td/><td>elicitation</td></tr><tr><td>ANTISCAM</td><td>providing information</td></tr><tr><td/><td>refusal</td></tr><tr><td/><td>agree donation</td></tr><tr><td/><td>disagree donation</td></tr><tr><td>-task</td><td>disagree donation more ask donation amount</td></tr><tr><td colspan="2">PERSUASION-ask donate more</td></tr><tr><td>-FORGOOD</td><td>proposition of donation</td></tr><tr><td/><td>er confirm donation</td></tr><tr><td/><td>ee confirm donation</td></tr><tr><td/><td>provide donation amount</td></tr><tr><td/><td>open question</td></tr><tr><td/><td>yes no question</td></tr><tr><td/><td>negative answer</td></tr><tr><td/><td>positive answer</td></tr><tr><td/><td>responsive statement</td></tr><tr><td>Off-task</td><td>nonresponsive statement greeting</td></tr><tr><td/><td>thanking</td></tr><tr><td/><td>respond to thank</td></tr><tr><td/><td>apology</td></tr><tr><td/><td>closing</td></tr><tr><td/><td>hold</td></tr></table>
+ Table 1 Hierarchical intent annotation scheme on both AN-
+For specific tasks, we also design a semantic slot annotation scheme for annotating sentences based on their semantic content. We identify 13 main semantic slots in the anti-scam task, for example, credit card numbers. We present a detailed semantic slot annotation in
+
+================================== Ai Message ==================================
+
+Intent is annotated with a hierarchical scheme that first separates utterances into on-task and off-task intents. On-task intents are defined specifically for each task, while off-task intents use universal dialog-act categories: six general intents (open question, yes no question, positive answer, negative answer, responsive statement, nonresponsive statement) and six social intents (greeting, closing, apology, thanking, respond to thank, and hold).

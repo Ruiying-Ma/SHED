@@ -1,0 +1,40 @@
+================================ Human Message =================================
+
+QUERY:
+How big is constructed dataset?
+
+TABLE OF CONTENTS (TOC):
+1 | Common-Knowledge Concept Recognition for SEVA
+1.1 | Abstract
+1.2 | INTRODUCTION
+1.3 | BACKGROUND AND MOTIVATION
+1.4 | CONCEPT RECOGNITION
+1.5 | Abbreviations
+1.6 | r"\([ ] * [A-Z][A-Za-z] * [ ] * \)"
+1.7 | Common-Knowledge Definitions
+1.8 | CR Dataset Construction and Pre-processing
+1.9 | Fine tuning with BERT
+1.10 | RELATION EXTRACTION
+1.11 | Hyponyms from Definitions
+1.12 | Hyponyms from POS tags
+1.13 | Relations from Abbreviations
+1.14 | CONCLUSION AND FUTURE WORK
+1.15 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_bt5tUluIzgvpAyYBNtBARHVj)
+ Call ID: call_bt5tUluIzgvpAyYBNtBARHVj
+  Args:
+    section_id: 1.8
+
+================================= Tool Message =================================
+Name: read_section
+
+CR Dataset Construction and Pre-processing
+Using python tools such as PyPDF2, NLTK, and RegEx we build a pipeline to convert PDF to raw text along with extensive pre-processing which includes joining sentences that are split, removing URLs, shortening duplicate non-alpha characters, and replacing full forms of abbreviations with their shortened forms. We assume that the SE text is free of spelling errors. For the CR dataset, we select coherent paragraphs and full sentences by avoiding headers and short blurbs.  Using domain keywords and a domain expert, we annotate roughly 3700 sentences at the word-token level. An example is shown in Figure 2 and the unique tag count is shown in Table 1 .<table/>
+Table 1 Unique Tag Count from the CR dataset
+
+================================== Ai Message ==================================
+
+The constructed CR dataset contains roughly 3700 annotated sentences.

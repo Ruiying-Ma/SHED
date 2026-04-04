@@ -1,0 +1,106 @@
+================================ Human Message =================================
+
+QUERY:
+What is the accuracy of this model compared to sota?
+
+TABLE OF CONTENTS (TOC):
+1 | OpenTapioca: Lightweight Entity Linking for Wikidata
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 3 Related work
+1.3.1 | 3.1 Local compatibility
+1.3.2 | 3.2 Topic similarity
+1.3.3 | 3.3 Mapping coherence
+1.4 | 4 OpenTapioca: an entity linking model for Wikidata
+1.4.1 | 4.1 Local compatibility
+1.4.2 | 4.2 Semantic similarity
+1.4.3 | 4.3 Classifying entities in context
+1.5 | 5 Experimental setup
+1.6 | 6 Conclusion
+1.7 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_yvmPuBfSglSlRoYFoHtO3yYh)
+ Call ID: call_yvmPuBfSglSlRoYFoHtO3yYh
+  Args:
+    pattern: (?i)(accuracy|state[- ]of[- ]the[- ]art|SOTA|compared to|outperform|results)
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.6 | 6 Conclusion
+The surface forms curated by Wikidata editors are sufficient to reach honourable recall, without the need to expand them with mentions extracted from Wikipedia. Our restriction to people, locations and organizations probably helps in this regard and we anticipate worse performance for broader domains. Our approach works best for scientific affiliations, where spelling is more canonical than in newswire. The availability of Twitter identifiers directly in Wikidata helps us to reach acceptable performance in this domain.  The accuracy degrades on longer texts which require relying more on the ambiant topical context. In future work, we would like to explore the use of entity embeddings to improve our approach in this regard.The implementation and datasets are available at https://github.com/wetneb/opentapioca and the demo can be found at https://opentapioca.org/.The guidelines are available at https://www.wikidata.org/wiki/Help:Aliases
+ For the sake of respecting our constraint to use Wikidata only, we train this language model from Wikidata item labels.It is important for this purpose that features are initially scaled to the unit interval.This is the case of Julie Pace (Q34666768) in Figure1.We built the nifconverter tool to do this conversion for any NIF dataset.The original data is available under an Etalab license at https://www.istex.fr/
+ The full details can be found at http://w3id.org/gerbil/experiment?id=201904110006
+ Figure considers the set of wiki links |a|, |b| made from or to two entities a, b and computes their relatedness: rel(a, b) = 1 -log(max(|a|, |b|)) -log(|a| ∩ |b|) log(|K|) -log(min(|a|, |b|))
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_x43wfR6PIcwSERoCxBLjNQ4d)
+ Call ID: call_x43wfR6PIcwSERoCxBLjNQ4d
+  Args:
+    pattern: (?i)(GERBIL|precision|recall|F1|accuracy)
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.5 | 5 Experimental setup
+Most entity linking datasets are annotated against DBpedia or YAGO. Wikidata contains items which do not have any corresponding Wikipedia article (in any language), so these items do not have any DBpedia or YAGO URI either.5 Therefore, converting an entity linking dataset from DBpedia to Wikidata requires more effort than simply following owl:sameAs links: we also need to annotate mentions of Wikidata items which do not have a corresponding DBpedia URI.  We used the RSS-500 dataset of news excerpts annotated against DBpedia and encoded in NIF format (Usbeck et al., 2015) . We first translated all DBpedia URIs to Wikidata items6 . Then, we used OpenRefine (Huynh et al., 2019) to extract the entities marked not covered by DBpedia and matched them against Wikidata.  After human review, this added 63 new links to the 524 converted from DBpedia (out of 476 out-of-KB entities).We also annotated a new dataset from scratch. The ISTEX dataset consists of one thousand author affiliation strings extracted from research articles and exposed by the ISTEX text and data mining service7 . In this dataset, only 64 of the 2,624 Wikidata mentions do not have a corresponding DBpedia URI. We use the Wikidata JSON dump of 2018-02-24 for our experiments, indexed with Solr (Lucene). We restrict the index to humans, organizations and locations, by selecting only items whose type was a subclass of (P279) human (Q5), organization (Q43229) or geographical object (Q618123). Labels and aliases in all languages are added to a casesensitive FST index. We trained our classifier and its hyper-parameters by five-fold cross-validation on the training sets of the ISTEX and RSS datasets. We used GERBIL (Usbeck et al., 2015) to evaluate OpenTapioca against other approaches. We report the InKB micro and macro F1 scores on test sets, with GERBIL's weak annotation match method.8
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_8C6NQemWRGorE6vJNrXZwXz9)
+ Call ID: call_8C6NQemWRGorE6vJNrXZwXz9
+  Args:
+    pattern: (?i)(micro|macro) F1|InKB|OpenTapioca|AIDA|Babelfy|TagMe|DBpedia Spotlight
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.2 | 1 Introduction
+Named Entity Linking is the task of detecting mentions of entities from a knowledge base in free text, as illustrated in Figure 1 .Fig. 1. Example of an annotated sentence
+Most of the entity linking literature focuses on target knowledge bases which are derived from Wikipedia, such as DBpedia (Auer et al., 2007) or YAGO Suchanek et al. (2007) .  These bases are curated automatically by harvesting information from the infoboxes and categories on each Wikipedia page and are therefore not editable directly.Wikidata Vrandečić and Krötzsch (2014) is an editable, multilingual knowledge base which has recently gained popularity as a target database for entity linking (Klang and Nugues, 2014; Weichselbraun et al. , 2018; Sorokin and Gurevych, 2018; Raiman and Raiman, 2018) . As these new approaches to entity linking also introduce novel learning methods, it is hard to tell apart the benefits that come from the new models and those which come from the choice of knowledge graph and the quality of its data.We review the main differences between Wikidata and static knowledge bases extracted from Wikipedia, and analyze their implactions for entity linking.  We illustrate these differences by building a simple entity linker, OpenTapioca1 , which only uses data from Wikidata, and show that it is competitive with other systems with access to larger data sources for some tasks. OpenTapioca can be trained easily from a Wikidata dump only, and can be efficiently kept up to date in real time as Wikidata evolves.  We also propose tools to adapt existing entity linking datasets to Wikidata, and offer a new entity linking dataset, consisting of affiliation strings extracted from research articles. Wikidata is a wiki itself, meaning that it can be edited by anyone, but differs from usual wikis by its data model: information about an entity can only be input as structured data, in a format that is similar to RDF.Wikidata stores information about the world in a collection of items, which are structured wiki pages.  Items are identified by ther Q-id, such as Q40469, and they are made of several data fields. The label stores the preferred name for the entity. It is supported by a description, a short phrase describing the item to disambiguate it from namesakes, and aliases are alternate names for the entity. These three fields are stored separately for each language supported by Wikidata. Items also hold a collection of statements: these are RDF-style claims which have the item as subject.  They can be backed by references and be made more precise with qualifiers, which all rely on a controlled vocabulary of properties (similar to RDF predicates). Finally, items can have site links, connecting them to the corresponding page for the entity in other Wikimedia projects (such as Wikipedia). Note that Wikidata items to not need to be associated with any Wikipedia page: in fact, Wikidata's policy on the notability of the subjects it covers is much more permissive than in Wikipedia.  For a more detailed introduction to Wikidata's data model we refer the reader to Vrandečić and Krötzsch (2014) ; Geiß et al. (2017) .Our goal is to evaluate the usefulness of this crowdsourced structured data for entity linking. We will therefore refrain from augmenting it with any external data (such as phrases and topical information extracted from Wikipedia pages), as is generally done when working with DBpedia or YAGO.  By avoiding a complex mash-up of data coming from disparate sources, our entity linking system is also simpler and easier to reproduce. Finally, it is possible keep OpenTapioca in real-time synchronization with the live version of Wikidata, with a lag of a few seconds only. This means that users are able to fix or improve the knowledge graph, for instance by adding a missing alias on an item, and immediately see the benefits on their entity linking task.  This constrasts with all other systems we are aware of, where the user either cannot directly intervene on the underlying data, or there is a significant delay in propagating these updates to the entity linking system.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_IpO2ycJdyhDyrxnOeST9qUiA)
+ Call ID: call_IpO2ycJdyhDyrxnOeST9qUiA
+  Args:
+    pattern: (?i)(Table|results on|F1 score|competitive|baseline|state of the art|GERBIL)
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1 | Abstract
+We propose a simple Named Entity Linking system that can be trained from Wikidata only. This demonstrates the strengths and weaknesses of this data source for this task and provides an easily reproducible baseline to compare other systems against. Our model is lightweight to train, to run and to keep synchronous with Wikidata in real time.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_2qH45IAx7v0Ic3oQuaFaCMRx)
+ Call ID: call_2qH45IAx7v0Ic3oQuaFaCMRx
+  Args:
+    section_id: 1.5
+
+================================= Tool Message =================================
+Name: read_section
+
+5 Experimental setup
+Most entity linking datasets are annotated against DBpedia or YAGO. Wikidata contains items which do not have any corresponding Wikipedia article (in any language), so these items do not have any DBpedia or YAGO URI either.5 Therefore, converting an entity linking dataset from DBpedia to Wikidata requires more effort than simply following owl:sameAs links: we also need to annotate mentions of Wikidata items which do not have a corresponding DBpedia URI.  We used the RSS-500 dataset of news excerpts annotated against DBpedia and encoded in NIF format (Usbeck et al., 2015) . We first translated all DBpedia URIs to Wikidata items6 . Then, we used OpenRefine (Huynh et al., 2019) to extract the entities marked not covered by DBpedia and matched them against Wikidata.  After human review, this added 63 new links to the 524 converted from DBpedia (out of 476 out-of-KB entities).We also annotated a new dataset from scratch. The ISTEX dataset consists of one thousand author affiliation strings extracted from research articles and exposed by the ISTEX text and data mining service7 . In this dataset, only 64 of the 2,624 Wikidata mentions do not have a corresponding DBpedia URI. We use the Wikidata JSON dump of 2018-02-24 for our experiments, indexed with Solr (Lucene). We restrict the index to humans, organizations and locations, by selecting only items whose type was a subclass of (P279) human (Q5), organization (Q43229) or geographical object (Q618123). Labels and aliases in all languages are added to a casesensitive FST index. We trained our classifier and its hyper-parameters by five-fold cross-validation on the training sets of the ISTEX and RSS datasets. We used GERBIL (Usbeck et al., 2015) to evaluate OpenTapioca against other approaches. We report the InKB micro and macro F1 scores on test sets, with GERBIL's weak annotation match method.8
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_UwTkRlFAYlE6KZEFMz4UWiLx)
+ Call ID: call_UwTkRlFAYlE6KZEFMz4UWiLx
+  Args:
+    pattern: (?i)(0\.[0-9]+|[0-9]{1,3}\.[0-9]+%|micro F1|macro F1)
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.5 | 5 Experimental setup
+Most entity linking datasets are annotated against DBpedia or YAGO. Wikidata contains items which do not have any corresponding Wikipedia article (in any language), so these items do not have any DBpedia or YAGO URI either.5 Therefore, converting an entity linking dataset from DBpedia to Wikidata requires more effort than simply following owl:sameAs links: we also need to annotate mentions of Wikidata items which do not have a corresponding DBpedia URI.  We used the RSS-500 dataset of news excerpts annotated against DBpedia and encoded in NIF format (Usbeck et al., 2015) . We first translated all DBpedia URIs to Wikidata items6 . Then, we used OpenRefine (Huynh et al., 2019) to extract the entities marked not covered by DBpedia and matched them against Wikidata.  After human review, this added 63 new links to the 524 converted from DBpedia (out of 476 out-of-KB entities).We also annotated a new dataset from scratch. The ISTEX dataset consists of one thousand author affiliation strings extracted from research articles and exposed by the ISTEX text and data mining service7 . In this dataset, only 64 of the 2,624 Wikidata mentions do not have a corresponding DBpedia URI. We use the Wikidata JSON dump of 2018-02-24 for our experiments, indexed with Solr (Lucene). We restrict the index to humans, organizations and locations, by selecting only items whose type was a subclass of (P279) human (Q5), organization (Q43229) or geographical object (Q618123). Labels and aliases in all languages are added to a casesensitive FST index. We trained our classifier and its hyper-parameters by five-fold cross-validation on the training sets of the ISTEX and RSS datasets. We used GERBIL (Usbeck et al., 2015) to evaluate OpenTapioca against other approaches. We report the InKB micro and macro F1 scores on test sets, with GERBIL's weak annotation match method.8
+
+================================== Ai Message ==================================
+
+Unanswerable

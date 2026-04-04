@@ -1,0 +1,79 @@
+================================ Human Message =================================
+
+QUERY:
+By how much do they outperform state-of-the-art models on knowledge graph completion?
+
+TABLE OF CONTENTS (TOC):
+1 | A Capsule Network-based Embedding Model for Knowledge Graph Completion and Search Personalization
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2 The proposed CapsE
+1.4 | 3 Knowledge graph completion evaluation
+1.4.1 | 3.1 Experimental setup
+1.4.2 | 3.2 Main experimental results
+1.5 | WN18RR
+1.6 | 4 Search personalization application
+1.6.1 | 4.1 Experimental setup
+1.6.2 | 4.2 Main results
+1.7 | Method
+1.8 | 5 Related work
+1.9 | 6 Conclusion
+1.10 | Acknowledgement
+1.11 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_TA2hBvEg3PLbtaztucajDul9)
+ Call ID: call_TA2hBvEg3PLbtaztucajDul9
+  Args:
+    section_id: 1.1
+
+================================= Tool Message =================================
+Name: read_section
+
+Abstract
+In this paper, we introduce an embedding model, named CapsE, exploring a capsule network to model relationship triples (subject, relation, object). Our CapsE represents each triple as a 3-column matrix where each column vector represents the embedding of an element in the triple. This 3-column matrix is then fed to a convolution layer where multiple filters are operated to generate different feature maps. These feature maps are reconstructed into corresponding capsules which are then routed to another capsule to produce a continuous vector.  The length of this vector is used to measure the plausibility score of the triple. Our proposed CapsE obtains better performance than previous state-of-the-art embedding models for knowledge graph completion on two benchmark datasets WN18RR and FB15k-237, and outperforms strong search personalization baselines on SEARCH17.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_8y3szbHD1RvSk5ezDHMzFQbC)
+ Call ID: call_8y3szbHD1RvSk5ezDHMzFQbC
+  Args:
+    section_id: 1.4.2
+
+================================= Tool Message =================================
+Name: read_section
+
+3.2 Main experimental results
+Table 2 compares the experimental results of our CapsE with previous state-of-the-art published results, using the same evaluation protocol. Our CapsE performs better than its closely related CNN-based model ConvKB on both experimental datasets (except Hits@10 on WN18RR and MR on FB15k-237), especially on FB15k-237 where our CapsE gains significant improvements of 0.523 -0.418 = 0.105 in MRR (which is about 25. 1% relative improvement), and 59.3% -53.2% = 6.1% absolute improvement in Hits@10. Table 2 also shows that our CapsE obtains the best MR score on WN18RR and the highest MRR and Hits@10 scores on FB15k-237.Following Bordes et al.  (2013) , for each relation r in FB15k-237, we calculate the averaged number η s of head entities per tail entity and the averaged number η o of tail entities per head entity. If η s <1.5 and η o <1.5, r is categorized one-to-one (1-1). If η s <1.5 and η o ≥1.5, r is categorized one-to-many (1-M).  If η s ≥1.5 and η o <1.5, r is
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_HiWPD8lpmhnwXhbge6UXsMwO)
+ Call ID: call_HiWPD8lpmhnwXhbge6UXsMwO
+  Args:
+    pattern: outperform|improvement|better performance than previous state-of-the-art|state-of-the-art
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1 | Abstract
+In this paper, we introduce an embedding model, named CapsE, exploring a capsule network to model relationship triples (subject, relation, object). Our CapsE represents each triple as a 3-column matrix where each column vector represents the embedding of an element in the triple. This 3-column matrix is then fed to a convolution layer where multiple filters are operated to generate different feature maps. These feature maps are reconstructed into corresponding capsules which are then routed to another capsule to produce a continuous vector.  The length of this vector is used to measure the plausibility score of the triple. Our proposed CapsE obtains better performance than previous state-of-the-art embedding models for knowledge graph completion on two benchmark datasets WN18RR and FB15k-237, and outperforms strong search personalization baselines on SEARCH17.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_9k6GyOYaXKpOfi1tEp8RFRLM)
+ Call ID: call_9k6GyOYaXKpOfi1tEp8RFRLM
+  Args:
+    pattern: outperform|improvement|better performance than previous state-of-the-art|state-of-the-art
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.2 | 1 Introduction
+Knowledge graphs (KGs) containing relationship triples (subject, relation, object) , denoted as (s, r, o), are the useful resources for many NLP and especially information retrieval applications such as semantic search and question answering (Wang et al., 2017) . However, large knowledge graphs, even containing billions of triples, are still incomplete, i.e., missing a lot of valid triples (West et al., 2014) .  Therefore, much research efforts have focused on the knowledge graph completion task which aims to predict missing triples in KGs, i.e., predicting whether a triple not in KGs is likely to be valid or not (Bordes et al., 2011 (Bordes et al., , 2013;; Socher et al., 2013) . To this end, many embedding models have been proposed to learn vector representations for entities (i.e. , subject/head entity and object/tail entity) and relations in KGs, and obtained stateof-the-art results as summarized by Nickel et al. (2016a) and Nguyen (2017) . These embedding models score triples (s, r, o), such that valid triples have higher plausibility scores than invalid ones (Bordes et al., 2011 (Bordes et al., , 2013;; Socher et al., 2013) .  For example, in the context of KGs, the score for (Melbourne, cityOf, Australia) is higher than the score for (Melbourne, cityOf, United Kingdom).Triple modeling is applied not only to the KG completion, but also for other tasks which can be formulated as a triple-based prediction problem. An example is in search personalization, one would aim to tailor search results to each specific user based on the user's personal interests and preferences (Teevan et al. , 2005 (Teevan et al., , 2009;; Bennett et al., 2012; Harvey et al., 2013; Vu et al., 2015 Vu et al., , 2017)) .  Here the triples can be formulated as (submitted query, user profile, returned document) and used to re-rank documents returned to a user given an input query, by employing an existing KG embedding method such as TransE (Bordes et al., 2013) , as proposed by Vu et al. (2017) . Previous studies have shown the effectiveness of modeling triple for either KG completion or search personalization.  However, there has been no single study investigating the performance on both tasks.Conventional embedding models, such as TransE (Bordes et al., 2013) , DISTMULT (Yang et al., 2015) and ComplEx (Trouillon et al., 2016) , use addition, subtraction or simple multiplication operators, thus only capture the linear relationships between entities. Recent research has raised interest in applying deep neural networks to triplebased prediction problems.  For example, Nguyen et al. (2018) proposed ConvKB-a convolutional neural network (CNN)-based model for KG completion and achieved state-of-the-art results. Most of KG embedding models are constructed to modeling entries at the same dimension of the given triple, where presumably each dimension captures some relation-specific attribute of entities. To the best of our knowledge, however, none of the existing models has a "deep" architecture for modeling the entries in a triple at the same dimension.  Sabour et al. (2017) introduced capsule networks (CapsNet) that employ capsules (i.e., each capsule is a group of neurons) to capture entities in images and then uses a routing process to specify connections from capsules in a layer to those in the next layer. Hence CapsNet could encode the intrinsic spatial relationship between a part and a whole constituting viewpoint invariant knowledge that automatically generalizes to novel viewpoints.  Each capsule accounts for capturing variations of an object or object part in the image, which can be efficiently visualized. Our high-level hypothesis is that embedding entries at the same dimension of the triple also have these variations, although it is not straightforward to be visually examined.To that end, we introduce CapsE to explore a novel application of CapsNet on triple-based data for two problems: KG completion and search personalization.  Different from the traditional modeling design of CapsNet where capsules are constructed by splitting feature maps, we use capsules to model the entries at the same dimension in the entity and relation embeddings. In our CapsE, v s , v r and v o are unique k-dimensional embeddings of s, r and o, respectively.  The embedding triple [v s , v r , v o ] of (s, r, o) is fed to the convolution layer where multiple filters of the same 1×3 shape are repeatedly operated over every row of the matrix to produce k-dimensional feature maps. Entries at the same dimension from all feature maps are then encapsulated into a capsule. Thus, each capsule can encode many characteristics in the embedding triple to represent the entries at the corresponding dimension.  These capsules are then routed to another capsule which outputs a continuous vector whose length is used as a score for the triple. Finally, this score is used to predict whether the triple (s, r, o) is valid or not.In summary, our main contributions from this paper are as follows:
+• We propose an embedding model CapsE using the capsule network (Sabour et al., 2017) for modeling relationship triples.  To our best of knowledge, our work is the first consideration of exploring the capsule network to knowledge graph completion and search personalization.• We evaluate our CapsE for knowledge graph completion on two benchmark datasets WN18RR (Dettmers et al., 2018) and FB15k-237 (Toutanova and Chen, 2015) .  CapsE obtains the best mean rank on WN18RR and the highest mean reciprocal rank and highest Hits@10 on FB15k-237.• We restate the prospective strategy of expanding the triple embedding models to improve the ranking quality of the search personalization systems. We adapt our model to search personalization and evaluate on SEARCH17 (Vu et al., 2017) -a dataset of the web search query logs.  Experimental results show that our CapsE achieves the new state-of-the-art results with significant improvements over strong baselines.
+
+================================== Ai Message ==================================
+
+On FB15k-237, CapsE outperforms the closely related state-of-the-art ConvKB by 0.105 MRR (about 25.1% relative improvement) and 6.1% absolute Hits@10. It also obtains the best mean rank on WN18RR and the highest MRR and Hits@10 on FB15k-237.

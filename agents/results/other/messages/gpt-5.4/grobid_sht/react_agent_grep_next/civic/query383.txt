@@ -1,0 +1,58 @@
+================================ Human Message =================================
+
+QUERY:
+Identify and list the names of all projects that are in the specified status 'design' and simultaneously of the type 'disaster'.
+
+TABLE OF CONTENTS (TOC):
+1 | Abstract
+2 | PCH Signal Synchronization System Improvements Project
+3 | Capital Improvement Projects (Completed) Storm Drain Trash Screens
+4 | Dume Drive and Fernhill Drive Speed Humps Project
+5 | annex
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_gegVD7nY7GGqXskZYRcBbyqP)
+ Call ID: call_gegVD7nY7GGqXskZYRcBbyqP
+  Args:
+    pattern: (?i)design|disaster
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+2 | PCH Signal Synchronization System Improvements Project
+Updates: 65% design package was submitted to Caltrans in November 2020. The contractor is currently working at the section between Vista Pacifica and the condos on Civic Center Way. This phase of work will require the temporary closure of Civic Center Way. Portions of the curb and gutter have been placed and the contactor is working on the proposed retaining wall. This portion of work is anticipated to be completed in early February 2021. The contractor is also working on the curb, gutter and storm drain installation on Civic Center Way from Webb Way to the condos. This portion of the work may require temporary road closures. However, it is anticipated that this phase of the project will be completed at the end of February 2021. Project Schedule: August 2020 through March 2021
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_4UHS8g2lH6QMzNdiEYyPtBGj)
+ Call ID: call_4UHS8g2lH6QMzNdiEYyPtBGj
+  Args:
+    pattern: (?i)design|disaster
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+5 | annex
+Outdoor Warning Sirens (FEMA) Project Description: This project will be funded through a grant from FEMA after the Wooley Fire. The project consists o hiring a consultant to develop a plan that includes the evaluation of a siren system and possible locations. Estimated Schedule: Complete Design: Dependent upon final grant approval from FEMA
+ <table><tr><td>Project Schedule:</td></tr><tr><td>Complete Design: Spring 2021</td></tr><tr><td>Begin Construction: Summer 2021</td></tr><tr><td>Consultant is working on final design documents. </td></tr><tr><td>Project Schedule: Capital Improvement Projects (Construction)</td></tr><tr><td>Complete Final Design: May 2021</td></tr><tr><td>Advertise: July 2021 City Hall Roof Replacement</td></tr><tr><td>Award Contract and Begin Construction: September 2021 Updates: Bids were received on November 18, 2020 and Council awarded</td></tr><tr><td>the project to the low bidder on January 11, 2021. </td></tr><tr><td>Civic Center Stormwater Diversion Structure Project Schedule: February -April 2021</td></tr><tr><td>Updates:</td></tr><tr><td>A Los Angeles County Flood Control maintenance agreement is Bluffs Park Workout Station</td></tr><tr><td>required for this project.  Staff is waiting for the County's approval of Updates: The contractor is waiting for the delivery of the new workout</td></tr><tr><td>the agreement. station equipment.</td></tr><tr><td>Project Schedule: Project Schedule: November 2020 -March 2021</td></tr><tr><td>Complete Design: Completed. Awaiting maintenance agreement from</td></tr><tr><td>the County.  Civic Center Way Improvements</td></tr><tr><td>Begin Construction: Estimated Summer 2021 Updates:</td></tr><tr><td>Work Hours: Monday through Friday 7:00AM to 4:00PM, Saturdays</td></tr><tr><td>Westward Beach Road Improvements Project 7:00AM to 4:00PM</td></tr><tr><td>Updates:</td></tr><tr><td>The project requires coordination with Los Angeles County Beaches</td></tr><tr><td>and Harbor.  Staff is working out the final details of the project with</td></tr><tr><td>the County and will be finalizing the design. </td></tr><tr><td>Project Schedule:</td></tr><tr><td>Complete Design: Spring 2021</td></tr><tr><td>Begin Construction: Fall 2021</td></tr><tr><td>Updates:</td></tr><tr><td>Project is at the 65% design phase. </td></tr><tr><td>Working with the Planning Department to send project to Planning</td></tr><tr><td>Commission in February.</td></tr><tr><td>City has submitted a project application for the State Revolving Fund</td></tr><tr><td>program.</td></tr><tr><td>An assessment engineer has been hired by the City and a new</td></tr><tr><td>assessment district will be created. </td></tr><tr><td>Project Schedule:</td></tr><tr><td>Complete Design: December 2021</td></tr><tr><td>Begin Construction: March 2022</td></tr><tr><td>Malibu Park Drainage Improvements</td></tr><tr><td>Updates:</td></tr><tr><td>Staff is making minor corrections to the project plans to reduce the</td></tr><tr><td>overall project costs. </td></tr></table>
+Table
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_h6BXlUUiUQxO7V7cqMEv2zJU)
+ Call ID: call_h6BXlUUiUQxO7V7cqMEv2zJU
+  Args:
+    pattern: (?i)FEMA|Wooley Fire|fire|disaster
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+5 | annex
+Outdoor Warning Sirens (FEMA) Project Description: This project will be funded through a grant from FEMA after the Wooley Fire. The project consists o hiring a consultant to develop a plan that includes the evaluation of a siren system and possible locations. Estimated Schedule: Complete Design: Dependent upon final grant approval from FEMA
+ <table><tr><td>Project Schedule:</td></tr><tr><td>Complete Design: Spring 2021</td></tr><tr><td>Begin Construction: Summer 2021</td></tr><tr><td>Consultant is working on final design documents. </td></tr><tr><td>Project Schedule: Capital Improvement Projects (Construction)</td></tr><tr><td>Complete Final Design: May 2021</td></tr><tr><td>Advertise: July 2021 City Hall Roof Replacement</td></tr><tr><td>Award Contract and Begin Construction: September 2021 Updates: Bids were received on November 18, 2020 and Council awarded</td></tr><tr><td>the project to the low bidder on January 11, 2021. </td></tr><tr><td>Civic Center Stormwater Diversion Structure Project Schedule: February -April 2021</td></tr><tr><td>Updates:</td></tr><tr><td>A Los Angeles County Flood Control maintenance agreement is Bluffs Park Workout Station</td></tr><tr><td>required for this project.  Staff is waiting for the County's approval of Updates: The contractor is waiting for the delivery of the new workout</td></tr><tr><td>the agreement. station equipment.</td></tr><tr><td>Project Schedule: Project Schedule: November 2020 -March 2021</td></tr><tr><td>Complete Design: Completed. Awaiting maintenance agreement from</td></tr><tr><td>the County.  Civic Center Way Improvements</td></tr><tr><td>Begin Construction: Estimated Summer 2021 Updates:</td></tr><tr><td>Work Hours: Monday through Friday 7:00AM to 4:00PM, Saturdays</td></tr><tr><td>Westward Beach Road Improvements Project 7:00AM to 4:00PM</td></tr><tr><td>Updates:</td></tr><tr><td>The project requires coordination with Los Angeles County Beaches</td></tr><tr><td>and Harbor.  Staff is working out the final details of the project with</td></tr><tr><td>the County and will be finalizing the design. </td></tr><tr><td>Project Schedule:</td></tr><tr><td>Complete Design: Spring 2021</td></tr><tr><td>Begin Construction: Fall 2021</td></tr><tr><td>Updates:</td></tr><tr><td>Project is at the 65% design phase. </td></tr><tr><td>Working with the Planning Department to send project to Planning</td></tr><tr><td>Commission in February.</td></tr><tr><td>City has submitted a project application for the State Revolving Fund</td></tr><tr><td>program.</td></tr><tr><td>An assessment engineer has been hired by the City and a new</td></tr><tr><td>assessment district will be created. </td></tr><tr><td>Project Schedule:</td></tr><tr><td>Complete Design: December 2021</td></tr><tr><td>Begin Construction: March 2022</td></tr><tr><td>Malibu Park Drainage Improvements</td></tr><tr><td>Updates:</td></tr><tr><td>Staff is making minor corrections to the project plans to reduce the</td></tr><tr><td>overall project costs. </td></tr></table>
+Table
+
+================================== Ai Message ==================================
+
+Outdoor Warning Sirens (FEMA)

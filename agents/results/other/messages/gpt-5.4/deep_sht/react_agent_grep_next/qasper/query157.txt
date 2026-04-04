@@ -1,0 +1,43 @@
+================================ Human Message =================================
+
+QUERY:
+what future work is described?
+
+TABLE OF CONTENTS (TOC):
+1 | Lexical Bias In Essay Level Prediction
+1.1 | Georgios Balikas
+1.1.1 | Abstract
+1.1.1.1 | 1 Introduction
+1.1.1.1.1 | 2 Problem Deﬁnition
+1.1.1.1.1.1 | 3 Feature Extaction
+1.1.1.1.1.1.1 | 4 Model Selection and Evaluation
+1.1.1.1.1.1.1.1 | 5 Conclusion
+1.1.1.1.1.1.1.1.1 | Acknoledgements
+1.1.1.1.1.1.1.1.1.1 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_jShQqjP3sjW3UGzkm57XdBmf)
+ Call ID: call_jShQqjP3sjW3UGzkm57XdBmf
+  Args:
+    section_id: 1.1.1.1.1.1.1.1
+
+================================= Tool Message =================================
+Name: read_section
+
+5 Conclusion
+In this work I presented the feature extraction, feature engineering and model evaluation steps I followed while developing balikasg for CAp 2018 that was ranked first among 14 other sys- tems. I evaluated the efficiency of the different feature groups and found that readbility and com- plexity scores as well as topic models to be effec- tive predictors.  Further, I evaluated the the effec- tiveness of different classification algorithms and found that Gradient Boosted Trees outperform the rest of the models in this problem.While in terms of accuracy the system per- formed excellent achieving 98.2% in the test data, the question raised is whether there are any types of biases in the process. For instance, topic distri- butions learned with LDA were valuable features.  One, however, needs to deeply investigate whether this is due to the expressiveness and modeling power of LDA or an artifact of the dataset used. In the latter case, given that the candidates are asked to write an essay given a subject ( Geertzen et al. , 2013 ) that depends on their level, the hypothesis that needs be studied is whether LDA was just a clever way to model this information leak in the given data or not.  I believe that further analy- sis and validation can answer this question if the topics of the essays are released so that validation splits can be done on the basis of these topics.
+Acknoledgements
+I would like to thank the organisers of the chal- lenge and NVidia for sponsoring the prize of the challenge. The views expressed in this paper be- long solely to the author, and not necessarily to the author’s employer.
+References
+Georgios Balikas and Ioannis Partalas. 2018.On the effectiveness of feature set augmentation using clus- ters of word embeddings. SwissText 2018 .
+David M Blei, Andrew Y Ng, and Michael I Jordan. 2003.Latent dirichlet allocation. Journal of ma- chine Learning research , 3(Jan):993–1022.
+Jeroen Geertzen, Theodora Alexopoulou,and Anna Korhonen. 2013. Automatic linguistic annotation of large scale l2 databases: The ef-cambridge open lan- guage database (efcamdat). In Proceedings of the 31st Second Language Research Forum. Somerville, MA: Cascadilla Proceedings Project .
+Kenneth Heafield. 2011. Kenlm:Faster and smaller language model queries. In Proceedings of the Sixth Workshop on Statistical Machine Translation , pages 187–197. Association for Computational Linguis- tics.
+Kenneth Heafield, Ivan Pouzyrevsky, Jonathan H Clark,and Philipp Koehn. 2013. Scalable modified kneser-ney language model estimation. In Proceed- ings of the 51st Annual Meeting of the Association for Computational Linguistics (Volume 2: Short Pa- pers) , volume 2, pages 690–696.
+Yan Huang, Akira Murakami, Theodora Alexopoulou,and Anna Korhonen. 2018. Dependency parsing of learner english. International Journal of Corpus Linguistics , 23(1):28–54.
+Robert Speer, Joshua Chin, and Catherine Havasi. 2017.Conceptnet 5.5: An open multilingual graph of general knowledge. In AAAI , pages 4444–4451.
+
+================================== Ai Message ==================================
+
+Future work is to investigate whether the usefulness of LDA topic-distribution features reflects true modeling power or merely a dataset artifact caused by essay prompts depending on learner level. The author suggests further analysis and validation, specifically if essay topics are released so that validation splits can be created based on topics.

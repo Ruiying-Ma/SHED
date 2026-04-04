@@ -1,0 +1,63 @@
+================================ Human Message =================================
+
+QUERY:
+What types of commonsense knowledge are they talking about?
+
+TABLE OF CONTENTS (TOC):
+1 | Improved Representation Learning for Predicting Commonsense Ontologies
+1.1 | Xiang Li 1 Luke Vilnis 1 Andrew McCallum 1
+1.1.1 | Abstract
+1.1.1.1 | 1. Introduction
+1.1.1.1.1 | 2. Data
+1.1.1.1.1.1 | 3. Models
+1.1.1.1.1.1.1 | 3.1. Order Embeddings
+1.1.1.1.1.1.1.1 | 3.2. Joint Text and Order Embedding
+1.1.1.1.1.1.1.1.1 | 4. Long-Range Join and Meet Constraints
+1.1.1.1.1.1.1.1.1.1 | 5. Experiments
+1.1.1.1.1.1.1.1.1.1.1 | 5.1. Joint Text and Order Embedding
+1.1.1.1.1.1.1.1.1.1.1.1 | 5.2. Long-Range Join and Meet Constraints
+1.1.1.1.1.1.1.1.1.1.1.1.1 | 6. Conclusion and Future Work
+1.1.1.1.1.1.1.1.1.1.1.1.1.1 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_vdS8V310190dsJPqDkWsz7ar)
+ Call ID: call_vdS8V310190dsJPqDkWsz7ar
+  Args:
+    section_id: 1.1.1.1
+
+================================= Tool Message =================================
+Name: read_section
+
+1. Introduction
+A core problem in artificial intelligence is to capture, in machine-usable form, the collection of information that an ordinary person would have, known as commonsense knowledge . For example, a machine should know that a room may have a door, and that when a person enters a room, it is generally through a door. This background knowledge is crucial for solving many difficult, ambigu- ous natural language problems in coreference resolution and question answering, as well as the creation of other reasoning machines. More than just curating a static collection of facts, we would like commonsense knowledge to be represented in a way that lends itself to machine reasoning and inference of missing information. We concern ourselves in this pa-
+per with the problem of learning commonsense knowledge representations.In machine learning settings, knowledge is usually repre- sented as a hypergraph of triplets such as Freebase ( Bol- lacker et al.  , 2008 ), WordNet ( Miller , 1995 ), and Con- ceptNet ( Speer et al. , 2016 ). In these knowledge graphs, nodes represent entities or terms t , and hyperedges are re- lations R between these entities or terms, with each fact in the knowledge graph represented as a triplet < t 1 , R, t 2 > . Researchers have developed many models for knowledge representation and learning in this setting ( Bordes et al.  , 2013 ; Wang et al. , 2014 ; Nickel et al. , 2011 ; Li et al. , 2016 ; Socher et al. , 2013 ), under the umbrella of knowl- edge graph completion . However, none of these naturally lend themselves to traditional methods of logical reasoning such as transitivity and negation. While a knowledge graph completion model can represent relations such as I S -A and entailment, there is no mecha- nism to ensure that its predictions are internally consistent. For example, if we know that a dog is a mammal, and a pit bull is a dog, we would like the model to also predict that a pit bull is a mammal.  These transitive entailment rela- tions describe ontologies of hierarchical data, a key com- ponent of commonsense knowledge which we focus on in this work.Recently, a thread of research on representation learning has aimed to create embedding spaces that automatically enforce consistency in these predictions using the intrin- sic geometry of the embedding space ( Vilnis & McCallum , 2015 ; Vendrov et al. ; Nickel & Kiela , 2017 ).  In these mod- els, the inferred embedding space creates a globally con- sistent structured prediction of the ontology, rather than the local relation predictions of previous models.We focus on the order-embedding model ( Vendrov et al. ) which was proposed for general hierarchical prediction in- cluding multimodal problems such as image captioning.  While the original work included results on ontology pre- diction on WordNet, we focus exclusively on the model’s application to commonsense knowledge, with its unique characteristics including complex ordering structure, com- positional, multi-word entities, and the wealth of common- sense knowledge to be found in large-scale unstructured text data.1 CICS, University of Massachusetts, Amherst, USA. Corre- spondence to: Xiang Li < xiangl@cs.umass. edu > .Proceedings of the ICML 17 Workshop on Deep Structured Pre- diction , Sydney, Australia, PMLR 70, 2017. Copyright 2017 by the author(s).Improved Representation Learning for Predicting Commonsense Ontologies
+We propose two extensions to the order embedding model. The first augments hierarchical supervision from existing ontologies with non-hierarchical knowledge in the form of raw text. We find incorporating unstructured text brings accuracy from 92. 0 to 93.0 on a commonsense dataset containing I S -A relations from ConceptNet and Microsoft Concept Graph (MCG), with larger relative gains from smaller amounts of labeled data.The second extension uses the complex partial-order struc- ture of real-world ontologies to find long-distance triplet constraints among embeddings which are poorly enforced by the standard pairwise training method. By adding our additional triplet constraints to the baseline order- embedding model, we find performance improves from 90. 6 to 91.3 accuracy on the WordNet ontology dataset.We find that order embeddings’ ease of extension, both by incorporating non-ordered data, and additional train- ing constraints derived from the structure of the problem, makes it a promising avenue for the development of fur- ther algorithms for automatic learning and jointly consis- tent prediction of ontologies.
+2. Data
+In this work, we use the ConceptNet ( Speer et al. , 2016 ), WordNet ( Miller , 1995 ), and Microsoft Concept Graph (MCG) ( Wu et al. , 2012 ; Wang et al. , 2015 ) knowledge bases for our ontology prediction experiments.WordNet is a knowledge base (KB) of single words and re- lations between them such as hypernymy and meronymy.  For our task, we use the hypernym relations only. Concept- Net is a KB of triples consisting of a left term t 1 , a relation R , and a right term t 2 . The relations come from a fixed set of size 34. But unlike WordNet, terms in ConceptNet can be phrases. We focus on the I S -A relation in this work. MCG also consists of hierarchical relations between multi- word phrases, ranging from extremely general to specific.  Examples from each dataset are shown in Table 1 .For experiments involving unstructured text, we use the WaCkypedia corpus ( Baroni et al. , 2009 ).
+3. Models
+We introduce two variants of order embeddings. The first incorporates non-hierarchical unstructured text data into the supervised ontology. The second improves the train- ing procedure by adding additional examples representing long-range constraints.Figure 1. Order Embedding
+3.1. Order Embeddings
+Order Embeddings are a model for automatically enforcing partial-ordering (or lattice) constraints among predictions directly in embedding space. The vector embeddings sat- isfy the following property with respect to the partial order:
+x y if and only if N ^ i =1 x i ≥ y i
+where x is the subcategory and y is the supercategory. This means the general concept embedding should be smaller than the specific concept embedding in every coordinate of the embeddings.  An illustration of this geometry can be found in Figure 1. We can define a surrogate energy for this ordering function as d ( x, y ) = k max(0 , y − x ) k 2 . The learning objective for order embeddings becomes the following, where m is a margin parameter, x and y are the hierarchically supervised pairs, and x 0 and y 0 are negatively sampled concepts:
+ L Order = X x,y max(0 , m + d ( x, y ) − d ( x 0 , y 0 ))
+3.2. Joint Text and Order Embedding
+We aim to augment our ontology prediction embedding model with more general commonsense knowledge mined from raw text. A standard method for learning word repre- sentations is word2vec ( Mikolov et al. , 2013 ), which pre- dicts current word embeddings using a context of surround- ing word embeddings.  We incorporate a modification of the CBOW model in this work, which uses the average embed- ding from a window around the current word as a context vector v 2 to predict the current word vector v 1 :
+v 2 = 1 window X k ∈{− window/ 2 ,...,window/ 2 }\{ t } v t + k
+Improved Representation Learning for Predicting Commonsense Ontologies
+ term 1 relation term 2 Dataset coral reefs IsA delicate ecosystems ConceptNet diabetes IsA chronic health condition MCG fantasy life.n.01 IsA imagination.n.01 WordNet
+Table 1. Example triplets from each dataset.Figure 2. Adding more training examples: black line is the origi- nal training data, green line is obtained by transitive closure, and yellow line is obtained by join and meet. Because order embeddings are all positive and compared coordinate-wise, we use a variant of CBOW that scores similarity to context based on based on L 1 distance and not dot product, v 0 1 and v 0 2 are the negative examples selected from the vocabulary during training:
+ d pos = d ( v 1 , v 2 ) = k v 1 − v 2 k d neg = d ( v 0 1 , v 0 2 ) = k v 0 1 − v 0 2 k L CBOW = X w c ,w t max(0 , m + d pos − d neg )
+Finally, after each gradient update, we map the embeddings back to the positive domain by applying the absolute value function.  We propose jointly learning both the order- and text- embedding model with a simple weighted combina- tion of the two objective functions:
+L Joint = α 1 L Order + α 2 L CBOW
+4. Long-Range Join and Meet Constraints
+Order embeddings map words to a partially-ordered space, which we can think of as a directed acyclic graph (DAG). A simple way to add more training examples is to take the transitive closure of this graph. For example, if we have < dog IsA mammal > , < mammal IsA animal > , we can pro- duce the training example < dog IsA animal > . We observe that even more training examples can be cre- ated by treating our partial-order structure as a lattice. A
+lattice is a partial order equipped with two additional oper- ations, join and meet . The join and meet of a pair P are re- spectively the supremum (least upper bound) of P, denoted ∨ , and the infimum (greatest lower bound), denoted ∧ .  In our case, the vector join and meet would be the pointwise max and min of two embeddings.We can add many additional training examples to our data by enforcing that the vector join and meet operations satisfy the joins and meets found in the training lattice/DAG. If w c and w p are the nearest common child and parent for a pair w 1 , w 2 , the loss for join and meet learning can be written as the following:
+ d c ( w 1 , w 2 , w c ) = k max(0 , w 1 ∨ w 2 − w c ) k 2 d p ( w 1 , w 2 , w p ) = k max(0 , w p − w 1 ∧ w 2 ) k 2 L join = X w 1 ,w 2 ,w c max(0 , m + d c ( w 1 , w 2 , w c )) L meet = X w 1 ,w 2 ,w p max(0 , m + d p ( w 1 , w 2 , w p )) L = L join + L meet
+5. Experiments
+In both sets of experiments we train all models using...(truncated)
+
+================================== Ai Message ==================================
+
+They are talking about ontological hierarchical commonsense knowledge, especially transitive entailment relations such as IS-A/hypernym relations. The paper also mentions augmenting this with non-hierarchical commonsense knowledge from raw text.

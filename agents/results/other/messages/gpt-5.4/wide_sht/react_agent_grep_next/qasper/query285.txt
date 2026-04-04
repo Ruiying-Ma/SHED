@@ -1,0 +1,86 @@
+================================ Human Message =================================
+
+QUERY:
+Which works better according to human evaluation, the concurrent or the modular system?
+
+TABLE OF CONTENTS (TOC):
+1 | Automatically Neutralizing Subjective Bias in Text Reid Pryzant,1 Richard Diehl Martinez,1 Nathan Dass,1 Sadao Kurohashi,2 Dan Jurafsky,1 Diyi Yang3
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2 Wiki Neutrality Corpus (WNC)
+1.4 | 2.1 Dataset Properties
+1.5 | 3 Methods for Neutralizing Text
+1.6 | 3.1 MODULAR
+1.7 | 3.2 CONCURRENT
+1.8 | 4 Experiments
+1.9 | 4.1 Experimental Protocol
+1.10 | 4.2 Wikipedia (WNC)
+1.11 | 4.3 Real-world Media
+1.12 | 5 Error Analysis
+1.13 | 6 Algorithmic Analysis
+1.14 | 6.1 Detecting Subjectivity
+1.15 | 6.2 Join Embedding
+1.16 | 7 Related Work
+1.17 | 8 Conclusion and Future Work
+1.18 | 9 Acknowledgements
+1.19 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_fqlTaWatHlc7Hp25H8ZZa1oK)
+ Call ID: call_fqlTaWatHlc7Hp25H8ZZa1oK
+  Args:
+    pattern: human evaluation|human evaluation|Human Evaluation|concurrent|modular
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1 | Abstract
+Texts like news, encyclopedias, and some social media strive for objectivity. Yet bias in the form of inappropriate subjectiv- ity — introducing attitudes via framing, presupposing truth, and casting doubt — remains ubiquitous. This kind of bias erodes our collective trust and fuels social conflict. To address this issue, we introduce a novel testbed for natural language generation: automatically bringing inappropriately subjective text into a neutral point of view (“neutralizing” biased text).  We also offer the first parallel corpus of biased language. The corpus contains 180,000 sentence pairs and originates from Wikipedia edits that removed various framings, presupposi- tions, and attitudes from biased sentences. Last, we propose two strong encoder-decoder baselines for the task. A straight- forward yet opaque CONCURRENT system uses a BERT en- coder to identify subjective words as part of the generation process.  An interpretable and controllable MODULAR algo- rithm separates these steps, using (1) a BERT-based classifier to identify problematic words and (2) a novel join embed- ding through which the classifier can edit the hidden states of the encoder. Large-scale human evaluation across four do- mains (encyclopedias, news headlines, books, and political speeches) suggests that these algorithms are a first step to- wards the automatic identification and reduction of bias.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_5YSQ0u12Hx3LdjyLShPdVQMa)
+ Call ID: call_5YSQ0u12Hx3LdjyLShPdVQMa
+  Args:
+    section_id: 4.3
+
+================================= Tool Message =================================
+Name: read_section
+
+Tool 'read_section' failed after 1 attempt with RuntimeError: Section ID 4.3 not found in TOC.. Please try again.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_TTYaAgqF7873Kb3jr8uQ46AK)
+ Call ID: call_TTYaAgqF7873Kb3jr8uQ46AK
+  Args:
+    section_id: 1.11
+
+================================= Tool Message =================================
+Name: read_section
+
+4.3 Real-world Media
+To demonstrate the efficacy of the proposed methods on sub- jective bias in the wild, we perform inference on three out- of-domain datasets (Table 6). We prepared each dataset ac- cording to the same procedure as WNC (Section 2). After in- ference, we enlisted 1800 raters to assess the quality of 200 randomly sampled datapoints.  Note that for partisan datasets we sample an equal number of examples from “conserva- tive” and “liberal” sources. These data are:
+• The Ideological Books Corpus (IBC) consisting of parti- san books and magazine articles (Sim et al.2013; Iyyer et al. 2014).
+• Headlines of partisan news articles identified as biased ac- cording to mediabiasfactcheck.com.
+• Sentences from the campaign speeches of a prominent politician (United States President Donald Trump).7 We filtered out dialog-specific artifacts (interjections, phatics, etc) by removing all sentences with less than 4 tokens be- fore sampling a test set.Overall, while MODULAR does a better job at reducing bias, CONCURRENT appears to better preserve the mean- ing and fluency of the original text. We conclude that the proposed methods, while imperfect, are capable of provid- ing useful suggestions for how subjective bias in real-world news or political text can be reduced.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_bv1WvMwnDJ20OnbhVcsCSe2t)
+ Call ID: call_bv1WvMwnDJ20OnbhVcsCSe2t
+  Args:
+    section_id: 1.10
+
+================================= Tool Message =================================
+Name: read_section
+
+4.2 Wikipedia (WNC)
+Results on WNC are presented in Table 4. In addition to methods from the literature we include (1) a BERT-based system which simply predicts and deletes subjective words, and (2) a system which predicts replacements (including deletion) for subjective words directly from their BERT em- beddings. All methods appear to successfully reduce bias according to the human evaluators. However, many meth- ods appear to lack fluency.  Adding a token-weighted loss function and pretraining the decoder help the model’s coher- ence according to BLEU and accuracy. Adding the detector ( MODULAR ) or a BERT encoder ( CONCURRENT ) provide additional benefits. The proposed models retain the strong effects of systems from the literature while also producing target-level fluency on average. Our results suggest there is no clear winner between our two proposed systems. MOD - ULAR is better at reducing bias and has higher accuracy,
+ 6 Rule of thumb: k < 0 “poor” agreement, 0 to .2 “slight”, .21 to .40 “fair”, .41 to .60 “moderate”, .61 - .80 “substantial”, and .81 to 1 “near perfect” (Gwet 2011).Metric Fluency Bias Meaning BLEU 0.65 0.34 0.16 Accuracy 0.56 0.52 0. 20
+Table 5: Spearman correlation ( R 2 ) between quantitative and qualitative metrics.while CONCURRENT produces more fluent responses, pre- serves meaning better, and has higher BLEU.Table 5 indicates that BLEU is more correlated with flu- ency but accuracy is more correlated with subjective bias re- duction.  The weak association between BLEU and human evaluation scores is corroborated by other research (Cha- ganty, Mussman, and Liang 2018; Mir et al. 2019). We con- clude that neither automatic metric is a true substitute for human judgment.
+
+================================== Ai Message ==================================
+
+There is no clear winner in human evaluation. MODULAR is better at reducing bias, while CONCURRENT better preserves meaning and fluency.

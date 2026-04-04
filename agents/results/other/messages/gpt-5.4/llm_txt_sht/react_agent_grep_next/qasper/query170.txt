@@ -1,0 +1,46 @@
+================================ Human Message =================================
+
+QUERY:
+Do they reduce language variation of text by enhancing frequencies?
+
+TABLE OF CONTENTS (TOC):
+1 | Combining Thesaurus Knowledge and Probabilistic Topic Models
+1.1 | Abstract.
+1.2 | 1 Introduction
+1.3 | 2 Related Work
+1.4 | 3 Approach to Integration Whole Thesauri into Topic Models
+1.5 | 4 Automatic Measures to Estimate the Quality of Topic Models
+1.6 | 5 Use of Automatic Measures to Assess Combined Models
+1.7 | 6 Manual Evaluation of Combined Topic Models
+1.8 | 7 Conclusion
+1.9 | Acknowledgments.
+1.10 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_cTNhywcFKyBsTxfeNqQZKSDR)
+ Call ID: call_cTNhywcFKyBsTxfeNqQZKSDR
+  Args:
+    pattern: enhanc|frequenc|variation
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1 | Abstract.
+In this paper we present the approach of introducing thesaurus knowl- edge into probabilistic topic models. The main idea of the approach is based on the assumption that the frequencies of semantically related words and phrases, which are met in the same texts, should be enhanced: this action leads to their larger contribution into topics found in these texts.  We have conducted experi- ments with several thesauri and found that for improving topic models, it is use- ful to utilize domain-specific knowledge. If a general thesaurus, such as WordNet, is used, the thesaurus-based improvement of topic models can be achieved with excluding hyponymy relations in combined topic models.Keywords: thesaurus, multiword expression, probabilistic topic models
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_sreMV3hA8Ec1a6tX1pDSb5nd)
+ Call ID: call_sreMV3hA8Ec1a6tX1pDSb5nd
+  Args:
+    pattern: language variation|reduce
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+
+Yes. The paper states that frequencies of semantically related words and phrases appearing in the same texts should be enhanced, increasing their contribution to topics.

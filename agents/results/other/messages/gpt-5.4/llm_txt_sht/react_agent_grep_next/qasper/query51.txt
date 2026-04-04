@@ -1,0 +1,37 @@
+================================ Human Message =================================
+
+QUERY:
+what eeg features were used?
+
+TABLE OF CONTENTS (TOC):
+1 | Advancing Speech Recognition With No Speech Or With Noisy Speech
+1.1 | Abstract
+1.2 | Index Terms
+1.3 | I. INTRODUCTION
+1.4 | II. AUTOMATIC SPEECH RECOGNITION SYSTEM MODELS
+1.4.1 | A. Connectionist Temporal Classiﬁcation (CTC)
+1.4.2 | B. RNN Encoder-Decoder or Attention model
+1.5 | III. DESIGN OF EXPERIMENTS FOR BUILDING THE DATABASE
+1.6 | IV. EEG AND SPEECH FEATURE EXTRACTION DETAILS
+1.7 | V. EEG F EATURE D IMENSION R EDUCTION A LGORITHM D ETAILS
+1.8 | VI. RESULTS
+1.9 | VII. CONCLUSION AND FUTURE WORK
+1.10 | VIII. ACKNOWLEDGEMENT
+1.11 | REFERENCES
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_kU3Xl18W7MMW2c8kcLVhp1NM)
+ Call ID: call_kU3Xl18W7MMW2c8kcLVhp1NM
+  Args:
+    section_id: 1.6
+
+================================= Tool Message =================================
+Name: read_section
+
+IV. EEG AND SPEECH FEATURE EXTRACTION DETAILS
+EEG signals were sampled at 1000Hz and a fourth order IIR band pass filter with cut off frequencies 0.1Hz and 70Hz was applied. A notch filter with cut off frequency 60 Hz was used to remove the power line noise.  EEGlab’s [18] Independent component analysis (ICA) toolbox was used to remove other biological signal artifacts like electrocardiography (ECG), electromyography (EMG), electrooculography (EOG) etc from the EEG signals. We extracted five statistical features for EEG, namely root mean square, zero crossing rate,moving window average,kurtosis and power spectral entropy [1].  So in total we extracted 31(channels) X 5 or 155 features for EEG signals.The EEG features were extracted at a sampling frequency of 100Hz for each EEG channel.We used spectral entropy because it captures the spectral ( frequency domain) and signal complexity information of EEG. It is also a widely used feature in EEG signal analysis [19]. Similarly zero crossing rate was chosen as it is a commonly used feature both for speech recognition and bio signal analysis.  Remaining features were chosen to capture time domain statistical information. We performed lot of experiments to identify this set of features. Initially we used only spectral entropy and zero crossing rate but we noticed that the performance of the ASR system went up when we added the remaining additional features.The recorded speech signal was sampled at 16KHz frequency. We extracted Mel-frequency cepstrum coefficients (MFCC) as features for speech signal.  We first extracted MFCC 13 features and then computed first and second order differentials (delta and delta-delta) thus having total MFCC 39 features. The MFCC features were also sampled at 100Hz same as the sampling frequency of EEG features to avoid seq2seq problem.
+
+================================== Ai Message ==================================
+
+The EEG features used were five statistical features: root mean square, zero crossing rate, moving window average, kurtosis, and power spectral entropy. In total, this gave 31 channels × 5 features = 155 EEG features.

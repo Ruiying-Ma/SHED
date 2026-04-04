@@ -1,0 +1,57 @@
+================================ Human Message =================================
+
+QUERY:
+Is this more effective for low-resource than high-resource languages?
+
+TABLE OF CONTENTS (TOC):
+1 | Evaluating the Cross-Lingual Effectiveness of Massively Multilingual Neural Machine Translation
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2 Massively Multilingual Neural Machine Translation Model
+1.3.1 | 2.1 Model Architecture
+1.3.2 | 2.2 Pre-training
+1.4 | Model quality
+1.4.1 | 2.3 Fine-tuning mNMT Encoder
+1.4.2 | 2.4 Differences with mBERT
+1.5 | 3 Experiments and Results
+1.5.1 | 3.1 XNLI: Cross-lingual NLI
+1.5.2 | 3.2 MLDoc: Document Classification
+1.5.3 | 3.3 Cross-lingual Intent Classification
+1.5.4 | 3.4 POS Tagging
+1.5.5 | 3.5 Named Entity Recognition
+1.6 | 4 Analysis
+1.7 | 5 Related Work
+1.8 | 6 Conclusion and Future Work
+1.9 | A Supplementary Material
+1.10 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_ODa2iLWnzuUeIcbQ4REvaSqu)
+ Call ID: call_ODa2iLWnzuUeIcbQ4REvaSqu
+  Args:
+    pattern: low-resource|high-resource|resource
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1 | Abstract
+The recently proposed massively multilingual neural machine translation (NMT) system has been shown to be capable of translating over 100 languages to and from English within a single model (Aharoni et al., 2019) . Its improved translation performance on low resource languages hints at potential cross-lingual transfer capability for downstream tasks.  In this paper, we evaluate the cross-lingual effectiveness of representations from the encoder of a massively multilingual NMT model on 5 downstream classification and sequence labeling tasks covering a diverse set of over 50 languages. We compare against a strong baseline, multilingual BERT (mBERT) (Devlin et al., 2018) , in different cross-lingual transfer learning scenarios and show gains in zero-shot transfer in 4 out of these 5 tasks.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_ZqcHP8tSSMaU24n9gYd7hJJr)
+ Call ID: call_ZqcHP8tSSMaU24n9gYd7hJJr
+  Args:
+    section_id: 1.6
+
+================================= Tool Message =================================
+Name: read_section
+
+4 Analysis
+In this section, we consider some additional settings for comparing mBERT and MMTE. We also investigate the impact of the number of languages and the target language token on MMTE performance.Feature-based Approach In this setting, instead of fine-tuning the entire network of mBERT or MMTE, we only fine-tune the task-specific network which only has a small percentage of the total number of parameters. The rest of the model parameters are frozen.  We perform this experiment on POS tagging task by fine-tuning a single layer feed-forward neural network stacked on top of mBERT and MMTE. We report the results in Table 7 . While the scores of the feature-based approach are significantly lower than those obtained via full fine-tuning (5), we see that MMTE still outperforms mBERT on both in-language and zero-shot settings by an even bigger margin.  This is particularly interesting as the feature-based approach has its own advantages: 1) it is applicable to downstream tasks which require significant task-specific parameters on top of a transformer encoder, 2) it is computationally cheaper to train and tune the downstream model, and 3) it is compact and scalable since we only need a small number of task-specific parameters.  Few Shot Transfer While zero-shot transfer is a good measure of a model's natural cross-lingual effectiveness, the more practical setting is the fewshot transfer scenario as we almost always have access to, or can cheaply acquire, a small amount of data in the target language. We report the fewshot transfer results of mBERT and MMTE on the POS tagging dataset in 8.  To simulate the few-shot setting, in addition to using English data, we use 10 examples from each language (upsampled to 1000). MMTE outperforms mBERT in few-shot setting by 0.6 points averaged over 48 languages. <table><tr><td/><td colspan="2">In language</td><td colspan="2">Zero-shot</td></tr><tr><td/><td colspan="4">mBERT MMTE mBERT MMTE</td></tr><tr><td>ar</td><td>87.65</td><td>91.50</td><td>61.08</td><td>60. 35</td></tr><tr><td>bg</td><td>95.82</td><td>96.72</td><td>88.08</td><td>83.48</td></tr><tr><td>de</td><td>90.68</td><td>93.34</td><td>85.10</td><td>89. 52</td></tr><tr><td>en</td><td>92.73</td><td>92.15</td><td>92.73</td><td>92.33</td></tr><tr><td>es</td><td>93.03</td><td>92.45</td><td>76.95</td><td>83. 66</td></tr><tr><td>fr</td><td>92.20</td><td>93.41</td><td>77.64</td><td>83.58</td></tr><tr><td>hi</td><td>89.86</td><td>92.15</td><td>64.21</td><td>73. 29</td></tr><tr><td>mr</td><td>83.50</td><td>84.49</td><td>52.27</td><td>66.36</td></tr><tr><td>nl</td><td>92.87</td><td>94.00</td><td>86.38</td><td>87. 32</td></tr><tr><td>pt</td><td>93.14</td><td>93.84</td><td>85.95</td><td>86.86</td></tr><tr><td>ro</td><td>90.76</td><td>89.68</td><td>71.92</td><td>77. 77</td></tr><tr><td>sv</td><td>93.67</td><td>94.35</td><td>85.98</td><td>87.82</td></tr><tr><td>te</td><td>90.57</td><td>92.75</td><td>70.09</td><td>81. 12</td></tr><tr><td>ur</td><td>90.02</td><td>90.32</td><td>58.98</td><td>67.90</td></tr><tr><td>zh</td><td>86.29</td><td>84.34</td><td>60.82</td><td>56. 50</td></tr><tr><td>avg</td><td>90.85</td><td>91.70</td><td>74.55</td><td>78.52</td></tr></table>
+Table 7 F1 scores on dev set of POS tagging dataset using both mBERT and MMTE as feature extractor.Once again, we see that the gains are more pronounced in low resource languages.  One Model for all Languages Another setting of importance is the in-language training where instead of training one model for each language, we concatenate all the data and train one model jointly on all languages. We perform this experiment on the POS tagging dataset with 48 languages and report results in Table 9 . We observe that MMTE performance is on par with mBERT.We also find that the 48 language average improves by 0. 2 points as compared to the one model per language setting in Table 5 . Effect of the Target Language Token During the pre-training step, when we perform the translation task using the mNMT system, we prepend a <2xx> token to the source sentence, where xx indicates the target language. The encoder therefore has always seen a <2en> token in front of non-English sentences and variety of different tokens depending on the target language in front of English sentence.  However, when fine-tuning on downstream tasks, we do not use this token. We believe this creates a mismatch between the pretraining and fine-tuning steps. To investigate this further, we perform a small scale study where we train an mNMT model on 4 languages to and from English in two different settings: 1) where we prepend the <2xx> token, and 2) where we don't prepend the <2xx> token but instead encode it separately.  The decoder jointly attends over both the source sentence encoder and the <2xx> token encoding. The BLEU scores on the translation tasks are comparable using both these approaches. The results on cross-lingual zero-shot transfer in both settings are provided in
+
+================================== Ai Message ==================================
+
+Yes. The paper states that “the gains are more pronounced in low resource languages,” and the abstract also notes that improved translation performance on low-resource languages hints at stronger cross-lingual transfer capability.

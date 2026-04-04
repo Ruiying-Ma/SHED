@@ -1,0 +1,50 @@
+================================ Human Message =================================
+
+QUERY:
+Which languages does their newly created dataset contain?
+
+TABLE OF CONTENTS (TOC):
+1 | XPersona: Evaluating Multilingual Personalized Chatbot
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2 Related Work
+1.4 | 3 Data Collection
+1.5 | 4 Multilingual Personalized Conversational Models
+1.5.1 | 4.1 Model Architecture
+1.5.2 | 4.2 Training Strategy
+1.6 | 5 Experiments
+1.6.1 | 5.1 Evaluation Metrics
+1.6.2 | 5.2 Implementation Details
+1.6.3 | 5.3 Results and Discussion
+1.6.3.1 | 5.3.1 Quantitative Analysis
+1.6.3.2 | 5.3.2 Qualitative Analysis and Discussion
+1.7 | 6 Conclusion
+1.8 | References
+1.9 | A Dataset Collection
+1.9.1 | A.1 Annotation Instructions
+1.9.2 | A.2 Training Set Statistics
+1.10 | B Model Detail
+1.11 | C Human Evaluation
+1.12 | D Generated Samples
+1.12.1 | D.1 Mixed-language Samples
+1.12.2 | D.2 Model Comparison Samples
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_3hZsK29Ny7Sat3Qw1YxrFXLf)
+ Call ID: call_3hZsK29Ny7Sat3Qw1YxrFXLf
+  Args:
+    section_id: 1.4
+
+================================= Tool Message =================================
+Name: read_section
+
+3 Data Collection
+The proposed XPersona dataset is an extension of the persona-chat dataset ( Zhang et al. , 2018 ; Dinan et al. , 2019a ). Specifically, we extend the ConvAI2 ( Dinan et al. , 2019a ) to six languages: Chinese, French, Indonesian, Italian, Korean, and Japanese. Since the test set of ConvAI2 is hid- den, we split the original validation set into a new validation set and test sets.  Then, we firstly au- tomatically translate the training, validation, and
+Figure 1: (a) Multilingual Encoder-Decoder model. (b) Multilingual Causal Decoder model. (Detailed illustration is reported in Appendix B)
+test set using APIs (PapaGo 2 for Korean, Google Translate 3 for other languages).  For each lan- guage, we hired native speaker annotators with a fluent level of English and asked them to revise the machine-translated dialogues and persona sen- tences in the validation set and test set according to original English dialogues. The main goal of human annotation is to ensure the revised conver- sations are coherent and fluent in target language despite the cultural discrepancy in different lan- guages. Therefore, annotators are not restricted to translate the English dialogues.  They are also allowed to customize dialogues and persona sen- tences. The annotated dialogues can deviate from original translation while retain persona and con- versation consistency . The full annotation instruc- tions are reported in Appendix A.Compared to collecting new persona sentences and dialogues in each language, human-annotating the dialogues by leveraging translation APIs has multiple advantages. First, it increases the data distribution similarity across languages ( Conneau et al.  , 2018 ), which can better examine the system’s cross-lingual transferability. Second, revising the machine-translated dialogues based on the original English dialogue improves the data construction efficiency. Third, it leverages the well-constructed English persona conversations as a reference to ensure the dialogue quality without the need for training a new pool of workers to generate new samples ( Conneau et al. , 2018 ). On the other hand, human-translating the entire training-set ( ∼ 130K utterances) in six languages is expensive. Therefore, we propose an iterative method to improve the quality of the automatically
+translated training set. We firstly sample 200 dia- logues from the training set ( ∼ 2600 utterances) in each language, and we assign human annotators to list all frequent translation mistakes in the given dialogues.  For example, daily colloquial English expressions such as “cool", “I see", and “lol" are usually literally translated. After that, we use a simple string matching to revise the inappropriate translations in the whole training-set and return a revision log, which records all the revised utter- ances. Then, we assign human annotators to check all the revised utterances and list translation mis- takes again. We repeat this process at least twice for each language.  Finally, we summarize the statistics of the collected dataset in Table 2 .
+
+================================== Ai Message ==================================
+
+Chinese, French, Indonesian, Italian, Korean, and Japanese.

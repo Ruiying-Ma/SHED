@@ -1,0 +1,35 @@
+================================ Human Message =================================
+
+HYPOTHESIS:
+No solicitation: Receiving Party shall not solicit some of Disclosing Party's representatives.
+
+TABLE OF CONTENTS (TOC):
+1 | Non-Disclosure Agreement
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_ZwIdTujAulaOnLd7V1uHOugf)
+ Call ID: call_ZwIdTujAulaOnLd7V1uHOugf
+  Args:
+    pattern: solicit|solicitation|representatives|employees|staff
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_XhtwRj6gcKli0LaE1FC44xoZ)
+ Call ID: call_XhtwRj6gcKli0LaE1FC44xoZ
+  Args:
+    section_id: 1
+
+================================= Tool Message =================================
+Name: read_section
+
+Non-Disclosure Agreement
+
+================================== Ai Message ==================================
+
+NotMentioned

@@ -1,0 +1,50 @@
+================================ Human Message =================================
+
+QUERY:
+How is cyberbullying defined?
+
+TABLE OF CONTENTS (TOC):
+1 | Aggressive, Repetitive, Intentional, Visible, and Imbalanced: Reﬁning Representations for Cyberbullying Classiﬁcation
+1.1 | Caleb Ziems
+1.2 | Ymir Vigfusson
+1.3 | Fred Morstatter
+1.3.1 | Abstract
+1.4 | Introduction
+1.5 | Background
+1.5.1 | Deﬁning Cyberbullying
+1.5.2 | Existing Sources of Cyberbullying Data
+1.5.3 | Modeling Cyberbullying Behavior
+1.6 | Curating a Comprehensive Cyberbullying Dataset
+1.6.1 | Data Collection
+1.6.2 | Annotation Task
+1.6.3 | Cyberbullying Transcends Cyberaggression
+1.7 | Feature Engineering
+1.7.1 | Text-based Features
+1.7.2 | Social Network Features
+1.7.3 | Timeline Features
+1.7.4 | Thread Features
+1.8 | Experimental Evaluation
+1.9 | Discussion
+1.10 | Conclusion
+1.11 | Acknowledgements
+1.12 | References
+1.13 | Appendix 1: Analysis of the Real-World Class Distribution for Cyberbullying Criteria
+1.14 | Appendix 2: Model Evaluation
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_wveTFlvssexaYmJ0wj2c4Ta1)
+ Call ID: call_wveTFlvssexaYmJ0wj2c4Ta1
+  Args:
+    section_id: 1.5.1
+
+================================= Tool Message =================================
+Name: read_section
+
+Deﬁning Cyberbullying
+Some researchers view cyberbullying as an extension of more “traditional” bullying behaviors (Hinduja and Patchin 2008; Olweus 2012; Raskauskas and Stoltz 2007). In one widely-cited book, the psychologist Dan Olweus defines schoolyard bullying in terms of three criteria: repetition , harmful intent , and an imbalance of power (Olweus 1994).  He then identifies bullies by their intention to “inflict injury or discomfort” upon a weaker victim through repeated acts of aggression.Social scientists have extensively studied this form of bullying as it occurs among adolescents in school (Kowal- ski and Limber 2013; Li 2006).  However, experts disagree whether cyberbullying should be studied as a form of tra- ditional bullying or a fundamentally different phenomenon (Kowalski and Limber 2013; Olweus 2012).  Some argue that, although cyberbullying might involve repeated acts of aggression, this condition might not necessarily hold in all cases, since a single message can be otherwise forwarded and publicly viewed without repeated actions from the au- thor (Slonje, Smith, and Fris´en 2013; Waasdorp and Brad- shaw 2015). Similarly, the role of power imbalance is un- certain in online scenarios.  Power imbalances of physical strength or numbers may be less relevant, whereas bully anonymity and the permanence of online messages may be
+sufficient to render the victim defenseless (Slonje and Smith 2008).The machine learning community has not reached a unan- imous definition of cyberbullying either. They have instead echoed the uncertainty of the social scientists.  Moreover, some authors have neglected to publish any objective cyber- bullying criteria or even a working definition for their anno- tators, and among those who do, the formulation varies. This disagreement has slowed progress in the field, since classi- fiers and datasets cannot be as easily compared.  Upon re- view, however, we found that all available definitions con- tained a strict subset of the following criteria: aggression ( AGGR ), repetition ( REP ), harmful intent ( HARM ), visibility among peers ( PEER ), and power imbalance ( POWER ). The datasets built from these definitions are outlined in Table 1.
+
+================================== Ai Message ==================================
+
+Cyberbullying is defined in the document as containing a strict subset of these criteria: aggression, repetition, harmful intent, visibility among peers, and power imbalance. It is also described by prior work as repeated acts of aggression intended to inflict injury or discomfort on a weaker victim.

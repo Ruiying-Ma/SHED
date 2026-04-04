@@ -1,0 +1,74 @@
+================================ Human Message =================================
+
+QUERY:
+How do they discover coherent word clusters?
+
+TABLE OF CONTENTS (TOC):
+1 | Automatically Inferring Gender Associations from Language
+1.1 | Kathleen McKeown
+1.1.1 | Abstract
+1.1.1.1 | 1 Introduction
+1.1.1.1.1 | 2 Related Work
+1.1.1.1.1.1 | 3 Data Collection
+1.1.1.1.1.1.1 | 4 Inferring Word-Level Associations
+1.1.1.1.1.1.1.1 | 4.1 Methods
+1.1.1.1.1.1.1.1.1 | 4.2 Findings
+1.1.1.1.1.1.1.1.1.1 | 5 Clustering & Cluster Labeling
+1.1.1.1.1.1.1.1.1.1.1 | 5.1 Methods
+1.1.1.1.1.1.1.1.1.1.1.1 | 5.2 Findings
+1.1.1.1.1.1.1.1.1.1.1.1.1 | 6 Human Evaluations
+1.1.1.1.1.1.1.1.1.1.1.1.1.1 | 7 Conclusion
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | References
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | A Appendix
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | A.1 Word-Level Results
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | A.2 Clustering and Cluster Labeling Results
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | A.3 Human Evaluation Results
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_OWLrnEBvxlpXcaNpMOFAQoi5)
+ Call ID: call_OWLrnEBvxlpXcaNpMOFAQoi5
+  Args:
+    section_id: 1.1.1.1.1.1.1.1.1.1.1
+
+================================= Tool Message =================================
+Name: read_section
+
+5.1 Methods
+First, we trained domain-specific word embed- dings using the Word2Vec ( Mikolov et al. , 2013 ) CBOW model ( w ∈ R 100 ). Then, we used k- means clustering to cluster the embeddings of the gender-associated words. Since k-means may con- verge at local optima, we ran the algorithm 50 times and kept the model with the lowest sum of squared errors. To automatically label the clusters, we com- bined the grounded knowledge of WordNet ( Miller , 1995 ) and context-sensitive strengths of domain-specific word embeddings. Our algo-
+rithm is similar to Poostchi and Piccardi 2018 ’s approach, but we extend their method by introduc- ing domain-specific word embeddings for cluster- ing as well as a new technique for sense disam- biguation.  Given a cluster, our algorithm proceeds with the following three steps:
+1. Sense disambiguation :The goal is to as- sign each cluster word to one of its WordNet synsets; let S represent the collection of cho- sen synsets. We know that these words have been clustered in domain-specific embedding space, which means that in the context of the domain, these words are very close semanti- cally. Thus, we choose S ∗ that minimizes the total distance between its synsets.
+2. Candidate label generation : In this step, we generate L ,the set of possible cluster labels. Our approach is simple: we take the union of all hypernyms of the synsets in S ∗ .
+3. Candidate label ranking : Here, we rank the synsets in L .We want labels that are as close to all of the synsets in S ∗ as possible; thus, we score the candidate labels by the sum of their distances to each synset in S ∗ and we rank them from least to most distance.In steps 1 and 3, we use WordNet pathwise dis- tance, but we encourage the exploration of other distance representations as well.
+5.2 Findings
+Table 3 displays a sample of our results – we find that the clusters are coherent in context and the la- bels seem reasonable. In the next section, we dis- cuss human evaluations that we conducted to more rigorously evaluate the output, but first we discuss the value of these methods toward analysis.At the word-level, we hypothesized that in the celebrity domain, women were more associated with appearance and men with creating content.  Now, we can validate those hypotheses against la- beled clusters – indeed, there is a cluster labeled clothing that is 100% female (i.e. 100% words are female-associated), and a 80% male cluster labeled movie . Likewise, in the professor do- main, we had guessed that women are associated with communication and men with knowledge, and there is a 100% female cluster labeled commu- nication and a 89% male cluster labeled cognition .  Thus, cluster labeling proves to be very effective at
+Domain Sample Words in Cluster F:M Top 3 Pred.  Cluster Labels Celeb gown, top, dress, pant, skirt, neckline 25:0 covering, cloth covering, clothing film, release, role, character, project 4:16 movie, show, event boyfriend, beau, hubby, wife, girlfriend 15:7 lover, person, relative Professor response, email, contact, answer 13:0 statement, message, communication material, concept, topic, stuff, subject 1:8 content, idea, cognition teacher, woman, lady, prof, guy, dude 5:7 man, adult, woman
+ Table 3: Sample of our clusters and predicted cluster labels. We include in the Appendix a more comprehensive table of our results. F:M refers to the ratio of female-associated to male-associated words in the cluster.pulling out the patterns that we believed we saw at the word-level, but could not formally validate. The clusters we mentioned so far all lean heav- ily toward one gender association or the other, but some clusters are interesting precisely be- cause they do not lean heavily – this allows us to see where semantic groupings do not align exactly with gender association.  For example, in the celebrity domain, there is a cluster la- beled lover that has a mix of female-associated words (“boyfriend,” “beau,” “hubby”) and male- associated words (“wife,” “girlfriend”). Jointly leveraging cluster labels and gender associations allows us to see that in the semantic context of hav- ing a lover , women are typically associated with male figures and men with female figures, which reflects heteronormativity in society.
+6 Human Evaluations
+To test our clusters, we employed the Word In- trusion task ( Chang et al. , 2009 ). We present the annotator with five words – four drawn from one cluster and one drawn randomly from the domain vocabulary – and we ask them to pick out the in- truder. The intuition is that if the cluster is co- herent, then an observer should be able to identify the out-of-cluster word as the intruder.  For both domains, we report results on all clusters and on the top 8, ranked by ascending normalized sum of squared errors, which can be seen as a prediction of coherence. In the celebrity domain, annotators identified the out-of-cluster word 73% of the time in the top-8 and 53% overall. In the professor do- main, annotators identified it 60% of the time in the top-8 and 49% overall.  As expected, top-8 per- formance in both domains does considerably bet- ter than overall, but at all levels the precision is significantly above the random baseline of 20%.To test cluster labels, we present the annota- tor with a label and a word, and we ask them
+whether the word falls under the concept. The concept is a potential cluster label and the word is either a word from that cluster or drawn ran- domly from the domain vocabulary.  For a good label, the rate at which in-cluster words fall un- der the label should be much higher than the rate at which out-of-cluster words fall under. In our experiments, we tested the top 4 predicted labels and the centroid of the cluster as a strong base- line label. The centroid achieved an in-cluster rate of .60 and out-of-cluster rate of .18 (difference of .42). Our best performing predicted label achieved an in-cluster rate of . 65 and an out-of-cluster rate of .04 (difference of .61), thus outperforming the centroid on both rates and increasing the gap be- tween rates by nearly 20 points. In the Appendix, we include more detailed results on both tasks.
+7 Conclusion
+We have presented two substantial datasets and a novel integration of methods to automatically infer gender associations in language. We have demonstrated that in both datasets, there are clear differences in how people talk about women and men. Furthermore, we have shown that cluster- ing and cluster labeling are effective at identifying higher-level patterns of gender associations, and that our methods outperform strong baselines in human evaluations. In future work, we hope to use our findings to improve performance on tasks such as abusive language detection.  We also hope to delve into finer-grained analyses, exploring how language around gender interacts with other vari- ables, such as sexual orientation or profession (e.g. actresses versus female athletes). Finally, we plan to continue widening the scope of our study – for example, expanding our methods to include non-binary gender identities, evaluating changes in gender norms over time, and spreading to more domains, such as the political sphere.
+References
+Shlomo Argamon, Moshe Koppel, James Pennebaker,and Jonathan Schler. 2007. Mining the blogosphere: age, gender, and the varieties of self-expression. First Monday , 12(9).
+David Bamman, Jacob Eisenstein, and Tyler Schnoe- belen.2014. Gender identity and lexical variation in social media. Journal of Sociolinguistics , 18(2).
+Tolga Bolukbasi, Kai-Wei Chang, James Zou,Venkatesh Saligrama, and Adam Kalai. 2016. Man is to computer programmer as woman is to home- maker? debiasing word embeddings. In NeurIPS .
+Constantinos Boulis and Mari Ostendorf. 2005.A quantitative analysis of lexical differences between genders in telephone conversations. In ACL .
+Mary Bucholtz and Kira Hall. 1995.Gender articu- lated: language and the socially constructed self . Routledge.
+Aylin Caliskan, Joanna J. Bryson,and Arvind Narayanan. 2017. Semantics derived automatically from language corpora contain human-like biases. Science , 356(6334).
+Deborah Cameron. 2008. The myth of mars and venus:do men and women really speak different lan- guages? Oxford University Press.
+Jonathan Chang, Sean Gerrish, Chong Wang, Jordan L. Boyd-Graber,and David M. Blei. 2009. Reading tea leaves: how humans interpret topic models. In NeurIPS .
+Dorottya Demszky, Nikhil Garg, Rob Voigt,James Zou, Matthew Gentzkow, Jesse Shapiro, and Dan Ju- rafsky. 2019. Analyzing polarization in social me- dia: method and application to tweets on 21 mass shootings. In NAACL .
+Olive Jean Dunn. 1961. Multiple comparisons among means.Journal of the American Statistical Associa- tion , 56(293).
+Penelope Eckert and Sally McConnell-Ginet. 2003. Language and gender .Cambridge University Press.
+Ethan Fast, Tina Vachovsky, and Michael Bernstein. 2016.Shirtless and dangerous: quantifying linguis- tic signals of gender bias in an online fiction writing community. In ICWSM .
+Liye Fu, Cristian Danescu-Niculescu-Mizil,and Lil- lian Lee. 2016. Tie-breaker: using language mod- els to quantify gender bias in sports journalism. In IJCAI Workshop on NLP Meets Journalism .
+Nikhil Garg, Londa Schiebinger, Dan Jurafsky,and James Zou. 2018. Word embeddings quantify 100 years of gender and ethnic stereotypes. Proceedings of the National Academy of Sciences , 155(16).
+Andrew Gelman, John B. Carlin, Hal S. Stern, and Donald B.Rubin. 2004. Bayesian data analysis . CRC Press/Chapman Hall.
+Hila Gonen and Yoav Goldberg. 2019. Lipstick on a pig:debiasing methods cover up systematic gender biases in word embeddings but do not remove them. In NAACL-HLT .
+Janet Holmes and Miriam Meyerhoff. 2003.The hand- book of language and gender . Blackwell Publish- ing.
+Akshita Jha and Radhika Mamidi. 2017.When does a compliment become...(truncated)
+
+================================== Ai Message ==================================
+
+They first train domain-specific Word2Vec CBOW embeddings and then apply k-means clustering to the embeddings of gender-associated words, running k-means 50 times and keeping the solution with the lowest sum of squared errors. They judge coherence by the resulting semantic proximity in embedding space and evaluate it with a Word Intrusion task, where annotators identify an out-of-cluster intruder word.

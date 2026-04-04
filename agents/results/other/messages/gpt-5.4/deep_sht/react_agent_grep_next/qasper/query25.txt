@@ -1,0 +1,112 @@
+================================ Human Message =================================
+
+QUERY:
+What are strong baselines authors used?
+
+TABLE OF CONTENTS (TOC):
+1 | Automatically Inferring Gender Associations from Language
+1.1 | Kathleen McKeown
+1.1.1 | Abstract
+1.1.1.1 | 1 Introduction
+1.1.1.1.1 | 2 Related Work
+1.1.1.1.1.1 | 3 Data Collection
+1.1.1.1.1.1.1 | 4 Inferring Word-Level Associations
+1.1.1.1.1.1.1.1 | 4.1 Methods
+1.1.1.1.1.1.1.1.1 | 4.2 Findings
+1.1.1.1.1.1.1.1.1.1 | 5 Clustering & Cluster Labeling
+1.1.1.1.1.1.1.1.1.1.1 | 5.1 Methods
+1.1.1.1.1.1.1.1.1.1.1.1 | 5.2 Findings
+1.1.1.1.1.1.1.1.1.1.1.1.1 | 6 Human Evaluations
+1.1.1.1.1.1.1.1.1.1.1.1.1.1 | 7 Conclusion
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | References
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | A Appendix
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | A.1 Word-Level Results
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | A.2 Clustering and Cluster Labeling Results
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | A.3 Human Evaluation Results
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_1Ckrd7nhafCMdX0yJkEeTFcm)
+ Call ID: call_1Ckrd7nhafCMdX0yJkEeTFcm
+  Args:
+    pattern: baseline|baselines
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | A.3 Human Evaluation Results
+Table 4 provides more detailed results for the Word Intrusion task. As in the main paper, we pro- vide the results in each domain for all clusters and
+for just the top 8, determined by ascending nor- malized sum of squares.Domain Level Precision Fleiss’ κ Celeb Top-8 .725 .530 Celeb Overall .527 .314 Prof. Top-8 .600 .216 Prof. Overall .488 .212
+ Table 4: Results for Word Intrusion task. All results significantly outperform the random baseline of .20 ( p ≤ 0 . 0001 ).Table 9 displays more detailed results for the cluster labeling task. As discussed in the main pa- per, we would like to see that the rate at which in- cluster words fall under the cluster label is much higher than the rate at which out-of-cluster words fall under.  We tried the top 4 predicted labels, compared against the centroid as a baseline label. For each cluster, we tested labels against 10 in- cluster words and 3 out-of-cluster words; thus, we tested 65 questions (13 words x 5 labels) per clus- ter.  Due to the high number of questions per clus- ter, we only tested 15 clusters – the top 10 labeled in the celebrity domain and the top 5 labeled in the professor domain. We report results over all tested clusters, but broken down by label type (e.g. cen- troid or 2 nd predicted label).Table 5: Top 25 most gender-associated nouns, verbs, and adjectives in the celebrity domain.  Words are listed in order of decreasing significance, but all words fall under p ≤ 0.05, with Bonferroni correction. Female-Associated Male-Associated Nouns girl, eye, cover, star, sister, shoulder, husband, lady, baby, issue, wedding, actress, reality, daughter, carpet, gown, fashion, mom, pregnancy, photo, top, hair, look, outfit, mother movie, actor, president, wife, dad, death, film, host, news, statement, father, girlfriend, man, assault, alle- gation, attorney, claim, investigation, misconduct, behavior, lawsuit, action, guy, director, harassment Verbs caption, wear, look, keep, love, date, match, rock, use, accessorize, style, pair, feel, share, show, shop, fit, plunge, model, apply, reveal, flaunt, open, tone, color say, deny, accord, claim, accuse, allege, would, apologize, publish, fire, hear, play, come, continue, ask, involve, pass, replace, investigate, charge, win, rap, pay, state, sue Adj.  red, pink, pregnant, sexy, sheer, white, black, beautiful, stylish, nude, stun- ning, chic, natural, blonde, new, blue, sweet, glam, loose, hot, oversized, ca- sual, gorgeous, toned, little sexual, consensual, inappropriate, fu- rious, guilty, alleged, oral, presiden- tial, late, republican, deadpool, many, financial, bad, political, public, false, russian, comic, non, dead, detailed, nu- merous, untrue, criminal
+ Table 6: Top 25 most gender-associated nouns, verbs, and adjectives in the professor domain. Words are listed in order of decreasing significance, but all words fall under p ≤ 0.05, with Bonferroni correction, aside from the last three terms listed for Female-Associated Verbs and the last four terms listed for Male-Associated Verbs. Female-Associated Male-Associated Nouns class, work, teacher, person, woman, assignment, email, credit, week, step, direction, attitude, instruction, lady, instructor, date, response, discussion, sweetheart, communication, husband, point, group, mail, time material, concept, professor, exam, sense, topic, joke, math, stuff, pro- gramming, world, department, lecture, prof, note, humor, guy, story, lecturer, curve, tangent, man, dude, genius, in- dustry Verbs take, would, respond, email, recom- mend, help, love, submit, miss, grade, treat, follow, complete, accept, hat, need, send, reply, turn, correct, com- municate, check, feel, wait, finish learn, curve, teach, lay, talk, crack, know, write, lecture, challenge, want, relate, sleep, solve, ramble, push, start, entertain, joke, put, bore, mumble, base, cover, explain Adj.  easy, helpful, nice, rude, online, due, wonderful, extra, sweet, kind, busy, caring, hot, late, strict, timely, annoy- ing, horrible, mean, quick, disorga- nized, pleasant, responsive, beautiful, lovely good, knowledgeable, great, smart, interesting, intelligent, difficult, real, funny, hilarious, boring, cool, dry, en- tertaining, favorite, challenging, bril- liant, arrogant, interested, hard, pas- sionate, old, tough, practical, excellent
+ Table 7: Top 12 clusters out of 45 overall in the celebrity domain. Predicted labels are included if applicable – we were only able to predict labels for clusters that contained nouns, since our clustering labeling algorithm relied on the noun taxonomy in WordNet. In the Sample Words in Cluster column, italics indicate female-associated terms, and non-italics indicate male-associated. F:M refers to the ratio of female-associated to male-associated words in the cluster. Sample Words in Cluster F:M Centroid Top 3 Pred.  Cluster Labels month, day, year, decade, hour 2:3 month time period, fundamental quan- tity, measure engagement, marriage, divorce, re- lationship, split, breakup 6:0 breakup state, union, separation woman, man, guy, people, some- one, anyone, one, person 1:7 man person, man, adult photo, post, pic, snap, selfie, image, snapshot, kiss, photograph, tribute 10:2 snapshot photograph, representation, pic- ture reveal, gush, tell, explain, dish, ad- mit, say, recall, reply 7:3 explain N/A trophy, win, category, nominate, nomination, finalist 1:5 finalist collection, condition, award exclusive, peek, sneak, glimpse, pre- view 5:0 preview look, sensing, screening difference , allegation, claim, accu- sation, truth, lie 1:5 accusation claim, assertion, statement accessorize, sneaker, toe, jewel, floral, embroider, pink, hat, veil, turtleneck, sequin, tiara, bodysuit 123:1 halter artifact, garment, covering girl, sister, baby, daughter, mom, pregnancy , dad, father, brother, son 14:6 dad person, parent, mother husband, boyfriend, beau, hubby, fi- ance , wife, girlfriend, finacee 15:7 fiance lover, person, relative shoulder, gown, top, dress, pant, skirt, diamond, neckline, waist, bra 25:0 blouse covering, cloth covering, cloth- ing
+ Table 8: Top 6 clusters out of 16 overall in the professor domain. Same details as Table 7 apply.Sample Words in Cluster F:M Centroid Top 3 Pred.  Cluster Labels teacher, woman, lady, professor, prof, guy, lecturer, man, dude 5:7 prof man, adult, woman everything, material, concept, topic, stuff, tangent, subject, content 1:8 content content, idea, cognition respond, email, response, respon- sive, stuff, reply, contact, answer 13:0 respond statement, message, communi- cation familiar, literate, savvy, genius, nerd, background, scientist, geek 5:10 geek person, expert, anomaly communicate, learn, teach, know, solve, explain, introduce, convey 1:18 simplify N/A compassionate, lovely, amazing, sweet, understanding, hot, nice, passionate, funniest, smart, cool, in- spirational, intelligent, likable 21:44 outgoing N/A
+ Label Type In-Cluster Rate Out-of-Cluster Rate Difference Fleiss’ κ Centroid .597 .178 .419 .322 1 st pred. label .621 .156 .465 .258 2 nd pred. label .540 .200 .340 .256 3 rd pred. label .653 .044 .609 .353 4 th pred. label .452 .111 .341 .261
+Table 9: Results for cluster labeling task.  The 3 rd predicted label has a significantly lower out-of-cluster rate than the centroid and all the other predicted labels ( p ≤ 0.02). The same label also slightly outperforms the centroid on the in-cluster rate, thus producing a much larger gap between rates than the centroid.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_xhZ61F10fefYlf7mP3f4G8Zq)
+ Call ID: call_xhZ61F10fefYlf7mP3f4G8Zq
+  Args:
+    section_id: 1.1.1.1.1.1.1.1.1.1.1.1.1
+
+================================= Tool Message =================================
+Name: read_section
+
+6 Human Evaluations
+To test our clusters, we employed the Word In- trusion task ( Chang et al. , 2009 ). We present the annotator with five words – four drawn from one cluster and one drawn randomly from the domain vocabulary – and we ask them to pick out the in- truder. The intuition is that if the cluster is co- herent, then an observer should be able to identify the out-of-cluster word as the intruder.  For both domains, we report results on all clusters and on the top 8, ranked by ascending normalized sum of squared errors, which can be seen as a prediction of coherence. In the celebrity domain, annotators identified the out-of-cluster word 73% of the time in the top-8 and 53% overall. In the professor do- main, annotators identified it 60% of the time in the top-8 and 49% overall.  As expected, top-8 per- formance in both domains does considerably bet- ter than overall, but at all levels the precision is significantly above the random baseline of 20%.To test cluster labels, we present the annota- tor with a label and a word, and we ask them
+whether the word falls under the concept. The concept is a potential cluster label and the word is either a word from that cluster or drawn ran- domly from the domain vocabulary.  For a good label, the rate at which in-cluster words fall un- der the label should be much higher than the rate at which out-of-cluster words fall under. In our experiments, we tested the top 4 predicted labels and the centroid of the cluster as a strong base- line label. The centroid achieved an in-cluster rate of .60 and out-of-cluster rate of .18 (difference of .42). Our best performing predicted label achieved an in-cluster rate of . 65 and an out-of-cluster rate of .04 (difference of .61), thus outperforming the centroid on both rates and increasing the gap be- tween rates by nearly 20 points. In the Appendix, we include more detailed results on both tasks.
+7 Conclusion
+We have presented two substantial datasets and a novel integration of methods to automatically infer gender associations in language. We have demonstrated that in both datasets, there are clear differences in how people talk about women and men. Furthermore, we have shown that cluster- ing and cluster labeling are effective at identifying higher-level patterns of gender associations, and that our methods outperform strong baselines in human evaluations. In future work, we hope to use our findings to improve performance on tasks such as abusive language detection.  We also hope to delve into finer-grained analyses, exploring how language around gender interacts with other vari- ables, such as sexual orientation or profession (e.g. actresses versus female athletes). Finally, we plan to continue widening the scope of our study – for example, expanding our methods to include non-binary gender identities, evaluating changes in gender norms over time, and spreading to more domains, such as the political sphere.
+References
+Shlomo Argamon, Moshe Koppel, James Pennebaker,and Jonathan Schler. 2007. Mining the blogosphere: age, gender, and the varieties of self-expression. First Monday , 12(9).
+David Bamman, Jacob Eisenstein, and Tyler Schnoe- belen.2014. Gender identity and lexical variation in social media. Journal of Sociolinguistics , 18(2).
+Tolga Bolukbasi, Kai-Wei Chang, James Zou,Venkatesh Saligrama, and Adam Kalai. 2016. Man is to computer programmer as woman is to home- maker? debiasing word embeddings. In NeurIPS .
+Constantinos Boulis and Mari Ostendorf. 2005.A quantitative analysis of lexical differences between genders in telephone conversations. In ACL .
+Mary Bucholtz and Kira Hall. 1995.Gender articu- lated: language and the socially constructed self . Routledge.
+Aylin Caliskan, Joanna J. Bryson,and Arvind Narayanan. 2017. Semantics derived automatically from language corpora contain human-like biases. Science , 356(6334).
+Deborah Cameron. 2008. The myth of mars and venus:do men and women really speak different lan- guages? Oxford University Press.
+Jonathan Chang, Sean Gerrish, Chong Wang, Jordan L. Boyd-Graber,and David M. Blei. 2009. Reading tea leaves: how humans interpret topic models. In NeurIPS .
+Dorottya Demszky, Nikhil Garg, Rob Voigt,James Zou, Matthew Gentzkow, Jesse Shapiro, and Dan Ju- rafsky. 2019. Analyzing polarization in social me- dia: method and application to tweets on 21 mass shootings. In NAACL .
+Olive Jean Dunn. 1961. Multiple comparisons among means.Journal of the American Statistical Associa- tion , 56(293).
+Penelope Eckert and Sally McConnell-Ginet. 2003. Language and gender .Cambridge University Press.
+Ethan Fast, Tina Vachovsky, and Michael Bernstein. 2016.Shirtless and dangerous: quantifying linguis- tic signals of gender bias in an online fiction writing community. In ICWSM .
+Liye Fu, Cristian Danescu-Niculescu-Mizil,and Lil- lian Lee. 2016. Tie-breaker: using language mod- els to quantify gender bias in sports journalism. In IJCAI Workshop on NLP Meets Journalism .
+Nikhil Garg, Londa Schiebinger, Dan Jurafsky,and James Zou. 2018. Word embeddings quantify 100 years of gender and ethnic stereotypes. Proceedings of the National Academy of Sciences , 155(16).
+Andrew Gelman, John B. Carlin, Hal S. Stern, and Donald B.Rubin. 2004. Bayesian data analysis . CRC Press/Chapman Hall.
+Hila Gonen and Yoav Goldberg. 2019. Lipstick on a pig:debiasing methods cover up systematic gender biases in word embeddings but do not remove them. In NAACL-HLT .
+Janet Holmes and Miriam Meyerhoff. 2003.The hand- book of language and gender . Blackwell Publish- ing.
+Akshita Jha and Radhika Mamidi. 2017.When does a compliment become sexist? analysis and classifi- cation of ambivalent sexism using twitter data. In ACL Workshop on NLP and Computational Social Science .
+David Jurgens, Yulia Tsvetkov, and Dan Jurafsky.2017. Writer profiling without the writers text. In SocInfo .
+Robin Lakoff. 1973. Language and woman’s place. Language in Society ,2(1).
+Christopher D. Manning, Prabhakar Raghavan,and Hinrich Schutze. 2008. Introduction to information retrieval . Cambridge University Press.
+Tomas Mikolov, Kai Chen, Gregory Corrado,and Jef- frey Dean. 2013. Efficient estimation of word repre- sentations in vector space. In ICLR Workshop .
+George A. Miller. 1995. Wordnet: a lexical database for english.Communications of the ACM , 38(11).
+Hanieh Poostchi and Massimo Piccardi. 2018.Cluster labeling by word embeddings and wordnet’s hyper- nymy. In Australasian Language Technology Asso- ciation Workshop .
+Delip Rao, David Yarowsky, Abhishek Shreevats,and Manaswi Gupta. 2010. Classifying latent user at- tributes in twitter. In SMUC .
+Maarten Sap, Marcella Cindy Prasetio, Ari Holtzman,Hannah Rashkin, and Yejin Choi. 2017. Connota- tion frames of power and agency in modern films. In EMNLP ..
+Jenn Selby. 2014.Cate blanchett calls out red carpet sexism: ‘do you do this to the guys?’ In Independent .
+Anna Statham, Laurel Richardson, and Judith A. Cook. 1991.Gender and university teaching: a negotiated difference . SUNY Press.
+Deborah Tannen. 1990. You just dont understand:men and women in conversation . Ballantine Books.
+Rob Voigt, David Jurgens, Vinodkumar Prabhakaran,Dan Jurafsky, and Yulia Tsvetkov. 2018. Rtgender: a corpus for studying differential responses to gen- der. In LREC .
+Claudia Wagner, David Garcia, Mohsen Jadidi,and Markus Strohmaier. 2015. It’s a man’s wikipedia? assessing gender inequality in an online encyclope- dia. In ICWSM .
+Claudia Wagner, Eduardo Graells-Garrido, David Gar- cia,and Filippo Menczer. 2016. Women through the glass ceiling: gender asymmetries in wikipedia. EPJ Data Sci , 5(5).
+Zeerak Waseem and Dirk Hovy. 2016.Hateful sym- bols or hateful people? predictive features for hate speech detection on twitter. In NAACL-HLT .
+Steven Wilson, Yiting Shen, and Rada Mihalcea. 2018.Building and validating hierarchical lexicons with a case study on personal values. In SocInfo .
+Jieyu Zhao, Tianlu Wang, Mark Yatskar,Ryan Cot- terell, Vicente Ordonez, and Kai-Wei Chang. 2019. Gender bias in contextualized word embeddings. In NAACL-HLT .
+Jieyu Zhao, Yichao Zhou, Zeyu Li, Wei Wang,and Kai- Wei Chang. 2018. Learning gender-neutral word embeddings. In EMNLP .
+A Appendix
+We include here extended results for each of the stages of work that we covered in the main paper: findings for inferring word-level gender associa- tions (Tables 5 and 6 ), findings from clustering and cluster labeling (Tables 7 and 8 ), and results from our two evaluation tasks (Tables 4 and 9 ). Tables 5 – 9 are on the following three pages.
+A.1 Word-Level Results
+Tables 5 and 6 provide the top 25 most significant female-associated and male-associated nouns, verbs, and adjectives in both domains. Gender association is determined using the method de- scribed in Section 4.1.
+A.2 Clustering and Cluster Labeling Results
+Tables 7 and 8 provide the clustering and clus- ter labeling results for the top- n clusters in each domain, ranked by ascending normalized sum of squared errors. During clustering, we set k to N 50 , where N was the number of embeddings being clustered. In the celebrity domain, this resulted in 45 clusters; in Table 7 , we show the top 12.  In the professor domain, this resulted in 16 clusters; in Table 8 , we show the top 6.
+A.3 Human Evaluation Results
+Table 4 provides more detailed results for the Word Intrusion task. As in the main paper, we pro- vide the results in each domain for all clusters and
+for just the top 8, determined by ascending nor- malized sum of squares.Domain Level Precision Fleiss’ κ Celeb Top-8 .725 .530 Celeb Overall .527 .314 Prof. Top-8 .600 .216 Prof. Overall .488 .212
+ Table 4: Results for Word Intrusion task. All results significantly outperform the random baseline of .20 ( p ≤ 0 . 0001 ).Table 9 displays more detailed results for the cluster labeling task. As discussed in the main pa- per, we would like to see t...(truncated)
+
+================================== Ai Message ==================================
+
+The authors used the centroid of the cluster as a strong baseline label for the cluster labeling task. They also used a random baseline of 20% for the Word Intrusion task.

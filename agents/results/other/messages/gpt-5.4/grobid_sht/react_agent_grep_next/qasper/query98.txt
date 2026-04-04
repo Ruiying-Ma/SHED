@@ -1,0 +1,86 @@
+================================ Human Message =================================
+
+QUERY:
+what are the baselines?
+
+TABLE OF CONTENTS (TOC):
+1 | A Large-Scale Test Set for the Evaluation of Context-Aware Pronoun Translation in Neural Machine Translation
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2 Related Work
+1.3.1 | 2.1 Context-Aware NMT Models
+1.3.2 | 2.2 Evaluation of Pronoun Translation
+1.4 | 3 Test set with contrastive examples
+1.4.1 | 3.1 Automatic extraction of contrastive examples from corpora
+1.5 | contrastive:
+1.5.1 | 3.2 Evaluation by scoring
+1.6 | 4 Context-Aware NMT Models
+1.6.1 | 4.1 Recurrent Models
+1.6.2 | 4.2 Transformer Models
+1.7 | Voita et al. (2018)
+1.8 | 5 Experiments
+1.9 | 6 Evaluation
+1.10 | 7 Conclusions
+1.11 | Acknowledgements
+1.12 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_AyeLZSZZ6Lq32qH0K7IkXO8k)
+ Call ID: call_AyeLZSZZ6Lq32qH0K7IkXO8k
+  Args:
+    pattern: [Bb]aseline
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1 | Abstract
+The translation of pronouns presents a special challenge to machine translation to this day, since it often requires context outside the current sentence. Recent work on models that have access to information across sentence boundaries has seen only moderate improvements in terms of automatic evaluation metrics such as BLEU. However, metrics that quantify the overall translation quality are illequipped to measure gains from additional context.  We argue that a different kind of evaluation is needed to assess how well models translate inter-sentential phenomena such as pronouns. This paper therefore presents a test suite of contrastive translations focused specifically on the translation of pronouns. Furthermore, we perform experiments with several contextaware models. We show that, while gains in BLEU are moderate for those systems, they outperform baselines by a large margin in terms of accuracy on our contrastive test set.  Our experiments also show the effectiveness of parameter tying for multiencoder architectures.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_v5UAbWTequq6mVPwFmyVMfRS)
+ Call ID: call_v5UAbWTequq6mVPwFmyVMfRS
+  Args:
+    section_id: 1.8
+
+================================= Tool Message =================================
+Name: read_section
+
+5 Experiments
+We train all models on the data from the WMT 2017 English→German news translation shared task (∼ 5.8 million sentence pairs). These corpora do not have document boundaries, therefore a small fraction of sentences will be paired with wrong context, but we expect the model to be robust against occasional random context (see also Voita et al. 2018) . Experimental setups for the RNN and Transformer models are different, and we describe them separately. All RNN-based models are trained with Nematus (Sennrich et al., 2017) .We learn a joint BPE model with 89.5k merge operations (Sennrich et al., 2016) . We train shallow models with an embedding size of 512, a hidden layer size of 1024 and layer normalization. Models are trained with Adam (Kingma and Ba, 2015) , with an initial learning rate of 0. 0001. We apply early stopping based on validation perplexity. The batch size for training is 80, and the maximum length of training sequences is 100 (if input sentences are concatenated) or 50 (if input lines are single sentences).For our Transformer-based experiments, we use a custom implementation and follow the hyperparameters from Vaswani et al. (2017) ; Voita et al. (2018) .  Systems are trained on lowercased text that was encoded using BPE (32k merge operations). Models consist of 6 encoder and decoder layers with 8 attention heads. The hidden state size is 512, the size of feedforward layers is 2048.Model performance is evaluated in terms of BLEU, on newstest2017, newstest2018 and all sentence pairs from our pronoun test set.  We compute scores with SacreBLEU (Post, 2018) . 9 Evaluation with BLEU is done mainly to control for overall translation quality.To evaluate pronoun translation, we perform contrastive evaluation and report the accuracy of models on our contrastive test set.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_nYLDlCR5JYttrtInBYfOx2an)
+ Call ID: call_nYLDlCR5JYttrtInBYfOx2an
+  Args:
+    pattern: baseline[s]?|concatenat|single-encoder|sentence-level|context-aware models
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1 | Abstract
+The translation of pronouns presents a special challenge to machine translation to this day, since it often requires context outside the current sentence. Recent work on models that have access to information across sentence boundaries has seen only moderate improvements in terms of automatic evaluation metrics such as BLEU. However, metrics that quantify the overall translation quality are illequipped to measure gains from additional context.  We argue that a different kind of evaluation is needed to assess how well models translate inter-sentential phenomena such as pronouns. This paper therefore presents a test suite of contrastive translations focused specifically on the translation of pronouns. Furthermore, we perform experiments with several contextaware models. We show that, while gains in BLEU are moderate for those systems, they outperform baselines by a large margin in terms of accuracy on our contrastive test set.  Our experiments also show the effectiveness of parameter tying for multiencoder architectures.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_n5rWG8KYjRmGOyy3HZtG95ob)
+ Call ID: call_n5rWG8KYjRmGOyy3HZtG95ob
+  Args:
+    section_id: 1.6
+
+================================= Tool Message =================================
+Name: read_section
+
+4 Context-Aware NMT Models
+This section describes several context-aware NMT models that we use in our experiments. They fall into two major categories: models based on RNNs and models based on the Transformer architecture (Vaswani et al., 2017) . We experiment with additional context on the source side and target side.
+4.1 Recurrent Models
+We consider the following recurrent baselines:
+baseline Our baseline model is a standard bidirectional RNN model with attention, trained with Nematus. It operates on the sentence level and does not see any additional context. The input and output embeddings of the decoder are tied, encoder embeddings are not.concat22 We concatenate each sentence with one preceding sentence, for both the source and target side of the corpus. Then we train on this new data set without any changes to the model architecture.  This very simple method is inspired by Tiedemann and Scherrer (2017) .The following models are taken, or slightly adapted, from Bawden et al. (2018) . For this reason, we give only a very short description of them here and the reader is referred to their work for details.s-hier A multi-encoder architecture with hierarchical attention. This model has access to one additional context: the previous source sentence.  It is read by a separate encoder, and attended to by an additional attention network. The output of the resulting two attention vectors is combined with yet another attention network.s-t-hier Identical to s-hier, except that it considers two additional contexts: the previous source sentence and previous target sentence. Both are read by separate encoders, and sequences from all encoders are combined with hierarchical attention. s-hier-to-2 The model has an additional encoder for source context, whereas the target side of the corpus is concatenated, in the same way as for concat22. This model achieved the best results in Bawden et al. (2018) .For each variant, we also introduce and test weight tying: we share the parameters of embedding matrices between encoders that read the same kind of text (source or target side).
+4.2 Transformer Models
+All remaining models are based on the Transformer architecture (Vaswani et al., 2017) . A Transformer avoids recurrence completely: it follows an encoder-decoder architecture using stacked self-attention and fully connected layers for both the encoder and decoder.baseline A standard context-agnostic Transformer. All model parameters are identical to a Transformer-base in Vaswani et al. (2017) . concat22 A simple concatentation model where only the training data is modified, in the same way as for the recurrent concat22 model.concat21 Trained on data where the preceding sentence is concatenated to the current one only on the source side. This model is also taken from Tiedemann and Scherrer (2017) .
+
+================================== Ai Message ==================================
+
+The baselines are standard context-agnostic sentence-level models: for RNNs, a bidirectional RNN with attention trained with Nematus; for Transformers, a standard Transformer-base. The paper also considers simple concatenation baselines, concat22 for both architectures and concat21 for the Transformer, where the previous sentence is concatenated to the current one in the training data.

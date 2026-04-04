@@ -1,0 +1,48 @@
+================================ Human Message =================================
+
+QUERY:
+what was the baseline?
+
+TABLE OF CONTENTS (TOC):
+1 | EmoAtt at EmoInt-2017: Inner attention sentence embedding for Emotion Intensity
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2 Proposed Approach
+1.4 | 3 Experimental Setup
+1.5 | 4 Results and Discussion
+1.6 | 4.1 Anger Dataset
+1.7 | 4.2 Joy Dataset
+1.8 | 4.3 Fear Dataset
+1.9 | 4.4 Sadness Dataset
+1.10 | 5 Conclusions
+1.11 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_cjeTK9SONuRSfiwgVsLCh1tP)
+ Call ID: call_cjeTK9SONuRSfiwgVsLCh1tP
+  Args:
+    pattern: baseline|Baseline
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.10 | 5 Conclusions
+In this paper we introduced an intra-sentence at- tention RNN for the of emotion intensity, which we developed for the WASSA-2017 Shared Task on Emotion Intensity. Our model does not make use of external information except for pre-trained embeddings and is able to outperform the Weka baseline for the development set, but not in the test set. In the shared task, it obtained the 13 th place among 22 competitors.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_9uXH2jD7jHDcFipVdxEsbFfY)
+ Call ID: call_9uXH2jD7jHDcFipVdxEsbFfY
+  Args:
+    pattern: Weka baseline|baseline system|baseline
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.10 | 5 Conclusions
+In this paper we introduced an intra-sentence at- tention RNN for the of emotion intensity, which we developed for the WASSA-2017 Shared Task on Emotion Intensity. Our model does not make use of external information except for pre-trained embeddings and is able to outperform the Weka baseline for the development set, but not in the test set. In the shared task, it obtained the 13 th place among 22 competitors.
+
+================================== Ai Message ==================================
+
+The baseline was the Weka baseline.

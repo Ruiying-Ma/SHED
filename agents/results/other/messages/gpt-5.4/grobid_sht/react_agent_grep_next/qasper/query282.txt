@@ -1,0 +1,76 @@
+================================ Human Message =================================
+
+QUERY:
+What position did this entry finish in, in the overall shared task?
+
+TABLE OF CONTENTS (TOC):
+1 | The CUED's Grammatical Error Correction Systems for BEA-2019
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2.1 FST-based Grammatical Error Correction
+1.4 | 2.2 Experimental Setup
+1.5 | 2.3 Results
+1.6 | 3 Restricted Track Submission
+1.6.1 | 3.1 Experimental Setup
+1.7 | 4 Conclusion
+1.8 | Acknowledgments
+1.9 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_Pg0JROwkhXzRHoJvyqKDGucF)
+ Call ID: call_Pg0JROwkhXzRHoJvyqKDGucF
+  Args:
+    pattern: (?i)shared task|finish|position|rank|overall
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1 | Abstract
+We describe two entries from the Cambridge University Engineering Department to the BEA 2019 Shared Task on grammatical error correction. Our submission to the lowresource track is based on prior work on using finite state transducers together with strong neural language models. Our system for the restricted track is a purely neural system consisting of neural language models and neural machine translation models trained with backtranslation and a combination of checkpoint averaging and fine-tuning -without the help of any additional tools like spell checkers.  The latter system has been used inside a separate system combination entry in cooperation with the Cambridge University Computer Lab.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_dRud9eYCDJCwmlF9jcVoEMgW)
+ Call ID: call_dRud9eYCDJCwmlF9jcVoEMgW
+  Args:
+    pattern: (?i)shared task|finish|position|rank|overall
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.2 | 1 Introduction
+The automatic correction of errors in text [In a such situaction → In such a situation] is receiving more and more attention from the natural language processing community. A series of competitions has been devoted to grammatical error correction (GEC): the CoNLL-2013 shared task (Ng et al., 2013) , the CoNLL-2014 shared task (Ng et al. , 2014) , and finally the BEA 2019 shared task (Bryant et al., 2019) . This paper presents the contributions from the Cambridge University Engineering Department to the latest GEC competition at the BEA 2019 workshop.We submitted systems to two different tracks. The low-resource track did not permit the use of parallel training data except a small development set with around 4K sentence pairs.  For our low-resource system we extended our prior work on finite state transducer based GEC (Stahlberg et al., 2019) to handle new error types such as punctuation errors as well as insertions and deletions of a small number of frequent words. For the restricted track, the organizers provided 1.2M pairs (560K without identity mappings) of corrected and uncorrected sentences.  Our goal on the restricted track was to explore the potential of purely neural models for grammatical error correction. 1 We confirm the results of Kasewa et al. (2018) and report substantial gains by applying back-translation (Sennrich et al., 2016b) to GEC -a data augmentation technique common in machine translation. Furthermore, we noticed that large parts of the training data do not match the target domain.  We mitigated the domain gap by over-sampling the in-domain training corpus, and by fine-tuning through continued training. Our final model is an ensemble of four neural machine translation (NMT) models and two neural language models (LMs) with Transformer architecture (Vaswani et al., 2017) . Our purely neural system was also part of the joint submission with the Cambridge University Computer Lab described by Yuan et al. (2019) .
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_f7yQu2Kbbon6M7c4MPp4ZYMa)
+ Call ID: call_f7yQu2Kbbon6M7c4MPp4ZYMa
+  Args:
+    pattern: (?i)(first|second|third|\b[0-9]+th\b|placed|finished)
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.3 | 2.1 FST-based Grammatical Error Correction
+Stahlberg et al. ( 2019) investigated the use of finite state transducers (FSTs) for neural grammatical error correction. They proposed a cascade of FST compositions to construct a hypothesis space which is then rescored with a neural language model. We will outline this approach and explain our modifications in this section. For more details we refer to (Stahlberg et al., 2019) .  In a first step, the source sentence is converted to an FST I (Fig. 1 ). This initial FST is augmented by composition (denoted with the •-operator) with various other FSTs to cover different error types. Composition is a widely used standard operation on FSTs and supported efficiently by FST toolkits such as OpenFST (Allauzen et al., 2007) . We construct the hypothesis space as follows:2
+ Figure 1: Input FST I representing the source sentence 'In a such situaction there is no other way.'. We follow standard convention and highlight the start state in bold and the final state with a double circle.1. We compose the input I with the deletion transducer D in Fig. 2 . D allows to delete tokens on the short list shown in Tab. 1 at a cost λ del .  We selected R by looking up all tokens which have been deleted in the dev set more than five times and manually filtered that list slightly. We did not use the full list of dev set deletions to avoid under-estimating λ del in tuning.Figure 2: Deletion FST D which can map any token in the list R from Tab. 1 to . The σ-label matches any symbol and maps it to itself.2.  In a next step, we compose the transducer from step 1 with the edit transducer E in Fig. 3 . This step addresses substitution errors such as spelling or morphology errors. Figure 4 : Insertion FST A for adding the symbols ",", "-", and "'s" at a cost of λ ins . The σ-label matches any symbol and maps it to itself at no cost.Figure 3: Edit FST E which allows substitutions with a cost of λ sub .  The σ-label matches any symbol and maps it to itself at no cost.Like Stahlberg et al. (2019) , we use the confusion sets of Bryant and Briscoe (2018) based on CyHunspell for spell checking (Rodriguez and Seal, 2014), the AGID morphology database for morphology errors (Atkinson, 2011), and manually defined corrections for determiner and preposition errors to construct E.  Additionally, we extracted all substitution errors from the BEA-2019 dev set which occurred more than five times, and added a small number of manually defined rules that fix tokenization around punctuation symbols.3. We found it challenging to allow insertions in LM-based GEC because the LM often prefers inserting words with high unigram probability such as articles and prepositions before less predictable words like proper names.  We therefore restrict insertions to the three tokens ",", "-", and "'s" and allow only one insertion per sentence. We achieve this by adding the transducer A in Fig. 4 to our composition cascade.4. Finally, we map the word-level FSTs to the subword-level by composition with a mapping transducer T that applies byte pair encoding (Sennrich et al., 2016c, BPE) to the full words.  Word-to-BPE mapping transducers have been used in prior work to combine word-level models with subword-level neural sequence models (Stahlberg et al., 2019 (Stahlberg et al., , 2017b (Stahlberg et al., , 2018b (Stahlberg et al., , 2017a)) .In a more condensed form, we can describe the final transducer as:
+ I • D • E • A • T (1)
+with D for deletions, E for substitutions, A for insertions, and T for converting words to BPE tokens. Path scores in the FST in Eq. 1 are the accumulated penalties λ del , λ sub , and λ ins . The λ-parameters are tuned on the dev set using a variant of Powell search (Powell, 1964) .  We apply standard FST operations like output projection, -removal, determinization, minimization, and weight pushing (Mohri, 1997; Mohri and Riley, 2001) to help downstream decoding. Following Stahlberg et al. (2019) we then use the resulting transducer to constrain a neural LM beam decoder.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_AlBTo90bs2dX80GaBjBeruas)
+ Call ID: call_AlBTo90bs2dX80GaBjBeruas
+  Args:
+    pattern: (?i)(first|second|third|\b[0-9]+th\b|placed|finished)
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.7 | 4 Conclusion
+We participated in the BEA 2019 Shared Task on grammatical error correction with submissions to the low-resource and the restricted track. Our lowresource system is an extension of prior work on FST-based GEC (Stahlberg et al., 2019) to allow insertions and deletions. Our restricted track submission is a purely neural system based on standard NMT and LM architectures.  We pointed out the similarity between GEC and machine translation, and demonstrated that several techniques which originate from MT research such as oversampling, back-translation, and fine-tuning, are also useful for GEC. Our models have been used in a joint submission with the Cambridge University Computer Lab (Yuan et al., 2019) .Models will be published at http://ucam-smt. github.io/sgnmt/html/bea19_gec.html. Note that our description differs from(Stahlberg et al., 2019) in the following ways: First, we use additional FSTs to allow insertions and deletions. Second, we integrate penalties directly into the FSTs rather than using special tokens in combination with a penalization transducer.http://www.statmt.org/wmt19/ translation-task.html
+
+================================== Ai Message ==================================
+
+Unanswerable

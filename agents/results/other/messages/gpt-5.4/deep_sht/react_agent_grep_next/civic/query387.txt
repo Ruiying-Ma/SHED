@@ -1,0 +1,126 @@
+================================ Human Message =================================
+
+QUERY:
+Identify and list the names of all projects that are in the specified status 'design' and simultaneously of the type 'capital'.
+
+TABLE OF CONTENTS (TOC):
+1 | Public Works Commission Agenda Report
+1.1 | Capital Improvement Projects (Design)
+1.1.1 | 2022 Morning View Resurfacing & Storm Drain Improvements
+1.1.1.1 | g ¾ Updates:
+1.1.1.1.1 | PCH Median Improvements Project
+1.1.1.1.1.1 | Westward Beach Road Repair Project
+1.1.1.1.1.1.1 | Westward Beach Road Drainage Improvements Project
+1.1.1.1.1.1.1.1 | Clover Heights Storm Drainage Improvements
+1.1.1.1.1.1.1.1.1 | ¾ Updates:
+1.1.1.1.1.1.1.1.1.1 | Latigo Canyon Road Retaining Wall Repair Project
+1.1.1.1.1.1.1.1.1.1.1 | Storm Drain Master Plan
+1.1.1.1.1.1.1.1.1.1.1.1 | Trancas Canyon Park Upper and Lower Slopes Repair
+1.1.1.1.1.1.1.1.1.1.1.1.1 | ¾ Updates:
+1.1.1.1.1.1.1.1.1.1.1.1.1.1 | Civic Center Water Treatment Facility Phase 2
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | ¾ Updates:
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | Permanent Skate Park
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | PCH at Trancas Canyon Road Right Turn Lane
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | Outdoor Warning Signs
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | ¾ Updates:
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | Malibu Bluffs Park South Walkway Repairs
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | Trancas Canyon Park Playground
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | Malibu Canyon Road Traffic Study
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | Capital Improvement Projects (Construction)
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | Malibu Road Slope Repairs
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | Encinal Canyon Road Repairs
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | PCH Signal Synchronization System Improvements Project
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | ¾ Updates:
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | Storm Drain Trash Screens Phase Two
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | Bluffs Park Shade Structure
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | Marie Canyon Green Streets
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | Broad Beach Road Water Quality Repair
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | Point Dume Walkway Repairs
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | Capital Improvement Projects (Not Started)
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | PCH Median Improvements at Paradise Cove and Zuma Beach
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | PCH Crosswalk Improvements at Big Rock Drive and 20326 PCH
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | Kanan Dume Biofilter
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | City Traffic Signals Backup Power
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_zieMnCVEBt42qdqVOlqU50JQ)
+ Call ID: call_zieMnCVEBt42qdqVOlqU50JQ
+  Args:
+    section_id: 1.1
+
+================================= Tool Message =================================
+Name: read_section
+
+Capital Improvement Projects (Design)
+2022 Morning View Resurfacing & Storm Drain Improvements
+g ¾ Updates:
+ Staff is working with the consultant to finalize the design plans for this project and will submit to the County for review.¾ Project Schedule: Complete Design: Summer 2023  Advertise:Fall 2023  Begin Construction: Fall 2023
+PCH Median Improvements Project
+¾ Updates:  On September 22, 2022,the City received four (4) construction bids and rejected all bids due to a budget shortfall  City will work with the design consultant to review design alternatives or phasing out the project ¾ Project Schedule:
+ Complete Design: Summer 2023  Advertise: Fall 2023Page 1 of 6
+Agenda Item # 4.B.
+ Begin Construction: Fall 2023Westward Beach Road Repair Project
+¾ Updates:
+ City working with consultant on the design of the shoulder repairs¾ Project Schedule: Complete Design: Summer 2023 Advertise: Summer 2023 Begin Construction: Fall 2023Westward Beach Road Drainage Improvements Project
+¾ Updates: Plans  are  under  review  by  Fish  and  Wildlife  and  City  is  expecting comments mid-April.This project required their review since the project scope falls within Zuma Canyon Creek. Army Corp. of Engineers has cleared the project. ¾ Project Schedule:  Advertise: Summer 2023
+ Begin Construction: Fall 2023Clover Heights Storm Drainage Improvements
+¾ Updates:
+Updates: City submitted plans to CalOES for review and working with consultant to finalize plans and specifications
+¾Project Schedule:  Final Design: Summer, 2023  Advertise:Summer 2023  Begin Construction: Fall 2023
+Latigo Canyon Road Retaining Wall Repair Project
+¾ Updates: Plans and specifications have been completed Awaiting final FEMA/CalOES approval for scope modification¾ Project Schedule: Advertise: Spring 2023  Begin Construction: Summer 2023Storm Drain Master Plan
+¾Updates: Field data collection has been completed and storm drain inventory has been finalized and incorporated into GIS.  Consultant working finalizing a CIP recommendation list
+Page 2 of 6
+Agenda Item # 4.B.
+Trancas Canyon Park Upper and Lower Slopes Repair
+¾ Updates:
+Updates:  Plans and specifications are being finalized by consultant¾Project Schedule:  Advertise: Spring 2023 Begin Construction: Summer 2023Civic Center Water Treatment Facility Phase 2
+¾ Updates:
+ Staff  is  working  with  the  State  Water  Board  regarding  the  Cultural Resources review for the SRF funding application Staff has submitted a request for Federal funding¾ Project Schedule (pending the MOU extension approval): Project  is  delayed  due  to  the  Cultural  Resource  review.Revised schedule  will  be  developed  upon  the  completion  of  the  Cultural Resources review.
+Permanent Skate Park
+¾ Updates: Staff is working with the consultant to finalize the design plans for this project¾Estimated Schedule:  Complete Design: Spring 2023  Begin Construction:Winter 2024
+PCH at Trancas Canyon Road Right Turn Lane
+¾ Updates: City submitted plans to Caltrans for review and expecting comments in the Spring 2023.¾Estimated Schedule:  Complete Design: Fall 2023 Begin Construction: Fall 2023Outdoor Warning Signs
+¾ Updates:
+ Project to be discussed during a joint Public Works and Public Safety Commission  meeting  for  project  direction  due  to  concerns  regarding sirens height and feedback from residents and the community.Malibu Bluffs Park South Walkway Repairs
+¾ Updates: City to request proposal from consultant for design services¾ Estimated Schedule: Complete Design: Summer 2023Page 3 of 6
+Agenda Item # 4.B.
+Trancas Canyon Park Playground
+¾ Updates:
+ Staff is currently working on the final design plans¾ Estimated Schedule: Complete Design: Summer 2023 Advertise: Summer 2023Malibu Canyon Road Traffic Study
+¾ Project  Description:This  project  will  consist  of  a  traffic  study  on  Malibu Canyon Road near Harbor Vista Drive and Potter Lane to determine if any feasible traffic safety improvements can be constructed at this location.
+¾ Project Updates: Funding agreement is schedule for city council on March 27, 2023¾ Project Schedule: City will be issuing a RFQ/P for design services in the summer of 2023Capital Improvement Projects (Construction)
+Malibu Road Slope Repairs
+¾ Updates: Project is currently under construction¾ Complete Construction: April 2023Encinal Canyon Road Repairs
+¾ Updates: Project is currently under construction¾ Complete Construction: Summer 2023PCH Signal Synchronization System Improvements Project
+¾ Updates:
+Updates:  On  February  27,  2023,City  Council  awarded  the  contract  to  GMZ Engineering, Inc.
+¾ Project Schedule: Begin construction: April 2023 Complete Construction: Summer 2025Storm Drain Trash Screens Phase Two
+¾ Updates: Project is currently out to bid. Bids are due on March 23,2023.
+¾ Project Schedule: Begin construction: Summer 2023 Complete Construction: Summer 2023Bluffs Park Shade Structure
+¾ Updates: Construction was completed November 2022. Notice of completion filed January 2023Page 4 of 6
+Agenda Item # 4.B.
+Marie Canyon Green Streets
+Marie Canyon Green Streets ¾ Updates:  Construction was completed, January 2023 Scheduled for Council acceptance on April 24, 2023Broad Beach Road Water Quality Repair
+¾ Updates:  Construction was completed,November 2022  Notice of completion filed January 2023
+Point Dume Walkway Repairs
+¾Updates: Construction was completed,November 2022  Notice of completion filed January 2023
+Capital Improvement Projects (Not Started)
+PCH Median Improvements at Paradise Cove and Zuma Beach
+¾ Project Description:This project was identified in the 2015 PCH Safety Study and includes installing new raised medians and improvements.  New raised medians are proposed east and west of PCH and Paradise Cove Road.  The proposed improvements also include the relocation of the existing bus stop and new signage.   The project will also include the installation of new raised medians on PCH in the areas where the double yellow lines exist in the vicinity of Zuma Beach, specifically where the yellow paddles are installed.
+¾ Project Updates: City has submitted an application through Measure R and is waiting for the agreement.PCH Crosswalk Improvements at Big Rock Drive and 20326 PCH
+¾ Project Description:This project was identified in the 2015 PCH Safety Study and includes the installation of overhead warning signs and raised medians on PCH. New flashing warning beacons will be installed approximately 200 feet east and west of 20326 PCH (Moonshadow’s Restaurant). New raised medians, along with a pedestrian refuge area, are planned for this area. A new overhead flashing “signal ahead” beacon will be installed 400 feet east of PCH and Big Rock Drive intersection.
+Kanan Dume Biofilter
+¾ Project  Description:This  project  was  identified  in  the  City’s  Enhanced Watershed Management Plan (EWMP). This project includes the installation of  a  biofilter  on  Kanan  Dume  Drive  to  capture  and  treat  stormwater.  The project  is  intended  to  assist  with  Municipal  Separate  Storm  Sewer  System (MS4) Discharge Permit requirements.Page 5 of 6
+ Agenda Item # 4.B.
+City Traffic Signals Backup Power
+¾ Project  Description:This  project  will  include  upgrading  the  backup  power system to the City’s traffic signals on Civic Center Way, Webb Way, Malibu Canyon Road, and Winter Canyon Road ¾ Updates: Project is in the preliminary design phase
+¾ Project  Schedule:Preliminary  design  will  determine  if  signals  need  to  be upgraded
+Staff has also  prepared a Public Works  Quarterly Update flier.  This flier will include  a variety  of  Public  Works  statistics,  including  Projects  Under  Design,  Citizen  Request, Encroachment Permits Issued, and the amount of Development Reviews performed.   The flier  will  also  include  a  “Project  Spotlight”  that  will  describe  a  City  capital  improvement project.  The Quarterly Update Flier will be brought to the Public Works Commission every quarter and then posted on the City’s website.ATTACHMENT: Quarter 2 – Public Works CIP Update Flyer
+Page 6 of 6
+Agenda Item # 4.B.
+
+================================== Ai Message ==================================
+
+2022 Morning View Resurfacing & Storm Drain Improvements; PCH Median Improvements Project; Westward Beach Road Repair Project; Westward Beach Road Drainage Improvements Project; Clover Heights Storm Drainage Improvements; Latigo Canyon Road Retaining Wall Repair Project; Storm Drain Master Plan; Trancas Canyon Park Upper and Lower Slopes Repair; Civic Center Water Treatment Facility Phase 2; Permanent Skate Park; PCH at Trancas Canyon Road Right Turn Lane; Outdoor Warning Signs; Malibu Bluffs Park South Walkway Repairs; Trancas Canyon Park Playground; Malibu Canyon Road Traffic Study

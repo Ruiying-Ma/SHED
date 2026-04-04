@@ -1,0 +1,72 @@
+================================ Human Message =================================
+
+QUERY:
+what eeg features were used?
+
+TABLE OF CONTENTS (TOC):
+1 | Advancing Speech Recognition With No Speech Or With Noisy Speech
+1.1 | I. INTRODUCTION
+1.1.1 | II. AUTOMATIC SPEECH RECOGNITION SYSTEM MODELS
+1.1.1.1 | A. Connectionist Temporal Classiﬁcation (CTC)
+1.1.1.1.1 | B. RNN Encoder-Decoder or Attention model
+1.1.1.1.1.1 | III. DESIGN OF EXPERIMENTS FOR BUILDING THE DATABASE
+1.1.1.1.1.1.1 | IV. EEG AND SPEECH FEATURE EXTRACTION DETAILS
+1.1.1.1.1.1.1.1 | VI. RESULTS
+1.1.1.1.1.1.1.1.1 | VII. CONCLUSION AND FUTURE WORK
+1.1.1.1.1.1.1.1.1.1 | VIII. ACKNOWLEDGEMENT
+1.1.1.1.1.1.1.1.1.1.1 | REFERENCES
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_jev0eNJJEKu67hJXrm4C74hd)
+ Call ID: call_jev0eNJJEKu67hJXrm4C74hd
+  Args:
+    section_id: 1.1.1.1.1.1.1
+
+================================= Tool Message =================================
+Name: read_section
+
+IV. EEG AND SPEECH FEATURE EXTRACTION DETAILS
+EEG signals were sampled at 1000Hz and a fourth order IIR band pass filter with cut off frequencies 0.1Hz and 70Hz was applied. A notch filter with cut off frequency 60 Hz was used to remove the power line noise.  EEGlab’s [18] Independent component analysis (ICA) toolbox was used to remove other biological signal artifacts like electrocardiography (ECG), electromyography (EMG), electrooculography (EOG) etc from the EEG signals. We extracted five statistical features for EEG, namely root mean square, zero crossing rate,moving window average,kurtosis and power spectral entropy [1].  So in total we extracted 31(channels) X 5 or 155 features for EEG signals.The EEG features were extracted at a sampling frequency of 100Hz for each EEG channel.We used spectral entropy because it captures the spectral ( frequency domain) and signal complexity information of EEG. It is also a widely used feature in EEG signal analysis [19]. Similarly zero crossing rate was chosen as it is a commonly used feature both for speech recognition and bio signal analysis.  Remaining features were chosen to capture time domain statistical information. We performed lot of experiments to identify this set of features. Initially we used only spectral entropy and zero crossing rate but we noticed that the performance of the ASR system went up when we added the remaining additional features.The recorded speech signal was sampled at 16KHz frequency. We extracted Mel-frequency cepstrum coefficients (MFCC) as features for speech signal.  We first extracted MFCC 13 features and then computed first and second order differentials (delta and delta-delta) thus having total MFCC 39 features. The MFCC features were also sampled at 100Hz same as the sampling frequency of EEG features to avoid seq2seq problem.V. EEG F EATURE D IMENSION R EDUCTION A LGORITHM D ETAILS
+ After extracting EEG and acoustic features as explained in the previous section, we used non linear methods to do feature dimension reduction in order to obtain set of EEG features which are better representation of acoustic features. We reduced the 155 EEG features to a dimension of 30 by applying Kernel Principle Component Analysis (KPCA) [20].We plotted cumulative explained variance versus number of components to identify the right feature dimension as shown in Figure 2.  We used KPCA with polynomial kernel of degree 3 [1]. We further computed delta, delta and delta of those 30 EEG features, thus the final feature dimension of EEG was 90 (30 times 3) for both the data sets.The non linear dimension reduction of EEG features helped in improving the performance of ASR.
+VI. RESULTS
+The attention model was predicting a word and CTC model was predicting a character at every time step, hence we used word error rate (WER) as performance metric to evaluate attention model and character error rate (CER) for CTC model for different feature sets as shown below.Table I and II shows the test time results for attention model for both the data sets when trained using EEG features and concatenation of EEG, acoustic features respectively.  As seen from the results the attention model gave lower WER when trained and tested on smaller number of sentences. As the vocabulary size increase, the WER also went up. We believe for the attention model to achieve lower WER for larger vocabulary size more number of training examples or larger training data set is required as large number of weights need to be adapted. Figure 3 shows the training loss convergence of our attention model.Table IV and V shows the results obtained using CTC model.  The error rates for CTC model also went up with the increase in vocabulary size for both the data sets. However the CTC model was trained for 500 epochs compared to 100 epochs for attention model to observe loss convergence and batch size was
+set to one for CTC model. Thus CTC model training was lot more time consuming than attention model.In [1] we have demonstrated that EEG sensors T7 and T8 features contributed most towards ASR performance.  Table VI shows the CTC model test time results when we trained the model using EEG features from only T7 and T8 sensors on the most noisy data set B. We observed that as vocabulary size increase, error rates were slightly lower than the error rates from Table IV where we used EEG features from all 31 sensors with dimension reduction. Table III shows the results for attention model when trained with EEG features from sensors T7 and T8 only on data set B.  We observed that error rates were higher in this case compared to the error rates reported in table II.Figures 4 shows the visualization of the attention weights when the attention model was trained and tested using only EEG features for Data set B. The plots shows the EEG feature importance ( attention) distribution across time steps for predicting first sentence and it indicates that attention model was not able to attend properly to EEG features, which might be another reason for giving higher WER.Fig. 3.  Training loss convergence for attention model using only EEG features for first 10 sentences from data set A
+Fig. 4. Visualization of attention weights for the first sentence
+VII. CONCLUSION AND FUTURE WORK
+In this paper we demonstrated the feasibility of using EEG features, concatenation of EEG and acoustic features for performing noisy continuous speech recognition. To our best knowledge this is the first time a continuous noisy speech
+Fig. 5. Training loss convergence for CTC model using only EEG features for first 3 sentences from data set B
+ Number of Sentences Number of unique words contained EEG (WER %) EEG + MFCC (WER %) 3 19 0 0 5 29 37.03 45.1 7 42 58.9 51.1 10 59 63.11 71.2 15 84 82.7 79 20 106 87.3 80 TABLE I
+ WER ON TEST SET FOR ATTENTION MODEL FOR D ATA SET A
+Number of Sentences Number of unique words contained EEG (WER %) EEG + MFCC (WER %) 3 19 0 0 5 29 44.4 41.9 7 42 52.8 55 10 59 68 71 15 84 82.7 83 20 106 86.4 86 TABLE II
+ WER ON TEST SET FOR ATTENTION MODEL FOR D ATA SET B
+Number of Sentences Number of unique words contained EEG (WER %) 3 19 35.2 5 29 59.2 7 42 71.7 10 59 77.1 TABLE III
+WER ON TEST SET FOR ATTENTION MODEL FOR D ATA SET B USING EEG FEATURES FROM ONLY T7 AND T8 ELECTRODES
+recognition is demonstrated using only EEG features.  For both attention and CTC model we observed that as the vocabulary size increase, concatenating acoustic features with EEG features will help in reducing the test time error rates. We further plan to publish our speech EEG data base used in this work to help advancement of research in this area. For future work, we plan to build a much larger speech EEG data base and also perform experiments with data collected
+ Number of Sentences Number of unique words contained EEG (CER%) EEG + MFCC (CER%) 3 19 26.3 53 5 29 68.7 61.2 7 42 66 64.2 10 59 67.2 66 15 84 74.3 68.2 20 106 77.5 67.9 TABLE IV
+ CER ON TEST SET FOR CTC MODEL FOR D ATA SET B
+Number of Sentences Number of unique words contained EEG (CER%) EEG + MFCC (CER%) 3 19 45.8 10.27 5 29 45 47 7 42 61.02 63 10 59 70 61 15 84 75.4 64.3 20 106 73.91 67. 09 TABLE V
+CER ON TEST SET FOR CTC MODEL FOR D ATA SET A
+Number of Sentences Number of unique words contained EEG (CER %) 3 19 40.5 5 29 60.3 7 42 65 10 59 65.7 TABLE VI
+CER ON TEST SET FOR CTC MODEL FOR D ATA SET B USING EEG FEATURES FROM ONLY T7 AND T8 ELECTRODES
+ Number of Sentences Number of unique words contained MFCC (CER%) EEG + MFCC (CER%) 15 84 65.42 64.3 20 106 67.85 67.09 TABLE VII
+CER ON TEST SET FOR CTC MODEL FOR D ATA SET A FOR MFCC-EEG FUSION FOR LARGER VOCABULARY SIZE
+ Number of Sentences Number of unique words contained MFCC (CER%) EEG + MFCC (CER%) 15 84 65.7 68.2 20 106 67.9 67.9 TABLE VIII
+CER ON TEST SET FOR CTC MODEL FOR D ATA SET B FOR MFCC-EEG FUSION FOR LARGER VOCABULARY SIZE
+from subjects with speaking disabilities. We will also investigate whether it is possible to improve the attention model results by tuning hyper parameters to improve the model’s ability to condition on the input,improve CTC model results by training with more number of examples and by using external language model during inference time.
+VIII. ACKNOWLEDGEMENT
+We would like to thank Kerry Loader and Rezwanul Kabir from Dell, Austin, TX for donating us the GPU to train the models used in this work.
+REFERENCES
+[1] G. Krishna, C. Tran, J. Yu, and A.Tewfik, “Speech recognition with no speech or with noisy speech,” in Acoustics, Speech and Signal Processing (ICASSP), 2019 IEEE International Conference on . IEEE, 2019.
+[2] X. Yang, K. Wang, and S. A. Shamma,“Auditory representations of acoustic signals,” Tech. Rep., 1991.
+[3] N. Mesgarani and S. Shamma,“Speech processing with a cortical representation of audio,” in Acoustics, Speech and Signal Processing (ICASSP), 2011 IEEE International Conference on . IEEE, 2011, pp. 5872–5875.
+[4] K. Wang, X. Wang, and G. Li,“Simulation experiment of bci based on imagined speech eeg decoding,” arXiv preprint arXiv:1705.07771 , 2017.
+[5] P. Kumar, R. Saini, P. P. Roy,P. K. Sahu, and D. P. Dogra, “Envi- sioned speech recognition using eeg sensors,” Personal and Ubiquitous Computing , vol. 22, no. 1, pp. 185–199, 2018.
+[6] N. Ramsey, E. Salari, E. Aarnoutse,M. Vansteensel, M. Bleichner, and Z. Freudenburg, “Decoding spoken phonemes from sensorimotor cortex with high-density ecog grids,” Neuroimage , 2017.
+[7] S. Zhao and F. Rudzicz,“Classifying phonological categories in imag- ined and articulated speech,” in 2015 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP) . IEEE, 2015, pp. 992–996.
+[8] P. Sun and J. Qin,“Neural networks based eeg-speech models,” arXiv preprint arXiv:1612.05369 , 2016.
+[9] A. Graves, S. Fern´andez, F. Gomez,and J. Schmidhuber, “Connection- ist temporal classification: labelling unsegmented sequence data with recurre...(truncated)
+
+================================== Ai Message ==================================
+
+The EEG features used were five statistical features: root mean square, zero crossing rate, moving window average, kurtosis, and power spectral entropy. After reducing the 155 features with KPCA to 30, the paper also computed delta and delta-delta features, giving a final EEG feature dimension of 90.

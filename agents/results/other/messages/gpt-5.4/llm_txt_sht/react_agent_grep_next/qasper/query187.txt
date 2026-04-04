@@ -1,0 +1,39 @@
+================================ Human Message =================================
+
+QUERY:
+what rule based models were evaluated?
+
+TABLE OF CONTENTS (TOC):
+1 | Toward a Standardized and More Accurate Indonesian Part-of-Speech Tagging
+1.1 | Abstract
+1.2 | I. INTRODUCTION
+1.3 | II. RELATED WORK
+1.4 | III. METHODOLOGY
+1.4.1 | A. Dataset
+1.4.2 | B. Baselines
+1.4.3 | C. Comparisons
+1.4.3.1 | 1) Rule-based tagger:
+1.4.3.2 | 2) Conditional random field (CRF):
+1.4.3.3 | 3) Neural network-based tagger:
+1.4.4 | D. Experiments Setup
+1.4.5 | E. Evaluation
+1.5 | IV. RESULTS AND DISCUSSION
+1.6 | V. CONCLUSION
+1.7 | REFERENCES
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_5ZLNwY9ipUK48ATgZurHhMZT)
+ Call ID: call_5ZLNwY9ipUK48ATgZurHhMZT
+  Args:
+    section_id: 1.4.3.1
+
+================================= Tool Message =================================
+Name: read_section
+
+1) Rule-based tagger:
+We adopted a rule-based tagger designed by Rashel et al. [15] as one of our compar- isons. Firstly, the tagger tags named entities and multi- word expressions based on a dictionary. Then, it uses MorphInd [16] to tag the rest of the words. Finally, they employ 15 hand-crafted rules to resolve ambiguous tags in the post-processing step.  We want to note that we did not use their provided tokenizer since the IDN Tagged Corpus dataset is already tokenized. Their implementation is available online. 5
+
+================================== Ai Message ==================================
+
+The rule-based model evaluated was the rule-based tagger designed by Rashel et al. It tags named entities and multi-word expressions using a dictionary, uses MorphInd to tag remaining words, and applies 15 hand-crafted post-processing rules to resolve ambiguous tags.

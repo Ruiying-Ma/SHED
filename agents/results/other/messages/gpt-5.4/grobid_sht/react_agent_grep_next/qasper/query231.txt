@@ -1,0 +1,49 @@
+================================ Human Message =================================
+
+QUERY:
+Do they explore how their word representations vary across languages?
+
+TABLE OF CONTENTS (TOC):
+1 | Continuous multilinguality with language vectors
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2 Related Work
+1.4 | 3 Data
+1.5 | 5 Results
+1.5.1 | 5.1 Model capacity
+1.5.2 | 5.2 Structure of the language space
+1.5.3 | 5.3 Generating Text
+1.5.4 | 5.4 Mixing and Interpolating Between Languages
+1.5.5 | 5.5 Language identification
+1.6 | 6 Conclusions
+1.7 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_mL8DgHbTsDNGz0QhP9Dfkdha)
+ Call ID: call_mL8DgHbTsDNGz0QhP9Dfkdha
+  Args:
+    pattern: word representations|representations vary across languages|vary across languages|across languages|language vectors
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1 | Abstract
+Most existing models for multilingual natural language processing (NLP) treat language as a discrete category, and make predictions for either one language or the other. In contrast, we propose using continuous vector representations of language. We show that these can be learned efficiently with a character-based neural language model, and used to improve inference about language varieties not seen during training.  In experiments with 1303 Bible translations into 990 different languages, we empirically explore the capacity of multilingual language models, and also show that the language vectors capture genetic relationships between languages.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_MamawLmk1RVmAs0aDZTMcjJd)
+ Call ID: call_MamawLmk1RVmAs0aDZTMcjJd
+  Args:
+    section_id: 1.5.2
+
+================================= Tool Message =================================
+Name: read_section
+
+5.2 Structure of the language space
+We now take a look at the language vectors found during training with the full model of 990 languages. Figure 5 shows a hierarchical clustering of the subset of Germanic languages, which closely matches the established genetic relationships in this language family. While our experiments indicate that finding more remote relationships (say, connecting the Germanic languages to the Celtic) is difficult for the model, it is clear that the language vectors preserves similarity properties between languages. In additional experiments we found the overall structure of these clusterings to be relatively stable across models, but for very similar languages (such as Danish and the two varieties of Norwegian) the hierarchy might differ, and the some holds for languages or groups that are significantly different from the major groups. An example from Figure 5 is English, which is traditionally classified as a West Germanic language with strong influences from North Germanic as well as Romance languages.  In the figure English is (weakly) grouped with the West Germanic languages, but in other experiments it is instead weakly grouped with North Germanic.
+
+================================== Ai Message ==================================
+
+Yes. They examine the structure of the learned language vectors and report that these representations capture similarity and genetic relationships between languages, including clustering Germanic languages in ways that largely match established linguistic relationships.

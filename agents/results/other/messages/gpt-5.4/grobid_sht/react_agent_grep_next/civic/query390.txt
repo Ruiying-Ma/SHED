@@ -1,0 +1,69 @@
+================================ Human Message =================================
+
+QUERY:
+Identify and list the names of all projects that are in the specified status 'not started' and simultaneously of the type 'capital'.
+
+TABLE OF CONTENTS (TOC):
+1 | Abstract
+2 | PCH Signal Synchronization System Improvements Project
+3 | annex
+4 | Outdoor Warning Sirens (FEMA Project)
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_nCHkE4rD4aF53Hg2fCmi0bYj)
+ Call ID: call_nCHkE4rD4aF53Hg2fCmi0bYj
+  Args:
+    section_id: 2
+
+================================= Tool Message =================================
+Name: read_section
+
+PCH Signal Synchronization System Improvements Project
+Updates: 65% design package was submitted to Caltrans in November 2020.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_GIwPXKnoj1ZwDPv716BUXCr7)
+ Call ID: call_GIwPXKnoj1ZwDPv716BUXCr7
+  Args:
+    section_id: 4
+
+================================= Tool Message =================================
+Name: read_section
+
+Outdoor Warning Sirens (FEMA Project)
+Updates: This project will be funded through a grant from FEMA after the Wooley Fire. The project consists of hiring a consultant to develop a plan that includes the evaluation of a siren system and possible locations. Staff is working on an RFQ to hire a consultant for the design. <table><tr><td>Malibu Park Drainage Improvements</td></tr><tr><td>Updates:</td></tr><tr><td>Staff is making minor modifications to the project plans to reduce the</td></tr><tr><td>Consultant is working on final design documents. overall project costs.</td></tr><tr><td>Project Schedule: Project is out to bid with bids due April 16, 2021. </td></tr><tr><td>Complete Final Design: May 2021 Project Schedule:</td></tr><tr><td>Advertise: July 2021 Complete Design: March 2021</td></tr><tr><td>Award Contract and Begin Construction: September 2021 Begin Construction: June 2021</td></tr><tr><td>Civic Center Stormwater Diversion Structure Capital Improvement Projects (Construction)</td></tr><tr><td>Updates:</td></tr><tr><td>A Los Angeles County Flood Control maintenance agreement is City Hall Roof Replacement</td></tr><tr><td>required for this project.  Staff is waiting for the County's approval of Updates: The City has held project meetings with the contractor and is</td></tr><tr><td>the agreement. developing a project schedule.</td></tr><tr><td>Project Schedule: Project Schedule: February -May 2021</td></tr><tr><td>Complete Design: Completed. Awaiting maintenance agreement from</td></tr><tr><td>the County.  Bluffs Park Workout Station</td></tr><tr><td>Begin Construction: Estimated Summer 2021 Updates: The contractor has received the workout equipment and is working</td></tr><tr><td>on the installation. </td></tr><tr><td>Westward Beach Road Improvements Project Project Schedule: November 2020 -March 2021</td></tr><tr><td>Updates:</td></tr><tr><td>The project requires coordination with Los Angeles County Beaches Civic Center Way Improvements</td></tr><tr><td>and Harbor.  Staff is working out the final details of the project with Updates:</td></tr><tr><td>the County and will be finalizing the design.  Work Hours: Monday through Friday 7:00AM to 4:00PM, Saturdays</td></tr><tr><td>Project Schedule: 7:00AM to 4:00PM</td></tr><tr><td>Complete Design: Spring 2021 Phase 1 of the temporary closure on Civic Center Way between Vista</td></tr><tr><td>Begin Construction: Fall 2021 Pacifica and the private driveway of 23901 Civic Center Way has</td></tr><tr><td>been opened to local residential traffic only. </td></tr><tr><td>Civic Center Water Treatment Facility Phase 2 Phase 2 remains closed in both directions between the entry to</td></tr><tr><td>Updates: Malibu Cyn Village condos to Webb Way.</td></tr><tr><td>Project is at the 65% design phase.  Project Schedule: August 2020 through April 2021</td></tr><tr><td>The City obtained a project CDP from Planning Commission on</td></tr><tr><td>February 1, 2021. Capital Improvement Projects (Not Started)</td></tr><tr><td>The State is reviewing the City's application for the State Revolving</td></tr><tr><td>Fund program.  Annual Street Maintenance</td></tr><tr><td>The project assessment engineer has begun the process of Project Description: This project provides for the reconstruction and</td></tr><tr><td>evaluating the project costs. maintenance of City streets.</td></tr><tr><td>Staff is rescheduling the community meeting to April 2021.  Estimated Schedule:</td></tr><tr><td>Project Schedule: Complete Design: Spring 2021</td></tr><tr><td>Complete Design: December 2021 Begin Construction: Summer 2021</td></tr><tr><td>Begin Construction: March 2022</td></tr><tr><td>Bluffs Park Shade Structure</td></tr><tr><td>Project Description:</td></tr></table>
+ Table This project consists of the installation of four singlepost shade structures at Malibu Bluffs Park
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_fon4Q3OOm71lcOWwI313MjuG)
+ Call ID: call_fon4Q3OOm71lcOWwI313MjuG
+  Args:
+    pattern: Capital Improvement Projects \(Not Started\)
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+4 | Outdoor Warning Sirens (FEMA Project)
+Updates: This project will be funded through a grant from FEMA after the Wooley Fire. The project consists of hiring a consultant to develop a plan that includes the evaluation of a siren system and possible locations. Staff is working on an RFQ to hire a consultant for the design. <table><tr><td>Malibu Park Drainage Improvements</td></tr><tr><td>Updates:</td></tr><tr><td>Staff is making minor modifications to the project plans to reduce the</td></tr><tr><td>Consultant is working on final design documents. overall project costs.</td></tr><tr><td>Project Schedule: Project is out to bid with bids due April 16, 2021. </td></tr><tr><td>Complete Final Design: May 2021 Project Schedule:</td></tr><tr><td>Advertise: July 2021 Complete Design: March 2021</td></tr><tr><td>Award Contract and Begin Construction: September 2021 Begin Construction: June 2021</td></tr><tr><td>Civic Center Stormwater Diversion Structure Capital Improvement Projects (Construction)</td></tr><tr><td>Updates:</td></tr><tr><td>A Los Angeles County Flood Control maintenance agreement is City Hall Roof Replacement</td></tr><tr><td>required for this project.  Staff is waiting for the County's approval of Updates: The City has held project meetings with the contractor and is</td></tr><tr><td>the agreement. developing a project schedule.</td></tr><tr><td>Project Schedule: Project Schedule: February -May 2021</td></tr><tr><td>Complete Design: Completed. Awaiting maintenance agreement from</td></tr><tr><td>the County.  Bluffs Park Workout Station</td></tr><tr><td>Begin Construction: Estimated Summer 2021 Updates: The contractor has received the workout equipment and is working</td></tr><tr><td>on the installation. </td></tr><tr><td>Westward Beach Road Improvements Project Project Schedule: November 2020 -March 2021</td></tr><tr><td>Updates:</td></tr><tr><td>The project requires coordination with Los Angeles County Beaches Civic Center Way Improvements</td></tr><tr><td>and Harbor.  Staff is working out the final details of the project with Updates:</td></tr><tr><td>the County and will be finalizing the design.  Work Hours: Monday through Friday 7:00AM to 4:00PM, Saturdays</td></tr><tr><td>Project Schedule: 7:00AM to 4:00PM</td></tr><tr><td>Complete Design: Spring 2021 Phase 1 of the temporary closure on Civic Center Way between Vista</td></tr><tr><td>Begin Construction: Fall 2021 Pacifica and the private driveway of 23901 Civic Center Way has</td></tr><tr><td>been opened to local residential traffic only. </td></tr><tr><td>Civic Center Water Treatment Facility Phase 2 Phase 2 remains closed in both directions between the entry to</td></tr><tr><td>Updates: Malibu Cyn Village condos to Webb Way.</td></tr><tr><td>Project is at the 65% design phase.  Project Schedule: August 2020 through April 2021</td></tr><tr><td>The City obtained a project CDP from Planning Commission on</td></tr><tr><td>February 1, 2021. Capital Improvement Projects (Not Started)</td></tr><tr><td>The State is reviewing the City's application for the State Revolving</td></tr><tr><td>Fund program.  Annual Street Maintenance</td></tr><tr><td>The project assessment engineer has begun the process of Project Description: This project provides for the reconstruction and</td></tr><tr><td>evaluating the project costs. maintenance of City streets.</td></tr><tr><td>Staff is rescheduling the community meeting to April 2021.  Estimated Schedule:</td></tr><tr><td>Project Schedule: Complete Design: Spring 2021</td></tr><tr><td>Complete Design: December 2021 Begin Construction: Summer 2021</td></tr><tr><td>Begin Construction: March 2022</td></tr><tr><td>Bluffs Park Shade Structure</td></tr><tr><td>Project Description:</td></tr></table>
+ Table This project consists of the installation of four singlepost shade structures at Malibu Bluffs Park
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_nNgaLqVW8HO19cjBh1C85FZT)
+ Call ID: call_nNgaLqVW8HO19cjBh1C85FZT
+  Args:
+    pattern: Capital Improvement Projects \(Not Started\)|Project Description:|Estimated Schedule:
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+4 | Outdoor Warning Sirens (FEMA Project)
+Updates: This project will be funded through a grant from FEMA after the Wooley Fire. The project consists of hiring a consultant to develop a plan that includes the evaluation of a siren system and possible locations. Staff is working on an RFQ to hire a consultant for the design. <table><tr><td>Malibu Park Drainage Improvements</td></tr><tr><td>Updates:</td></tr><tr><td>Staff is making minor modifications to the project plans to reduce the</td></tr><tr><td>Consultant is working on final design documents. overall project costs.</td></tr><tr><td>Project Schedule: Project is out to bid with bids due April 16, 2021. </td></tr><tr><td>Complete Final Design: May 2021 Project Schedule:</td></tr><tr><td>Advertise: July 2021 Complete Design: March 2021</td></tr><tr><td>Award Contract and Begin Construction: September 2021 Begin Construction: June 2021</td></tr><tr><td>Civic Center Stormwater Diversion Structure Capital Improvement Projects (Construction)</td></tr><tr><td>Updates:</td></tr><tr><td>A Los Angeles County Flood Control maintenance agreement is City Hall Roof Replacement</td></tr><tr><td>required for this project.  Staff is waiting for the County's approval of Updates: The City has held project meetings with the contractor and is</td></tr><tr><td>the agreement. developing a project schedule.</td></tr><tr><td>Project Schedule: Project Schedule: February -May 2021</td></tr><tr><td>Complete Design: Completed. Awaiting maintenance agreement from</td></tr><tr><td>the County.  Bluffs Park Workout Station</td></tr><tr><td>Begin Construction: Estimated Summer 2021 Updates: The contractor has received the workout equipment and is working</td></tr><tr><td>on the installation. </td></tr><tr><td>Westward Beach Road Improvements Project Project Schedule: November 2020 -March 2021</td></tr><tr><td>Updates:</td></tr><tr><td>The project requires coordination with Los Angeles County Beaches Civic Center Way Improvements</td></tr><tr><td>and Harbor.  Staff is working out the final details of the project with Updates:</td></tr><tr><td>the County and will be finalizing the design.  Work Hours: Monday through Friday 7:00AM to 4:00PM, Saturdays</td></tr><tr><td>Project Schedule: 7:00AM to 4:00PM</td></tr><tr><td>Complete Design: Spring 2021 Phase 1 of the temporary closure on Civic Center Way between Vista</td></tr><tr><td>Begin Construction: Fall 2021 Pacifica and the private driveway of 23901 Civic Center Way has</td></tr><tr><td>been opened to local residential traffic only. </td></tr><tr><td>Civic Center Water Treatment Facility Phase 2 Phase 2 remains closed in both directions between the entry to</td></tr><tr><td>Updates: Malibu Cyn Village condos to Webb Way.</td></tr><tr><td>Project is at the 65% design phase.  Project Schedule: August 2020 through April 2021</td></tr><tr><td>The City obtained a project CDP from Planning Commission on</td></tr><tr><td>February 1, 2021. Capital Improvement Projects (Not Started)</td></tr><tr><td>The State is reviewing the City's application for the State Revolving</td></tr><tr><td>Fund program.  Annual Street Maintenance</td></tr><tr><td>The project assessment engineer has begun the process of Project Description: This project provides for the reconstruction and</td></tr><tr><td>evaluating the project costs. maintenance of City streets.</td></tr><tr><td>Staff is rescheduling the community meeting to April 2021.  Estimated Schedule:</td></tr><tr><td>Project Schedule: Complete Design: Spring 2021</td></tr><tr><td>Complete Design: December 2021 Begin Construction: Summer 2021</td></tr><tr><td>Begin Construction: March 2022</td></tr><tr><td>Bluffs Park Shade Structure</td></tr><tr><td>Project Description:</td></tr></table>
+ Table This project consists of the installation of four singlepost shade structures at Malibu Bluffs Park
+
+================================== Ai Message ==================================
+
+Annual Street Maintenance; Bluffs Park Shade Structure

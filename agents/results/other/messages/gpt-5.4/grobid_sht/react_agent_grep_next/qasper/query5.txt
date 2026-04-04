@@ -1,0 +1,47 @@
+================================ Human Message =================================
+
+QUERY:
+What previous methods do they compare against?
+
+TABLE OF CONTENTS (TOC):
+1 | Spotting Rumors via Novelty Detection
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | Novelty based Features
+1.4 | Pseudo Feedback for Detection/Classification
+1.4.1 | 1.1 Related Work
+1.5 | 2 Rumour Detection
+1.5.1 | 2.1 Problem Statement
+1.5.2 | 2.2 Novelty-based Features
+1.5.3 | 2.3 Novelty Feature Construction
+1.5.4 | 2.4 Pseudo Feedback
+1.6 | Training Pseudo Feedback Features
+1.7 | 3 Experiments
+1.7.1 | 3.1 Evaluation metrics
+1.7.2 | 3.2 Data set
+1.7.3 | 3.3 Rumour detection effectiveness
+1.7.4 | 3.4 Feature analysis
+1.8 | Pseudo Feedbaack
+1.8.1 | 3.5 Detecting unpopular rumours
+1.8.2 | 3.6 Efficiency and Scalability
+1.9 | 4 Conclusion
+1.10 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_GQIuSRBuLBUCWih0PhQ8XjDn)
+ Call ID: call_GQIuSRBuLBUCWih0PhQ8XjDn
+  Args:
+    section_id: 1.7.3
+
+================================= Tool Message =================================
+Name: read_section
+
+3.3 Rumour detection effectiveness
+To evaluate our new features for rumour detection, we compare them with two state-of-the-art early rumour detection baselines Liu et. al (2015) and Yang et. al (2012) , which we re-implemented. We chose the algorithm by Yang et. al (2012) , dubbed Yang, because they proposed a feature set for early detection tailored to Sina Weibo and were used as a state-of-the-art baseline before by Liu et.  al (2015) . The algorithm by Liu et. al (2015) , dubbed Liu, is said to operate in real-time and outperformed Yang, when only considering features available on Twitter. Both apply various message-, user-, topic-and propagation-based features and rely on an SVM classifier which they also found to perform best. The approaches advertise themselves as suitable for early or real-time detection and performed rumour detection with the smallest latency across all published methods.  Yang performs early rumour detection and operates with a delay of 24 hours. Liu is claimed to perform in real-time while, requiring a cluster of 5 repeated messages to judge them for rumours. Note that although these algorithm are state-of-the-art for detecting rumours as quickly as possible, they still require a certain delay to reach their full potential.  Table 2 compares the performance of our features with the two classifiers on the 101 rumours and 101 non-rumours of the test set, when detecting rumour instantly after their publication. The table reveals comparable accuracy for Yang and Liu at around 60%. Our observed performance of Yang matches those by Liu et. al (2015) . Surprisingly, the algorithm Liu does not perform significantly better than Yang when applied to instantaneous rumour detection although they claimed to operate in real-time.  Liu et. al (2015) report performance features: all sentence char POS emotion extreme words sentiment PF novelty accuracy: 75% 69% 71% 73% 72% 73% 71% 60%
+Algorithm
+Table 5 : Features ablation: impact on performance when removing feature groups.  Note: lower accuracy means higher impact; POS: part of speech; PF: pseudo-feedback; based on the first 5 messages which clearly outperforms Yang for early rumour detection. However, we find that when reducing the set from 5 to 1, their superiority is only marginal. In contrast, the combination of novelty and pseudo relevance based features performs significantly better (sign test with p < 0.05) than the baselines for instantaneous rumour detections.  Novelty based features benefit from news articles as an external data source, which explains their superior performance. In particular for instantaneous rumour detection, where information can only be obtained from a single message, the use of external data proves to perform superior. Note that accuracy is a single value metric describing performance at an optimal threshold. Figure 1 compares the effectiveness of the three algorithms for the full range of rumour scores for instantaneous detection. Different applications require a different balance between miss and false alarm.  But the DET curve shows that Liu's method would be preferable over Yang for any application. Similarly, the plot reveals that our approach dominates both baselines throughout all threshold settings and for the highrecall region in particular.When increasing the detection delay to 12 and 24 hours, all three algorithms reach comparable performance with no statistically significant difference, as seen in table 4.  For our approach, none of the features are computed retrospectively, which explains why the performance does not change when increasing the detection delay. The additional time allows Liu and Yang to collect repeated signals, which improves their detection accuracy.After 24 hours Liu performs the highest due to its retrospectively computed features. Note that after 24 hours rumours might have already spread far through social networks and potentially caused harm.
+
+================================== Ai Message ==================================
+
+They compare against two state-of-the-art early rumour detection baselines: Liu et al. (2015) and Yang et al. (2012), re-implemented as Liu and Yang. Both use various message-, user-, topic-, and propagation-based features with an SVM classifier.

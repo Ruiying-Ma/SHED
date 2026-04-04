@@ -1,0 +1,95 @@
+================================ Human Message =================================
+
+QUERY:
+How is the speech alignment quality evaluated?
+
+TABLE OF CONTENTS (TOC):
+1 | LibriVoxDeEn: A Corpus for German-to-English Speech Translation and German Speech Recognition
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2 Overview
+1.3.1 | Creation of German speech recognition corpus (see
+1.4 | 3.1 Data Collection
+1.5 | 3.2 Data Preprocessing
+1.6 | 3.3 Text-to-Speech Alignment
+1.7 | 4.1 Data Collection and Preprocessing
+1.8 | 4.2 Text-to-Text Alignment
+1.9 | 5.1 Corpus Filtering
+1.10 | 5.2 Corpus Structure
+1.11 | 6.2 Evaluation Results
+1.12 | 6.3 Examples
+1.13 | 7 Conclusion
+1.14 | 8 Acknowledgments
+1.15 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_WDZN1AoPjpc3ewwYTKh1Ihg9)
+ Call ID: call_WDZN1AoPjpc3ewwYTKh1Ihg9
+  Args:
+    section_id: 1.6
+
+================================= Tool Message =================================
+Name: read_section
+
+3.3 Text-to-Speech Alignment
+To align sentences to onsets and endings of corresponding audio segments we made use of aeneas -a tool for an automatic synchronization of text and audio. In contrast to most forced aligners, aeneas does not use automatic speech recognition to compare an obtained transcript with the original text.  Instead, it works in the opposite direction by using dynamic time warping to align the mel-frequency cepstral coefficients extracted from the real audio to the audio representation synthesized from the text, thus aligning the text file to a time interval in the real audio. Furthermore, we used the maps pointing to the beginning and the end of each text row in the audio file produced with SoX to split the audio into sentence level chunks.  The timestamps were also used to filter boilerplate information about the book, author, speaker at the beginning and end of the audio file. Statistics on the resulting corpus are given in Table 1 . The corpus consists of 86 audio books, mostly fiction, comprising 547 hours of audio, aligned to over 400, 000 sentences and over 4M words.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_zhJiv6Gk4dqHkrniLXb0gL80)
+ Call ID: call_zhJiv6Gk4dqHkrniLXb0gL80
+  Args:
+    pattern: alignment quality|quality.*alignment|evaluate.*alignment|evaluation.*alignment|manual.*alignment|speech alignment
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1 | Abstract
+We present a corpus of sentence-aligned triples of German audio, German text, and English translation, based on German audio books. The speech translation data consist of 110 hours of audio material aligned to over 50k parallel sentences. An even larger dataset comprising 547 hours of German speech aligned to German text is available for speech recognition. The audio data is read speech and thus low in disfluencies.  The quality of audio and sentence alignments has been checked by a manual evaluation, showing that speech alignment quality is in general very high. The sentence alignment quality is comparable to well-used parallel translation data and can be adjusted by cutoffs on the automatic alignment score. To our knowledge, this corpus is to date the largest resource for German speech recognition and for end-to-end German-to-English speech translation.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_fME2JzfMZsi0N8MtpdZpHvj8)
+ Call ID: call_fME2JzfMZsi0N8MtpdZpHvj8
+  Args:
+    pattern: manual evaluation|manually evaluated|manual.*checked|alignment quality.*manual
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1 | Abstract
+We present a corpus of sentence-aligned triples of German audio, German text, and English translation, based on German audio books. The speech translation data consist of 110 hours of audio material aligned to over 50k parallel sentences. An even larger dataset comprising 547 hours of German speech aligned to German text is available for speech recognition. The audio data is read speech and thus low in disfluencies.  The quality of audio and sentence alignments has been checked by a manual evaluation, showing that speech alignment quality is in general very high. The sentence alignment quality is comparable to well-used parallel translation data and can be adjusted by cutoffs on the automatic alignment score. To our knowledge, this corpus is to date the largest resource for German speech recognition and for end-to-end German-to-English speech translation.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_TWyuTIsJYA7B2S4KWjENbuKJ)
+ Call ID: call_TWyuTIsJYA7B2S4KWjENbuKJ
+  Args:
+    section_id: 1.11
+
+================================= Tool Message =================================
+Name: read_section
+
+6.2 Evaluation Results
+Table 4 shows the results of our manual evaluation. The audio-text alignment was rated as in general as high quality. The text-text alignment rating increases corresponding to increasing hunalign confidence score which shows that the latter can be safely used to find a threshold for corpus filtering. Overall, the audio-text and text-text alignment scores are very similar to those reported by Kocabiyikoglu et al. (2018) .  The inter-annotator agreement between two raters was measured by Krippendorff's α-reliability score (Krippendorff, 2013) for ordinal ratings.<table><tr><td>Bin</td><td colspan="4">hunalign confidence (avg) audio-text alignment (max 3) text-text alignment (max 5)</td></tr><tr><td>Low</td><td/><td>0. 17</td><td>2.73</td><td>3.43</td></tr><tr><td>Moderate</td><td/><td>0.59</td><td>2.65</td><td>3.63</td></tr><tr><td>High</td><td/><td>1.06</td><td>2.71</td><td>4. 35</td></tr><tr><td>Average</td><td/><td>0.61</td><td>2.69</td><td>3.80</td></tr><tr><td colspan="2">Low</td><td>Moderate</td><td>High</td></tr><tr><td colspan="4">Bin -0.3 &lt; x ≤ 0.3 0. 3 &lt; x ≤ 0.8 0.8 &lt; x</td></tr></table>
+Table 4 Manual evaluation for audio-text and text-text alignments, averaged over 90 items and two raters
+The interannotator reliability for text-to-text alignment quality ratings scored 0.77, while for audio-text alignment quality ratings it scored 1.00.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_h36DL8fKdrk44Y9KK3yDaP5c)
+ Call ID: call_h36DL8fKdrk44Y9KK3yDaP5c
+  Args:
+    pattern: 90 items|two raters|audio-text alignment.*max 3|rated
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.10 | 5.2 Corpus Structure
+1 Wrong alignment 2 Partial alignment, some words or sentences may be missing 3 Correct alignment, allowing non-spoken syllables at start or end
+The evaluation experiment was performed by two annotators who each rated 30 items from each bin, where 10 items were the same for both annotators in order to calculate inter-annotator reliability.
+
+================================== Ai Message ==================================
+
+The speech alignment quality is evaluated by manual evaluation of audio-text alignment. Two annotators rated 90 items in total, 30 from each bin, on a 3-point scale: 1 = wrong alignment, 2 = partial alignment, 3 = correct alignment; inter-annotator reliability was measured with Krippendorff’s α and was 1.00 for audio-text alignment.

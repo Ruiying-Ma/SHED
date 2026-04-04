@@ -1,0 +1,35 @@
+================================ Human Message =================================
+
+QUERY:
+What are the restrictions of the restricted track?
+
+TABLE OF CONTENTS (TOC):
+1 | The CUED’s Grammatical Error Correction Systems for BEA-2019
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2 Low-resource Track Submission 2.1 FST-based Grammatical Error Correction
+1.4 | 2.2 Experimental Setup
+1.5 | 2.3 Results
+1.6 | 2.4 Differences Between CoNLL-2014 and BEA-2019 Dev
+1.7 | 3 Restricted Track Submission
+1.8 | 3.1 Experimental Setup
+1.9 | 4 Conclusion
+1.10 | Acknowledgments
+1.11 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_yv2xuQOturmlnMu3nXCuYs2b)
+ Call ID: call_yv2xuQOturmlnMu3nXCuYs2b
+  Args:
+    section_id: 1.7
+
+================================= Tool Message =================================
+Name: read_section
+
+3 Restricted Track Submission
+In contrast to our low-resource submission, our restricted system entirely relies on neural models and does not use any external NLP tools, spell checkers, or hand-crafted confusion sets. For sim- plicity, we also chose to use standard implemen- tations ( Vaswani et al. , 2018 ) of standard Trans- former ( Vaswani et al. , 2017 ) models with stan- dard hyper-parameters.  This makes our final sys- tem easy to deploy as it is a simple ensemble of standard neural models with minimal prepro- cessing (subword segmentation). Our contribu- tions on this track focus on NMT training tech- niques such as over-sampling, back-translation, and fine-tuning. We show that over-sampling ef- fectively reduces domain mismatch. We found back-translation ( Sennrich et al.  , 2016b ) to be a very effective technique to utilize unannotated training data. However, while over-sampling is commonly used in machine translation to bal- ance the number of real and back-translated train- ing sentences, we report that using over-sampling this way for GEC hurts performance. Finally, we propose a combination of checkpoint averag- ing ( Junczys-Dowmunt et al.  , 2016 ) and continued training to adapt our NMT models to the target do- main.
+
+================================== Ai Message ==================================
+
+The restricted system does not use any external NLP tools, spell checkers, or hand-crafted confusion sets.

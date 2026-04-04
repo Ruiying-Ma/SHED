@@ -1,0 +1,61 @@
+================================ Human Message =================================
+
+QUERY:
+what dataset did they use?
+
+TABLE OF CONTENTS (TOC):
+1 | WikiRank:Improving Keyphrase Extraction Based on Background Knowledge
+1.1 | Yang Yu, Vincent Ng
+1.1.1 | Abstract
+1.1.1.1 | 1. Introduction
+1.1.1.1.1 | 2. Existing Error Illustration with Example
+1.1.1.1.1.1 | 3. Proposed Model
+1.1.1.1.1.1.1 | 3.1. Graph Construction
+1.1.1.1.1.1.1.1 | 3.1.1. Automatic Concept Annotation
+1.1.1.1.1.1.1.1.1 | 3.1.2. Lexical Unit Selection
+1.1.1.1.1.1.1.1.1.1 | 3.1.3. Graph building
+1.1.1.1.1.1.1.1.1.1.1 | 3.2. WikiRank
+1.1.1.1.1.1.1.1.1.1.1.1 | 3.2.1. Optimization Problem
+1.1.1.1.1.1.1.1.1.1.1.1.1 | 3.2.2. Algorithm
+1.1.1.1.1.1.1.1.1.1.1.1.1.1 | 3.3. Approximation Approach with Pre-pruning
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | Algorithm 1 Keyphrase Generalization
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | Step 2. Remove the candidate keyphrase p from original graph G, if it is only connected to one concept that only exists once in the document
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | 4. Experiments and Results 4.1. Corpora
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | 4.2. Result
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | 5. Conclusion and Future Work
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | 6. Bibliographical References
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_BA2QLtmS8lk3lpfiqsHgl00f)
+ Call ID: call_BA2QLtmS8lk3lpfiqsHgl00f
+  Args:
+    section_id: 1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1
+
+================================= Tool Message =================================
+Name: read_section
+
+4. Experiments and Results 4.1. Corpora
+The DUC-2001 dataset (Over, 2001), which is a collection of 308 news articles, is annotated by (Wan and Xiao, 2008b). The Inspec dataset is a collection of 2,000 abstracts from journal papers including the paper title.  This is a relatively popular dataset for automatic keyphrase extraction, as it was first used by (Hulth, 2003) and later by Mihalcea and (Mihalcea and Tarau, 2004) and (Liu et al., 2009). The NUS Keyphrase Corpus (Nguyen and Kan, 2007) in- cludes 211 scientific conference papers with lengths be- tween 4 to 12 pages.  Each paper has one or more sets of keyphrases assigned by its authors and other annotators. The number of candidate keyphrases that can be extracted is potentially large, making this corpus the most challeng- ing of the four. Finally, the ICSI Meeting Corpus (Janin et al., 2003), which is annotated by Liu et al. (2009a), includes 161 meet- ing transcriptions.  Unlike the other three datasets, the gold standard keys for the ICSI corpus are mostly unigrams.
+4.2. Result
+For comparing with our system, we reimplemented Sin- gleRank and Topical PageRank. Table 2 shows the result of our reimplementation of SingleRank and Topical PageR- ank, as well as the result of our system. Note that we pre- dict the same number of phrase ( k = 10 ) for each document while testing all three methods.The result shows our result has guaranteed improvement over SingleRank and Topical PageRank on all four corpora.
+5. Conclusion and Future Work
+We proposed an unsupervised graph-based keyphrase ex- traction method WikiRank. This method connects the text with concepts in Wikipedia, thus incorporate the back- ground information into the semantic graph and finally construct a set of keyphrase that has optimal coverage of the concepts of the document. Experiment results show the method outperforms two related keyphrase extraction methods.We suggest that future work could incorporate more other semantic approaches to investigate keyphrase extraction
+task.  Introducing the results of dependency parsing or se- mantic parsing (e.g., OntoUSP) in intermediate steps could be helpful.
+6. Bibliographical References
+Ferragina, P. and Scaiella, U. (2010).Tagme: On-the- fly annotation of short text fragments (by wikipedia en- tities). In Proceedings of the 19th ACM International Conference on Information and Knowledge Manage- ment , CIKM ’10, pages 1625–1628, New York, NY, USA. ACM.
+Hasan, K. S. and Ng, V. (2014).Automatic keyphrase ex- traction: A survey of the state of the art. In Proceedings of the 52nd Annual Meeting of the Association for Com- putational Linguistics (Volume 1: Long Papers) , pages 1262–1273, Baltimore, Maryland, June. Association for Computational Linguistics.
+Hulth, A. (2003).Improved automatic keyword extrac- tion given more linguistic knowledge. In Proceedings of the 2003 Conference on Empirical Methods in Natu- ral Language Processing , EMNLP ’03, pages 216–223, Stroudsburg, PA, USA. Association for Computational Linguistics.
+Liu, Z., Li, P., Zheng, Y., and Sun, M.(2009). Cluster- ing to find exemplar terms for keyphrase extraction. In Proceedings of the 2009 Conference on Empirical Meth- ods in Natural Language Processing: Volume 1 - Volume 1 , EMNLP ’09, pages 257–266, Stroudsburg, PA, USA. Association for Computational Linguistics.
+Liu, Z., Huang, W., Zheng, Y., and Sun, M.(2010). Auto- matic keyphrase extraction via topic decomposition. In Proceedings of the 2010 Conference on Empirical Meth- ods in Natural Language Processing , EMNLP ’10, pages 366–376, Stroudsburg, PA, USA. Association for Com- putational Linguistics.
+Mihalcea, R. and Tarau, P. (2004).Textrank: Bringing or- der into texts. In Proceedings of Empirical Methods for Natural Language Processing , pages 404–411.
+Nguyen, T. D. and Kan, M.-Y. (2007).Keyphrase ex- traction in scientific publications. In Proceedings of the 10th International Conference on Asian Digital Li- braries: Looking Back 10 Years and Forging New Fron- tiers , ICADL’07, pages 317–326, Berlin, Heidelberg. Springer-Verlag.
+Over, P. (2001). Introduction to DUC-2001:An intrinsic evaluation of generic news text summarization systems. In Proceedings of the 2001 Document Understanding Conference .
+Toutanova, K., Klein, D., Manning, C. D., and Singer,Y. (2003). Feature-rich part-of-speech tagging with a cyclic dependency network. In Proceedings of the 2003 Con- ference of the North American Chapter of the Associa- tion for Computational Linguistics on Human Language Technology - Volume 1 , NAACL ’03, pages 173–180, Stroudsburg, PA, USA. Association for Computational Linguistics.
+Wan, X. and Xiao, J. (2008a). Collabrank:Towards a collaborative approach to single-document keyphrase ex- traction. In Proceedings of the 22Nd International Con- ference on Computational Linguistics - Volume 1 , COL-
+ING ’08, pages 969–976, Stroudsburg, PA, USA. Asso- ciation for Computational Linguistics.
+Wan, X. and Xiao, J. (2008b).Single document keyphrase extraction using neighborhood knowledge. In Proceed- ings of the 23rd National Conference on Artificial In- telligence - Volume 2 , AAAI’08, pages 855–860. AAAI Press.
+
+================================== Ai Message ==================================
+
+They used four datasets: DUC-2001, Inspec, the NUS Keyphrase Corpus, and the ICSI Meeting Corpus.

@@ -1,0 +1,72 @@
+================================ Human Message =================================
+
+QUERY:
+How much is the gap between pretraining on SQuAD and not pretraining on SQuAD?
+
+TABLE OF CONTENTS (TOC):
+1 | Neural Question Answering at BioASQ 5B
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | End Probabilities p(e|s) End Probabilities p(e|s)
+1.4 | 2 Model
+1.4.1 | 2.1 Network architecture
+1.4.2 | 2.2 Training & decoding
+1.5 | 3 Results & discussion
+1.6 | 4 Conclusion
+1.7 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_eDGT3cH2oRzsZ3QW3yqvwsdc)
+ Call ID: call_eDGT3cH2oRzsZ3QW3yqvwsdc
+  Args:
+    pattern: SQuAD|pretrain|pre-training|pretrained
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1 | Abstract
+This paper describes our submission to the 2017 BioASQ challenge. We participated in Task B, Phase B which is concerned with biomedical question answering (QA). We focus on factoid and list question, using an extractive QA model, that is, we restrict our system to output substrings of the provided text snippets. At the core of our system, we use FastQA, a state-ofthe-art neural QA system.  We extended it with biomedical word embeddings and changed its answer layer to be able to answer list questions in addition to factoid questions. We pre-trained the model on a large-scale open-domain QA dataset, SQuAD, and then fine-tuned the parameters on the BioASQ training set. With our approach, we achieve state-of-the-art results on factoid questions and competitive results on list questions.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_MN0jTGbBKwQ830MfoqW2Cofj)
+ Call ID: call_MN0jTGbBKwQ830MfoqW2Cofj
+  Args:
+    pattern: gap|difference|without pretraining|no pretraining|ablation|SQuAD
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1 | Abstract
+This paper describes our submission to the 2017 BioASQ challenge. We participated in Task B, Phase B which is concerned with biomedical question answering (QA). We focus on factoid and list question, using an extractive QA model, that is, we restrict our system to output substrings of the provided text snippets. At the core of our system, we use FastQA, a state-ofthe-art neural QA system.  We extended it with biomedical word embeddings and changed its answer layer to be able to answer list questions in addition to factoid questions. We pre-trained the model on a large-scale open-domain QA dataset, SQuAD, and then fine-tuned the parameters on the BioASQ training set. With our approach, we achieve state-of-the-art results on factoid questions and competitive results on list questions.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_aMauLZEIrqZxHQZdSa1O6CIk)
+ Call ID: call_aMauLZEIrqZxHQZdSa1O6CIk
+  Args:
+    section_id: 1.5
+
+================================= Tool Message =================================
+Name: read_section
+
+3 Results & discussion
+We report the results for all five test batches of BioASQ 5 (Task 5b, Phase B) in Table 1 . Note that the performance numbers are not final, as the provided synonyms in the gold-standard answers will be updated as a manual step, in order to reflect valid responses by the participating systems. This has not been done by the time of writing 3 .  Note also that -in contrast to previous BioASQ challenges -systems are no longer allowed to provide an own list of synonyms in this year's challenge.In general, the single and ensemble system are performing very similar relative to the rest of field: Their ranks are almost always right next to each other. Between the two, the ensemble model performed slightly better on average.On factoid questions, our system has been very successful, winning three out of five batches.  On list questions, however, the relative performance varies significantly. We expect our system to perform better on factoid questions than list questions, because our pre-training dataset (SQuAD) does not contain any list questions.Starting with batch 3, we also submitted responses to yes/no questions by always answering yes. Because of a very skewed class distribution in the BioASQ dataset, this is a strong baseline.  Because this is done merely to have baseline performance for this question type and because of the naivety of the method, we do not list or discuss the results here.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_pgA5yULFUs6HR8sBNg7CNFGP)
+ Call ID: call_pgA5yULFUs6HR8sBNg7CNFGP
+  Args:
+    pattern: pre-train|pre train|pretrained|without SQuAD|without pretraining|not pretraining|SQuAD training
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1 | Abstract
+This paper describes our submission to the 2017 BioASQ challenge. We participated in Task B, Phase B which is concerned with biomedical question answering (QA). We focus on factoid and list question, using an extractive QA model, that is, we restrict our system to output substrings of the provided text snippets. At the core of our system, we use FastQA, a state-ofthe-art neural QA system.  We extended it with biomedical word embeddings and changed its answer layer to be able to answer list questions in addition to factoid questions. We pre-trained the model on a large-scale open-domain QA dataset, SQuAD, and then fine-tuned the parameters on the BioASQ training set. With our approach, we achieve state-of-the-art results on factoid questions and competitive results on list questions.
+
+================================== Ai Message ==================================
+
+Unanswerable

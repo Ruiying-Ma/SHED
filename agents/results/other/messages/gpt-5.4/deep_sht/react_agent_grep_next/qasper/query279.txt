@@ -1,0 +1,79 @@
+================================ Human Message =================================
+
+QUERY:
+what results do they achieve?
+
+TABLE OF CONTENTS (TOC):
+1 | Two-stage Training for Chinese Dialect Recognition
+1.1 | Abstract
+1.1.1 | 1. Introduction
+1.1.1.1 | 2. Related works
+1.1.1.1.1 | 3. Two-stage system overview
+1.1.1.1.1.1 | 3.1. Network structure
+1.1.1.1.1.1.1 | 3.2. Loss function
+1.1.1.1.1.1.1.1 | 3.3. Two-stage system
+1.1.1.1.1.1.1.1.1 | 3.4. Three-stage system
+1.1.1.1.1.1.1.1.1.1 | 4. Experiments
+1.1.1.1.1.1.1.1.1.1.1 | 4.1. Data description
+1.1.1.1.1.1.1.1.1.1.1.1 | 4.2. Experimental setup
+1.1.1.1.1.1.1.1.1.1.1.1.1 | 5. Results
+1.1.1.1.1.1.1.1.1.1.1.1.1.1 | 5.1. Comparison of different stage systems
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | 5.2. Comparison of different RNN structures
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | 6. Conclusions
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | 7. References
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_ui9FZmCtDfxqROMsqVbQZeQh)
+ Call ID: call_ui9FZmCtDfxqROMsqVbQZeQh
+  Args:
+    section_id: 1.1.1.1.1.1.1.1.1.1.1.1.1
+
+================================= Tool Message =================================
+Name: read_section
+
+5. Results
+5.1. Comparison of different stage systems
+First of all, we compare the two-stage system and the three- stage system trained with phonetic sequence annotation and dialect category label with the baseline trained only with di- alect category label. The two multi-stage system have the same ResNet14 architecture and use 2-layer BLSTM as the RNN part with 256 nodes.  From the results in the Table 2, we can see that the relative accuracy (ACC) of the two multi-stage systems in- creases by 10% on every task relative to the baseline and the two-stage system performs best. We also observe that both two multi-stage systems perform excellently in long duration ( > 3s) task and the two-stage system illustrates its advantageous and robustness in short duration ( ≤ 3s) task. By analyzing the confusing matrices (Figure 4) of predicted results, we can find that the accuracy is high in several dialects’ recognition, such as Shanghai (98.8%) and Hefei (99.8%), but the systems have some trouble while recognizing Minnan and Kekka, Hebei and Shanxi. The results accord with regional dis- tribution of the dialects.  For example, Minnan and Kekka are both in Fujian Province and have lots of cognate words, so it is hard to recognize them in reality.Table 2: System Performance of different multi-stage systems
+System Type RNN All ≤ 3s > 3s Baseline BLSTM 78.85 77.60 80.10 Two-stage BLSTM 88.88 87.72 90.04 Three-stage BLSTM 87. 24 85.52 88.96
+5.2. Comparison of different RNN structures
+We further explore the impact of different RNN structures with bidirectional gated recurrent unit (BGRU) and BLSTM. For the two-stage system (Table 3), adding the nodes of BLSTM
+Figure 4: Comparison of confusion matrices produced by the two-stage system (left) and the three-stage system (right)
+does not work, but adding another layer makes sense in short- duration task.  Moreover, with the same layers and nodes, BLSTM outperforms BGRU in the two sub-tasks. We believe that sound related tasks do not need a very deep network as im- age related tasks, that is also the reason why we use a shallow ResNet14 as the CNN part.Table 3: Comparison of two-stage system with different RNN structures
+RNN Layers Nodes All ≤ 3s > 3s BLSTM 2 256 88. 88 87.72 90.04 BLSTM 2 384 88.26 86.96 89.56 BGRU 2 256 88.14 87.16 89.12 BLSTM 3 256 88.80 87.80 89.80
+ We evaluate the three-stage system with the same experi- ments, and the results (Table 4) demonstrate that the three-stage system can achieve high accuracy in long duration task by larger BLSTM layers and the BGRU structure outperforms BLSTM on the whole. But adding the third RNN layer also does not work in these experiments.Table 4: Comparison of three-stage system with different RNN structures
+ RNN Layers Nodes All ≤ 3s > 3s BLSTM 2 256 87.24 85.52 88.96 BLSTM 2 384 87.42 85.28 89.56 BLSTM 2 512 87.52 85.88 89.16 BGRU 2 256 88.20 86.96 89.44 BGRU 2 384 86.96 85. 24 88.68 BGRU 2 512 85.74 83.72 87.76 BLSTM 3 256 86.96 84.88 89.04
+Table 5: Epochs to converge of different multi-stage systems
+System Type First stage Second stage Third stage Baseline 6 N/A N/A Two-stage 29 6 N/A Three-stage 30 7 7
+ As Table 5 shows, training networks in the first stage (with CTC loss) needs more time for convergence than training net- works in the second or third stage (with cross-entropy loss). We can observe that the two-stage system spends less time while having a slightly higher accuracy compared to the three-stage system.These two multi-stage systems both much outperform the baseline system.  They learn acoustic and language knowledge successively, indicating that language and phoneme are features of different levels, so we have to train step by step to avoid the networks “forget” some knowledge. Through the process, we can find the rules of multi-task and multi-stage training, if the labels are in different levels then multi-stage training should be used such as the situation in our paper, otherwise multi-task training should be used for parallel learning a wide range of knowledge.
+6. Conclusions
+In this work, we propose an acoustic model based on ResNet14 followed by an RNN to recognize phoneme sequence directly with CTC loss and train a simple RNN lastly to get posteri- ors for recognizing dialect category, forming a two-stage LID system. The system links the different stages by using inter- mediate features extracted by a shallow ResNet14 architecture.  Compared with a simple network or the three-stage system, the two-stage system achieves the state-of-the-art in the Chinese di- alect recognition task. We believe this idea of two-stage training can provide inspirations for learning different classes knowl- edge and can extend to other fields.
+7. References
+[1] F. Richardson, D. Reynolds, and N. Dehak,“Deep neural network approaches to speaker and language recognition,” IEEE Signal Processing Letters , vol. 22, no. 10, pp. 1671–1675, 2015.
+[2] R. F´er, P. Matˇejka, F.Gr´ezl, O. Plchot, and J. ˇ Cernock`y, “Multi- lingual bottleneck features for language recognition,” in Sixteenth Annual Conference of the International Speech Communication Association , 2015.
+[3] P. Matejka, L. Zhang, T. Ng, H.S. Mallidi, O. Glembek, J. Ma, and B. Zhang, “Neural network bottleneck features for language identification,” in Proceedings of Odyssey , vol. 2014, 2014, pp. 299–304.
+[4] B. Jiang, Y. Song, S. Wei, J.-H.Liu, I. V. McLoughlin, and L.- R. Dai, “Deep bottleneck features for spoken language identifica- tion,” PloS one , vol. 9, no. 7, p. e100795, 2014.
+[5] I. Lopez-Moreno, J. Gonzalez-Dominguez, O.Plchot, D. Mar- tinez, J. Gonzalez-Rodriguez, and P. Moreno, “Automatic lan- guage identification using deep neural networks,” in IEEE Inter- national Conference on Acoustics , 2014.
+[6] A. Lozano-Diez, R. Zazo-Candil,J. Gonzalez-Dominguez, D. T. Toledano, and J. Gonzalez-Rodriguez, “An end-to-end approach to language identification in short utterances using convolutional neural networks,” in Sixteenth Annual Conference of the Interna- tional Speech Communication Association , 2015.
+[7] M. Jin, Y. Song, I. Mcloughlin,W. Guo, and L. R. Dai, “End-to- end language identification using high-order utterance representa- tion with bilinear pooling,” in Interspeech 2017 , 2017.
+[8] D. Garcia-Romero and A. McCree,“Stacked long-term tdnn for spoken language recognition.” in INTERSPEECH , 2016, pp. 3226–3230.
+[9] J. Gonzalez-Dominguez, I. Lopez-Moreno, H.Sak, J. Gonzalez- Rodriguez, and P. J. Moreno, “Automatic language identification using long short-term memory recurrent neural networks,” in Fif- teenth Annual Conference of the International Speech Communi- cation Association , 2014.
+[10] W. Geng, W. Wang, Y. Zhao, X.Cai, and B. Xu, “End-to-end language identification using attention-based recurrent neural net- works,” Interspeech 2016 , pp. 2944–2948, 2016.
+[11] G. Gelly and J.-L. Gauvain,“Spoken language identification us- ing lstm-based angular proximity.” in INTERSPEECH , 2017, pp. 2566–2570.
+[12] W. Cai, D. Cai, S. Huang,and M. Li, “Utterance-level end-to-end language identification using attention-based cnn-blstm,” arXiv preprint arXiv:1902.07374 , 2019.
+[13] A. Lozano-Diez, O. Plchot, P.Matejka, and J. Gonzalez- Rodriguez, “Dnn based embeddings for language recognition,” in 2018 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP) . IEEE, 2018, pp. 5184–5188.
+[14] Z. Tang, W. Dong, Y. Chen, L. Li,and A. Abel, “Phonetic tempo- ral neural model for language identification,” IEEE/ACM Trans- actions on Audio Speech & Language Processing , vol. 26, no. 1, pp. 134–144, 2017.
+[15] R. Masumura, T. Asami, H.Masataki, and Y. Aono, “Parallel pho- netically aware dnns and lstm-rnns for frame-by-frame discrimi- native modeling of spoken language identification,” in IEEE In- ternational Conference on Acoustics , 2017.
+[16] L. Mateju, P. Cerva, J.Zdansky, and R. Safarik, “Using deep neural networks for identification of slavic languages from acoustic signal,” in Proc. Interspeech 2018 , 2018, pp. 1803–1807. [Online]. Available: http://dx.doi.org/10.21437/ Interspeech.2018-1165
+[17] A. Graves, S. Fern´andez, F. Gomez,and J. Schmidhuber, “Con- nectionist temporal classification: labelling unsegmented se- quence data with recurrent neural networks,” in Proceedings of the 23rd international conference on Machine learning . ACM, 2006, pp. 369–376.
+[18] G. Hinton, L. Deng, D. Yu, G.Hinton, L. Deng, D. Yu, G. Dahl, A.-r. Mohamed, N. Jaitly, A. Senior, V. Vanhoucke, P. Nguyen, B. Kingsbury et al. , “Deep neural networks for acoustic modeling in speech recognition,” IEEE Signal processing magazine , vol. 29, 2012.
+[19] A. Graves, A.-r. Mohamed, and G. Hinton,“Speech recognition with deep recurrent neural networks,” in 2013 IEEE international conference on acoustics, speech and signal processing . IEEE, 2013, pp. 6645–6649.
+[20] A. Graves and N. Jaitly,“Towards end-to-end speech recognition with recurrent neural networks,” in International Conference on Machine Learning , 2014, pp. 1764–1772.
+[21] D. Amodei, S. Ananthanarayanan,R. Anubhai, J. Bai, E. Bat- tenberg, C. Case, J. Casper, B. Catanzaro, Q. Cheng, G. Chen et al. , “Deep speech 2: End-to-end speech recognition in english and mandarin,” in International conference on machine learning , 2016, pp. 173–182.
+[22] B. Shi, X. Bai, and C. Yao,“An end-to-end trainable neural net- work for image-based sequence recognition and its application to scene text recognition,” IEEE transactions on pattern analysis and machine intelligence , vol. 39, no. 11, pp. 2298–2304, 2017.
+[23] Y. Zhang, M. Pezeshki, P.Brakel, S. Zhang, C. Laurent, Y. Ben- gio, and A. Courville, “Towards end-to-end speech recognition with deep convolutional neural networks,” Interspeech 2016 , pp. 410–414, 2016.
+[24] Y. Wang, X. Deng, S. Pu, and Z.Huang, “Residual convolutional ctc networks for automatic speech recognition,” arXiv...(truncated)
+
+================================== Ai Message ==================================
+
+The two-stage system achieves the best results, with 88.88% accuracy overall, 87.72% on utterances ≤ 3s, and 90.04% on utterances > 3s, compared with the baseline’s 78.85%, 77.60%, and 80.10% and the three-stage system’s 87.24%, 85.52%, and 88.96%. They report that both multi-stage systems improve relative accuracy by 10% on every task over the baseline, and the two-stage system achieves state-of-the-art Chinese dialect recognition performance.

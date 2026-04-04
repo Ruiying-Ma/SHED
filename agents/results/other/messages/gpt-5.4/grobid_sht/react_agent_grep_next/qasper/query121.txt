@@ -1,0 +1,83 @@
+================================ Human Message =================================
+
+QUERY:
+What languages do they use during pretraining?
+
+TABLE OF CONTENTS (TOC):
+1 | Cross-Lingual Natural Language Generation via Pre-Training
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | Monolingual Pre-Training
+1.4 | 3 Methods
+1.4.1 | 3.1 Pre-Training Tasks
+1.4.2 | 3.2 Pre-Training Protocol
+1.4.3 | 3.3 Fine-Tuning on Downstream NLG Tasks
+1.5 | 4 Experiments
+1.5.1 | 4.1 Training Details
+1.5.2 | 4.2 Question Generation
+1.6 | • PIPELINE (XLM) with Google Translator Utilizing
+1.6.1 | 4.3 Abstractive Summarization
+1.6.2 | 4.4 Ablation Studies
+1.6.3 | 4.5 Case Studies
+1.7 | 5 Conclusion
+1.8 | Acknowledgements
+1.9 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_IWJrKtsJe3cZTJq1KXvO0R4u)
+ Call ID: call_IWJrKtsJe3cZTJq1KXvO0R4u
+  Args:
+    pattern: languages?|English|Chinese|German|French|pre-train|pretrain
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1 | Abstract
+In this work we focus on transferring supervision signals of natural language generation (NLG) tasks between multiple languages. We propose to pretrain the encoder and the decoder of a sequence-to-sequence model under both monolingual and cross-lingual settings. The pre-training objective encourages the model to represent different languages in the shared space, so that we can conduct zero-shot cross-lingual transfer.  After the pre-training procedure, we use monolingual data to fine-tune the pre-trained model on downstream NLG tasks. Then the sequence-to-sequence model trained in a single language can be directly evaluated beyond that language (i.e., accepting multi-lingual input and producing multi-lingual output). Experimental results on question generation and abstractive summarization show that our model outperforms the machine-translation-based pipeline methods for zero-shot cross-lingual generation.  Moreover, crosslingual transfer improves NLG performance of low-resource languages by leveraging rich-resource language data. Our implementation and data are available at https://github.com/ CZWin32768/xnlg.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_CxP4l35N07sYC3jyUBBpSBwb)
+ Call ID: call_CxP4l35N07sYC3jyUBBpSBwb
+  Args:
+    section_id: 1.4.2
+
+================================= Tool Message =================================
+Name: read_section
+
+3.2 Pre-Training Protocol
+As shown in Figure 2 (b), we propose a two-stage pretraining protocol for XNLG. The first stage pretrains the encoding components, where the model learns to encode multilingual sentences to a shared embedding space. We consider using MLM and XMLM as the pre-training tasks. The objective of the first stage is to minimize:
+ L 1 = (x,y)∈Dp L (x,y) XMLM + x∈Dm L (x) MLM (6)
+where D p indicates the parallel corpus, and D m is the monolingual corpus.Although the pre-trained encoder in the first stage enables the model to encode multilingual sentences.  However, it cannot directly be used in cross-lingual NLG because: 1) encoder-decoder attention is not pre-trained; 2) the decoding algorithm is different between masked language modeling and autoregressive decoding, resulting in the mismatch between pre-training and fine-tuning. Therefore, we conduct decoding pre-training in the second stage by using DAE and XAE as the tasks. Besides, we only update decoder parameters and keep the encoder fixed.  The objective of the second stage is to minimize:
+L 2 = (x,y)∈Dp L (x,y) XAE + x∈Dm L (x) DAE (7)
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_seTDLUrvLemFmY1pp9n2x5jy)
+ Call ID: call_seTDLUrvLemFmY1pp9n2x5jy
+  Args:
+    pattern: English|Chinese|German|French|Arabic|Russian|multilingual sentences|monolingual corpus|parallel corpus
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.2 | 1 Introduction
+Learning natural language generation (NLG) models heavily relies on annotated training data. However, most available datasets are collected in a single language (typically English), which restricts deploying the applications to other languages. In this work, we aim at transferring the supervision of a monolingual NLG dataset to unseen languages, so that we can boost performance for the low-resource settings. Various methods have been proposed over the years to learn cross-lingual word embeddings (Mikolov, Le, and Sutskever 2013; Xing et al. 2015; Conneau et al. 2017) or sentence encoders (Johnson et al. 2017; Conneau et al. 2018; Lample and Conneau 2019) , which try to encode multilingual texts into a shared vector space.  Despite achieving promising results on cross-lingual classification problems, cross-lingual pre-trained models purposed for NLG tasks remains relatively understudied.Figure 1 : We use a monolingual (such as English) NLG dataset to fine-tune the pre-trained model XNLG, and then evaluate it beyond the language for both source and target sides (e.g., Chinese, and French).The cross-lingual generation problem is challenging due to the following reasons.  First, it requires the models to understand multilingual input texts, and generate multilingual target sequences. So both the encoder and the decoder should be pre-trained together. Second, the many-to-many nature of cross-lingual NLG increases language pairs with the square of the number of languages. Third, the prediction space of cross-lingual NLG is much larger than classification tasks, which makes knowledge transfer of decoders quite critical. Previous work mainly relies on machine translation (MT) to map texts to different languages. The first strand of research directly uses MT in a pipeline manner (Wan, Li, and Xiao 2010) . For example, the inputs written in other languages are first translated to English, and fed into the NLG model that is trained by English data. Then the generated English texts are translated back to the target language.  Another strand of work uses MT to generate pseudo training data for other language pairs that are lack of annotations (Shen et al. 2018; Duan et al. 2019) . However, such methods have to use multiple MT systems, which renders them suffering from error propagation. Moreover, because the pipelinebased methods do not explicitly share the same parameter space across languages, we can not directly transfer the taskspecific supervision to other low-resource languages. In this paper, we propose a cross-lingual pre-trained model (named as XNLG) in order to transfer monolingual NLG supervision to other pre-trained languages by finetuning. Specifically, XNLG shares the same sequence-to-sequence model across languages, and is pre-trained with both monolingual and cross-lingual objectives. The model not only learns to understand multilingual input, but also is able to generate specific languages by conditioning on the encoded semantics.  Figure 1 demonstrates how to use XNLG to perform cross-lingual transfer for downstream tasks. The proposed model enables us to fine-tune the pre-trained model on monolingual NLG training data, and then evaluate it beyond a single language, including zero-shot crosslingual generation. Besides, we explore several fine-tuning strategies to make a compromise between cross-lingual ability and task ability. In addition, we introduce two crosslingual NLG datasets (i.e. , question generation, and abstractive summarization) for evaluation, which includes three languages, namely English, Chinese, and French. Experimental results on the NLG tasks show that XNLG achieves competitive performance compared with the machine-translationbased pipeline model in zero-shot cross-lingual settings. 2019) incorporate monolingual summarization and machine translation to improve cross-lingual summarization.  However, the systems only conduct experiments that generate summaries with different languages from the input language, rather than transferring supervision signals across all language pairs. Kumar et al. ( 2019) use training data annotated in multiple languages to jointly train a sequence-to-sequence model for question generation. In contrast, our method can also be applied to zero-shot settings across languages.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_3rsqP5bptktNqiy3rjH8NeTt)
+ Call ID: call_3rsqP5bptktNqiy3rjH8NeTt
+  Args:
+    section_id: 1.5.1
+
+================================= Tool Message =================================
+Name: read_section
+
+4.1 Training Details
+we use Wikipedia as the monolingual data for the DAE objective, and MultiUN (Ziemski, Junczys-Dowmunt, and Pouliquen 2016) as the parallel data for the XAE objective. The DAE loss is trained with a weight of 0.5. We train a two-language (English/Chinese) and a three-language (English/French/Chinese) XNLG for two downstream NLG tasks, respectively.  Following (Lample and Conneau 2019), we use the tokenizer provided by (Chang, Galley, and Manning 2008) for Chinese, and Moses1 for other languages, respectively. Then the words in all languages are split with a shared subword vocabulary learned by BPE (Sennrich, Haddow, and Birch 2015) .  We use Adam optimizer with a linear warm-up over the first 4,000 steps and linear decay for later steps, and the learning rate is set to 10 -4 . The pre-training batch size is 64, and the sequence length is set to 256. It takes about 30 hours to run 23,000 steps for the pre-training procedure by using 4 Nvidia Telsa V100-16GB GPUs. Fine-Tuning For fine-tuning on downstream NLG tasks, we use Adam optimizer with a learning rate of 5 × 10 -6 . We set the batch size as 16 and 32 for question generation and abstractive summarization, respectively. When the target language is the same as the language of training data, we fine-tune all parameters. When the target language is different from the language of training data, we fine-tune the Transformer layers of the encoder.  We truncate the input sentences to the first 256 tokens. During decoding, we use beam search with a beam size of 3, and limit the length of the target sequence to 80 tokens.
+
+================================== Ai Message ==================================
+
+They use English and Chinese for the two-language pretraining setting, and English, French, and Chinese for the three-language pretraining setting.

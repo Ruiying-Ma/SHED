@@ -1,0 +1,33 @@
+================================ Human Message =================================
+
+QUERY:
+How are the individuals with bipolar disorder identified?
+
+TABLE OF CONTENTS (TOC):
+1 | Abstract
+2 | 1 Introduction and background
+3 | 2 Data
+4 | 3 Methodology and Resources
+5 | 4 Ethical considerations
+6 | 5 Impact and conclusion
+7 | Acknowledgments
+8 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_PurbJf3XCfiJAb5Nn4Cb85Sh)
+ Call ID: call_PurbJf3XCfiJAb5Nn4Cb85Sh
+  Args:
+    section_id: 3
+
+================================= Tool Message =================================
+Name: read_section
+
+2 Data
+Previous work in computational linguistics and clinical psychology has tended to focus on the detection of mental health issues as classification tasks ( Arseniev-Koehler et al. , 2018 ). Datasets have been collected for various conditions includ- ing BD using publicly available social-media data from Twitter ( Coppersmith et al. , 2015 ) and Red- dit ( Sekuli´c et al. , 2018 ; Cohan et al. , 2018 ).  Un- fortunately, the Twitter dataset is unavailable for further research. 1 In both Reddit datasets, mental health-related content was deliberately removed. This allows the training of classifiers that try to predict the mental health of authors from excerpts that do not explicitly address mental health, yet it renders the data useless for analyses on how mental health is talked about online. Due to this lack of appropriate existing publicly accessible datasets, we will create such resources and make them available to subsequent researchers. We plan to collect data relevant for BD in gen-
+1 Email communication with the first author of Copper- smith et al. ( 2015 ).eral as well as for personal recovery in BD from three sources varying in their available amount versus depth of the accounts we expect to find: 1) Twitter, 2) Reddit (focusing on mental health- related content unlike previous work), 3) blogs au- thored by affected individuals.  Twitter and Reddit users with a BD diagnosis will be identified au- tomatically via self-reported diagnosis statements, such as ‘I was diagnosed with BD-I last week’. To do so, we will extend on the diagnosis pat- terns and terms for BD provided by Cohan et al. ( 2018 ) 2 . Implicit consent is assumed from users on these platforms to use their public tweets and posts.  3 Relevant blogs will be manually identified, and their authors will be contacted to obtain in- formed consent for using their texts.Since language and culture are important fac- tors in our research questions, we need informa- tion on the language of the texts and the coun- try of residence of their authors 3 , which is not provided in a structured format in the three data sources.  For language identification, Twitter em- ploys an automatic tool ( Trampus , 2015 ), which can be used to filter tweets according to 60 lan- guage codes, and there are free, fairly accurate tools such as the Google Compact Language De- tector 4 , which can be applied to Reddit and blog posts. The location of Twitter users can be auto- matically inferred from their tweets ( Cheng et al.  , 2010 ) or the (albeit noisy) location field in their user profiles ( Hecht et al. , 2011 ). Only one attempt to classify the location of Reddit users has been published so far ( Harrigian , 2018 ) showing mea- gre results, indicating that the development of ro- bust location classification approaches on this plat- form would constitute a valuable contribution. Some companies collect mental health-related online data and make them available to researchers subject to approval of their internal review boards, e.g., OurDataHelps 5 by Qntfy or the peer-support forum provider 7 Cups 6 . Unlike ‘raw’ social me- dia data, these datasets have richer user-provided metadata and explicit consent for research usage.  On the other hand, less data is available, the pro- cess to obtain access might be tedious within the short timeline of a PhD project and it might be im-
+possible to share the used portions of the data with other researchers. Therefore, we will follow up the possibilities of obtaining access to these datasets, but in parallel also collect our own datasets to avoid dependence on external data providers.
+
+================================== Ai Message ==================================
+
+Twitter and Reddit users with bipolar disorder will be identified automatically via self-reported diagnosis statements, such as “I was diagnosed with BD-I last week,” by extending the diagnosis patterns and terms for BD from Cohan et al. (2018). Relevant blogs will be manually identified, and their authors will be contacted to obtain informed consent for using their texts.

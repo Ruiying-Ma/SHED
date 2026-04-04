@@ -1,0 +1,51 @@
+================================ Human Message =================================
+
+QUERY:
+what were the baselines?
+
+TABLE OF CONTENTS (TOC):
+1 | Advancing Speech Recognition With No Speech Or With Noisy Speech
+1.1 | Abstract
+1.2 | I. INTRODUCTION
+1.3 | II. AUTOMATIC SPEECH RECOGNITION SYSTEM MODELS
+1.4 | A. Connectionist Temporal Classification (CTC)
+1.5 | B. RNN Encoder-Decoder or Attention model
+1.6 | IV. EEG AND SPEECH FEATURE EXTRACTION DETAILS
+1.7 | V. EEG FEATURE DIMENSION REDUCTION ALGORITHM DETAILS
+1.8 | VI. RESULTS
+1.9 | VII. CONCLUSION AND FUTURE WORK
+1.10 | VIII. ACKNOWLEDGEMENT
+1.11 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_4RDcFPdzdg1NvJQLWmg0nb5n)
+ Call ID: call_4RDcFPdzdg1NvJQLWmg0nb5n
+  Args:
+    pattern: baseline|baselines|compare|comparison
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.8 | VI. RESULTS
+The attention model was predicting a word and CTC model was predicting a character at every time step, hence we used word error rate (WER) as performance metric to evaluate attention model and character error rate (CER) for CTC model for different feature sets as shown below. Table I and II shows the test time results for attention model for both the data sets when trained using EEG features and concatenation of EEG, acoustic features respectively.  As seen from the results the attention model gave lower WER when trained and tested on smaller number of sentences. As the vocabulary size increase, the WER also went up. We believe for the attention model to achieve lower WER for larger vocabulary size more number of training examples or larger training data set is required as large number of weights need to be adapted. Figure 3 shows the training loss convergence of our attention model. Table IV and V shows the results obtained using CTC model.  The error rates for CTC model also went up with the increase in vocabulary size for both the data sets. However the CTC model was trained for 500 epochs compared to 100 epochs for attention model to observe loss convergence and batch size was set to one for CTC model. Thus CTC model training was lot more time consuming than attention model. <table><tr><td>3</td><td>19</td><td>0</td><td>0</td></tr><tr><td>5</td><td>29</td><td>37.03</td><td>45.1</td></tr><tr><td>7</td><td>42</td><td>58.9</td><td>51. 1</td></tr><tr><td>10</td><td>59</td><td>63.11</td><td>71.2</td></tr><tr><td>15</td><td>84</td><td>82.7</td><td>79</td></tr><tr><td>20</td><td>106</td><td>87. 3</td><td>80</td></tr><tr><td>Number of Sentences</td><td>Number of unique words contained</td><td>EEG (WER %)</td><td>EEG + MFCC (WER %)</td></tr><tr><td>3</td><td>19</td><td>0</td><td>0</td></tr><tr><td>5</td><td>29</td><td>44. 4</td><td>41.9</td></tr><tr><td>7</td><td>42</td><td>52.8</td><td>55</td></tr><tr><td>10</td><td>59</td><td>68</td><td>71</td></tr><tr><td>15</td><td>84</td><td>82. 7</td><td>83</td></tr><tr><td>20</td><td>106</td><td>86.4</td><td>86</td></tr></table>
+Table I ON TEST SET FOR ATTENTION MODEL FOR DATA SET A
+In [1] we have demonstrated that EEG sensors T7 and T8 features contributed most towards ASR performance.  Table VI shows the CTC model test time results when we trained the model using EEG features from only T7 and T8 sensors on the most noisy data set B. We observed that as vocabulary size increase, error rates were slightly lower than the error rates from Table IV where we used EEG features from all 31 sensors with dimension reduction. Table III shows the results for attention model when trained with EEG features from sensors T7 and T8 only on data set B.  We observed that error rates were higher in this case compared to the error rates reported in table II.<table><tr><td>Number of Sentences</td><td>Number of unique words contained</td><td>EEG (CER%)</td><td>EEG + MFCC (CER%)</td></tr><tr><td>3</td><td>19</td><td>26. 3</td><td>53</td></tr><tr><td>5</td><td>29</td><td>68.7</td><td>61.2</td></tr><tr><td>7</td><td>42</td><td>66</td><td>64.2</td></tr><tr><td>10</td><td>59</td><td>67. 2</td><td>66</td></tr><tr><td>15</td><td>84</td><td>74.3</td><td>68.2</td></tr><tr><td>20</td><td>106</td><td>77.5</td><td>67. 9</td></tr><tr><td>Number of Sentences</td><td>Number of unique words contained</td><td>EEG (CER%)</td><td>EEG + MFCC (CER%)</td></tr><tr><td>3</td><td>19</td><td>45.8</td><td>10. 27</td></tr><tr><td>5</td><td>29</td><td>45</td><td>47</td></tr><tr><td>7</td><td>42</td><td>61. 02</td><td>63</td></tr><tr><td>10</td><td>59</td><td>70</td><td>61</td></tr><tr><td>15</td><td>84</td><td>75.4</td><td>64.3</td></tr><tr><td>20</td><td>106</td><td>73.91</td><td>67. 09</td></tr><tr><td/><td colspan="2">TABLE V</td><td/></tr></table>
+Table III ON TEST SET FOR ATTENTION MODEL FOR DATA SET B USING EEG FEATURES FROM ONLY T7 AND T8 ELECTRODES TABLE IV CER ON TEST SET FOR CTC MODEL FOR DATA SET B
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_TIRbPeWaPSWXhqPmrnYXTqjT)
+ Call ID: call_TIRbPeWaPSWXhqPmrnYXTqjT
+  Args:
+    section_id: 1.1
+
+================================= Tool Message =================================
+Name: read_section
+
+Abstract
+In this paper we demonstrate end-to-end continuous speech recognition (CSR) using electroencephalography (EEG) signals with no speech signal as input. An attention model based automatic speech recognition (ASR) and connectionist temporal classification (CTC) based ASR systems were implemented for performing recognition. We further demonstrate CSR for noisy speech by fusing with EEG features.
+
+================================== Ai Message ==================================
+
+The baselines were two end-to-end ASR system models: an attention model and a Connectionist Temporal Classification (CTC) model. The results compared EEG-only input against concatenated EEG + MFCC acoustic features.

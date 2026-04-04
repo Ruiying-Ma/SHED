@@ -1,0 +1,165 @@
+================================ Human Message =================================
+
+QUERY:
+What is their baseline?
+
+TABLE OF CONTENTS (TOC):
+1 | Cross-Lingual Natural Language Generation via Pre-Training
+1.1 | Zewen Chi†∗, Li Dong‡, Furu Wei‡, Wenhui Wang‡, Xian-Ling Mao†, Heyan Huang†
+1.1.1 | Abstract
+1.1.1.1 | 1 Introduction
+1.1.1.1.1 | 2 Related Work
+1.1.1.1.1.1 | 3 Methods
+1.1.1.1.1.1.1 | 3.1 Pre-Training Tasks
+1.1.1.1.1.1.1.1 | 3.2 Pre-Training Protocol
+1.1.1.1.1.1.1.1.1 | 3.3 Fine-Tuning on Downstream NLG Tasks
+1.1.1.1.1.1.1.1.1.1 | 4 Experiments
+1.1.1.1.1.1.1.1.1.1.1 | 4.1 Training Details
+1.1.1.1.1.1.1.1.1.1.1.1 | 4.2 Question Generation
+1.1.1.1.1.1.1.1.1.1.1.1.1 | 4.3 Abstractive Summarization
+1.1.1.1.1.1.1.1.1.1.1.1.1.1 | 4.4 Ablation Studies
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | 4.5 Case Studies
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | 5 Conclusion
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | Acknowledgements
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_HU8wqUtX1Sj1rP41IozGED89)
+ Call ID: call_HU8wqUtX1Sj1rP41IozGED89
+  Args:
+    pattern: baseline
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | 4.5 Case Studies
+As shown in Figure 4, we present some examples gener- ated by X NLG and the baselines in four directions (En-En, En-Zh, Zh-En, and Zh-Zh). When decoding on an unseen language, X LM tends to generate random output, because it is not designed for cross-lingual NLG.  In terms of the pipeline model, we can observe that it suffers from the er- ror propagation issue, especially when the source and target languages are all different from the training data. For ex- ample, when the pipeline model performs Zh-Zh-QG, key- words are translated twice, increasing the risk of mistransla- tion. In the second example, “ atomic bomb ” is mistranslated to “ nuclear bomb ”, resulting in its low correctness.  On the contrary, by directly transferring English supervision signals to the other generation directions, the generated questions of X NLG match the references better than baselines.
+5 Conclusion
+In this paper, we propose a pre-training method for cross- lingual natural language generation (NLG) that can trans- fer monolingual NLG supervision signals to all pre-trained languages. With the pre-trained model, we achieve zero- shot cross-lingual NLG on several languages by only fine- tuning once. Experimental results show that our model out- performs the machine-translation-based pipeline model on several cross-lingual NLG tasks.  For future work, we would like to improve our pre-training method towards the fully unsupervised setting.
+Acknowledgements
+Prof. Heyan Huang is the corresponding author. The work is supported by NKRD (No. 2018YFB1005100), NSFC (No. 61772076 and 61751201), NSFB (No. Z181100008918002), Major Project of Zhijiang Lab (No. 2019DH0ZX01), and Open fund of BDAlGGCNEL and CETC Big Data Research Institute Co., Ltd (No.  w- 2018018).
+References
+[Artetxe and Schwenk 2018] Artetxe, M., and Schwenk, H. 2018. Massively multilingual sentence embeddings for
+zero-shot cross-lingual transfer and beyond. arXiv preprint arXiv:1812.10464 .
+[Chang, Galley, and Manning 2008] Chang, P.-C.;Galley, M.; and Manning, C. D. 2008. Optimizing chinese word segmentation for machine translation performance. In WMT , 224–232.
+[Conneau et al. 2017] Conneau, A.; Lample,G.; Ranzato, M.; Denoyer, L.; and J´egou, H. 2017. Word translation without parallel data. arXiv preprint arXiv:1710.04087 .
+[Conneau et al. 2018] Conneau, A.; Rinott,R.; Lample, G.; Williams, A.; Bowman, S.; Schwenk, H.; and Stoyanov, V. 2018. Xnli: Evaluating cross-lingual sentence representa- tions. In EMNLP , 2475–2485.
+[Devlin et al. 2019] Devlin, J.; Chang, M.-W.; Lee, K.; and Toutanova, K. 2019. BERT: Pre-training of deep bidirec- tional transformers for language understanding. In NAACL , 4171–4186.
+[Dong et al. 2019] Dong, L.; Yang, N.; Wang,W.; Wei, F.; Liu, X.; Wang, Y.; Gao, J.; Zhou, M.; and Hon, H.-W. 2019. Unified language model pre-training for natural language understanding and generation. arXiv preprint arXiv:1905.03197 .
+[Du and Cardie 2018] Du, X., and Cardie, C.2018. Harvest- ing paragraph-level question-answer pairs from wikipedia. In ACL , 1907–1917.
+[Duan et al. 2019] Duan, X.; Yin, M.;Yin, M.; Zhang, M.; Chen, B.; and Luo, W. 2019. Zero-shot cross-lingual abstractive sen- tence summarization through teaching generation and atten- tion. In ACL , 3162–3172.
+[Gu et al. 2019] Gu, J.; Wang, Y.; Cho,K.; and Li, V. O. 2019. Improved zero-shot neural machine transla- tion via ignoring spurious correlations. arXiv preprint arXiv:1906.01181 .
+[Hendrycks and Gimpel 2016] Hendrycks, D.,D., and Gimpel, K. 2016. Gaussian error linear units (GELUs). arXiv preprint arXiv:1606.08415 .
+[Johnson et al. 2017] Johnson, M.; Schuster, M.;Schuster, M.; Le, Q. V.; Krikun, M.; Wu, Y.; Chen, Z.; Thorat, N.; Vi´egas, F.; Wat- tenberg, M.; Corrado, G.; et al. 2017. Googles multilingual neural machine translation system: Enabling zero-shot trans- lation. TACL 5:339–351.
+[Joshi et al. 2019] Joshi, M.; Chen, D.;Chen, D.; Liu, Y.; Weld, D. S.; Zettlemoyer, L.; and Levy, O. 2019. Spanbert: Improv- ing pre-training by representing and predicting spans. arXiv preprint arXiv:1907.10529 .
+[Junnan et al. 2019] Junnan, Z.; Qian,W.; Yining, W.; Yu, Z.; Jiajun, Z.; Shaonan, W.; and Chengqing, Z. 2019. Ncls: Neural cross-lingual summarization. arXiv preprint arXiv:1909.00156 .
+[Kumar et al. 2019] Kumar, V.; Joshi, N.;Joshi, N.; Mukherjee, A.; Ramakrishnan, G.; and Jyothi, P. 2019. Cross-lingual training for automatic question generation. arXiv preprint arXiv:1906.02525 .
+[Lample and Conneau 2019] Lample, G., and Conneau,A. 2019. Cross-lingual language model pretraining. arXiv preprint arXiv:1901.07291 .
+[Li et al. 2016] Li, P.; Li, W.; He,Z.; Wang, X.; Cao, Y.; Zhou, J.; and Xu, W. 2016. Dataset and neural recurrent sequence labeling model for open-domain factoid question answering. arXiv preprint arXiv:1607.06275 .
+[Liang et al. 2019] Liang, W.; Wei, Z.;Wei, Z.; Ruoyu, J.; Sujian, L.; and Jingming, L. 2019. Denoising based sequence-to- sequence pre-training for text generation. arXiv preprint arXiv:1908.08206 .
+[McCann et al. 2017] McCann, B.; Bradbury,J.; Xiong, C.; and Socher, R. 2017. Learned in translation: Contextualized word vectors. In NIPS , 6294–6305.
+[Mikolov, Le,and Sutskever 2013] Mikolov, T.; Le, Q. V.; and Sutskever, I. 2013. Exploiting similarities among languages for machine translation. arXiv preprint arXiv:1309.4168 .
+[Peters et al. 2018] Peters, M.; Neumann, M.;Neumann, M.; Iyyer, M.; Gardner, M.; Clark, C.; Lee, K.; and Zettlemoyer, L. 2018. Deep contextualized word representations. In NAACL , 2227–2237.
+[Radford et al. 2018] Radford, A.;Narasimhan, K.; Sali- mans, T.; and Sutskever, I. 2018. Improving language un- derstanding by generative pre-training.
+[Rajpurkar et al. 2016] Rajpurkar, P.; Zhang,J.; Lopyrev, K.; and Liang, P. 2016. SQuAD: 100,000+ questions for ma- chine comprehension of text. In EMNLP , 2383–2392.
+[Sennrich, Haddow, and Birch 2015] Sennrich,R.; Haddow, B.; and Birch, A. 2015. Neural machine transla- tion of rare words with subword units. arXiv preprint arXiv:1508.07909 .
+[Shen et al. 2018] Shen, S.; Chen, Y.;Chen, Y.; Yang, C.; Liu, Z.; and Sun, M. 2018. Zero-shot cross-lingual neural headline gen- eration. TASLP 26(12):2319–2327.
+[Song et al. 2019] Song, K.; Tan, X.; Qin,T.; Lu, J.; and Liu, T.-Y. 2019. Mass: Masked sequence to se- quence pre-training for language generation. arXiv preprint arXiv:1905.02450 .
+[Vaswani et al. 2017] Vaswani, A.;Shazeer, N.; Parmar, N.; Uszkoreit, J.; Jones, L.; Gomez, A. N.; Kaiser, Ł.; and Polo- sukhin, I. 2017. Attention is all you need. In NIPS , 5998– 6008. Curran Associates, Inc.
+[Vincent et al. 2008] Vincent, P.; Larochelle,H.; Bengio, Y.; and Manzagol, P.-A. 2008. Extracting and composing robust features with denoising autoencoders. In ICML , 1096–1103. ACM.
+[Wan, Li, and Xiao 2010] Wan, X.; Li, H.;Li, H.; and Xiao, J. 2010. Cross-language document summarization based on machine translation quality prediction. In ACL .
+[Wu and Dredze 2019] Wu, S., and Dredze,M. 2019. Beto, bentz, becas: The surprising cross-lingual effectiveness of bert. arXiv preprint arXiv:1904.09077 .
+[Xing et al. 2015] Xing, C.; Wang, D.;Wang, D.; Liu, C.; and Lin, Y. 2015. Normalized word embedding and orthogonal trans- form for bilingual word translation. In NAACL , 1006–1011.
+[Yang et al. 2019] Yang, Z.; Dai, Z.; Yang,Z.; Dai, Z.; Yang, Y.; Carbonell, J.; Salakhutdinov, R.; and Le, Q. V. 2019. XLNet: General-
+ized autoregressive pretraining for language understanding. arXiv preprint arXiv:1906.08237 .
+[Zhao et al. 2018] Zhao, Y.; Ni, X.;Ni, X.; Ding, Y.; and Ke, Q. 2018. Paragraph-level neural question generation with max- out pointer and gated self-attention networks. In EMNLP , 3901–3910.[Ziemski, Junczys-Dowmunt, and Pouliquen 2016]
+Ziemski, M.; Junczys-Dowmunt, M.;Junczys-Dowmunt, M.; and Pouliquen, B. 2016. The united nations parallel corpus v1. 0. In LREC , 3530–3534.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_Zgwd69u7oTPOrDPUBfHHQy3I)
+ Call ID: call_Zgwd69u7oTPOrDPUBfHHQy3I
+  Args:
+    pattern: pipeline model|baselines|baseline model
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | 5 Conclusion
+In this paper, we propose a pre-training method for cross- lingual natural language generation (NLG) that can trans- fer monolingual NLG supervision signals to all pre-trained languages. With the pre-trained model, we achieve zero- shot cross-lingual NLG on several languages by only fine- tuning once. Experimental results show that our model out- performs the machine-translation-based pipeline model on several cross-lingual NLG tasks.  For future work, we would like to improve our pre-training method towards the fully unsupervised setting.
+Acknowledgements
+Prof. Heyan Huang is the corresponding author. The work is supported by NKRD (No. 2018YFB1005100), NSFC (No. 61772076 and 61751201), NSFB (No. Z181100008918002), Major Project of Zhijiang Lab (No. 2019DH0ZX01), and Open fund of BDAlGGCNEL and CETC Big Data Research Institute Co., Ltd (No.  w- 2018018).
+References
+[Artetxe and Schwenk 2018] Artetxe, M., and Schwenk, H. 2018. Massively multilingual sentence embeddings for
+zero-shot cross-lingual transfer and beyond. arXiv preprint arXiv:1812.10464 .
+[Chang, Galley, and Manning 2008] Chang, P.-C.;Galley, M.; and Manning, C. D. 2008. Optimizing chinese word segmentation for machine translation performance. In WMT , 224–232.
+[Conneau et al. 2017] Conneau, A.; Lample,G.; Ranzato, M.; Denoyer, L.; and J´egou, H. 2017. Word translation without parallel data. arXiv preprint arXiv:1710.04087 .
+[Conneau et al. 2018] Conneau, A.; Rinott,R.; Lample, G.; Williams, A.; Bowman, S.; Schwenk, H.; and Stoyanov, V. 2018. Xnli: Evaluating cross-lingual sentence representa- tions. In EMNLP , 2475–2485.
+[Devlin et al. 2019] Devlin, J.; Chang, M.-W.; Lee, K.; and Toutanova, K. 2019. BERT: Pre-training of deep bidirec- tional transformers for language understanding. In NAACL , 4171–4186.
+[Dong et al. 2019] Dong, L.; Yang, N.; Wang,W.; Wei, F.; Liu, X.; Wang, Y.; Gao, J.; Zhou, M.; and Hon, H.-W. 2019. Unified language model pre-training for natural language understanding and generation. arXiv preprint arXiv:1905.03197 .
+[Du and Cardie 2018] Du, X., and Cardie, C.2018. Harvest- ing paragraph-level question-answer pairs from wikipedia. In ACL , 1907–1917.
+[Duan et al. 2019] Duan, X.; Yin, M.;Yin, M.; Zhang, M.; Chen, B.; and Luo, W. 2019. Zero-shot cross-lingual abstractive sen- tence summarization through teaching generation and atten- tion. In ACL , 3162–3172.
+[Gu et al. 2019] Gu, J.; Wang, Y.; Cho,K.; and Li, V. O. 2019. Improved zero-shot neural machine transla- tion via ignoring spurious correlations. arXiv preprint arXiv:1906.01181 .
+[Hendrycks and Gimpel 2016] Hendrycks, D.,D., and Gimpel, K. 2016. Gaussian error linear units (GELUs). arXiv preprint arXiv:1606.08415 .
+[Johnson et al. 2017] Johnson, M.; Schuster, M.;Schuster, M.; Le, Q. V.; Krikun, M.; Wu, Y.; Chen, Z.; Thorat, N.; Vi´egas, F.; Wat- tenberg, M.; Corrado, G.; et al. 2017. Googles multilingual neural machine translation system: Enabling zero-shot trans- lation. TACL 5:339–351.
+[Joshi et al. 2019] Joshi, M.; Chen, D.;Chen, D.; Liu, Y.; Weld, D. S.; Zettlemoyer, L.; and Levy, O. 2019. Spanbert: Improv- ing pre-training by representing and predicting spans. arXiv preprint arXiv:1907.10529 .
+[Junnan et al. 2019] Junnan, Z.; Qian,W.; Yining, W.; Yu, Z.; Jiajun, Z.; Shaonan, W.; and Chengqing, Z. 2019. Ncls: Neural cross-lingual summarization. arXiv preprint arXiv:1909.00156 .
+[Kumar et al. 2019] Kumar, V.; Joshi, N.;Joshi, N.; Mukherjee, A.; Ramakrishnan, G.; and Jyothi, P. 2019. Cross-lingual training for automatic question generation. arXiv preprint arXiv:1906.02525 .
+[Lample and Conneau 2019] Lample, G., and Conneau,A. 2019. Cross-lingual language model pretraining. arXiv preprint arXiv:1901.07291 .
+[Li et al. 2016] Li, P.; Li, W.; He,Z.; Wang, X.; Cao, Y.; Zhou, J.; and Xu, W. 2016. Dataset and neural recurrent sequence labeling model for open-domain factoid question answering. arXiv preprint arXiv:1607.06275 .
+[Liang et al. 2019] Liang, W.; Wei, Z.;Wei, Z.; Ruoyu, J.; Sujian, L.; and Jingming, L. 2019. Denoising based sequence-to- sequence pre-training for text generation. arXiv preprint arXiv:1908.08206 .
+[McCann et al. 2017] McCann, B.; Bradbury,J.; Xiong, C.; and Socher, R. 2017. Learned in translation: Contextualized word vectors. In NIPS , 6294–6305.
+[Mikolov, Le,and Sutskever 2013] Mikolov, T.; Le, Q. V.; and Sutskever, I. 2013. Exploiting similarities among languages for machine translation. arXiv preprint arXiv:1309.4168 .
+[Peters et al. 2018] Peters, M.; Neumann, M.;Neumann, M.; Iyyer, M.; Gardner, M.; Clark, C.; Lee, K.; and Zettlemoyer, L. 2018. Deep contextualized word representations. In NAACL , 2227–2237.
+[Radford et al. 2018] Radford, A.;Narasimhan, K.; Sali- mans, T.; and Sutskever, I. 2018. Improving language un- derstanding by generative pre-training.
+[Rajpurkar et al. 2016] Rajpurkar, P.; Zhang,J.; Lopyrev, K.; and Liang, P. 2016. SQuAD: 100,000+ questions for ma- chine comprehension of text. In EMNLP , 2383–2392.
+[Sennrich, Haddow, and Birch 2015] Sennrich,R.; Haddow, B.; and Birch, A. 2015. Neural machine transla- tion of rare words with subword units. arXiv preprint arXiv:1508.07909 .
+[Shen et al. 2018] Shen, S.; Chen, Y.;Chen, Y.; Yang, C.; Liu, Z.; and Sun, M. 2018. Zero-shot cross-lingual neural headline gen- eration. TASLP 26(12):2319–2327.
+[Song et al. 2019] Song, K.; Tan, X.; Qin,T.; Lu, J.; and Liu, T.-Y. 2019. Mass: Masked sequence to se- quence pre-training for language generation. arXiv preprint arXiv:1905.02450 .
+[Vaswani et al. 2017] Vaswani, A.;Shazeer, N.; Parmar, N.; Uszkoreit, J.; Jones, L.; Gomez, A. N.; Kaiser, Ł.; and Polo- sukhin, I. 2017. Attention is all you need. In NIPS , 5998– 6008. Curran Associates, Inc.
+[Vincent et al. 2008] Vincent, P.; Larochelle,H.; Bengio, Y.; and Manzagol, P.-A. 2008. Extracting and composing robust features with denoising autoencoders. In ICML , 1096–1103. ACM.
+[Wan, Li, and Xiao 2010] Wan, X.; Li, H.;Li, H.; and Xiao, J. 2010. Cross-language document summarization based on machine translation quality prediction. In ACL .
+[Wu and Dredze 2019] Wu, S., and Dredze,M. 2019. Beto, bentz, becas: The surprising cross-lingual effectiveness of bert. arXiv preprint arXiv:1904.09077 .
+[Xing et al. 2015] Xing, C.; Wang, D.;Wang, D.; Liu, C.; and Lin, Y. 2015. Normalized word embedding and orthogonal trans- form for bilingual word translation. In NAACL , 1006–1011.
+[Yang et al. 2019] Yang, Z.; Dai, Z.; Yang,Z.; Dai, Z.; Yang, Y.; Carbonell, J.; Salakhutdinov, R.; and Le, Q. V. 2019. XLNet: General-
+ized autoregressive pretraining for language understanding. arXiv preprint arXiv:1906.08237 .
+[Zhao et al. 2018] Zhao, Y.; Ni, X.;Ni, X.; Ding, Y.; and Ke, Q. 2018. Paragraph-level neural question generation with max- out pointer and gated self-attention networks. In EMNLP , 3901–3910.[Ziemski, Junczys-Dowmunt, and Pouliquen 2016]
+Ziemski, M.; Junczys-Dowmunt, M.;Junczys-Dowmunt, M.; and Pouliquen, B. 2016. The united nations parallel corpus v1. 0. In LREC , 3530–3534.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_iOvmqrzv0zGEu2EdQEgywrE5)
+ Call ID: call_iOvmqrzv0zGEu2EdQEgywrE5
+  Args:
+    section_id: 1.1.1.1.1.1.1.1.1.1.1.1
+
+================================= Tool Message =================================
+Name: read_section
+
+4.2 Question Generation
+We evaluate our model on zero-shot cross-lingual answer- aware question generation (QG). The goal is to generate a
+1 https://github.com/moses-smt/mosesdecoder
+Models Rel Flu Corr X LM 1.00 1.20 0.40 P IPELINE (X LM ) 0.85 0.98 0.28 X NLG 1.24 * 1.47 * 0.76 *
+ Table 5: Human evaluation results of zero-shot Chinese- English question generation. “*”: the improvements are sig- nificant at p < 0 . 05 . Same shorthands apply as in Table 3.Data Models RG-1 RG-2 RG-L En-AS X LM 48.15 26.35 45.04 X NLG 48.76 26.82 45.57 Fr-AS X LM 56.27 39. 20 52.84 X NLG 57.84 40.81 54.24 Zh-AS X LM 55.30 42.57 52.95 X NLG 57.65 44.93 54.95
+Table 6: Evaluation results of supervised monolingual sum- marization. Same shorthands apply as in Table 1.question that asks towards the answer with the given pas- sage and the expected answer.  In the following experiments, we extend the QG task to the cross-lingual setting. By only using English QG training data, our goal is to generate ques- tions in English or Chinese with the given passage-answer pair in English or Chinese.We use SQuAD 1.1 (Rajpurkar et al. 2016) as the En- glish QG dataset.  It is a popular English question answering dataset containing over 100,000 questions and their corre- sponding annotated passages. Following (Zhao et al. 2018), we regard the original development set as the test set, and sample 5000 examples from the training data of two datasets as the development sets. For Chinese QG, we follow the de- fault data splits of WebQA (Li et al. 2016).  We regard the provided annotated evidence sentences as the input passages instead of entire documents. To construct the input sequence, we view the whole input passage as a single sentence, and concatenate the passage and the answer into one sequence with a special token [S] between them. During decoding Chinese, we utilize a subset of vocabulary, which is obtained from the passage sentences of the WebQA dataset.English-English Question Generation We first conduct experiments on the supervised English-English QG setting.  We compare our model to the following baselines:
+• C OREF N QG (Du and Cardie 2018) An attentional sequence-to-sequence model with a feature-rich encoder.• M P -G SN (Zhao et al.2018) A sequence-to-sequence model with self-attention and maxout pointer mechanism.
+• X LM (Lample and Conneau 2019) State-of-the-art cross-lingual pre-trained Transformer.We initialize the sequence-to-sequence model with pre-trained XLM.We evaluate models with BLEU-4 (BL-4), ROUGE (RG) and METEOR (MTR) metrics. As shown in Table 1, X NLG
+Models RG-1 RG-2 RG-L X LM 14.53 1.80 13.43 P IPELINE (X LM ) 30.58 12.01 27. 44 w/ Google Translator 38.48 18.86 34.98 X NLG 39.98 20.31 36.31
+Table 7: Evaluation results of zero-shot French abstractive summarization. Same shorthands apply as in Table 1.Models RG-1 RG-2 RG-L X LM 0.71 0.28 0.70 P IPELINE (X LM ) 26.39 13. 11 23.98 w/ Google Translator 36.96 22.03 33.99 X NLG 41.66 28.70 38.91
+Table 8: Evaluation results of zero-shot Chinese abstractive summarization. Same shorthands apply as in Table 1.outperforms the baselines, which demonstrates that our pre- trained model provides a good initialization for NLG. Chinese-Chinese Question Generation We conduct ex- periments on zero-shot Chinese-Chinese QG to evaluate the cross-lingual transfer ability. In this task, models are trained with English QG data but evaluated with Chinese QG exam- ples. We include the following models as our baselines:
+• X LM Fine-tuning XLM with the English QG data.• P IPELINE (X LM ) The pipeline of translating input Chi- nese sentences into English first,then performing En-En- QG with the XLM model, and finally translating back to the Chinese. We use the Transformer as the translator, which is also trained on the MultiUN dataset.
+• P IPELINE (X LM ) with Google Translator Utilizing Google Translator in P IPELINE (X LM ) for translation.We evaluate models by both automatic evaluation metrics and human experts. The automatic metrics scores are com- puted by regarding each Chinese character as a token. For human evaluation, we consider three metrics: relatedness, fluency, and correctness, which are represented as integers ranged from 1 to 3. We randomly select 100 passage-answer pairs from the English QG test set, and use the models to generate questions. Then we present these examples to three experts to ask for the above scores.  In Table 2 and Table 3, we present the results for the zero-shot Zh-Zh-QG. The re- sults of monolingual supervised models are also reported in Table 1 as reference. In the automatic evaluation, our model consistently performs better than baselines in both zero-shot and monolingual supervised setting. In the human evalu- ation, our model also obtains significant improvements in terms of relatedness and correctness. English-Chinese Question Generation In the zero- shot English-Chinese question generation experiments, we use X LM and P IPELINE (X LM ) as our baselines. P IPELINE (X LM ) is a pipeline method that uses En-En-QG
+Models BL-4 MTR RG-L X LM 0.25 0.62 2.56 X NLG 16.37 18.74 34.93 − XAE 13. 71 15.88 31.43 − DAE 0.38 1.79 3.79
+Table 9: Ablations for pre-training objectives, where models are evaluated on zero-shot Chinese-Chinese question gener- ation. Same shorthands apply as in Table 1.with X LM to generate questions, and then translates the re- sults to Chinese.  Because there are no annotations for En- Zh-QG, we perform human evaluation studies for this set- ting. Table 4 shows the human evaluation results, where our model surpasses all the baselines especially in terms of re- latedness and correctness.Chinese-English Question Generation We also conduct experiments for zero-shot Chinese-English question genera- tion, and adopt the same evaluation procedure to En-Zh-QG.  P IPELINE (X LM ) first translates Chinese input to English, and then conduct En-En-QG with X LM . As shown in Ta- ble 5, human evaluation results indicate that X NLG achieves significant improvements on the three metrics.
+4.3 Abstractive Summarization
+We conduct experiments on cross-lingual abstractive sum- marization (AS). AS is the task of converting the input sentences into summaries while preserving the key mean- ings. For evaluation, we use English/French/Chinese Gi- gaword 2 to extract the first sentence and the headline of each article, and regard them as input document and pre- dicted summaries, respectively.  For each language, we sam- ple 500k/5k/5k examples for training/validation/test.Zero-Shot Summarization In the zero-shot setting, we only use English data for training, and directly evaluate the model on other languages. In Table 7 and Table 8, we present the results for French/Chinese AS, which are evaluated by the ROUGE-1, ROUGE-2 and ROUGE-L metrics.  We also report the results of supervised AS in Table 6 for reference. We find that X NLG outperforms all the baseline models on both French and Chinese AS. Comparing with French, there is a larger gap between baselines and our model on zero-shot Chinese AS, which indicates that the error propagation issue is more serious on distant language pairs.
+4.4 Ablation Studies
+Effects of Pre-Training We conduct ablation studies for pre-training objectives, and the results can be seen in Ta- ble 9. We observe that our model greatly benefits from the DAE objective for the zero-shot Chinese question genera- tion task. The results also demonstrate that combining DAE and XAE can alleviate the spurious correlation issue and im- proves cross-lingual NLG. Supervised En-En-QG Zero-Shot Zh-Zh-QG BL-4 MTR RG-L BL-4 MTR RG-L All 19.99 24.05 48.74 6.82 14.84 21.77 Dec 16.37 20.91 44.51 0.21 1.25 2.05 Enc 19.62 23.66 48.78 15.72 18. 89 34.82 ET 19.69 23.73 48.53 16.37 18.74 34.93
+Table 10: Effects of different fine-tuning strategies. Dec, Enc and ET represent fine-tuning the parameters of the decoder, the encoder, and the Transformer layers of the encoder, re- spectively. Same shorthands apply as in Table 1. Figure 3: ROUGE-2 scores for few-shot French/Chinese ab- stractive summarization with different training data sizes.Effects of Fine-Tuning Strategies As shown in Table 10, we use the En-En-QG and Zh-Zh-QG tasks to analyze the effects of using different fine-tuning strategies.  It can be ob- served that fine-tuning encoder parameters, our model ob- tain an impressive performance for both English and Chi- nese QG, which shows the strong cross-lingual transfer abil- ity of our model. When fine-tuning all the parameters, the model achieves the best score for English QG, but it suf- fers a performance drop when evaluating on Chinese QG.  We find that fine-tuning decoder hurts cross-lingual decod- ing, and the model learns to only decode English words. For only fine-tuning decoder, the performance degrades by a large margin for both languages because of the underfitting issue, which indicates the necessity of fine-tuning encoder.Effects of Cross-Lingual Transfer We examine whether low-resource NLG can benefit from cross-lingual transfer. We consider English as the rich-resource language, and con-
+ 2 LDC2011T07, LDC2011T10, LDC2011T13
+Figure 4: Examples of generated questions by X NLG and the baselines in four directions (En-En,En-Zh,Zh-En and Zh-Zh). “*”: Because X LM is not designed for cross-lingual NLG, it is hard to produce meaningful sentences for En-Zh-QG and Zh-Zh-QG. duct experiments for few-shot French/Chinese AS. Specifi- cally, we first fine-tune X NLG on the English AS data, and then fine-tune it on the French or Chinese AS data. We com- pare with the monolingual supervised model that X NLG is only fine-tuned on the dataset of the target language. As shown in Figure 3, we can observe that the cross-lingual supervision improves performance for few-shot abstractive summarization.  As the training data size becomes larger, the performances of the...(truncated)
+
+================================== Ai Message ==================================
+
+Their main baseline is a machine-translation-based pipeline model, P IPELINE (X LM ): it translates the input into English, performs English question generation or summarization with XLM, and then translates the output back to the target language. They also use XLM itself as a baseline, and in some settings compare against a version of the pipeline with Google Translator.

@@ -1,0 +1,79 @@
+================================ Human Message =================================
+
+QUERY:
+How does sentence construction component works?
+
+TABLE OF CONTENTS (TOC):
+1 | Natural Language Generation for Non-Expert Users
+1.1 | 1 Introduction
+1.2 | 2 Background: Grammatical Framework
+1.3 | 3 Method
+1.3.1 | 3.1 Sentence Structure Recognition
+1.3.1.1 | Listing 3: Program Π1
+1.3.2 | 3.2 Sentence Components Recognition
+1.3.3 | 3.3 GF Grammar Encoder
+1.3.4 | 3.4 GF Grammar Exporter
+1.4 | 4 Experiments
+1.4.1 | 4.1 NLG for Annotated Ontologies
+1.4.2 | 4.2 Intermediate Representation for Wiki Pages
+1.5 | 5 Related Works
+1.6 | 6 Conclusions and Future Work
+1.7 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_YRzNNJsBBXlWZL2gXirbLq7n)
+ Call ID: call_YRzNNJsBBXlWZL2gXirbLq7n
+  Args:
+    pattern: sentence construction|construct.*sentence|Sentence Construction|construction component
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.2 | 2 Background: Grammatical Framework
+The Grammatical Framework (GF) [19] is a system used for working with grammars. The GF Resource Grammar Library (RGL) 4 covering syntax of various languages is the standard library for GF. A GF program has two main parts. The first part is the Abstract syntax which defines what meanings can be expressed by a grammar. The abstract syntax defines categories (i.e., types of meaning) and functions (i.e., meaning-building components).  An example of an abstract syntax:
+Listing 1: Abstract syntax abstract People = { flags startcat = Message ; cat Message ; People ; Action ; Entity ; fun simple_sent : People -> Action -> Entity -> Message ; Bill : People; Play : Action; Soccer : Entity ; }
+Here, Message , People , Action and Entity are types of meanings. startcat flag states that Message is the default start category for parsing and generation.  simple_sent is a function accepting 3 parameters, of type People , Action , Entity . This function returns a meaning of Message category. Intuitively, each function in the abstract syntax represents a rule in a grammar. The combination of rules used to construct a meaning type can be seen as a syntax tree.The second part is composed of one or more concrete syntax specifications. Each concrete syntax defines the representation of meanings in each output language.  For example, to demostrate the idea that one meaning can be represented by different concrete syntaxes, we create two concrete syntaxes for two different languages: English and Italian. To translate a sentence to different languages, we only need to provide the strings representing each word in corresponding languages. The GF libraries will take
+4 https://www.grammaticalframework.org/lib/doc/synopsis/index.html
+282
+Natural Language Generation for Non-Expert Users
+ responsibility to concatenate the provided strings according to the language grammar to create a complete sentence, which is the representations of the meaning, in the targeted language. The corresponding concrete syntaxes that map functions in the abstract grammar above to strings in English and in Italian is:
+Listing 2: Concrete English and Italian syntaxes
+ concrete PeopleEng of People = open SyntaxEng, ParadigmsEng, ConstructorsEng in { lincat Message = Cl ; People = NP ; Action = V2 ; Entity = NP ; lin simple_sent People Action Entity = mkCl People (mkVP Action Entity) ; Bill = mkNP Bill_N; Play = play_V2; Soccer = mkNP soccer_N; oper Bill_N = mkN "Bill" "Bill"; play_V2 = mkV2 "play"; soccer_N = mkN "soccer"; } concrete PeopleIta of People = open SyntaxIta, ParadigmsIta, ConstructorsIta in { lincat Message = Cl ; People = NP ; Action = V2 ; Entity = NP ; lin simple_sent People Action Entity = mkCl People (mkVP Action Entity) ; Bill = mkNP Bill_N; Play = play_V2; Soccer = mkNP soccer_N ; oper Bill_N = mkN "Bill"; play_V2 = mkV2 "giocare"; soccer_N = mkN "calcio" ; }
+ In these concrete syntaxes, the linearization type definition ( lincat ) states that Message , People , Action and Entity are type Cl (clause), NP (noun phrase), V2 (two-place verb), and NP respectively. Linearization definitions ( lin ) indicate what strings are assigned to each of the meanings defined in the abstract syntax. To reduce same string declaration, the operator ( oper ) section defines some placeholders for strings that can be used in linearization.  The mkNP , mkN , mkV2 , etc. are standard constructors from ConstructorsEng/Jpn library which returns an object of the type NP , N or V2 respectively.GF has been used in a variety of applications, such as query-answering systems, voice communi- cation, language learning, text analysis and translation, natural language generation [20, 2], automatic translation 5 . The translation from English to Italian can be performed as follows in the GF API:
+parse -lang=PeopleEng "Bill plays soccer" | linearize -lang=PeopleIta Bill gioca calcio
+The above command line produces a syntax tree of the sentence “Bill plays soccer” then turn that tree into a PeopleIta sentence (in Italian) which is displayed in the second line. Figure 1 shows the meaning in the abstract syntax is represented in Japanese and in Italian, i. e. the two strings represent the same meaning.5 The MOLTO project: http://www.molto-project.eu
+V.D. Nguyen, T. C. Son & E. Pontelli
+283
+Figure 1: Google translation for the Japanese sentence generated by GF. The two sentences in English and in Italian are the two representations of the meaning encoded in the abstract syntax.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_w4Q48lf3YW1Nk2pS2QHv0l2w)
+ Call ID: call_w4Q48lf3YW1Nk2pS2QHv0l2w
+  Args:
+    section_id: 1.3.3
+
+================================= Tool Message =================================
+Name: read_section
+
+3.3 GF Grammar Encoder
+The goal of the encoder is to identify appropriate GF rules for the construction of a GF grammar of a sentence given its structure and its components identified in the previous two modules. This is necessary since a sentence can be encoded in GF by more than one set of rules; for example, the sentence “Bill wants to play a game” can be encoded by the rules
+ Bill → NP, want → VV, play → V2, game → NP and one of the sets of GF rules in the table below:
+V2 → NP → VP V2 → NP → VP NP → VV → VP → Cl VV → VP → VP NP → VP → Cl
+In GF, NP, VV, V2, VP, and Cl stand for noun phrase , verb-phrase-complement verb , two-place verb , verb phrase and clause , respectively.  Note that although the set of GF grammatical rules can be used to construct a constituency-based parse tree 12 , the reverse direction is not always true. To the best of our knowledge, there exists no algorithm for converting a constituency-based parse tree to a set GF grammar rules. We therefore need to identify the GF rules for each sentence structure.In our system, a GF rule is assigned to a structure initially (Table 2).  Each rule in Table 2 represents the first level of the constituency-based parse tree. It acts as the coordinator for all other succeeding rules.Given the seed components identified in Section 3.2 and the above GF rules, a GF grammar for each sentence can be constructed. However, this grammar can only be used to generate fairly simple sentences. For example, for the sentence “Bill plays a popular board game with his close friends. ”, a GF grammar for structure #2 can be constructed, which can only generate the sentence “Bill plays game.”
+12 Constituency parsing aims to extract a constituency-based parse tree from a sentence that represents its syntactic structure http://nlpprogress.com/english/constituency parsing.html
+V.D. Nguyen, T. C. Son & E. Pontelli
+287
+ For noun components N → N → CN CN: common noun N → NP NP: noun phrase AP → CN → CN AP: adjectival phrase CN → NP NP → Adv → NP Adv: verb-phrase-modifying adverb NP → NP → ListNP NP → ListNP → ListNP Conj → ListNP → NP Conj: conjunction For verb components VP → Adv → VP For adjective components A → AP A: adjective AdA → AP → AP AdA: adjective-modifying adverb
+ Table 3: Extended GF Rules
+because it does not contain any complement components identified in Section 3.2. Therefore, we assgin a set of GF rules for the construction of each parameter in the GF rules in Table 2. The set of GF rules has to follow two conventions. The first one is after applying the set of rules to some components of the sentence, the type of the production is one of the type in Table 2, e.g.  NP , V P , Cl , V 2, . The second convention is that the GF encoder will select the rules as the order from top to bottom in Table 3. Note that the encoder always has information of what type of input and output for the rule it is looking for.For instance, we have “game” is the object (main components), and we know that we have to con- struct “game” in the result GF grammar to be a NP (noun phrase).  Program Π 2 identifies that there are two complement components for the word “game”, which are “board” and “popular”, a noun and an adjective respectively. The GF encoder then select the set of rules: N → N → CN and A → AP to create the common noun “board game” and the adjective phrase first. The next rule is AP → CN → CN. The last rule to be applied is CN → NP.  The selection is easily decided since the input and the output of the rules are pre-determined, and there is no ambiguity in the selection process.The encoder uses the GF rules and the components identified by the previous subsections to produce different constructors for different components of a sentence. A part of the output of the GF encoder for the object “game” is
+Game = mkNP (mkNP popular_board_game_CN ) (ConstructorsEng. mkAdv with_Prep (mkNP close_friend_CN )) ;
+The encoder will also create the operators that will be included in the oper section of the GF grammar for supporting the new constructor. For example, the following operators will be generated for serving the Game constructor above:
+ popular_A = mkA "popular" ; popular_AP = mkAP popular_A ; popular_board_game_CN = mkCN popular_AP board_game_N ; board_game_N = mkN "board game" "board games" ; close_A = mkA "close" ; close_AP = mkAP close_A ; close_friend_CN = mkCN close_AP friend_N ; friend_N = mkN "friend" "friends" ;
+288
+Natural Language Generation for Non-Expert Users
+
+================================== Ai Message ==================================
+
+The sentence construction component is the GF Grammar Encoder, which identifies appropriate GF rules to build a GF grammar for a sentence from its recognized structure and components. It assigns an initial GF rule to each sentence structure, then constructs each parameter by selecting extended GF rules in top-to-bottom order under the constraints that the resulting type matches the required type and that the input/output types are predetermined, making rule selection unambiguous. It then uses these rules and components to generate GF constructors for sentence parts and corresponding operators for the grammar.

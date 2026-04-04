@@ -1,0 +1,35 @@
+================================ Human Message =================================
+
+HYPOTHESIS:
+Notice on compelled disclosure: Receiving Party shall notify Disclosing Party in case Receiving Party is required by law, regulation or judicial process to disclose any Confidential Information.
+
+TABLE OF CONTENTS (TOC):
+1 | Non-Disclosure Agreement
+2 | Parties: [NAME OF INDIVIDUAL RECEIVING INFORMATION] of [address of individual] and FRODSHAM TOWN COUNCIL whose registered office is at CASTLE PARK HOUSE, CASTLE PARK, FRODSHAM, WA6 6SB (the Discloser)
+2.1 | 1.   The Discloser intends to disclose information (the Confidential Information) t...
+2.2 | 2.   The Recipient undertakes not to use the Confidential Information for any purpo...
+2.3 | 3.   The Recipient undertakes to keep the Confidential Information secure and not t...
+2.4 | 4.   The undertakings in clauses 2 and 3 above apply to all of the information disc...
+2.4.1 | a)  any information which is or in future comes into the public domain (unless as a result of the breach of this Agreement);
+2.4.2 | b)  any information which is already known to the Recipient and which was not subject to any obligation of confidence before it was disclosed to the Recipient by the Discloser.
+2.5 | 5.   Nothing in this Agreement will prevent the Recipient from making any disclosur...
+2.6 | 6.  The Recipient will, on request from the Discloser,
+2.7 | 7.  Neither this Agreement nor the supply of any information grants the Recipient any licence,
+2.8 | 8.   The undertakings in clauses 2 and 3 will continue in force indefinitely.
+2.9 | 9.  This Agreement is governed by, and is to be construed in accordance with,
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_HOGvq5sPsztfLFQttg9vO8IW)
+ Call ID: call_HOGvq5sPsztfLFQttg9vO8IW
+  Args:
+    section_id: 2.5
+
+================================= Tool Message =================================
+Name: read_section
+
+5.Nothing in this Agreement will prevent the Recipient from making any disclosure of the Confidential Information required by law or by any competent authority.
+
+================================== Ai Message ==================================
+
+NotMentioned

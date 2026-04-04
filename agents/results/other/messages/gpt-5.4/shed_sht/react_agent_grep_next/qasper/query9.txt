@@ -1,0 +1,52 @@
+================================ Human Message =================================
+
+QUERY:
+What languages do they evaluate their methods on?
+
+TABLE OF CONTENTS (TOC):
+1 | Cunchen Tang
+2 | Abstract
+3 | 1 Introduction
+3.1 | Novelty based Features
+3.2 | Pseudo Feedback for Detection/Classiﬁcation
+3.3 | 1.1 Related Work
+4 | 2 Rumour Detection
+4.1 | 2.1 Problem Statement
+4.2 | 2.2 Novelty-based Features
+4.3 | 2.3 Novelty Feature Construction
+4.4 | 2.4 Pseudo Feedback
+4.5 | Training Pseudo Feedback Features
+5 | 3 Experiments
+5.1 | 3.1 Evaluation metrics
+5.2 | 3.2 Data set
+5.3 | 3.3 Rumour detection effectiveness
+5.4 | 3.4 Feature analysis
+5.5 | Novelty based Features
+5.6 | Pseudo Feedbaack
+5.7 | 3.5 Detecting unpopular rumours
+5.8 | 3.6 Efﬁciency and Scalability
+6 | 4 Conclusion
+7 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_0BmCUHfEJV2PJF0xEfPpLgCu)
+ Call ID: call_0BmCUHfEJV2PJF0xEfPpLgCu
+  Args:
+    section_id: 5.2
+
+================================= Tool Message =================================
+Name: read_section
+
+3.2 Data set
+Rumour detection on social media is a novel re- search field without official data sets. Since li- cences agreements forbid redistribution of data, no data sets from previous publications are avail- able. We therefore followed previous researchers like Liu et. al (2015) and Yang et. al (2012) and created our own dataset.trusted resources : We randomly collected 200 news articles about broad topics commonly re- ported by news wires over our target time period.  These range from news about celebrities and dis- asters to financial and political affairs as seen in table 1. Since we operate on Chinese social me- dia, we gathered news articles from Xinhua News
+Agency 2 , the leading news-wire in China. To en- sure a fair evaluation, we collected the news arti- cles before judging rumours, not knowing which rumours we would find later on.  We also only consider news articles published before the times- tamps of the social media messages.For our social media stream, we chose Sina Weibo, a Chinese social media service with more than 200 million active users 3 . Micro-blogs from Sina Weibo are denoted as ’ weibos ’.rumours : Sina Weibo offers an official rumour debunking service, operated by trained human professionals. Following Yang et.  al (2012) and Zhou et. al (2015), we use this service to obtain a high quality set of 202 confirmed rumours.non-rumours : We additionally gathered 202 non- rumours using the public Sina Weibo API 4 . Three human annotators judged these weibos based on unanimous decision making to ensure that they don’t contain rumours.Since we operate in a streaming environment, all weibos are sorted based on their publication time- stamp.  Table 3 shows a list of example for rumours found in our data set.We ordered the rumours and non-rumours chrono- logically and divided them in half, forming a train- ing and test set. We ensured that each of the sets consists of 50% rumours and non-rumours. This is important when effectiveness is measured by ac- curacy. All training and optimization use the train- ings set.  Performance is then reported based on a single run on the test set.2 http://www.xinhuanet.com/
+3 http://www.bbc.co.uk/news/technology-35361157 as of 10.02.2013
+4 http://open.weibo.com/wiki/API
+ 马 航 MH370 最 新 消 息 ， 遭 恐怖 分 子 劫 持 过 程 曝 光 ， 点 击 查 看 MH370 latest news, the process of being hijacked by terrorist has been revealed, click to view details 重 大 新 闻 ， 苹 果 公 司 获 得 三 星 10 亿 美 元 赔 款 ， 整整 30 卡 车 硬 币 开 到 了 苹 果 公 司 的 总 部 ！！！ Breaking news, Apple just got the 1 billion dollars for reparation from Samsung, Samsung drove 30 trucks of coins to the headquarters of Apple.  法 对 叙 IS 第 一 轮 战 术 核 打 击 定 于 16 日 上 午 10 时 进 行 。 France will start the first round nuclear attack against IS at 10:00 a.m. on the 16th
+Table 3: Examples rumours with translation
+ Figure 1: DET plot, revealing superior effective- ness of our approach for instant rumour detection for the full range of thresholds
+
+================================== Ai Message ==================================
+
+Chinese.

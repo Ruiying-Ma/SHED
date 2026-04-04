@@ -1,0 +1,55 @@
+================================ Human Message =================================
+
+QUERY:
+Do single-language BERT outperforms multilingual BERT?
+
+TABLE OF CONTENTS (TOC):
+1 | Does BERT agree? Evaluating knowledge of structure dependence through agreement relations
+1.1 | Geoff Bacon
+1.2 | Terry Regier
+1.3 | Abstract
+1.4 | 1 Introduction
+1.5 | 2 Structure-dependent agreement relations
+1.6 | 3 Data
+1.6.1 | 3.1 Cloze data
+1.6.2 | 3.2 Feature data
+1.7 | 4 Experiment
+1.8 | 5 Results
+1.9 | 6 Related work
+1.10 | 7 Conclusions & future work
+1.11 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_kgabKPCse3s2vFilQV2nqz6O)
+ Call ID: call_kgabKPCse3s2vFilQV2nqz6O
+  Args:
+    pattern: multilingual|single-language|mBERT|BERT
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.10 | 7 Conclusions & future work
+Core linguistic phenomena depend on syntac- tic structure. Yet current state-of-the-art models in language representations, such as BERT, do not have explicit syntactic structural representa-
+tions. Previous work by Goldberg ( 2019 ) showed that BERT captures English subject-verb number agreement well despite this lack of explicit struc- tural representation.  We replicated this result us- ing a different evaluation methodology that ad- dresses shortcomings in the original methodology and expanded the study to 26 languages. Our study further broadened existing work by consid- ering the most cross-linguistically common agree- ment types as well as the most common mor- phosyntactic features.  The main result of this expansion into more languages, types and fea- tures is that BERT, without explicit syntactic struc- ture, is still able to capture syntax-sensitive agree- ment patterns well. However, our analysis high- lights an important qualification of this result. We showed that BERT’s ability to model syntax- sensitive agreement relations decreases slightly as the dependency becomes longer range, and as the number of distractors increases.  We release our new curated cross-linguistic datasets and code in the hope that it is useful to future research that may probe why this pattern appears.The experimental setup we used has some known limitations. First, in certain languages some of the cloze examples we studied contain re- dundant information. Even when one word from an agreement relation is masked out, other cues remain in the sentence (e.g.  when masking out the noun for a French attributive adjective agreement relation, number information is still available from the determiner). To counter this in future work, we plan to run our experiment twice, masking out the controller and then the target. Second, we used a different evaluation scheme than previous work ( Goldberg , 2019 ) by averaging BERT’s pre- dictions over many word types and plan to com- pare both schemes in future work.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_AghLWnOE2WOrRc3Q6BLxUGBB)
+ Call ID: call_AghLWnOE2WOrRc3Q6BLxUGBB
+  Args:
+    section_id: 1.8
+
+================================= Tool Message =================================
+Name: read_section
+
+5 Results
+Overall, BERT performs well on our experimen- tal task, suggesting that it is able to model syntac- tic structure. BERT was correct in 94.3% of all cloze examples. This high performance is found across all four types of agreement relations. Fig- ure 1 shows that BERT performed above 90% ac- curacy in each type.  Performance is best on de- terminer and attributive agreement relations, while worst on subject-verb and predicate adjective.In figure 2 , we see BERT’s performance for each language. BERT performs well for the major-
+2 https://github.com/google-research/ bert
+3 https://github.com/huggingface/ pytorch-pretrained-BERT
+Figure 1: Accuracy per agreement type aggregated across all languages.  In all four types, BERT performed above 90% accuracy. Accuracy is slightly lower for predicate adjectives and subject-verb agreement rela- tions, which typically have longer distance dependen- cies. Error bars are bootstrapped 95% confidence inter- vals.Figure 2: Accuracy per language aggregated across all four agreement types. In all 26 languages, BERT per- forms above 60% accuracy.  In most languages BERT performs above 90% accuracy, although performance is significantly lower for a handful of languages. Error bars are bootstrapped 95% confidence intervals.ity of languages, although some fare much worse than others. It is important to note that it is an un- fair comparison because even though the datasets were curated using the same methodology, each language’s dataset is different. It is possible, for
+ example, that the examples we have for Basque are simply harder than they are for Portuguese.Finally, we ask how BERT’s performance is af- fected by distance between the controller and the target, as well as the number of distractors. Fig- ure 3 shows BERT’s performance, aggregated over all languages and types, as a function of the dis- tance involved in the agreement, while figure 4 shows the same for number of distractors.  There is a slight but consistent decrease in performance as the distance and the number of distractors in- crease. The decline in performance begins later in figure 4 but drops more rapidly once it does.Figure 3: Accuracy as a function of distance between controller and target of agreement, aggregated across all languages and agreement types. BERT is relatively robust to longer-distance dependencies but does show a small decrease as the dependency length increases. Error bars are bootstrapped 95% confidence intervals.
+
+================================== Ai Message ==================================
+
+Unanswerable

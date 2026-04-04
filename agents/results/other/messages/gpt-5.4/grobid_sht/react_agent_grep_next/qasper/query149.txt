@@ -1,0 +1,42 @@
+================================ Human Message =================================
+
+QUERY:
+What inter-annotator agreement did they obtain?
+
+TABLE OF CONTENTS (TOC):
+1 | A Corpus of Adpositional Supersenses for Mandarin Chinese
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2 Related Work
+1.3.1 | 2.1 Chinese Adpositions and Roles
+1.3.2 | 2.2 SNACS: Adposition Supersenses
+1.4 | 3 Adposition Criteria in Mandarin Chinese
+1.5 | 4 Corpus Annotation
+1.5.1 | 4.1 Preprocessing
+1.5.2 | 4.2 Reliability of Annotation
+1.6 | 5 Corpus Analysis
+1.6.1 | 5.1 Adpositions in Chinese
+1.6.2 | 5.2 Supersense & Construal Distributions in Chinese versus English
+1.7 | Fewer Adpositions in Chinese As shown in
+1.8 | 6 POS Tagging of Adposition Targets
+1.9 | 7 Conclusion
+1.10 | Acknowledgements
+1.11 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_lLrT0xT5mpJqoIEX9FcsuYjA)
+ Call ID: call_lLrT0xT5mpJqoIEX9FcsuYjA
+  Args:
+    section_id: 1.5.2
+
+================================= Tool Message =================================
+Name: read_section
+
+4.2 Reliability of Annotation
+The corpus is jointly annotated by three native Mandarin Chinese speakers, all of whom have received advanced training in theoretical and computational linguistics. Supersense labeling was performed cooperatively by 3 annotators for 25% (235/933) of the adposition targets, and for the remainder, independently by the 3 annotators, followed by cooperative adjudication.  Annotation was conducted in two phases, and therefore we present two inter-annotator agreement studies to demonstrate the reproducibility of SNACS and the reliability of the adapted scheme for Chinese.Table 1 shows raw agreement and Cohen's kappa across three annotators computed by averaging three pairwise comparisons. Agreement levels on scene role, function, and full construal are high for both phases, attesting to the validity of the annotation framework in Chinese.  However, there is a slight decrease from Phase 1 to Phase 2, possibly due to the seven newly attested adpositions in Phase 2 and the 1-year interval between the two annotation phases. <table><tr><td/><td colspan="2">IAA SAMPLES</td><td/></tr><tr><td>Phase</td><td>Time</td><td colspan="3">Chapters # Adpositions</td></tr><tr><td colspan="2">Phase 1 July 2018</td><td>15-20</td><td/><td>111</td></tr><tr><td colspan="2">Phase 2 Sept 2019</td><td>26-27</td><td/><td>124</td></tr><tr><td/><td colspan="3">RAW AGREEMENT</td></tr><tr><td>Phase</td><td>Scene</td><td>Function</td><td/><td>Construal</td></tr><tr><td>Phase 1</td><td>. 92</td><td>.95</td><td/><td>.90</td></tr><tr><td>Phase 2</td><td>.93</td><td>.90</td><td/><td>. 89</td></tr><tr><td/><td/><td>KAPPA</td><td/></tr><tr><td>Phase</td><td>Scene</td><td>Function</td><td/><td>Construal</td></tr><tr><td>Phase 1</td><td>.90</td><td>.93</td><td/><td>.88</td></tr><tr><td>Phase 2</td><td>. 92</td><td>.88</td><td/><td>.88</td></tr><tr><td/><td/><td colspan="3">Toks.  Types</td></tr><tr><td colspan="2">Chapters</td><td/><td>27</td><td>NA</td></tr><tr><td colspan="2">Sentences</td><td colspan="2">1,597</td><td>NA</td></tr><tr><td>Tokens</td><td/><td colspan="2">20,287</td><td>NA</td></tr><tr><td colspan="2">Adpositions</td><td/><td>933</td><td>70</td></tr><tr><td colspan="2">Prepositions</td><td/><td>667</td><td>42</td></tr><tr><td colspan="2">Postpositions</td><td/><td>266</td><td>28</td></tr><tr><td colspan="2">Supersenses</td><td/><td>933</td><td>29</td></tr><tr><td colspan="2">Scene roles</td><td/><td>933</td><td>28</td></tr><tr><td colspan="2">Functions</td><td/><td>933</td><td>26</td></tr><tr><td colspan="2">Construals</td><td/><td>933</td><td>41</td></tr><tr><td colspan="4">Congruent (scene=fxn) 803</td><td>25</td></tr><tr><td colspan="3">Divergent (scene≠fxn)</td><td>130</td><td>16</td></tr></table>
+ Table 1 Inter-annotator agreement (IAA) results on two samples from different phases of the project.
+
+================================== Ai Message ==================================
+
+They obtained high inter-annotator agreement: Phase 1 raw agreement was .92 (scene), .95 (function), .90 (construal) with Cohen’s kappa .90, .93, .88; Phase 2 raw agreement was .93, .90, .89 with kappa .92, .88, .88.

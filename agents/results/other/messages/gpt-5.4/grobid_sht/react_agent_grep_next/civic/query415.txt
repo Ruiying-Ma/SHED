@@ -1,0 +1,49 @@
+================================ Human Message =================================
+
+QUERY:
+Identify and list the names of all projects that are in the specified status 'design' and simultaneously of the type 'disaster'.
+
+TABLE OF CONTENTS (TOC):
+1 | Abstract
+2 | Capital Improvement Projects (Not Started)
+3 | Malibu Bluffs Park South Walkway
+4 | Trancas Canyon Park Playground Resurfacing
+5 | PCH Median Improvements at Paradise Cove and Zuma Beach
+6 | PCH Crosswalk Improvements at Big Rock Drive and 20326 PCH
+7 | Kanan Dume Biofilter
+8 | Storm Drain Trash Screens Phase Two
+9 | City Traffic Signals Backup Power
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_K9HkcfkeRXMed64m63D9TY4f)
+ Call ID: call_K9HkcfkeRXMed64m63D9TY4f
+  Args:
+    pattern: (?i)design|disaster
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+9 | City Traffic Signals Backup Power
+Project Description: This project will include upgrading the backup power system to the City's traffic signals on Civic Center Way. The project consultant has started the design of this project.<table><tr><td>Project Schedule (pending the MOU extension approval): Council awarded the contract on May 9, 2022.</td></tr><tr><td>Complete Design: December 2021 A pre-construction was held at the end of June. </td></tr><tr><td>Advertise for Bidding: Summer 2023 Contractor is working on punch list items. </td></tr><tr><td>Begin Construction: Fall 2023 Estimated Schedule:</td></tr><tr><td>Estimated Completion: Fall 2022</td></tr><tr><td>Permanent Skate Park</td></tr><tr><td>Michael Landon Center HVAC Replacement Project Project Description: The HVAC unit at the Michael Landon Center was in need of replacing at Malibu Bluffs Park Updates: Council awarded the contract on May 23, 2022 This project is now completed and will be accepted by the City Project Description: Estimated Schedule: Council on November 14. </td></tr><tr><td>Complete Design: Spring 2023</td></tr><tr><td>Begin Construction: To be determined</td></tr><tr><td>PCH at Trancas Canyon Road Right Turn Lane</td></tr><tr><td>Project Description: This project consists of installing a new westbound right</td></tr><tr><td>turn lane at the intersection of PCH and Trancas Canyon Road. </td></tr><tr><td>Updates:</td></tr><tr><td>The consultant submitted preliminary design to the City in early August.</td></tr><tr><td>Estimated Schedule:</td></tr><tr><td>Began Design: Spring 2022</td></tr><tr><td>Complete Design: Description: This project consists of replacement the roof at the</td></tr><tr><td>Michael Landon Center at Malibu Bluffs Park. </td></tr><tr><td>Updates:</td></tr><tr><td>Staff is preparing the bid documents for an informal bid. </td></tr><tr><td>Estimated Schedule:</td></tr><tr><td>Complete Design: Winter 2022</td></tr><tr><td>Construction: Spring 2023</td></tr><tr><td>Capital Improvement Projects (Construction)</td></tr><tr><td>Bluffs Park Shade Structure</td></tr><tr><td>Project Description: This project consists of the installation of four single-post</td></tr><tr><td>shade structures at Malibu Bluffs Park. </td></tr><tr><td>Updates:</td></tr></table>
+Table This project includes designing and constructing a permanent skate park located on the Crummer/Case Court parcel adjacent to Malibu Bluffs Park. The project would include parking and additional site amenities such as trash cans, benches, tables, and restrooms. Updates: In May 2021, the Council approved funding for additional engineering work related to the project.  Staff has worked with the consultant over the past several months to complete the engineering work, and the final draft plans are expected to be completed in Winter 2022/23. The Planning Commission will then review the project in Spring 2023 before final review by the Council. <table><tr><td>Project Schedule</td></tr><tr><td>Complete Design: April 2022</td></tr><tr><td>Advertise: Winter 2022</td></tr><tr><td>Begin Construction: Spring 2023</td></tr><tr><td>Trancas Canyon Park Planting and Irrigation Repairs (CalJPIA/FEMA Project)</td></tr><tr><td>Updates:</td></tr></table>
+ Table Project Description: This project will consist of a traffic study on Malibu Canyon Road near Harbor Vista Drive and Potter Lane to determine if any feasible traffic safety improvements can be constructed at this location. Updates:Staff finalized the design of this project.Staff is working with FEMA/CalOES to substitute the existing timber with non-combustible materials and include the replacement of guardrails within the project limits.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_JpbdEuE2SNSgdJmCPtDfZRI8)
+ Call ID: call_JpbdEuE2SNSgdJmCPtDfZRI8
+  Args:
+    pattern: (?i)disaster|FEMA|CalOES|CalJPIA
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+9 | City Traffic Signals Backup Power
+Project Description: This project will include upgrading the backup power system to the City's traffic signals on Civic Center Way. The project consultant has started the design of this project.<table><tr><td>Project Schedule (pending the MOU extension approval): Council awarded the contract on May 9, 2022.</td></tr><tr><td>Complete Design: December 2021 A pre-construction was held at the end of June. </td></tr><tr><td>Advertise for Bidding: Summer 2023 Contractor is working on punch list items. </td></tr><tr><td>Begin Construction: Fall 2023 Estimated Schedule:</td></tr><tr><td>Estimated Completion: Fall 2022</td></tr><tr><td>Permanent Skate Park</td></tr><tr><td>Michael Landon Center HVAC Replacement Project Project Description: The HVAC unit at the Michael Landon Center was in need of replacing at Malibu Bluffs Park Updates: Council awarded the contract on May 23, 2022 This project is now completed and will be accepted by the City Project Description: Estimated Schedule: Council on November 14. </td></tr><tr><td>Complete Design: Spring 2023</td></tr><tr><td>Begin Construction: To be determined</td></tr><tr><td>PCH at Trancas Canyon Road Right Turn Lane</td></tr><tr><td>Project Description: This project consists of installing a new westbound right</td></tr><tr><td>turn lane at the intersection of PCH and Trancas Canyon Road. </td></tr><tr><td>Updates:</td></tr><tr><td>The consultant submitted preliminary design to the City in early August.</td></tr><tr><td>Estimated Schedule:</td></tr><tr><td>Began Design: Spring 2022</td></tr><tr><td>Complete Design: Description: This project consists of replacement the roof at the</td></tr><tr><td>Michael Landon Center at Malibu Bluffs Park. </td></tr><tr><td>Updates:</td></tr><tr><td>Staff is preparing the bid documents for an informal bid. </td></tr><tr><td>Estimated Schedule:</td></tr><tr><td>Complete Design: Winter 2022</td></tr><tr><td>Construction: Spring 2023</td></tr><tr><td>Capital Improvement Projects (Construction)</td></tr><tr><td>Bluffs Park Shade Structure</td></tr><tr><td>Project Description: This project consists of the installation of four single-post</td></tr><tr><td>shade structures at Malibu Bluffs Park. </td></tr><tr><td>Updates:</td></tr></table>
+Table This project includes designing and constructing a permanent skate park located on the Crummer/Case Court parcel adjacent to Malibu Bluffs Park. The project would include parking and additional site amenities such as trash cans, benches, tables, and restrooms. Updates: In May 2021, the Council approved funding for additional engineering work related to the project.  Staff has worked with the consultant over the past several months to complete the engineering work, and the final draft plans are expected to be completed in Winter 2022/23. The Planning Commission will then review the project in Spring 2023 before final review by the Council. <table><tr><td>Project Schedule</td></tr><tr><td>Complete Design: April 2022</td></tr><tr><td>Advertise: Winter 2022</td></tr><tr><td>Begin Construction: Spring 2023</td></tr><tr><td>Trancas Canyon Park Planting and Irrigation Repairs (CalJPIA/FEMA Project)</td></tr><tr><td>Updates:</td></tr></table>
+ Table Project Description: This project will consist of a traffic study on Malibu Canyon Road near Harbor Vista Drive and Potter Lane to determine if any feasible traffic safety improvements can be constructed at this location. Updates:Staff finalized the design of this project.Staff is working with FEMA/CalOES to substitute the existing timber with non-combustible materials and include the replacement of guardrails within the project limits.
+
+================================== Ai Message ==================================
+
+none

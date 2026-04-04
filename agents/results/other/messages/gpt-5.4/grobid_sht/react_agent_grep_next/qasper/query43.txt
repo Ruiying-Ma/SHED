@@ -1,0 +1,45 @@
+================================ Human Message =================================
+
+QUERY:
+what dataset was used?
+
+TABLE OF CONTENTS (TOC):
+1 | EmoAtt at EmoInt-2017: Inner attention sentence embedding for Emotion Intensity
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2 Proposed Approach
+1.4 | 3 Experimental Setup
+1.5 | 4 Results and Discussion
+1.5.1 | 4.1 Anger Dataset
+1.5.2 | 4.2 Joy Dataset
+1.5.3 | 4.3 Fear Dataset
+1.5.4 | 4.4 Sadness Dataset
+1.6 | 5 Conclusions
+1.7 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_yDuGeY5yPGmvsdJYzIi64pn9)
+ Call ID: call_yDuGeY5yPGmvsdJYzIi64pn9
+  Args:
+    section_id: 1.4
+
+================================= Tool Message =================================
+Name: read_section
+
+3 Experimental Setup
+To test our model, we experiment using the training, validation and test datasets provided for the shared task (Mohammad and Bravo-Marquez, 2017a), which include tweets for four emotions: joy, sadness, fear, and anger. These were annotated using Best-Worst Scaling (BWS) to obtain very reliable scores (Kiritchenko and Mohammad, 2016) . We experimented with GloVe 1 (Pennington et al. , 2014) as pre-trained word embedding vectors, for sizes 25, 50 and 100. These are vectors trained on a dataset of 2B tweets, with a total vocabulary of 1.2 M. To pre-process the data, we used Twokenizer (Gimpel et al., 2011) , which basically provides a set of curated rules to split the tweets into tokens.  We also use Tweeboparser (Owoputi et al., 2013) to get the POS-tags for each tweet.Table 1 summarizes the average, maximum and minimum sentence lengths for each dataset after we processed them with Twokenizer. We can see the four corpora offer similar characteristics in terms of length, with a cross dataset maximum length of 41 tokens.  We also see there is an important vocabulary gap between the dataset and GloVe, with an average coverage of only 64.3 %. To tackle this issue, we used a set of binary features derived from POS tags to capture some of the semantics of the words that are not covered by the GloVe embeddings. We also include features for member mentions and hashtags as well as a feature to capture word elongation, based on regular expressions.  Word elongation is very common in tweets, and is usually associated to strong sentiment. The following are the POS tag-derived rules we used to generate our binary features.<table><tr><td>Dataset</td><td colspan="4">Tweet Length (tokens) Vocab. in GloVe Mean Min Max</td></tr><tr><td>Fear</td><td>17.849</td><td>2</td><td>37</td><td>60. 8 %</td></tr><tr><td>Joy</td><td>17.480</td><td>2</td><td>42</td><td>65.0 %</td></tr><tr><td colspan="2">Sadness 18.285</td><td>2</td><td>38</td><td>65.5 %</td></tr><tr><td>Anger</td><td>17. 438</td><td>1</td><td>41</td><td>65.8 %</td></tr><tr><td colspan="3">Average 17.776 1.75</td><td>39.5</td><td>64.3 %</td></tr></table>
+Table 1 Data summary.• If the token is an adjective (POS tag = A)
+• If the token is an interjection (POS tag = !)
+ • If the token is a hashtag (POS tag = #)
+• If the token is an emoji (POS tag = E)
+• If the token is an at-mention, indicating a user as a recipient of a tweet (POS tag = @)
+• If the token is a verb (POS tag = V)
+• If the token is a numeral (POS tag = $)
+1 nlp.stanford.edu/projects/glove
+ • if the token is a personal pronoun (POS tag = O)
+While the structure of our introduced model allows us to easily include more linguistic features that could potentially improve our predictive power, such as lexicons, since our focus is to study sentence representation for emotion intensity, we do not experiment adding any additional sources of information as input. In this paper we also only report results for LSTMs, which outperformed regular RNNs as well as GRUs and a batch normalized version of the LSTM in on preliminary experiments. The hidden size of the attentional component is set to match the size of the augmented hidden vectors on each case.  Given this setting, we explored different hyper-parameter configurations, including context window sizes of 1, 3 and 5 as well as RNN hidden state sizes of 100, 200 and 300. We experimented with unidirectional and bidirectional versions of the RNNs.To avoid over-fitting, we used dropout regularization, experimenting with keep probabilities of 0.5 and 0.8. We also added a weighed L2 regularization term to our loss function.  We experimented with different values for weight λ, with a minimum value of 0.01 and a maximum of 0.2.To evaluate our model, we wrapped the provided scripts for the shared task and calculated the Pearson correlation coefficient and the Spearman rank coefficient with the gold standard in the validation set, as well as the same values over a subset of the same data formed by taking every instance with a gold emotion intensity score greater than or equal to 0.5. For training, we used mini-batch stochastic gradient descent with a batch size of 16 and padded sequences to a maximum size of 50 tokens, given the nature of the data. We used exponential decay of ratio 0.9 and early stopping on the validation when there was no improvement after 1000 steps. Our code is available for download on GitHub2 .
+
+================================== Ai Message ==================================
+
+The training, validation, and test datasets provided for the EmoInt-2017 shared task were used, consisting of tweets annotated with Best-Worst Scaling for four emotions: joy, sadness, fear, and anger.

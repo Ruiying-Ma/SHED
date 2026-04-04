@@ -1,0 +1,54 @@
+================================ Human Message =================================
+
+QUERY:
+what is the size of the idn tagged corpus?
+
+TABLE OF CONTENTS (TOC):
+1 | Toward a Standardized and More Accurate Indonesian Part-of-Speech Tagging
+1.1 | Abstract
+1.2 | I. INTRODUCTION
+1.3 | II. RELATED WORK
+1.4 | III. METHODOLOGY
+1.4.1 | A. Dataset
+1.4.2 | B. Baselines
+1.4.3 | C. Comparisons
+1.4.3.1 | 1) Rule-based tagger:
+1.4.3.2 | 2) Conditional random field (CRF):
+1.4.3.3 | 3) Neural network-based tagger:
+1.4.4 | D. Experiments Setup
+1.4.5 | E. Evaluation
+1.5 | IV. RESULTS AND DISCUSSION
+1.6 | V. CONCLUSION
+1.7 | REFERENCES
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_pKoukuJWIevg2gRx6S2eMKOj)
+ Call ID: call_pKoukuJWIevg2gRx6S2eMKOj
+  Args:
+    pattern: IDN Tagged Corpus|tagged corpus|corpus
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1 | Abstract
+—Previous work in Indonesian part-of-speech (POS) tagging are hard to compare as they are not evaluated on a common dataset. Furthermore, in spite of the success of neural network models for English POS tagging, they are rarely explored for Indonesian. In this paper, we explored various techniques for Indonesian POS tagging, including rule-based, CRF, and neural network-based models. We evaluated our models on the IDN Tagged Corpus. A new state-of-the-art of 97. 47 F1 score is achieved with a recurrent neural network. To provide a standard for future work, we release the dataset split that we used publicly.Keywords - part-of-speech tagging; deep learning; natural language processing;
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_eFkEqVJcK7OmM5sHZyAdjXOh)
+ Call ID: call_eFkEqVJcK7OmM5sHZyAdjXOh
+  Args:
+    section_id: 1.4.1
+
+================================= Tool Message =================================
+Name: read_section
+
+A. Dataset
+We used the IDN Tagged Corpus proposed in [12]. The corpus contains 10K sentences and 250K tokens that are tagged manually. Due to the small size, 3 we used 5-fold cross-validation to split the corpus into training, development, and test sets. We did not split multi-word expressions but treated them as if they are a single token.1 http://www.panl10n.net
+2 https://github. com/famrashel/idn-tagged-corpus
+3 As a comparison, Penn Treebank corpus for English has 40K sen- tences.c 2018 IEEE. Personal use of this material is permitted.  Permission from IEEE must be obtained for all other uses, in any current or future media, including reprinting/republishing this material for advertising or promotional purposes, creating new collective works, for resale or redistribution to servers or lists, or reuse of any copyrighted component or this work in other works. The final version of this article is available at https://doi.org/10.1109/IALP.2018.8629236. All 5 folds of the dataset are available publicly 4 to serve as a benchmark for future work.
+
+================================== Ai Message ==================================
+
+The IDN Tagged Corpus contains 10K sentences and 250K manually tagged tokens.

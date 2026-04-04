@@ -1,0 +1,48 @@
+================================ Human Message =================================
+
+QUERY:
+which pretrained embeddings were experimented with?
+
+TABLE OF CONTENTS (TOC):
+1 | Sentence Modeling via Multiple Word Embeddings and Multi-level Comparison for Semantic Textual Similarity
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2 Related work
+1.4 | 3 Model description
+1.4.1 | 3.1 Multi-aspect word embedding
+1.4.2 | 3.2 Sentence modeling
+1.4.3 | 3.3 Multi-level comparison
+1.4.3.1 | 3.3.1 Word-word comparison
+1.4.3.2 | 3.3.2 Sentence-sentence comparison
+1.4.3.3 | 3.3.3 Word-sentence comparison
+1.5 | 2
+1.6 | 4 Tasks & Datasets
+1.7 | 5.1 Pre-trained word embeddings
+1.8 | 5.2 Model configuration
+1.9 | 5.3.1 Textual entailment recognition & Paraphrase identification
+1.10 | 5.3.2 Semantic Textual Similarity
+1.11 | 6 Experiments and Discussion
+1.11.1 | 6.1 Overall evaluation
+1.12 | STSB
+1.12.1 | 6.2 Evaluation of exploiting multiple pre-trained word embeddings
+1.13 | 7 Conclusion
+1.14 | Acknowledgments
+1.15 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_TYax6lXqZeTuvefIBC0eel5T)
+ Call ID: call_TYax6lXqZeTuvefIBC0eel5T
+  Args:
+    section_id: 1.7
+
+================================= Tool Message =================================
+Name: read_section
+
+5.1 Pre-trained word embeddings
+We study five pre-trained word embeddings 2 for our model:
+• word2vec is trained on Google News dataset (100 billion tokens). The model contains 300-dimensional vectors for 3 million words and phrases.• fastText is learned via skip-gram with subword information on Wikipedia text. The embedding representations in fastText are 300dimensional vectors. • GloVe is a 300-dimensional word embedding model learned on aggregated global wordword co-occurrence statistics from Common Crawl (840 billion tokens).• Baroni uses a context-predict approach to learn a 400-dimensional semantic embedding model. It is trained on 2.8 billion tokens constructed from ukWaC, the English Wikipedia and the British National Corpus.• SL999 is trained under the skip-gram objective with negative sampling on word pairs from the paraphrase database PPDB.  This 300-dimensional embedding model is tuned on SimLex-999 dataset (Hill et al., 2016) .
+
+================================== Ai Message ==================================
+
+word2vec, fastText, GloVe, Baroni, and SL999.

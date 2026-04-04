@@ -1,0 +1,84 @@
+================================ Human Message =================================
+
+QUERY:
+Could the proposed training framework be applied to other NLP problems?
+
+TABLE OF CONTENTS (TOC):
+1 | Mitigating Annotation Artifacts in Natural Language Inference Datasets to Improve Cross-dataset Generalization Ability
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2 Related Work
+1.4 | 3 Making Artifacts Unpredictable
+1.5 | 4 Experimental Results
+1.5.1 | 4.1 Evaluation Scheme
+1.5.2 | 4.2 Experiment Setup
+1.5.3 | 4.3 Can Artifacts Generalize Across Datasets?
+1.5.4 | 4.4 Debiasing Results
+1.6 | 5 Conclusion
+1.7 | B Experiment Setting B.1 Hard-Easy Datasets Setting
+1.8 | Trainset Hard Easy
+1.9 | B.2 Experiment Setup
+1.10 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_616OOuOJEzL6PCvfTBsoEw6c)
+ Call ID: call_616OOuOJEzL6PCvfTBsoEw6c
+  Args:
+    section_id: 1.6
+
+================================= Tool Message =================================
+Name: read_section
+
+5 Conclusion
+In this paper, we take a close look at the annotation artifacts in NLI datasets. We find that the bias pattern could be predictive or misleading in crossdataset testing. Furthermore, we propose a debiasing framework and experiments demonstrate that it can effectively mitigate the impacts of the bias pattern and improve the cross-dataset generalization ability of models. However, it remains an open problem that how we should treat the annotation artifacts.  We cannot assert whether the bias pattern should not exist at all or it is actually some kind of nature. We hope that our findings will encourage more explorations on reliable evaluation protocols for NLI models.A Detailed Assumptions and Proof of Theorem 1
+We make a few assumptions about an artifactbalanced distribution and how the biased datasets are generated from it, and demonstrate that we can train models fitting the artifact-balanced distribution using only the biased datasets. We consider the domain of the artifact-balanced distribution D as X ×A×Y ×S, in which X is the input variable space, Y is the label space, A is the feature space annotation artifacts in hypotheses, S is the selection intention space. We assume that the biased distribution D of origin datasets can be generated from the artifact-balanced distribution by selecting samples with S = Y , i.e., the selection intention matches with the label.  We use P (•) to represent the probability on D and use Q(•) for D.We also make some assumptions about the artifact-balanced distribution. The first one is that the label is independent with the artifact in the hypothesis, defined as follows,
+Q(Y |A) = Q(Y ).The second one is that the selection intention is independent with X and Y when the annotation artifact is given,
+Q(S|X, A, Y ) = Q(S|A). And we can prove the equivalence of training with weight 1 P (Y |A) and fitting the artifactbalanced distribution. We first present an equation as follows,
+ P (Y = 0|A) =Q(Y = 0|A, S = Y ) = Q(S = Y = 0|A) Q(S = Y |A) = Q(S = 0|A)Q(Y = 0|A) 2 i=0 Q(S = i|A)Q(Y = i|A) = Q(S = 0|A)Q(Y = 0) 2 i=0 Q(S = i|A)Q(Y = i)
+ Without loss of generality, we can assume Q(Y = i) = 1 3 (i = 0, 1, 2) and get that,
+P (Y = i|A) = Q(S = i|A) (i = 0, 1, 2).With the above derivation, we can prove the equivalence like following,
+Proof.  E x,a,y∼ D 1 P (Y = y|a) ∆ f (x, a), y = ∆(f (x, a), y) 1 P (Y = y|a) dP (x, a, y) = ∆(f (x, a), y) 1 Q(S = y|a) dQ(x, a, y|S = Y ) = ∆(f (x, a), y) 1 Q(S = y|a) Q(S = y|x, a, y)dQ(x, a, y) Q(S = Y ) = ∆(f (x,
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_J83fawB34MPFNQE30lHo5cqA)
+ Call ID: call_J83fawB34MPFNQE30lHo5cqA
+  Args:
+    pattern: other NLP|other tasks|other problems|appl
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.2 | 1 Introduction
+Natural language inference (NLI) is a widelystudied problem in natural language processing. It aims at comparing a pair of sentences (i.e. a premise and a hypothesis), and inferring the relationship between them (i.e., entailment, neutral and contradiction). Large-scaled datasets like SNLI (Bowman et al., 2015) and MultiNLI (Williams et al. , 2018) have been created by crowd-sourcing and fertilized NLI research substantially.However, several works (Gururangan et al., 2018; Tsuchiya, 2018; Wang et al., 2018) have pointed out that crowd-sourcing workers have brought a bias pattern named annotation artifacts in these NLI datasets. Such artifacts in hypotheses can reveal the labels and make it possible to predict the labels solely by looking at the hypotheses.  For example, models trained on SNLI with only the hypotheses can achieve an accuracy of 67.0%, despite the always predicting the majority-class baseline is only 34.3% (Gururangan et al., 2018) .Classifiers trained on NLI datasets are supposed to make predictions by understanding the semantic relationships between given sentence pairs. However, it is shown that models are unintentionally utilizing the annotation artifacts (Wang et al. , 2018; Gururangan et al., 2018) . If the evaluation is conducted under a similar distribution as the training data, e.g., with the given testing set, models will enjoy additional advantages, making the evaluation results over-estimated. On the other hand, if the bias pattern cannot be generalized to the realworld, it may introduce noise to models, thus hurting the generalization ability. In this paper, we use cross-dataset testing to better assess models' generalization ability. We investigate the impacts of annotation artifacts in cross-dataset testing. Furthermore, we propose an easy-adopting debiasing training framework, which doesn't require any additional data or annotations, and apply it to the high-performing Densely Interactive Inference Network (DIIN; Gong et al., 2017) .  Experiments show that our method can effectively mitigate the bias pattern and improve the cross-dataset generalization ability of models. To the best of our knowledge, our work is the first attempt to alleviate the annotation artifacts without any extra resources.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_snLTfAuKsxYSDSNzKLH4MGCg)
+ Call ID: call_snLTfAuKsxYSDSNzKLH4MGCg
+  Args:
+    section_id: 1.4
+
+================================= Tool Message =================================
+Name: read_section
+
+3 Making Artifacts Unpredictable
+Essentially speaking, the problem of the bias pattern is that the artifacts in hypotheses are distributed differently among labels, so balancing them across labels may be a good solution to alleviate the impacts (Gururangan et al., 2018) .Based on the idea proposed by Zhang et al. (2019) , we demonstrate that we can make artifacts in biased datasets balanced across different classes by assigning specific weights for every sample.  We refer the distribution of the acquired weighted dataset as artifact-balanced distribution. We consider a supervised NLI task, which is to predict the relationship label y given a sentence pair x, and we denote the hypothesis in x as h. Without loss of generality, we assume that the prior probability of different labels is equal, and then we have the following theorem.Theorem 1.  For any classifier f = f (x, h), and for any loss function ∆(f (x, h), y), if we use w = dure for artifact-balanced learning is presented in Algorithm 1. However, it is difficult to precisely estimate the probability P (y|h). A minor error might lead to a significant difference to the weight, especially when the probability is close to zero.  Thus, in practice, we use w = 1 (1-ǫ)P (y|h)+ǫ as sample weights during training in order to improve the robustness. We can find that as ǫ increases, the weights tend to be uniform, indicating that the debiasing effect decreases as the smooth term grows. Moreover, in order to keep the prior probability P (Y ) unchanged, we normalize the sum of weights of the three labels to the same.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_YLdm4Om6iQy7cCuX5Hxff2lW)
+ Call ID: call_YLdm4Om6iQy7cCuX5Hxff2lW
+  Args:
+    pattern: easy-adopting|apply it|applied to|general NLP|other NLP problems
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.2 | 1 Introduction
+Natural language inference (NLI) is a widelystudied problem in natural language processing. It aims at comparing a pair of sentences (i.e. a premise and a hypothesis), and inferring the relationship between them (i.e., entailment, neutral and contradiction). Large-scaled datasets like SNLI (Bowman et al., 2015) and MultiNLI (Williams et al. , 2018) have been created by crowd-sourcing and fertilized NLI research substantially.However, several works (Gururangan et al., 2018; Tsuchiya, 2018; Wang et al., 2018) have pointed out that crowd-sourcing workers have brought a bias pattern named annotation artifacts in these NLI datasets. Such artifacts in hypotheses can reveal the labels and make it possible to predict the labels solely by looking at the hypotheses.  For example, models trained on SNLI with only the hypotheses can achieve an accuracy of 67.0%, despite the always predicting the majority-class baseline is only 34.3% (Gururangan et al., 2018) .Classifiers trained on NLI datasets are supposed to make predictions by understanding the semantic relationships between given sentence pairs. However, it is shown that models are unintentionally utilizing the annotation artifacts (Wang et al. , 2018; Gururangan et al., 2018) . If the evaluation is conducted under a similar distribution as the training data, e.g., with the given testing set, models will enjoy additional advantages, making the evaluation results over-estimated. On the other hand, if the bias pattern cannot be generalized to the realworld, it may introduce noise to models, thus hurting the generalization ability. In this paper, we use cross-dataset testing to better assess models' generalization ability. We investigate the impacts of annotation artifacts in cross-dataset testing. Furthermore, we propose an easy-adopting debiasing training framework, which doesn't require any additional data or annotations, and apply it to the high-performing Densely Interactive Inference Network (DIIN; Gong et al., 2017) .  Experiments show that our method can effectively mitigate the bias pattern and improve the cross-dataset generalization ability of models. To the best of our knowledge, our work is the first attempt to alleviate the annotation artifacts without any extra resources.
+
+================================== Ai Message ==================================
+
+Unanswerable

@@ -1,0 +1,41 @@
+================================ Human Message =================================
+
+QUERY:
+What dataset do they use?
+
+TABLE OF CONTENTS (TOC):
+1 | Neural Summarization by Extracting Sentences and Words
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2 Problem Formulation
+1.4 | ::
+1.5 | 3 Training Data for Summarization
+1.6 | 4 Neural Summarization Model
+1.6.1 | 4.1 Document Reader
+1.7 | Convolutional Sentence Encoder
+1.7.1 | 4.2 Sentence Extractor
+1.7.2 | 4.3 Word Extractor
+1.8 | 5 Experimental Setup
+1.9 | System Comparisons
+1.10 | 7 Conclusions
+1.11 | Acknowledgments
+1.12 | 8 Appendix
+1.13 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_JJYIsS4kl071BMMEtX1Zyjww)
+ Call ID: call_JJYIsS4kl071BMMEtX1Zyjww
+  Args:
+    section_id: 1.8
+
+================================= Tool Message =================================
+Name: read_section
+
+5 Experimental Setup
+In this section we present our experimental setup for assessing the performance of our summarization models. We discuss the datasets used for training and evaluation, give implementation details, briefly introduce comparison models, and explain how system output was evaluated.Datasets We trained our sentence-and wordbased summarization models on the two datasets created from DailyMail news. Each dataset was split into approximately 90% for training, 5% for validation, and 5% for testing.  We evaluated the models on the DUC-2002 single document summarization task. In total, there are 567 documents belonging to 59 different clusters of various news topics. Each document is associated with two versions of 100-word7 manual summaries produced by human annotators. We also evaluated our models on 500 articles from the DailyMail test set (with the human authored highlights as goldstandard). We sampled article-highlight pairs so that the highlights include a minimum of 3 sentences.  The average byte count for each document is 278. As there is no established evaluation standard for this task, we also report ROUGE evaluation on the entire DailyMail test set with varying limits. Please refer to the appendix for more information.Implementation Details We trained our models with Adam (Kingma and Ba, 2014) with initial learning rate 0.001. The two momentum parameters were set to 0.99 and 0.999 respectively.  We performed mini-batch training with a batch size of 20 documents. All input documents were padded to the same length with an additional mask variable storing the real length for each document. The size of word, sentence, and document embeddings were set to 150, 300, and 750, respectively. For the convolutional sentence model, we followed Kim et al.  (2016) 8 and used a list of kernel sizes {1, 2, 3, 4, 5, 6, 7}. For the recurrent document model and the sentence extractor, we used as regularization dropout with probability 0.5 on the LSTM input-to-hidden layers and the scoring layer. The depth of each LSTM module was 1. All LSTM parameters were randomly initialized over a uniform distribution within [-0.05, 0.05].  The word vectors were initialized with 150 dimensional pre-trained embeddings.9
+Proper nouns pose a problem for embeddingbased approaches, especially when these are rare or unknown (e.g., at test time). Rush et al. (2015) address this issue by adding a new set of features and a log-linear model component to their system.  As our model enjoys the advantage of generation by extraction, we can force the model to inspect the context surrounding an entity and its relative position in the sentence in order to discover extractive patterns, placing less emphasis on the meaning representation of the entity itself. Specifically, we perform named entity recognition with the package provided by Hermann et al. (2015) and maintain a set of randomly initialized entity embeddings.  During training, the index of the entities is permuted to introduce some noise but also robustness in the data. A similar data augmentation approach has been used for reading comprehension (Hermann et al., 2015) .A common problem with extractive methods based on sentence labeling is that there is no constraint on the number of sentences being selected at test time. We address this by reranking the positively labeled sentences with the probability scores obtained from the softmax layer (rather than the label itself).  In other words, we are more interested in is the relative ranking of each sentence rather than their exact scores. This suggests that an alternative to training the network would be to employ a ranking-based objective or a learning to rank algorithm. However, we leave this to future work. We use the three sentences with the highest scores as the summary (also subject to the word or byte limit of the evaluation protocol). Another issue relates to the word extraction model which is challenging to batch since each document possesses a distinct vocabulary. We sidestep this during training by performing negative sampling (Mikolov et al., 2013) which trims the vocabulary of different documents to the same length. At each decoding step the model is trained to differentiate the true target word from 20 noise samples.  At test time we still loop through the words in the input document (and a stop-word list) to decide which word to output next.
+
+================================== Ai Message ==================================
+
+They trained on two datasets created from DailyMail news. They evaluated on the DUC-2002 single-document summarization task and on 500 articles from the DailyMail test set, and also report ROUGE on the entire DailyMail test set.

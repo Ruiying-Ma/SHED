@@ -1,0 +1,34 @@
+================================ Human Message =================================
+
+QUERY:
+Can the model be extended to other languages?
+
+TABLE OF CONTENTS (TOC):
+1 | Italian Event Detection Goes Deep Learning
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2 Task Description
+1.3.1 | 2.1 Dataset
+1.4 | 3 System and Experiments
+1.4.1 | 3.1 Results and Discussion
+1.5 | 4 Conclusion and Future Work
+1.6 | Acknowledgments
+1.7 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_CKNYip5amGOCfQjjh1FgXlEC)
+ Call ID: call_CKNYip5amGOCfQjjh1FgXlEC
+  Args:
+    section_id: 1.5
+
+================================= Tool Message =================================
+Name: read_section
+
+4 Conclusion and Future Work
+This paper has investigated the application of different word embeddings for the initialization of a state-of-the-art Bi-LSTM-CRF network to
+solve the event detection and classification task in Italian, according to the EVENTI exercise. We obtained new state-of-the-art results using the Fastext-It embeddings, and improved the F1-class score of 6.5 points in strict evaluation mode. As for the event detection subtask, we observe a lim- ited improvement (+1. 3 points in strict F1), mainly due to gains in Recall. Such results are extremely positive as the task has been modeled in a single step approach, i.e. detection and classification at once, for the first time in Italian. Further sup- port that embeddings have a major impact in the performance of neural architectures is provided, as the variations in performance of the Bi-LSMT- CRF models show.  This is due to a combination of factors such as dimensionality, (raw) data, and the method used for generating the embeddings.Future work should focus on the development of embeddings that move away from the basic word level, integrating extra layers of linguistic analy- sis (e.g. syntactic dependencies) (Komninos and Manandhar, 2016), that have proven to be very powerful for the same task in English.
+
+================================== Ai Message ==================================
+
+Unanswerable

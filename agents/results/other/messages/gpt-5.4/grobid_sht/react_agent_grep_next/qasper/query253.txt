@@ -1,0 +1,91 @@
+================================ Human Message =================================
+
+QUERY:
+How long is their dataset?
+
+TABLE OF CONTENTS (TOC):
+1 | One Single Deep Bidirectional LSTM Network for Word Sense Disambiguation of Text Data
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2 Background and Related Work
+1.3.1 | 2.1 Neural Embeddings for WSD
+1.3.2 | 2.2 Bidirectional LSTM
+1.4 | 3.1 Model Definition
+1.5 | 3.2 Validation for Selection of Hyper-parameters
+1.6 | 3.3 Dropout and Dropword
+1.7 | 4 Experiments
+1.7.1 | 4.1 Experimental Settings
+1.7.2 | 4.2 Results
+1.7.3 | 4.3 Discussion
+1.8 | 5 Conclusion
+1.9 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_Jx6Xn3waNq2zn6T9ebR5EWPy)
+ Call ID: call_Jx6Xn3waNq2zn6T9ebR5EWPy
+  Args:
+    pattern: dataset|corpus|training data|SemCor|sentences|words
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1 | Abstract
+Due to recent technical and scientific advances, we have a wealth of information hidden in unstructured text data such as offline/online narratives, research articles, and clinical reports. To mine these data properly, attributable to their innate ambiguity, a Word Sense Disambiguation (WSD) algorithm can avoid numbers of difficulties in Natural Language Processing (NLP) pipeline.  However, considering a large number of ambiguous words in one language or technical domain, we may encounter limiting constraints for proper deployment of existing WSD models. This paper attempts to address the problem of oneclassifier-per-one-word WSD algorithms by proposing a single Bidirectional Long Short-Term Memory (BLSTM) network which by considering senses and context sequences works on all ambiguous words collectively.  Evaluated on SensEval-3 benchmark, we show the result of our model is comparable with top-performing WSD algorithms. We also discuss how applying additional modifications alleviates the model fault and the need for more training data.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_uesGSEE6B3mcqnhwsgvD8ygu)
+ Call ID: call_uesGSEE6B3mcqnhwsgvD8ygu
+  Args:
+    pattern: SensEval-3|SemCor|training set|test set|dataset
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1 | Abstract
+Due to recent technical and scientific advances, we have a wealth of information hidden in unstructured text data such as offline/online narratives, research articles, and clinical reports. To mine these data properly, attributable to their innate ambiguity, a Word Sense Disambiguation (WSD) algorithm can avoid numbers of difficulties in Natural Language Processing (NLP) pipeline.  However, considering a large number of ambiguous words in one language or technical domain, we may encounter limiting constraints for proper deployment of existing WSD models. This paper attempts to address the problem of oneclassifier-per-one-word WSD algorithms by proposing a single Bidirectional Long Short-Term Memory (BLSTM) network which by considering senses and context sequences works on all ambiguous words collectively.  Evaluated on SensEval-3 benchmark, we show the result of our model is comparable with top-performing WSD algorithms. We also discuss how applying additional modifications alleviates the model fault and the need for more training data.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_aelFrvcrM0WbYMFqVvUDdBUb)
+ Call ID: call_aelFrvcrM0WbYMFqVvUDdBUb
+  Args:
+    section_id: 1.7.1
+
+================================= Tool Message =================================
+Name: read_section
+
+4.1 Experimental Settings
+The hyper-parameters that were determined during the validation is presented in Table 2 . The preprocessing of the data was conducted by lower-casing all the words in the documents and removing numbers. This results in a vocabulary size of |V | = 29044. Words not present in the training set are considered unknown during testing. Also, in order to have fixed-size contexts around the ambiguous words, the padding and truncating are applied to them whenever needed. <table><tr><td>Hyper-prameter</td><td>Range searched</td><td>Values used</td></tr><tr><td>Context size</td><td>[10, 100] [Left, Right]</td><td>[15 Left, 15 Right]</td></tr><tr><td>Embedding size</td><td>{50, 100, 200, 300}</td><td>100</td></tr><tr><td>BLSTM hidden layer size</td><td>[50, 300]</td><td>2*50</td></tr><tr><td>Dropout on sense/word embeddings</td><td>[0, 50%]</td><td>20%</td></tr><tr><td>Dropout on LSTM outputs</td><td>[0, 70%]</td><td>50%</td></tr><tr><td>Dropout on fully-connected layer</td><td>[0, 70%]</td><td>50%</td></tr><tr><td>Word dropout</td><td>[0, 50%]</td><td>20%</td></tr><tr><td>Sense embedding initialization</td><td>-</td><td>Random ∈ unif(-0. 1, 0.1)</td></tr><tr><td>Word embedding initialization</td><td>-</td><td>GloVe 7 (uncased)</td></tr></table>
+Table 2 Hyper-parameter used for the experiments and the ranges that were searched during tuning. '-' indicates no tuning was performed on that parameter.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_x94BowJqI5tVCxQ0mXc7nb69)
+ Call ID: call_x94BowJqI5tVCxQ0mXc7nb69
+  Args:
+    pattern: vocabulary size|instances|examples|documents|words in the training|sentences
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.3.1 | 2.1 Neural Embeddings for WSD
+In the past few years, there has been an increasing interest in training neural word embeddings from large unlabeled corpora using neural networks [10] [11] . Word embeddings are typically represented as a dense real-valued low dimensional matrix W (i.e. a lookup table) of size d × v, where d is the predefined embedding dimension and v is the vocabulary size.  Each column of the matrix is an embedding vector associated with a word in the vocabulary and each row of the matrix represents a latent feature. These vectors can subsequently be used to initialize the input layer of a neural network or some other NLP model. GloVe [3] is one of the existing unsupervised learning algorithms for obtaining these vector representations of the words in which training is performed on aggregated global word-word co-occurrence statistics from a corpus. Besides word embeddings, recently, computation of sense embeddings has gained the attention of numerous studies as well. For example, Chen et al. [12] adapted neural word embeddings to compute different sense embeddings (of the same word) and showed competitive performance on the SemEval-2007 data [13] .
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_jPDHgAxaZecotSm6270UyQ2G)
+ Call ID: call_jPDHgAxaZecotSm6270UyQ2G
+  Args:
+    pattern: 29044|vocabulary size|\|V \|
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.3.1 | 2.1 Neural Embeddings for WSD
+In the past few years, there has been an increasing interest in training neural word embeddings from large unlabeled corpora using neural networks [10] [11] . Word embeddings are typically represented as a dense real-valued low dimensional matrix W (i.e. a lookup table) of size d × v, where d is the predefined embedding dimension and v is the vocabulary size.  Each column of the matrix is an embedding vector associated with a word in the vocabulary and each row of the matrix represents a latent feature. These vectors can subsequently be used to initialize the input layer of a neural network or some other NLP model. GloVe [3] is one of the existing unsupervised learning algorithms for obtaining these vector representations of the words in which training is performed on aggregated global word-word co-occurrence statistics from a corpus. Besides word embeddings, recently, computation of sense embeddings has gained the attention of numerous studies as well. For example, Chen et al. [12] adapted neural word embeddings to compute different sense embeddings (of the same word) and showed competitive performance on the SemEval-2007 data [13] .
+
+================================== Ai Message ==================================
+
+This results in a vocabulary size of 29,044.

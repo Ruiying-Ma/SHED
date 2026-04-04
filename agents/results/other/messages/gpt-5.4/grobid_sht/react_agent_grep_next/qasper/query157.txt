@@ -1,0 +1,39 @@
+================================ Human Message =================================
+
+QUERY:
+what future work is described?
+
+TABLE OF CONTENTS (TOC):
+1 | Lexical Bias In Essay Level Prediction
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2 Problem Definition
+1.4 | 3 Feature Extaction
+1.5 | Essay text
+1.6 | 4 Model Selection and Evaluation
+1.7 | 5 Conclusion
+1.8 | Acknoledgements
+1.9 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_EVjsd3X63gB3H2JhOVD9rvQI)
+ Call ID: call_EVjsd3X63gB3H2JhOVD9rvQI
+  Args:
+    section_id: 1.7
+
+================================= Tool Message =================================
+Name: read_section
+
+5 Conclusion
+In this work I presented the feature extraction, feature engineering and model evaluation steps I followed while developing balikasg for CAp 2018 that was ranked first among 14 other systems. I evaluated the efficiency of the different feature groups and found that readbility and complexity scores as well as topic models to be effective predictors. Further, I evaluated the the effectiveness of different classification algorithms and found that Gradient Boosted Trees outperform the rest of the models in this problem. While in terms of accuracy the system performed excellent achieving 98.2% in the test data, the question raised is whether there are any types of biases in the process. For instance, topic distributions learned with LDA were valuable features. One, however, needs to deeply investigate whether this is due to the expressiveness and modeling power of LDA or an artifact of the dataset used.  In the latter case, given that the candidates are asked to write an essay given a subject (Geertzen et al., 2013) that depends on their level, the hypothesis that needs be studied is whether LDA was just a clever way to model this information leak in the given data or not. I believe that further analysis and validation can answer this question if the topics of the essays are released so that validation splits can be done on the basis of these topics. At the time of writing of this paper, the test data have not become publicly available.https://cran.r-project.org/web/ packages/koRpus/vignettes/koRpus_ vignette.pdf
+http://cap2018.litislab.fr/ competition_annexes_EN.pdf
+https://github.com/shivam5992/textstat
+ftp://ftp.gnu.org/gnu/aspell/dict/ 0index.html
+ https://github.com/balikasg/topicModelling
+https://spacy.io/
+https://github.com/Microsoft/LightGBM
+
+================================== Ai Message ==================================
+
+Future work is to investigate whether the usefulness of LDA topic-distribution features reflects true modeling power or an artifact/data leak from essay prompts tied to candidate level. The paper suggests further analysis and validation, specifically using essay topics to create validation splits once those topics and test data are released.

@@ -1,0 +1,93 @@
+================================ Human Message =================================
+
+QUERY:
+What dataset did they use?
+
+TABLE OF CONTENTS (TOC):
+1 | F-Score Driven Max Margin Neural Network for Named Entity Recognition in Chinese Social Media
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2 Model
+1.3.1 | 2.1 Transition Probability
+1.3.2 | 2.2 F-Score Driven Training Method
+1.4 | F-Score and Label Accuracy Trigger Function
+1.4.1 | 2.3 Word Segmentation Representation
+1.5 | Character and Position Embeddings
+1.6 | 3.2 Parameter Estimation
+1.7 | 3.3 Results and Analysis
+1.8 | 4 Conclusions and Future Work
+1.9 | Acknowledgements
+1.10 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_p2hcOucGAtxKaQRtI8foGUfp)
+ Call ID: call_p2hcOucGAtxKaQRtI8foGUfp
+  Args:
+    pattern: dataset|data set|We use|corpus|Chinese social media|SIGHAN|Weibo|NLPCC
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1 | Abstract
+We focus on named entity recognition (NER) for Chinese social media. With massive unlabeled text and quite limited labelled corpus, we propose a semisupervised learning model based on B-LSTM neural network. To take advantage of traditional methods in NER such as CRF, we combine transition probability with deep learning in our model. To bridge the gap between label accuracy and F-score of NER, we construct a model which can be directly trained on F-score.  When considering the instability of Fscore driven method and meaningful information provided by label accuracy, we propose an integrated method to train on both F-score and label accuracy. Our integrated model yields substantial improvement over previous state-of-the-art result.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_A5tYS9WNTAq0Zwy4oALoCzJt)
+ Call ID: call_A5tYS9WNTAq0Zwy4oALoCzJt
+  Args:
+    pattern: dataset|data set|We use|corpus|Chinese social media|SIGHAN|Weibo|NLPCC
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.2 | 1 Introduction
+With the development of Internet, social media plays an important role in information exchange.The natural language processing tasks on social media are more challenging which draw attention of many researchers (Li and Liu, 2015; Habib and van Keulen, 2015; Radford et al., 2015; Cherry and Guo, 2015) . As the foundation of many downstream applications (Weissenborn et al., 2015; Delgado et al. , 2014; Hajishirzi et al., 2013) such as information extraction, named entity recognition (NER) deserves more research in prevailing and challenging social media text. NER is a task to identify names in texts and to assign names with particular types (Sun et al., 2009; Sun, 2014; Sun et al., 2014; He and Sun, 2017) . It is the informality of social media that discourages accuracy of NER systems. While efforts in English have narrowed the gap between social media and formal domains (Cherry and Guo, 2015) , the task in Chinese remains challenging. It is caused by Chinese logographic characters which lack many clues to indicate whether a word is a name, such as capitalization.  The scant labelled Chinese social media corpus makes the task more challenging (Neelakantan and Collins, 2015; Skeppstedt, 2014; Liu et al., 2015) .To address the problem, one approach is to use the lexical embeddings learnt from massive unlabeled text.  To take better advantage of unlabeled text, Peng and Dredze (2015) evaluates three types of embeddings for Chinese text, and shows the effectiveness of positional character embeddings with experiments. Considering the value of word segmentation in Chinese NER, another approach is to construct an integrated model to jointly train learned representations for both predicting word segmentations and NER (Peng and Dredze, 2016) .However, the two above approaches are implemented within CRF model.  We construct a semisupervised model based on B-LSTM neural network to learn from the limited labelled corpus by using lexical information provided by massive unlabeled text. To shrink the gap between label accuracy and F-Score, we propose a method to directly train on F-Score rather than label accuracy in our model. In addition, we propose an integrated method to train on both F-Score and label accuracy. Specifically, we make contributions as follows:
+ • We propose a method to directly train on F-Score rather than label accuracy. In addition, we propose an integrated method to train on both F-Score and label accuracy.• We combine transition probability into our B-LSTM based max margin neural network to form structured output in neural network.• We evaluate two methods to use lexical embeddings from unlabeled text in neural network.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_NPNfFHGvDaLFfmFbOGsjnSc9)
+ Call ID: call_NPNfFHGvDaLFfmFbOGsjnSc9
+  Args:
+    section_id: 1.7
+
+================================= Tool Message =================================
+Name: read_section
+
+3.3 Results and Analysis
+We evaluate two methods to incorporate word segmentation information. The results of two methods are shown as Table 2 . We can see that positional character embeddings perform better in neural network. This is probably because positional character embeddings method can learn word segmentation information from unlabeled text while word segmentation can only use training corpus. We adopt positional character embeddings in our next four models. Our first model is a B-LSTM neural network (baseline).  To take advantage of traditional model (Chieu and Ng, 2002; Mccallum et al., 2001) such as CRF, we combine transition probability in our B-LSTM based MMNN. We design a F-Score driven training method in our third model F-Score Driven Model I . We propose an integrated training method in our fourth model F-Score Driven Model II . The re-sults of models are depicted as Figure 1(a) . From the figure, we can know our models perfrom better with little loss in time. <table><tr><td/><td/><td colspan="2">Named Entity</td><td/><td colspan="3">Nominal Mention</td></tr><tr><td/><td colspan="3">Precision Recall</td><td>F1</td><td colspan="3">Precision Recall</td><td>F1</td></tr><tr><td colspan="2">Character+Segmentation</td><td>48.52</td><td colspan="2">39. 23 43.39</td><td>58.75</td><td colspan="2">47.96 52.91</td></tr><tr><td>Character+Position</td><td/><td>65.87</td><td colspan="2">39.71 49.55</td><td>68.12</td><td colspan="2">47.96 56. 29</td></tr><tr><td>Models</td><td colspan="3">Named Entity</td><td colspan="2">Nominal Mention</td><td/></tr><tr><td/><td colspan="2">Precision Recall</td><td>F1</td><td colspan="2">Precision Recall</td><td>F1</td><td>Overall OOV</td></tr><tr><td>(Peng and Dredze, 2015)</td><td>57. 98</td><td colspan="2">35.57 44.09</td><td>63.84</td><td colspan="2">29.45 40.38</td><td>42.70</td><td>-</td></tr><tr><td>(Peng and Dredze, 2016)</td><td>63.33</td><td colspan="2">39.18 48. 41</td><td>58.59</td><td colspan="2">37.42 45.67</td><td>47.38</td><td>-</td></tr><tr><td>B-LSTM</td><td>65.87</td><td colspan="2">39.71 49.55</td><td>68.12</td><td colspan="2">47.96 56. 29</td><td>52.81</td><td>13.97</td></tr><tr><td>B-LSTM + MMNN</td><td>65.29</td><td colspan="2">37.80 47.88</td><td>73.53</td><td colspan="2">51.02 60.24</td><td>53.86</td><td>17. 90</td></tr><tr><td>F-Score Driven I (proposal)</td><td>66.67</td><td colspan="2">39.23 49.40</td><td>69.50</td><td colspan="2">50.00 58.16</td><td>53.64</td><td>17. 03</td></tr><tr><td>F-Score Driven II (proposal)</td><td>66.93</td><td colspan="2">40.67 50.60</td><td>66.46</td><td colspan="2">53.57 59.32</td><td>54.82</td><td>20.96</td></tr></table>
+ Table 2 1) and C -1 C 1 Two methods to incorporate word segmentation information.Table 3 shows results for NER on test sets. In the Table 3 , we also show micro F1-score (Overall) and out-of-vocabulary entities (OOV) recall. Peng and Dredze (2016) is the state-of-the-art NER system in Chinese Social media.  By comparing the results of B-LSTM model and B-LSTM + MTNN model, we can know transition probability is significant for NER. Compared with B-LSTM + MMNN model, F-Score Driven Model I improves the result of named entity with a loss in nominal mention. The integrated training model (F-Score Driven Model II) benefits from both label accuracy and F-Score, which achieves a new state-ofthe-art NER system in Chinese social media.  Our integrated model has better performance on named entity and nominal mention.<table/>
+Table 3 NER results for named and nominal mentions on test data.To better understand the impact of the factor β, we show the results of our integrated model with different values of β in Figure 1(c ). From Figure 1 (c), we can know that β is an important factor for us to balance F-score and accuracy.  Our integrated model may help alleviate the influence of noise in NER in Chinese social media.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_pJqTuxNahDl3bygXlA2sqZ5k)
+ Call ID: call_pJqTuxNahDl3bygXlA2sqZ5k
+  Args:
+    pattern: Peng and Dredze 2016|Weibo NER|Chinese social media shared task|test data|training corpus|unlabeled text
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1 | Abstract
+We focus on named entity recognition (NER) for Chinese social media. With massive unlabeled text and quite limited labelled corpus, we propose a semisupervised learning model based on B-LSTM neural network. To take advantage of traditional methods in NER such as CRF, we combine transition probability with deep learning in our model. To bridge the gap between label accuracy and F-score of NER, we construct a model which can be directly trained on F-score.  When considering the instability of Fscore driven method and meaningful information provided by label accuracy, we propose an integrated method to train on both F-score and label accuracy. Our integrated model yields substantial improvement over previous state-of-the-art result.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_9MKwjqsV6Y0jyikGEHf6r2Hc)
+ Call ID: call_9MKwjqsV6Y0jyikGEHf6r2Hc
+  Args:
+    pattern: Peng and Dredze 2016|Weibo NER|Chinese social media shared task|test data|training corpus|unlabeled text
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.2 | 1 Introduction
+With the development of Internet, social media plays an important role in information exchange.The natural language processing tasks on social media are more challenging which draw attention of many researchers (Li and Liu, 2015; Habib and van Keulen, 2015; Radford et al., 2015; Cherry and Guo, 2015) . As the foundation of many downstream applications (Weissenborn et al., 2015; Delgado et al. , 2014; Hajishirzi et al., 2013) such as information extraction, named entity recognition (NER) deserves more research in prevailing and challenging social media text. NER is a task to identify names in texts and to assign names with particular types (Sun et al., 2009; Sun, 2014; Sun et al., 2014; He and Sun, 2017) . It is the informality of social media that discourages accuracy of NER systems. While efforts in English have narrowed the gap between social media and formal domains (Cherry and Guo, 2015) , the task in Chinese remains challenging. It is caused by Chinese logographic characters which lack many clues to indicate whether a word is a name, such as capitalization.  The scant labelled Chinese social media corpus makes the task more challenging (Neelakantan and Collins, 2015; Skeppstedt, 2014; Liu et al., 2015) .To address the problem, one approach is to use the lexical embeddings learnt from massive unlabeled text.  To take better advantage of unlabeled text, Peng and Dredze (2015) evaluates three types of embeddings for Chinese text, and shows the effectiveness of positional character embeddings with experiments. Considering the value of word segmentation in Chinese NER, another approach is to construct an integrated model to jointly train learned representations for both predicting word segmentations and NER (Peng and Dredze, 2016) .However, the two above approaches are implemented within CRF model.  We construct a semisupervised model based on B-LSTM neural network to learn from the limited labelled corpus by using lexical information provided by massive unlabeled text. To shrink the gap between label accuracy and F-Score, we propose a method to directly train on F-Score rather than label accuracy in our model. In addition, we propose an integrated method to train on both F-Score and label accuracy. Specifically, we make contributions as follows:
+ • We propose a method to directly train on F-Score rather than label accuracy. In addition, we propose an integrated method to train on both F-Score and label accuracy.• We combine transition probability into our B-LSTM based max margin neural network to form structured output in neural network.• We evaluate two methods to use lexical embeddings from unlabeled text in neural network.
+
+================================== Ai Message ==================================
+
+Chinese social media text with a limited labeled corpus and massive unlabeled text.

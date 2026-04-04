@@ -1,0 +1,59 @@
+================================ Human Message =================================
+
+QUERY:
+what are the state of the art models?
+
+TABLE OF CONTENTS (TOC):
+1 | WikiRank:Improving Keyphrase Extraction Based on Background Knowledge
+1.1 | Yang Yu, Vincent Ng
+1.1.1 | Abstract
+1.1.1.1 | 1. Introduction
+1.1.1.2 | 2. Existing Error Illustration with Example
+1.1.1.3 | 3. Proposed Model
+1.1.1.3.1 | 3.1. Graph Construction
+1.1.1.3.1.1 | 3.1.1. Automatic Concept Annotation
+1.1.1.3.1.2 | 3.1.2. Lexical Unit Selection
+1.1.1.3.1.3 | 3.1.3. Graph building
+1.1.1.3.2 | 3.2. WikiRank
+1.1.1.3.2.1 | 3.2.1. Optimization Problem
+1.1.1.3.2.2 | 3.2.2. Algorithm
+1.1.1.3.3 | 3.3. Approximation Approach with Pre-pruning
+1.1.1.3.3.1 | Algorithm 1 Keyphrase Generalization
+1.1.2 | Step 2. Remove the candidate keyphrase p from original graph G, if it is only connected to one concept that only exists once in the document
+1.1.2.1 | 4. Experiments and Results 4.1. Corpora
+1.1.2.1.1 | 4.2. Result
+1.1.2.2 | 5. Conclusion and Future Work
+1.1.2.3 | 6. Bibliographical References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_pXsWZKxs8vCu4t1EChB3Ng53)
+ Call ID: call_pXsWZKxs8vCu4t1EChB3Ng53
+  Args:
+    pattern: state[- ]of[- ]the[- ]art|SOTA|baseline|compared to|TextRank|KEA|Maui|supervised
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1.1.1 | 1. Introduction
+As the amount of published material rapidly increases, the problem of managing information becomes more difficult. Keyphrase, as a concise representation of the main idea of the text, facilitates the management, categorization, and retrieval of information. Automatic keyphrase extraction concerns “the automatic selection of important and topical phrases from the body of a document”. Its goal is to extract a set of phrases that are related to the main topics discussed in a given document(Hasan and Ng, 2014). Existing methods of keyphrase extraction could be divided into two categories: supervised and unsupervised. While supervised approaches require human labeling, at the same time needs various kinds of training data to get better generalization performance, more and more researchers focus on unsupervised methods. Traditional methods of unsupervised keyphrase ex- traction mostly focus on getting information of document from word frequency and document structure(Hasan and Ng, 2014), however, after years of attempting, the performance seems very hard to be improved any more. Based on this observation, it is rea- sonable to suspect that the document itself possibly cannot provide enough information for keyphrase extraction task. To get good coverage of the main topics of the document, Topical PageRank (Liu et al., 2010) started to adopt topical information in automatic keyphrase extraction. The main idea of Topical PageRank is to extract the top topics of the document using LDA, then sum over the scores of a candidate phrase under each topic to be the final score. The main problems with Topical PageRank are: First, The topics are too general.  Second, since they are using LDA, they only classify the words to several topics, but don’t know what the topics exactly are. However, the topical information we need for keyphrase extraction should be precise. As shown in Figure 1, the difference between a correct keyphrase sheep disease and an incorrect keyphrase incurable disease could be small, which is hard to be captured by rough topical categorization approach. To overcome the limitations of aforementioned approaches, we propose WikiRank, an unsupervised automatic
+keyphrase extraction approach that links semantic meaning to text The key contribution of this paper could be summarized as follows:
+1.We leverage the topical information in knowledge bases to improve the performance of keyphrase extrac- tion.
+2. We model the keyphrase extraction as an optimization problem,and provide the corresponding solution as well as a pruning approach to reduce the complexity.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_FQXhYQDdCirEgJ82yEKeyxJv)
+ Call ID: call_FQXhYQDdCirEgJ82yEKeyxJv
+  Args:
+    section_id: 1.1.2.1.1
+
+================================= Tool Message =================================
+Name: read_section
+
+4.2. Result
+For comparing with our system, we reimplemented Sin- gleRank and Topical PageRank. Table 2 shows the result of our reimplementation of SingleRank and Topical PageR- ank, as well as the result of our system. Note that we pre- dict the same number of phrase ( k = 10 ) for each document while testing all three methods.The result shows our result has guaranteed improvement over SingleRank and Topical PageRank on all four corpora.
+
+================================== Ai Message ==================================
+
+The paper compares its system against SingleRank and Topical PageRank, which are presented as the existing strong models. It reports that WikiRank improves over both on all four corpora.

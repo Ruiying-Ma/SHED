@@ -1,0 +1,111 @@
+================================ Human Message =================================
+
+QUERY:
+By how much do their cross-lingual models lag behind other models?
+
+TABLE OF CONTENTS (TOC):
+1 | XPersona: Evaluating Multilingual Personalized Chatbot Zhaojiang Lin∗, Zihan Liu∗, Genta Indra Winata∗, Samuel Cahyawijaya∗, Andrea Madotto∗, Yejin Bang, Etsuko Ishii, Pascale Fung Center for Artiﬁcial Intelligence Research (CAiRE)
+2 | Abstract
+3 | 1 Introduction
+4 | 2 Related Work
+5 | 3 Data Collection
+6 | 4 Multilingual Personalized Conversational Models
+6.1 | 4.1 Model Architecture
+6.2 | 4.2 Training Strategy
+7 | 5 Experiments
+7.1 | 5.1 Evaluation Metrics
+7.2 | 5.2 Implementation Details
+7.3 | 5.3 Results and Discussion
+7.4 | 5.3.1 Quantitative Analysis
+7.5 | 5.3.2 Qualitative Analysis and Discussion
+7.5.1 | System Persona
+7.5.1.1 | System Persona
+8 | 6 Conclusion
+9 | References
+10 | A Dataset Collection
+10.1 | A.1 Annotation Instructions
+10.2 | A.2 Training Set Statistics
+11 | B Model Detail
+12 | C Human Evaluation
+13 | D Generated Samples
+13.1 | D.1 Mixed-language Samples
+13.2 | D.2 Model Comparison Samples
+13.2.1 | System Persona
+13.2.2 | System Persona
+13.2.2.1 | System Persona
+13.2.2.2 | Dialogue
+13.2.2.3 | System Persona
+13.2.2.4 | Dialogue
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_qIff8XhaZZiQC9UBfQ84aIvq)
+ Call ID: call_qIff8XhaZZiQC9UBfQ84aIvq
+  Args:
+    pattern: lag behind|cross-lingual|other models|behind other models
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+2 | Abstract
+Personalized dialogue systems are an essen- tial step toward better human-machine in- teraction. Existing personalized dialogue agents rely on properly designed conversa- tional datasets, which are mostly monolingual (e.g., English), which greatly limits the usage of conversational agents in other languages. In this paper, we propose a multi-lingual ex- tension of Persona-Chat ( Zhang et al. , 2018 ), namely XPersona.  Our dataset includes per- sona conversations in six different languages other than English for building and evaluating multilingual personalized agents. We experi- ment with both multilingual and cross-lingual trained baselines, and evaluate them against monolingual and translation-pipeline models using both automatic and human evaluation.  Experimental results show that the multilin- gual trained models outperform the translation- pipeline and that they are on par with the monolingual models, with the advantage of having a single model across multiple lan- guages. On the other hand, the state-of-the- art cross-lingual trained models achieve infe- rior performance to the other models, showing that cross-lingual conversation modeling is a challenging task.  We hope that our dataset and baselines 1 will accelerate research in multilin- gual dialogue systems.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_r7fYSjUb07HzIcyTFlB5560J)
+ Call ID: call_r7fYSjUb07HzIcyTFlB5560J
+  Args:
+    pattern: on par|inferior performance|cross-lingual trained models|translation-pipeline|monolingual models
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+2 | Abstract
+Personalized dialogue systems are an essen- tial step toward better human-machine in- teraction. Existing personalized dialogue agents rely on properly designed conversa- tional datasets, which are mostly monolingual (e.g., English), which greatly limits the usage of conversational agents in other languages. In this paper, we propose a multi-lingual ex- tension of Persona-Chat ( Zhang et al. , 2018 ), namely XPersona.  Our dataset includes per- sona conversations in six different languages other than English for building and evaluating multilingual personalized agents. We experi- ment with both multilingual and cross-lingual trained baselines, and evaluate them against monolingual and translation-pipeline models using both automatic and human evaluation.  Experimental results show that the multilin- gual trained models outperform the translation- pipeline and that they are on par with the monolingual models, with the advantage of having a single model across multiple lan- guages. On the other hand, the state-of-the- art cross-lingual trained models achieve infe- rior performance to the other models, showing that cross-lingual conversation modeling is a challenging task.  We hope that our dataset and baselines 1 will accelerate research in multilin- gual dialogue systems.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_i6PlWt9m3RPjKVUcydz33u3w)
+ Call ID: call_i6PlWt9m3RPjKVUcydz33u3w
+  Args:
+    section_id: 7.4
+
+================================= Tool Message =================================
+Name: read_section
+
+5.3.1 Quantitative Analysis
+Table 3 compares monolingual, multilingual, and cross-lingual models in terms of BLEU and per- plexity in the human-translated test set. On both evaluation matrices, the causal decoder models out- perform the encoder-decoder models. We observe that the encoder-decoder model tends to overlook dialogue context and generate digressive responses. (Generated samples are available in Appendix D) We hypothesize that this is because the one-to- many problem ( Zhao et al.  , 2017 ) in open-domain conversation weakens the relation between encoder and decoder; thus the well pre-trained decoder (Bert) easily converges to a locally-optimal, and
+5 AdamW: Adam algorithm with weight decay
+6 The monolingual BERT pre-trained models are available in https://github.com/huggingface/transformers
+7 Available in https://github.com/CZWin32768/XNLG
+ learns to ignore the dialogue context from the en- coder and generate the response in an unconditional language model way. We leave the investigation of this problem to future work. On the other hand, M-CausalBert achieves a comparable or slightly better performance compared to CausalBert, which suggests that M-CausalBert leverages the data from other languages.  As expected, we observe a sig- nificant gap between the cross-lingual model and other models, which indicates that cross-lingual zero-shot conversation modeling is very challeng- ing.Table 4 shows the human evaluation result of comparing M-CausalBert (Multi) against the hu- man, translation-based Poly-encoder (Poly), and monolingual CausalBert (Mono).  The results il- lustrate that Multi outperforms Mono in English and Chinese, and is on par with Mono in other lan- guages. On the other hand, Poly shows a strong performance in English as it was pre-trained with a large-scale English conversation corpus. In con- trast, the performance of Poly drops in other lan- guages, which indicates that the imperfect transla- tion affects translation-based systems.  We also con- duct M-CausalBert (Multi) against XNLG (cross) human evaluation, and Multi achieve nearly 100 percent winning rate.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_eOOegY4AJS9qJRwnt0iXpYPq)
+ Call ID: call_eOOegY4AJS9qJRwnt0iXpYPq
+  Args:
+    pattern: Table 3|BLEU|perplexity|XNLG|cross
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+11 | B Model Detail
+Figure 3 and 4 illustrates the details of the multilin- gual causal decoder and the multilingual encoder- decoder models.Train Lang # Dial. # Utt. Edit BLEU Fr 16878 248244 0.06 99.98 It 16878 248244 1.09 99.8 Id 16878 248244 0.18 99.94 Jp 16878 248244 0.38 99. 17 Ko 16878 248244 0.97 99.51 Zh 16878 248244 0.52 98.1
+Table 7: The number of dialogues (#Dial.) and utter- ances (#Utt.) of the training set in six languages. Edit distance per dialogue and BLEU score are computed to show the difference between the iterative revised dataset and auto-translated dataset. Figure 2: Human evaluation interface modified from ACUTE-EVAL( Li et al. , 2019 )
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_w6uVqs7BrMu4jOSG12gStknq)
+ Call ID: call_w6uVqs7BrMu4jOSG12gStknq
+  Args:
+    section_id: 7.3
+
+================================= Tool Message =================================
+Name: read_section
+
+5.3 Results and Discussion
+
+================================== Ai Message ==================================
+
+They state that the cross-lingual models show a “significant gap” and “inferior performance” compared to the other models. No exact numerical amount is given.

@@ -1,0 +1,110 @@
+================================ Human Message =================================
+
+QUERY:
+what is the size of this improved dataset?
+
+TABLE OF CONTENTS (TOC):
+1 | Enhancing PIO Element Detection in Medical Text Using Contextualized Embedding
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2 Datasets
+1.4 | 3 BERT-Based Classiﬁcation Model
+1.5 | 3.1 Background
+1.6 | 3.2 The Model
+1.7 | 4 Results
+1.8 | 4.1 Performance Comparison
+1.9 | 4.2 Model Boosting
+1.10 | 5 Discussion and Conclusion
+1.11 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_zeSfdlS7JfOLZQxOjQNnNwjA)
+ Call ID: call_zeSfdlS7JfOLZQxOjQNnNwjA
+  Args:
+    pattern: improved dataset|improved data|dataset size|size of.*dataset|improv
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1 | Abstract
+In this paper, we investigate a new approach to Population, Intervention and Outcome (PIO) element detection, a common task in Evidence Based Medicine (EBM). The purpose of this study is two-fold: to build a training dataset for PIO element detection with minimum redun- dancy and ambiguity and to investigate pos- sible options in utilizing state of the art em- bedding methods for the task of PIO element detection.  For the former purpose, we build a new and improved dataset by investigating the shortcomings of previously released datasets. For the latter purpose, we leverage the state of the art text embedding, Bidirectional Encoder Representations from Transformers (BERT), and build a multi-label classifier. We show that choosing a domain specific pre-trained embedding further optimizes the performance of the classifier. Furthermore, we show that the model could be enhanced by using ensem- ble methods and boosting techniques provided that features are adequately chosen.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_7c2WmbF20w38aDQZAkDoKQNy)
+ Call ID: call_7c2WmbF20w38aDQZAkDoKQNy
+  Args:
+    section_id: 1.3
+
+================================= Tool Message =================================
+Name: read_section
+
+2 Datasets
+In this study, we introduce PICONET, a multi- label dataset consisting of sequences with labels Population/Problem (P), Intervention (I), and Out- come (O). This dataset was created by collecting structured abstracts from PubMed and carefully choosing abstract headings representative of the desired categories. The present approach is an im- provement over a similar approach used in ( Jin and Szolovits , 2018 ). Our aim was to perform automatic labeling while removing as much ambiguity as possible. We performed a search on April 11, 2019 on PubMed for 363,078 structured abstracts with the following filters: Article Types (Clinical Trial), Species (Humans), and Languages (En- glish).  Structured abstract sections from PubMed have labels such as introduction, goals, study de- sign, findings, or discussion; however, the major- ity of these labels are not useful for P, I, and O ex- traction since most are general (e.g. methods ) and do not isolate a specific P, I, O sequence.  There- fore, in order to narrow down abstract sections that correspond to the P label, for example, we needed to find a subset of labels such as, but not limited to population , patients , and subjects . We performed a lemmatization of the abstract section labels in order to cluster similar categories such as subject and subjects .  Using this approach, we carefully chose candidate labels for each P, I, and O, and manually looked at a small number of samples for each label to determine if text was representative.Since our goal was to collect sequences that are uniquely representative of a description of Pop- ulation, Intervention, and Outcome, we avoided a keyword-based approach such as in ( Jin and Szolovits , 2018 ). For example, using a keyword-
+ Category Sentences I 22818 I O 7 I P 337 O 10994 P 30106 P O 13 NEGATIVE 32053
+Table 1: Number of occurrences of each category P, I and O in abstracts. based approach would yield a sequence labeled population and methods with the label P, but such abstract sections were not purely about the popu- lation and contained information about the inter- ventions and study design making them poor can- didates for a P label. Thus, we were able to ex- tract portions of abstracts pertaining to P, I, and O categories while minimizing ambiguity and re- dundancy.  Moreover, in the dataset from ( Jin and Szolovits , 2018 ), a section labeled as P that con- tained more than one sentence would be split into multiple P sentences to be included in the dataset. We avoided this approach and kept the full abstract sections.  The full abstracts were kept in conjunc- tion with our belief that keeping the full section retains more feature-rich sequences for each se- quence, and that individual sentences from long abstract sections can be poor candidates for the corresponding label.For sections with labels such as population and intervention , we created a mutli-label. We also included negative examples by taking sentences from sections with headings such as aim .  Further- more, we cleaned the remaining data with various approaches including, but not limited to, language identification, removal of missing values, cleaning unicode characters, and filtering for sequences be- tween 5 and 200 words, inclusive.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_iiLMsglozOvc14IoUUxjxXb4)
+ Call ID: call_iiLMsglozOvc14IoUUxjxXb4
+  Args:
+    pattern: PICONET|multi-label dataset consisting|363,078|Table 1|Number of occurrences
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.10 | 5 Discussion and Conclusion
+In this paper, we presented an improved method- ology to extract PIO elements, with reduced ambi- guity, from abstracts of medical papers. The pro- posed technique was used to build a dataset of PIO elements that we call PICONET. We further pro- posed a model of PIO elements classification us- ing state of the art BERT embedding. It has been shown that using the contextualized BioBERT em- bedding improved the accuracy of the classifier.  This result reinforces the idea of the importance of
+embedding contextualization in subsequent classi- fication tasks in this specific context.In order to enhance the accuracy of the model, we investigated an ensemble method based on the LGBM algorithm.  We trained the LGBM model, with the above models as base learners, to opti- mize the classification by learning a linear combi- nation of the predicted probabilities, for the three classes, with the TF-IDF and QIEF scores. The results indicate that these text features were ade- quate for boosting the contextualized classification model.  We compared the performance of the clas- sifier when using the features with one of the base learners and the case where we combine the base learners along with the features. We obtained the best performance in the latter case.The present work resulted in the creation of a PIO elements dataset, PICONET, and a classifi- cation tool. These constitute an important compo- nent of our system of automatic mining of medical abstracts.  We intend to extend the dataset to full medical articles. The model will be modified to take into account the higher complexity of full text data and more efficient features for model boost- ing will be investigated.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_OZsk5m4QHgXEYGL13Bisn13R)
+ Call ID: call_OZsk5m4QHgXEYGL13Bisn13R
+  Args:
+    pattern: 32053|22818|30106|10994|337|13|7
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.11 | References
+Rohit Borah, Andrew W Brown, Patrice L Capers,and Kathryn A Kaiser. 2017. Analysis of the time and workers needed to conduct systematic reviews of medical interventions using data from the prospero registry. BMJ open , 7(2):e012545.
+Florian Boudin, Jian-Yun Nie, Joan C Bartlett, Roland Grad,Pierre Pluye, and Martin Dawes. 2010. Com- bining classifiers for robust pico element detec- tion. BMC medical informatics and decision mak- ing , 10(1):29.
+Grace Y Chung. 2009. Sentence retrieval for abstracts of randomized controlled trials.BMC medical infor- matics and decision making , 9(1):10.
+Jacob Devlin, Ming-Wei Chang, Kenton Lee, and Kristina Toutanova.2018. Bert: Pre-training of deep bidirectional transformers for language understand- ing. arXiv preprint arXiv:1810.04805 .
+R Brian Haynes, David L Sackett, W Scott Richard- son,William Rosenberg, and G Ross Langley. 1997. Evidence-based medicine: How to practice & teach ebm. Canadian Medical Association. Journal , 157(6):788.
+Jeremy Howard and Sebastian Ruder. 2018.Universal language model fine-tuning for text classification. arXiv preprint arXiv:1801.06146 .
+Di Jin and Peter Szolovits. 2018.Pico element detec- tion in medical text via long short-term memory neu- ral networks. In Proceedings of the BioNLP 2018 workshop , pages 67–75.
+Guolin Ke, Qi Meng, Thomas Finley, Taifeng Wang, Wei Chen,Weidong Ma, Qiwei Ye, and Tie-Yan Liu. 2017. Lightgbm: A highly efficient gradient boost- ing decision tree. In Advances in Neural Informa- tion Processing Systems , pages 3146–3154.
+Quoc Le and Tomas Mikolov. 2014.Distributed repre- sentations of sentences and documents. In Interna- tional conference on machine learning , pages 1188– 1196.
+Jinhyuk Lee, Wonjin Yoon, Sungdong Kim,Donghyeon Kim, Sunkyu Kim, Chan Ho So, and Jaewoo Kang. 2019. Biobert: pre-trained biomed- ical language representation model for biomedical text mining. arXiv preprint arXiv:1901.08746 .
+Lajanugen Logeswaran and Honglak Lee. 2018.An efficient framework for learning sentence represen- tations. arXiv preprint arXiv:1803.02893 .
+Christopher J Merz. 1999. Using correspondence anal- ysis to combine classifiers.Machine Learning , 36(1-2):33–58.
+Tomas Mikolov, Ilya Sutskever, Kai Chen,Greg S Cor- rado, and Jeff Dean. 2013. Distributed representa- tions of words and phrases and their compositional- ity. In Advances in neural information processing systems , pages 3111–3119.
+Matthew E Peters, Waleed Ammar,Chandra Bhagavat- ula, and Russell Power. 2017. Semi-supervised se- quence tagging with bidirectional language models. arXiv preprint arXiv:1705.00108 .
+Alec Radford, Karthik Narasimhan, Time Salimans,and Ilya Sutskever. 2018. Improving language un- derstanding with unsupervised learning. Technical report, Technical report, OpenAI.
+John Rathbone, Loai Albarqouni, Mina Bakhit,Elaine Beller, Oyungerel Byambasuren, Tammy Hoffmann, Anna Mae Scott, and Paul Glasziou. 2017. Expe- diting citation screening using pico-based title-only screening for identifying studies in scoping searches and rapid reviews. Systematic reviews , 6(1):233.
+David L Sackett, William MC Rosenberg, JA Muir Gray,R Brian Haynes, and W Scott Richardson. 1996. Evidence based medicine: what it is and what it isn’t.
+Ashish Vaswani, Noam Shazeer, Niki Parmar,Jakob Uszkoreit, Llion Jones, Aidan N Gomez, Łukasz Kaiser, and Illia Polosukhin. 2017. Attention is all you need. In Advances in neural information pro- cessing systems , pages 5998–6008.
+Yukun Zhu, Ryan Kiros, Rich Zemel,Ruslan Salakhut- dinov, Raquel Urtasun, Antonio Torralba, and Sanja Fidler. 2015. Aligning books and movies: Towards story-like visual explanations by watching movies and reading books. In Proceedings of the IEEE international conference on computer vision , pages 19–27.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_4Gfhjweqs9535r9hmdfEkN3W)
+ Call ID: call_4Gfhjweqs9535r9hmdfEkN3W
+  Args:
+    section_id: 1.3
+
+================================= Tool Message =================================
+Name: read_section
+
+2 Datasets
+In this study, we introduce PICONET, a multi- label dataset consisting of sequences with labels Population/Problem (P), Intervention (I), and Out- come (O). This dataset was created by collecting structured abstracts from PubMed and carefully choosing abstract headings representative of the desired categories. The present approach is an im- provement over a similar approach used in ( Jin and Szolovits , 2018 ). Our aim was to perform automatic labeling while removing as much ambiguity as possible. We performed a search on April 11, 2019 on PubMed for 363,078 structured abstracts with the following filters: Article Types (Clinical Trial), Species (Humans), and Languages (En- glish).  Structured abstract sections from PubMed have labels such as introduction, goals, study de- sign, findings, or discussion; however, the major- ity of these labels are not useful for P, I, and O ex- traction since most are general (e.g. methods ) and do not isolate a specific P, I, O sequence.  There- fore, in order to narrow down abstract sections that correspond to the P label, for example, we needed to find a subset of labels such as, but not limited to population , patients , and subjects . We performed a lemmatization of the abstract section labels in order to cluster similar categories such as subject and subjects .  Using this approach, we carefully chose candidate labels for each P, I, and O, and manually looked at a small number of samples for each label to determine if text was representative.Since our goal was to collect sequences that are uniquely representative of a description of Pop- ulation, Intervention, and Outcome, we avoided a keyword-based approach such as in ( Jin and Szolovits , 2018 ). For example, using a keyword-
+ Category Sentences I 22818 I O 7 I P 337 O 10994 P 30106 P O 13 NEGATIVE 32053
+Table 1: Number of occurrences of each category P, I and O in abstracts. based approach would yield a sequence labeled population and methods with the label P, but such abstract sections were not purely about the popu- lation and contained information about the inter- ventions and study design making them poor can- didates for a P label. Thus, we were able to ex- tract portions of abstracts pertaining to P, I, and O categories while minimizing ambiguity and re- dundancy.  Moreover, in the dataset from ( Jin and Szolovits , 2018 ), a section labeled as P that con- tained more than one sentence would be split into multiple P sentences to be included in the dataset. We avoided this approach and kept the full abstract sections.  The full abstracts were kept in conjunc- tion with our belief that keeping the full section retains more feature-rich sequences for each se- quence, and that individual sentences from long abstract sections can be poor candidates for the corresponding label.For sections with labels such as population and intervention , we created a mutli-label. We also included negative examples by taking sentences from sections with headings such as aim .  Further- more, we cleaned the remaining data with various approaches including, but not limited to, language identification, removal of missing values, cleaning unicode characters, and filtering for sequences be- tween 5 and 200 words, inclusive.
+
+================================== Ai Message ==================================
+
+The improved dataset, PICONET, contains 96,328 sequences in total. This comes from 22,818 I, 7 IO, 337 IP, 10,994 O, 30,106 P, 13 PO, and 32,053 negative examples.

@@ -1,0 +1,103 @@
+================================ Human Message =================================
+
+QUERY:
+What dialects of Chinese are explored?
+
+TABLE OF CONTENTS (TOC):
+1 | Chinese Embedding via Stroke and Glyph Information: A Dual-channel View
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2 Releated Work
+1.4 | 2.1 Morphological Word Representations
+1.5 | 2.2 Embedding for Chinese Language
+1.6 | 3 DWE Model
+1.7 | 4 Experiments
+1.8 | 4.1 Dataset Preparation
+1.9 | 4.2 Experimental Setup
+1.10 | 4.3 Baseline Methods
+1.11 | 4.4 Experimental Results
+1.12 | 5 Conclusions
+1.13 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_I3plyJedfsDtznAQtYEgMGjs)
+ Call ID: call_I3plyJedfsDtznAQtYEgMGjs
+  Args:
+    pattern: dialect|dialects|Chinese
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1 | Abstract
+Recent studies have consistently given posi- tive hints that morphology is helpful in enrich- ing word embeddings. In this paper, we ar- gue that Chinese word embeddings can be sub- stantially enriched by the morphological infor- mation hidden in characters which is reflected not only in strokes order sequentially, but also in character glyphs spatially.  Then, we pro- pose a novel Dual-channel Word Embedding (DWE) model to realize the joint learning of sequential and spatial information of charac- ters. Through the evaluation on both word similarity and word analogy tasks, our model shows its rationality and superiority in mod- elling the morphology of Chinese.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_aXEDWNsiwNk5C5LmhAJFCaNf)
+ Call ID: call_aXEDWNsiwNk5C5LmhAJFCaNf
+  Args:
+    section_id: 1.8
+
+================================= Tool Message =================================
+Name: read_section
+
+4.1 Dataset Preparation
+We download parts of Chinese Wikipedia articles from Large-Scale Chinese Datasets for NLP 5 . For word segmentation and filtering the stopwords, we apply the jieba 6 toolkit based on the stopwords ta- ble 7 . Finally, we get 11,529,432 segmented words. In accordance with their work ( Chen et al.  , 2015 ), all items whose Unicode falls into the range be- tween 0x4E00 and 0x9FA5 are Chinese charac- ters. We crawl the stroke information of all 20,402 characters from an online dictionary 8 and render each character glyph to a 28 × 28 1-bit grayscale bitmap by using Pillow 9 .
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_hF8wliPoaO3QYsrewGHoGj6w)
+ Call ID: call_hF8wliPoaO3QYsrewGHoGj6w
+  Args:
+    pattern: Mandarin|Cantonese|dialect|Simplified|Traditional|Wikipedia|Chinese Wikipedia
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.4 | 2.1 Morphological Word Representations
+Traditional methods on getting word embeddings are mainly based on the distributional hypothesis ( Harris , 1954 ): words with similar contexts tend to have similar semantics. To explore more inter- pretable models, some scholars have gradually no- ticed the importance of the morphology of words in conveying semantics ( Luong et al. , 2013 ; Qiu et al.  , 2014 ), and some studies have proved that the morphology of words can indeed enrich the semantics of word embeddings ( Sak et al. , 2010 ; Soricut and Och , 2015 ; Cotterell and Sch¨utze , 2015 ). More recently, Wieting et al. ( 2016 ) pro- posed to represent words using character n -gram count vectors. Further, Bojanowski et al.  ( 2017 ) improved the classic skip-gram model ( Mikolov et al. , 2013 ) by taking subwords into account in the acquisition of word embeddings, which is in- structive for us to regard certain stroke sequences as roots in English.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_kROlu8QomGhFMuVE7R0Mgyce)
+ Call ID: call_kROlu8QomGhFMuVE7R0Mgyce
+  Args:
+    pattern: Taiwan|Hong Kong|Mainland|Cantonese|Mandarin|Hokkien|Wu|Min|dialect
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.13 | References
+Piotr Bojanowski, Edouard Grave, Armand Joulin,and Tomas Mikolov. 2017. Enriching word vectors with subword information. Transactions of the Associa- tion for Computational Linguistics , 5:135–146.
+Shaosheng Cao, Wei Lu, Jun Zhou, and Xiaolong Li.2018. cw2vec: Learning chinese word embeddings with stroke n-gram information. In Thirty-Second AAAI Conference on Artificial Intelligence .
+Xinxiong Chen, Lei Xu, Zhiyuan Liu,Maosong Sun, and Huanbo Luan. 2015. Joint learning of character and word embeddings. In Twenty-Fourth Interna- tional Joint Conference on Artificial Intelligence .
+Ryan Cotterell and Hinrich Sch¨utze. 2015.Morpho- logical word-embeddings. In Proceedings of the 2015 Conference of the North American Chapter of the Association for Computational Linguistics: Hu- man Language Technologies , pages 1287–1292.
+Peng Cui, Xiao Wang, Jian Pei, and Wenwu Zhu.2018. A survey on network embedding. IEEE Transac- tions on Knowledge and Data Engineering .
+Chuanhai Dong, Jiajun Zhang, Chengqing Zong,Masanori Hattori, and Hui Di. 2016. Character- based lstm-crf with radical-level features for chi- nese named entity recognition. In Natural Language Understanding and Intelligent Applications , pages 239–250. Springer.
+John Duchi, Elad Hazan, and Yoram Singer. 2011.Adaptive subgradient methods for online learning and stochastic optimization. Journal of Machine Learning Research , 12(Jul):2121–2159.
+Zellig S Harris. 1954. Distributional structure. Word ,10(2-3):146–162.
+Peng Jin and Yunfang Wu. 2012.Semeval-2012 task 4: evaluating chinese word similarity. In Proceedings of the First Joint Conference on Lexical and Com- putational Semantics-Volume 1: Proceedings of the main conference and the shared task, and Volume 2: Proceedings of the Sixth International Workshop on Semantic Evaluation , pages 374–377. Associa- tion for Computational Linguistics.
+Stefan Knecht, Michael Deppe, Bianca Dr¨ager,L Bobe, Hubertus Lohmann, E-B Ringelstein, and H Henningsen. 2000. Language lateralization in healthy right-handers. Brain , 123(1):74–81.
+Yann LeCun, L´eon Bottou, Yoshua Bengio,Patrick Haffner, et al. 1998. Gradient-based learning ap- plied to document recognition. Proceedings of the IEEE , 86(11):2278–2324.
+Omer Levy and Yoav Goldberg. 2014.Linguistic reg- ularities in sparse and explicit word representations. In Proceedings of the eighteenth conference on com- putational natural language learning , pages 171– 180.
+Thang Luong, Richard Socher, and Christopher Man- ning. 2013.Better word representations with recur- sive neural networks for morphology. In Proceed- ings of the Seventeenth Conference on Computa- tional Natural Language Learning , pages 104–113.
+Tomas Mikolov, Kai Chen, Greg Corrado,and Jef- frey Dean. 2013. Efficient estimation of word representations in vector space. arXiv preprint arXiv:1301.3781 .
+Eraldo Paulesu, Eamon McCrory, Ferruccio Fazio,Lorena Menoncello, Nicola Brunswick, Stefano F Cappa, Maria Cotelli, Giuseppe Cossu, Francesca Corte, M Lorusso, et al. 2000. A cultural effect on brain function. Nature neuroscience , 3(1):91.
+Jeffrey Pennington, Richard Socher, and Christopher Manning. 2014.Glove: Global vectors for word representation. In Proceedings of the 2014 confer- ence on empirical methods in natural language pro- cessing (EMNLP) , pages 1532–1543.
+Siyu Qiu, Qing Cui, Jiang Bian, Bin Gao,and Tie-Yan Liu. 2014. Co-learning of word representations and morpheme representations. In Proceedings of COL- ING 2014, the 25th International Conference on Computational Linguistics: Technical Papers , pages 141–150.
+Has¸im Sak, Murat Saraclar,and Tunga G¨ung¨or. 2010. Morphology-based and sub-word language model- ing for turkish speech recognition. In 2010 IEEE International Conference on Acoustics, Speech and Signal Processing , pages 5402–5405. IEEE.
+Radu Soricut and Franz Och. 2015.Unsupervised mor- phology induction using word embeddings. In Pro- ceedings of the 2015 Conference of the North Amer- ican Chapter of the Association for Computational Linguistics: Human Language Technologies , pages 1627–1637.
+Jane A Springer, Jeffrey R Binder, Thomas A Ham- meke,Sara J Swanson, Julie A Frost, Patrick SF Bellgowan, Cameron C Brewer, Holly M Perry, George L Morris, and Wade M Mueller. 1999. Language dominance in neurologically normal and epilepsy subjects: a functional mri study. Brain , 122(11):2033–2046.
+Tzu-Ray Su and Hung-Yi Lee. 2017.Learning chi- nese word representations from glyphs of characters. arXiv preprint arXiv:1708.04755 .
+Yaming Sun, Lei Lin, Nan Yang, Zhenzhou Ji,and Xiaolong Wang. 2014. Radical-enhanced chinese character embedding. In International Conference on Neural Information Processing , pages 279–286. Springer.
+Li Hai Tan, John A Spinks, Jia-Hong Gao,Ho-Ling Liu, Charles A Perfetti, Jinhu Xiong, Kathryn A Stofer, Yonglin Pu, Yijun Liu, and Peter T Fox. 2000. Brain activation in the processing of chinese characters and words: a functional mri study. Hu- man brain mapping , 10(1):16–27.
+John Wieting, Mohit Bansal, Kevin Gimpel,and Karen Livescu. 2016. Charagram: Embedding words and sentences via character n-grams. arXiv preprint arXiv:1607.02789 .
+Wei Wu, Yuxian Meng, Qinghong Han, Muyu Li,Xiaoya Li, Jie Mei, Ping Nie, Xiaofei Sun, and Jiwei Li. 2019. Glyce: Glyph-vectors for chi- nese character representations. arXiv preprint arXiv:1901.10125 .
+Rongchao Yin, Quan Wang, Peng Li, Rui Li,and Bin Wang. 2016. Multi-granularity chinese word em- bedding. In Proceedings of the 2016 Conference on Empirical Methods in Natural Language Process- ing , pages 981–986.
+Jinxing Yu, Xun Jian, Hao Xin, and Yangqiu Song.2017. Joint embeddings of chinese words, char- acters, and fine-grained subcharacter components. In Proceedings of the 2017 Conference on Empiri- cal Methods in Natural Language Processing , pages 286–291.
+Jerrold H Zar. 1972.Significance testing of the spear- man rank correlation coefficient. Journal of the American Statistical Association , 67(339):578–580.
+
+================================== Ai Message ==================================
+
+Unanswerable

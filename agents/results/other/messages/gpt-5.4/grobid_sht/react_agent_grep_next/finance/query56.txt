@@ -1,0 +1,174 @@
+================================ Human Message =================================
+
+QUERY:
+Considering the data in the balance sheet, what is Block's (formerly known as Square) FY2016 working capital ratio? Define working capital ratio as total current assets divided by total current liabilities. Round your answer to two decimal places.
+
+TABLE OF CONTENTS (TOC):
+1 | Abstract
+2 | SPECIALNOTEREGARDINGFORWARD-LOOKINGSTATEMENTS
+3 | Online/cardnotpresent(CNP)payments
+4 | SquareCash
+5 | SquarePointofSale
+6 | Developerplatform
+7 | SquareCapital
+8 | Caviar
+9 | OurSellers
+10 | SalesandMarketing
+11 | OurCompetition
+12 | IntellectualProperty
+13 | GovernmentRegulation
+14 | PaymentsRegulation
+15 | ConsumerFinancialProtection
+16 | Anti-MoneyLaundering
+17 | ProtectionandUseofInformation
+18 | CommunicationsRegulation
+19 | AdditionalDevelopments
+20 | OurEmployees
+21 | CorporateInformation
+22 | AvailableInformation
+23 | Item1A.RISKFACTORS
+24 | RisksRelatedtoOurBusinessandOurIndustry
+25 | Ourgrowthmaynotbesustainableanddependsonourabilitytoretainexistingsellers,attractnewsellers,andincreasesalestobothnewandexistingsellers.
+26 | Our business has generated net losses, and we intend to continue to invest substantially in our business. Thus, we may not be able to achieve or maintain profitability.
+27 | Ourriskmanagementeffortsmaynotbeeffective,whichcouldexposeustolossesandliabilityandotherwiseharmourbusiness.
+28 | Wederivesubstantiallyallofourrevenuefrommanagedpaymentsservices.Oureffortstoexpandourproductportfolioandmarketreachmaynotsucceed andmayreduceourrevenuegrowth.
+29 | Our success depends on our ability to develop products and services to address the rapidly evolving market for payments and point-of-sale, financial, and marketing services, and, if we are not able to implement successful enhancements and new features for our products and services, our business could be materiallyandadverselyaffected.
+30 | Substantialandincreasinglyintensecompetitioninourindustrymayharmourbusiness.
+31 | Wearedependentonpaymentcardnetworksandacquiringprocessors,andanychangestotheirrulesorpracticescouldharmourbusiness.
+32 | Ourquarterlyresultsofoperationsandoperatingmetricsfluctuatesignificantlyandareunpredictableandsubjecttoseasonality,whichcouldresultinthe tradingpriceofourClassAcommonstockbeingunpredictableordeclining.
+33 | Wedependonkeymanagement,aswellasourexperiencedandcapableemployees,andanyfailuretoattract,motivate,andretainouremployeescouldharm ourabilitytomaintainandgrowourbusiness.
+34 | If we do not continue to improve our operational, financial and other internal controls and systems to manage growth effectively, our business could be harmed.
+35 | Adeteriorationofgeneralmacroeconomicconditionscouldmateriallyandadverselyaffectourbusinessandfinancialresults.
+36 | If we are unable to maintain, promote, and grow our brand through effective marketing and communications strategies, our brand and business may be harmed.
+37 | Expandingourbusinessgloballycouldsubjectustonewchallengesandrisks.
+38 | Werelyonthirdpartiesandtheirsystemsforavarietyofservices,includingtheprocessingoftransactiondataandsettlementoffundstousandoursellers, andthesethirdparties'failuretoperformtheseservicesadequatelycouldmateriallyandadverselyaffectourbusiness.
+39 | Ourservicesmustintegratewithavarietyofoperatingsystems,andthehardwarethatenablesmerchantstoacceptpaymentcardsmustinteroperatewiththirdpartymobiledevicesutilizingthoseoperatingsystems.Ifweareunabletoensurethatourservicesorhardwareinteroperatewithsuchoperatingsystemsand devices,ourbusinessmaybemateriallyandadverselyaffected.
+40 | Manyofourkeycomponentsareprocuredfromasingleorlimitednumberofsuppliers.Thus,weareatriskofshortage,priceincreases,changes,delay,or discontinuationofkeycomponents,whichcoulddisruptandmateriallyandadverselyaffectourbusiness.
+41 | Ourbusinesscouldbeharmedifweareunabletoaccuratelyforecastdemandforourproductsandtoadequatelymanageourproductinventory.
+42 | Ourproductsandservicesmaynotfunctionasintendedduetoerrorsinoursoftware,hardware,andsystems,productdefects,orduetosecuritybreachesor humanerrorinadministeringthesesystems,whichcouldmateriallyandadverselyaffectourbusiness.
+43 | Systemsfailures,interruptions,delaysinservice,catastrophicevents,andresultinginterruptionsintheavailabilityofourproductsorservices,orthoseofour sellers,couldharmourbusinessandourbrand,andsubjectustosubstantialliability.
+44 | SquareCapitalissubjecttoadditionalrisksrelatingtotheavailabilityofcapital,sellerreceivablespayments,availabilityandstructureofitsbankpartnership andgeneralmacroeconomicconditions.
+45 | Ourbusinessissubjecttoextensiveregulationandoversightinavarietyofareas,allofwhicharesubjecttochangeanduncertaininterpretation.
+46 | Ourbusinessissubjecttocomplexandevolvingregulationsandoversightrelatedtoourprovisionofpaymentsservicesandotherfinancialservices.
+47 | Wearesubjecttorisksrelatedtolitigation,includingintellectualpropertyclaimsandregulatorydisputes.
+48 | Wemaynotbeabletosecurefinancingonfavorableterms,oratall,tomeetourfuturecapitalneeds.
+49 | Anyacquisitions,strategicinvestments,entriesintonewbusinesses,divestitures,andothertransactionscouldfailtoachievestrategicobjectives,disruptour ongoingoperations,andharmourbusiness.
+50 | OurreportedfinancialresultsmaybemateriallyandadverselyaffectedbychangesinaccountingprinciplesgenerallyacceptedintheUnitedStates.
+51 | Wemayhaveexposuretogreater-than-anticipatedtaxliabilities,whichmaymateriallyandadverselyaffectourbusiness.
+52 | Thedualclassstructureofourcommonstockhastheeffectofconcentratingvotingcontrolwithinourstockholderswhoheldourstockpriortoourinitial publicoffering,includingmanyofouremployeesanddirectorsandtheiraffiliates;thiswilllimitorprecludeyourabilitytoinfluencecorporatematters.
+53 | Wewillcontinuetoincursignificantlyincreasedcostsanddevotesubstantialmanagementtimeasaresultofoperatingasapubliccompany.
+54 | Ifweareunabletomaintaineffectivedisclosurecontrolsandinternalcontrolsoverfinancialreporting,investorsmayloseconfidenceintheaccuracyand completenessofourfinancialreports,andthemarketpriceofourClassAcommonstockmaybemateriallyandadverselyaffected.
+55 | ThemarketpriceofourClassAcommonstockhasbeenandwilllikelycontinuetobevolatile,andyoucouldloseallorpartofyourinvestment.
+56 | Anti-takeoverprovisionscontainedinouramendedandrestatedcertificate ofincorporation,ouramendedandrestatedbylaws,andprovisionsofDelaware law,couldimpairatakeoverattempt.
+57 | Our amended and restated bylaws provide that the Court of Chancery of the State of Delaware will be the sole and exclusive forum for substantially all disputesbetweenusandourstockholders,whichcouldlimitourstockholders'abilitytoobtainafavorablejudicialforumfordisputeswithusorourdirectors, officers,oremployees.
+58 | If securities or industry analysts publish reports that are interpreted negatively by the investment community, publish negative research reports about our business,orceasecoverageofourcompanyorfailtoregularlypublishreportsonus,oursharepriceandtradingvolumecoulddecline.
+59 | Wedonotintendtopaydividendsfortheforeseeablefuture.
+60 | Additionalstockissuancescouldresultinsignificantdilutiontoourstockholders.
+61 | Item2.PROPERTIES
+62 | Item3.LEGALPROCEEDINGS
+63 | Item4.MINESAFETYDISCLOSURES
+64 | Item5.MARKETFORREGISTRANT'SCOMMONEQUITYRELATEDSTOCKHOLDERMATTERSANDISSUERPURCHASESOFEQUITY SECURITIES MarketInformationforCommonStock
+65 | DividendPolicy
+66 | UnregisteredSalesofEquitySecurities
+67 | IssuerPurchasesofEquitySecurities
+68 | PerformanceGraph
+69 | Company
+70 | Item6.SELECTEDFINANCIALDATA
+71 | KeyOperatingMetricsandNon-GAAPFinancialMeasures
+72 | YearEndedDecember31
+73 | GrossPaymentVolume(GPV)
+74 | AdjustedRevenue
+75 | Item7.MANAGEMENT'SDISCUSSIONANDANALYSISOFFINANCIALCONDITIONANDRESULTSOFOPERATIONS
+76 | Overview
+77 | OperatingMetricOverview(inthousands
+78 | ChangestotheDescriptionofRevenueandCostofRevenueLineItems
+79 | Revenue
+80 | CostofRevenueandGrossMargin
+81 | Starbucks transaction-based costs. Starbucks transaction-based costs consist of the same components as our overall transaction-based costs.
+82 | OperatingExpenses
+83 | InterestandOtherIncomeandExpense
+84 | Revenue(inthousands,exceptforpercentages)
+85 | Comparison of Years Ended
+86 | SalesandMarketing(inthousands,exceptforpercentages)
+87 | GeneralandAdministrative(inthousands,exceptforpercentages)
+88 | Transaction.LoanandAdvanceLosses(inthousands,exceptforpercentages)
+89 | AmortizationofAcquiredCustomerAssets(inthousands,exceptforpercentages)
+90 | InterestandOtherIncomeandExpense,net(inthousands,exceptforpercentages)
+91 | ProvisionforIncomeTaxes(inthousands,exceptforpercentages)
+92 | QuarterlyResultsofOperations
+93 | QuarterlyTrends
+94 | LiquidityandCapitalResources
+95 | CashFlowsfromOperatingActivities
+96 | CashFlowsfromInvestingActivities
+97 | CashFlowsfromFinancingActivities
+98 | ContractualObligationsandCommitments
+99 | Paymentsduebyperiod
+100 | LeaseCommitments
+101 | Purchasecommitments
+102 | Off-balanceSheetArrangements
+103 | CriticalAccountingPoliciesandEstimates
+104 | RecentAccountingPronouncements
+105 | ITEM7A.QUANTITATIVEANDQUALITATIVEDISCLOSURESABOUTMARKETRISK
+106 | InterestRateSensitivity
+107 | ForeignCurrencyRisk
+108 | ConcentrationofCreditRisk
+109 | FairValueofFinancialInstruments
+110 | LoansHeldforSale
+111 | CustomersPayable
+112 | AccruedTransactionLosses
+113 | NOTE8-ACQUIREDINTANGIBLEASSETS
+114 | NOTE11-DEBT
+115 | NOTE12-ACCRUEDTRANSACTIONLOSSES
+116 | InitialPublicOffering
+117 | ConvertiblePreferredStock
+118 | RestrictedStockActivity
+119 | NOTE15-NETLOSSPERSHARE
+120 | NOTE17-SEGMENTANDGEOGRAPHICALINFORMATION
+121 | Long-LivedAssets
+122 | Management'sReportonInternalControloverFinancialReporting
+123 | None.
+124 | Annual Cash Retainer
+125 | Committee Chair and Committee Member Annual Cash Retainers
+126 | 2.EQUITYCOMPENSATION
+127 | (iii)
+128 | (iv)
+129 | 3.ADDITIONALPROVISIONS
+130 | 4.REVISIONS
+131 | HillarySmith
+132 | annex
+133 | ProvisionforIncomeTaxes
+134 | DeemedDividendonSeriesEPreferredStock
+135 | REPORTOFINDEPENDENTREGISTEREDPUBLICACC...(truncated)
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_Z0cl3DpDjd3AKBfrGiCx4Zyw)
+ Call ID: call_Z0cl3DpDjd3AKBfrGiCx4Zyw
+  Args:
+    pattern: (?i)total current assets|total current liabilities|balance sheet|December 31, 2016
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1 | Abstract
+FORM10-K (MarkOne) ý ýANNUALREPORTPURSUANTTOSECTION13OR15(d)OFTHESECURITIESEXCHANGEACTOF1934 ForthefiscalyearendedDecember31,2016 OR o oTRANSITIONREPORTPURSUANTTOSECTION13OR15(d)OFTHESECURITIESEXCHANGEACTOF1934 Forthetransitionperiodfromto CommissionFileNumber001-37622 SQUARE,INC.  (Exactnameofregistrantasspecifiedinitscharter) Delaware 80-0429876 (Stateorotherjurisdictionof incorporationororganization) (I.R.S. Employer IdentificationNumber) 1455MarketStreet,Suite600 SanFrancisco,CA94103 (Addressofprincipalexecutiveoffices,includingzipcode) (415)375-3176 (Registrant'stelephonenumber,includingareacode) SecuritiesregisteredpursuanttoSection12(b)oftheAct: TitleofEachClass Nameofeachexchangeonwhichregistered Class A Common Stock, $0. 0000001 par value per share New York Stock Exchange PARTI Item1.BUSINESS
+We started Square in February 2009 to enable businesses (sellers) to accept card payments, an important capability that was previously inaccessible to many businesses. However, sellers also need innovative solutions to thrive, and we have since expanded to provide additional products and services to provide these businesses with access to the same tools as large businesses.  This approach aligns with our purpose of economic empowerment, as everything we do should give sellers accessible, affordable tools to grow their businesses and participate in the economy.Square is a cohesive commerce ecosystem that helps our sellers start, run, and grow their businesses. We combine sophisticated software with affordable hardware to enable sellers to turn mobile devices and computing devices into powerful payment and point-of-sale solutions.  We have high seller acceptance rates and fast onboarding, while maintaining low risk and fraud losses as a result of our approach to risk management that emphasizes data science and machine learning. We focus on technology and design to create products and services that are cohesive, fast, self-serve, and dependable. These attributes differentiate us in a fragmented industry that forces sellers to stitch together hardware, software, and payments services from multiple vendors.The foundation of our ecosystem is a full service, managed payments offering.  Once a seller downloads the Square Point of Sale mobile app, they can quickly and easily take their first payment, because we can typically bring them onto our system in minutes. With our offering, a seller can accept payments in person via magnetic stripe (a swipe), EMV (Europay, MasterCard, and Visa) (a dip), or NFC (Near Field Communication) (a tap); or online via Square Invoices, Square Virtual Terminal, or the seller's website.  Once on our system, sellers gain access to technology and features such as reporting and analytics, next-day settlements, digital receipts, payment dispute management and chargeback protection, and Payment Card Industry (PCI) compliance. On the consumer (buyer) side, Square Cash offers individuals access to a fast, easy way to send and receive money electronically to and from individuals and businesses. Our commerce ecosystem also includes powerful point-of-sale software and services that help sellers make informed business decisions through the use of analytics and reporting. As a result, sellers can manage orders, inventory, locations, employees, and payroll; engage and grow their sales with customers; and gain access to business loans. We monetize these features through either a per transaction fee, a subscription fee, or a service fee.  Some of these advanced point-ofsale features are broadly applicable to our seller base and include Employee Management and Customer Engagement. With our Square Capital service, we facilitate the offering of loans to sellers based on their payment processing history, and the product is broadly applicable across our seller base. We have also extended our ecosystem to serve sellers with more specific needs.  Our Build with Square developer platform (APIs) allows businesses with individualized needs to customize their business solutions while processing payments on Square and taking advantage of all the services in our ecosystem, including integration with thirdparty applications. In addition, certain verticals, such as service and retail sellers, benefit from specific features such as Invoices, Appointments, and Square Inventory. We also serve sellers through Caviar, a food ordering service that helps restaurants reach new customers and increase sales without additional overhead. We have grown rapidly to serve millions of sellers that represent a diverse set of industries, including retail, services, and food-related businesses, and sizes, ranging from a single vendor at a farmers' market to multi-location businesses. These sellers also span geographies including the United States, Canada, Japan, and Australia. We believe the diversity of our sellers underscores the accessibility and flexibility of our offerings. In the year ended December 31, 2016 , we processed $49. 7 billion of Gross Payment Volume (GPV), which was generated by 1 billion card payments from approximately 245 million payment cards. We processed $35.6 billion and $23.8 billion of GPV in 2015 and 2014 , respectively.Our ability to add new sellers efficiently, and help them grow their business after they join our platform, has led to continued and sustained growth.  Our existing sellers also represent a sizable opportunity to up-sell and cross-sell products and services with little incremental sales and marketing expense. Additionally, we are increasingly serving larger sellers, which we define as those that generate more than $125,000 in annualized GPV. GPV from larger sellers represented 42% of our GPV in the fourth quarter of 2016, an increase from 39% in the fourth quarter of 2015.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_gpSzxT4QlkdbG3fgapSaylaI)
+ Call ID: call_gpSzxT4QlkdbG3fgapSaylaI
+  Args:
+    pattern: (?i)current assets|current liabilities
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+107 | ForeignCurrencyRisk
+Most of our revenue is earned in U.S. dollars, and therefore our revenue is not currently subject to significant foreign currency risk. Our foreign operations are denominated in the currencies of the countries in which our operations are located, and may be subject to fluctuations due to changes in foreign currency exchange rates, particularly changes in the Japanese Yen, Canadian Dollar, and Australian Dollar. Fluctuations in foreign currency exchange rates may cause us to recognize transaction
+SQUARE,INC.  CONSOLIDATEDBALANCESHEETS (In thousands, except share and per share data) December31, 2016 2015 Assets Current assets: Cash and cash equivalents $ 452,030 $ 461,329 Short-term investments 59,901 -Restricted cash 22,131 13,537 Settlements receivable 321,102 142,727 Customer funds held 43,574 9,446 Loans held for sale 42,144 604 Merchant cash advance receivable, net 4,212 36,473 Other current assets 56,331 41,447 Total current assets 1,001,425 705,563 Property and equipment, net 88,328 87,222 Goodwill 57,173 56,699 Acquired intangible assets, net 19,292 26,776 Long-term investments 27,366 -Restricted cash 14,584 14,686 Other assets 3,194 3,826 Total assets $ 1,211,362 $ 894,772 LiabilitiesandStockholders'Equity Current liabilities: Accounts payable $ 12,602 $ 18,869 Customers payable 388,058 215,365 Customer funds obligation 43,574 9,446 Accrued transaction losses 20,064 17,176 Accrued expenses 39,543 44,401 Other current liabilities 73,623 28,945 Total current liabilities 577,464 334,202 Debt (Note 11) --Other liabilities 57,745 52,522 Total liabilities 635,209 386,724 Commitments and contingencies (Note 16) Stockholders' equity: Preferred stock, $0. 0000001 par value: 100,000,000 shares authorized at December 31, 2016 and December 31, 2015. None issued and outstanding at December 31, 2016 and December 31, 2015.--Class A common stock, $0. 0000001 par value: 1,000,000,000 shares authorized at December 31, 2016 and December 31, 2015; 198,746,620 and 31,717,133 issued and outstanding at December 31, 2016 and December 31, 2015 , respectively.--Class B common stock, $0. 0000001 par value: 500,000,000 shares authorized at December 31, 2016 and December 31, 2015; 165,800,756 and 303,232,312 issued and outstanding at December 31, 2016 and December 31, 2015, respectively.  --Additional paid-in capital 1,357,381 1,116,882 Accumulated other comprehensive loss (1,989) (1,185) Accumulated deficit (779,239) (607,649) Total stockholders' equity 576,153 508,048 Total liabilities and stockholders' equity $ 1,211,362 $ 894,772 See accompanying notes to consolidated financial statements. SQUARE,INC.  CONSOLIDATEDSTATEMENTSOFOPERATIONS (In thousands, except per share data) YearEndedDecember31, 2016 2015 2014 Revenue: Transaction-based revenue $ 1,456,160 $ 1,050,445 $ 707,799 Starbucks transaction-based revenue 78,903 142,283 123,024 Subscription and services-based revenue 129,351 58,013 12,046 Hardware revenue 44,307 16,377 7,323 Total net revenue 1,708,721 1,267,118 850,192 Cost of revenue: Transaction-based costs 943,200 672,667 450,858 Starbucks transaction-based costs 69,761 165,438 150,955 Subscription and services-based costs 43,132 22,470 2,973 Hardware costs 68,562 30,874 18,330 Amortization of acquired technology 8,028 5,639 1,002 Total cost of revenue 1,132,683 897,088 624,118 Gross profit 576,038 370,030 226,074 Operating expenses: Product development 268,537 199,638 144,637 Sales and marketing 173,876 145,618 112,577 General and administrative 251,993 143,466 94,220 Transaction, loan and advance losses 51,235 54,009 24,081 Amortization of acquired customer assets 850 1,757 1,050 Total operating expenses 746,491 544,488 376,565 Operating loss (170,453) (174,458) (150,491) Interest and other (income) expense, net (780) 1,613 2,162 Loss before income tax (169,673) (176,071) (152,653) Provision for income taxes 1,917 3,746 1,440 Net loss (171,590) (179,817) (154,093) Deemed dividend on Series E preferred stock -(32,200) -Net loss attributable to common stockholders $ (171,590) $ (212,017) $ (154,093) Net loss per share attributable to common stockholders: Basic $ (0. 50) $ (1.24) $ (1.08) Diluted $ (0.50) $ (1.24) $ (1.08) Weighted-average shares used to compute net loss per share attributable to common stockholders: Basic 341,555 170,498 142,042 Diluted 341,555 170,498 142,042 See accompanying notes to consolidated financial statements. SQUARE,INC.  CONSOLIDATEDSTATEMENTSOFCOMPREHENSIVELOSS (In thousands) YearEndedDecember31, 2016 2015 2014 Net loss $ (171,590) $ (179,817) $ (154,093) Net foreign currency translation adjustments (716) (356) (114) Net unrealized loss on revaluation of intercompany loans (11) (22) -Net unrealized loss on marketable securities (77) --Total comprehensive loss $ (172,394) $ (180,195) $ (154,207) See accompanying notes to consolidated financial statements.  SQUARE,INC.  CONSOLIDATEDSTATEMENTSOFCASHFLOWS (In thousands) YearEndedDecember31, 2016 2015 2014 Cashflowsfromoperatingactivities: Net loss $ (171,590) $ (179,817) $ (154,093) Adjustments to reconcile net loss to net cash (used in) provided by operating activities: Depreciation and amortization 37,745 27,626 18,586 Share-based compensation 138,786 82,292 36,100 Excess tax benefit from share-based payment activity -(1,101) (1,348) Provision for transaction losses 50,819 43,379 18,478 Provision for uncollectible receivables related to merchant cash advances 1,159 6,240 2,431 Deferred provision for income taxes 58 26 (2,664) (Gain) loss on disposal of property and equipment (49) 270 133 Changes in operating assets and liabilities: Settlements receivable (178,405) (27,420) (50,361) Customer funds held (34,128) (6,462) (2,985) Purchase of loans held for sale (668,976) (816) -Proceeds from sales and principal payments of loans held for sale 627,627 21 -Merchant cash advance receivable 31,102 (13,411) (31,733) Other current assets (14,986) (12,430) (14,323) Other assets 631 1,220 (636) Accounts payable (2,147) 7,831 179 Customers payable 172,446 69,547 49,971 Customer funds obligation 34,128 6,462 2,985 Charge-offs and recoveries to accrued transaction losses (47,931) (34,655) (17,514) Accrued expenses (409) 21,450 8,113 Other current liabilities 44,102 19,760 3,007 Other liabilities 3,149 11,111 23,295 Net cash (used in) provided by operating activities 23,131 21,123 (112,379) Cashflowsfrominvestingactivities: Purchase of marketable securities (164,766) --Maturities of marketable securities 43,200 --Sales of marketable securities 34,222 --Purchase of property and equipment (25,433) (37,432) (28,794) Proceeds from sale of property and equipment 296 --Payment for acquisition of intangible assets (400) (1,286) (400) Increases in restricted cash (8,492) (1,878) (7,075) Business acquisitions (net of cash acquired) (1,360) (4,500) 11,715 Net cash used in investing activities: (122,733) (45,096) (24,554) Cashflowsfromfinancingactivities: Proceeds from issuance of preferred stock, net -29,952 148,748 Proceeds from issuance of common stock upon initial public offering, net of offering costs -251,257 -Payments of offering costs related to initial public offering (5,530) --Proceeds from debt --30,000 Principal payments on debt -(30,000) -Payments of debt issuance costs -(1,387) -Principal payments on capital lease obligation (168) --Proceeds from issuances of common stock from the exercise of options and employee stock purchase plan 96,439 13,840 14,056 Excess tax benefit from share-based payment award -1,101 1,348 Net cash provided by financing activities 90,741 264,763 194,152 Effect of foreign exchange rate on cash and cash equivalents (438) (1,776) (1,080) Net increase (decrease) in cash and cash equivalents (9,299) 239,014 56,139 Cash and cash equivalents, beginning of the year 461,329 222,315 166,176 Cash and cash equivalents, end of the year $ 452,030 $ 461,329 $ 222,315
+ See accompanying notes to consolidated financial statements.As of December 31, 2016 and 2015 , the remaining restricted cash of $14.6 million and $14.7 million , respectively, is primarily related to cash deposited into money market funds that is used as collateral pursuant to multi-year lease agreements entered into in 2012 and 2014 (Note 16 ) .  The Company has recorded this amount as a non-current asset on the consolidated balance sheets as the terms of the related leases extend beyond one year.
+
+================================== Ai Message ==================================
+
+3.47

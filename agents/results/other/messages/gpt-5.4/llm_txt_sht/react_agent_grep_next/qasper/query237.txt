@@ -1,0 +1,68 @@
+================================ Human Message =================================
+
+QUERY:
+How is the system constructed to be linear in the size of the narrative input and the terminology?
+
+TABLE OF CONTENTS (TOC):
+1 | From narrative descriptions to MedDRA: automagically encoding adverse drug reactions
+1.1 | Abstract
+1.2 | 1. Introduction
+1.3 | 2. Background and related work
+1.3.1 | 2.1. Natural language processing and text mining in medicine
+1.3.2 | 2.2. MedDRA Dictionary
+1.4 | 3. MagiCoder: an NLP software for ADR automatic encoding
+1.4.1 | 3.1. MagiCoder: overview
+1.4.1.1 | 3.1.1. Deﬁnition of ad hoc data structures
+1.4.1.2 | 3.1.2. Preprocessing of the original ADR description
+1.4.1.3 | 3.1.3. Word-by-word linear scan of the description and voting task
+1.4.1.4 | 3.1.4. Weight calculation
+1.4.1.5 | 3.1.5. Selection, ordering and release of winning terms
+1.4.2 | 3.2. MagiCoder: structure of the algorithm
+1.4.3 | 3.3. MagiCoder complexity analysis
+1.5 | 4. Software implementation: the user interface
+1.6 | 5. Testing MagiCoder performances
+1.6.1 | 5.1. Experiment about MagiCoder performances
+1.6.1.1 | 5.1.1. Experiment: analysis of results
+1.6.2 | 5.2. Examples
+1.7 | 6. Discussion
+1.7.1 | 6.1. Stemming and performance of the NLP software
+1.7.2 | 6.2. Synonyms
+1.7.3 | 6.3. Connectives in the narrative descriptions
+1.7.4 | 6.4. On the selection of voted terms
+1.8 | 7. Conclusions and future work
+1.9 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_R329GIZJeOD80Xo03eCqAvDw)
+ Call ID: call_R329GIZJeOD80Xo03eCqAvDw
+  Args:
+    section_id: 1.4.3
+
+================================= Tool Message =================================
+Name: read_section
+
+3.3. MagiCoder complexity analysis
+Let us now conclude this section by sketching the analysis of the computa- tional complexity of MagiCoder .Let n be the input size (the length, in terms of words, of the narrative description). Let m be the cardinality of the dictionary (i.e., the number of terms). Moreover, let m 0 be the number of distinct words occurring in the dictionary and let k be the length of the longest term in the dictionary.  For MedDRA , we have about 75K terms ( m ) and 17K unique words ( m 0 ). Notice that, reasonably, k is a small constant for any dictionary; in particular, for MedDRA we have k = 22. We assume that all update operations on auxiliary data structures require constant time O (1).Building meta-dictionaries DictByWord and DictByWordstems requires O ( km ) time units.  In fact, the simplest procedure to build these hash tables is to scan the LLT dictionary and, for each term t , to verify for each word w belonging to t whether w is a key in the hash table (this can be done in constant time). If w is a key, then we have to update the values associated to w , i.e., we add t to the set of terms containing w .  Otherwise, we add the new key w and the associated term t to the hash table. We note that these meta-dictionaries are computed only once when the MedDRA dictionary changes (twice per year), then as many narrative texts as we want can be encoded without the need to rebuild them. It can be easily verified that the voting procedure requires in the worst case O ( nm ) steps: this is a totally conservative bound, since this worst case should imply that each word of the description appears in all the terms of the dictionary. A simple analysis of the occurrences of the words in MedDRA shows that this worst case never occurs: in fact, the maximal absolute frequency of a MedDRA word is 3937, and the average of the frequencies of the words is 19. 1 6 . Thus, usually, real computational complexity is much less of this worst case.6 These values have been calculated excluding the stop-words and taking into account the stems of the words appearing in MedDRA .16
+Figure 2: Pseudocode of MagiCoder
+The computation of criteria-related weights requires O ( nm ) time units.  In particular: both criterion one and criterion two require O ( m ) time steps; cri- terion three require O ( nm ) (we assume to absorb the complexity of the pair
+17
+distance function); criterion four requires O ( nm ) time units.The subsequent multi-value sorting based on computed weights is a sorting algorithm which complexity can be approximated to O ( m log m ), based on the comparison of objects of four elements (i.e. , the weights of the four criteria). Since the number of the criteria-related weights involved in the multi-sorting is constant, it can be neglected. Thus, the complexity of multi-value sorting can be considered to be O ( m log m ).Finally, to derive the best solutions actually requires O ( nm ) steps. The ordered-phrases criterium requires O ( nm ); the maximal set of voters criterium takes O ( mn ) time units. Thus, we conclude that MagiCoder requires in the worst case O ( nm ) compu- tational steps. We again highlight that this is a (very) worst case scenario, while in average it performs quite better. Moreover, we did not take into account that each phase works on a subset of terms of the previous phase, and the size of these subset rapidly decreases in common application. the selection phase works only on voted terms, thus, in common applications, on a subset of the original dictionary.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_wKcHmJHqLde7HUm8Du3JnFzj)
+ Call ID: call_wKcHmJHqLde7HUm8Du3JnFzj
+  Args:
+    section_id: 1.4.1.1
+
+================================= Tool Message =================================
+Name: read_section
+
+3.1.1. Deﬁnition of ad hoc data structures
+The algorithm proceeds with a word-by-word comparison. We iterate on the preprocessed text and we test if a single word w , a token, occurs into one or many LLT s.9
+In order to efficiently test if a token belongs to one or more LLT s, we need to know which words belong to each term. The LLT level of MedDRA is actually a set of phrases , i.e., sequences of words .  By scanning these sequences, we build a meta-dictionary of all the words which compose LLT s. As we will describe in Section 3. 3, in O ( mk ) time units (where m and k are the cardinality of the set of LLT s and the length of the longest LLT in MedDRA , respectively) we build a hash table having all the words occurring in MedDRA as keys, where the value associated to key w i contains information about the set of LLT s containing w i .  This way, we can verify the presence in MedDRA of a word w encountered in the ADR description in constant time. We call this meta-dictionary DictByWord . We build a meta dictionary also from a stemmed version of MedDRA , to verify the presence of stemmed descriptions. We call it DictByWordStem .  Finally, also the MedDRA dictionary is loaded into a hash table according to LLT identifiers and, in general, all our main data structures are hash tables.We aim to stress that, to retain efficiency, we preferred exact string matching with respect to approximate string matching, when looking for a word into the meta dictionary. Approximate string matching would allow us to retrieve terms that would be lost in exact string matching (e.g. , we could recognize misspelled words in the ADR description), but it would worsen the performances of the text recognition tool, since direct access to the dictionary would not be possible. We discuss the problem of retrieving syntactical variations of the same words and the problem of addressing orthographical errors in Section 7.
+
+================================== Ai Message ==================================
+
+The system is made linear by preprocessing MedDRA into hash-table meta-dictionaries (`DictByWord` and `DictByWordStem`) in \(O(km)\), where each word maps directly to the set of LLT terms containing it, so checking whether a narrative token appears in the terminology is \(O(1)\). Then the algorithm performs a word-by-word scan of the narrative and updates auxiliary hash-based structures in constant time, avoiding approximate string matching because it would prevent direct dictionary access and hurt efficiency.

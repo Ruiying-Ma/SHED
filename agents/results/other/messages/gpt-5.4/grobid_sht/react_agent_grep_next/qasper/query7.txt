@@ -1,0 +1,72 @@
+================================ Human Message =================================
+
+QUERY:
+Are their methods fully supervised?
+
+TABLE OF CONTENTS (TOC):
+1 | Spotting Rumors via Novelty Detection
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | Novelty based Features
+1.4 | Pseudo Feedback for Detection/Classification
+1.4.1 | 1.1 Related Work
+1.5 | 2 Rumour Detection
+1.5.1 | 2.1 Problem Statement
+1.5.2 | 2.2 Novelty-based Features
+1.5.3 | 2.3 Novelty Feature Construction
+1.5.4 | 2.4 Pseudo Feedback
+1.6 | Training Pseudo Feedback Features
+1.7 | 3 Experiments
+1.7.1 | 3.1 Evaluation metrics
+1.7.2 | 3.2 Data set
+1.7.3 | 3.3 Rumour detection effectiveness
+1.7.4 | 3.4 Feature analysis
+1.8 | Pseudo Feedbaack
+1.8.1 | 3.5 Detecting unpopular rumours
+1.8.2 | 3.6 Efficiency and Scalability
+1.9 | 4 Conclusion
+1.10 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_37pzEd056q9aADPaUqtIn6VK)
+ Call ID: call_37pzEd056q9aADPaUqtIn6VK
+  Args:
+    pattern: supervised|unsupervised|semi-supervised|fully supervised|classification|train
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.2 | 1 Introduction
+Social Media has evolved from friendship based networks to become a major source for the consumption of news (NIST, 2008) . On social media, news is decentralised as it provides everyone the means to efficiently report and spread information. In contrast to traditional news wire, information on social media is spread without intensive investigation, fact and background checking. The combination of ease and fast pace of sharing information provides a fertile breeding ground for rumours, false-and disinformation.  Social media users tend to share controversial information inorder to verify it, while asking about for the opinions of their followers (Zhao et. al, 2015) . This further amplifies the pace of a rumour's spread and reach. Rumours and deliberate disinformation have already caused panic and influenced public opinion.The cases in Germany and Austria1 in 2016, show how misleading and false information about crimes committed by refugees negatively influenced the opinion of citizens.  Detecting these rumours allows debunking them to prevent them from further spreading and causing harm. The further a rumour has spread, the more likely it is to be debunked by users or traditional media (Liu et. al, 2015) . However, by then rumours might have already caused harm. This highlights the importance and necessity of recognizing rumours as early as possible -preferably instantaneously. Rumour detection on social media is challenging due to the short texts, creative lexical variations and high volume of the streams. The task becomes even harder if we attempt to perform rumour detection on-the-fly, without looking into the future. We provide an effective and highly scalable approach to detect rumours instantly after they were posted with zero delay. We introduce a new features category called novelty based features. Novelty based features compensate the absence of repeated information by consulting additional data sources -news wire articles.  We hypothesize that information not confirmed by official news is an indication of rumours. Additionally we introduce pseudo feedback for classification. In a nutshell, documents that are similar to previously detected rumours are considered to be more likely to also be a rumour. The proposed features can be computed in constant time and space allowing us to process high-volume streams in real-time (Muthukr-ishnan, 2005) .  Our experiments reveal that novelty based features and pseudo feedback significantly increases detection performance for early rumour detection.The contributions of this paper include:
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_Y2KMjiWYP8r2KIf0OpvCLp64)
+ Call ID: call_Y2KMjiWYP8r2KIf0OpvCLp64
+  Args:
+    section_id: 1.6
+
+================================= Tool Message =================================
+Name: read_section
+
+Training Pseudo Feedback Features
+The trainings routine differs from the standard procedure, because the computation of the PF feature requires two training rounds as we require a model of all other features to identify 'pseudo' rumours. In a first training round a SVM is used to compute weights for all features in the trainings set, except the PF features. This provides a model for all but the PF features. Then the trainings set is processed to computing rumour scores based on the model obtained from our initial trainings round.  This time, we additionally compute the PF feature value by measuring the minimum distance in term space between the current document vector and those previous documents, whose rumour score exceeds a previously defined threshold. Since we operate on a stream, the number of documents previously considered as rumours grows without bound. To keep operation constant in time and space, we only compare against the k most recent documents considered to be rumours. Once we obtained the value for the PF feature, we compute its weight using the SVM.  The combination of the weight for the PF feature with the weights for all other features, obtained in the initial trainings round, resembles the final model.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_unF0x2xh6Sa2x7s5DXccsTCX)
+ Call ID: call_unF0x2xh6Sa2x7s5DXccsTCX
+  Args:
+    section_id: 1.5.1
+
+================================= Tool Message =================================
+Name: read_section
+
+2.1 Problem Statement
+We frame the Real-time Rumour Detection task as a classification problem that assesses a document's likelihood of becoming a future rumour at the time of its publication. Consequently, prediction takes place in real-time with a single pass over the data.More formally, we denote by d t the document that arrives from stream S : {d 0 , d 1 , ...d n } at time t. Upon arrival of document d t we compute its corresponding feature vector f d,t .  Given f d,t and the previously obtained weigh vector w we compute the rumour score
+RS d,t = w T × f d,t .The rumour prediction is based on a fixed thresholding strategy with respect to θ. We predict that message d t is likely to become a rumour if its rumour score exceeds the detection threshold RS d,t > θ. The optimal parameter setting for weight vector w and detection threshold θ are learned on a test to maximise prediction accuracy.
+
+================================== Ai Message ==================================
+
+Yes. They frame rumour detection as a classification problem and learn the weight vector and threshold from labeled data, using SVM training (including a two-round training procedure for the pseudo-feedback feature).

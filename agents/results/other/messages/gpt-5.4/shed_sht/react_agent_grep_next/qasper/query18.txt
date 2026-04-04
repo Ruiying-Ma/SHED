@@ -1,0 +1,41 @@
+================================ Human Message =================================
+
+QUERY:
+What dataset did they evaluate on?
+
+TABLE OF CONTENTS (TOC):
+1 | Knowledge Authoring and Question Answering with KALM
+1.1 | 1 Introduction
+1.2 | 2 The KALM Architecture
+1.3 | 3 KALM-QA for Question Answering
+1.4 | 4 Evaluations
+1.5 | 5 Related Works
+1.6 | 6 Future Work Beyond The Thesis
+1.7 | 7 Conclusions
+1.8 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_r9osDBXwXef1zJfrSpm4yXkh)
+ Call ID: call_r9osDBXwXef1zJfrSpm4yXkh
+  Args:
+    section_id: 1.4
+
+================================= Tool Message =================================
+Name: read_section
+
+4 Evaluations
+This section provides a summary of the evaluation of KALM and KALM-QA, where KALM is evalu- ated for knowledge authoring and KALM-QA is evaluated for question answering. We have created a total of 50 logical frames, mostly derived from FrameNet but also some that FrameNet is missing (like Restaurant, Human Gender) for representing the meaning of English sentences.  Based on the 50 frames, we have manually constructed 250 sentences that are adapted from FrameNet exemplar sentences and evaluate these sentences on KALM, SEMAFOR, SLING, and Stanford KBP system.392
+KALM for Knowledge Authoring and Question Answering
+Figure 2: The KALM-QA Architecture
+The evaluation is based on the following metrics:
+ FrSynC all frames and roles (semantic relations) are identified correctly and all role-fillers are disambiguated FrC all frames and roles are identified correctly PFrC some frames/roles are identified, but some are not Wrong some frames or roles are misidentified
+The results are shown as follow:
+KALM: 239 sentences are FrSynC ( 95.6 %),248 sentences are FrC ( > 99 %), and 2 sentences are Wrong ( < 1%). Note that FrSynC applies only to KALM, since none of the comparison systems can disambiguate the senses of the extracted entities.
+SEMAFOR: parses 236 sentences out of the 250 test sentences,where 59 sentences are FrC ( 25 %), 44 sentences are PFrC (18.6%), and 133 sentences are Wrong (56.4%).
+SLING: parses 233 sentences, where 98 sentences are FrC ( 42.1 %), 63 are PFrC (27%), and 72 sentences are Wrong (30.9%).
+Stanford KBP: parses 26 sentences,where 14 sentences are FrC ( 53.8 %), 10 sentences are PrC (38.5%), and 2 sentences are Wrong (7.7%).The differences between KALM and other systems are listed in order. First, none of the other systems do disambiguation or attempt to find synsets for role-fillers, so in this aspect KALM does more and is better attuned to the task of knowledge authoring.  Second, none of these systems can explain their results, nor do they provide ways to analyze and correct errors. Third, KALM achieves an accuracy of 95.6%—much higher than other systems.For KALM-QA, we evaluate it on two datasets. The first dataset is manually constructed general questions based on the 50 logical frames. KALM-QA achieves an accuracy of 95% for parsing the queries.  The second dataset we use is MetaQA dataset [20], which contains contains almost 29,000 test questions and over 260,000 training questions. KALM-QA achieves 100% accuracy—much higher than the state-of-the-art machine learning approach [20]. Details of the evaluations can be found in [7] and [6].
+
+================================== Ai Message ==================================
+
+They evaluated KALM-QA on two datasets: a manually constructed set of general questions based on the 50 logical frames, and the MetaQA dataset. For KALM knowledge authoring, they evaluated on 250 manually constructed sentences adapted from FrameNet exemplar sentences.

@@ -1,0 +1,57 @@
+================================ Human Message =================================
+
+QUERY:
+What types of agreement relations do they explore?
+
+TABLE OF CONTENTS (TOC):
+1 | Does BERT agree? Evaluating knowledge of structure dependence through agreement relations
+1.1 | Geoff Bacon
+1.1.1 | Terry Regier
+1.1.1.1 | Abstract
+1.1.1.1.1 | 1 Introduction
+1.1.1.1.1.1 | 2 Structure-dependent agreement relations
+1.1.1.1.1.1.1 | 3 Data
+1.1.1.1.1.1.1.1 | 3.1 Cloze data
+1.1.1.1.1.1.1.1.1 | 3.2 Feature data
+1.1.1.1.1.1.1.1.1.1 | 4 Experiment
+1.1.1.1.1.1.1.1.1.1.1 | 5 Results
+1.1.1.1.1.1.1.1.1.1.1.1 | 6 Related work
+1.1.1.1.1.1.1.1.1.1.1.1.1 | 7 Conclusions & future work
+1.1.1.1.1.1.1.1.1.1.1.1.1.1 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_WoXDk9rRIqhFRs22J911zp1K)
+ Call ID: call_WoXDk9rRIqhFRs22J911zp1K
+  Args:
+    section_id: 1.1.1.1.1.1
+
+================================= Tool Message =================================
+Name: read_section
+
+2 Structure-dependent agreement relations
+Agreement phenomena are an important and cross-linguistically common property of natural languages, and as such have been extensively stud- ied in syntax and morphology ( Corbett , 2006 ). 1 Languages often express grammatical features, such as number and gender, through inflectional morphology. An agreement relation is a mor- phophonologically overt co-variance in feature values between two words in a syntactic relation- ship ( Preminger , 2014 ).  In other words, agreement refers to when the morphosyntactic features of one word are reflected in its syntactic dependents. In this way, agreement relations are overt markers of covert syntactic structure. Thus, evaluating a model’s ability to capture agreement relations is also an evaluation of its ability to capture syntac- tic structure. Following Corbett ( 2003 ), we call the syntac- tically dependent word the “target” of the agree- ment relation, and the word with which it agrees we call the “controller”. An example of an agree- ment relation in English is given in ( 1 ), in which the inflected form of the verb BE ( are ) reflects the plural number of its syntactic head keys .  In all ex- amples in this section, the controller and target are given in bold. In this example, keys is the con- troller and are is the target of the agreement rela- tion.(1) The keys to the door are on the table.The agreement relation in ( 1 ) is between a sub- ject and its verb, but there are other types of agree-
+ment relations.  In addition to subject-verb agree- ment, three other types of agreement relations are cross-linguistically common: agreement of noun with i) determiner, ii) attributive adjective and iii) predicate adjective ( Baker , 2008 ). The latter two types are distinguished by whether the adjective modifies the noun within a noun phrase or whether it is predicated of the subject of a clause.  The first two types are sometimes categorized as nominal concord rather than agreement, but for our pur- poses this is merely a difference in terminology.The morphosyntactic feature in the agreement relation in ( 1 ) is number, a feature that is cross- linguistically common in agreement systems. In addition to number, the most commonly involved in agreement relations are gender, case and person ( Baker , 2008 ). With its comparatively limited inflectional mor- phology, English only exhibits subject-verb and determiner agreement (in demonstratives, “this” vs. “these”) and even then only agrees for num- ber. Languages with richer inflectional morphol- ogy tend to display more agreement types and in- volve more features. French, for example, em- ploys all four types of agreement relations.  Ex- amples are given in ( 2 )-( 5 ). The subject and verb in ( 2 ) agree for number, while the noun and deter- miner in ( 3 ), the noun and attributive adjective in ( 4 ) and the subject and predicated adjective in ( 5 ) agree for both number and gender.
+(2) Les cl´es de la porte se trouvent sur la table.‘The keys to the door are on the table.’
+(3) Je peux voir les cl´es .‘I can see the keys.’
+(4) Je ne veux plus les cl´es totalement cass´ees . ‘I no longer want the completely broken keys.’
+(5) Les cl´es de la porte sont cass´ees .‘The keys to the door are broken.’
+Previous work using agreement relations to as- sess knowledge of syntactic structure in mod- ern neural networks has focussed on subject-verb agreement in number ( Goldberg , 2019 ; Gulordava et al. , 2018 ; Linzen et al. , 2016 ). In our work, we study all four types of agreement relations and
+1 For a comprehensive bibliography, see http:// www.smg. surrey.ac.uk/projects/agreement/ bibliography/ .all four features discussed above. Moreover, pre- vious work using any method to assess BERT’s knowledge of syntactic structure has focussed ex- clusively on the single-language English model ( Hewitt and Manning , 2019 ; Goldberg , 2019 ; Ten- ney et al. , 2019 ; Lin et al. , 2019 ; Jawahar et al.  , 2019 ; Clark et al. , 2019 ). We expand this line of work to 26 languages. Not all languages in our sample exhibit all four types of agreement nor use all four features examined, but they all exhibit at least one of the agreement types involving at least one of the features.
+3 Data
+Our study requires two types of data. First, we need sentences containing agreement relations. We mask out one of the words in the agreement re- lation and ask BERT to predict the masked word. We are interested in BERT’s ability to predict words that respect the agreement relation, that is, words which share the morphosyntactic features of the word with which it agrees. To measure this, we need to know the feature values for each word in BERT’s vocabulary.  This is our second type of data. Throughout this paper, we refer to the first type of data as the cloze data, and the second as the feature data.In the design of our datasets, we followed two principles. First, we chose data sources that are available across multiple languages, because we are interested in cross-linguistic generality. The languages in this study are those with sufficiently large data sources that also appear in the multi- lingual BERT model.  Second, we use naturally- occurring data (cf. Marvin and Linzen ( 2018 )).
+3.1 Cloze data
+We sourced our cloze data from version 2.4 of the Universal Dependencies treebanks ( Nivre et al. , 2016 , UD). The UD treebanks use a consistent schema across all languages to annotate natu- rally occurring sentences at the word level with rich grammatical information. We used the part- of-speech and dependency information to iden- tify potential agreement relations.  Specifically, we identified all instances of subject-verb, noun- determiner, noun-attributive adjective and subject- predicate adjective word pairs. We then used the morphosyntactic annotations for number, gender, case and person to filter out word pairs that dis- agree due to errors in the underlying data source
+(e.g. one is annotated as plural while the other is singular) or that are not annotated for any of the four features. This method is language-agnostic, but due to er- rors in the underlying UD corpora, yielded some false positives (e.g. predicate adjective agreement in English). To correct for this, we consulted refer- ence grammars of each language to note which of the four types of agreement exist in the language. We removed all examples that are of the wrong type for the language (8% of harvested examples).  Across the 26 languages, we curated almost one million cloze examples. Their breakdown across agreement type and language is shown in Tables 1 and 2.Agreement type # cloze attributive adjective 351,300 determiner 349,073 subject-verb 253,820 predicate adjective 26,696 total 980,889
+Table 1: Number of cloze examples per agreement type in our new cross-linguistic dataset on agreement rela- tions.  Previous work has largely focused on subject- verb agreement in English.In all four types of agreement studied, the con- troller of the agreement is a noun or pronoun, while the target can be a determiner, adjective or verb. Because of this part-of-speech restriction, we chose to mask out the controller in every cloze example so that BERT is evaluated against the same vocabulary across all four types.  This also means that we only need to collect feature data on nouns and pronouns.
+3.2 Feature data
+Our feature data comes from both the UD and the UniMorph projects ( Sylak-Glassman , 2016 , downloaded June 2019). The UniMorph project also uses a consistent schema across all languages to annotate word types with morphological fea- tures. Although this schema is not the same as that used in UD, there is a deterministic mapping between the two ( McCarthy et al. , 2018 ). In this work, a word can take on a particular bundle of feature values (e.g. singular, feminine and third person) if it appears with those features in either UD or UniMorph. The UniMorph data directly specifies what bundles of feature values a word can take on. For the Universal Dependencies
+ Language # cloze # feature bundles Russian 144,458 2,404 Italian 137,268 2,479 French 117,769 3,384 Catalan 88,053 1,753 English 60,060 6,743 Dutch 52,569 1,531 Latin 50,053 1,044 Polish 47,513 2,011 Portuguese 47,038 2,107 Finnish 36,705 1,167 Romanian 29,746 1,330 Norwegian 29,059 1,393 Hindi 22,959 402 Croatian 21,835 1,141 Persian 14,238 985 Greek 14,017 216 Ukrainian 13,929 1,206 Swedish 10,889 1,611 Hebrew 10,809 338 Danish 9,432 1,330 Urdu 8,139 547 Basque 4,132 267 Turkish 3,155 846 Irish 3,030 259 Afrikaans 2,304 365 Armenian 1,434 211
+ Table 2: Language statistics of our new cross-linguistic dataset on agreement relations. Most previous work has focused on English. “# cloze” is the number of cloze examples curated for each language, and “# feature bundles” is the number of unique sets of morphosyntactic features harvested for word types in BERT’s vocabulary. data, we say a word can take on a particular bundle if we ever see it with that bundle of feature values in a Universal Dependencies corpus for that lan- guage. Both sources individually allow for a word to have multiple feature bundles (e.g. sheep in En- glish can be singular or plural). In these cases, we keep all possible feature bundles. Finally, we filter out words that do not appear in BERT’s vocabu- lary.
+4 Experiment
+Our experiment is designed to measure BERT’s ability to model syntactic structure. Our exper- imental set up is an adaptation of that of Gold- berg ( 2019 ). As in previous work, we mask one word involved in an agreement relation and ask
+BERT to predict it. Goldberg ( 2019 ), following Linzen et al.  ( 2016 ), considered a correct predic- tion to be one in which the masked word receives a higher probability than other inflected forms of the lemma. For example, when dogs is masked, a correct response gives more probability...(truncated)
+
+================================== Ai Message ==================================
+
+They explore four types of agreement relations: subject-verb agreement, noun-determiner agreement, noun-attributive adjective agreement, and subject-predicate adjective agreement.

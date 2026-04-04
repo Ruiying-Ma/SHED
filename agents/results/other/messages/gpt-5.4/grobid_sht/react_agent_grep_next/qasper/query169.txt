@@ -1,0 +1,60 @@
+================================ Human Message =================================
+
+QUERY:
+Which subsystem outperformed the others?
+
+TABLE OF CONTENTS (TOC):
+1 | THUEE SYSTEM DESCRIPTION FOR NIST 2019 SRE CTS CHALLENGE
+1.1 | Abstract
+1.2 | 1 INTRODUCTION
+1.3 | 2 DATA USAGE
+1.4 | 3.2 ftdnn/as
+1.5 | 3.3 eftdnn/ams
+1.6 | 3.4 resnet
+1.7 | 3.5 multitask
+1.8 | 3.6 c-vector
+1.9 | 4 FEATURE AND BACK-END
+1.10 | 5 FUSION
+1.11 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_se0KgiiIcIqhCvv7u4tQMIDl)
+ Call ID: call_se0KgiiIcIqhCvv7u4tQMIDl
+  Args:
+    pattern: outperformed|best|better|performed
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.3 | 2 DATA USAGE
+For the sake of clarity, the datasets notations are defined as in table 1 and the training data for the six subsystems are list in table 2, 3, and 4. Etdnn/ams system is an extended version of tdnn with the additive margin softmax loss [2] . Etdnn is used in speaker verification in [3] . <table><tr><td/><td>Notations</td></tr><tr><td>notation</td><td>datasets</td></tr><tr><td>SRE</td><td>SRE04/05/06/08/10/MIXER6</td></tr><tr><td>SWB</td><td>LDC98S75/LDC99S79/LDC2002S06/ LDC2001S13/LDC2004S07</td></tr><tr><td>Voxceleb</td><td>Voxceleb 1/2</td></tr><tr><td>Fisher+SWB I</td><td>Fisher + Switchboard I</td></tr><tr><td>CH+CF</td><td>Callhome+Callfriend</td></tr><tr><td/><td/></tr></table>
+ Table 1 Datasets
+Compared with the traditional tdnn in [4] , it has wider context and interleaving dense layers between each two tdnn layers. The architecture of our etdnn network is shown in table 5 . It is the same as the etdnn architecture in [3] , except that the context of layer 5 of our system is t-3:t+3 instead of t-3, t, t+3.  The x-vector is extracted from layer 12 prior to the ReLU non-linearity. For the loss, we use additive margin softmax with m = 0.15 instead of traditional softmax loss or angular softmax loss. Additive margin softmax is proposed in [5] and then used in speaker verification in our paper [2] . It is easier to train and generally performs better than angular softmax. Dense-Softmax Num. spks. <table><tr><td>Layer</td><td>Layer Type</td><td>Context</td><td>Size</td></tr><tr><td>1</td><td>TDNN-ReLU</td><td>t-2:t+2</td><td>512</td></tr><tr><td>2</td><td>Dense-ReLU</td><td>t</td><td>512</td></tr><tr><td>3</td><td>TDNN-ReLU</td><td>t-2,t,t+2</td><td>512</td></tr><tr><td>4</td><td>Dense-ReLU</td><td>t</td><td>512</td></tr><tr><td>5</td><td>TDNN-ReLU</td><td>t-3:t+3</td><td>512</td></tr><tr><td>6</td><td>Dense-ReLU</td><td>t</td><td>512</td></tr><tr><td>7</td><td>TDNN-ReLU</td><td>t-4,t,t+4</td><td>512</td></tr><tr><td>8</td><td>Dense-ReLU</td><td>t</td><td>512</td></tr><tr><td>9</td><td>Dense-ReLU</td><td>t</td><td>512</td></tr><tr><td>10</td><td>Dense-ReLU</td><td>t</td><td>1500</td></tr><tr><td>11</td><td>Pooling(mean+stddev)</td><td>Full-seq</td><td>2×1500</td></tr><tr><td>12</td><td>Dense(Embedding)-ReLU</td><td/><td>512. </td></tr><tr><td>13</td><td>Dense-ReLU</td><td/><td>512.</td></tr><tr><td>14</td><td/><td/><td/></tr></table>
+Table 5 Etdnn architecture
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_gO93BvbOcFWpeOfdEu03TapM)
+ Call ID: call_gO93BvbOcFWpeOfdEu03TapM
+  Args:
+    section_id: 1.10
+
+================================= Tool Message =================================
+Name: read_section
+
+5 FUSION
+Our primary system is the linear fusion of all the above six subsystems by BOSARIS Toolkit on SRE19 dev and eval [10] . Before the fusion, each score is calibrated by PAV method (pav calibrate scores) on our development database. It is evaluated by the primary metric provided by NIST SRE 2019. <table><tr><td>Components</td><td>Data usage</td></tr><tr><td colspan="2">Neural Network SRE+SWB+Voxceleb</td></tr><tr><td>LDA/PLDA</td><td>SRE+SRE16+SRE18</td></tr><tr><td>PLDA-adapt</td><td>SRE+SRE16+SRE18</td></tr><tr><td>asnorm</td><td>SRE18 unlabel</td></tr></table>
+ Table Data usage for etdnn/ams, ftdnn/as, and resnet subsystems
+ <table><tr><td>Components</td><td>Data usage</td></tr><tr><td>GMM-HMM</td><td>Fisher+SWB I</td></tr><tr><td colspan="2">Neural Network SRE+SWB+Voxceleb+Fisher+SWB I</td></tr><tr><td>LDA/PLDA</td><td>SRE+SRE16+SRE18</td></tr><tr><td>PLDA-adapt</td><td>SRE16+SRE18+MIXER6+CH+CF</td></tr><tr><td>asnorm</td><td>SRE18 unlabel</td></tr></table>
+ Table Data usage for multitask and c-vector subsystems
+ <table><tr><td>Components</td><td>Data usage</td></tr><tr><td colspan="2">Neural Network SRE+SWB+Voxceleb+CH+CF</td></tr><tr><td>LDA/PLDA</td><td>SRE+SRE16+SRE18 eval</td></tr><tr><td>PLDA-adapt</td><td>SRE+SRE16+SRE18 eval</td></tr><tr><td>asnorm</td><td>SRE18 unlabel</td></tr><tr><td/><td>3.  SYSTEMS</td></tr><tr><td>3.1. Etdnn/ams</td><td/></tr></table>
+Table Data usage for eftdnn subsystem
+<table><tr><td/><td>Layer Type</td><td colspan="3">Context Context Context factor 1 factor 2 factor 3</td><td>conn.  from</td><td>Size</td><td>Inner size</td></tr><tr><td>1</td><td>TDNN</td><td>t-2:t+2</td><td/><td/><td/><td>512</td><td/></tr><tr><td>2</td><td>Dense</td><td/><td/><td/><td/><td>512</td><td/></tr><tr><td>3</td><td>F-TDNN</td><td>t-3,t -1</td><td colspan="2">t-1, t+1 t+1, t+3</td><td/><td>1024</td><td>256</td></tr><tr><td>4</td><td>Dense</td><td/><td/><td/><td/><td>1024</td><td/></tr><tr><td>5</td><td>F-TDNN</td><td>t</td><td>t</td><td>t</td><td/><td>1024</td><td>256</td></tr><tr><td>6</td><td>Dense</td><td/><td/><td/><td/><td>1024</td><td/></tr><tr><td>7</td><td>F-TDNN</td><td>t-5, t-2</td><td>t-2, t+1</td><td>t+1,t+4</td><td/><td>1024</td><td>256</td></tr><tr><td>8</td><td>Dense</td><td/><td/><td/><td/><td>1024</td><td/></tr><tr><td>9</td><td>F-TDNN</td><td>t</td><td>t</td><td>t</td><td>5</td><td>1024</td><td>256</td></tr><tr><td>10</td><td>Dense</td><td/><td/><td/><td/><td>1024</td><td/></tr><tr><td colspan="2">11 F-TDNN</td><td>t-5, t-2</td><td>t-2, t+1</td><td>t+1,t+4</td><td/><td>1024</td><td>256</td></tr><tr><td>12</td><td>Dense</td><td/><td/><td/><td/><td>1024</td><td/></tr><tr><td colspan="2">13 F-TDNN</td><td>t-5, t-2</td><td>t-2,t+1</td><td>t+1, t+4</td><td>3,7</td><td>1024</td><td>256</td></tr><tr><td>14</td><td>Dense</td><td/><td/><td/><td/><td>1024</td><td/></tr><tr><td colspan="2">15 F-TDNN</td><td>t-5, t-2</td><td>t-2, t+1</td><td>t+1,t+4</td><td/><td>1024</td><td>256</td></tr><tr><td>16</td><td>Dense</td><td/><td/><td/><td/><td>1024</td><td/></tr><tr><td colspan="2">17 F-TDNN</td><td>t</td><td>t</td><td>t</td><td>7,11,15</td><td>1024</td><td>256</td></tr><tr><td>18</td><td>Dense</td><td>t</td><td/><td/><td/><td>2048</td><td/></tr><tr><td>19</td><td>Dense</td><td>t</td><td/><td/><td/><td>2048</td><td/></tr><tr><td>20</td><td>Dense</td><td>t</td><td/><td/><td/><td>2048</td><td/></tr><tr><td>21</td><td>Pooling</td><td>full-seq</td><td/><td/><td/><td>4096</td><td/></tr><tr><td>22</td><td>Dense</td><td/><td/><td/><td/><td>1024</td><td/></tr><tr><td>23</td><td>Dense</td><td/><td/><td/><td/><td>1024</td><td/></tr><tr><td>24</td><td>Dense-Softmax</td><td/><td/><td/><td/><td>N.  spks.</td><td/></tr></table>
+Table eftdnn architecture
+<table><tr><td>System</td><td colspan="2">SRE18 DEV</td><td colspan="2">SRE18 EVAL</td></tr><tr><td/><td colspan="4">EER(%) min-DCF EER(%) min-DCF</td></tr><tr><td>etdnn</td><td>3. 95</td><td>0.222</td><td>2.59</td><td>0.198</td></tr><tr><td>ftdnn</td><td>4.28</td><td>0.258</td><td>2.89</td><td>0.217</td></tr><tr><td>eftdnn</td><td>3.67</td><td>0. 196</td><td>2.56</td><td>0.204</td></tr><tr><td>resnet</td><td>4.02</td><td>0.253</td><td>3.50</td><td>0.255</td></tr><tr><td>multitask</td><td>4.35</td><td>0.276</td><td>3. 58</td><td>0.278</td></tr><tr><td>c-vector</td><td>3.92</td><td>0.252</td><td>3.10</td><td>0.249</td></tr><tr><td>fused</td><td>3.45</td><td>0.164</td><td>2.25</td><td>0. 175</td></tr><tr><td colspan="5">tems. 23-dimensional Fbank is used as feature for ResNet 16kHz</td></tr><tr><td colspan="5">subsystems. A simple energy-based VAD is used based on the C0</td></tr><tr><td colspan="3">component of the MFCC feature [9].</td><td/><td/></tr></table>
+ Table Subsystem performance on SRE18 DEV and EVAL set.
+
+================================== Ai Message ==================================
+
+The eftdnn subsystem outperformed the others.

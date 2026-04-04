@@ -1,0 +1,55 @@
+================================ Human Message =================================
+
+QUERY:
+What is the performance of fine tuned model on this dataset?
+
+TABLE OF CONTENTS (TOC):
+1 | Common-Knowledge Concept Recognition for SEVA
+1.1 | Abstract
+1.1.1 | INTRODUCTION
+1.1.2 | BACKGROUND AND MOTIVATION
+1.1.3 | CONCEPT RECOGNITION
+1.1.3.1 | BIO Labelling Scheme
+1.1.3.2 | Abbreviations
+1.1.3.3 | Common-Knowledge Deﬁnitions
+1.1.3.3.1 | Deﬁnition: Acceptable Risk
+1.1.3.4 | CR Dataset Construction and Pre-processing
+1.1.3.5 | Fine tuning with BERT
+1.1.4 | RELATION EXTRACTION
+1.1.4.1 | Hyponyms from Deﬁnitions
+1.1.4.2 | Hyponyms from POS tags
+1.1.4.3 | Relations from Abbreviations
+1.1.4.4 | Relation Extraction using Verb Phrase Chunking
+1.1.5 | CONCLUSION AND FUTURE WORK
+1.1.5.1 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_6cZ1tz5aXoPbnzXN9yDtT1pc)
+ Call ID: call_6cZ1tz5aXoPbnzXN9yDtT1pc
+  Args:
+    pattern: (?i)fine[- ]?tun(ed|ing)|performance|F1|accuracy|precision|recall
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1.1 | INTRODUCTION
+The Systems Engineer’s Virtual Assistant (SEVA) (Krish- nan, Coronado, and Reed 2019) was introduced with the goal to assist systems engineers (SE) in their problem- solving abilities by keeping track of large amounts of infor- mation of a NASA-specific project and using the informa- tion to answer queries from the user.  In this work, we address a system element by constructing a common-knowledge concept recognition system for improving the performance of SEVA, using the static knowledge collected from the Sys- tems Engineering Handbook (NASA 2017) that is widely used in projects across the organization as domain-specific commonsense knowledge.  At NASA, although there exists knowledge engines and ontologies for the SE domain such as MBSE (Hart 2015), IMCE (JPL 2016), and OpenCaesar (Elaasar 2019), generic commonsense acquisition is rarely discussed; we aim to address this challenge.Figure 1: Common-knowledge concept recognition and sim- ple relation extraction
+SE commonsense comes from years of experience and learning which involves background knowledge that goes beyond any handbook.  Although constructing an assis- tant like SEVA system is the overarching objective, a key problem to first address is to extract elementary common- knowledge concepts using the SE handbook and domain ex- perts. We use the term ‘common-knowledge’ as the ‘com- monsense’ knowledge of a specific domain. This knowledge can be seen as a pivot that can be used later to collect ‘com- monsense’ knowledge for the SE domain.  We propose a pre- liminary research study that can pave a path towards a com- prehensive commonsense knowledge acquisition for an ef- fective Artificial Intelligence (AI) application for the SE do- main. Overall structure of this work is summarized in Fig- ure 1. Implementation with demo and dataset is available at: https://github.com/jitinkrishnan/NASA-SE .
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_PwDwGgNPuSRjZPhMC2XlL57Z)
+ Call ID: call_PwDwGgNPuSRjZPhMC2XlL57Z
+  Args:
+    section_id: 1.1.3.5
+
+================================= Tool Message =================================
+Name: read_section
+
+Fine tuning with BERT
+Any language model can be used for the purpose of cus- tomizing an NER problem to CR. We choose to go with BERT (Devlin et al. 2018) because of its general-purpose nature and usage of contextualized word embeddings.In the hand-labelled dataset, each word gets a label. The idea is to perform multi-class classification using BERT’s pre-trained cased language model.  We use pytorch trans- formers and hugging face as per the tutorial by (Huang 2019) which uses BertF orT okenClassif ication . The text is embedded as tokens and masks with a maximum to- ken length. This embedded tokens are provided as the input to the pre-trained BERT model for a full fine-tuning. The model gives an F1-score of 0 . 89 for the concept recognition task.  An 80-20 data split is used for training and evaluation. Detailed performance of the CR is shown in Table 2 and 3. Additionally, we also implemented CR using spaCy (Honni- bal and Johnson 2015) which also produced similar results.
+
+================================== Ai Message ==================================
+
+The fine-tuned BERT model achieved an F1-score of 0.89 on the concept recognition dataset, using an 80–20 train/evaluation split.

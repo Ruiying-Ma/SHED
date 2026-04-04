@@ -1,0 +1,43 @@
+================================ Human Message =================================
+
+QUERY:
+How did they obtain the tweets?
+
+TABLE OF CONTENTS (TOC):
+1 | Multitask Learning for Blackmarket Tweet Detection
+1.1 | Abstract
+1.2 | I. INTRODUCTION
+1.3 | TABLE I AN EXAMPLE OF A COLLUSIVE AND A GENUINE TWEET.
+1.4 | II. RELATED WORK
+1.5 | A. Blackmarket Services
+1.6 | B. Data Collection
+1.7 | C. Dataset Description
+1.8 | D. Analysis of Blackmarket Tweets
+1.9 | IV. PROPOSED APPROACH
+1.10 | A. Tweet Content Features
+1.11 | B. Tweet Content Representation
+1.12 | C. Proposed Model
+1.13 | 1) Model Inputs:
+1.14 | A. Baseline Methods
+1.15 | B. Evaluation Setup
+1.16 | VI. EXPERIMENTAL RESULTS
+1.17 | VII. CONCLUSION
+1.18 | ACKNOWLEDGEMENTS
+1.19 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_hnFYRRAzMeAdDrJQyakONfbb)
+ Call ID: call_hnFYRRAzMeAdDrJQyakONfbb
+  Args:
+    section_id: 1.6
+
+================================= Tool Message =================================
+Name: read_section
+
+B. Data Collection
+We collected data from Credit-based Freemium services because their service model is easy to understand. We crawled two blackmarket sites -YouLikeHits and Like4Like, between the period of February and April 2019. We created dummy accounts (after careful IRB approval) on these sites to participate in the platform and recorded Tweet IDs of the tweets that were posted for gaining retweets. We used Twitter's REST API to collect the tweet objects of these tweets.  The timelines of the authors of these tweets were also collected, allowing us to find genuine tweets by the same users that have not been posted to these blackmarket sites.
+
+================================== Ai Message ==================================
+
+They crawled two credit-based freemium blackmarket sites, YouLikeHits and Like4Like, from February to April 2019, created dummy accounts on them, and recorded the Tweet IDs of tweets posted for gaining retweets. They then used Twitter's REST API to collect the tweet objects, and also collected the authors' timelines to obtain genuine tweets by the same users that were not posted to those blackmarket sites.

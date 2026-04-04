@@ -1,0 +1,74 @@
+================================ Human Message =================================
+
+QUERY:
+What was the baseline?
+
+TABLE OF CONTENTS (TOC):
+1 | THUEE SYSTEM DESCRIPTION FOR NIST 2019 SRE CTS CHALLENGE
+1.1 | ABSTRACT
+1.2 | 1. INTRODUCTION
+1.3 | 2. DATA USAGE
+1.4 | 3. SYSTEMS
+1.5 | 3.1. Etdnn/ams
+1.6 | 3.2. ftdnn/as
+1.7 | 3.3. eftdnn/ams
+1.8 | 3.4. resnet
+1.9 | 3.5. multitask
+1.10 | 3.6. c-vector
+1.11 | 4. FEATURE AND BACK-END
+1.12 | 5. FUSION
+1.13 | 6. REFERENCES
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_TGzFZsSmPOfIl18wpVSIrgS0)
+ Call ID: call_TGzFZsSmPOfIl18wpVSIrgS0
+  Args:
+    pattern: [Bb]aseline
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_mGAHICsNr1Zh7QT244s42h6T)
+ Call ID: call_mGAHICsNr1Zh7QT244s42h6T
+  Args:
+    section_id: 1.1
+
+================================= Tool Message =================================
+Name: read_section
+
+ABSTRACT
+This paper describes the systems submitted by the department of electronic engineering, institute of microelectronics of Tsinghua university and TsingMicro Co. Ltd. (THUEE) to the NIST 2019 speaker recognition evaluation CTS challenge. Six subsystems, including etdnn/ams, ftdnn/as, eftdnn/ams, resnet, multitask and c-vector are developed in this evaluation. Index Terms — NIST 2019 SRE CTS challenge, eftdnn, multi- task, c-vector, additive margin
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_SrNRNMPXWjITtLzsk7Iq14m8)
+ Call ID: call_SrNRNMPXWjITtLzsk7Iq14m8
+  Args:
+    section_id: 1.4
+
+================================= Tool Message =================================
+Name: read_section
+
+3. SYSTEMS
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_WoNEchItnDQCvJX8PX2LwjLn)
+ Call ID: call_WoNEchItnDQCvJX8PX2LwjLn
+  Args:
+    section_id: 1.12
+
+================================= Tool Message =================================
+Name: read_section
+
+5. FUSION
+Our primary system is the linear fusion of all the above six subsys- tems by BOSARIS Toolkit on SRE19 dev and eval [10]. Before the fusion, each score is calibrated by PAV method ( pav calibrate scores) on our development database. It is evaluated by the primary metric provided by NIST SRE 2019.
+
+================================== Ai Message ==================================
+
+Unanswerable

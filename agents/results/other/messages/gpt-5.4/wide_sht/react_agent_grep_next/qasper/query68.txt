@@ -1,0 +1,96 @@
+================================ Human Message =================================
+
+QUERY:
+How are the expert and crowd-sourced annotations compared to one another?
+
+TABLE OF CONTENTS (TOC):
+1 | Classifying Diagrams and Their Parts using Graph Neural Networks: A Comparison of Crowd-Sourced and Expert Annotations
+1.1 | Abstract
+1.2 | 1. Introduction
+1.3 | 2. Data
+1.4 | 2.1. Crowd-sourced Annotations from AI2D
+1.5 | 2.2. Expert Annotations from AI2D-RST
+1.6 | 3. Graph-based Representations
+1.7 | 3.1. Nodes
+1.8 | 3.1.1. Node Types
+1.9 | 3.1.2. Node Features
+1.10 | 3.1.3. Discourse Relations
+1.11 | 3.2. Edges
+1.12 | 4. Experiments
+1.13 | 4.1. Graph Neural Networks
+1.14 | 4.2. Hyperparameters and Training
+1.15 | 4.3. Tasks
+1.16 | 4.3.1. Node Classiﬁcation
+1.17 | 4.3.2. Graph Classiﬁcation
+1.18 | 5. Discussion
+1.19 | 6. Conclusion
+1.20 | 7. Bibliographical References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_VlqKLpX9M6FYKHOUfeN5lzl6)
+ Call ID: call_VlqKLpX9M6FYKHOUfeN5lzl6
+  Args:
+    pattern: compared|comparison|compare|crowd-sourced.*expert|expert.*crowd-sourced
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1 | Abstract
+This article compares two multimodal resources that consist of diagrams which describe topics in elementary school natural sciences. Both resources contain the same diagrams and represent their structure using graphs, but differ in terms of their annotation schema and how the annotations have been created – depending on the resource in question – either by crowd-sourced workers or trained experts.  This article reports on two experiments that evaluate how effectively crowd-sourced and expert-annotated graphs can represent the multimodal structure of diagrams for representation learning using various graph neural networks. The results show that the identity of diagram elements can be learned from their layout features, while the expert annotations provide better representations of diagram types.Keywords: multimodality, diagrams, graph neural networks, annotation, crowd-sourcing
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_XSIrJlsSx81GG3U19cK3pXfo)
+ Call ID: call_XSIrJlsSx81GG3U19cK3pXfo
+  Args:
+    section_id: 5
+
+================================= Tool Message =================================
+Name: read_section
+
+Tool 'read_section' failed after 1 attempt with RuntimeError: Section ID 5 not found in TOC.. Please try again.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_E7ecrLgNX1q7OS4dPzJ4Xp9l)
+ Call ID: call_E7ecrLgNX1q7OS4dPzJ4Xp9l
+  Args:
+    section_id: 1.18
+
+================================= Tool Message =================================
+Name: read_section
+
+5. Discussion
+The results for AI2D-RST show that the grouping graph, which represents visual perceptual groups of diagram ele- ments and their hierarchical organisation, provides a robust foundation for describing the spatial organisation of dia- grammatic representations. This kind of generic schema can be expanded beyond diagrams to other modes of ex- pression that make use of the spatial extent, such as entire page layouts.  A description of how the layout space is used can be incorporated into any effort to model discourse rela- tions that may hold between the groups or their parts.The promising results AI2D-RST suggest is that domain experts in multimodal communication should be involved in planning crowd-sourced annotation tasks right from the beginning.  Segmentation, in particular, warrants attention as this phase defines the units of analysis: cut-outs and cross-sections, for instance, use labels and lines to pick out sub-regions of graphical objects, whereas in illustrations the labels often refer to entire objects. Such distinctions should preferably be picked out at the very beginning to be
+incorporated fully into the annotation schema. Tasks related to grouping and connectivity annotation could be crowd-sourced relatively easily, whereas annotating di- agram types and discourse relations may require multi-step procedures and assistance in the form of prompts, as Yung et al. (2019) have recently shown for RST. Involving both expert and crowd-sourced annotators could also alleviate problems related to circularity by forcing domain experts to frame the tasks in terms understandable to crowd-sourced workers (Riezler, 2014). In light of the results for graph classification, one should note that node features are averaged before classification regardless of their connections in the graph . Whereas the expert-annotated grouping graph in AI2D-RST has been pruned from isolated nodes, which ensures that features are propagated to neighbouring nodes, the crowd-sourced AI2D graphs contain both isolated nodes and subgraphs. To what extent these disconnections affect the performance for AI2D warrant a separate study.  Additionally, more ad- vanced techniques than mere averaging, such as pooling, should be explored in future work.Finally, there are many aspects of diagrammatic represen- tation that were not explored in this study.  To begin with, a comparison of representations for discourse structures us- ing the question-answering set accompanying AI2D would be particularly interesting, especially if both AI2D and AI2D-RST graphs were enriched with features from state of the art semantic representations for natural language and graphic elements.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_KEL6NCmFJ9oBdyYxUlzHKcpN)
+ Call ID: call_KEL6NCmFJ9oBdyYxUlzHKcpN
+  Args:
+    section_id: 1.3
+
+================================= Tool Message =================================
+Name: read_section
+
+2. Data
+This section introduces the two multimodal resources com- pared in this study and discusses related work, beginning with the crowd-sourced annotations in AI2D and continu- ing with the alternative expert annotations in AI2D-RST, which are built on top of the crowd-sourced descriptions and cover a 1000-diagram subset of the original data.  Fig- ure 1 provides an overview of the two datasets, explains their relation to each other and provides an overview of the experiments reported in Section 4.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_eeBNnSGrQQ3k6P4TyKdRMgxd)
+ Call ID: call_eeBNnSGrQQ3k6P4TyKdRMgxd
+  Args:
+    section_id: 1.12
+
+================================= Tool Message =================================
+Name: read_section
+
+4. Experiments
+This section presents two experiments that compare AI2D and AI2D-RST annotations in classifying diagrams and their parts using various graph neural networks.
+
+================================== Ai Message ==================================
+
+They are compared through two experiments using graph neural networks on the same diagrams, evaluating how effectively the crowd-sourced AI2D graphs and expert-annotated AI2D-RST graphs represent diagram structure for classifying diagrams and their parts. The study reports node classification and graph classification experiments.

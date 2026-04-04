@@ -1,0 +1,31 @@
+================================ Human Message =================================
+
+QUERY:
+What is the type of the project '2021 Annual Street Maintenance'?
+
+TABLE OF CONTENTS (TOC):
+1 | Abstract
+2 | Vehicle Protection Devices
+3 | Legacy Park Paver Repair Project
+4 | Malibu Bluffs Park South Walkway
+5 | Trancas Playground Resurfacing
+6 | PCH Median Improvements at Paradise Cove and Zuma Beach
+7 | annex
+8 | Capital Improvement Projects (Completed)
+9 | Civic Center Stormwater Diversion Structure
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_avQjzlAZHrmqoPIRdHFlHSU2)
+ Call ID: call_avQjzlAZHrmqoPIRdHFlHSU2
+  Args:
+    pattern: 2021 Annual Street Maintenance
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+
+none

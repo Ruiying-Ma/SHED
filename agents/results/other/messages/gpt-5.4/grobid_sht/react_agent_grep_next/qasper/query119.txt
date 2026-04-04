@@ -1,0 +1,43 @@
+================================ Human Message =================================
+
+QUERY:
+What language is explored in this paper?
+
+TABLE OF CONTENTS (TOC):
+1 | Multitask Learning for Blackmarket Tweet Detection
+1.1 | Abstract
+1.2 | I. INTRODUCTION
+1.3 | TABLE I AN EXAMPLE OF A COLLUSIVE AND A GENUINE TWEET.
+1.4 | II. RELATED WORK
+1.5 | A. Blackmarket Services
+1.6 | B. Data Collection
+1.7 | C. Dataset Description
+1.8 | D. Analysis of Blackmarket Tweets
+1.9 | IV. PROPOSED APPROACH
+1.10 | A. Tweet Content Features
+1.11 | B. Tweet Content Representation
+1.12 | C. Proposed Model
+1.13 | 1) Model Inputs:
+1.14 | A. Baseline Methods
+1.15 | B. Evaluation Setup
+1.16 | VI. EXPERIMENTAL RESULTS
+1.17 | VII. CONCLUSION
+1.18 | ACKNOWLEDGEMENTS
+1.19 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_AVXTmakHpatBnbcZz3H8fele)
+ Call ID: call_AVXTmakHpatBnbcZz3H8fele
+  Args:
+    pattern: language|English|Hindi|Arabic|Spanish
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.7 | C. Dataset Description
+In total, we collected 2, 690 tweets posted on blackmarket sites. Out of these, we removed non-English tweets and tweets with a length of less than two characters. Finally, we were left with 1, 796 blackmarket tweets. Then, from the timelines of the authors of these tweets, we randomly sampled 2, 000 genuine tweets that were not posted on these blackmarket sites during the same period.  Both the blackmarket and genuine tweets were also inspected manually.
+
+================================== Ai Message ==================================
+
+English

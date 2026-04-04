@@ -1,0 +1,62 @@
+================================ Human Message =================================
+
+QUERY:
+did the top teams experiment with lexicons?
+
+TABLE OF CONTENTS (TOC):
+1 | EmoAtt at EmoInt-2017: Inner attention sentence embedding for Emotion Intensity
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2 Proposed Approach
+1.4 | 3 Experimental Setup
+1.5 | 4 Results and Discussion
+1.6 | 4.1 Anger Dataset
+1.7 | 4.2 Joy Dataset
+1.8 | 4.3 Fear Dataset
+1.9 | 4.4 Sadness Dataset
+1.10 | 5 Conclusions
+1.11 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_2nKwNw2M7sLTBr4HelwgOWNV)
+ Call ID: call_2nKwNw2M7sLTBr4HelwgOWNV
+  Args:
+    pattern: lexicon|lexicons
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1 | Abstract
+In this paper we describe a deep learning system that has been designed and built for the WASSA 2017 Emotion Intensity Shared Task. We introduce a representa- tion learning approach based on inner at- tention on top of an RNN. Results show that our model offers good capabilities and is able to successfully identify emotion- bearing words to predict intensity without leveraging on lexicons, obtaining the 13 th place among 22 shared task competitors.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_WVgM4Q2E3iydrIVp0vv8jyR0)
+ Call ID: call_WVgM4Q2E3iydrIVp0vv8jyR0
+  Args:
+    pattern: top teams|teams|competitors|shared task
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1 | Abstract
+In this paper we describe a deep learning system that has been designed and built for the WASSA 2017 Emotion Intensity Shared Task. We introduce a representa- tion learning approach based on inner at- tention on top of an RNN. Results show that our model offers good capabilities and is able to successfully identify emotion- bearing words to predict intensity without leveraging on lexicons, obtaining the 13 th place among 22 shared task competitors.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_IPTlXPTmlldKuhkE7aiAJQkH)
+ Call ID: call_IPTlXPTmlldKuhkE7aiAJQkH
+  Args:
+    section_id: 1.5
+
+================================= Tool Message =================================
+Name: read_section
+
+4 Results and Discussion
+In this section we report the results of the exper- iments we performed to test our proposed model. In general, as Table 2 shows, our intra-sentence attention RNN was able to outperform the Weka baseline ( Mohammad and Bravo-Marquez , 2017a )
+on the development dataset by a solid margin. Moreover, the model manages to do so without any additional resources, except pre-trained word embeddings.  These results are, however, reversed for the test dataset, where our model performs worse than the baseline. This shows that the model is not able to generalize well, which we think is related to the missing semantic information due to the vocabulary gap we observed between the datasets and the GloVe embeddings.To validate the usefulness of our binary fea- tures, we performed an ablation experiment and trained our best models for each corpus without them.  Table 3 summarizes our results in terms of Pearson correlation on the development portion of the datasets. As seen, performance decreases in all cases, which shows that indeed these features are critical for performance, allowing the model to better capture the semantics of words missing in GloVe. In this sense, we think the usage of ad- ditional features, such as the ones derived from emotion or sentiment lexicons could indeed boost our model capabilities. This is proposed for future work. On the other hand, our model also offers us very interesting insights on how the learning is per- formed, since we can inspect the attention weights that the neural network is assigning to each spe- cific token when predicting the emotion intensity. By visualizing these weights we can have a clear notion about the parts of the sentence that the model considers are more important. As Figure 1 shows, we see the model seems to be have learned to attend the words that naturally bear emotion or sentiment.  This is specially patent for the exam- ples extracted from the Joy dataset, where posi- tive words are generally identified. However, we also see some examples where the lack of seman- tic information about the input words, specially for hashtags or user mentions, makes the model unable to identify some of these the most salient words to predict emotion intensity. Several pre- processing techniques can be implemented to alle- viate this problem, which we intend to explore in the future.
+
+================================== Ai Message ==================================
+
+Unanswerable

@@ -1,0 +1,55 @@
+================================ Human Message =================================
+
+QUERY:
+What aspects are considered?
+
+TABLE OF CONTENTS (TOC):
+1 | Multilingual and Multi-Aspect Hate Speech Analysis
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2 Related Work
+1.4 | 3 Dataset
+1.4.1 | 3.1 Data Collection
+1.4.2 | 3.2 Linguistic Challenges
+1.4.3 | 3.3 Annotation Process
+1.4.4 | 3.4 Pilot Dataset
+1.4.5 | 3.5 Final Dataset
+1.5 | 4 Experiments
+1.5.1 | 4.1 Models
+1.5.2 | 4.2 Results and Analysis
+1.6 | 5 Conclusion
+1.7 | Acknowledgement
+1.8 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_Ig9gnIpLceuOjbKwq6vYKQix)
+ Call ID: call_Ig9gnIpLceuOjbKwq6vYKQix
+  Args:
+    pattern: aspects? considered|considered aspects|multi-aspect|aspect
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1 | Abstract
+Current research on hate speech analysis is typically oriented towards monolingual and single classification tasks. In this paper, we present a new multilingual multi-aspect hate speech analysis dataset and use it to test the current state-of-the-art multilingual multitask learning approaches. We evaluate our dataset in various classification settings, then we discuss how to leverage our annotations in order to improve hate speech detection and classification in general.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_WjSnKxRtBTYkrDoqKNNdFBVu)
+ Call ID: call_WjSnKxRtBTYkrDoqKNNdFBVu
+  Args:
+    section_id: 1.4.5
+
+================================= Tool Message =================================
+Name: read_section
+
+3.5 Final Dataset
+The final dataset is composed of a pilot corpus of 100 tweets per language, and comparable corpora of 5,647 English tweets, 4,014 French tweets, and 3,353 Arabic tweets. Each of the annotated aspects represents a classification task of its own, that could either be evaluated independently, or, as intended in this paper, tested on how it impacts other tasks.  The different labels are designed to facilitate the study of the correlations between the explicitness of the tweet, the type of hostility it conveys, its target attribute, the group it dehumanizes, how different people react to it, and the performance of multitask learning on the five tasks. We assigned each tweet to five annotators, then applied majority voting to each of the labeling tasks.  Given the numbers of annotators and labels in each annotation sub-task, we allowed multilabel annotations in the most subjective classification tasks, namely the hostility type and the annotator's sentiment labels, in order to keep the right human-like approximations. If there are two annotators agreeing on two labels respectively, we add both labels to the annotation.The average Krippendorff scores for inter- annotator agreement (IAA) are 0.153, 0. 244, and 0.202 for English, French, and Arabic respectively, which are comparable to existing complex annotations (Sanguinetti et al., 2018) given the nature of the labeling tasks and the number of labels. We present the labelset the annotators refer to, and statistics of our annotated data in the following.Directness label Annotators determine the explicitness of the tweet by labeling it as direct or indirect speech.  This should be based on whether the target is explicitly named, or less easily discernible, especially if the tweet contains humor, metaphor, or figurative speech. Table 2 shows that even when partly using equivalent keywords to search for candidate tweets, there are still significant differences in the resulting data.<table/>
+Table 2
+Hostility type To identify the hostility type of the tweet, we stick to the following conventions:
+ (1) if the tweet sounds dangerous, it should be la-beled as abusive; (2) according to the degree to which it spreads hate and the tone its author uses, it can be hateful, offensive or disrespectful; (3) if the tweet expresses or spreads fear out of ignorance against a group of individuals, it should be labeled as fearful; (4) otherwise it should be annotated as normal. We define this task to be multilabel.  Table 2 shows that hostility types are relatively consistent across different languages and offensive is the most frequent label.Target attribute After annotating the pilot dataset, we noticed common misconceptions regarding race, ethnicity, and nationality, therefore we merged these attributes into one label origin.  Then, we asked the annotators to determine whether the tweet insults or discriminates against people based on their (1) origin, (2) religious affiliation, (3) gender, (4) sexual orientation, (5) special needs or (6) other.  Table 2 shows there are fewer tweets targeting disability in Arabic compared to English and French and no tweets insulting people based on their sexual orientation which may be due to the fact that the labels of gender, gender identity, and sexual orientation use almost the same wording. On the other hand, French contains a small number of tweets targeting people based on their gender in comparison to English and Arabic. We have observed significant differences in terms of target attributes in the three languages.  More data may help us examine the problems affecting targets of different linguistic backgrounds.Target group We determined 16 common target groups tagged by the annotators after the first annotation step. The annotators had to decide on whether the tweet is aimed at women, people of African descent, Hispanics, gay people, Asians, Arabs, immigrants in general, refugees; people of different religious affiliations such as Hindu, Christian, Jewish people, and Muslims; or from political ideologies socialists, and others.  We also provided the annotators with a category to cover hate directed towards one individual, which cannot be generalized. In case the tweet targets more than one group of people, the annotators should choose the group which would be the most affected by it according to them. Table 1 shows the counts of the five categories out of 16 that commonly occur in the three languages. In fact, most of the tweets target individuals or fall into the "other" category.  In the latter case, they may target people with different political views such as liberals or conservatives in English and French, or specific ethnic groups such as Kurdish people in Arabic. English tweets tend to have more tweets targeting people with special needs, due to common language-specific demeaning terms used in conversations where people insult one another. Arabic tweets contain more hateful comments towards women for the same reason.  On the other hand, the French corpus contains more tweets that are offensive towards African people, due to hateful comments generated by debates about immigrants.Sentiment of the annotator We claim that the choice of a suitable emotion representation model is key to this sub-task, given the subjective nature and social ground of the annotator's sentiment analysis.  After collecting the annotation results of the pilot dataset regarding how people feel about the tweets, and observing the added categories, we adopted a range of sentiments that are in the negative and neutral scales of the hourglass of emotions introduced by Cambria et al. (2011) . This model includes sentiments that are connected to objectively assessed natural language opinions, and excludes what is known as self-conscious or moral emotions such as shame and guilt.  Our labels include shock, sadness, disgust, anger, fear, confusion in case of ambivalence, and indifference. This is the second multilabel task of our model.Table 2 shows more tweets making the annotators feel disgusted and angry in English, while annotators show more indifference in both French and Arabic. A relatively more frequent label in both French and Arabic is shock, therefore reflecting what some of the annotators were feeling during the labeling process.
+
+================================== Ai Message ==================================
+
+The aspects considered are the tweet’s directness, hostility type, target attribute, target group, and the annotator’s sentiment.

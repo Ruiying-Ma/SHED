@@ -1,0 +1,42 @@
+================================ Human Message =================================
+
+QUERY:
+What inter-annotator agreement did they obtain?
+
+TABLE OF CONTENTS (TOC):
+1 | A Corpus of Adpositional Supersenses for Mandarin Chinese
+1.1 | Abstract
+1.2 | 1. Introduction
+1.3 | 2. Related Work
+1.3.1 | 2.1. Chinese Adpositions and Roles
+1.3.2 | 2.2. SNACS: Adposition Supersenses
+1.4 | 3. Adposition Criteria in Mandarin Chinese
+1.5 | 4. Corpus Annotation
+1.5.1 | 4.1. Preprocessing
+1.5.2 | 4.2. Reliability of Annotation
+1.6 | 5. Corpus Analysis
+1.6.1 | 5.1. Adpositions in Chinese
+1.6.2 | 5.2. Supersense & Construal Distributions in Chinese versus English
+1.7 | 6. POS Tagging of Adposition Targets
+1.8 | 7. Conclusion
+1.9 | Acknowledgements
+1.10 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_9FMi2koamKvpGwzEYuvfmWF2)
+ Call ID: call_9FMi2koamKvpGwzEYuvfmWF2
+  Args:
+    section_id: 1.5.2
+
+================================= Tool Message =================================
+Name: read_section
+
+4.2. Reliability of Annotation
+The corpus is jointly annotated by three native Mandarin Chi- nese speakers, all of whom have received advanced training in theoretical and computational linguistics. Supersense la- beling was performed cooperatively by 3 annotators for 25% (235/933) of the adposition targets, and for the remainder, independently by the 3 annotators, followed by cooperative adjudication.  Annotation was conducted in two phases, and therefore we present two inter-annotator agreement studies to demonstrate the reproducibility of SNACS and the relia- bility of the adapted scheme for Chinese.Table 1 shows raw agreement and Cohen’s kappa across three annotators computed by averaging three pairwise com- parisons. Agreement levels on scene role, function, and full construal are high for both phases, attesting to the validity of the annotation framework in Chinese.  However, there is a slight decrease from Phase 1 to Phase 2, possibly due to the seven newly attested adpositions in Phase 2 and the 1-year interval between the two annotation phases.IAA S AMPLES Phase Time Chapters # Adpositions Phase 1 July 2018 15–20 111 Phase 2 Sept 2019 26–27 124 R AW A GREEMENT Phase Scene Function Construal Phase 1 .92 .95 . 90 Phase 2 .93 .90 .89 K APPA Phase Scene Function Construal Phase 1 .90 .93 .88 Phase 2 .92 .88 .88
+Table 1: Inter-annotator agreement (IAA) results on two samples from different phases of the project.Toks.  Types Chapters 27 NA Sentences 1,597 NA Tokens 20,287 NA Adpositions 933 70 Prepositions 667 42 Postpositions 266 28 Supersenses 933 29 Scene roles 933 28 Functions 933 26 Construals 933 41 Congruent (scene=fxn) 803 25 Divergent (scene ≠ fxn) 130 16
+ Table 2: Statistics of the final Mandarin The Little Prince Corpus (the Chinese SNACS Corpus). Tokenization, identification of adpo- sition targets, and supersense labeling were performed manually.
+
+================================== Ai Message ==================================
+
+Cohen’s kappa averaged over three pairwise comparisons was .90/.93/.88 for scene role, function, and full construal in Phase 1, and .92/.88/.88 in Phase 2. Raw agreement was .92/.95/.90 in Phase 1 and .93/.90/.89 in Phase 2.

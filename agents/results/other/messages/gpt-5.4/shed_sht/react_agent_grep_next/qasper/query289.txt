@@ -1,0 +1,118 @@
+================================ Human Message =================================
+
+QUERY:
+What is the performance of the best model in the sign language recognition task?
+
+TABLE OF CONTENTS (TOC):
+1 | Sign Language Recognition Analysis using Multimodal Data
+1.1 | I. INTRODUCTION
+1.2 | II. LITERATURE REVIEW
+1.3 | III. DATASET
+1.3.1 | A. Collection Protocol
+1.3.2 | B. Data Modality
+1.4 | IV. OUR APPROACH
+1.4.1 | A. Recurrent Neural Networks (RNN)
+1.4.2 | B. 3D Convolutional Neural Network
+1.4.3 | C. Axis Independent LSTM
+1.4.4 | D. Spatial AI-LSTM
+1.4.5 | E. Combined Network
+1.5 | V. EXPERIMENTS
+1.5.1 | A. Skeletal Data
+1.5.2 | B. Video Data
+1.5.3 | C. Training Details
+1.5.4 | D. Baseline Methods
+1.5.5 | E. Experimental Results
+1.5.6 | F. Effect of Same Subject Data in Training
+1.6 | VI. CONCLUSION
+1.6.1 | ACKNOWLEDGMENTS
+1.6.2 | REFERENCES
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_9Zgh9LeXYBxYCR9Fz3IPB2Af)
+ Call ID: call_9Zgh9LeXYBxYCR9Fz3IPB2Af
+  Args:
+    section_id: 1.5.5
+
+================================= Tool Message =================================
+Name: read_section
+
+E. Experimental Results
+Table I shows the comparative results among our proposed architectures and baselines. Overall, we use data from 12 subjects for our experiments which sum up to 13107 sign gesture samples in total. To evaluate model performance on a specific subject (test subject), we adopt cross subject
+evaluation criteria. Suppose, X is the test subject. We train our networks with all sign samples except those are from subject X. We use subject X’s data as test split to evaluate the performance of the networks.  Table I shows the average test accuracy for all 12 subjects. We can see that 3D CNN network alone performs worse than simpler baselines. But when coupled with AI-LSTM as Max CNN-LSTM, it shows an increase in recognition accuracy by 2% from AI-LSTM alone. This is because some of the signs are confused by the AI-LSTM network because of similar skeletal motion pattern. Incorporating spatial relationship among joints leads to a significant accuracy gain.  The Spatial AI-LSTM is trained only on skeletal data but outperforms the combined network by 6%.Fig. 9. Confusion matrix for a subset of sign classes from a subject for AI-LSTM, Max CNN-LSTM and Spatial AI-LSTM from top to bottom respectively. Mentioned signs are a subset of 51 sign classes.Figure 9 shows three confusion matrices for a subset of twelve sign classes for a subject.  The top matrix is for AI- LSTM network, middle one is for Max CNN-LSTM and
+bottom one is for Spatial AI-LSTM. As seen in Figure 3 the sign pairs Alarm / Doorbell are similar in skeletal motion but have different hand shapes. Since Max CNN- LSTM includes hand shapes, it can successfully recognize it while other two models struggles. Same is true for some other signs like Email , Event , List , Order and Weather .  Some other signs are better recognized by Spatial AI-LSTM network. It should be mentioned here that accuracy listed in Table I shows average accuracy across all test subjects, while Figure 9 presents confusion matrix for a single test subject. For this particular subject overall test accuracy is 58%, 70% and 69% for AI-LSTM, Max CNN-LSTM and Spatial AI-LSTM network respectively.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_Epage4bTqzwGYhAPJW91jpIm)
+ Call ID: call_Epage4bTqzwGYhAPJW91jpIm
+  Args:
+    pattern: Table I|accuracy|%
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1 | I. INTRODUCTION
+According to The National Institute on Deafness, one in thousand infants is born deaf. An additional one to six per thousand are born with hearing loss at different levels [1]. Sign language is commonly used by Deaf and Hard-of- Hearing (DHH) persons to communicate via hand gestures. An automatic sign language recognizer enables an ASL user to translate the sign language to written text or speech, allowing them to communicate with people who are not familiar with ASL.  There is a tremendous rise in the popularity of personal digital assistants; available on user’s personal and wearable devices (Google Now, Amazon Alexa and Apple Siri, etc.) and also in the form of standalone devices (Amazon Echo and Google Home smart speakers). These devices are primarily controlled through voice, and hence, their functionality is not readily available to DHH users. An automatic sign recognizer can also enable the interaction between a DHH user and a digital assistant. Most current systems have capability of ASL recognition with RGB video data [2]–[4]. An ASL sign is performed by a combination of hand gestures, facial expressions and postures of the body. Sequential motion of specific body locations (such as hand-tip, neck and arm) provide informative cues about a sign. Using video data, it is difficult to extract different body locations and associated motion sequences from a series of RGB frames.  Microsoft Kinect is a 3D camera sensor which can use the depth information of a person to capture 3D coordinates of his/her body location across a video. This sequence of 3D body location is referred by skeletal data [5]. To the best of our knowledge, there is no publicly available skeletal dataset in literature for ASL recognition.With skeletal data, an ASL sign can be seen as a sequence of 3D coordinates or a 3D time series [6].  Recurrent neural networks (RNN) have shown strong performance for sequen- tial modeling [7]. In this work, we investigate the impact of RGB video data in recognition accuracy when combined with skeletal data. We also propose a combined RNN network with a simple spatial data augmentation technique. In summary, the contributions of this work are:
+• We propose an RNN architecture with a novel spatial data augmentation technique.• We propose an architecture which uses both RGB and skeletal data to improve recognition accuracy.• We introduce and publicly release a multi–modal dataset for ASL called GMU-ASL51.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_PkMneHjxRSNfip7CqAG8bbes)
+ Call ID: call_PkMneHjxRSNfip7CqAG8bbes
+  Args:
+    pattern: Table I
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.5.5 | E. Experimental Results
+Table I shows the comparative results among our proposed architectures and baselines. Overall, we use data from 12 subjects for our experiments which sum up to 13107 sign gesture samples in total. To evaluate model performance on a specific subject (test subject), we adopt cross subject
+evaluation criteria. Suppose, X is the test subject. We train our networks with all sign samples except those are from subject X. We use subject X’s data as test split to evaluate the performance of the networks.  Table I shows the average test accuracy for all 12 subjects. We can see that 3D CNN network alone performs worse than simpler baselines. But when coupled with AI-LSTM as Max CNN-LSTM, it shows an increase in recognition accuracy by 2% from AI-LSTM alone. This is because some of the signs are confused by the AI-LSTM network because of similar skeletal motion pattern. Incorporating spatial relationship among joints leads to a significant accuracy gain.  The Spatial AI-LSTM is trained only on skeletal data but outperforms the combined network by 6%.Fig. 9. Confusion matrix for a subset of sign classes from a subject for AI-LSTM, Max CNN-LSTM and Spatial AI-LSTM from top to bottom respectively. Mentioned signs are a subset of 51 sign classes.Figure 9 shows three confusion matrices for a subset of twelve sign classes for a subject.  The top matrix is for AI- LSTM network, middle one is for Max CNN-LSTM and
+bottom one is for Spatial AI-LSTM. As seen in Figure 3 the sign pairs Alarm / Doorbell are similar in skeletal motion but have different hand shapes. Since Max CNN- LSTM includes hand shapes, it can successfully recognize it while other two models struggles. Same is true for some other signs like Email , Event , List , Order and Weather .  Some other signs are better recognized by Spatial AI-LSTM network. It should be mentioned here that accuracy listed in Table I shows average accuracy across all test subjects, while Figure 9 presents confusion matrix for a single test subject. For this particular subject overall test accuracy is 58%, 70% and 69% for AI-LSTM, Max CNN-LSTM and Spatial AI-LSTM network respectively.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_Macx9cOd4AMwvsjkPSHCdu1M)
+ Call ID: call_Macx9cOd4AMwvsjkPSHCdu1M
+  Args:
+    section_id: 1.6
+
+================================= Tool Message =================================
+Name: read_section
+
+VI. CONCLUSION
+We present a deep learning based approach for ASL recog- nition that leverages skeletal and video data. The proposed model captures the underlying temporal dynamics associated with sign language and also identifies specific hand shape patterns from video data to improve recognition performance. A new data augmentation technique was introduced that al- lowed the LSTM networks to capture spatial dynamics among joints.  Finally, a large public dataset for ASL recognition will be released to the community to spur research in this direction; and bring benefits of digital assistants to the deaf and hard of hearing community. For future research direction, we are looking into the problem of sentence level ASL recognition. We also plan to use other data modality such as wifi signals which can be complimentary to video in sign language recognition.
+ACKNOWLEDGMENTS
+This work was supported by Google Research Award. Some of the experiments were run on ARGO, a research computing cluster provided by the Office of Research Computing at George Mason University, VA. (URL:http://orc.gmu.edu)
+REFERENCES
+[1] P. Kushalnagar, G. Mathur, C. J.Moreland et al. , “Infants and children with hearing loss need early language access,” The Journal of clinical ethics , pp. 1–1, 2010.
+[2] J. Huang, W. Zhou, H. Li, and W.Li, “Sign language recognition using 3d convolutional neural networks,” in 2015 IEEE International Conference on Multimedia and Expo (ICME) , June 2015, pp. 1–6.
+[3] S. Ji, W. Xu, M. Yang, and K.Yu, “3d convolutional neural networks for human action recognition,” IEEE Trans. Pattern Anal. Mach. Intell. , vol. 35, no. 1, pp. 221–231, Jan. 2013. [Online]. Available: http://dx.doi.org/10.1109/TPAMI.2012.59
+[4] C. Sun, T. Zhang, and C. Xu,“Latent support vector machine modeling for sign language recognition with kinect,” ACM Trans. Intell. Syst. Technol. , vol. 6, no. 2, pp. 20:1–20:20, Mar. 2015. [Online]. Available: http://doi.acm.org/10.1145/2629481
+[5] Z. Zhang, “Microsoft kinect sensor and its effect,” IEEE MultiMedia , vol. 19, no. 2, pp. 4–10, Apr. 2012. [Online]. Available: http: //dx.doi.org/10.1109/MMUL.2012.24
+[6] Y. Du, W. Wang, and L. Wang,and L. Wang, “Hierarchical recurrent neural network for skeleton based action recognition,” in 2015 IEEE Conference on Computer Vision and Pattern Recognition (CVPR) , June 2015, pp. 1110– 1118.
+[7] Z. C. Lipton,“A critical review of recurrent neural networks for sequence learning,” CoRR , vol. abs/1506.00019, 2015. [Online]. Available: http://arxiv.org/abs/1506.00019
+[8] Z. Zafrulla, H. Brashear, P. Yin,P. Presti, T. Starner, and H. Hamilton, “American sign language phrase verification in an educational game for deaf children,” in 2010 20th International Conference on Pattern Recognition , Aug 2010, pp. 3846–3849.
+[9] Z. Zafrulla, H. Brashear, T. Starner,H. Hamilton, and P. Presti, “American sign language recognition with the kinect,” in Proceedings of the 13th International Conference on Multimodal Interfaces , ser. ICMI ’11. New York, NY, USA: ACM, 2011, pp. 279–286. [Online]. Available: http://doi.acm.org/10.1145/2070481.2070532
+[10] L. Pigou, S. Dieleman, P.-J.Kindermans, and B. Schrauwen, “Sign language recognition using convolutional neural networks,” in Computer Vision - ECCV 2014 Workshops , L. Agapito, M. M. Bronstein, and C. Rother, Eds. Cham: Springer International Publishing, 2015, pp. 572–578.
+[11] M. M. Zaki and S. I. Shaheen,“Sign language recognition using a combination of new vision based features,” Pattern Recognition Letters , vol. 32, no. 4, pp. 572 – 577, 2011. [Online]. Available: http://www.sciencedirect.com/science/article/pii/S016786551000379X
+[12] H. Cooper, E.-J. Ong, N.Pugeault, and R. Bowden, “Sign language recognition using sub-units”, booktitle=”gesture recognition,” S. Es- calera, I. Guyon, and V. Athitsos, Eds. Cham: Springer International Publishing, 2017, pp. 89–118.
+[13] A. Shahroudy, J. Liu, T. T. Ng,and G. Wang, “Ntu rgb+d: A large scale dataset for 3d human activity analysis,” in 2016 IEEE Conference on Computer Vision and Pattern Recognition (CVPR) , June 2016, pp. 1010–1019.
+[14] J. Liu, A. Shahroudy, D. Xu, A.Shahroudy, D. Xu, A. K. Chichung, and G. Wang, “Skeleton- based action recognition using spatio-temporal lstm network with trust gates,” IEEE Transactions on Pattern Analysis and Machine Intelligence , pp. 1–1, 2017.
+[15] V. Veeriah, N. Zhuang, and G. J.Qi, “Differential recurrent neural networks for action recognition,” in 2015 IEEE International Conference on Computer Vision (ICCV) , Dec 2015, pp. 4041–4049.
+[16] S. Song, C. Lan, J. Xing, W.Zeng, and J. Liu, “An end-to-end spatio- temporal attention model for human action recognition from skeleton data,” in AAAI Conference on Artificial Intelligence , 2017, pp. 4263– 4270.
+[17] J. Liu, G. Wang, L. Y. Duan,K. Abdiyeva, and A. C. Kot, “Skeleton- based human action recognition with global context-aware attention lstm networks,” IEEE Transactions on Image Processing , vol. 27, no. 4, pp. 1586–1599, April 2018.
+[18] J. Liu, N. Akhtar, and A. Mian,“Skepxels: Spatio-temporal image representation of human skeleton joints for action recognition,” CoRR , vol. abs/1711.05941, 2017. [Online]. Available: http://arxiv.org/abs/ 1711.05941
+[19] Q. Ke, M. Bennamoun, S. An, F.A. Sohel, and F. Boussa¨ıd, “A new representation of skeleton sequences for 3d action recognition,” in 2017 IEEE Conference on Computer Vision and Pattern Recognition, CVPR 2017, Honolulu, HI, USA, July 21-26, 2017 , 2017, pp. 4570–4579. [Online]. Available: https://doi.org/10.1109/CVPR.2017.486
+[20] V. Athitsos, C. Neidle, S.Sclaroff, J. Nash, A. Stefan, , and A. Thangali, “The american sign language lexicon video dataset,” in 2008 IEEE Com- puter Society Conference on Computer Vision and Pattern Recognition Workshops , June 2008, pp. 1–8.
+[21] A. Krizhevsky, I. Sutskever,and G. E. Hinton, “Imagenet classification with deep convolutional neural networks,” in Advances in Neural Information Processing Systems 25 , F. Pereira, C. J. C. Burges, L. Bottou, and K. Q. Weinberger, Eds. Curran Associates, Inc., 2012, pp. 1097–1105. [Online]. Available: http://papers.nips. cc/paper/ 4824-imagenet-classification-with-deep-convolutional-neural-networks. pdf
+[22] Y. Bengio, P. Frasconi, and P.Simard, “The problem of learning long-term dependencies in recurrent networks,” in IEEE International Conference on Neural Networks , March 1993, pp. 1183–1188 vol.3.
+[23] Y. Bengio, P. Simard, and P.Frasconi, “Learning long-term dependencies with gradient descent is difficult,” Trans. Neur. Netw. , vol. 5, no. 2, pp. 157–166, Mar. 1994. [Online]. Available: http://dx.doi.org/10.1109/72.279181
+[24] S. Hochreiter and J. Schmidhuber,“Long short-term memory,” Neural Comput. , vol. 9, no. 8, pp. 1735–1780, Nov. 1997. [Online]. Available: http://dx.doi.org/10.1162/neco.1997.9.8.1735
+[25] D. P. Kingma and J. Ba, “Adam:A method for stochastic optimization,” CoRR , vol. abs/1412.6980, 2014. [Online]. Available: http://arxiv.org/abs/1412.6980
+[26] T. M. Emmanuel,“Using machine learning for real-time activity recog- nition and estimation of energy expenditure,” 01 2008.
+
+================================== Ai Message ==================================
+
+Unanswerable

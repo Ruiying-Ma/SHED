@@ -1,0 +1,113 @@
+================================ Human Message =================================
+
+QUERY:
+Do they compare against popular topic models, such as LDA?
+
+TABLE OF CONTENTS (TOC):
+1 | Toward Interpretable Topic Discovery via Anchored Correlation Explanation
+1.1 | Abstract
+1.2 | 1. Introduction
+1.3 | 2. Methods
+1.4 | 3. Related Work
+1.5 | 4. Results and Discussion
+1.6 | 4.1. 20 Newsgroups
+1.7 | 4.2. i2b2 Obesity Challenge 2008
+1.8 | 4.3. Anchored CorEx for Discriminative Tasks
+1.9 | 5. Conclusion
+1.10 | Acknowledgements
+1.11 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_wHnEugy9WoVqkijKlTnvN3hz)
+ Call ID: call_wHnEugy9WoVqkijKlTnvN3hz
+  Args:
+    pattern: LDA|topic model|Latent Dirichlet
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.11 | References
+Agarwal, V., Podchiyska, T., Banda, J.M., Goel, V., Leung, T. I., Minty, E. P., Sweeney, T. E., Gyang, E., and N.H., Shah. Learning statistical models of phenotypes using noisy labeled training data. Journal of the American Medical Informatics Association (JAMIA) , 2016.
+Andrzejewski, David and Zhu, Xiaojin.Latent dirichlet allocation with topic-in-set knowledge. In Proceedings of the NAACL HLT 2009 Workshop on Semi-Supervised Learning for Natural Language Processing , pp. 43–48, 2009.
+Andrzejewski, David, Zhu, Xiaojin, and Craven,Mark. Incorporating domain knowledge into topic modeling via dirichlet forest priors. In Proceedings of the 26th Annual International Conference on Machine Learning , pp. 25–32, 2009.
+Arora, Sanjeev, Ge, Rong, and Moitra, Ankur.Learning topic models – going beyond svd. In Proceedings of the 2012 IEEE 53rd Annual Symposium on Foundations of Computer Science , FOCS ’12, pp. 1–10, 2012.
+Chapman, Wendy W., Bridewell, Will, Hanbury, Paul,Cooper, Gregory F., and Buchanan, Bruce G. A simple algorithm for identifying negated findings and diseases in discharge summaries. Journal of Biomedical Informatics , 34(5):301 – 310, 2001. ISSN 1532-0464.
+Chen, Peixian, Zhang, Nevin L, Poon, Leonard KM,and Chen, Zhourong. Progressive EM for latent tree models and hierarchical topic detection. arXiv preprint arXiv:1508.00973 , 2015.
+Chen, Yukun, Carroll, Robert J, Hinz,Eugenia R McPeek, Shah, Anushi, Eyler, Anne E, Denny, Joshua C, and Xu, Hua. Applying active learning to high-throughput phenotyping algorithms for electronic health records data. Journal of the American Medical Informatics Association , 20(e2):e253– e259, 2013.
+Craven, Mark and Kumlien, Johan.Constructing biological knowledge bases by extracting information from text sources. In Proceedings of the Seventh International Conference on Intelligent Systems for Molecular Biology , pp. 77–86, 1999.
+Dai, Manhong, Shah, Nigam H, Xuan, Wei,Musen, Mark A, Watson, Stanley J, Athey, Brian D, Meng, Fan, et al. An efficient solution for mapping free text to ontology terms. AMIA Summit on Translational Bioinformatics , 21, 2008.
+Halpern, Y., Horng, S., and Sontag, D.Anchored Discrete Factor Analysis. ArXiv e-prints , November 2015.
+Halpern, Yoni, Choi, Youngduck, Horng, Steven,and Sontag, David. Using anchors to estimate clinical state without labeled data. In Proceedings of the American Medical Informatics Assocation (AMIA) 2015 Annual Symposium , 2014.
+Jagarlamudi, Jagadeesh, Daum´e III, Hal,and Udupa, Raghaven- dra. Incorporating lexical priors into topic models. In Proceedings of the 13th Conference of the European Chapter of the Association for Computational Linguistics , pp. 204–213, 2012.
+Lee, Moontae and Mimno, David.Low-dimensional embeddings for interpretable anchor-based topic inference. In Proceedings of Empirical Methods in Natural Language Processing , 2014.
+Mintz, Mike, Bills, Steven, Snow, Rion,and Jurafsky, Dan. Distant supervision for relation extraction without labeled data. In Proceedings of the Joint Conference of the 47th Annual Meeting of the ACL and the 4th International Joint Conference on Natural Language Processing of the AFNLP: Volume 2 - Volume 2 , ACL ’09, pp. 1003–1011, 2009.
+Newton, Katherine M, Peissig, Peggy L, Kho, Abel Ngo,Bielinski, Suzette J, Berg, Richard L, Choudhary, Vidhu, Basford, Melissa, Chute, Christopher G, Kullo, Iftikhar J, Li, Rongling, Pacheco, Jennifer A, Rasmussen, Luke V, Spangler, Leslie, and Denny, Joshua C. Validation of electronic medical record-based phenotyping algorithms: results and lessons learned from the emerge network.  Journal of the American Medical Informatics Association , 20(e1):e147–e154, 2013.
+Nguyen, Thang, Hu, Yuening, and Boyd-Graber,Jordan L. Anchors regularized: Adding robustness and extensibility to scalable topic-modeling algorithms. In Assocation for Computational Linguistics , pp. 359–369, 2014.
+Slonim, Noam, Friedman, Nir, and Tishby,Naftali. Multivariate information bottleneck. Neural Computation , 18(8):1739– 1789, 2006.
+Tishby, Naftali, Pereira, Fernando C, and Bialek,William. The information bottleneck method. In The Proceedings of the 37th Annual Allerton Conference on Communication, Control, and Computing , pp. 368–377, 2000.
+Uzuner, ¨ Ozlem.Recognizing obesity and comorbidities in sparse data. Journal of the American Medical Informatics Association , 16(4):561–570, 2009.
+Ver Steeg, Greg. Open source project implementing hierarchical topic models on sparse data,2016. URL http://github. com/gregversteeg/corex_topic .
+Ver Steeg, Greg and Galstyan, Aram.Discovering structure in high-dimensional data through correlation explanation. Advances in Neural Information Processing Systems (NIPS) , 2014.
+Ver Steeg, Greg and Galstyan, Aram.Maximally informative hierarchical representations of high-dimensional data. In Proceedings of the Sixteenth International Conference on Artificial Intelligence and Statistics (AISTATS) , 2015.
+Wagstaff, Kiri, Cardie, Claire, Rogers, Seth,Schr¨odl, Stefan, et al. Constrained k-means clustering with background knowledge. In ICML , volume 1, pp. 577–584, 2001.
+Watanabe, Satosi. Information theoretical analysis of multivariate correlation.IBM Journal of research and development , 4(1): 66–82, 1960.Hodas, Nathan, Ver Steeg, Greg, Harrison, Joshua, Chikkagoudar, Satish, Bell, Eric, and Corley, Courtney. Disentangling the lexicons of disaster response in twitter. In The 3rd International Workshop on Social Web for Disaster Management (SWDM’15) , 2015. 105
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_99yBqeC4nfWNeg4QHJYY9Vjd)
+ Call ID: call_99yBqeC4nfWNeg4QHJYY9Vjd
+  Args:
+    section_id: 1.5
+
+================================= Tool Message =================================
+Name: read_section
+
+4. Results and Discussion
+To demonstrate the utility of Anchored CorEx, we run experiments on two document collections: 20 Newsgroups and the i2b2 2008 Obesity Challenge ( Uzuner , 2009 ) data set. Both corpora provide ground truth labels for latent classes that may be thought of as topics.102
+Toward Interpretable Topic Discovery via Anchored Correlation Explanation
+note useful water
+Figure 1. A hierarchical topic model learned by CorEx.  Anchored latent factors are labeled in red with anchor words marked with a “*”.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_gJWiORrmwhCDOfEvRg39umi8)
+ Call ID: call_gJWiORrmwhCDOfEvRg39umi8
+  Args:
+    pattern: compare|baseline|LDA|CorEx|anchor.*topic|20 Newsgroups
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1 | Abstract
+Many predictive tasks, such as diagnosing a pa- tient based on their medical chart, are ultimately defined by the decisions of human experts. Un- fortunately, encoding experts’ knowledge is of- ten time consuming and expensive. We propose a simple way to use fuzzy and informal knowledge from experts to guide discovery of interpretable latent topics in text. The underlying intuition of our approach is that latent factors should be informative about both correlations in the data and a set of relevance variables specified by an expert.  Mathematically, this approach is a combination of the information bottleneck and Total Correlation Explanation (CorEx). We give a preliminary evaluation of Anchored CorEx, showing that it produces more coherent and in- terpretable topics on two distinct corpora.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_Zsg9NwbdyICU0xjAKte2qUP5)
+ Call ID: call_Zsg9NwbdyICU0xjAKte2qUP5
+  Args:
+    section_id: 1.6
+
+================================= Tool Message =================================
+Name: read_section
+
+4.1. 20 Newsgroups
+The 20 Newsgroups data set is suitable for a straightfor- ward evaluation of anchored topic models. The latent classes represent mutually exclusive categories, and each document is known to originate from a single category. We find that the correlation structure among the latent classes is less complex than in the Obesity Challenge data. Further, each category tends to exhibit some specialized vocabulary not used extensively in other categories (thus satisfying the anchor assumption from Arora et al. ( 2012 )). To prepare the data, we removed headers, footers, and quotes and reduced the vocabulary to the most frequent 20,000 words. Each document was represented as a binary bag-of-words vector. In all experiemnts, we used the standard training/test split. All CorEx models used three layers of 40, 3, and 1 factors. Figure 1 shows an example hierarchical topic model extracted by Anchored CorEx.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_dZIhvBTW9m2fPkDi9hLeyBXw)
+ Call ID: call_dZIhvBTW9m2fPkDi9hLeyBXw
+  Args:
+    pattern: coherent|interpretable|compared|comparison|baseline|LDA|latent dirichlet
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1 | Abstract
+Many predictive tasks, such as diagnosing a pa- tient based on their medical chart, are ultimately defined by the decisions of human experts. Un- fortunately, encoding experts’ knowledge is of- ten time consuming and expensive. We propose a simple way to use fuzzy and informal knowledge from experts to guide discovery of interpretable latent topics in text. The underlying intuition of our approach is that latent factors should be informative about both correlations in the data and a set of relevance variables specified by an expert.  Mathematically, this approach is a combination of the information bottleneck and Total Correlation Explanation (CorEx). We give a preliminary evaluation of Anchored CorEx, showing that it produces more coherent and in- terpretable topics on two distinct corpora.
+
+================================== Ai Message ==================================
+
+No. The paper reports a preliminary evaluation showing Anchored CorEx produces more coherent and interpretable topics on two corpora, but the provided document does not mention any comparison against popular topic models such as LDA.

@@ -1,0 +1,66 @@
+================================ Human Message =================================
+
+QUERY:
+Do they report results only on English data?
+
+TABLE OF CONTENTS (TOC):
+1 | KPTimes: A Large-Scale Dataset for Keyphrase Generation on News Documents
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2 Existing datasets
+1.4 | 3 Building the KPTimes dataset
+1.5 | 4 Data analysis
+1.6 | 5 Performance of existing models
+1.6.1 | 5.1 Evaluation metrics
+1.6.2 | 5.2 Models
+1.7 | Baseline, unsupervised: MultipartiteRank
+1.8 | State-of-the-art, supervised: CopyRNN
+1.8.1 | 5.3 Results
+1.9 | 6 Conclusion
+1.10 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_34XalPFgfztPRVMFhEWDfJVH)
+ Call ID: call_34XalPFgfztPRVMFhEWDfJVH
+  Args:
+    section_id: 1.8.1
+
+================================= Tool Message =================================
+Name: read_section
+
+5.3 Results
+Model performances for each dataset are reported in Table 2 . Extractive baselines show the best results for KPCrowd and DUC-2001 which is not surprising given that these datasets exhibit the KPCrowd
+<table><tr><td colspan="2">FirstPhrases 17.1 16.5</td><td>24.6 22.3</td><td>9.2 8.4</td><td>13. 5 13.1</td><td>13.8 10.5</td><td>13.5 12.6</td></tr><tr><td colspan="2">MultipartiteRank 18.2 17.0</td><td>25.6 24.9</td><td>11.2 10.1</td><td>16.9 16.5</td><td>14.3 10. 6</td><td>13.6 13.3</td></tr><tr><td colspan="2">CopySci 15.5 11.1</td><td>12.7 9.7</td><td>11.0 10.6</td><td>18.9 19.8</td><td>20.3 13.8</td><td>25.4 28. 7</td></tr><tr><td>CopyNews</td><td>8.4 4.2</td><td>10.5 7.2</td><td>39.3 50.9</td><td>24.6 26.5</td><td>7.0 3.5</td><td>6.6 5.1</td></tr></table>
+ Table 2 Performance on benchmark datasets composed of newspaper article, full scientific article and scientific article abstract. The generation models CopySci and CopyNews were trained respectively on KP20k and KPTimes. The dataset presented in this work are written in italic.DUC KPTimes JPTimes SemEval KP20k
+F@10 MAP F@10 MAP F@10 MAP F@10 MAP F@10 MAP F@10 MAP lowest ratio of absent keyphrases.  Neural-based models obtain the greatest performance, but only for the dataset on which they were trained. We therefore see that these models do not generalize well across domains, confirming previous preliminary findings (Meng et al., 2017) and exacerbating the need for further research on this topic. Interestingly, CopyNews outperforms the other models on JPTimes and achieves very low scores for KPCrowd and DUC-2001, although all these datasets are from the same domain.  This emphasizes the differences that exist between the readerand editor-assigned gold standard. The score difference may be explained by the ratio of absent keyphrases that differs greatly between the readerannotated datasets and JPTimes (see Table 1 ), and thus question the use of these rather extractive datasets for evaluating keyphrase generation. Finally, we note that the performance of Copy-News on KPTimes is significantly higher than that of CopySci on KP20k, proving that a more uniform and consistent annotation makes it easier to learn a good model.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_z7yCj1UPz7tsylCOqwDZ7hJo)
+ Call ID: call_z7yCj1UPz7tsylCOqwDZ7hJo
+  Args:
+    section_id: 1.4
+
+================================= Tool Message =================================
+Name: read_section
+
+3 Building the KPTimes dataset
+To create the KPTimes dataset, we collected over half a million newswire articles by crawling selected online news websites. We applied heuristics to identify the content (title, headline and body) of each article and regarded the keyphrases provided in the HTML metadata as the gold standard. A cherry-picked sample document is showcased in Figure 1 , it allows to show present and absent keyphrases, as well as keyphrase variants (in this example News media and journalism). We use the New York Times1 as our primary source of data, since the content tagging policy that it applies is rigorous and well- documented2 . The news articles are annotated in a semi-automatic way, first the editors revise a set of tags proposed by an algorithm. They then provide additional tags which will be used by a taxonomy team to improve the algorithm. We first retrieved the URLs of the free-to-read articles from 2006 to 20173 , and collected the corresponding archived HTML pages using the Internet Archive4 . Doing so allows the distribution of our dataset using a thin, URL-only list. We then extracted the HTML body content using beautifulsoup5 and devised heuristics to extract the main content and title of each article while excluding extraneous HTML markup and inline ads.  Gold standard keyphrases are obtained from the metadata (field types news keywords and keywords6 ) available in the HTML page of each article. Surface form variants of gold keyphrases (e.g. "AIDS; HIV", "Driverless Cars; Self-Driving Cars" or "Fatalities; Casualties"), which are sometimes present in the metadata, are kept to be used for evaluation purposes. We further cleansed and filtered the dataset by removing duplicates, articles without content and those with too few (less than 2) or too many (more than 10) keyphrases. This process resulted in a set of 279 923 article-keyphrase pairs. We randomly divided this dataset into training (92.8%), development (3.6%) and test (3.6%) splits. Restricting ourselves to one source of data ensures the uniformity and consistency of annotation that is missing in the other datasets, but it may also make the trained model source-dependent and harm generalization. To monitor the model's ability to generalize, we gather a secondary source of data. We collected HTML pages from the Japan Times7 and processed them the same way as described above. 10K more news articles were gathered as the JPTimes dataset. Although in this study we concentrate only on the textual content of the news articles, it is worth noting that the HTML pages also provide additional information that can be helpful in generating keyphrases such as text style properties (e.g. bold, italic), links to related articles, or news categorization (e.g. politics, science, technology).
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_WG5fi54iVUI02v2XFldqb1qF)
+ Call ID: call_WG5fi54iVUI02v2XFldqb1qF
+  Args:
+    section_id: 1.1
+
+================================= Tool Message =================================
+Name: read_section
+
+Abstract
+Keyphrase generation is the task of predicting a set of lexical units that conveys the main content of a source text. Existing datasets for keyphrase generation are only readily available for the scholarly domain and include non-expert annotations. In this paper we present KPTimes, a large-scale dataset of news texts paired with editor-curated keyphrases. Exploring the dataset, we show how editors tag documents, and how their annotations differ from those found in existing datasets.  We also train and evaluate state-of-the-art neural keyphrase generation models on KPTimes to gain insights on how well they perform on the news domain. The dataset is available online at https://github.com/ygorg/KPTimes.
+
+================================== Ai Message ==================================
+
+Yes. The reported results are on KPTimes and JPTimes news datasets and on existing benchmark datasets such as DUC, KPCrowd, SemEval, and KP20k, all described as news or scientific article datasets, with no mention of non-English data.

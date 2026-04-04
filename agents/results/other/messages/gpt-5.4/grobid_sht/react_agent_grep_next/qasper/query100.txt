@@ -1,0 +1,42 @@
+================================ Human Message =================================
+
+QUERY:
+what languages did they experiment on?
+
+TABLE OF CONTENTS (TOC):
+1 | A Large-Scale Test Set for the Evaluation of Context-Aware Pronoun Translation in Neural Machine Translation
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2 Related Work
+1.3.1 | 2.1 Context-Aware NMT Models
+1.3.2 | 2.2 Evaluation of Pronoun Translation
+1.4 | 3 Test set with contrastive examples
+1.4.1 | 3.1 Automatic extraction of contrastive examples from corpora
+1.5 | contrastive:
+1.5.1 | 3.2 Evaluation by scoring
+1.6 | 4 Context-Aware NMT Models
+1.6.1 | 4.1 Recurrent Models
+1.6.2 | 4.2 Transformer Models
+1.7 | Voita et al. (2018)
+1.8 | 5 Experiments
+1.9 | 6 Evaluation
+1.10 | 7 Conclusions
+1.11 | Acknowledgements
+1.12 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_UJUQI22S4cZGIuJkhjuE3sCy)
+ Call ID: call_UJUQI22S4cZGIuJkhjuE3sCy
+  Args:
+    section_id: 1.8
+
+================================= Tool Message =================================
+Name: read_section
+
+5 Experiments
+We train all models on the data from the WMT 2017 English→German news translation shared task (∼ 5.8 million sentence pairs). These corpora do not have document boundaries, therefore a small fraction of sentences will be paired with wrong context, but we expect the model to be robust against occasional random context (see also Voita et al. 2018) . Experimental setups for the RNN and Transformer models are different, and we describe them separately. All RNN-based models are trained with Nematus (Sennrich et al., 2017) .We learn a joint BPE model with 89.5k merge operations (Sennrich et al., 2016) . We train shallow models with an embedding size of 512, a hidden layer size of 1024 and layer normalization. Models are trained with Adam (Kingma and Ba, 2015) , with an initial learning rate of 0. 0001. We apply early stopping based on validation perplexity. The batch size for training is 80, and the maximum length of training sequences is 100 (if input sentences are concatenated) or 50 (if input lines are single sentences).For our Transformer-based experiments, we use a custom implementation and follow the hyperparameters from Vaswani et al. (2017) ; Voita et al. (2018) .  Systems are trained on lowercased text that was encoded using BPE (32k merge operations). Models consist of 6 encoder and decoder layers with 8 attention heads. The hidden state size is 512, the size of feedforward layers is 2048.Model performance is evaluated in terms of BLEU, on newstest2017, newstest2018 and all sentence pairs from our pronoun test set.  We compute scores with SacreBLEU (Post, 2018) . 9 Evaluation with BLEU is done mainly to control for overall translation quality.To evaluate pronoun translation, we perform contrastive evaluation and report the accuracy of models on our contrastive test set.
+
+================================== Ai Message ==================================
+
+English→German.

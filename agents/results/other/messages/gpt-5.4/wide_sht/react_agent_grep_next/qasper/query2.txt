@@ -1,0 +1,52 @@
+================================ Human Message =================================
+
+QUERY:
+What are the baselines outperformed by this work?
+
+TABLE OF CONTENTS (TOC):
+1 | End-to-End Trainable Non-Collaborative Dialog System
+1.1 | Abstract
+1.2 | Introduction
+1.3 | Related Work
+1.4 | Non-Collaborative Task Annotation Scheme
+1.5 | Datasets
+1.6 | ANTISCAM Dataset
+1.7 | PERSUASIONFORGOOD Dataset
+1.8 | Model
+1.9 | Background
+1.10 | Intent and Semantic Slot Classiﬁers
+1.11 | Response Generation
+1.12 | Response Filtering
+1.13 | Experiments
+1.14 | Baseline Models
+1.15 | Automatic Evaluation Metrics
+1.16 | Human Evaluation Metrics
+1.17 | Results and Analysis
+1.18 | Conclusion and Future Work
+1.19 | Acknowledgements
+1.20 | Appendix
+1.21 | Anti-Scam Collection Setting
+1.22 | Training details
+1.23 | Example Dialog
+1.24 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_o0SEp0RIUc248EYIU2SS4Z83)
+ Call ID: call_o0SEp0RIUc248EYIU2SS4Z83
+  Args:
+    section_id: 1.17
+
+================================= Tool Message =================================
+Name: read_section
+
+Results and Analysis
+Table 3 presents the main experiment results on A NTI S- CAM dataset, for both automatic evaluation metrics and hu- man evaluation metrics. The experiment results on P ER - SUASION F OR G OOD are shown in Table 5. We observe that MISSA outperforms two baseline models (TransferTransfo and hybrid model) on almost all the metrics on both datasets. For further analysis, examples of real dialogs from the hu- man evaluation are presented in Table 4. Compared to the first TransferTransfo baseline, MISSA outperforms the TransferTransfo baseline on the on-task contents. From Table 3, we observe that MISSA maintains longer conversations (14.9 turns) compared with Transfer- Transfo (8.5 turns), which means MISSA is better at main- taining the attacker’s engagement. MISSA also has a higher task success score (1.294) than TransferTransfo (1. 025), which indicates that it elicits information more strategically. In the top two dialogs (A and B) that are shown in Table 4, both attackers were eliciting a credit card number in their first turns. TransferTransfo directly gave away the informa-
+(A) Att: Attacker System: TransferTransfo (B) Att: Attacker System: MISSA Att: Can I have your card number?  Sys: 5110-xxxx-xxxx-8166 Att: Got it. I also need the billing address Sys: What is your name? My name is Tom. Att: I am Jerry, as I mentioned before. I need your address to proceed the refund. Sys: What is the phone number there? Att: Could you give me your phone number? Att: Can I have your card number? Sys: Why would you need my credit card number?  Att: I can track your order easily. Sys: Why can’t you use my address? Att: Well, both of them are needed. Sys: Alright, it is 5110-xxxx-xxxx-8166. May I have your number in case we disconnect? Att: xxx-xxx-xxxx (C) Att: Attacker System: Hybrid (D) Att: Attacker System: MISSA Att: Hi, my name is Jerry.  Sys: Hello, who is this? ... Sys: Why do you need my address? Att: I need your address to verify your order. Sys: I don’t have my order number with me. Why do you need my order number to verify my order? Att: Hi, my name is Jerry. Sys: Hi, Jerry. what are you calling me about? ... Sys: Why do you need my address? Att: I need your address to verify your order.  Sys: You should have it on file already
+Table 4: Examples of human-system dialogs, where systems are trained on A NTI S CAM dataset. System responses are bolded.tion, while MISSA replied with a semantically-related ques- tion “why would you need my credit card number?” Further- more, in the next turn, TransferTransfo ignored the context and asked an irrelevant question “what is your name? ” while MISSA was able to generate the response “why can’t you use my address?”, which is consistent to the context. We suspect the improved performance of MISSA comes from our proposed annotation scheme: the semantic slot informa- tion enables MISSA to keep track of the current entities, and the intent information helps MISSA to maintain coherency and prolong conversations.Compared to the hybrid model baseline, MISSA performs better on off-task content.  As shown in the bottom two di- alogs in Table 4, attackers in both dialogs introduced their names in their first utterances. MISSA recognized attacker’s name, while the hybrid model did not. We suspect it is be- cause the hybrid model does not have the built-in semantic slot predictor. In the second turn, both attackers were ex- plaining the reason of requesting the billing address previ- ously.  With semantic slot information, MISSA can easily un- derstand the attacker; but the hybrid model misunderstands that the attacker was talking about the order number, pos- sibly because the token “order” appeared in the attacker’s utterance. We suspect that the hybrid model’s bad perfor- mance on the off-task content leads to its low coherence rat- ing (2.76) and short dialog length (8.2). To explore the influence of the intent-based conditional response generation method and the designed response filter, we perform an ablation study. The results are shown in Ta- ble 3. We find that MISSA has higher fluency score and co- herence score than MISSA-con (4.18 vs 3.78 for fluency, and 3.75 vs 3. 68 for coherence), which suggests that condition- ing on the system intent to generate responses improves the quality of the generated sentences. Compared with MISSA- sel, MISSA achieves better performance on all the metrics. For example, the engagement score for MISSA is 3.69 while MISSA-sel only has 2.87. This is because the response fil- ter removed all the incoherent responses, which makes the
+attacker more willing to keep chatting.  The ablation study shows both the conditional language generation mechanism and the response filter are essential to MISSA’s good perfor- mance.We also apply our method to the P ERSUASION F OR G OOD dataset. As shown in Table 5, MISSA and its variants outper- form the TransferTransfo and the hybrid models on all evalu- ation metrics.  Such good performance indicates MISSA can be easily applied to a different non-collaborative task and achieve good performance. Particularly, MISSA achieves the lowest perplexity, which confirms that using conditional response generation leads to high quality responses. Com- pared with the result on A NTI S CAM dataset, MISSA-con performs the best in terms of RIP and ERIP.  We suspect the underlying reason is that there are more possible responses with the same intent in P ERSUASION F OR G OOD than in A N - TI S CAM . This also suggests that we should adjust the model structure according to the nature of the dataset.Model PPL RIP ERIP TransferTransfo 26.37 41.9% 48.0% Hybrid - 37.3% 44.1% MISSA 19.91 43. 1% 51.6% MISSA-sel 24.00 42.0% 48.9% MISSA-con 20.43 43.8 % 52.6 %
+Table 5: Automatic evaluation results on P ERSUASION F OR - G OOD dataset.
+
+================================== Ai Message ==================================
+
+TransferTransfo and the hybrid model.

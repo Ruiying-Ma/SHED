@@ -1,0 +1,61 @@
+================================ Human Message =================================
+
+QUERY:
+Who are considered trained experts?
+
+TABLE OF CONTENTS (TOC):
+1 | Classifying Diagrams and Their Parts using Graph Neural Networks: A Comparison of Crowd-Sourced and Expert Annotations
+1.1 | Abstract
+1.2 | 1. Introduction
+1.3 | 2. Data
+1.4 | 2.1. Crowd-sourced Annotations from AI2D
+1.5 | 2.2. Expert Annotations from AI2D-RST
+1.6 | 3. Graph-based Representations
+1.7 | 3.1. Nodes
+1.8 | 3.1.1. Node Types
+1.9 | 3.1.2. Node Features
+1.10 | 3.1.3. Discourse Relations
+1.11 | 3.2. Edges
+1.12 | 4. Experiments
+1.13 | 4.1. Graph Neural Networks
+1.14 | 4.2. Hyperparameters and Training
+1.15 | 4.3. Tasks
+1.16 | 4.3.1. Node Classiﬁcation
+1.17 | 4.3.2. Graph Classiﬁcation
+1.18 | 5. Discussion
+1.19 | 6. Conclusion
+1.20 | 7. Bibliographical References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_tYwxsxqZunXC2wLFeDEiaDCH)
+ Call ID: call_tYwxsxqZunXC2wLFeDEiaDCH
+  Args:
+    pattern: trained experts|experts
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1 | Abstract
+This article compares two multimodal resources that consist of diagrams which describe topics in elementary school natural sciences. Both resources contain the same diagrams and represent their structure using graphs, but differ in terms of their annotation schema and how the annotations have been created – depending on the resource in question – either by crowd-sourced workers or trained experts.  This article reports on two experiments that evaluate how effectively crowd-sourced and expert-annotated graphs can represent the multimodal structure of diagrams for representation learning using various graph neural networks. The results show that the identity of diagram elements can be learned from their layout features, while the expert annotations provide better representations of diagram types.Keywords: multimodality, diagrams, graph neural networks, annotation, crowd-sourcing
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_RZPbtWh4vwTikurqPlidD4cB)
+ Call ID: call_RZPbtWh4vwTikurqPlidD4cB
+  Args:
+    section_id: 1.5
+
+================================= Tool Message =================================
+Name: read_section
+
+2.2. Expert Annotations from AI2D-RST
+AI2D-RST covers a subset of 1000 diagrams from AI2D, which have been annotated by trained experts using a new multi-layer annotation schema for describing the diagrams in AI2D (Hiippala et al., under review). The annotation
+schema, which draws on state-of-the-art theories of mul- timodal communication (Bateman et al., 2017), adopts a stand-off approach to describing the diagrams.  Hence the three annotation layers in AI2D-RST are represented us- ing three different graphs, which use the same identifiers for nodes across all three graphs to allow combining the descriptions in different graphs. AI2D-RST contains three graphs:
+1. Grouping :A tree graph that groups together diagram elements that are likely to be visually perceived as be- longing together, based loosely on Gestalt principles of visual perception (Ware, 2012). These groups are organised into a hierarchy, which represents the organ- isation of content in the 2D layout space (Bateman, 2008; Hiippala, 2015).
+2. Connectivity :A cyclic graph representing connec- tions between diagram elements or their groups, which are signalled using arrows or lines (Tversky et al., 2000).
+3. Discourse structure :A tree graph representing dis- course structure of the diagram using Rhetorical Struc- ture Theory (Mann and Thompson, 1988; Taboada and Mann, 2006): hence the name AI2D-RST. The grouping graph, which is initially populated by dia- gram elements from the AI2D layout segmentation, pro- vides a foundation for describing connectivity and dis- course structure by adding nodes to the grouping graph that stand for groups of diagram elements, as shown in the upper part of Figure 1. In addition, the grouping graph includes annotations for 11 different diagram types identified in the data (e.g.  cycles, cross-sections and networks), which may be used as target labels during training, as explained in Sec- tion 4.3.2. The coarse and fine-grained diagram types iden- tified in the data are shown in Figure 2. Hiippala et al.  (under review) show that the proposed annotation schema can be reliably applied to the data by measuring inter-annotator agreement between five annota- tors on random samples from the AI2D-RST corpus us- ing Fleiss’ κ (Fleiss, 1971). The results show high agree- ment on grouping ( N = 256 , κ = 0 . 84 ), diagram types ( N = 119 , κ = 0 .  78 ), connectivity ( N = 239 , κ = 0 . 88 ) and discourse structure ( N = 227 , κ = 0 . 73 ). It should be noted, however, that these measures may be affected by implicit knowledge that tends to develop among expert an- notators who work towards the same task (Riezler, 2014).
+
+================================== Ai Message ==================================
+
+The trained experts are the five annotators who annotated the AI2D-RST subset of 1000 diagrams using the new multi-layer annotation schema.

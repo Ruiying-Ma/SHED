@@ -1,0 +1,77 @@
+================================ Human Message =================================
+
+QUERY:
+Did they test the idea that the system reduces the time needed to encode ADR reports on real pharmacologists? 
+
+TABLE OF CONTENTS (TOC):
+1 | From narrative descriptions to MedDRA: automagically encoding adverse drug reactions
+1.1 | Abstract
+1.1.1 | 1. Introduction
+1.1.1.1 | 2. Background and related work
+1.1.1.1.1 | 2.1. Natural language processing and text mining in medicine
+1.1.1.1.1.1 | 2.2. MedDRA Dictionary
+1.1.1.1.1.1.1 | 3. MagiCoder: an NLP software for ADR automatic encoding
+1.1.1.1.1.1.1.1 | 3.1. MagiCoder: overview
+1.1.1.1.1.1.1.1.1 | 3.1.1. Deﬁnition of ad hoc data structures
+1.1.1.1.1.1.1.1.1.1 | 3.1.2. Preprocessing of the original ADR description
+1.1.1.1.1.1.1.1.1.1.1 | 3.1.3. Word-by-word linear scan of the description and voting task
+1.1.1.1.1.1.1.1.1.1.1.1 | 3.1.4. Weight calculation
+1.1.1.1.1.1.1.1.1.1.1.1.1 | Criterion one: Coverage
+1.1.1.1.1.1.1.1.1.1.1.1.1.1 | Criterion two: Type of Coverage
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | Criterion three: Coverage Distance
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | Criterion four: Coverage Density
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | 3.1.5. Selection, ordering and release of winning terms
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | 3.2. MagiCoder: structure of the algorithm
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | 3.3. MagiCoder complexity analysis
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | 4. Software implementation: the user interface
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | 5. Testing MagiCoder performances
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | 5.1. Experiment about MagiCoder performances
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | 5.1.1. Experiment: analysis of results
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | 5.2. Examples
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | 6. Discussion
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | 6.1. Stemming and performance of the NLP software
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | 6.2. Synonyms
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | 6.3. Connectives in the narrative descriptions
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | 6.4. On the selection of voted terms
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | 7. Conclusions and future work
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_SO6IbUqlK5Zkr9HY3bCmgH8A)
+ Call ID: call_SO6IbUqlK5Zkr9HY3bCmgH8A
+  Args:
+    pattern: time needed|real pharmacologists|pharmacologists|reduce.*time|encoding ADR reports
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1.1.1.1.1.1 | 3. MagiCoder: an NLP software for ADR automatic encoding
+A natural language ADR description is a completely free text. The user has no limitations, she/he can potentially write everything: a number of online ADR
+7
+descriptions actually contain information not directly related to drug effects. Thus, an NLP software has to face and solve many issues: Trivial orthographical errors; Use of singular versus plural nouns; The so called “false positives”, i.e. , syntactically retrieved inappropriate results, which are closely resembling to correct solutions; The structure of the sentence, i.e., the way an assertion is built up in a given language. Also the “intelligent” detection of linguistic connectives is a crucial issue. For example, the presence of a negation can potentially change the overall meaning of a description. In general, a satisfactory automatic support of human reasoning and work is a subtle task: for example, the uncontrolled extension of the dictionary with auxiliary synonymous (see Section 6.2) or the naive ad hoc management of particular cases, can limit the efficiency and the desired of the algorithm.  For these reasons, we carefully designed MagiCoder , even through a side-by-side collaboration between pharmacologists and computer scientists, in order to yield an efficient tool, capable to really support pharmacovigilance activities.In literature, several NLP algorithms already exist, and several interesting approaches (such as the so called morpho-analysis of natural language) have been studied and proposed [7, 25, 26].  According to the described pharma- covigilance domain, we considered algorithms for the morpho-analysis and the part-of-speech (PoS) extraction techniques [7, 25] too powerful and general pur- pose for the solution of our problem. Indeed, in most cases ADR descriptions are written in a very succinct way, without using verbs, punctuation, or other lexical items, and introducing acronyms.  Moreover, clinical and technical words are often not recognized correctly because not included in usual dictionaries. All these considerations limit the benefits of using morpho-analysis and PoS for our purposes.Thus, we decided to design and develop an ad hoc algorithm for the problem we are facing, namely that of deriving MedDRA terms from narrative text and mapping segments of text in effective LLT s.  This task has to be done in a very feasible time (we want that each interaction user/ MagiCoder requires less than a second) and the solution offered to the expert has to be readable and useful. Therefore, we decided to ignore the structure of the narrative description and address the issue in a simpler way. Main features of MagiCoder can be summarized as follows:
+• it requires a single linear scan of the narrative description : as a conse- quence,our solution is particularly efficient in terms of computational complexity;
+• it has been designed and developed for the specific problem of mapping Italian text to MedDRA dictionary,but we claim the way MagiCoder has been developed is sound with respect to language and dictionary changes (see Section 7);
+• the current version of MagiCoder is only based on the pure syntactical recognition of the text and it does not exploit any external synonym dic- tionary;in Section 4 we will discuss how synonyms may be used to in-
+8
+crease MagiCoder performances. In particular, we will discuss how a na¨ıve approach to synonyms worsen computational and retrieval performances, while we will show through experimental results and empirical observa- tions that a prudent and suitable use of an external dictionary produces an improvement of performances. In this paper we consider the Italian context of Pharmacovigilance and, as a consequence, we will consider and process by MagiCoder textual descriptions written in Italian language. We will discuss the potentiality of MagiCoder on other languages and some preliminary results in Section 7.
+3.1. MagiCoder: overview
+The main idea of MagiCoder is that a single linear scan of the free-text is sufficient, in order to recognize MedDRA terms.From an abstract point of view, we try to recognize, in the narrative de- scription, single words belonging to LLT s, which do not necessarily occupy con- secutive positions in the text.  This way, we try to “reconstruct” MedDRA terms, taking into account the fact that in a description the reporter can permute or omit words. As we will show, MagiCoder has not to deal with computationally expensive tasks, such as taking into account subroutines for permutations and combinations of words (as, for example, in [20]).We can distinguish five phases in the procedure that will be discussed in detail in Sections 3.1. 1, 3.1.2, 3.1.3, 3.1.4, 3.1.5, respectively.
+1. Definition of ad hoc data structures:the design of data structures is central to perform an efficient computation; our main data structures are hash tables, in order to guarantee an efficient access both to MedDRA terms and to words belonging to MedDRA terms.
+2. Preprocessing of the original text: tokenization (i.e.,segmentation of the text into syntactical units), stemming (i.e., reduction of words to a par- ticular root form), elimination of computationally irrelevant words.
+3. Word-by-word linear scan of the description and “voting task”:a word “votes” LLT s it belongs to. For each term voted by one or more words, we store some information about the retrieved syntactical matching.
+4. Weights calculation:recognized terms are weighted depending on infor- mation about syntactical matching.
+5. Sorting of voted terms and winning terms release:the set of voted term is pruned, terms are sorted and finally a solution (a set of winning terms) is released.
+3.1.1. Deﬁnition of ad hoc data structures
+The algorithm proceeds with a word-by-word comparison. We iterate on the preprocessed text and we test if a single word w , a token, occurs into one or many LLT s.9
+In order to efficiently test if a token belongs to one or more LLT s, we need to know which words belong to each term. The LLT level of MedDRA is actually a set of phrases , i.e., sequences of words .  By scanning these sequences, we build a meta-dictionary of all the words which compose LLT s. As we will describe in Section 3. 3, in O ( mk ) time units (where m and k are the cardinality of the set of LLT s and the length of the longest LLT in MedDRA , respectively) we build a hash table having all the words occurring in MedDRA as keys, where the value associated to key w i contains information about the set of LLT s containing w i .  This way, we can verify the presence in MedDRA of a word w encountered in the ADR description in constant time. We call this meta-dictionary DictByWord . We build a meta dictionary also from a stemmed version of MedDRA , to verify the presence of stemmed descriptions. We call it DictByWordStem .  Finally, also the MedDRA dictionary is loaded into a hash table according to LLT identifiers and, in general, all our main data structures are hash tables.We aim to stress that, to retain efficiency, we preferred exact string matching with respect to approximate string matching, when looking for a word into the meta dictionary. Approximate string matching would allow us to retrieve terms that would be lost in exact string matching (e.g. , we could recognize misspelled words in the ADR description), but it would worsen the performances of the text recognition tool, since direct access to the dictionary would not be possible. We discuss the problem of retrieving syntactical variations of the same words and the problem of addressing orthographical errors in Section 7.
+3.1.2. Preprocessing of the original ADR description
+Given a natural language ADR description, the text has to be preprocessed in order to perform an efficient computation. We adopt a well-know technique such as tokenization [27]: a phrase is reduced to tokens , i.e., syntactical units which often, as in our case, correspond to words. A tokenized text can be easily manipulated as an enumerable object, e.g., an array.  A stop word is a word that can be considered irrelevant for the text analysis (e.g., an article or an interjection). Words classified as stop-words are removed from the tokenized text. In particular, in this release of our software we decided to not take into account connectives , e.g., conjunctions, disjunctions, negations. The role of connectives, in particular of negation, is discussed in Section 6. A fruitful preliminary work is the extraction of the corresponding stemmed version from the original tokenized and stop-word free text. Stemming is a linguistic technique that, given a word, reduces it to a particular kind of root form [21, 27]. It is useful in text analysis, in order to avoid problems such as missing word recognition due to singular/plural forms (e.g., hand/hands).  In some cases, stemming procedures are able to recognize the same root both for the adjectival and the noun form of a word. Stemming is also potentially harmful, since it can generate so called “false positives” terms. A meaningful example can be found in Italian language. The plural of the word mano (in English, hand ) is mani (in English, hands ), and their stemmed root is man , which is also the stemmed version of mania (in English, mania ).  Several stemming
+10
+algorithms exist, and their impact on the performances of MagiCoder is discussed in Section 6.
+3.1.3. Word-by-word linear scan of the description and voting task
+MagiCoder scans the text word-by-word (remember that each word corre- sponds to a token) once and performs a “voting task”: at the i -th step, it marks (i.e., “votes”) with index i each LLT t containing the current ( i -th) word of the ADR description. Moreover, it keeps track of the position where the i -th word occurs in t . MagiCoder tries to find a word match both for the e...(truncated)
+
+================================== Ai Message ==================================
+
+No. They report only preliminary qualitative results from daily pharmacovigilance activities that MagiCoder “drastically reduces the amount of work required for the revision of a report,” but the formal evaluation used manually revised reports from VigiSegn and compared MagiCoder’s output with human encoding rather than testing time reduction on real pharmacologists.

@@ -1,0 +1,63 @@
+================================ Human Message =================================
+
+QUERY:
+How are the embeddings evaluated in the human judgement comparison?
+
+TABLE OF CONTENTS (TOC):
+1 | Abstract
+1.1 | 1 Introduction
+1.1.1 | 2 Related Work
+1.1.1.1 | 2.1 Morphemic analysis and semantics
+1.1.1.1.1 | 2.2 Character-level models
+1.1.1.1.1.1 | 3 The Char2Vec model
+1.1.1.1.1.1.1 | 3.1 Capturing morphology via attention
+1.1.1.1.1.1.1.1 | 4 Experiments
+1.1.1.1.1.1.1.1.1 | 4.1 Morphological awareness
+1.1.1.1.1.1.1.1.1.1 | 4.2 Capturing semantic similarity
+1.1.1.1.1.1.1.1.1.1.1 | 4.3 Capturing syntactic and semantic regularity
+1.1.1.1.1.1.1.1.1.1.1.1 | 5 Discussion
+1.1.1.1.1.1.1.1.1.1.1.1.1 | 6 Conclusion
+1.1.1.1.1.1.1.1.1.1.1.1.1.1 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_xx87cyCf3wKYQXoHUgdhJ0C0)
+ Call ID: call_xx87cyCf3wKYQXoHUgdhJ0C0
+  Args:
+    section_id: 1.1.1.1.1.1.1.1.1.1
+
+================================= Tool Message =================================
+Name: read_section
+
+4.2 Capturing semantic similarity
+Next, we tested our model similarity scores against human similarity judgments. For these datasets, human annotators are asked to judge how similar two words are on a fixed scale. Model word vectors are evaluated based on ranking the word pairs according to their cosine similarity, and then measuring the correlation (using Spearman’s ρ ) between model judgments and human judg- ments (Levy et al., 2015).We use the WordSim353 dataset (Finkelstein et al. , 2002), the test split of the MEN dataset (Bruni et al., 2014), and the Rare Word (RW) dataset (Lu- ong et al., 2013). The word pairs in the Word-
+Model WordSim353 MEN Test RW PPMI-SVD 0.607 0.601 0.293 SGNS 0.667 0.557 0.388 C2V-NO-ATT 0. 361 0.298 0.317 CHAR2VEC 0.345 0.322 0.282
+Table 3: Similarity correlations of in-vocabulary word pairs between the models and human anno- tators.Model WordSim353 MEN Test RW RW OOV C2V-NO-ATT 0.358 0.292 0.273 0.233 CHAR2VEC 0.340 0.318 0.264 0. 243
+Table 4: Similarity correlations of all word pairs between the character-level models and human an- notators. RW OOV indicates results specifically on pairs in the RW dataset with at least one word not seen in the training corpus.Sim353 and MEN datasets are typically simple, commonly occurring words denoting basic con- cepts, whereas the RW dataset contains many mor- phologically derived words which have low corpus frequencies.  This is reflected by how many of the test pairs in each dataset contain out of vocabu- lary (OOV) items: 3/353 and 6/1000 of the word pairs in WordSim353 and MEN, compared with 1083/2034 for the RW dataset.We report results for in-corpus word pairs in Ta- ble 3, and for all word pairs for those models able to predict vectors for unseen words in Table 4. Overall, word-based embedding models learn vectors that correlate better with human judg- ments, particularly for morphologically simple words. However, character-based models are competitive with word-based models on the RW dataset. While the words in this dataset appear rarely in our corpus (of the in-corpus words, over half appear fewer than 100 times), each morpheme may be common, and the character-level models can use this information.  We note that on the entire RW dataset (of which over half contain an OOV word), the character-based models still perform reasonably. We also note that on word pairs in the RW test containing at least one OOV word, the full Char2Vec model outperforms the C2V model without morphology.  This suggests that character- based embedding models are learning to morpho- logically analyse complex word forms, even on unseen words, and that giving the model the capa- bility to learn word segments independently helps
+ In-vocabulary Out-of-Vocabulary germany football bible foulness definately Char2Vec unfiltered germaine footballer bibles illness definitely germanies footballing testament seriousness indefinitely germain footballing librarianship sickness enthusiastically germano foosball literature loudness emphatically germaniae footballers librarian cuteness consistently Char2Vec filtered poland footballer testament illness definitely german basketball literature blindness consistently spain tennis hebrew consciousness drastically germans rugby judaism hardness theoretically france baseball biblical weakness infinitely
+ Table 5: Filtered and unfiltered model nearest neighbours for some in-vocabulary and out-of-vocabulary words
+this process.We also present some word nearest neighbours for our Char2Vec model in Table 5, both on the whole vocabulary and then filtering the nearest neighbours to only include words which appear 100 times or more in our corpus. This corresponds to keeping the top 10k words, which is common among language models (Ling et al. , 2015; Kim et al., 2016). We note that nearest neighbour pre- dictions include words that are orthographically distant but semantically similar, showing that our model has the capability to learn to compose char- acters into word meanings.We also note that word nearest neighbours seem to be more semantically coherent when rarely- observed words are filtered out of the vocabulary, and more based on orthographic overlap when the entire vocabulary is included.  This suggests that for rarely-observed words, the model is basing its predictions on orthographic analysis, whereas for more commonly observed words it can ‘memo- rize’ the mapping between the orthography and word semantics.
+4.3 Capturing syntactic and semantic regularity
+Finally, we evaluate the structure of the embed- ding space of our various models. In particular, we test whether affixation corresponds to regular linear shifts in the embedding space.To do this, we use the Google analogy dataset (Mikolov et al., 2013a). This consists of 19544 questions of the form “ A is to B as C is to X ”. We split this collection into semantic and syntactic
+Model All Acc Sem. Acc Syn.  Acc PPMI-SVD 0.365 0.444 0.341 SGNS 0.436 0.339 0.513 C2V-NO-ATT 0.316 0.016 0.472 CHAR2VEC 0.355 0.025 0.525
+Table 6: Results on the Google analogy task
+sections, based on whether the analogies between the words are driven by morphological changes or deeper semantic shifts.  Example semantic ques- tions are on capital-country relationships (“ Paris is to France as Berlin is to X ) and currency- country relationships. Example syntactic ques- tions are adjective-adverb relationships (“ amazing is to amazingly as apparent is to X ”) and opposites formed by prefixing a negation particle (“ accept- able is to unacceptable as aware is to X ”). This results in 5537 semantic analogies and 10411 syn- tactic analogies. We use the method of Mikolov et al. (2013a) to answer these questions. We first ` 2 -normalize all of our word vectors. Then, to answer a question of the form “ A is to B as C is to X ”, we find the word w which satisfies
+w = argmax w ∈ V −{ a,b,c } cos( w, b − a + c ) (4)
+ where a, b, c are the word vectors for the words A , B and C respectively.We report the results in Table 6. The most in- triguing result is that character-level models are competitive with word-level models for syntactic analogy, with our Char2Vec model holding the
+best result for syntactic analogy answering. This suggests that incorporating morphological knowl- edge explicitly rather than latently helps the model learn morphological features.  However, on the se- mantic analogies, the character-based models do much worse than the word-based models. This is perhaps unsurprising in light of the previous sec- tion, where we demonstrate that character-based models do worse at the semantic similarity task than word-level models.
+5 Discussion
+We only report results for English. However, En- glish is a morphologically impoverished language, with little inflection and relatively few productive patterns of derivation. Our morphology test set re- flects this, with over half the words consisting of a simple morpheme, and over 90% having at most 2 morphemes.This is unfortunate for our model, as it performs better on words with richer morphology.  It gives consistently more accurate morphological analy- ses for these words compared to standard base- lines, and matches word-level models for seman- tic similarity on rare words with rich morphol- ogy. In addition, it seems to learn morphosyntactic features to help solve the syntactic analogy task. Most of all, it is language-agnostic, and easy to port across different languages.  We thus expect our model to perform even better for languages with a richer morphology than English, such as Turkish and German.
+6 Conclusion
+In this paper, we present a model which learns morphology and word embeddings jointly. Given a word, it splits the word in to segments and ranks the segments based on their context-predictive power. Our model can segment words into mor- phemes, and also embed the word into a represen- tation space. We show that our model is competitive at the task of morpheme boundary recovery compared to a dedicated morphological analyzer, beating dedi- cated analyzers on words with a rich morphology. We also show that in the representation space word affixation corresponds to linear shifts, demonstrat- ing that our model can learn morphological fea- tures.Finally, we show that character-level models, while outperformed by word-level models gener-
+ ally at the task of semantic similarity, are com- petitive at representing rare morphologically rich words. In addition, the character-level models can predict good quality representations for unseen words, with the morphologically aware character- level model doing slightly better.
+References
+[Baayen et al.1995] Harald R. Baayen,Richard Piepen- brock, and Leon Gulikers. 1995. The CELEX Lexical Database. Release 2 (CD-ROM) . Linguis- tic Data Consortium, University of Pennsylvania, Philadelphia, Pennsylvania.
+[Bahdanau et al.2014] Dzmitry Bahdanau,Kyunghyun Cho, and Yoshua Bengio. 2014. Neural machine translation by jointly learning to align and translate. ICLR .
+[Ballesteros et al.2015] Miguel Ballesteros,Chris Dyer, and Noah A Smith. 2015. Improved transition- based parsing by modeling characters instead of words with LSTMs. EMNLP .
+[Balota et al.2007] David A. Balota, Melvin J.Yap, Keith A. Hutchison, Michael J. Cortese, Brett Kessler, Bjorn Loftis, James H. Neely, Douglas L. Nelson, Greg B. Simpson, and Rebecca Treiman. 2007. The english lexicon project. Behavior Re- search Methods .
+[Bastien et al.2012] Fr´ed´eric Bastien,Pascal Lamblin, Razvan Pascanu, James Bergstra, Ian J. Goodfellow, Arnaud Bergeron, Nicolas Bouchard, and Yoshua Bengio. 2012. Theano: new features and speed im- provements. Deep Learning and Unsupervised Fea- ture Learning NIPS 2012 Workshop.
+[Bengio et al.2003] Yoshua Bengio,R´ejean Ducharme, Pascal Vincent, and Christian Janvin. 2003. A neu- ral probabilistic language model. J. Mach. Learn. Res. ,...(truncated)
+
+================================== Ai Message ==================================
+
+They are evaluated by ranking word pairs according to the cosine similarity of the model’s word vectors and then measuring the correlation with human judgments using Spearman’s ρ. The comparison uses human similarity judgments on fixed-scale datasets such as WordSim353, MEN test, and Rare Word.

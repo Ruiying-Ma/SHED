@@ -1,0 +1,95 @@
+================================ Human Message =================================
+
+QUERY:
+Which setup shows proves to be the hardest: cross-topic, cross-domain, cross-temporal, or across annotators?
+
+TABLE OF CONTENTS (TOC):
+1 | Improved and Robust Controversy Detection in General Web Pages Using Semantic Approaches under Large Scale Conditions
+1.1 | ABSTRACT
+1.1.1 | ACM Reference Format:
+1.1.1.1 | 1 INTRODUCTION & PRIOR WORK
+1.1.1.1.1 | 2 METHODS
+1.1.1.1.1.1 | 3 EXPERIMENTAL SETUP
+1.1.1.1.1.1.1 | 3.1 Datasets and evaluation
+1.1.1.1.1.1.1.1 | 3.2 Baseline models
+1.1.1.1.1.1.1.1.1 | 4 RESULTS
+1.1.1.1.1.1.1.1.1.1 | 4.1 Comparison of results with previous work
+1.1.1.1.1.1.1.1.1.1.1 | 4.2 Robustness of the model across time
+1.1.1.1.1.1.1.1.1.1.1.1 | 4.3 Robustness of the model across topics
+1.1.1.1.1.1.1.1.1.1.1.1.1 | 4.4 Robustness of the model across domains
+1.1.1.1.1.1.1.1.1.1.1.1.1.1 | 4.5 Human agreement
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | 5 CONCLUSION
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | REFERENCES
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_D00ylg54CprHR4yKmHXGoAHR)
+ Call ID: call_D00ylg54CprHR4yKmHXGoAHR
+  Args:
+    section_id: 1.1.1.1.1.1.1.1.1.1.1.1.1.1
+
+================================= Tool Message =================================
+Name: read_section
+
+4.5 Human agreement
+Lastly, we examine model performance with respect to human an- notation using the human annotated dataset of [3]. We assume that models that perform similarly to human annotators are preferable. In Table 6, we present three Spearman correlation metrics to ex- press model congruence with human annotations.  Mean annotation expresses the correlation of model error rates with the controversy values attributed to a web page by human annotators, with positive values expressing greater error rates on controversial, and negative expressing higher error rates on non-controversial pages. Here, the HAN shows most unbiased (closest to zero) performance.Certainty is the distance of human annotations to the midpoint of the four-point controversy scale, i.e. a score between 0 and 2. 5 that expresses how sure annotators are of document (non)controversy. Here, the HAN shows errors most strongly negatively correlated to the certainty of annotators. Finally, annotators disagree on the controversy of some documents, expressed as the standard devia- tion of their controversy annotations. Again, the HAN model seems preferable, as it’s errors are most strongly correlated to annotator disagreement.  Overall, the neural methods have less biased perfor- mance in relation to (non)controversial documents, correlate more strongly with the certainty of human annotators and are susceptible to errors in similar conditions as when annotators disagree.Table 6: Spearman’s correlations for estimated probability distance from true label. Mean controversy: Average annotator score, certainty: dis- tance from controversy annotation-scale midpoint, disagreement: standard deviation of annotations.  Only pages with at least 3 annotations included to ensure sensible agreement metrics, N=128, bolded scores are preferable.Model mean annotation certainty disagreement TfIdf-SVM -0.540 -0.238 0.144 LM-DBPedia 0.633 -0.172 -0.023 CNN 0.348 -0.314 0.138 HAN 0.277 -0.390 0.207
+5 CONCLUSION
+Controversy detection is a hard task, as it forms a latent concept sensitive to vocabulary gaps between topics and vocabulary shifts over time. We analysed the performance of language model, SVM, CNN and HAN models on different tasks.First , we have demonstrated that neural methods perform as state-of-the-art tools in controversy detection on the ClueWeb09 [4] based testset, even beating matching models.  Second , we inves- tigated temporal stability, and demonstrated neural -and especially CNN- robustness in terms of Recall, F1 and AUC performance and stability with train and test sets that are 9 years apart. Thirdly , we show that CNN and HAN models outperform the SVM and LM baselines on Precision, F1 and AUC when tested on held-out-topics.  Fourthly , we show that neural methods are better able to general- ize from Wikipedia pages to unseen general web pages in terms of Precision, F1 and AUC. Lastly , neural methods seem better in line with human annotators with regard to certainty and disagreement.
+REFERENCES
+[1] Cho K. & Bengio Y. Bahdanau, D.2014. Neural machine translation by jointly learning to align and translate.. In arXiv preprint arXiv:1409.0473 .
+[2] Sanmay Das, Allen Lavoie,and Malik Magdon-Ismail. 2016. A Manipulation among the arbiters of collective intelligence: How Wikipedia administrators mold public opinion. ACM Trans. Web 10, 4, 24:1–24:25.
+[3] S. Dori-Hacohen and J. Allan. 2013.Detecting Controversy on The Web.. In Proceedings of the 22nd ACM CIKM, 1845–1848.
+[4] S. Dori-Hacohen, E. Yom-Tov,and J. Allan. 2015. Navigating controversy as a complex search task.. In CEUR Workshop Proceedings, 1338.
+[5] Odijk D. & de Rijke M. Graus, D.& de Rijke M. Graus, D. 2018. The birth of collective memories: Analyzing emerging entities in text streams.. In JASIST, 69(9) . 773–786.
+[6] M. Jang and J. Allan. 2016.Improving Automated Controversy Detection on the Web. In 39th ACM SIGIR Proceedings 865–868 .
+[7] Myungha Jang, Shiri Dori-Hacohen,and James Allan. 2017. Modeling Controversy within Populations. In ICTR Proceedings . ACM, 141–149.
+[8] M. Jang, J. Foley, S.Dori-Hacohen, and J. Allan. 2016. Probabilistic Approaches to Controversy Detection.. In Proceedings of the 25th ACM CIKM . 2069—-2072.
+[9] Y. Kim. 2014.Convolutional Neural Networks for Sentence Classification. In Proceedings of the 2014 EMNLP . 1746—-1751.
+[10] Jimmy. Kingma, Diederik P. Ba. 2014.Adam: A Method for Stochastic Optimiza- tion. In International Conference for Learning Representations. arXiv:1412.6980 .
+[11] Tomas Mikolov, Kai Chen, Greg Corrado, and Jeffrey Dean.2013. Efficient estimation of word representations in vector space.. In CoRR , Vol. abs/1301.3781.
+[12] M. Popescu, A.-M. Pennacchiotti.2010. Detecting controversial events from twitter.. In Proceedings of the 19th ACM CIKM - CIKM .
+[13] Dyer. D. He. X. Smola. A.Hovy. E. Yang. Z., Yang. Z. 2016. Hierarchical Attention Networks for Document Classification.. In Proceedings of NAACL-HLT 2016 . 1480– –1489.
+[14] Sumi R. Yasseri, T. 2012.Dynamics of Conflicts in Wikipedia. In PLOS ONE, 7(6), 1–12.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_rzhVD87qlY9m1xiHEIdYSnBl)
+ Call ID: call_rzhVD87qlY9m1xiHEIdYSnBl
+  Args:
+    section_id: 1.1.1.1.1.1.1.1.1.1.1
+
+================================= Tool Message =================================
+Name: read_section
+
+4.2 Robustness of the model across time
+Controversy is expected to change over time. Some issues become controversial, others cease to be so. To investigate robustness of controversy detection models with respect to changes over time, we evaluate model performance in two variants: trained and tested on 2018, or trained on the 2009 Wikipedia data and tested on the 2018 Wikipedia data. Table 3 shows the results for each of the text-based detection models. Within year, the hierarchical attention model (HAN) outper- forms all other models on Recall, F1 and AUC, losing Precision to the CNN and SVM models. However, our main interest is the ro- bustness when a model is trained on a different year (2009) than the test set (2018).  These between year experiments show a superior score for the HAN model compared to the non-neural models on Recall, and show significant improvements on F1 (p < 0.05) and
+AUC (p < 0.05), losing only to the SVM model on Precision (non significantly).  In terms of robustness, we can also take the percent- age change between the within year and between year experiment into account (were smaller absolute changes are preferable), shown by the delta values. With regard to temporal sensitivity, the CNN shows the least change across all four metrics. In Figure 1, we show the pooled results for the lexical and neural models to illustrate the overall increase in robustness by neural approaches. Interestingly, the SVM and HAN model show some unexpected improvement with regard to Precision when applied to unseen timeframes. For both models, this increase in Precision is offset by a greater loss in Recall, which seems to indicate both models ‘memorize‘ the controversial topics in a given timeframe instead of the controversial language . Overall, the neural approaches seem to compare favorably in terms of cross-temporal stability.
+4.3 Robustness of the model across topics
+Table 4: Cross-topic stability experiment. Metrics are averaged across 10 leave-on-out topic folds.Model Precision Recall F1 AUC TfIdf-SVM 0.793 0.575 0.661 0.829 LM 0.512 0.816 0.629 0.633 CNN 0.840 0.569 0.670 0.842 HAN 0.799 0.716 0.753 0. 840
+To evaluate robustness towards unseen topics, 10-fold cross valida- tion was used on the top ten largest topics present in the Wikipedia dataset in a leave-one-out fashion. The results are shown in table 4. In line with previous results, the language model scores best on Recall, beating all other models with a significant difference (p < 0.01).  However in balancing Recall with Precision, the HAN model scores best, significantly outperforming both lexical models in F1 score (p < 0.05). Overall, when grouping together all neural and lexical results, the neural methods outperform the lexical models in Precision (p < 0.01), F1 (p < 0.05) and AUC (p < 0.01) with no
+significant difference found on the overall Recall scores.  These re- sults indicate that neural methods seem better able to generalize to unseen topics.
+4.4 Robustness of the model across domains
+Most work on controversy has looked into using existing knowl- edge bases as a source of controversy information [3, 6]. In this paper, we focus on text-based classification methods that do not aim to explicitly link general web pages to their knowledge-base counterparts. Therefore, we are interested in the ability of neural models to generalize beyond their training context. In addition to testing across time and topics, we also investigate robustness to changes in domain.  By training only on Wikipedia data, and evalu- ating only on general web-pages, we look at the ability of the four methods to deal with out-of-domain documents.The hierarchical attention network shows significantly better results (p < 0.05) compared to all other models on F1. Both neural models also outperform both language models on AUC significantly (p < 0.05).  Precision and Recall are more mixed, with the CNN and SVM outperforming the HAN on Precision and the language model -again- performing best in terms of Recall. Together, the neural methods seem to work best on three out of the four metrics.Table 5: Cross-domain stability experiment. Metrics are based on mod- els trained on Wikipedia data and tested on general web pages.Model Precision Recall F1 AUC TfIdf-SVM 0.718 0. 361 0.480 0.638 LM 0.392 0.826 0.532 0.573 CNN 0.743 0.394 0.514 0.755 HAN 0.700 0.604 0.645 0.789
+4.5 Human agreement
+Lastly, we examine model performance with respect to human an- notation using the human annotated dataset of [3]. We assume that models that perform similarly to human annotators are preferable. In Table 6, we present three Spearman correlation metrics to ex- press model congruence with human annotations.  Mean annotation expresses the correlation of model error rates with the controversy values attributed to a web page by human annotators, with positive values expressing greater error rates on controversial, and negative expressing higher error rates on non-controversial pages. Here, the HAN shows most unbiased (closest to zero) performance.Certainty is the distance of human annotations to the midpoint of the four-point controversy scale, i.e. a score between 0 and 2. 5 that expresses how sure annotators are of document (non)controversy. Here, the HAN shows errors most strongly negatively correlated to the certainty of annotators. Finally, annotators disagree on the controversy of some documents, expressed as the standard devia- tion of their controversy annotations. Again, the HAN model seems preferable, as it’s errors are most strongly correlated to annotator disagreement.  Overall, the neural methods have less biased perfor- mance in relation to (non)controversial documents, correlate more strongly with the certainty of human annotators and are susceptible to errors in similar conditions as when annotators disagree.Table 6: Spearman’s correlations for estimated probability distance from true label. Mean controversy: Average annotator score, certainty: dis- tance from controversy annotation-scale midpoint, disagreement: standard deviation of annotations.  Only pages with at least 3 annotations included to ensure sensible agreement metrics, N=128, bolded scores are preferable.Model mean annotation certainty disagreement TfIdf-SVM -0.540 -0.238 0.144 LM-DBPedia 0.633 -0.172 -0.023 CNN 0.348 -0.314 0.138 HAN 0.277 -0.390 0.207
+5 CONCLUSION
+Controversy detection is a hard task, as it forms a latent concept sensitive to vocabulary gaps between topics and vocabulary shifts over time. We analysed the performance of language model, SVM, CNN and HAN models on different tasks.First , we have demonstrated that neural methods perform as state-of-the-art tools in controversy detection on the ClueWeb09 [4] based testset, even beating matching models.  Second , we inves- tigated temporal stability, and demonstrated neural -and especially CNN- robustness in terms of Recall, F1 and AUC performance and stability with train and test sets that are 9 years apart. Thirdly , we show that CNN and HAN models outperform the SVM and LM baselines on Precision, F1 and AUC when tested on held-out-topics.  Fourthly , we show that neural methods are better able to general- ize from Wikipedia pages to unseen general web pages in terms of Precision, F1 and AUC. Lastly , neural methods seem better in line with human annotators with regard to certainty and disagreement.
+REFERENCES
+[1] Cho K. & Bengio Y. Bahdanau, D.2014. Neural machine translation by jointly learning to align and translate.. In arXiv preprint arXiv:1409.0473 .
+[2] Sanmay Das, Allen Lavoie,and Malik Magdon-Ismail. 2016. A Manipulation among the arbiters of collective intelligence: How Wikipedia administrators mold public opinion. ACM Trans. Web 10, 4, 24:1–24:25.
+[3] S. Dori-Hacohen and J. Allan. 2013.Detecting Controversy on The Web.. In Proceedings of the 22nd ACM CIKM, 1845–1848.
+[4] S. Dori-Hacohen, E. Yom-Tov,and J. Allan. 2015. Navigating controversy as a complex search task.. In CEUR Workshop Proceedings, 1338.
+[5] Odijk D. & de Rijke M. Graus, D.& de Rijke M. Graus, D. 2018. The birth of collective memories: Analyzing emerging entities in text streams.. In JASIST, 69(9) . 773–786.
+[6] M. Jang and J. Allan. 2016.Improving Automated Controversy Detection on the Web. In 39th ACM SIGIR Proceedings 865–868 .
+[7] Myungha Jang, Shiri Dori-Hacohen,and James Allan. 2017. Modeling Controversy within Populations. In ICTR Proceedings . ACM, 141–149.
+[8] M. Jang, J. Foley, S.Dori-Hacohen, and J. Allan. 2016. Probabilistic Approaches to Controversy Detection.. In Proceedings of the 25th ACM CIKM . 2069—-2072.
+[9] Y. Kim. 2014.Convolutional Neural Networks for Sentence Classification. In Proceedings of the 2014 EMNLP . 1746—-1751.
+[10] Jimmy. Kingma, Diederik P. Ba. 2014.Adam: A Method for Stochastic Optimiza- tion. In International Conference for Learning Representations. arXiv:1412.6980 .
+[11] Tomas Mikolov, Kai Chen, Greg Corrado, and Jeffrey Dean.2013. Efficient estimation of word representations in vector space.. In CoRR , Vol. abs/1301.3781.
+[12] M. Popescu, A.-M. Pennacchiotti.2010. Detecting controversial events from twitter.. In Proceedings of the 19th ACM CIKM - CIKM .
+[13] Dyer. D. He. X. Smola. A.Hovy. E. Yang. Z., Yang. Z. 2016. Hierarchical Attention Networks for Document Classification.. In Proceedings of NAACL-HLT 2016 . 1480– –1489.
+[14] Sumi R. Yasseri, T. 2012.Dynamics of Conflicts in Wikipedia. In PLOS ONE, 7(6), 1–12.
+
+================================== Ai Message ==================================
+
+Cross-topic and cross-temporal.

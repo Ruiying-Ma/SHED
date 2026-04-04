@@ -1,0 +1,68 @@
+================================ Human Message =================================
+
+QUERY:
+Which tasks are explored in this paper?
+
+TABLE OF CONTENTS (TOC):
+1 | Di He
+1.1 | Tie-Yan Liu Microsoft Research tyliu@microsoft.com
+2 | Abstract
+3 | 1 Introduction
+4 | 2 Related Work
+5 | 3 Sentence Level Recurrent Topic Model
+5.1 | 3.1 The generative process
+5.2 | 3.2 Stochastic Variational Inference and Learning
+5.2.1 | E-Step:
+5.2.2 | repeat
+5.2.3 | end for
+6 | 4 Experiments
+6.1 | 4.1 Quantitative Results
+6.1.1 | Experimental Setting
+6.1.2 | Generative Document Evaluation
+6.1.3 | Document Classiﬁcation
+6.2 | 4.2 Qualitative Results
+7 | Conclusion
+8 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_bgF7bIBW3h8zyDOTgBTN3E2I)
+ Call ID: call_bgF7bIBW3h8zyDOTgBTN3E2I
+  Args:
+    section_id: 6
+
+================================= Tool Message =================================
+Name: read_section
+
+4 Experiments
+We report our experimental results in this section. Our experi- ments include two parts: (1) quantitative experiments, includ- ing a generative document evaluation task and a document classification task, on two datasets; (2) qualitative inspection, including the examination of the sentences generated under each topic, in order to test whether SLRTM performs well in the topic2sentence task.
+4.1 Quantitative Results
+We compare SLRTM with several state-of-the-art topic mod- els on two tasks: generative document evaluation and docu- ment classification. The former task is to investigate the gen- eration capability of the models, while the latter is to show the representation ability of the models.We base our experiments on two benchmark datasets:
+• 20Newsgroup , which contains 18,845 emails catego- rized into 20 different topical groups such as religion , politics , and sports . The dataset is originally partitioned into 11,314 training documents and 7,531 test docu- ments 2 .
+• Wiki10+ [Zubiaga, 2012] 3 ,which contains Web docu-
+ments from Wikipedia, each of which is associated with several tags such as philosophy , software , and music . Following [Cao et al. , 2015], we kept the most frequent 25 tags and removed those documents without any of these tags, forming a training set and a test set with 11,164 and 6,161 documents, respectively. The social tags associated with each document are regarded as su- pervised labels in classification.  Wiki10+ contains much more words per document (i.e., 1,704) than 20News- group (i.e., 135).We followed the practice in many previous works and re- moved infrequent words. After that, the dictionary con- tains about 32 k unique words for 20Newsgroup and 41 k for Wiki10+.  We adopted the NLTK sentence tokenizer 4 to split the datasets into sentences if sentence boundaries are needed.The following baselines were used in our experiments:
+• LDA [Blei et al. 2003].LDA is the classic topic model, and we used GibbsLDA++ 5 for its implementation.
+• Doc-NADE [Larochelle and Lauly, 2012].Doc-NADE is a representative neural network based topic model. We used the open-source code provided by the authors.
+• HTMM [Gruber et al. 2007].HTMM models consider the sentence level Markov transitions. Similar to Doc- NADE, the implementation was provided by the authors.
+• GMNTM [Yang et al. 2015].GMNTM considers mod- els the order of words within a sentence by a feedforward neural network. We implemented GMNTM according the descriptions in their papers by our own.
+Experimental Setting
+For SLRTM, we implemented it in C++ using Eigen 6 and Intel MKL. For the sake of fairness, similar to [Yang et al. , 2015], we set the word embedding size, topic embed- ding size, and LSTM hidden layer size to be 128 , 128 , and 600 respectively.  In the experiment, we tested the perfor- mances of SLRTM and the baselines with respect to differ- ent number of topics K , i.e., K = 128 , 256 . In initializa- tion (values of Θ (0) and Φ (0) ), the LSTM weight matrices were initialized as orthogonal matrices, the word/topic em- beddings were randomly sampled from the uniform distribu- tion ( − 0 .  015 , 0 . 015) and are fined-tuned through the training process, γ (0) and α were both set to 0 . 5 . The mini-batch size in Algorithm 1 was set as L = 5 , and we ran the E-Step of the algorithm for only one iteration for efficiently considera- tion, which leads to the final convergence after about 6 epochs for both datasets.  Gradient clipping with a clip value of 20 was used during the optimization of LSTM weights. Asyn- chronous stochastic gradient descent [Dean et al. , 2012] with Adagrad was used to perform multi-thread parallel training.
+Generative Document Evaluation
+We measure the performances of different topic models ac- cording to the perplexity per word on the test set, defined as
+2 http://qwone.com/˜jason/20Newsgroups/ 20news-bydate.tar.gz 3 http://www.zubiaga.org/datasets/Wiki10+/
+4 http://www.nltk.org/api/nltk.tokenize.html 5 http://gibbslda.sourceforge. net/ 6 http://eigen.tuxfamily.org/
+Table 1: Average test perplexity per word of different models. Lower perplexity means better document modelling. Dataset \ Model 20Newsgroup Wiki10+ K = 128 K = 256 K = 128 K = 256 LDA 1068 944 989 1007 Doc-NADE 966 930 926 884 HTMM 1013 892 869 927 GMNTM 933 805 790 734 SLRTM 407 395 323 309
+ perp ( D ) = exp {− P M i =1 log P ( d i ) P M i =1 N 0 i } , where N 0 i is the number of words in document d i . The experimental results are sum- marized in Table 1. Based on the table, we have the following discussions:
+• Our proposed SLRTM consistently outperforms the baseline models by significant margins,showing its out- standing ability in modelling the generative process of documents. In fact, as tested in our further verifications, the perplexity of SLRTM is close to that of standard LSTM language model, with a small gap of about 100 (higher perplexity) on both datasets which we conjec- ture is due to the margin between the lower bound in equation (4) and true data likelihood for SLRTM.
+• Models that consider sequential property within sen- tences (i.e., GMNTM and SLRTM) are generally bet- ter than other models, which verifies the importance of words’ sequential information. Furthermore, LSTM- RNN is much better in modelling such a sequential dependency than standard feed-forward networks with fixed words window as input, as verified by the lower perplexity of SLRTM compared with GMNTM.
+Document Classiﬁcation
+In this experiment, we fed the document vectors (e.g., the γ values in SLRTM) learnt by different topic models to su- pervised classifiers, to compare their representation power. For 20Newsgroup, we used the multi-class logistic regres- sion classifier and used accuracy as the evaluation criterion.  For Wiki10+, since multiple labels (tags) might be associ- ated with each document, we used logistic regression for each label and the classification result is measured by Micro- F 1 score [Lewis et al. , 2004]. For both datasets, we use 10% of the original training set for validation, and the remaining for training.All the classification results are shown in Table 2.  From the table, we can see that SLRTM is the best model under each setting on both datasets. We can further find that the em- bedding based methods (Doc-NADE, GMNTM and SLRTM) generate better document representations than other models, demonstrating the representative power of neural networks based on distributed representations. In addition, when the training data is larger (i.e. , with more sentences per document as Wiki10+), GMNTM generates worse topical information than Doc-NADE while our SLRTM outperforms Doc-NADE, showing that with sufficient data, SLRTM is more effective in topic modeling since topic coherence is further constrained for each sentence.Table 2: Classification results of different models and differ- ent topic numbers K .  For 20Newsgroup, the measure is ac- curacy; for Wiki10+, the measure is Micro- F 1 score. Higher
+values mean better classification results. Dataset \ Model 20Newsgroup Wiki10+ K = 128 K = 256 K = 128 K = 256 LDA 0.657 0.632 0.351 0.336 Doc-NADE 0.670 0.646 0. 462 0.471 HTMM 0.665 0.631 0.389 0.371 GMNTM 0.731 0.695 0.416 0.425 SLRTM 0.739 0.722 0.483 0.489
+4.2 Qualitative Results
+In this subsection, we demonstrate the capability of SLRTM in generating reasonable and understandable sentences given particular topics. In the experiment, we trained a larger SLRTM with 128 topics on a randomly sampled 100 k Wikipedia documents in the year of 2010 7 with average 275 words per document. The dictionary is composed of roughly 50 k most frequent words including common punc- tuation marks, with uppercase letters transformed into low- ercases.  The size of word embedding, topic embedding and RNN hidden layer are set to 512 , 1024 and 1024 , respectively.We used two different mechanisms in sentence generating. The first mechanism is random sampling new word y t at every time step t from the probability distribution defined in equa- tion (3). The second is dynamic programming based beam search [Vinyals et al. , 2015], which seeks to generate sen- tences by globally maximized likelihood.  We set the beam size as 30 . The generating process terminates until a prede- fined maximum sentence length is reached (set as 25 ) or an EOS token is met. Such an EOS is also appended after every training sentence.The generating results are shown in Table 3. In the table, the sentences generated by random sampling and beam search are shown in the second and the third columns respectively.  In the fourth column, we show the most representative words for each topics generated by SLRTM. For this purpose, we con- strained the maximum sentence length to 1 in beam search, and removed stop words that are frequently used to start a sentence such as the , he , and there .From the table we have the following observations:
+• Most of the sentences generated by both mechanisms are natural and semantically correlated with particular top- ics that are summarized in the first column of the table.• The random sampling mechanism usually produces di- verse sentences,whereas some grammar errors may hap- pen (e.g., the last sampled sentence for Topic 4; re- ranking the randomly sampled words by a standalone language model might further improve the correctness of the sentence). In contrast, sentences outputted by beam search are safer in matching grammar rules, but are not diverse enough. This is consistent with the observations in [Serban et al. , 2015].7 http://www.psych.ualberta. ca/˜westburylab/ downloads/westburylab.wikicorp.download.html
+Table 3: Sentences and words generated under five topics. The first letters of each sentence are changed into capital form.Topic Sampled Sentences Top 5 Beam Search Sentences Words Topic 1: Politics The labour party was a regio...(truncated)
+
+================================== Ai Message ==================================
+
+The paper explores generative document evaluation, document classification, and the topic2sentence task.

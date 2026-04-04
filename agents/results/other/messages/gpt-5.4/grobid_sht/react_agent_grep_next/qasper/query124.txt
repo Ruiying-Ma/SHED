@@ -1,0 +1,58 @@
+================================ Human Message =================================
+
+QUERY:
+What is their baseline?
+
+TABLE OF CONTENTS (TOC):
+1 | Cross-Lingual Natural Language Generation via Pre-Training
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | Monolingual Pre-Training
+1.4 | 3 Methods
+1.4.1 | 3.1 Pre-Training Tasks
+1.4.2 | 3.2 Pre-Training Protocol
+1.4.3 | 3.3 Fine-Tuning on Downstream NLG Tasks
+1.5 | 4 Experiments
+1.5.1 | 4.1 Training Details
+1.5.2 | 4.2 Question Generation
+1.6 | • PIPELINE (XLM) with Google Translator Utilizing
+1.6.1 | 4.3 Abstractive Summarization
+1.6.2 | 4.4 Ablation Studies
+1.6.3 | 4.5 Case Studies
+1.7 | 5 Conclusion
+1.8 | Acknowledgements
+1.9 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_euv7msXtq4rjcNHXVplLQxDN)
+ Call ID: call_euv7msXtq4rjcNHXVplLQxDN
+  Args:
+    pattern: [Bb]aseline
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.5.2 | 4.2 Question Generation
+We evaluate our model on zero-shot cross-lingual answeraware question generation (QG). The goal is to generate a 1 .question that asks towards the answer with the given passage and the expected answer. In the following experiments, we extend the QG task to the cross-lingual setting. By only using English QG training data, our goal is to generate questions in English or Chinese with the given passage-answer pair in English or Chinese. We use SQuAD 1. 1 (Rajpurkar et al. 2016) as the English QG dataset. It is a popular English question answering dataset containing over 100,000 questions and their corresponding annotated passages. Following (Zhao et al. 2018) , we regard the original development set as the test set, and sample 5000 examples from the training data of two datasets as the development sets.  For Chinese QG, we follow the default data splits of WebQA (Li et al. 2016) . We regard the provided annotated evidence sentences as the input passages instead of entire documents. To construct the input sequence, we view the whole input passage as a single sentence, and concatenate the passage and the answer into one sequence with a special token [S] between them.  During decoding Chinese, we utilize a subset of vocabulary, which is obtained from the passage sentences of the WebQA dataset.English-English Question Generation We first conduct experiments on the supervised English-English QG setting. We compare our model to the following baselines:
+• COREFNQG (Du and Cardie 2018) An attentional sequence-to-sequence model with a feature-rich encoder.• MP-GSN (Zhao et al.  2018) A sequence-to-sequence model with self-attention and maxout pointer mechanism.• XLM (Lample and Conneau 2019) State-of-the-art cross-lingual pre-trained Transformer. We initialize the sequence-to-sequence model with pre-trained XLM.We evaluate models with BLEU-4 (BL-4), ROUGE (RG) and METEOR (MTR) metrics. As shown in 1 . outperforms the baselines, which demonstrates that our pretrained model provides a good initialization for NLG.Chinese-Chinese Question Generation We conduct experiments on zero-shot Chinese-Chinese QG to evaluate the cross-lingual transfer ability. In this task, models are trained with English QG data but evaluated with Chinese QG examples. We include the following models as our baselines:
+• XLM Fine-tuning XLM with the English QG data. • PIPELINE (XLM) The pipeline of translating input Chinese sentences into English first, then performing En-En-QG with the XLM model, and finally translating back to the Chinese. We use the Transformer as the translator, which is also trained on the MultiUN dataset.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_LzL5cciP2wcea2b4LlROJFce)
+ Call ID: call_LzL5cciP2wcea2b4LlROJFce
+  Args:
+    pattern: We include the following models as our baselines|compare our model to the following baselines|baseline
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.5.2 | 4.2 Question Generation
+We evaluate our model on zero-shot cross-lingual answeraware question generation (QG). The goal is to generate a 1 .question that asks towards the answer with the given passage and the expected answer. In the following experiments, we extend the QG task to the cross-lingual setting. By only using English QG training data, our goal is to generate questions in English or Chinese with the given passage-answer pair in English or Chinese. We use SQuAD 1. 1 (Rajpurkar et al. 2016) as the English QG dataset. It is a popular English question answering dataset containing over 100,000 questions and their corresponding annotated passages. Following (Zhao et al. 2018) , we regard the original development set as the test set, and sample 5000 examples from the training data of two datasets as the development sets.  For Chinese QG, we follow the default data splits of WebQA (Li et al. 2016) . We regard the provided annotated evidence sentences as the input passages instead of entire documents. To construct the input sequence, we view the whole input passage as a single sentence, and concatenate the passage and the answer into one sequence with a special token [S] between them.  During decoding Chinese, we utilize a subset of vocabulary, which is obtained from the passage sentences of the WebQA dataset.English-English Question Generation We first conduct experiments on the supervised English-English QG setting. We compare our model to the following baselines:
+• COREFNQG (Du and Cardie 2018) An attentional sequence-to-sequence model with a feature-rich encoder.• MP-GSN (Zhao et al.  2018) A sequence-to-sequence model with self-attention and maxout pointer mechanism.• XLM (Lample and Conneau 2019) State-of-the-art cross-lingual pre-trained Transformer. We initialize the sequence-to-sequence model with pre-trained XLM.We evaluate models with BLEU-4 (BL-4), ROUGE (RG) and METEOR (MTR) metrics. As shown in 1 . outperforms the baselines, which demonstrates that our pretrained model provides a good initialization for NLG.Chinese-Chinese Question Generation We conduct experiments on zero-shot Chinese-Chinese QG to evaluate the cross-lingual transfer ability. In this task, models are trained with English QG data but evaluated with Chinese QG examples. We include the following models as our baselines:
+• XLM Fine-tuning XLM with the English QG data. • PIPELINE (XLM) The pipeline of translating input Chinese sentences into English first, then performing En-En-QG with the XLM model, and finally translating back to the Chinese. We use the Transformer as the translator, which is also trained on the MultiUN dataset.
+
+================================== Ai Message ==================================
+
+The baselines are COREFNQG, MP-GSN, and XLM for English-English question generation; and XLM plus PIPELINE (XLM) for zero-shot Chinese-Chinese question generation.

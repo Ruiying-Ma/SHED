@@ -1,0 +1,56 @@
+================================ Human Message =================================
+
+QUERY:
+What baselines did they compare with?
+
+TABLE OF CONTENTS (TOC):
+1 | Sentence Level Recurrent Topic Model: Letting Topics Speak for Themselves
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2 Related Work
+1.4 | 3 Sentence Level Recurrent Topic Model
+1.4.1 | 3.1 The generative process
+1.4.2 | 3.2 Stochastic Variational Inference and Learning
+1.5 | 4 Experiments
+1.5.1 | 4.1 Quantitative Results
+1.6 | Experimental Setting
+1.7 | Generative Document Evaluation
+1.8 | Document Classification
+1.8.1 | 4.2 Qualitative Results
+1.9 | Conclusion
+1.10 | funding
+1.11 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_ciQFuLc3PVfFqrQ2pYNfOHOm)
+ Call ID: call_ciQFuLc3PVfFqrQ2pYNfOHOm
+  Args:
+    pattern: baseline|baselines|compare|compared with
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1 | Abstract
+We propose Sentence Level Recurrent Topic Model (SLRTM), a new topic model that assumes the generation of each word within a sentence to depend on both the topic of the sentence and the whole history of its preceding words in the sentence. Different from conventional topic models that largely ignore the sequential order of words or their topic coherence, SLRTM gives full characterization to them by using a Recurrent Neural Networks (RNN) based framework.  Experimental results have shown that SLRTM outperforms several strong baselines on various tasks. Furthermore, SLRTM can automatically generate sentences given a topic (i.e., topics to sentences), which is a key technology for real world applications such as personalized short text conversation.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_tnufnIYTGzLh9S2x3rFiQHTB)
+ Call ID: call_tnufnIYTGzLh9S2x3rFiQHTB
+  Args:
+    section_id: 1.5
+
+================================= Tool Message =================================
+Name: read_section
+
+4 Experiments
+We report our experimental results in this section. Our experiments include two parts: (1) quantitative experiments, including a generative document evaluation task and a document classification task, on two datasets; (2) qualitative inspection, including the examination of the sentences generated under each topic, in order to test whether SLRTM performs well in the topic2sentence task.
+4.1 Quantitative Results
+We compare SLRTM with several state-of-the-art topic models on two tasks: generative document evaluation and document classification. The former task is to investigate the generation capability of the models, while the latter is to show the representation ability of the models.We base our experiments on two benchmark datasets:
+• 20Newsgroup, which contains 18,845 emails categorized into 20 different topical groups such as religion, politics, and sports.  The dataset is originally partitioned into 11,314 training documents and 7,531 test documents2 . • Wiki10+ [Zubiaga, 2012]3 , which contains Web docu-ments from Wikipedia, each of which is associated with several tags such as philosophy, software, and music. Following [Cao et al. , 2015] , we kept the most frequent 25 tags and removed those documents without any of these tags, forming a training set and a test set with 11,164 and 6,161 documents, respectively. The social tags associated with each document are regarded as supervised labels in classification. Wiki10+ contains much more words per document (i.e., 1,704) than 20Newsgroup (i.e., 135). We followed the practice in many previous works and removed infrequent words. After that, the dictionary contains about 32k unique words for 20Newsgroup and 41k for Wiki10+. We adopted the NLTK sentence tokenizer4 to split the datasets into sentences if sentence boundaries are needed.The following baselines were used in our experiments: et al., 2003] . LDA is the classic topic model, and we used GibbsLDA++5 for its implementation. • LDA [Blei
+• Doc-NADE [Larochelle and Lauly, 2012] . Doc-NADE is a representative neural network based topic model.We used the open-source code provided by the authors.• HTMM [Gruber et al., 2007] . HTMM models consider the sentence level Markov transitions. Similar to Doc-NADE, the implementation was provided by the authors.• GMNTM [Yang et al. , 2015] . GMNTM considers models the order of words within a sentence by a feedforward neural network. We implemented GMNTM according the descriptions in their papers by our own.
+
+================================== Ai Message ==================================
+
+The baselines were LDA, Doc-NADE, HTMM, and GMNTM.

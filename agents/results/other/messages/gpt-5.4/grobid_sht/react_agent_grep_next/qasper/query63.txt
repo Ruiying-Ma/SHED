@@ -1,0 +1,63 @@
+================================ Human Message =================================
+
+QUERY:
+What were the most salient features extracted by the models?
+
+TABLE OF CONTENTS (TOC):
+1 | A system for the 2019 Sentiment, Emotion and Cognitive State Task of DARPA's LORELEI project
+1.1 | Abstract
+1.2 | I. INTRODUCTION
+1.3 | II. PREVIOUS WORK
+1.4 | III. PROBLEM DEFINITION
+1.5 | A. The Sentiment, Emotion and Cognitive State (SEC) Task
+1.6 | B. Data
+1.7 | C. Evaluation
+1.8 | A. Machine Translation
+1.9 | B. Linguistic Features 1) N-grams:
+1.10 | C. Models
+1.11 | 1) Baselines:
+1.12 | V. RESULTS
+1.13 | VI. CONCLUSION
+1.14 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_hcaxWsjlB0gqKzD2JEZ88QJQ)
+ Call ID: call_hcaxWsjlB0gqKzD2JEZ88QJQ
+  Args:
+    pattern: salient|feature importance|most salient|important features|features extracted
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1 | Abstract
+During the course of a Humanitarian Assistance-Disaster Relief (HADR) crisis, that can happen anywhere in the world, real-time information is often posted online by the people in need of help which, in turn, can be used by different stakeholders involved with management of the crisis.  Automated processing of such posts can considerably improve the effectiveness of such efforts; for example, understanding the aggregated emotion from affected populations in specific areas may help inform decisionmakers on how to best allocate resources for an effective disaster response. However, these efforts may be severely limited by the availability of resources for the local language. The ongoing DARPA project Low Resource Languages for Emergent Incidents (LORELEI) aims to further language processing technologies for low resource languages in the context of such a humanitarian crisis.  In this work, we describe our submission for the 2019 Sentiment, Emotion and Cognitive state (SEC) pilot task of the LORELEI project. We describe a collection of sentiment analysis systems included in our submission along with the features extracted. Our fielded systems obtained the best results in both English and Spanish language evaluations of the SEC pilot task.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_oQwDNmBikIKrcOsvOJ2jFlJx)
+ Call ID: call_oQwDNmBikIKrcOsvOJ2jFlJx
+  Args:
+    section_id: 1.9
+
+================================= Tool Message =================================
+Name: read_section
+
+B. Linguistic Features 1) N-grams:
+We extract word unigrams and bigrams. These features were then transformed using term frequencies (TF) and Inverse document-frequency (IDF).2) Distributed Semantics: Word embeddings pretrained on large corpora allow models to efficiently leverage word semantics as well as similarities between words. This can help with vocabulary generalization as models can adapt to words not previously seen in training data.  In our feature set we include a 300-dimensional word2vec word representation trained on a large news corpus [37] . We obtain a representation for each segment by averaging the embedding of each word in the segment. We also experimented with the use of GloVe [38] , and Sent2Vec [39] , an extension of word2vec for sentences.3) Sentiment Features: We use two sources of sentiment features: manually constructed lexica, and pre-trained sentiment embeddings.  When available, manually constructed lexica are a useful resource for identifying expressions of sentiment [22] . We obtained word percentages across 192 lexical categories using Empath [40] , which extends popular tools such as the Linguistic Inquiry and Word Count (LIWC) [23] and General Inquirer (GI) [41] by adding a wider range of lexical categories. These categories include emotion classes such as surprise or disgust. Neural networks have been shown to capture specific task related subtleties which can complement the manually constructed sentiment lexica described in the previous subsection. For this work, we learn sentiment representations using a bilateral Long Short-Term Memory model [42] trained on the Stanford Sentiment Treebank [43] .  This model was selected because it provided a good trade off between simplicity and performance on a fine-grained sentiment task, and has been shown to achieve competitive results to the state-of-the-art [44] .
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_wFPvLyJFhS6VE7sPzjWitOSt)
+ Call ID: call_wFPvLyJFhS6VE7sPzjWitOSt
+  Args:
+    pattern: most salient|salient features|top features|feature weights|weight.*feature|informative
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+
+The models extracted word unigrams and bigrams (TF-IDF), distributed semantic features from pretrained embeddings (including 300-dimensional word2vec, and experiments with GloVe and Sent2Vec), and sentiment features from manually constructed lexica plus pre-trained sentiment embeddings. The lexicon-based sentiment features included word percentages across 192 lexical categories using Empath, including emotion classes such as surprise and disgust.

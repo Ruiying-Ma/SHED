@@ -1,0 +1,60 @@
+================================ Human Message =================================
+
+QUERY:
+Do they compare their semantic feature approach to lexical approaches?
+
+TABLE OF CONTENTS (TOC):
+1 | Improved and Robust Controversy Detection in General Web Pages Using Semantic Approaches under Large Scale Conditions
+1.1 | ABSTRACT
+1.2 | ACM Reference Format:
+1.3 | 1 INTRODUCTION & PRIOR WORK
+1.4 | 2 METHODS
+1.5 | 3 EXPERIMENTAL SETUP
+1.6 | 3.1 Datasets and evaluation
+1.7 | 3.2 Baseline models
+1.8 | 4 RESULTS
+1.9 | 4.1 Comparison of results with previous work
+1.10 | 4.2 Robustness of the model across time
+1.11 | 4.3 Robustness of the model across topics
+1.12 | 4.4 Robustness of the model across domains
+1.13 | 4.5 Human agreement
+1.14 | 5 CONCLUSION
+1.15 | REFERENCES
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_2X7EsZcXiJBwK2JUDmgYQ7C3)
+ Call ID: call_2X7EsZcXiJBwK2JUDmgYQ7C3
+  Args:
+    section_id: 1.7
+
+================================= Tool Message =================================
+Name: read_section
+
+3.2 Baseline models
+To compare the results of neural approaches to prior work we implemented the previous state-of-the-art controversy detection method: the language model from [8]. Together with an SVM baseline they act as controversy detection alternatives using only full text features, thus meeting the task-requirements of platform- independence. Note: the implementation of [8] additionally requires ranking methods to select a subset of the training data for each language model.  A simplified version of this, excluding the ranking method but using the same dataset and lexicon to select documents as [8], is implemented and included in the baselines comparison section (LM-DBPedia). We also included the same language model trained on the full text Wikipedia pages (LM-wiki).  Similarly, for completeness sake, we also include both the state-of-the-art match- ing model, the TILE-Clique model from [6] and the sentiment analy- sis baseline (using the state-of-the-art Polyglot library for python 6 ) from [3] in the comparison with previous work.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_4YOg1VTmh1CvT0YCib6JIbBD)
+ Call ID: call_4YOg1VTmh1CvT0YCib6JIbBD
+  Args:
+    section_id: 1.9
+
+================================= Tool Message =================================
+Name: read_section
+
+4.1 Comparison of results with previous work
+Table 2 shows the relative performance of the neural models com- pared to previous controversy detection methods, evaluated on the Clueweb09 derived dataset of [3] and trained on the Wikipedia data from the same time frame. The TILE-Clique matching model
+1 Code available at https://github.com/JasperLinmans/ControversPy
+2 Available at https://code.google.com/p/word2vec/
+3 Script to generate dataset available at: https://github. com/JasperLinmans/ControversPy 4 Available at https://en.wikipedia.org/wiki/Wikipedia:List_of_controversial_issues
+5 Available at https://en.wikipedia.org/wiki/Special:Random
+6 https://github.com/aboSamoor/polyglot
+ Model Precision Recall F1 AUC Train/Test: ’18/’18 ’09/’18 ∆ ’18/’18 ’09/’18 ∆ ’18/’18 ’09/’18 ∆ ’18/’18 ’09/’18 ∆ TfIdf-SVM 0.910 0.941 ▲ 3% 0.689 0.191 ▼ 72% 0.784 0. 317 ▼ 60% 0.785 0.585 ▼ 25% LM 0.651 0.609 ▼ 6% 0.811 0.550 ▼ 32% 0.723 0.578 ▼ 20% 0.600 0.452 ▼ 25% CNN 0.930 0.913 ▼ 2% 0.663 0. 564 ▼ 15% 0.775 0.696 ▼ 11% 0.888 0.846 ▼ 5% HAN 0.871 0.912 ▲ 5% 0.818 0.561 ▼ 31% 0.844 0.695 ▼ 18% 0.889 0.845 ▼ 5%
+Table 3: Temporal stability experiment.  Results obtained by evaluating on the Wikipedia derived dataset from 2018 by either: models trained on Wikipedia data from 2018 or 2009. Trained on data from the same time frame, the neural models show a slight advantage over the lexical models. Most noticeable however is the drop in performance by the lexical models when trained on older data in terms of Recall and therefore also in terms of F1-score. Figure 1: Average F1 and AUC score of aggregated results for all lexical and neural models.outperforms all other models on Precision although this difference is not significant compared to the neural approaches. Similarly, the language model trained on the DBPedia dataset outperforms other models on Recall but shows no significant difference compared to the CNN model.  Notably, the neural approaches show comparable results to the TILE-Clique model in terms of F1, demonstrating a balanced performance in terms of Precision and Recall. Further- more, the CNN model shows a significant improvement compared to the other non neural baselines in terms of the AUC value (p < 0.05).Table 2: Comparison of results with previous work
+Model Precision Recall F1 AUC Sentiment_polyglot 0.448 0.392 0. 418 0.612 TfIdf-SVM 0.581 0.208 0.306 0.740 TILE_Clique [6] 0.710 0.720 0.714 0.780 LM-DBPedia [8] 0.415 0.886 0.566 0.730 LM-wiki 0.359 0.808 0.497 0.579 CNN 0.627 0. 840 0.718 0.835 HAN 0.632 0.745 0.684 0.823
+
+================================== Ai Message ==================================
+
+Yes. They compare the neural semantic approaches to lexical baselines such as TfIdf-SVM and language models (LM-DBPedia, LM-wiki), and report these comparisons in the results.

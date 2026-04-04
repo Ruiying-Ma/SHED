@@ -1,0 +1,65 @@
+================================ Human Message =================================
+
+QUERY:
+did they experiment with other text embeddings?
+
+TABLE OF CONTENTS (TOC):
+1 | Enhancing PIO Element Detection in Medical Text Using Contextualized Embedding
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2 Datasets
+1.4 | 3 BERT-Based Classification Model
+1.4.1 | 3.2 The Model
+1.5 | 4.1 Performance Comparison
+1.6 | 4.2 Model Boosting
+1.7 | 5 Discussion and Conclusion
+1.8 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_OGDVLg7ewjYknt2EXGWPTL2x)
+ Call ID: call_OGDVLg7ewjYknt2EXGWPTL2x
+  Args:
+    pattern: embedding|embeddings|ELMo|GloVe|word2vec|fastText|BioBERT|ClinicalBERT|BERT
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1 | Abstract
+In this paper, we investigate a new approach to Population, Intervention and Outcome (PIO) element detection, a common task in Evidence Based Medicine (EBM). The purpose of this study is two-fold: to build a training dataset for PIO element detection with minimum redundancy and ambiguity and to investigate possible options in utilizing state of the art embedding methods for the task of PIO element detection. For the former purpose, we build a new and improved dataset by investigating the shortcomings of previously released datasets.  For the latter purpose, we leverage the state of the art text embedding, Bidirectional Encoder Representations from Transformers (BERT), and build a multi-label classifier. We show that choosing a domain specific pre-trained embedding further optimizes the performance of the classifier. Furthermore, we show that the model could be enhanced by using ensemble methods and boosting techniques provided that features are adequately chosen.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_OvkC2jIWxfi8jt4iqaj54U1f)
+ Call ID: call_OvkC2jIWxfi8jt4iqaj54U1f
+  Args:
+    section_id: 1.5
+
+================================= Tool Message =================================
+Name: read_section
+
+4.1 Performance Comparison
+In order to quantify the performance of the classification model, we computed the precision and recall scores. On average, it was found that the model leads to better results when trained using the BioBERT embedding. In addition, the performance of the PIO classifier was measured by averaging the three Area Under Receiver Operating Characteristic Curve (ROC AUC) scores for P, I, and O. The ROC AUC score of 0.9951 was obtained by the model using the general BERT embedding.  This score was improved to 0.9971 when using the BioBERT model pre-trained on medical context. The results are illustrated in Figure 2 .
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_u8cH00aV9pk87pzgSVVCapr7)
+ Call ID: call_u8cH00aV9pk87pzgSVVCapr7
+  Args:
+    section_id: 1.4
+
+================================= Tool Message =================================
+Name: read_section
+
+3 BERT-Based Classification Model
+3.1 Background BERT (Bidirectional Encoder Representations from Transformers) is a deep bidirectional attention text embedding model. The idea behind this model is to pre-train a bidirectional representation by jointly conditioning on both left and right contexts in all layers using a transformer (Vaswani et al., 2017; Devlin et al., 2018) . Like any other language model, BERT can be pre-trained on different contexts.  A contextualized representation is generally optimized for downstream NLP tasks.Since its release, BERT has been pre-trained on a multitude of corpora. In the following, we describe different BERT embedding versions used for our classification problem. The first version is based on the original BERT release (Devlin et al., 2018) . This model is pre-trained on the BooksCorpus (800M words) (Zhu et al. , 2015) and English Wikipedia (2,500M words). For Wikipedia, text passages were extracted while lists were ignored. The second version is BioBERT (Lee et al., 2019) , which was trained on biomedical corpora: PubMed (4.5B words) and PMC (13.5B words).
+3.2 The Model
+The classification model is built on top of the BERT representation by adding a dense layer corresponding to the multi-label classifier with three output neurons corresponding to PIO labels. In order to insure that independent probabilities are assigned to the labels, as a loss function we have chosen the binary cross entropy with logits (BCE-WithLogits) defined by
+E = - n i=1 (t i log(y i ) + (1 -t i )log(1 -y i )); (1)
+ where t and y are the target and output vectors, respectively; n is the number of independent targets (n=3). The outputs are computed by applying the logistic function to the weighted sums of the last hidden layer activations, s,
+y i = 1 1 + e -s i ,
+s i = j=1 h j w ji .For the original BERT model, we have chosen the smallest uncased model, Bert-Base.  The model has 12 attention layers and all texts are converted to lowercase by the tokenizer (Devlin et al., 2018) . The architecture of the model is illustrated in Figure 1 .Figure 1: Structure of the classifier.Using this framework, we trained the model using the two pretrained embedding models described in the previous section. It is worth to mention that the embedding is contextualized during the training phase.  For both models, the pretrained embedding layer is frozen during the first epoch (the embedding vectors are not updated). After the first epoch, the embedding layer is unfrozen and the vectors are fine-tuned for the classification task during training. The advantage of this approach is that few parameters need to be learned from scratch (Howard and Ruder, 2018; Radford et al., 2018; Devlin et al., 2018) .
+
+================================== Ai Message ==================================
+
+Yes. They compared two text embeddings: the original general BERT (Bert-Base) and BioBERT, and found BioBERT performed better.

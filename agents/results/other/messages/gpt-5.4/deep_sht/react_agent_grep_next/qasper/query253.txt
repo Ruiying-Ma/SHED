@@ -1,0 +1,180 @@
+================================ Human Message =================================
+
+QUERY:
+How long is their dataset?
+
+TABLE OF CONTENTS (TOC):
+1 | One Single Deep Bidirectional LSTM Network for Word Sense Disambiguation of Text Data
+1.1 | 1 Introduction
+1.1.1 | 2 Background and Related Work
+1.1.1.1 | 2.1 Neural Embeddings for WSD
+1.1.1.1.1 | 2.2 Bidirectional LSTM
+1.1.1.1.1.1 | 3 One Single BLSTM network for WSD
+1.1.1.1.1.1.1 | Single-classifier BLSTM architecture for WSD
+1.1.1.1.1.1.1.1 | 3.1 Model Deﬁnition
+1.1.1.1.1.1.1.1.1 | 3.2 Validation for Selection of Hyper-parameters
+1.1.1.1.1.1.1.1.1.1 | 3.3 Dropout and Dropword
+1.1.1.1.1.1.1.1.1.1.1 | 4 Experiments
+1.1.1.1.1.1.1.1.1.1.1.1 | 4.1 Experimental Settings
+1.1.1.1.1.1.1.1.1.1.1.1.1 | 4.2 Results
+1.1.1.1.1.1.1.1.1.1.1.1.1.1 | 4.3 Discussion
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | 5 Conclusion
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_PhY335hxR0xBR0Y7INlJmlDI)
+ Call ID: call_PhY335hxR0xBR0Y7INlJmlDI
+  Args:
+    pattern: dataset|corpus|training data|SemCor|length|long
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | 5 Conclusion
+In contrast to common one-classifier-per-each-word supervised WSD algorithms, we developed our single network of BLSTM that is able to effectively exploit word orders and achieve comparable results with the best-performing supervised algo- rithms. This single WSD BLSTM network is language and domain independent and can be applied to resource-poor languages (or domains) as well.  As an ongo- ing project, we also provided a direction which can lead us to the improvement of the results of the current network using pre-trained sense embeddings.For future work, besides following the discussed direction in order to re- solve the inadequacy of the network regarding having two non-overlapping vec- tor spaces of the embeddings, we plan to examine the network on technical domains such as biomedicine as well.  In this case, our model will be evaluated on MSH WSD dataset 8 prepared by National Library of Medicine 9 (NLM). Also,
+8 https://wsd.nlm.nih.gov/collaboration.shtml
+9 https://www.nlm.nih.gov/
+construction of sense embeddings using (extended) definitions of senses [26][27] can be tested.  Moreover, considering that for many senses we have at least one (lexically) unambiguous word representing that sense, we also aim to experiment with unsupervised (pre-)training of our network which benefits form quarry man- agement by which more training data will be automatically collected from the web.
+References
+1. Vickrey, D., Biewald, L., Teyssier,M., Koller, D.: Word-sense disambiguation for machine translation. In: Proceedings of human language technology conference and conference on empirical methods in natural language processing. (2005)
+2. Hung, J.C., Wang, C.S., Yang, C.Y.,J.C., Wang, C.S., Yang, C.Y., Chiu, M.S., Yee, G.: Applying word sense dis- ambiguation to question answering system for e-learning. In: Advanced Information Networking and Applications, 2005. AINA 2005. 19th International Conference on. Volume 1., IEEE (2005) 157–162
+3. Pennington, J., Socher, R., Manning, C.:Glove: Global vectors for word repre- sentation. In: Proceedings of the 2014 conference on empirical methods in natural language processing (EMNLP). (2014) 1532–1543
+4. Mihalcea, R., Chklovski, T.,R., Chklovski, T., Kilgarriff, A.: The senseval-3 english lexical sample task. In: Proceedings of SENSEVAL-3, the third international workshop on the evaluation of systems for the semantic analysis of text. (2004)
+5. Zhong, Z., Ng, H.T.: It makes sense:A wide-coverage word sense disambiguation system for free text. In: Proceedings of the ACL 2010 System Demonstrations, Association for Computational Linguistics (2010) 78–83
+6. Miller, G.A.: Wordnet: a lexical database for english.Communications of the ACM 38 (11) (1995) 39–41
+7. Pesaranghader, A., Pesaranghader, A.,A., Pesaranghader, A., Mustapha, N.: Word sense disambiguation for biomedical text mining using definition-based semantic relatedness and similar- ity measures. International Journal of Bioscience, Biochemistry and Bioinformatics 4 (4) (2014) 280
+8. Kim, S., Yoon, J.:Link-topic model for biomedical abbreviation disambiguation. Journal of biomedical informatics 53 (2015) 367–380
+9. Navigli, R.: Word sense disambiguation: A survey.ACM Computing Surveys (CSUR) 41 (2) (2009) 10
+10. Collobert, R., Weston, J.:A unified architecture for natural language process- ing: Deep neural networks with multitask learning. In: Proceedings of the 25th international conference on Machine learning, ACM (2008) 160–167
+11. Mikolov, T., Chen, K., Corrado, G., Dean,J.: Efficient estimation of word repre- sentations in vector space. arXiv preprint arXiv:1301.3781 (2013)
+12. Chen, X., Liu, Z., Sun, M.:A unified model for word sense representation and disambiguation. In: EMNLP. (2014) 1025–1035
+13. Navigli, R., Litkowski, K.C., Hargraves,O.: Semeval-2007 task 07: Coarse-grained english all-words task. In: Proceedings of the 4th International Workshop on Se- mantic Evaluations, Association for Computational Linguistics (2007) 30–35
+14. Hochreiter, S., Schmidhuber, J.:Long short-term memory. Neural computation 9 (8) (1997) 1735–1780
+15. Graves, A., Schmidhuber, J.:Framewise phoneme classification with bidirectional lstm and other neural network architectures. Neural Networks 18 (5) (2005) 602– 610
+16. K˚ ageb¨ ack, M., Salomonsson, H.:Word sense disambiguation using a bidirectional lstm. arXiv preprint arXiv:1606.03568 (2016)
+17. Taghipour, K., Ng, H.T.:Semi-supervised word sense disambiguation using word embeddings in general and specific domains. In: HLT-NAACL. (2015) 314–323
+18. McInnes, B.T., Pedersen, T.:Evaluating measures of semantic similarity and relat- edness to disambiguate terms in biomedical text. Journal of biomedical informatics 46 (6) (2013) 1116–1124
+19. Pedersen, T., Kolhatkar, V.: Wordnet::Wordnet:: Senserelate:: Allwords: a broad coverage word sense tagger that maximizes semantic relatedness. In: Proceedings of human language technologies: The 2009 annual conference of the north american chapter of the association for computational linguistics, companion volume: Demonstration session, Association for Computational Linguistics (2009) 17–20
+20. Hinton, G., Srivastava, N., Swersky,K.: Rmsprop: Divide the gradient by a running average of its recent magnitude. Neural networks for machine learning, Coursera lecture 6e (2012)
+21. Srivastava, N., Hinton, G.E.,N., Hinton, G.E., Krizhevsky, A., Sutskever, I., Salakhutdinov, R.: Dropout: a simple way to prevent neural networks from overfitting. Journal of machine learning research 15 (1) (2014) 1929–1958
+22. Iyyer, M., Manjunatha, V., Boyd-Graber,J., Daum´ e III, H.: Deep unordered composition rivals syntactic methods for text classification. In: Proceedings of the 53rd Annual Meeting of the Association for Computational Linguistics and the 7th International Joint Conference on Natural Language Processing (Volume 1: Long Papers). Volume 1. (2015) 1681–1691
+23. Grozea, C.:Finding optimal parameter settings for high performance word sense disambiguation. In: Proceedings of Senseval-3 Workshop. (2004)
+24. Strapparava, C., Gliozzo, A., Giuliano,C.: Pattern abstraction and term similarity for word sense disambiguation: Irst at senseval-3. In: Proc. of SENSEVAL-3 Third International Workshop on Evaluation of Systems for the Semantic Analysis of Text. (2004) 229–234
+25. Lee, Y.K., Ng, H.T., Chia, T.K.:Supervised word sense disambiguation with support vector machines and multiple knowledge sources. In: Senseval-3: third international workshop on the evaluation of systems for the semantic analysis of text. (2004) 137–140
+26. Pesaranghader, A., Matwin, S., Sokolova,M., Beiko, R.G.: simdef: definition- based semantic similarity measure of gene ontology terms for functional similarity analysis of genes. Bioinformatics 32 (9) (2015) 1380–1387
+27. Pesaranghader, A., Rezaei, A.,A., Rezaei, A., Pesaranghader, A.: Adapting gloss vector se- mantic relatedness measure for semantic similarity estimation: An evaluation in the biomedical domain. In: Joint International Semantic Technology Conference, Springer (2013) 129–145
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_L3rG7ta8WhTDzmBmPzm78uUZ)
+ Call ID: call_L3rG7ta8WhTDzmBmPzm78uUZ
+  Args:
+    pattern: SemCor|MSH WSD|Senseval|SENSEVAL|training set|test set|instances|sentences|words
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | References
+1. Vickrey, D., Biewald, L., Teyssier,M., Koller, D.: Word-sense disambiguation for machine translation. In: Proceedings of human language technology conference and conference on empirical methods in natural language processing. (2005)
+2. Hung, J.C., Wang, C.S., Yang, C.Y.,J.C., Wang, C.S., Yang, C.Y., Chiu, M.S., Yee, G.: Applying word sense dis- ambiguation to question answering system for e-learning. In: Advanced Information Networking and Applications, 2005. AINA 2005. 19th International Conference on. Volume 1., IEEE (2005) 157–162
+3. Pennington, J., Socher, R., Manning, C.:Glove: Global vectors for word repre- sentation. In: Proceedings of the 2014 conference on empirical methods in natural language processing (EMNLP). (2014) 1532–1543
+4. Mihalcea, R., Chklovski, T.,R., Chklovski, T., Kilgarriff, A.: The senseval-3 english lexical sample task. In: Proceedings of SENSEVAL-3, the third international workshop on the evaluation of systems for the semantic analysis of text. (2004)
+5. Zhong, Z., Ng, H.T.: It makes sense:A wide-coverage word sense disambiguation system for free text. In: Proceedings of the ACL 2010 System Demonstrations, Association for Computational Linguistics (2010) 78–83
+6. Miller, G.A.: Wordnet: a lexical database for english.Communications of the ACM 38 (11) (1995) 39–41
+7. Pesaranghader, A., Pesaranghader, A.,A., Pesaranghader, A., Mustapha, N.: Word sense disambiguation for biomedical text mining using definition-based semantic relatedness and similar- ity measures. International Journal of Bioscience, Biochemistry and Bioinformatics 4 (4) (2014) 280
+8. Kim, S., Yoon, J.:Link-topic model for biomedical abbreviation disambiguation. Journal of biomedical informatics 53 (2015) 367–380
+9. Navigli, R.: Word sense disambiguation: A survey.ACM Computing Surveys (CSUR) 41 (2) (2009) 10
+10. Collobert, R., Weston, J.:A unified architecture for natural language process- ing: Deep neural networks with multitask learning. In: Proceedings of the 25th international conference on Machine learning, ACM (2008) 160–167
+11. Mikolov, T., Chen, K., Corrado, G., Dean,J.: Efficient estimation of word repre- sentations in vector space. arXiv preprint arXiv:1301.3781 (2013)
+12. Chen, X., Liu, Z., Sun, M.:A unified model for word sense representation and disambiguation. In: EMNLP. (2014) 1025–1035
+13. Navigli, R., Litkowski, K.C., Hargraves,O.: Semeval-2007 task 07: Coarse-grained english all-words task. In: Proceedings of the 4th International Workshop on Se- mantic Evaluations, Association for Computational Linguistics (2007) 30–35
+14. Hochreiter, S., Schmidhuber, J.:Long short-term memory. Neural computation 9 (8) (1997) 1735–1780
+15. Graves, A., Schmidhuber, J.:Framewise phoneme classification with bidirectional lstm and other neural network architectures. Neural Networks 18 (5) (2005) 602– 610
+16. K˚ ageb¨ ack, M., Salomonsson, H.:Word sense disambiguation using a bidirectional lstm. arXiv preprint arXiv:1606.03568 (2016)
+17. Taghipour, K., Ng, H.T.:Semi-supervised word sense disambiguation using word embeddings in general and specific domains. In: HLT-NAACL. (2015) 314–323
+18. McInnes, B.T., Pedersen, T.:Evaluating measures of semantic similarity and relat- edness to disambiguate terms in biomedical text. Journal of biomedical informatics 46 (6) (2013) 1116–1124
+19. Pedersen, T., Kolhatkar, V.: Wordnet::Wordnet:: Senserelate:: Allwords: a broad coverage word sense tagger that maximizes semantic relatedness. In: Proceedings of human language technologies: The 2009 annual conference of the north american chapter of the association for computational linguistics, companion volume: Demonstration session, Association for Computational Linguistics (2009) 17–20
+20. Hinton, G., Srivastava, N., Swersky,K.: Rmsprop: Divide the gradient by a running average of its recent magnitude. Neural networks for machine learning, Coursera lecture 6e (2012)
+21. Srivastava, N., Hinton, G.E.,N., Hinton, G.E., Krizhevsky, A., Sutskever, I., Salakhutdinov, R.: Dropout: a simple way to prevent neural networks from overfitting. Journal of machine learning research 15 (1) (2014) 1929–1958
+22. Iyyer, M., Manjunatha, V., Boyd-Graber,J., Daum´ e III, H.: Deep unordered composition rivals syntactic methods for text classification. In: Proceedings of the 53rd Annual Meeting of the Association for Computational Linguistics and the 7th International Joint Conference on Natural Language Processing (Volume 1: Long Papers). Volume 1. (2015) 1681–1691
+23. Grozea, C.:Finding optimal parameter settings for high performance word sense disambiguation. In: Proceedings of Senseval-3 Workshop. (2004)
+24. Strapparava, C., Gliozzo, A., Giuliano,C.: Pattern abstraction and term similarity for word sense disambiguation: Irst at senseval-3. In: Proc. of SENSEVAL-3 Third International Workshop on Evaluation of Systems for the Semantic Analysis of Text. (2004) 229–234
+25. Lee, Y.K., Ng, H.T., Chia, T.K.:Supervised word sense disambiguation with support vector machines and multiple knowledge sources. In: Senseval-3: third international workshop on the evaluation of systems for the semantic analysis of text. (2004) 137–140
+26. Pesaranghader, A., Matwin, S., Sokolova,M., Beiko, R.G.: simdef: definition- based semantic similarity measure of gene ontology terms for functional similarity analysis of genes. Bioinformatics 32 (9) (2015) 1380–1387
+27. Pesaranghader, A., Rezaei, A.,A., Rezaei, A., Pesaranghader, A.: Adapting gloss vector se- mantic relatedness measure for semantic similarity estimation: An evaluation in the biomedical domain. In: Joint International Semantic Technology Conference, Springer (2013) 129–145
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_jtP4GiuXWOV1OgN3phJeunNd)
+ Call ID: call_jtP4GiuXWOV1OgN3phJeunNd
+  Args:
+    section_id: 1.1.1.1.1.1.1.1.1.1.1.1
+
+================================= Tool Message =================================
+Name: read_section
+
+4.1 Experimental Settings
+The hyper-parameters that were determined during the validation is presented in Table 2. The preprocessing of the data was conducted by lower-casing all the words in the documents and removing numbers. This results in a vocabulary size of | V | = 29044. Words not present in the training set are considered unknown during testing. Also, in order to have fixed-size contexts around the ambiguous words, the padding and truncating are applied to them whenever needed. Table 2: Hyper-parameter used for the experiments and the ranges that were searched during tuning. ‘-’ indicates no tuning was performed on that parameter. Hyper-prameter Range searched Values used Context size [10, 100] [Left, Right] [15 Left, 15 Right] Embedding size { 50, 100, 200, 300 } 100 BLSTM hidden layer size [50, 300] 2*50 Dropout on sense/word embeddings [0, 50%] 20% Dropout on LSTM outputs [0, 70%] 50% Dropout on fully-connected layer [0, 70%] 50% Word dropout [0, 50%] 20% Sense embedding initialization - Random ∈ unif(-0. 1, 0.1) Word embedding initialization - GloVe 7 (uncased)
+6 http://www.wordsmyth.net/
+7 Wikipedia and Gigaword (400K vocab): https://nlp.stanford.edu/projects/glove/
+4.2 Results
+Between-all-models comparisons - When SensEval-3 task was launched 47 sub- missions (supervised and unsupervised algorithms) were received addressing this task. Afterward, some other papers tried to work on this data and reported their results in separate articles as well. We compare the result of our model with the top-performing and low-performing algorithms (supervised).  We show our single model sits among the 5 top-performing algorithms, considering that in other algorithms for each ambiguous word one separate classifier is trained (i.e. in the same number of ambiguous words in a language there have to be classifiers; which means 57 classifiers for this specific task). Table 3 shows the results of the top-performing and low-performing supervised algorithms.Table 3: F-measure results for SensEval-3 (English lexical samples)
+ Rank Method F-measure(%) 1 Multi-classifier BLSTM [16] 73.4 1 IMS+adapted CW [17] 73.4 2 htsa3 [23] 72.9 3 IRST-Kernels [24] 72.6 4 Our Single-classifier BLSTM 72.5 5 nusels [25] 72.4 35 IRST-Ties 58. 9 37 R2D2 57.2 39 NRC-Coarse 48.5 40 NRC-Coarse2 48.4 42 DLSI-UA-LS-SU 44.4
+The first two algorithms represent the state-of-the-art models of supervised WSD when evaluated on SensEval-3. Multi-classifier BLSTM [16] consists of deep neural networks which make use of pre-trained word embeddings.  While the lower layers of these networks are shared, upper layers of each network are responsible to individually classify the ambiguous that word the network is as- sociated with. IMS+adapted CW [17] is another WSD model that considers deep neural networks and also uses pre-trained word embeddings as inputs. In contrast to Multi-classifier BLSTM, this model relies on features such as POS tags, collocations, and surrounding words to achieve their result.  For these two models, softmax constitutes the output layers of all networks. htsa3 [23] was the winner of the SensEval-3 lexical sample. It is a Naive Bayes system applied mainly to raw words, lemmas, and POS tags with correction of the a-priori frequencies.  IRST-Kernels [24] utilizes kernel methods for pattern abstraction, paradigmatic and syntagmatic information and unsupervised term proximity on British National Corpus (BNC), in SVM classifiers. Likewise, nusels [25] makes use of SVM classifiers with a combination of knowledge sources (part-of-speech
+of neighboring words, words in context, local collocations, syntactic relations. The second part of the table lists the low-performing supervised algorithms [4].  Considering their ranking scores we see that there are unsupervised methods that outperform these supervised algorithms.Within-our-model comparisons - Besides several internal experiments to exam- ine the importance of some hyper-parameters to our network, we investigated if the sequential follow of cosine similarities computed between a true sense and its preceding and succeeding context words carries a pattern-like information that can be encoded with BLSTM. Table 4 presents the results of these experiments. Table 4: WSD single-classifier BLSTM with other pieces or hyper-parameters
+Network (Our Single-classifier) F-measure(%) Full network in Fig. 1 72.5 BLSTM with reverse directions in Fig. 1 68.9 BLSTM with a shuffled context 67.3 Fully-connected layers instead of BLSTM layer 70.2 BLSTM without GloVe for the context (all weights are random) 65. 6 BLSTM without word dropout 71.1 BLSTM with a larger context size [25 left, 25 right] 71.4
+The first row shows the best result of the network that we described above (and depicted in Fig. 1). Each of the other rows shows one change that we applied to the network to see the behavior of the network in terms of F-measure.  In the middle part, we are specifically concerned about the importance of the presence of a BLSTM layer in our network. So, we introduced some fundamental changes in the input or in the structure of the network. Generally, it is expected that the cosine similarities of closer words (in the context) to the true sense be larger than the incorrect senses’ [18]; however, if a series of cosine similarities can be encoded through an LSTM (or BLSTM) network should be experimented.  We observe if reverse the sequential follow of information into our Bidirectional LSTM, we shuffle the order of the context words, or even replace our Bidirectional LSTMs with two different fully-connected networks of the same size 50 (the size of the LSTMs outputs), the achieved results were notably less than 72.5%.In the third section of the table, we report our changes to the hyper-parameters.  Specifically, we see the importance of using GloVe as pre-trained word embed- dings, how word dropout improves generalization, and how context size plays an important role in the final classification result (showing one of our experiments).
+4.3 Discussion
+From the results of Table 3, we notice our single WSD network, despite elimi- nating the problem of having a large number of WSD classifiers, still falls short when is compared with the state-of-the-art WSD algorithms. Based on our in- tuition and supported by some of our preliminary experiments, this deficiency stems from an important factor in our BLSTM network.  Since no sense em- bedding is made publicly available for use, the sense embeddings are initialized randomly; yet, word embeddings are initialized by pre-trained GloVe vectors in order to benefit from the semantic and syntactic properties of the context words conveyed by these embeddings. That is to say, the separate spaces that the sense embeddings and the (context) word embeddings come from enforces some delay for the alignment of these spaces which in turn demands more train- ing data.  Furthermore, this early misalignment does not allow the BLSTM fully take advantage of larger context sizes which can be helpful.  Our first attempt to deal with such problem was to pre-train the sense embeddings by some tech- niques - such as taking the average of the GloVe embeddings of the (informative) definition content words of senses, or taking the average of the GloVe embed- dings of the (informative) context words in their training samples - did not give us a better result than our random initialization.  Our preliminary experiments though in which we replaced all GloVe embeddings in the network with sense embeddings (using a method proposed by Chen et al. [12]), showed considerable improvements in the results of some ambiguous words. That means both senses and context words (while they can be ambiguous by themselves) come from one vector space. In other words, the context would also be represented by the pos- sible senses that its words can take.  This idea not only can help to improve the results of the current model, it can also avoid the need for a large amount of training data since senses can be seen in both places, center and context, to be trained.
+5 Conclusion
+In contrast to common one-classifier-per-each-word supervised WSD algorithms, we developed our single network of BLSTM that is able to effectively exploit word orders and achieve comparable results with the best-performing supervised algo- rithms. This single WSD BLSTM network is language and domain independent and can be applied to resource-poor languages (or domains) as well.  As an ongo- ing project, we also provided a direction which can lead us to the improvement of the results of the current network using pre-trained sense embeddings.For future work, besides following the discussed direction in order to re- solve the inadequacy of the network regarding having two non-overlapping vec- tor spaces of the embeddings, we plan to examine the network on technical domains such as biomedicine as well.  In this case, our model will be evaluated on MSH WSD dataset 8 prepared by National Library of Medicine 9 (NLM). Also,
+8 https://wsd.nlm.nih.gov/collaboration.shtml
+9 https://www.nlm.nih.gov/
+construction of sense embeddings using (extended) definitions of senses [26][27] can be tested.  Moreover, considering that for many senses we have at least one (lexically) unambiguous word representing that sense, we also aim to experiment with unsupervised (pre-)training of our network which benefits form quarry man- agement by which more training data will be automatically collected from the web.
+References
+1. Vickrey, D., Biewald, L., Teyssier,M., Koller, D.: Word-sense disambiguation for machine translation. In: Proceedings of human language technology conference and conference on empirical methods in natural language processing. (2005)
+2. Hung, J.C., Wang, C.S., Yang, C.Y.,J.C., Wang, C.S., Yang, C.Y., Chiu, M.S., Yee, G.: Applying word sense dis- ambiguation to quest...(truncated)
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_vaALy65mQgQH3vN4H1wzw1wN)
+ Call ID: call_vaALy65mQgQH3vN4H1wzw1wN
+  Args:
+    pattern: 57 classifiers|57 ambiguous|training samples|lexical sample|instances|documents
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | References
+1. Vickrey, D., Biewald, L., Teyssier,M., Koller, D.: Word-sense disambiguation for machine translation. In: Proceedings of human language technology conference and conference on empirical methods in natural language processing. (2005)
+2. Hung, J.C., Wang, C.S., Yang, C.Y.,J.C., Wang, C.S., Yang, C.Y., Chiu, M.S., Yee, G.: Applying word sense dis- ambiguation to question answering system for e-learning. In: Advanced Information Networking and Applications, 2005. AINA 2005. 19th International Conference on. Volume 1., IEEE (2005) 157–162
+3. Pennington, J., Socher, R., Manning, C.:Glove: Global vectors for word repre- sentation. In: Proceedings of the 2014 conference on empirical methods in natural language processing (EMNLP). (2014) 1532–1543
+4. Mihalcea, R., Chklovski, T.,R., Chklovski, T., Kilgarriff, A.: The senseval-3 english lexical sample task. In: Proceedings of SENSEVAL-3, the third international workshop on the evaluation of systems for the semantic analysis of text. (2004)
+5. Zhong, Z., Ng, H.T.: It makes sense:A wide-coverage word sense disambiguation system for free text. In: Proceedings of the ACL 2010 System Demonstrations, Association for Computational Linguistics (2010) 78–83
+6. Miller, G.A.: Wordnet: a lexical database for english.Communications of the ACM 38 (11) (1995) 39–41
+7. Pesaranghader, A., Pesaranghader, A.,A., Pesaranghader, A., Mustapha, N.: Word sense disambiguation for biomedical text mining using definition-based semantic relatedness and similar- ity measures. International Journal of Bioscience, Biochemistry and Bioinformatics 4 (4) (2014) 280
+8. Kim, S., Yoon, J.:Link-topic model for biomedical abbreviation disambiguation. Journal of biomedical informatics 53 (2015) 367–380
+9. Navigli, R.: Word sense disambiguation: A survey.ACM Computing Surveys (CSUR) 41 (2) (2009) 10
+10. Collobert, R., Weston, J.:A unified architecture for natural language process- ing: Deep neural networks with multitask learning. In: Proceedings of the 25th international conference on Machine learning, ACM (2008) 160–167
+11. Mikolov, T., Chen, K., Corrado, G., Dean,J.: Efficient estimation of word repre- sentations in vector space. arXiv preprint arXiv:1301.3781 (2013)
+12. Chen, X., Liu, Z., Sun, M.:A unified model for word sense representation and disambiguation. In: EMNLP. (2014) 1025–1035
+13. Navigli, R., Litkowski, K.C., Hargraves,O.: Semeval-2007 task 07: Coarse-grained english all-words task. In: Proceedings of the 4th International Workshop on Se- mantic Evaluations, Association for Computational Linguistics (2007) 30–35
+14. Hochreiter, S., Schmidhuber, J.:Long short-term memory. Neural computation 9 (8) (1997) 1735–1780
+15. Graves, A., Schmidhuber, J.:Framewise phoneme classification with bidirectional lstm and other neural network architectures. Neural Networks 18 (5) (2005) 602– 610
+16. K˚ ageb¨ ack, M., Salomonsson, H.:Word sense disambiguation using a bidirectional lstm. arXiv preprint arXiv:1606.03568 (2016)
+17. Taghipour, K., Ng, H.T.:Semi-supervised word sense disambiguation using word embeddings in general and specific domains. In: HLT-NAACL. (2015) 314–323
+18. McInnes, B.T., Pedersen, T.:Evaluating measures of semantic similarity and relat- edness to disambiguate terms in biomedical text. Journal of biomedical informatics 46 (6) (2013) 1116–1124
+19. Pedersen, T., Kolhatkar, V.: Wordnet::Wordnet:: Senserelate:: Allwords: a broad coverage word sense tagger that maximizes semantic relatedness. In: Proceedings of human language technologies: The 2009 annual conference of the north american chapter of the association for computational linguistics, companion volume: Demonstration session, Association for Computational Linguistics (2009) 17–20
+20. Hinton, G., Srivastava, N., Swersky,K.: Rmsprop: Divide the gradient by a running average of its recent magnitude. Neural networks for machine learning, Coursera lecture 6e (2012)
+21. Srivastava, N., Hinton, G.E.,N., Hinton, G.E., Krizhevsky, A., Sutskever, I., Salakhutdinov, R.: Dropout: a simple way to prevent neural networks from overfitting. Journal of machine learning research 15 (1) (2014) 1929–1958
+22. Iyyer, M., Manjunatha, V., Boyd-Graber,J., Daum´ e III, H.: Deep unordered composition rivals syntactic methods for text classification. In: Proceedings of the 53rd Annual Meeting of the Association for Computational Linguistics and the 7th International Joint Conference on Natural Language Processing (Volume 1: Long Papers). Volume 1. (2015) 1681–1691
+23. Grozea, C.:Finding optimal parameter settings for high performance word sense disambiguation. In: Proceedings of Senseval-3 Workshop. (2004)
+24. Strapparava, C., Gliozzo, A., Giuliano,C.: Pattern abstraction and term similarity for word sense disambiguation: Irst at senseval-3. In: Proc. of SENSEVAL-3 Third International Workshop on Evaluation of Systems for the Semantic Analysis of Text. (2004) 229–234
+25. Lee, Y.K., Ng, H.T., Chia, T.K.:Supervised word sense disambiguation with support vector machines and multiple knowledge sources. In: Senseval-3: third international workshop on the evaluation of systems for the semantic analysis of text. (2004) 137–140
+26. Pesaranghader, A., Matwin, S., Sokolova,M., Beiko, R.G.: simdef: definition- based semantic similarity measure of gene ontology terms for functional similarity analysis of genes. Bioinformatics 32 (9) (2015) 1380–1387
+27. Pesaranghader, A., Rezaei, A.,A., Rezaei, A., Pesaranghader, A.: Adapting gloss vector se- mantic relatedness measure for semantic similarity estimation: An evaluation in the biomedical domain. In: Joint International Semantic Technology Conference, Springer (2013) 129–145
+
+================================== Ai Message ==================================
+
+Unanswerable

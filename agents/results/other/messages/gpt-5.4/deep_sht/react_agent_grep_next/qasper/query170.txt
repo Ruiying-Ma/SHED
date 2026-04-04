@@ -1,0 +1,56 @@
+================================ Human Message =================================
+
+QUERY:
+Do they reduce language variation of text by enhancing frequencies?
+
+TABLE OF CONTENTS (TOC):
+1 | Combining Thesaurus Knowledge and Probabilistic Topic Models
+1.1 | 1 Introduction
+1.1.1 | 2 Loukachevitch et al.
+1.1.1.1 | 2 Related Work
+1.1.1.1.1 | 3 Approach to Integration Whole Thesauri into Topic Models
+1.1.1.1.1.1 | 4 Automatic Measures to Estimate the Quality of Topic Models
+1.1.1.1.1.1.1 | 5 Use of Automatic Measures to Assess Combined Models
+1.1.1.1.1.1.1.1 | 6 Manual Evaluation of Combined Topic Models
+1.1.1.1.1.1.1.1.1 | 7 Conclusion
+1.1.1.1.1.1.1.1.1.1 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_vNKyJtOpoBZ9u7S4ipfgBF0U)
+ Call ID: call_vNKyJtOpoBZ9u7S4ipfgBF0U
+  Args:
+    pattern: enhanc|frequenc|variation
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1.1.1.1.1.1.1.1 | 7 Conclusion
+In this paper we presented the approach for introducing thesaurus information into topic models. The main idea of the approach is based on the assumption that if related words or phrases co-occur in the same text, their frequencies should be enhanced and this action leads to their mutual larger contribution into topics found in this text. In the experiments on four English collections, it was shown that the direct imple- mentation of this idea using WordNet synonyms and/or direct relations leads to great degradation of the unigram model. But the correction of initial assumptions and exclud- ing hyponyms from frequencies adding improve the model and makes it much better than the initial model in several measures. Adding ngrams in a similar manner further improves the model. Introducing information from domain-specific thesaurus EuroVoc led to improving the initial model without the additional assumption, which can be explained by the absence of general abstract words in such information-retrieval thesauri.We also considered thematic analysis of an Islam Internet site and evaluated the combined topic models manually. We found that the best, understandable topics are obtained by adding domain-specific thesaurus knowledge (domain terms, synonyms, and relations).Acknowledgments.  This study is supported by Russian Scientific Foundation in part concerning the combined approach uniting thesaurus information and probabilistic topic models (project N16-18-02074). The study on application of the approach to content analysis of Islam sites is supported by Russian Foundation for Basic Research (project N 16-29-09606).
+12 Loukachevitch et al.References
+1. Blei, D.: Probabilistic topic models. Communications of the ACM,55(4), 77–84 (2012)
+2. Smith, A., Lee, T. Y.,A., Lee, T. Y., Poursabzi-Sangdeh, F., Boyd-Graber, J., Elmqvist, N., Findlater, L.: Evaluating Visual Representations for Topic Understanding and Their Effects on Manually Generated Labels. Transactions of the Assoc. for Computational Linguistics, 5, 1–15, (2017)
+3. Chang, J., Boyd-Graber, J., Wang Ch.,J., Boyd-Graber, J., Wang Ch., Gerrich S., Blei, D. Reading tea leaves: How humans interpret topic models. In Proceedings of the 24th Annual Conference on Neural Information Processing Systems, pp. 288–296 (2009)
+4. Boyd-Graber, J., Mimno, D., Newman, D.:Care and Feeding of Topic Models: Problems, Di- agnostics, and Improvements. CRC Handbooks of Modern Statistical Methods. CRC Press, Boca Raton, Florida (2014)
+5. Blei,D., Lafferty, J.: 2009. Visualizing topics with multi-word expressions. https:
+//arxiv.org/pdf/0907.1013.pdf.
+6. Andrzejewski, D., Zhu, X., Craven, M.:Incorporating domain knowledge into topic model- ing via dirichlet forest priors. In Proceedings of the 26th Annual International Conference on Machine Learning, pp. 25–32 (2011)
+7. Newman, D., Bonilla, E., Buntine, W.:Improving topic coherence with regularized topic models. In Advances in Neural Information Processing Systems, pp. 496–504 (2011)
+8. Xie, P., Yang D., Xing, E.:Incorporating word correlation knowledge into topic modeling. In Proceedings of NAACL-2015, pp. 725–734 (2015)
+9. Chen, Z., Mukherjee, A., Liu, B., Hsu,M., Castellanos, M., Ghosh, R.: Discovering coherent topics using general knowledge. In Proceedings of the 22nd ACM international conference on Information and Knowledge Management. ACM, pp. 209–218 (2013)
+10. Mimno, D., Wallach, H., Talley, E.,D., Wallach, H., Talley, E., Leenders, M., McCallum, A.: Optimizing semantic co- herence in topic models. In Proceedings of EMNLP’11, pp. 262–272 (2011)
+11. Gao, Y., Wen, D.:Semantic Similarity-Enhanced Topic Models for Document Analysis. In Smart Learning Environments, Springer Berlin Heidelberg, pp. 45-56 (2015)
+12. Wallach, H.: Topic modeling: Beyond bag-of-words.In Proceedings of the 23rd International Conference on Machine Learning, pp. 977–984 (2006)
+13. Griffiths, Th., Steyvers, M., Tenenbaum, J.:Topics in semantic representation. Psychological Review, 114(2), 211–244 (2007)
+14. Wang, X., McCallum, A., Wei, X.:Topical n-grams: Phrase and topic discovery, with an application to information retrieval. In Proceedings of the 2007 Seventh IEEE International Conference on Data Mining, pp. 697–702 (2007)
+15. Lau, J., Baldwin, T., Newman, D.:On collocations and topic models. ACM Transactions on Speech and Language Processing, 10(3), 1–14 (2013)
+16. Nokel, M., Loukachevitch, N.:A method of accounting bigrams in topic models, Proceedings of the 11th Workshop on Multiword Expressions (2015)
+17. Nokel, M., Loukachevitch, N.:Accounting ngrams and multi-word terms can improve topic models, Proceedings of the 11th Workshop on Multiword Expressions (2016)
+18. Loukachevitch, N., Dobrov B.:RuThes linguistic ontology vs. Russian wordnets. In Pro- ceedings of Global WordNet Conference GWC-2014 (2014)
+19. Lau, J., Newman, D., Baldwin, T.: Machine reading tea leaves:Automatically evaluating topic coherence and topic model quality. In Proceedings of the European Chapter of the Association for Computational Linguistics (2014)
+20. Bouma, G.:Normalized (pointwise) mutual information in collocation extraction.In Proceed- ings of the Biennial GSCL Conference, Potsdam, Germany, pp. 31–40 (2009)
+21. Frantzi, K., Ananiadou, S.:The c-value/nc-value domain-independent method for multi- word term extraction. Journal of Natural Language Processing, 6(3), 145–179 (1999)
+
+================================== Ai Message ==================================
+
+Yes. They assume that when related words or phrases co-occur in the same text, their frequencies should be enhanced, which increases their contribution to topics.

@@ -1,0 +1,31 @@
+================================ Human Message =================================
+
+QUERY:
+What is the type of the project 'Broad Beach Road Water Quality Infrastructure Repairs (CalJPIA Project)'?
+
+TABLE OF CONTENTS (TOC):
+1 | Abstract
+2 | Capital Improvement Projects (Not Started)
+3 | Malibu Bluffs Park South Walkway
+4 | Trancas Canyon Park Playground Resurfacing
+5 | PCH Median Improvements at Paradise Cove and Zuma Beach
+6 | PCH Crosswalk Improvements at Big Rock Drive and 20326 PCH
+7 | Kanan Dume Biofilter
+8 | Storm Drain Trash Screens Phase Two
+9 | City Traffic Signals Backup Power
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_Mha485b0lknNpzDFpL5aCcgZ)
+ Call ID: call_Mha485b0lknNpzDFpL5aCcgZ
+  Args:
+    pattern: Broad Beach Road Water Quality Infrastructure Repairs \(CalJPIA Project\)
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+
+none

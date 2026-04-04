@@ -1,0 +1,55 @@
+================================ Human Message =================================
+
+QUERY:
+What is the accuracy of this model compared to sota?
+
+TABLE OF CONTENTS (TOC):
+1 | OpenTapioca: Lightweight Entity Linking for Wikidata
+1.1 | 1 Introduction
+1.1.1 | 2 Particularities of Wikidata
+1.1.1.1 | 3 Related work
+1.1.1.1.1 | 3.1 Local compatibility
+1.1.1.1.1.1 | 3.2 Topic similarity
+1.1.1.1.1.1.1 | 3.3 Mapping coherence
+1.1.1.1.1.1.1.1 | 4 OpenTapioca: an entity linking model for Wikidata
+1.1.1.1.1.1.1.1.1 | 4.1 Local compatibility
+1.1.1.1.1.1.1.1.1.1 | 4.2 Semantic similarity
+1.1.1.1.1.1.1.1.1.1.1 | 4.3 Classifying entities in context
+1.1.1.1.1.1.1.1.1.1.1.1 | 5 Experimental setup
+1.1.1.1.1.1.1.1.1.1.1.1.1 | 6 Conclusion
+1.1.1.1.1.1.1.1.1.1.1.1.1.1 | Bibliography
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_CKmoV53LQJsng7Qiqj95cRTC)
+ Call ID: call_CKmoV53LQJsng7Qiqj95cRTC
+  Args:
+    pattern: (?i)(accuracy|state[- ]of[- ]the[- ]art|sota|results|performance)
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1.1.1.1.1.1.1.1.1.1.1.1 | 6 Conclusion
+The surface forms curated by Wikidata editors are sufficient to reach honourable re- call, without the need to expand them with mentions extracted from Wikipedia. Our restriction to people, locations and organizations probably helps in this regard and we anticipate worse performance for broader domains. Our approach works best for sci- entific affiliations, where spelling is more canonical than in newswire. The availability
+5 This is the case of Julie Pace (Q34666768) in Figure 1. 6 We built the nifconverter tool to do this conversion for any NIF dataset.7 The original data is available under an Etalab license at https://www.istex.fr/
+8 The full details can be found at http://w3id.org/gerbil/experiment?id=201904110006
+8 Antonin Delpeuch
+AIDA-CoNLL Microposts 2016 Micro Macro Micro Macro AIDA 0.725 0. 684 0.056 0.729 Babelfy 0.481 0.421 0.031 0.526 DBP Spotlight 0.528 0.456 0.053 0.306 FREME NER 0.382 0.237 0.037 0.790 OpenTapioca 0.482 0.399 0.087 0. 515 ISTEX-1000 RSS-500 Micro Macro Micro Macro AIDA 0.531 0.494 0.455 0.447 Babelfy 0.461 0.447 0.314 0.304 DBP Spotlight 0.574 0.575 0.281 0.261 FREME NER 0.422 0.321 0.307 0.274 OpenTapioca 0.870 0. 858 0.335 0.310
+Fig. 2. F1 scores on test datasets
+of Twitter identifiers directly in Wikidata helps us to reach acceptable performance in this domain. The accuracy degrades on longer texts which require relying more on the ambiant topical context. In future work, we would like to explore the use of entity em- beddings to improve our approach in this regard.
+Bibliography
+S¨oren Auer, Christian Bizer, Georgi Kobilarov, Jens Lehmann, Richard Cyganiak, and Zachary Ives. 2007. Dbpedia: A nucleus for a web of open data. The semantic web , pages 722–735. Antoine Bordes, Nicolas Usunier, Alberto Garcia-Duran, Jason Weston, and Oksana Yakhnenko. 2013. Translating Embeddings for Modeling Multi-relational Data.  In Advances in Neural Information Processing Systems , page 9. Silviu Cucerzan. 2007. Large-scale named entity disambiguation based on Wikipedia data. In Proceedings of the 2007 Joint Conference on Empirical Methods in Natural Language Processing and Computational Natural Language Learning (EMNLP- CoNLL) . Octavian-Eugen Ganea and Thomas Hofmann. 2017. Deep Joint Entity Disambiguation with Local Neural Attention.  In Conference on Empirical Methods in Natural Language Processing (EMNLP) 2017 . Johanna Geiß, Andreas Spitz, and Michael Gertz. 2017. NECKAr: A named entity classifier for Wikidata. In International Conference of the German Society for Com- putational Linguistics and Language Technology , pages 115–129. Springer. Xianpei Han, Le Sun, and Jun Zhao. 2011.  Collective entity linking in web text: A graph-based method. In Proceedings of the 34th International ACM SIGIR Conference on Research and Development in Information Retrieval , pages 765–774. ACM. David Huynh, Tom Morris, Stefano Mazzocchi, Iain Sproat, Martin Magdinier, Thad Guidry, Jesus M.  Castagnetto, James Home, Cora Johnson-Roberson, Will Moffat, Pablo Moyano, David Leoni, Peilonghui, Rudy Alvarez, Vishal Talwar, Scott Wiede- mann, Mateja Verlic, Antonin Delpeuch, Shixiong Zhu, Charles Pritchard, Ankit Sardesai, Gideon Thomas, Daniel Berthereau, and Andreas Kohn. 2019. OpenRefine.  Marcus Klang and Pierre Nugues. 2014. Named Entity Disambiguation in a Question Answering System. page 3. Nikolaos Kolitsas, Octavian-Eugen Ganea, and Thomas Hofmann. 2018. End-to-End Neural Entity Linking. arXiv:1808.07699 [cs] . Rada Mihalcea and Andras Csomai. 2007. Wikify! : Linking documents to encyclopedic knowledge. In Proceedings of the Sixteenth ACM Conference on Conference on Information and Knowledge Management , pages 233–242. ACM. Tomas Mikolov, Kai Chen, Greg Corrado, and Jeffrey Dean. 2013. Efficient estimation of word representations in vector space. arXiv preprint arXiv:1301.3781 . Andrea Moro, Alessandro Raganato, and Roberto Navigli. 2014.  Entity Linking meets Word Sense Disambiguation: A Unified Approach. Transactions of the Association for Computational Linguistics , 2(0):231–244. Jonathan Raiman and Olivier Raiman. 2018. DeepType: Multilingual Entity Linking by Neural Type System Evolution. arXiv:1802.01021 [cs] . Lev Ratinov, Dan Roth, Doug Downey, and Mike Anderson. 2011.  Local and Global Algorithms for Disambiguation to Wikipedia. In Proceedings of the 49th Annual Meeting of the Association for Computational Linguistics: Human Language Tech- nologies , pages 1375–1384. Association for Computational Linguistics.10 Antonin Delpeuch
+W. Shen, J. Wang, and J. Han. 2015.Entity Linking with a Knowledge Base: Issues, Techniques, and Solutions. IEEE Transactions on Knowledge and Data Engineering , 27(2):443–460.
+Daniil Sorokin and Iryna Gurevych. 2018.Mixing Context Granularities for Improved Entity Linking on Question Answering Data across Entity Categories. arXiv:1804.08460 [cs] .
+Valentin I Spitkovsky and Angel X Chang. 2012.A Cross-Lingual Dictionary for En- glish Wikipedia Concepts. String s , page 8.
+Tadej ˇ Stajner and Dunja Mladeni´c.2009. Entity resolution in texts using statistical learning and ontologies. In Asian Semantic Web Conference , pages 91–104. Springer.
+Michael Strube and Simone Paolo Ponzetto. 2006. WikiRelate!Computing semantic relatedness using Wikipedia. In AAAI , volume 6, pages 1419–1424.
+Fabian M. Suchanek, Gjergji Kasneci,and Gerhard Weikum. 2007. Yago: A core of semantic knowledge. In Proceedings of the 16th International Conference on World Wide Web , pages 697–706. ACM.
+Ricardo Usbeck, Bernd Eickmann, Paolo Ferragina,Christiane Lemke, An- drea Moro, Roberto Navigli, Francesco Piccinno, Giuseppe Rizzo, Harald Sack, Ren´e Speck, Rapha¨el Troncy, Michael R¨oder, J¨org Waitelonis, Lars Wesemann, Axel-Cyrille Ngonga Ngomo, Ciro Baron, Andreas Both, Mar- tin Br¨ummer, Diego Ceccarelli, Marco Cornolti, and Didier Cherix.  2015. GERBIL: General Entity Annotator Benchmarking Framework. In Proceedings of the 24th International Conference on World Wide Web - WWW ’15 , pages 1133– 1143, Florence, Italy. ACM Press.Denny Vrandeˇci´c and Markus Kr¨otzsch. 2014. Wikidata: A free collaborative knowledge base. Communications of the ACM .
+Albert Weichselbraun, Philipp Kuntschik, and Adrian M.P.Bras¸oveanu. 2018. Mining and Leveraging Background Knowledge for Improving Named Entity Linking. In Proceedings of the 8th International Conference on Web Intelligence, Mining and Semantics , WIMS ’18, pages 27:1–27:11, New York, NY, USA. ACM.
+Ian H. Witten and David N. Milne. 2008. An effective,low-cost measure of semantic relatedness obtained from Wikipedia links.
+Han Xiao, Minlie Huang, and Xiaoyan Zhu. 2016.TransG : A Generative Model for Knowledge Graph Embedding. In Proceed- ings of the 54th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers) , pages 2316–2325, Berlin, Germany. Association for Computational Linguistics.
+
+================================== Ai Message ==================================
+
+Compared to the other systems reported, OpenTapioca is not state of the art overall: its F1 scores are 0.482/0.399 on AIDA-CoNLL, 0.087/0.515 on Microposts 2016, 0.870/0.858 on ISTEX-1000, and 0.335/0.310 on RSS-500 (micro/macro). It outperforms the others on ISTEX-1000, but is worse than AIDA on AIDA-CoNLL and worse than AIDA and FREME NER on Microposts 2016.

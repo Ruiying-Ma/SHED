@@ -1,0 +1,50 @@
+================================ Human Message =================================
+
+QUERY:
+What translation models are explored?
+
+TABLE OF CONTENTS (TOC):
+1 | Can Neural Networks Learn Symbolic Rewriting?
+1.1 | Abstract
+1.2 | 1. Introduction
+1.3 | 2. Data
+1.4 | 2.1. The AIM data set
+1.5 | 2.2. The polynomial data set
+1.6 | 3. Experiments
+1.7 | 3.1. AIM data set
+1.8 | 3.2. Polynomial data set
+1.9 | 4. Conclusions and future work
+1.10 | 5. Update: Integration data sets from Facebook Research experiments
+1.11 | Acknowledgements
+1.12 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_ILh4Y2yDUx1UQUnI0Fwu1WOd)
+ Call ID: call_ILh4Y2yDUx1UQUnI0Fwu1WOd
+  Args:
+    pattern: translation model|translation models|model
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1 | Abstract
+This work investigates if the current neural ar- chitectures are adequate for learning symbolic rewriting. Two kinds of data sets are proposed for this research – one based on automated proofs and the other being a synthetic set of polynomial terms. The experiments with use of the current neural machine translation models are performed and its results are discussed. Ideas for extending this line of research are proposed, and its rele- vance is motivated.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_dW8UeMsLeGTfOu4yU8uxjeVn)
+ Call ID: call_dW8UeMsLeGTfOu4yU8uxjeVn
+  Args:
+    section_id: 1.6
+
+================================= Tool Message =================================
+Name: read_section
+
+3. Experiments
+For experiments with both data sets, we used an established NMT architecture ( Luong et al. , 2017 ) based on LSTMs (long short-term memory cells) and implementing the at- tention mechanism. 4
+After a small grid search, we decided to inherit most of the hyperparameters of the model from the best re- sults achieved in ( Wang et al. , 2018 ) where L A TEX-to-Mizar translation is learned.  We used relatively small LSTM cells consisting of 2 layers with 128 units. The “scaled Luong” version of the attention mechanism was used, as well as dropout with rate equal 0 . 2 . The number of training steps was 10000 . (This setting was used for all our experiments described below.)
+
+================================== Ai Message ==================================
+
+An established neural machine translation architecture based on LSTMs with an attention mechanism is explored. Specifically, it uses the “scaled Luong” attention version.

@@ -1,0 +1,100 @@
+================================ Human Message =================================
+
+HYPOTHESIS:
+Notice on compelled disclosure: Receiving Party shall notify Disclosing Party in case Receiving Party is required by law, regulation or judicial process to disclose any Confidential Information.
+
+TABLE OF CONTENTS (TOC):
+1 | NON-DISCLOSURE AGREEMENT Required Xnder JEA¶V Confidential Information Protection Program
+1.1 | I. Information related to the security of the technology, processes,
+1.2 | II.  Information  related  to  the  security  of  existing  or  proposed  informatio...
+1.3 | III.  Re l   f  e i dic i e al a di  a d e al a i f  he  ec i g a  f  a  age c da a a...
+1.4 | 1. Definition of Confidential Information.
+1.5 | a. the documents described in the Whereas clause above;
+1.6 | b.  Critical  Infrastructure  Information  (CII)  or  Bulk  Electric  System  Infor...
+1.7 | c. Protected Health Information in both physical and electronic form (PHI and ePHI)
+1.8 | d. Personal Identifiable Information (PII)
+1.9 | e. any protected,
+1.10 | f.  any information that could be used to compromise or expose the vulnerability of...
+1.11 | g. any Copyright application code, source code, technical design (not released for open use),
+1.12 | h. any computer software, source code, object code, flow charts or  databases; and
+1.13 | i.  any  other  information  that  should  reasonably  be  recognized  as  sensitiv...
+1.14 | 2. Prohibition on Disclosure of Confidential Information.
+1.15 | a. limit disclosure of any Confidential Information to its directors, officers, employees,
+1.16 | b. keep all Confidential Information strictly confidential by using a reasonable degree of  care,
+1.17 | c.  not  disclose  any  Confidential  Information  received  to  any  third  partie...
+1.18 | The Recipient shall provide the Discloser with original signed copies of all of the Acknowledgements required under the preceding paragraph. The Parties shall be responsible for any breach of this Agreement by any of their respective Representatives.
+1.19 | 4. Obligations of Receiving Party.
+1.20 | a. No Use.
+1.21 | b. No Disclosure .
+1.22 | c. Protection  of  Secrecy .
+1.23 | d. No Duplication .
+1.24 | e. Return  of  Information .  on  a  Party's  request,
+1.25 | a.  The Recipient can demonstrate was already known to the Recipient prior to the d...
+1.26 | b. has become publicly known through no wrongful act of the Recipient ; or,
+1.27 | c.  was received by the Recipient without breach of this Agreement from a third par...
+1.28 | d. was independently developed by the Recipient without use of the Di cl e Confidential Information;
+1.29 | e. was ordered to be publicly released by the requirement of a government agency.
+1.30 | 6. Compelled Disclosure of Confidential Information.
+1.31 | a. The Recipient may disclose Confidential Information pursuant to any governmental, judicial,
+1.32 | b. The Recipient agrees that it shall not oppose and shall cooperate with efforts by,
+1.33 | c. Notwithstanding  the  foregoing,
+1.34 | 7. Term.
+1.35 | a.  This  Agreement  shall  remain  in  effect  for  a  two-year term  (subject  to...
+1.36 | b. N i h a di g  he  f eg i g,
+1.37 | 8. Remedies.
+1.38 | a.  The  Parties  acknowledge  that  the  Confidential  Information  is  of  a  uni...
+1.39 | b. Therefore,
+1.40 | c. The Discloser shall be entitled to recover its c a d fee ,
+1.41 | 9. Return of JEA Confidential Information.
+1.42 | I.  the  completion  or  termination  of  the  dealings  between  the  parties  con...
+1.43 | II. the termination of this Agreement; or
+1.44 | III. at such time as JEA may so request;
+1.45 | 11. No Warranty.
+1.46 | 12. Miscellaneous.
+1.47 | a. This Agreement:
+1.48 | i.  is  the  complete  agreement  of  the  parties  concerning  the  subject  matte...
+1.49 | ii. may not be amended or in any manner modified except in writing signed by the parties;
+1.50 | iii.  shall be governed and construed in accordance with the laws of the State of Flo...
+1.51 | iv.  shall be binding upon and inure to the benefit of the parties and their respect...
+1.52 | b. The Federal and state courts located in Duval County,
+1.53 | c.  Any  notices  required  or  permitted  to  be  given  hereunder  may  be  deliv...
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_prerO7D4KiHV4ENrhElkVFva)
+ Call ID: call_prerO7D4KiHV4ENrhElkVFva
+  Args:
+    section_id: 1.30
+
+================================= Tool Message =================================
+Name: read_section
+
+6. Compelled Disclosure of Confidential Information.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_SjZBaOmarImiZ5Sc2idg28OO)
+ Call ID: call_SjZBaOmarImiZ5Sc2idg28OO
+  Args:
+    section_id: 1.31
+
+================================= Tool Message =================================
+Name: read_section
+
+a. The Recipient may disclose Confidential Information pursuant to any governmental, judicial,or administrative order, subpoena, discovery request, regulatory request or similar method, provided that the Recipient promptly notifies, to the extent practicable.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_RVIhPhq8D2pi0XYHgRYWMuJs)
+ Call ID: call_RVIhPhq8D2pi0XYHgRYWMuJs
+  Args:
+    section_id: 1.32
+
+================================= Tool Message =================================
+Name: read_section
+
+b. The Recipient agrees that it shall not oppose and shall cooperate with efforts by,to the extent practicable, with respect to any such request for a protective order or other relief to preserve the confidentiality of the Confidential Information.
+
+================================== Ai Message ==================================
+
+Entailment

@@ -1,0 +1,33 @@
+================================ Human Message =================================
+
+QUERY:
+What type of health-related research takes place in social media?
+
+TABLE OF CONTENTS (TOC):
+1 | Abstract
+2 | Introduction
+3 | 1 Methods
+4 | 1.1 Corpus
+5 | 1.2 Classiﬁcation
+6 | 2 Results
+7 | 3 Discussion
+8 | 4 Conclusion
+9 | Acknowledgments
+10 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_bCFamNBjwh01plmcB40qwhHO)
+ Call ID: call_bCFamNBjwh01plmcB40qwhHO
+  Args:
+    pattern: health-related research|social media|health
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1 | Abstract
+With the increasing use of social media data for health-related research, the credibility of the information from this source has been questioned as the posts may originate from automated accounts or ”bots”. While automatic bot detection approaches have been proposed, there are none that have been evaluated on users posting health-related information. In this paper, we extend an existing bot detection system and customize it for health-related research.  Using a dataset of Twitter users, we first show that the system, which was designed for political bot detection, un- derperforms when applied to health-related Twitter users. We then incorporate additional features and a statistical machine learning classifier to significantly improve bot detection performance. Our approach obtains F 1 -scores of 0 . 7 for the ”bot” class, representing improvements of 0 . 339 .  Our approach is customizable and generalizable for bot detection in other health-related social media cohorts.
+
+================================== Ai Message ==================================
+
+Using social media data for health-related research.

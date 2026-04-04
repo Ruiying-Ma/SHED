@@ -1,0 +1,49 @@
+================================ Human Message =================================
+
+QUERY:
+what neural network models were explored?
+
+TABLE OF CONTENTS (TOC):
+1 | Toward a Standardized and More Accurate Indonesian Part-of-Speech Tagging
+1.1 | I. INTRODUCTION
+1.2 | II. RELATED WORK
+1.3 | III. METHODOLOGY
+1.4 | A. Dataset
+1.5 | B. Baselines
+1.6 | C. Comparisons
+1.7 | D. Experiments Setup
+1.8 | E. Evaluation
+1.9 | IV. RESULTS AND DISCUSSION
+1.10 | V. CONCLUSION
+1.11 | REFERENCES
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_M18E5iIgNjUVCXRLsC7qLYTM)
+ Call ID: call_M18E5iIgNjUVCXRLsC7qLYTM
+  Args:
+    section_id: 1.6
+
+================================= Tool Message =================================
+Name: read_section
+
+C. Comparisons
+1) Rule-based tagger: We adopted a rule-based tagger designed by Rashel et al. [15] as one of our compar- isons. Firstly, the tagger tags named entities and multi- word expressions based on a dictionary. Then, it uses MorphInd [16] to tag the rest of the words. Finally, they employ 15 hand-crafted rules to resolve ambiguous tags in the post-processing step.  We want to note that we did not use their provided tokenizer since the IDN Tagged Corpus dataset is already tokenized. Their implementation is available online. 5
+2) Conditional random field (CRF): We used CRF [13] as another comparison since it is the most common non- neural model for sequence labeling tasks. We employed contextual words as well as affixes as features. For some context window size d , the complete list of features is:
+1) the current word, as well as d preceding and suc- ceeding words;2) two and three leading characters of the current word and d preceding and succeeding words;3) two and three trailing characters of the current word and d preceding and succeeding words.The last two features are meant to capture prefixes and suffixes in Indonesian which usually consist of two or three characters. One advantage of this feature extraction approach is that it does not require language-specific tools such as stemmer or morphological segmenter. This advantage is particularly useful for Indonesian which does not have well-established tools for such purposes. We padded the input sentence with padding tokens to ensure that every token has enough preceding and succeeding words for context window size d .  For the implementation, we used pycrfsuite . 6
+3) Neural network-based tagger: Our neural network- based POS tagger can be divided into 3 steps: embedding, encoding, and prediction. First, the tagger embeds the words and optionally additional features of such words (e.g., affixes). From this embedding process, we get vector representations of the words and the features.  Next, the tagger learns contextual information in the encoding step via either a feedforward network with context window or a bidirectional LSTM [17]. Finally, in prediction step,
+4 https://github.com/kmkurn/id-pos-tagging/blob/master/data/dataset.tar.gz 5 https://github.com/andryluthfi/indonesian-postag
+Figure 1. Illustration of the embedding step.  The word and its affixes are embedded to obtain their vector representations. Character embeddings of the word are composed with a max-pooled CNN. The final word embedding is the concatenation of all the result vectors.the tagger predicts the POS tags from the output of the encoding step using either a softmax or a CRF layer.Embedding . In the embedding step, the tagger obtains vector representations of each word and additional fea- tures.  We experimented with several additional features: prefixes, suffixes, and characters. Prefix features are the first 2 and 3 characters of the word. Likewise, suffix features are the last 2 and 3 characters of the word. 7 For the character features, we followed [10] by embedding each character and composing the resulting vectors with a max-pooled CNN. The final embedding of a word is then the concatenation of all these vectors. Fig.  1 shows an illustration of the process.Encoding . In the encoding step, the tagger learns contextual information by using either a feedforward network with context window or a bidirectional LSTM (biLSTM). The feedforward network accepts as input the concatenation of the embedding of the current word and d preceding and succeeding words for some context window size d . Formally, given a sequence of word embedding x 1 , x 2 , . . .  , x n , the input of the feedforward network at timestep t is
+z t = x t − d ⊕ . . . ⊕ x t ⊕ . . . ⊕ x t + d (1)
+7 If the word has less than 3 characters, then all the prefixes and suffixes are equal to the word itself.6 https://github.com/scrapinghub/python-crfsuite
+where ⊕ denotes a concatenation.  The feedforward net- work then computes
+o t = FF ( z t ) (2) = W (2) (tanh( W (1) z t ) ∗ r t ) (3)
+where o t is the output vector, r t is a dropout mask vector, and W (1) , W (2) are parameters. 8 The output vector o t has length equal to the number of possible tags.  Its j - th component defines the (unnormalized) log probability of the t -th word having tag j .On the other hand, the biLSTM accepts as input the sequence of word embeddings, and for each timestep, the output from the forward and backward LSTM are concatenated to form the final output. Formally, the output at each timestep t can be expressed as
+h t = − → h t ⊕ ← − h t (4)
+where
+ − → h t = − −−− → LSTM ( x t , − → h t − 1 ) (5) ← − h t = ← −−− − LSTM ( x t , ← − h t − 1 ) (6)
+The vector h t is then passed through FF ( · ) as before to obtain o t .Prediction . In the prediction step, the tagger predicts the POS tag of the t -th word based on the output vector o t .  We tested two approaches: a softmax layer with greedy decoding and a CRF layer with Viterbi decoding. With a softmax layer, the tagger simply normalizes o t and predicts using greedy decoding, i.e. picking the tag with the highest probability. In contrast, with a CRF layer, the tagger treats o t as emission probability scores, models the tag-to-tag transition probability scores, and uses Viterbi algorithm to select the most probable tag sequence as the prediction.  We refer readers to [18] to read more about how the CRF layer and Viterbi decoding work. We want to note that when we only embed words, encode using feedforward network, and predict using greedy decoding, the tagger is effectively the same as that in [9]. Also, when only the word and character features are used, with a biLSTM and CRF layer, the tagger is effectively the same as that in [10].  Our implementation code is available online. 9
+
+================================== Ai Message ==================================
+
+The neural network models explored were a feedforward network with a context window and a bidirectional LSTM (biLSTM) for encoding, combined with either a softmax prediction layer with greedy decoding or a CRF layer with Viterbi decoding. They also experimented with word embeddings augmented by prefix, suffix, and character features, where character embeddings were composed using a max-pooled CNN.

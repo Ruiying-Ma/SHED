@@ -1,0 +1,52 @@
+================================ Human Message =================================
+
+QUERY:
+Which neural language model architecture do they use?
+
+TABLE OF CONTENTS (TOC):
+1 | Continuous multilinguality with language vectors
+1.1 | Jörg Tiedemann
+1.2 | Abstract
+1.3 | 1 Introduction
+1.4 | 2 Related Work
+1.5 | 3 Data
+1.6 | 4 Methods
+1.7 | 5 Results
+1.8 | 5.1 Model capacity
+1.9 | 5.2 Structure of the language space
+1.10 | 5.3 Generating Text
+1.11 | 5.4 Mixing and Interpolating Between Languages
+1.12 | 5.5 Language identiﬁcation
+1.13 | 6 Conclusions
+1.14 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_RlzkxnfoI7twWDDQXl4UMyYD)
+ Call ID: call_RlzkxnfoI7twWDDQXl4UMyYD
+  Args:
+    pattern: neural language model|architecture|LSTM|RNN|recurrent|GRU|Transformer
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.11 | 5.4 Mixing and Interpolating Between Languages
+By means of cross-entropy, we can also visualize the relation between languages in the multilingual space. Figure 6 plots the interpolation results for two relatively dissimilar languages, English and German. As expected, once the language vector moves too close to the German one, model perfor- mance drops drastically.More interesting results can be obtained if
+2 Note that two curves are given, one counting all model parameters and one counting only the LSTM parameters.  The latter dominates the model size for large hidden states.Figure 7: Cross-entropy of interpolated language models for modern and middle English tested on data from the King James Bible.we interpolate between two language variants and compute cross-entropy of a text that repre- sents an intermediate form.  Figure 7 shows the cross-entropy of the King James Version of the Bible (published 1611), when interpolating be- tween Modern English (1500–) and Middle En- glish (1050–1500). The optimal point turns out to be close to the midway point between them.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_gtR2KUKpe6fj6RERYyQfrbwt)
+ Call ID: call_gtR2KUKpe6fj6RERYyQfrbwt
+  Args:
+    section_id: 1.6
+
+================================= Tool Message =================================
+Name: read_section
+
+4 Methods
+Our model is based on a standard stacked character-based LSTM (Hochreiter and Schmid- huber, 1997) with two layers, followed by a hid- den layer and a final output layer with softmax ac- tivations.  The only modification made to accom- modate the fact that we train the model with text in nearly a thousand languages, rather than one, is that language embedding vectors are concate- nated to the inputs of the LSTMs at each time step and the hidden layer before the softmax. We used three separate embeddings for these levels, in an attempt to capture different types of information about languages. 1 The model structure is summa- rized in Figure 1. In our experiments we use 1024-dimensional LSTMs, 128-dimensional character embeddings, and 64-dimensional language embeddings. Layer normalization (Ba et al., 2016) is used, but no dropout or other regularization since the amount of data is very large (about 3 billion characters) and training examples are seen at most twice. For smaller models early stopping is used. We use Adam (Kingma and Ba, 2015) for optimization.  Training takes between an hour and a few days on a K40 GPU, depending on the data size.
+
+================================== Ai Message ==================================
+
+A standard stacked character-based LSTM with two layers, followed by a hidden layer and a final softmax output layer.

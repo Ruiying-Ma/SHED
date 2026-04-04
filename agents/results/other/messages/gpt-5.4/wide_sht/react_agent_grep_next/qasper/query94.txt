@@ -1,0 +1,76 @@
+================================ Human Message =================================
+
+QUERY:
+By how much do their cross-lingual models lag behind other models?
+
+TABLE OF CONTENTS (TOC):
+1 | XPersona: Evaluating Multilingual Personalized Chatbot Zhaojiang Lin∗, Zihan Liu∗, Genta Indra Winata∗, Samuel Cahyawijaya∗, Andrea Madotto∗, Yejin Bang, Etsuko Ishii, Pascale Fung Center for Artiﬁcial Intelligence Research (CAiRE)
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2 Related Work
+1.4 | 3 Data Collection
+1.5 | 4 Multilingual Personalized Conversational Models
+1.6 | 4.1 Model Architecture
+1.7 | 4.2 Training Strategy
+1.8 | 5 Experiments
+1.9 | 5.1 Evaluation Metrics
+1.10 | 5.2 Implementation Details
+1.11 | 5.3 Results and Discussion
+1.12 | 5.3.1 Quantitative Analysis
+1.13 | 5.3.2 Qualitative Analysis and Discussion
+1.14 | System Persona
+1.15 | System Persona
+1.16 | 6 Conclusion
+1.17 | References
+1.18 | A Dataset Collection
+1.19 | A.1 Annotation Instructions
+1.20 | A.2 Training Set Statistics
+1.21 | B Model Detail
+1.22 | C Human Evaluation
+1.23 | D Generated Samples
+1.24 | D.1 Mixed-language Samples
+1.25 | D.2 Model Comparison Samples
+1.26 | System Persona
+1.27 | System Persona
+1.28 | System Persona
+1.29 | Dialogue
+1.30 | System Persona
+1.31 | Dialogue
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_XLZ0ZO18ILvESiVuyBBuE4Rb)
+ Call ID: call_XLZ0ZO18ILvESiVuyBBuE4Rb
+  Args:
+    pattern: lag behind|behind other models|cross-lingual models
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.12 | 5.3.1 Quantitative Analysis
+Table 3 compares monolingual, multilingual, and cross-lingual models in terms of BLEU and per- plexity in the human-translated test set. On both evaluation matrices, the causal decoder models out- perform the encoder-decoder models. We observe that the encoder-decoder model tends to overlook dialogue context and generate digressive responses. (Generated samples are available in Appendix D) We hypothesize that this is because the one-to- many problem ( Zhao et al.  , 2017 ) in open-domain conversation weakens the relation between encoder and decoder; thus the well pre-trained decoder (Bert) easily converges to a locally-optimal, and
+5 AdamW: Adam algorithm with weight decay
+6 The monolingual BERT pre-trained models are available in https://github.com/huggingface/transformers
+7 Available in https://github.com/CZWin32768/XNLG
+ learns to ignore the dialogue context from the en- coder and generate the response in an unconditional language model way. We leave the investigation of this problem to future work. On the other hand, M-CausalBert achieves a comparable or slightly better performance compared to CausalBert, which suggests that M-CausalBert leverages the data from other languages.  As expected, we observe a sig- nificant gap between the cross-lingual model and other models, which indicates that cross-lingual zero-shot conversation modeling is very challeng- ing.Table 4 shows the human evaluation result of comparing M-CausalBert (Multi) against the hu- man, translation-based Poly-encoder (Poly), and monolingual CausalBert (Mono).  The results il- lustrate that Multi outperforms Mono in English and Chinese, and is on par with Mono in other lan- guages. On the other hand, Poly shows a strong performance in English as it was pre-trained with a large-scale English conversation corpus. In con- trast, the performance of Poly drops in other lan- guages, which indicates that the imperfect transla- tion affects translation-based systems.  We also con- duct M-CausalBert (Multi) against XNLG (cross) human evaluation, and Multi achieve nearly 100 percent winning rate.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_vgU0RAXdCdKwHxw0sEj5wPoi)
+ Call ID: call_vgU0RAXdCdKwHxw0sEj5wPoi
+  Args:
+    section_id: 1.12
+
+================================= Tool Message =================================
+Name: read_section
+
+5.3.1 Quantitative Analysis
+Table 3 compares monolingual, multilingual, and cross-lingual models in terms of BLEU and per- plexity in the human-translated test set. On both evaluation matrices, the causal decoder models out- perform the encoder-decoder models. We observe that the encoder-decoder model tends to overlook dialogue context and generate digressive responses. (Generated samples are available in Appendix D) We hypothesize that this is because the one-to- many problem ( Zhao et al.  , 2017 ) in open-domain conversation weakens the relation between encoder and decoder; thus the well pre-trained decoder (Bert) easily converges to a locally-optimal, and
+5 AdamW: Adam algorithm with weight decay
+6 The monolingual BERT pre-trained models are available in https://github.com/huggingface/transformers
+7 Available in https://github.com/CZWin32768/XNLG
+ learns to ignore the dialogue context from the en- coder and generate the response in an unconditional language model way. We leave the investigation of this problem to future work. On the other hand, M-CausalBert achieves a comparable or slightly better performance compared to CausalBert, which suggests that M-CausalBert leverages the data from other languages.  As expected, we observe a sig- nificant gap between the cross-lingual model and other models, which indicates that cross-lingual zero-shot conversation modeling is very challeng- ing.Table 4 shows the human evaluation result of comparing M-CausalBert (Multi) against the hu- man, translation-based Poly-encoder (Poly), and monolingual CausalBert (Mono).  The results il- lustrate that Multi outperforms Mono in English and Chinese, and is on par with Mono in other lan- guages. On the other hand, Poly shows a strong performance in English as it was pre-trained with a large-scale English conversation corpus. In con- trast, the performance of Poly drops in other lan- guages, which indicates that the imperfect transla- tion affects translation-based systems.  We also con- duct M-CausalBert (Multi) against XNLG (cross) human evaluation, and Multi achieve nearly 100 percent winning rate.
+
+================================== Ai Message ==================================
+
+They observe a significant gap between the cross-lingual model and other models. In human evaluation, their multilingual M-CausalBert achieves nearly a 100 percent winning rate against the cross-lingual XNLG model.

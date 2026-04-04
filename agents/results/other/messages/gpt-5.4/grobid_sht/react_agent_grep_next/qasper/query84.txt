@@ -1,0 +1,82 @@
+================================ Human Message =================================
+
+QUERY:
+Do they compare against popular topic models, such as LDA?
+
+TABLE OF CONTENTS (TOC):
+1 | Toward Interpretable Topic Discovery via Anchored Correlation Explanation
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | labor-intensive.
+1.4 | 2 Methods
+1.5 | 3 Related Work
+1.6 | 4 Results and Discussion
+1.6.1 | 4.1 20 Newsgroups
+1.6.2 | 4.2 i2b2 Obesity Challenge 2008
+1.6.3 | 4.3 Anchored CorEx for Discriminative Tasks
+1.7 | 5 Conclusion
+1.8 | Acknowledgements
+1.9 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_rS4fTq8Fuq33GUj435wSbohC)
+ Call ID: call_rS4fTq8Fuq33GUj435wSbohC
+  Args:
+    pattern: LDA|Latent Dirichlet Allocation|topic model
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.3 | labor-intensive.
+We propose instead a lightweight information theoretic framework for codifying informal human knowledge and then use it to extract interpretable latent topics from text corpora. For example, to discover patients with diabetes in a set of clinical notes, a doctor can begin by specifying disease-specific anchor terms (Arora et al., 2012; Halpern et al., 2014) , such as "diabetes" or "insulin. " Our framework then uses these to help discover both latent topics associated with diabetes and records in which diabetesrelated topics occur. The user can then add (or remove) additional anchor terms (e.g., "metformin") to improve the quality of the learned (diabetes) topics. In this workshop paper, we introduce a simple approach to anchored information theoretic topic modeling using a novel combination of Correlation Explanation (CorEx) (Ver Steeg & Galstyan, 2014) and the information bottleneck (Tishby et al., 2000) . This flexible framework enables the user to leverage domain knowledge to guide exploration of a collection of documents and to impose semantics onto latent factors learned by CorEx.  We present preliminary experimental results on two text corpora (including a corpus of clinical notes), showing that anchors can be used to discover topics that are more specific and relevant. What is more, we demonstrate the potential for this framework to perform weakly supervised learning in settings where labeling documents is prohibitively expensive (Chen et al., 2013; Agarwal et al., 2016) .With respect to interpretable machine learning, our contributions are twofold.  First, our framework provides a way for human users to share domain knowledge with a statistical learning algorithm that is both convenient for the human user and easily digestible by the machine. Second, our experimental results confirm that the introduction of simple anchor words can improve the coherence and human interpretability of topics discovered from data. Both are essential to successful and interactive collaboration between machine learning and human users.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_vBNpNbSRlTdcQVlVwCHLLh7s)
+ Call ID: call_vBNpNbSRlTdcQVlVwCHLLh7s
+  Args:
+    pattern: LDA|Latent Dirichlet Allocation|MALLET|comparison|baseline
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.5 | 3 Related Work
+There is a large body of work on integrating domain knowledge into topic models and other unsupervised latent variable models, often in the form of constraints (Wagstaff et al., 2001) , prior distributions (Andrzejewski et al., 2009) , and token labels (Andrzejewski & Zhu, 2009) .  Like Anchored CorEx, seeded latent dirichlet allocation (SeededLDA) allows the specification of wordtopic relationships (Jagarlamudi et al., 2012) . However, SeededLDA assumes a more complex latent structure, in which each topic is a mixture of two distributions, one unseeded and one seeded. Arora et al. (2012) first proposed anchors in the context of topic modeling: words that are high precision indicators of underlying topics.  In contrast to our approach, anchors are typically selected automatically, constrained to appear in only one topic, and used primarily to aid optimization (Nguyen et al., 2014) . In our information theoretic framework, anchors are specified manually and more loosely defined as words having high mutual information with one or more latent factors.  The effects of anchors on the interpretability of traditional topic models are often mixed (Lee & Mimno, 2014) , but our experiments suggest that our approach yields more coherent topics.In health informatics, "anchor" features chosen based on domain knowledge have been used to guide statistical learning (Halpern et al., 2014) . In Agarwal et al.  (2016) , anchors are used as a source of distant supervision (Craven & Kumlien, 1999; Mintz et al., 2009) for classifiers in the absence of ground truth labels. While Anchored CorEx can be used for discriminative tasks, it is essentially unsupervised. Recent work by Halpern et al.  (2015) is perhaps most similar in spirit to ours: they exploit predefined anchors to help learn and impose semantics on a discrete latent factor model with a directed acyclic graph structure. We utilize an information theoretic approach that makes no generative modeling assumptions.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_O9LLLj0inQGdcTekmV3AZ5OS)
+ Call ID: call_O9LLLj0inQGdcTekmV3AZ5OS
+  Args:
+    section_id: 1.6
+
+================================= Tool Message =================================
+Name: read_section
+
+4 Results and Discussion
+To demonstrate the utility of Anchored CorEx, we run experiments on two document collections: 20 Newsgroups and the i2b2 2008 Obesity Challenge (Uzuner, 2009) data set. Both corpora provide ground truth labels for latent classes that may be thought of as topics.
+4.1 20 Newsgroups
+The 20 Newsgroups data set is suitable for a straightforward evaluation of anchored topic models. The latent classes represent mutually exclusive categories, and each document is known to originate from a single category. We find that the correlation structure among the latent classes is less complex than in the Obesity Challenge data. Further, each category tends to exhibit some specialized vocabulary not used extensively in other categories (thus satisfying the anchor assumption from Arora et al. ( 2012)). To prepare the data, we removed headers, footers, and quotes and reduced the vocabulary to the most frequent 20,000 words. Each document was represented as a binary bag-of-words vector. In all experiemnts, we used the standard training/test split. All CorEx models used three layers of 40, 3, and 1 factors. Figure 1 shows an example hierarchical topic model extracted by Anchored CorEx.
+4.2 i2b2 Obesity Challenge 2008
+The Obesity Challenge 2008 data set1 includes 1237 deidentified clinical discharge summaries from the Partners HealthCare Research Patient Data Repository. All summaries have been labeled by clinical experts with obesity and 15 other conditions commonly comorbid with obesity, ranging from Coronary Artery Disease (663 positives) to Depression (247) to Hypertriglyceridemia (62). We preprocessed each document with a standard biomedical text pipeline that extracts common medical terms and phrases (grouping neighboring words where appropriate) and detecting negation ("not" is prepended to negated terms) (Dai et al., 2008; Chapman et al., 2001) . We converted each document to a binary bag-of-words with a vocabulary of 4114 (possibly negated) medical phrases.  We used the 60/40 training/test split from the competition.We are primarily interested in the ability of Anchored CorEx to extract latent topics that are unambiguously associated with the 16 known conditions. We train a series of CorEx models with 32 latent topics in the first layer, each using a different anchor strategy.  Table 1 shows the Obesity and Obstructive Sleep Apnea (OSA) topics for three iterations of Anchored CorEx with the ten most important terms (highest weighted connections to the latent factor) listed for each topic. Unsupervised CorEx (first row) does not discover any topics obviously related to obesity or OSA, so we choose the topics to which the terms obesity and obstructive sleep apnea are assigned.  No unambiguous Obesity or OSA topics emerge even as the number of latent factors is decreased or increased. <table><tr><td/><td>Obesity</td><td>Obstructive Sleep Apnea</td><td/></tr><tr><td>Anchors</td><td>Topic</td><td>AUC Topic</td><td>AUC</td></tr><tr><td/><td>not fever, not chill, not diarrhea, not dysuria,</td><td>0.600 use, drug, complication, allergy,</td><td>0. 686</td></tr><tr><td/><td>not cough, not abdominal pain, not guarding,</td><td>sodium, infection, furosemide, docusate,</td><td/></tr><tr><td/><td>not rebound, not palpitation, not night sweats</td><td>shortness of breath, esomeprazole</td><td/></tr><tr><td>One per topic</td><td>obesity, sleep apnea, morbid obese, obese,</td><td>0. 762 use, complication, drug, allergy, sodium,</td><td>0. 546</td></tr><tr><td>for each disease</td><td>labor, acebutolol, vaginal bleeding,</td><td>infection, furosemide, docusate,</td><td/></tr><tr><td/><td>klonopin, valproic acid, bacteruria</td><td>shortness of breath, obstructive sleep apnea</td><td/></tr><tr><td colspan="2">Add second OSA obesity, morbid obese, obese, labor,</td><td>0. 757 sleep apnea, obstructive sleep apnea,</td><td>0. 826</td></tr><tr><td>anchor</td><td>not non-compliant, acebutolol,</td><td>oxygen, duoneb, desaturation, singulair,</td><td/></tr><tr><td/><td>vaginal bleeding, problem,</td><td>pulmonary hypertension, hypoxemia,</td><td/></tr><tr><td/><td>not deep venous thrombosis, overweight</td><td>pap smear, vicodin</td><td/></tr></table>
+ Table 1 Evolution of Obesity and Obstructive Sleep Apnea (OSA) topics as anchors are added. Colors and font weight indicate anchors, spurious terms, and intruder terms from other known topics. Multiword and negated terms are the result of the preprocessing pipeline.In the second iteration (second row), we add the common name of each of the 16 diseases as an anchor to one factor (16 total).  Adding obesity as an anchor produces a clear Obesity topic, including several medications known to cause weight gain (e.g., acebutolol, klonopin). The anchored OSA topic, however, is quite poor and in fact resembles the rather generic topic to which obstructive sleep apnea is assigned by Unsupervised CorEx. It includes many spurious or non-specific terms like drug. This is likely due to the fact that obesity is a major risk factor of OSA, and so OSA symptoms are highly correlated with obesity and its other symptoms. Thus, the total correlation objective will attempt to group obesity and OSA-related terms together under a single latent factor. The sparse connection constraint mentioned in section 2 prevents them from being connected to multiple factors. Indeed, sleep apnea appears in the obesity topic, suggesting the two topics are competing to explain OSA terms. In the third iteration, we correct this by adding sleep apnea as a second anchor to the OSA topic, and the resulting topic is clearly associated with OSA, including terms related to respiratory problems and medications used to treat (or believed to increase risk for) OSA. There is no noticeable reduction in quality in the Obesity topic.
+4.3 Anchored CorEx for Discriminative Tasks
+In a series of follow-up experiments, we investigate the suitability of using anchored CorEx to perform weakly supervised classification. We interpret each anchored latent factor as a classifier for an associated class label and then compute test set F1 (using a threshold of 0.5) and area under the curve (AUC) scores (Obesity Challenge only).  For both types of CorEx, the topic containing the corresponding terms is used as the classifier, but for Anchored CorEx those terms are also used as anchors when estimating the latent factor. Unsupervised CorEx does a reasonable job of discovering a coherent religion topic that already contains the terms God, Christian, and Jesus. However, using the terms Jesus and Christian as anchors yields a topic that better predicts the actual soc.religion.christianity category.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_l95529bzzlMnWu5uehJWA4Vj)
+ Call ID: call_l95529bzzlMnWu5uehJWA4Vj
+  Args:
+    pattern: LDA|SeededLDA|baseline|compared|compare
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.5 | 3 Related Work
+There is a large body of work on integrating domain knowledge into topic models and other unsupervised latent variable models, often in the form of constraints (Wagstaff et al., 2001) , prior distributions (Andrzejewski et al., 2009) , and token labels (Andrzejewski & Zhu, 2009) .  Like Anchored CorEx, seeded latent dirichlet allocation (SeededLDA) allows the specification of wordtopic relationships (Jagarlamudi et al., 2012) . However, SeededLDA assumes a more complex latent structure, in which each topic is a mixture of two distributions, one unseeded and one seeded. Arora et al. (2012) first proposed anchors in the context of topic modeling: words that are high precision indicators of underlying topics.  In contrast to our approach, anchors are typically selected automatically, constrained to appear in only one topic, and used primarily to aid optimization (Nguyen et al., 2014) . In our information theoretic framework, anchors are specified manually and more loosely defined as words having high mutual information with one or more latent factors.  The effects of anchors on the interpretability of traditional topic models are often mixed (Lee & Mimno, 2014) , but our experiments suggest that our approach yields more coherent topics.In health informatics, "anchor" features chosen based on domain knowledge have been used to guide statistical learning (Halpern et al., 2014) . In Agarwal et al.  (2016) , anchors are used as a source of distant supervision (Craven & Kumlien, 1999; Mintz et al., 2009) for classifiers in the absence of ground truth labels. While Anchored CorEx can be used for discriminative tasks, it is essentially unsupervised. Recent work by Halpern et al.  (2015) is perhaps most similar in spirit to ours: they exploit predefined anchors to help learn and impose semantics on a discrete latent factor model with a directed acyclic graph structure. We utilize an information theoretic approach that makes no generative modeling assumptions.
+
+================================== Ai Message ==================================
+
+No. The paper mentions SeededLDA in related work, but the reported experiments compare Anchored CorEx to Unsupervised CorEx rather than against popular topic models such as LDA.

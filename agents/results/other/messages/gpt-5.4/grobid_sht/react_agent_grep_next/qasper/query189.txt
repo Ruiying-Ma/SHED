@@ -1,0 +1,49 @@
+================================ Human Message =================================
+
+QUERY:
+How much data do they use to train the embeddings?
+
+TABLE OF CONTENTS (TOC):
+1 | Chinese Embedding via Stroke and Glyph Information: A Dual-channel View
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2.1 Morphological Word Representations
+1.4 | 2.2 Embedding for Chinese Language
+1.5 | 3 DWE Model
+1.6 | 4.1 Dataset Preparation
+1.7 | 4.2 Experimental Setup
+1.8 | Model
+1.9 | 4.3 Baseline Methods
+1.10 | 4.4 Experimental Results
+1.11 | 5 Conclusions
+1.12 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_JNAKvr3WpyXFrOKvb4P6nNaY)
+ Call ID: call_JNAKvr3WpyXFrOKvb4P6nNaY
+  Args:
+    pattern: train(ing)? (the )?embeddings|corpus|dataset|Wikipedia|Gigaword|data
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.10 | 4.4 Experimental Results
+The experimental results are shown in Table 1 .We can observe that our DWE model achieves the best results both on dataset wordsim-240 and wordsim-296 in the similarity task as expected because of the particularity of Chinese morphology, but it only improves the accuracy for the family group in the analogy task.  Actually, it is not by chance that we get these results, because DWE has the advantage of distinguishing between morphologically related words, which can be verified by the results of the similarity task. Meanwhile, in the word analogy task, those words expressing family relations in Chinese are mostly compositional in their character glyphs.  For example, in an analogy pair "兄弟" (brother) : "姐妹" (sister) = "儿子" (son) : "女 儿" (daughter), we can easily find that "兄弟" and "儿 子" share an exactly common part of glyph "儿" (male relative of a junior generation) while "姐妹" and "女儿" share an exactly common part of glyph "女" (female), and this kind of morphological pattern can be accurately captured by our model.  However, most of the names of countries, capitals and cities are transliterated words, and the relationship between the morphology and semantics of words is minimal, which is consistent with the findings reported in (Su and Lee, 2017) .  For instance, in an analogy pair "西班牙" (Spain) : "马德里" (Madrid) = "法国" (France) : "巴黎" (Paris), we cannot infer any relevance among these four words literally because they are all translated by pronunciation. In summary, since different words that are morphologically similar tend to have similar semantics in Chinese, simultaneously modeling the sequential and spatial information of characters from both stroke n-grams and glyph features can indeed improve the modeling of Chinese word representations substantially.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_TVwbwg6KaD1bjtSU7jBq9gWb)
+ Call ID: call_TVwbwg6KaD1bjtSU7jBq9gWb
+  Args:
+    section_id: 1.6
+
+================================= Tool Message =================================
+Name: read_section
+
+4.1 Dataset Preparation
+We download parts of Chinese Wikipedia articles from Large-Scale Chinese Datasets for NLP5 . For word segmentation and filtering the stopwords, we apply the jieba6 toolkit based on the stopwords table7 . Finally, we get 11,529,432 segmented words. In accordance with their work (Chen et al., 2015) , all items whose Unicode falls into the range between 0x4E00 and 0x9FA5 are Chinese characters.  We crawl the stroke information of all 20,402 characters from an online dictionary8 and render each character glyph to a 28 × 28 1-bit grayscale bitmap by using Pillow9 .
+
+================================== Ai Message ==================================
+
+They train the embeddings on parts of Chinese Wikipedia articles, resulting in 11,529,432 segmented words.

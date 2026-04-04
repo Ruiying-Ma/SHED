@@ -1,0 +1,26 @@
+================================ Human Message =================================
+
+QUERY:
+What is the type of the project 'Latigo Canyon Road Roadway/Retaining Wall Improvements (FEMA Project)'?
+
+TABLE OF CONTENTS (TOC):
+1 | Abstract
+2 | PCH Signal Synchronization System Improvements Project
+3 | annex
+4 | Outdoor Warning Sirens (FEMA Project)
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_PCjc9KYEvCIPpxdQZr5Vow80)
+ Call ID: call_PCjc9KYEvCIPpxdQZr5Vow80
+  Args:
+    pattern: Latigo Canyon Road Roadway/Retaining Wall Improvements \(FEMA Project\)|Latigo Canyon
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+
+none

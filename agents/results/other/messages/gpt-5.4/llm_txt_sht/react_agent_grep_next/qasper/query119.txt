@@ -1,0 +1,51 @@
+================================ Human Message =================================
+
+QUERY:
+What language is explored in this paper?
+
+TABLE OF CONTENTS (TOC):
+1 | Multitask Learning for Blackmarket Tweet Detection
+1.1 | Abstract
+1.2 | I. INTRODUCTION
+1.3 | II. RELATED WORK
+1.3.1 | Spam/Fake Tweet Detection :
+1.3.2 | Blackmarket Services :
+1.3.3 | Multitask Learning :
+1.4 | III. DATASET
+1.4.1 | A. Blackmarket Services
+1.4.2 | B. Data Collection
+1.4.3 | C. Dataset Description
+1.4.4 | D. Analysis of Blackmarket Tweets
+1.5 | IV. PROPOSED APPROACH
+1.5.1 | A. Tweet Content Features
+1.5.2 | B. Tweet Content Representation
+1.5.3 | C. Proposed Model
+1.5.3.1 | 1) Model Inputs:
+1.5.3.2 | 2) Neural Network:
+1.5.3.3 | 3) Model Output:
+1.6 | V. EXPERIMENTAL SETUP
+1.6.1 | A. Baseline Methods
+1.6.1.1 | 1) Twitter Spam Detection:
+1.6.1.2 | 2) Feature Concatenation:
+1.6.2 | B. Evaluation Setup
+1.7 | VI. EXPERIMENTAL RESULTS
+1.8 | VII. CONCLUSION
+1.9 | ACKNOWLEDGEMENTS
+1.10 | REFERENCES
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_mWNcNSmW3v7s2mbT09lFapz4)
+ Call ID: call_mWNcNSmW3v7s2mbT09lFapz4
+  Args:
+    section_id: 1.1
+
+================================= Tool Message =================================
+Name: read_section
+
+Abstract
+—Online social media platforms have made the world more connected than ever before, thereby making it easier for everyone to spread their content across a wide variety of audi- ences. Twitter is one such popular platform where people publish tweets to spread their messages to everyone. Twitter allows users to Retweet other users’ tweets in order to broadcast it to their network. The more retweets a particular tweet gets, the faster it spreads.  This creates incentives for people to obtain artificial growth in the reach of their tweets by using certain blackmarket services to gain inorganic appraisals for their content.In this paper, we attempt to detect such tweets that have been posted on these blackmarket services in order to gain artificially boosted retweets. We use a multitask learning framework to leverage soft parameter sharing between a classification and a regression based task on separate inputs.  This allows us to effec- tively detect tweets that have been posted to these blackmarket services, achieving an F1-score of 0.89 when classifying tweets as blackmarket or genuine.Index Terms —Blackmarket, Collusion, Twitter, Online Social Networks, Multitask Learning
+
+================================== Ai Message ==================================
+
+English

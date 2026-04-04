@@ -1,0 +1,78 @@
+================================ Human Message =================================
+
+QUERY:
+In what tasks does fine-tuning all layers hurt performance?
+
+TABLE OF CONTENTS (TOC):
+1 | What Would Elsa Do? Freezing Layers During Transformer Fine-Tuning
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2.1 Pretrained Language Models
+1.4 | 2.2 Layerwise Interpretability
+1.5 | 3 Experimental Setup
+1.5.1 | 3.1 Models and Datasets
+1.5.2 | 3.2 Fine-Tuning Procedure
+1.6 | 4.1 Operating Points
+1.7 | 4.2 Per-Layer Study
+1.8 | 5 Conclusions and Future Work
+1.9 | Acknowledgments
+1.10 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_Py2GQJ7ipGaNeSq77lV0lJoz)
+ Call ID: call_Py2GQJ7ipGaNeSq77lV0lJoz
+  Args:
+    pattern: hurt performance|decrease.*performance|worse than|underperform|all layers
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1 | Abstract
+Pretrained transformer-based language models have achieved state of the art across countless tasks in natural language processing. These models are highly expressive, comprising at least a hundred million parameters and a dozen layers. Recent evidence suggests that only a few of the final layers need to be fine-tuned for high quality on downstream tasks. Naturally, a subsequent research question is, "how many of the last layers do we need to fine-tune?" In this paper, we precisely answer this question.  We examine two recent pretrained language models, BERT and RoBERTa, across standard tasks in textual entailment, semantic similarity, sentiment analysis, and linguistic acceptability. We vary the number of final layers that are fine-tuned, then study the resulting change in task-specific effectiveness. We show that only a fourth of the final layers need to be fine-tuned to achieve 90% of the original quality. Surprisingly, we also find that fine-tuning all layers does not always help.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_Y1L8AEuKyta1BAEc9SzfTxqb)
+ Call ID: call_Y1L8AEuKyta1BAEc9SzfTxqb
+  Args:
+    section_id: 1.7
+
+================================= Tool Message =================================
+Name: read_section
+
+4.2 Per-Layer Study
+In Figure 1 , we examine how the relative quality changes with the number of frozen layers. To compute a relative score, we subtract each frozen model's results from its corresponding full model. The relative score aligns the two baselines at zero, allowing the fair comparison of the transformers.Figure 1: Relative change in quality compared to the full models, with respect to the number of frozen initial layers, represented by the x-axes. The graphs report the average of five trials to reduce the effects of outliers. When every component except the output layer and the task-specific layer is frozen, the fine-tuned model achieves only 64% of the original quality, on average. As more layers are fine-tuned, the model effectiveness often improves drasticallysee CoLA and STS-B, the first and fourth vertical pairs of subfigures from the left.  This demonstrates that gains decompose nonadditively with respect to the number of frozen initial layers. Finetuning subsequent layers shows diminishing returns, with every model rapidly approaching the baseline quality at fine-tuning half of the network; hence, we believe that half is a reasonable cutoff point for characterizing the models. Finally, for the large variants of BERT and RoBERTa on SST-2 (second subfigure from both the top and the left), we observe a surprisingly consistent increase in quality when freezing 12-16 layers. This finding suggests that these models may be overparameterized for SST-2.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_pc7dOnZr7xejwcxTPwDf7CHA)
+ Call ID: call_pc7dOnZr7xejwcxTPwDf7CHA
+  Args:
+    section_id: 1.6
+
+================================= Tool Message =================================
+Name: read_section
+
+4.1 Operating Points
+We report three relevant operating points in Tables 3 4 5 : two extreme operating points and an intermediate one. The former is self-explanatory, indicating fine-tuning all or none of the nonoutput layers. The latter denotes the number of necessary layers for reaching at least 90% of the full model quality, excluding CoLA, which is an outlier.<table><tr><td>,</td></tr></table>
+ Table 3 Development set results of BERT, with none, some, and all of the nonoutput layer weights fine-tuned. Results are averaged across five runs.<table/>
+Table 4 Development set results of all base models, with none, some, and all of the nonoutput layer weights fine-tuned. Results are averaged across five runs. <table><tr><td>Model</td><td colspan="2">Frozen CoLA SST-2 MRPC STS-B up to MCC Acc. F 1 ρ</td></tr><tr><td/><td>0 th</td><td>61.9 93.4 90.3 89.8</td></tr><tr><td>BERT LARGE</td><td colspan="2">18 th 51.6 92. 7 85.4 88.0</td></tr><tr><td/><td colspan="2">24 th 24.4 87.8 81.3 71.7</td></tr><tr><td/><td>0 th</td><td>66.1 95.1 92.2 92.0</td></tr><tr><td>RoBERTa LARGE</td><td colspan="2">17 th 60. 5 95.1 91.3 89.6</td></tr><tr><td/><td>24 th</td><td>0.0 79.2 81.2 11.2</td></tr></table>
+Table 5 Development set results of all large models, with none, some, and all of the nonoutput layer weights fine-tuned. Results are averaged across five runs. From the reported results in Tables 3 4 5 , finetuning the last output layer and task-specific layers is insufficient for all tasks-see the rows corresponding to 0, 12, and 24 frozen layers.  However, we find that the first half of the model is unnecessary; the base models, for example, need finetuning of only 3-5 layers out of the 12 to reach 90% of the original quality-see Table 4 , middle subrow of each row group.  Similarly, fine-tuning only a fourth of the layers is sufficient for the large models (see Table 5 ); only 6 layers out of 24 for BERT and 7 for RoBERTa.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_XJafZ7gLjDrVyOHHolS6IWmE)
+ Call ID: call_XJafZ7gLjDrVyOHHolS6IWmE
+  Args:
+    pattern: increase in quality when freezing|overparameterized for
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.7 | 4.2 Per-Layer Study
+In Figure 1 , we examine how the relative quality changes with the number of frozen layers. To compute a relative score, we subtract each frozen model's results from its corresponding full model. The relative score aligns the two baselines at zero, allowing the fair comparison of the transformers.Figure 1: Relative change in quality compared to the full models, with respect to the number of frozen initial layers, represented by the x-axes. The graphs report the average of five trials to reduce the effects of outliers. When every component except the output layer and the task-specific layer is frozen, the fine-tuned model achieves only 64% of the original quality, on average. As more layers are fine-tuned, the model effectiveness often improves drasticallysee CoLA and STS-B, the first and fourth vertical pairs of subfigures from the left.  This demonstrates that gains decompose nonadditively with respect to the number of frozen initial layers. Finetuning subsequent layers shows diminishing returns, with every model rapidly approaching the baseline quality at fine-tuning half of the network; hence, we believe that half is a reasonable cutoff point for characterizing the models. Finally, for the large variants of BERT and RoBERTa on SST-2 (second subfigure from both the top and the left), we observe a surprisingly consistent increase in quality when freezing 12-16 layers. This finding suggests that these models may be overparameterized for SST-2.
+
+================================== Ai Message ==================================
+
+SST-2, specifically for the large variants of BERT and RoBERTa. In these cases, quality consistently increases when freezing 12–16 layers, so fine-tuning all layers hurts performance.

@@ -1,0 +1,45 @@
+================================ Human Message =================================
+
+QUERY:
+What results are obtained on the alternate datasets?
+
+TABLE OF CONTENTS (TOC):
+1 | A Low Dimensionality Representation for Language Variety Identification
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | English
+1.4 | ES-Argentina
+1.5 | ES-Mexico
+1.6 | ES-Spain
+1.7 | 2 Low Dimensionality Representation
+1.8 | 3 Evaluation Framework
+1.8.1 | 3.1 HispaBlogs Corpus
+1.8.2 | 3.2 Alternative representations
+1.9 | 4 Experimental Results
+1.9.1 | 4.1 Machine learning algorithms comparison
+1.9.2 | 4.2 Preprocessing impact
+1.9.3 | 4.3 Language variety identification results
+1.9.4 | 4.4 Error analysis
+1.9.5 | 4.5 Most discriminating features
+1.9.6 | 4.6 Cost analysis
+1.9.7 | 4.7 Robustness
+1.10 | 5 Conclusions
+1.11 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_UQ42QYiMpOA2LVMMVnLUSd9x)
+ Call ID: call_UQ42QYiMpOA2LVMMVnLUSd9x
+  Args:
+    section_id: 1.9.7
+
+================================= Tool Message =================================
+Name: read_section
+
+4.7 Robustness
+In order to analyse the robustness of the low dimensionality representation to different languages, we experimented with the development set of the DSLCC corpus 11 from the Discriminating between Similar Languages task [12] . The corpus consists of 2,000 sentences per language or variety, with between 20 and 100 tokens per sentence, obtained from news headers. In Table 9 we show the results obtained with the proposed representation and the two distributed representations, Skip-gram and SenVec.  It is important to notice that, in general, when a particular representation improves for one language is at cost of the other one. We can conclude that the three representations obtained comparative results and support the robustness of the low dimensionality representation.<table><tr><td>Language</td><td colspan="3">LDR Skip-gram SenVec</td></tr><tr><td>Bulgarian</td><td>99. 9</td><td>100</td><td>100</td></tr><tr><td>Macedonian</td><td>99.9</td><td>100</td><td>100</td></tr><tr><td>Spain Spanish</td><td>84.7</td><td>82.1</td><td>86.3</td></tr><tr><td colspan="2">Argentina Spanish 88. 0</td><td>90.3</td><td>87.6</td></tr><tr><td colspan="2">Portugal Portuguese 87.4</td><td>83.2</td><td>90.0</td></tr><tr><td colspan="2">Brazilian Portuguese 90.0</td><td>94.5</td><td>87. 6</td></tr><tr><td>Bosnian</td><td>78.0</td><td>80.3</td><td>74.4</td></tr><tr><td>Croatian</td><td>85.8</td><td>85.9</td><td>84.7</td></tr><tr><td>Serbian</td><td>86.4</td><td>75. 1</td><td>91.2</td></tr><tr><td>Indonesian</td><td>99.4</td><td>99.3</td><td>99.4</td></tr><tr><td>Malay</td><td>99.2</td><td>99.2</td><td>99.8</td></tr><tr><td>Czech</td><td>99. 8</td><td>99.9</td><td>99.8</td></tr><tr><td>Slovak</td><td>99.3</td><td>100</td><td>99.3</td></tr><tr><td>Other languages</td><td>99.9</td><td>99.8</td><td>99.8</td></tr></table>
+ Table 9 Accuracy results in the development set of the DSLCC. The significance is marked in bold when some representation obtains significantly better results than the next best performing representation (e.g. results for SenVec in Portugal Portuguese are significantly higher than LDR, which at the same time are significantly higher than Skip-gram).
+
+================================== Ai Message ==================================
+
+On the alternate dataset (the DSLCC development set), the proposed low dimensionality representation obtained results comparable to Skip-gram and SenVec, supporting its robustness. Specifically, LDR scores were 99.9 for Bulgarian and Macedonian, 84.7 for Spain Spanish, 88.0 for Argentina Spanish, 87.4 for Portugal Portuguese, 90.0 for Brazilian Portuguese, 78.0 for Bosnian, 85.8 for Croatian, 86.4 for Serbian, 99.4 for Indonesian, 99.2 for Malay, 99.8 for Czech, 99.3 for Slovak, and 99.9 for Other languages.

@@ -1,0 +1,55 @@
+================================ Human Message =================================
+
+QUERY:
+What are the other obstacles to automatic translations which are not mentioned in the abstract?
+
+TABLE OF CONTENTS (TOC):
+1 | Semantic Web for Machine Translation: Challenges and Directions
+1.1 | Abstract.
+1.2 | 1 Introduction
+1.3 | 2 Related Works
+1.4 | 3 Open MT Challenges
+1.5 | 4 Suggestions and Possible Directions using SW
+1.5.1 | Disambiguation.
+1.5.2 | Named Entities.
+1.5.3 | Non-standard speech.
+1.5.4 | Translating KBs.
+1.6 | 5 conclusion
+1.7 | Acknowledgments
+1.8 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_bhVfq85rdxDeKvVxm1LrAjW6)
+ Call ID: call_bhVfq85rdxDeKvVxm1LrAjW6
+  Args:
+    section_id: 1.1
+
+================================= Tool Message =================================
+Name: read_section
+
+Abstract.
+A large number of machine translation approaches have re- cently been developed to facilitate the fluid migration of content across languages. However, the literature suggests that many obstacles must still be dealt with to achieve better automatic translations. One of these obstacles is lexical and syntactic ambiguity. A promising way of over- coming this problem is using Semantic Web technologies. This article is an extended abstract of our systematic review on machine translation approaches that rely on Semantic Web technologies for improving the translation of texts.  Overall, we present the challenges and opportuni- ties in the use of Semantic Web technologies in Machine Translation. Moreover, our research suggests that while Semantic Web technologies can enhance the quality of machine translation outputs for various prob- lems, the combination of both is still in its infancy.Keywords: Machine Translation · Semantic Web · Knowledge Graphs.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_N0JqsJtBpDw6jRkie0cZtnp8)
+ Call ID: call_N0JqsJtBpDw6jRkie0cZtnp8
+  Args:
+    section_id: 1.4
+
+================================= Tool Message =================================
+Name: read_section
+
+3 Open MT Challenges
+The most problematic unresolved MT challenges, from our point of view, which are still experienced by the aforementioned MT approaches are the following:
+1. Complex semantic ambiguity :
+ This challenge is mostly caused by the ex- istence of homonymous and polysemous words. Given that a significant amount of parallel data is necessary to translate such words and expres- sions adequately. MT systems commonly struggle to translate these words correctly, even if the models are built upon from 5- or 7-grams.  For example, “John promises to keep his room tidy” and “John has some promises to keep until he is trusted again”. Although the meaning of both are clear to hu- mans, these sentences for SMT systems are statistically expensive and prone to failure 2 . Additionally, for translating the simple word “bank”, context information is essential for determining which meaning to assign to it.2. Structural divergence : By definition,
+  structural reordering is reorganizing the order of the syntactic constituents of a language according to its orig- inal structure.It in turn becomes a critical issue because it is the core of the translation process. Every language has its own syntax, thus each MT system needs to have adequate models for the syntax of each language.  For instance, reordering a sentence from Japanese to English is one of the most challenging techniques because of the SVO (subject-verb-object) and SOV (subject-object-verb) word-order difference and also, one English word often groups multiple meanings of Japanese characters. For example, Japanese characters make subtle distinctions between homonyms that would not be clear in a phonetic language such as English.3. Linguistic properties/features :
+  A large number of languages display a com- plex tense system. When confronted with sentences from such languages, it can be hard for MT systems to recognize the current input tense and to translate the input sentence into the right tense in the target language. For instance, some irregular verbs in English like “set” and “put” cannot be de- termined to be in the present or past tense without previous knowledge or pre-processing techniques when translated to morphologically rich languages, e.g. , Portuguese, German or Slavic languages. Additionally, the grammatical gender of words in such morphologically rich languages contributes to the
+2 See a complete discussion about the problem: http://tinyurl.com/yck5ngj8
+4 Moussallem et al.problem of tense generation where a certain MT system has to decide which inflection to use for a given word.  This challenge is a direct consequence of the structural reordering issue and remains a significant problem for modern translator systems.Additionally, there are five MT open challenges posed by Lopez and Post [11] which we describe more generically below.(1) Excessive focus on English and European languages as one of the involved languages in MT approaches and poor research on low-resource language pairs such as African and/or South American languages. (2) The limitations of SMT approaches for translating across domains.  Most MT systems exhibit good per- formance on law and the legislative domains due to the large amount of data provided by the European Union. In contrast, translations performed on sports and life-hacks commonly fail, because of the lack of training data. (3) How to translate the huge amount of data from social networks that uniquely deal with no-standard speech texts from users (e.g., tweets). (4) The difficult translations among morphologically rich languages.  This challenge shares the same problem with the first one, namely that most research work focuses on English as one of the involved languages. Therefore, MT systems which translate content between, for instance, Arabic and Spanish are rare. (5) For the speech translation task, the parallel data for training differs widely from real user speech.The challenges above are clearly not independent, which means that address- ing one of them can have an impact on the others.  Since NMT has shown impres- sive results on reordering, the main problem turns out to be the disambiguation process (both syntactically and semantically) in SMT approaches [9].
+
+================================== Ai Message ==================================
+
+Complex semantic ambiguity, structural divergence, and linguistic properties/features are other obstacles to automatic translation not mentioned in the abstract. The paper also lists excessive focus on English/European languages and low-resource pairs, cross-domain SMT limitations, translating non-standard social network text, difficult translation among morphologically rich languages, and mismatch between speech-translation training data and real user speech.

@@ -1,0 +1,72 @@
+================================ Human Message =================================
+
+QUERY:
+Which works better according to human evaluation, the concurrent or the modular system?
+
+TABLE OF CONTENTS (TOC):
+1 | Automatically Neutralizing Subjective Bias in Text Reid Pryzant,1 Richard Diehl Martinez,1 Nathan Dass,1 Sadao Kurohashi,2 Dan Jurafsky,1 Diyi Yang3
+1.1 | Abstract
+2 | 1 Introduction
+3 | 2 Wiki Neutrality Corpus (WNC)
+3.1 | 2.1 Dataset Properties
+4 | 3 Methods for Neutralizing Text
+4.1 | 3.1 MODULAR
+4.2 | 3.2 CONCURRENT
+5 | 4 Experiments
+5.1 | 4.1 Experimental Protocol
+5.2 | 4.2 Wikipedia (WNC)
+5.3 | 4.3 Real-world Media
+6 | 5 Error Analysis
+7 | 6 Algorithmic Analysis
+7.1 | 6.1 Detecting Subjectivity
+7.2 | 6.2 Join Embedding
+8 | 7 Related Work
+9 | 8 Conclusion and Future Work
+10 | 9 Acknowledgements
+11 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_sarjThjAnbPujhbff7vrm95b)
+ Call ID: call_sarjThjAnbPujhbff7vrm95b
+  Args:
+    pattern: human evaluation|human judgments|human eval|evaluat
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1 | Abstract
+Texts like news, encyclopedias, and some social media strive for objectivity. Yet bias in the form of inappropriate subjectiv- ity — introducing attitudes via framing, presupposing truth, and casting doubt — remains ubiquitous. This kind of bias erodes our collective trust and fuels social conflict. To address this issue, we introduce a novel testbed for natural language generation: automatically bringing inappropriately subjective text into a neutral point of view (“neutralizing” biased text).  We also offer the first parallel corpus of biased language. The corpus contains 180,000 sentence pairs and originates from Wikipedia edits that removed various framings, presupposi- tions, and attitudes from biased sentences. Last, we propose two strong encoder-decoder baselines for the task. A straight- forward yet opaque CONCURRENT system uses a BERT en- coder to identify subjective words as part of the generation process.  An interpretable and controllable MODULAR algo- rithm separates these steps, using (1) a BERT-based classifier to identify problematic words and (2) a novel join embed- ding through which the classifier can edit the hidden states of the encoder. Large-scale human evaluation across four do- mains (encyclopedias, news headlines, books, and political speeches) suggests that these algorithms are a first step to- wards the automatic identification and reduction of bias.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_0Uqswwxr5RQXiW3R0xi2wk92)
+ Call ID: call_0Uqswwxr5RQXiW3R0xi2wk92
+  Args:
+    pattern: concurrent|modular
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+8 | 7 Related Work
+Subjectivity Bias. The study of subjectivity in NLP was pioneered by the late Janyce Wiebe and colleagues (Bruce and Wiebe 1999; Hatzivassiloglou and Wiebe 2000). Sev- eral studies develop methods for highlighting subjective or persuasive frames in a text (Rashkin et al.  2017; Tsur, Calacci, and Lazer 2015), or detecting biased sentences (Hube and Fetahu 2018; Morstatter et al. 2018; Yang et al.  2017; Hube and Fetahu 2019) of which the most similar to ours is Recasens, Danescu-Niculescu-Mizil, and Juraf- sky (2013), whose early, smaller version of WNC and lo- gistic regression-based bias detector inspired our study.Debiasing. Many scholars have worked on remov- ing demographic prejudice from meaning representations (Manzini et al. 2019; Zhao et al.  2017; Zhao et al. 2018; Bordia and Bowman 2019; Wang et al. 2018, inter alia). Such studies begin with identifying a direction or subspace that capture the bias and then removing this bias compo- nent to make representations fair across attributes like gen- der and age (Bolukbasi et al. 2016; Manzini et al. 2019).  For instance, Bordia and Bowman (2019) introduced a reg- ularization term for the language model to penalize the pro- jection of the word embeddings onto that gender subspace, while Wang et al. (2018) used adversarial training to squeeze directions of bias out of hidden states.Neural Language Generation. Several studies propose stepwise or modular procedures for text generation, includ- ing sampling from a corpus (Guu et al.  2018) and identify- ing language ripe for modification (Leeftink and Spanakis 2019). Most similar to us is Li et al. (2018) who local- ize a text’s style to a fraction of its words. Our MODU - LAR detection module performs a similar localization in a soft manner, but our steps are joined by a smooth conduit
+Error Type Source, Output, then Target No change Existing hot-mail accounts were upgraded to outlook. com on April 3, 2013. Existing hot-mail accounts were upgraded to outlook.com on April 3, 2013. Existing hot-mail accounts were changed to outlook.com on April 3, 2013. Bad change His exploitation of leased labor began in 1874 and continued until his death in 1894. His actions of leased labor began in 1874 and continued until his death in 1894.  His use of leased labor began in 1874 and continued until his death in 1894. Disfluency Right before stabbing a cop, flint attacker shouted one thing that proves terrorism is still here. Right before stabbing a cop, flint attacker shouted one thing that may may terrorism is still here. Right before stabbing a cop, flint attacker shouted one thing that may prove terrorism is still here. Noise . then whent to war with him in the Battle of Bassorah , and ultimately left that battle.then whent to war with him in the Battle of Bassorah , and ultimately left that battle.then whent to war with him in the Battle of the Camel , and ultimately left that battle. Revised Word Source, Output, then Target Magnificent After a dominant performance, Joshua.with a magnificent seventh-round knockout win. After a dominant performance, Joshua. with a seventh-round knockout win. After a dominant performance, Joshua.with a seventh-round knockout win. Dominant Jewish history is.interacted with other dominant peoples, religions and cultures. Jewish history is.other peoples, religions and cultures. Jewish history is.other peoples, religions and cultures. Selected Word Output (input) In recent years, the term has often been misapplied to those who are merely clean-cut.  merely In recent years, the term has often been misapplied to those who are clean-cut. misapplied In recent years, the term has often been shown to those who are merely clean-cut. (input) He was responsible for the assassination of Carlos Marighella, and for the Lapa massacre . assassination He was responsible for the killing of Carlos Marighella, and for the Lapa massacre .  massacre He was responsible for the assassination of Carlos Marighella, and for the Lapa incident . (input) Paul Ryan desperately searches for a new focus amid Russia scandal . desperately Paul Ryan searches for a new focus amid Russia scandal . scandal Paul Ryan desperately searches for a new focus amid Russia.Table 9: Top : examples of model errors from each error category.  Middle : the model treats words differently based on their context; in this case, “dominant” is ignored when it accurately describes an individual’s winning performance, but deleted when it describes a group of people in arbitrary comparison. Bottom : the MODULAR model can sometimes be controlled, for example by selecting words to change, to correct errors or otherwise change the model’s behavior.(the join embedding) instead of discrete logic. There is also work related to our CONCURRENT model.  The closest is Dun, Zhu, and Zhao (2019), where a decoder was attached to BERT for question answering, or Lample et al. (2018), where machine translation systems are initialized to LSTM and Transformer-based language models of the source text.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_US667taK8Jrjdj6bmJbMLYb1)
+ Call ID: call_US667taK8Jrjdj6bmJbMLYb1
+  Args:
+    section_id: 5.2
+
+================================= Tool Message =================================
+Name: read_section
+
+4.2 Wikipedia (WNC)
+Results on WNC are presented in Table 4. In addition to methods from the literature we include (1) a BERT-based system which simply predicts and deletes subjective words, and (2) a system which predicts replacements (including deletion) for subjective words directly from their BERT em- beddings. All methods appear to successfully reduce bias according to the human evaluators. However, many meth- ods appear to lack fluency.  Adding a token-weighted loss function and pretraining the decoder help the model’s coher- ence according to BLEU and accuracy. Adding the detector ( MODULAR ) or a BERT encoder ( CONCURRENT ) provide additional benefits. The proposed models retain the strong effects of systems from the literature while also producing target-level fluency on average. Our results suggest there is no clear winner between our two proposed systems. MOD - ULAR is better at reducing bias and has higher accuracy,
+ 6 Rule of thumb: k < 0 “poor” agreement, 0 to .2 “slight”, .21 to .40 “fair”, .41 to .60 “moderate”, .61 - .80 “substantial”, and .81 to 1 “near perfect” (Gwet 2011).Metric Fluency Bias Meaning BLEU 0.65 0.34 0.16 Accuracy 0.56 0.52 0. 20
+Table 5: Spearman correlation ( R 2 ) between quantitative and qualitative metrics.while CONCURRENT produces more fluent responses, pre- serves meaning better, and has higher BLEU.Table 5 indicates that BLEU is more correlated with flu- ency but accuracy is more correlated with subjective bias re- duction.  The weak association between BLEU and human evaluation scores is corroborated by other research (Cha- ganty, Mussman, and Liang 2018; Mir et al. 2019). We con- clude that neither automatic metric is a true substitute for human judgment.
+
+================================== Ai Message ==================================
+
+There is no clear winner according to human evaluation. MODULAR is better at reducing bias, while CONCURRENT is more fluent and preserves meaning better.

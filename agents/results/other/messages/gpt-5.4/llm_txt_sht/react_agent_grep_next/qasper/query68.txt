@@ -1,0 +1,122 @@
+================================ Human Message =================================
+
+QUERY:
+How are the expert and crowd-sourced annotations compared to one another?
+
+TABLE OF CONTENTS (TOC):
+1 | Classifying Diagrams and Their Parts using Graph Neural Networks: A Comparison of Crowd-Sourced and Expert Annotations
+1.1 | Abstract
+1.2 | 1. Introduction
+1.3 | 2. Data
+1.3.1 | 2.1. Crowd-sourced Annotations from AI2D
+1.3.2 | 2.2. Expert Annotations from AI2D-RST
+1.4 | 3. Graph-based Representations
+1.4.1 | 3.1. Nodes
+1.4.1.1 | 3.1.1. Node Types
+1.4.1.2 | 3.1.2. Node Features
+1.4.1.3 | 3.1.3. Discourse Relations
+1.4.2 | 3.2. Edges
+1.5 | 4. Experiments
+1.5.1 | 4.1. Graph Neural Networks
+1.5.2 | 4.2. Hyperparameters and Training
+1.5.3 | 4.3. Tasks
+1.5.3.1 | 4.3.1. Node Classiﬁcation
+1.5.3.2 | 4.3.2. Graph Classiﬁcation
+1.6 | 5. Discussion
+1.7 | 6. Conclusion
+1.8 | 7. Bibliographical References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_eIXiCg07V2UPptIlCpqXFnhq)
+ Call ID: call_eIXiCg07V2UPptIlCpqXFnhq
+  Args:
+    pattern: compare|compared|comparison|crowd-sourced.*expert|expert.*crowd-sourced
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1 | Abstract
+This article compares two multimodal resources that consist of diagrams which describe topics in elementary school natural sciences. Both resources contain the same diagrams and represent their structure using graphs, but differ in terms of their annotation schema and how the annotations have been created – depending on the resource in question – either by crowd-sourced workers or trained experts.  This article reports on two experiments that evaluate how effectively crowd-sourced and expert-annotated graphs can represent the multimodal structure of diagrams for representation learning using various graph neural networks. The results show that the identity of diagram elements can be learned from their layout features, while the expert annotations provide better representations of diagram types.Keywords: multimodality, diagrams, graph neural networks, annotation, crowd-sourcing
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_2M2eaOiQy8LLX8obcuqykBpt)
+ Call ID: call_2M2eaOiQy8LLX8obcuqykBpt
+  Args:
+    section_id: 5
+
+================================= Tool Message =================================
+Name: read_section
+
+Tool 'read_section' failed after 1 attempt with RuntimeError: Section ID 5 not found in TOC.. Please try again.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_NIs3VrTFkh4RUJDEv7HonPgH)
+ Call ID: call_NIs3VrTFkh4RUJDEv7HonPgH
+  Args:
+    section_id: 1.6
+
+================================= Tool Message =================================
+Name: read_section
+
+5. Discussion
+The results for AI2D-RST show that the grouping graph, which represents visual perceptual groups of diagram ele- ments and their hierarchical organisation, provides a robust foundation for describing the spatial organisation of dia- grammatic representations. This kind of generic schema can be expanded beyond diagrams to other modes of ex- pression that make use of the spatial extent, such as entire page layouts.  A description of how the layout space is used can be incorporated into any effort to model discourse rela- tions that may hold between the groups or their parts.The promising results AI2D-RST suggest is that domain experts in multimodal communication should be involved in planning crowd-sourced annotation tasks right from the beginning.  Segmentation, in particular, warrants attention as this phase defines the units of analysis: cut-outs and cross-sections, for instance, use labels and lines to pick out sub-regions of graphical objects, whereas in illustrations the labels often refer to entire objects. Such distinctions should preferably be picked out at the very beginning to be
+incorporated fully into the annotation schema. Tasks related to grouping and connectivity annotation could be crowd-sourced relatively easily, whereas annotating di- agram types and discourse relations may require multi-step procedures and assistance in the form of prompts, as Yung et al. (2019) have recently shown for RST. Involving both expert and crowd-sourced annotators could also alleviate problems related to circularity by forcing domain experts to frame the tasks in terms understandable to crowd-sourced workers (Riezler, 2014). In light of the results for graph classification, one should note that node features are averaged before classification regardless of their connections in the graph . Whereas the expert-annotated grouping graph in AI2D-RST has been pruned from isolated nodes, which ensures that features are propagated to neighbouring nodes, the crowd-sourced AI2D graphs contain both isolated nodes and subgraphs. To what extent these disconnections affect the performance for AI2D warrant a separate study.  Additionally, more ad- vanced techniques than mere averaging, such as pooling, should be explored in future work.Finally, there are many aspects of diagrammatic represen- tation that were not explored in this study.  To begin with, a comparison of representations for discourse structures us- ing the question-answering set accompanying AI2D would be particularly interesting, especially if both AI2D and AI2D-RST graphs were enriched with features from state of the art semantic representations for natural language and graphic elements.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_tYezu2lNSaIkSasp3y0GPY49)
+ Call ID: call_tYezu2lNSaIkSasp3y0GPY49
+  Args:
+    section_id: 1.2
+
+================================= Tool Message =================================
+Name: read_section
+
+1. Introduction
+Diagrams are a common feature of many everyday media from newspapers to school textbooks, and not surprisingly, different forms of diagrammatic representation have been studied from various perspectives. To name just a few ex- amples, recent work has examined patterns in diagram de- sign (Hullman and Bach, 2018) and their interpretation in context (Tversky et al. , 2016), and developed frameworks for classifying diagrams (Engelhardt and Richards, 2018) and proposed guidelines for their design (Cheng, 2016). There is also a long-standing interest in processing and gen- erating diagrams computationally (Andr´e and Rist, 1995; Bateman et al. , 2001; Bateman and Henschel, 2007), which is now resurfacing as advances emerging from deep learn- ing for computer vision and natural language processing are brought to bear on diagrammatic representations (Sachan et al., 2018; Choi et al., 2018; Haehn et al., 2019). From the perspective of computational processing, dia- grammatic representations present a formidable challenge, as they involve tasks from both computer vision and nat- ural language processing. On the one hand, diagrams have a spatial organisation – layout – which needs to be segmented to identify meaningful units and their position. Making sense of how diagrams exploit the 2D layout space falls arguably within the domain of computer vision.  On the other hand, diagrams also have a discourse structure , which uses the layout space to set up discourse relations between instances of natural language, various types of im- ages, arrows and lines, thus forming a unified discourse or- ganisation. The need to parse this discourse structure shifts the focus towards the field of natural language processing. Understanding and making inferences about the structure of diagrams and other forms of multimodal discourse may be broadly conceptualised as multimodal discourse parsing .  Recent examples of work in this area include Alikhani et al. (2019) and Otto et al. (2019), who model discourse re- lations between natural language and photographic images, drawing on linguistic theories of coherence and text–image relations, respectively. In most cases, however, predicting a
+single discourse relation covers only a part of the discourse structure. Sachan et al.  (2019) note that there is a need for comprehensive theories and models of multimodal commu- nication, as they can be used to rethink tasks that have been previously considered only from the perspective of natural language processing.Unlike many other areas, the study of diagrammatic rep- resentations is particularly well-resourced, as several mul- timodal resources have been published recently to support research on computational processing of diagrams (Kemb- havi et al. , 2016; Choi et al., 2018; Hiippala et al., under review). This study compares two such resources, AI2D (Kembhavi et al., 2016) and AI2D-RST (Hiippala et al., un- der review), which both feature the same diagrams, as the latter is an extension of the former.  Whereas AI2D features crowd-sourced, non-expert annotations, AI2D-RST pro- vides multiple layers of expert annotations, which are in- formed by state-of-the-art approaches to multimodal com- munication (Bateman et al., 2017) and annotation (Bate- man, 2008; Hiippala, 2015). This provides an interesting setting for comparison and evaluation, as non-expert annotations are cheap to produce and easily outnumber the expert-annotated data, whose pro- duction consumes both time and resources. Expert annota- tions, however, incorporate domain knowledge from multi- modality theory, which is unavailable via crowd-sourcing. Whether expert annotations provide better representations of diagrammatic structures and thus justify their higher cost is one question that this study seeks to answer. Both AI2D and AI2D-RST represent the multimodal struc- ture of diagrams using graphs. This enables learning their representations using graph neural networks, which are gaining currency as a graph is a natural choice for repre- senting many types of data (Wu et al., 2019b).  This article reports on two experiments that evaluate the capability of AI2D and AI2D-RST to represent the multimodal structure of diagrams using graphs, focusing particularly on spatial layout, the hierarchical organisation of diagram elements and their connections expressed using arrows and lines.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_Subovp0XMQtSixEriYXoYmSb)
+ Call ID: call_Subovp0XMQtSixEriYXoYmSb
+  Args:
+    section_id: 1.5
+
+================================= Tool Message =================================
+Name: read_section
+
+4. Experiments
+This section presents two experiments that compare AI2D and AI2D-RST annotations in classifying diagrams and their parts using various graph neural networks.
+4.1. Graph Neural Networks
+I evaluated the following graph neural network architec- tures for both graph and node classification tasks:
+• Graph Convolutional Network (GCN) (Kipf and Welling,
+ 2017)
+• Simplifying Graph Convolution (SGC) (Wu et al., 2019a), averaging incoming node features from up to 2 hops away
+• Graph Attention Network (GAT) (Velickovic et al. , 2018) with 2 heads
+• GraphSAGE (SAGE) (Hamilton et al., 2017) with LSTM aggregation
+I implemented all graph neural networks using Deep Graph Library 0.4 (Wang et al., 2019) on the PyTorch 1.3 back- end (Paszke et al., 2017).  For GCN, GAT and SAGE, each network consists of two of the aforementioned layers with a Rectified Linear Unit (ReLU) activation, followed by a dense layer and a final softmax function for predicting class membership probabilities. For SGC, the network con- sists of a single SGC layer without an activation function. The implementations for each network are available in the repository associated with this article.
+4.2. Hyperparameters and Training
+I used the Tree of Parzen Estimators (TPE) algorithm (Bergstra et al., 2011) to tune model hyperparameters sep- arately for each dataset, architecture and task using the im- plementation in the Tune (Liaw et al., 2018) and hyperopt (Bergstra et al., 2013) libraries.  For each dataset, archi- tecture and task, I evaluated a total of 100 hyperparameter combinations for a maximum of 100 epochs, using 850 di- agrams for training and 150 for validation. The objective metric to be maximised was macro F1 score. Tables 1 and 2 give the hyperparameters and spaces searched for node and graph classification. Following Shchur et al.  (2018), I shuffled the training and validation splits for each run to prevent overfitting and used the same training procedure throughout. I used the Adam optimiser (Kingma and Ba, 2015) for both hyperparameter search and training.  To address the issue of class imbalance present in both tasks, class weights were calculated by dividing the total number of samples by the product of the number of unique classes and the number of samples for each class, as im- plemented in scikit-learn (Pedregosa et al., 2011). These weights were passed to the loss function during hyperpa- rameter search and training.Hyperparameter Range Learning rate 0.01–0. 0001 Batch size 4–32 Hidden layer size 5–30 L 2 penalty 0.001–0.00001
+Table 1: Hyperparameter ranges for graph classification
+Hyperparameter Range Learning rate 0.01–0.0001 Batch size 2–16 Hidden layer size 5–30 L 2 penalty 0.001–0.00001
+Table 2: Hyperparameter ranges for node classification
+ After hyperparameter optimisation, I trained each model with the best hyperparameter combination for 20 runs, us- ing 850 diagrams for training, 75 for validation and 75 for testing, shuffling the splits for each run while monitoring performance on the evaluation set and stopping training early if the macro F1 score failed to improve over 15 epochs for graph classification or over 25 epochs for node classi- fication.  I then evaluated the model on the testing set and recorded the result.
+4.3. Tasks
+4.3.1. Node Classiﬁcation
+The purpose of the node classification task is to evaluate how well algorithms learn to classify the parts of a diagram using the graph-based representations in AI2D and AI2D- RST and node features representing the position, size and shape of the element, as described in Section 3.1.2. Iden- tifying the correct node type is a key step when populating
+ Model GAT GCN SAGE SGC Graphs AI2D G G+C AI2D G G+C AI2D G G+C AI2D G G+C Accuracy 0.77 0.79 0.75 *0.81 0.79 0.78 * 0.93 0.85 0.88 0.32 *0.43 0.33 Macro F1 0.78 0.77 0. 73 *0.81 0.78 0.75 * 0.93 0.85 0.86 0.29 *0.45 0.28 Weighted F1 0.77 0.79 0.76 *0.81 0.79 0.78 * 0.92 0.85 0.88 0.3 *0.42 0.3
+ Table 3: Mean accuracy, macro F1 and weighted F1 scores for node classification. The results are averaged over 20 runs. The following abbreviations indicate the graph used: ‘AI2D’ for the original crowd-sourced graphs from AI2D, ‘G’ for the grouping graph and ‘G+C’ for the combination of grouping and connectivity graph from AI2D-RST.  An asterisk indicates that the difference between AI2D and the best AI2D-RST graph is statistically significant at p < 0 . 05 when comparing the results for the given metric over 20 runs using Mann–Whitney U test. The best result for each metric is marked using bold.Graphs AI2D AI2D-RST (G) Model D RF SVM D RF SVM Accuracy 0.26 0.76 0.54 0. 25 0.69 0.62 Mac. F1 0.20 0.79 0.60 0.20 0.56 0.48 Wt. F1 0.26 0.76 0.56 0.25 0.66 0.58
+ Table 4: Baseline accuracy, macro F1 and weighted F1 scores for node classification from dummy (D), random for- est (RF; 100 estimators) and support vector machine (SVM; C = 1 . 0 ) classifiers with balanced class weights. The re- sults are averaged over 20 runs. All models were imple- mented using scikit-learn 0.21.3.  Each node is represented by a 4-dimensional vector.a graph with candidate nodes from object detectors, partic- ularly if the nodes will be processed further, for instance, to extract semantic representations from CNN features or word embeddings. Furthermore, the node representations learned during this task can be used as node features for graph classification, as will be shown shortly below in Sec- tion 4.3.2. Table 4 presents a baseline for node classification from a dummy classifier, together with results for random forest and support vector machine classifiers trained on 850 and tested on 150 diagrams. Both AI2D and AI2D-RST include five node types, of which four are the same: the difference is that whereas AI2D includes arrowheads, AI2D-RST in- cludes nodes for groups of diagram elements, as outlined in Section 3.1.  The results seem to reflect the fact that im- age constants and grouping nodes have their features set to zero, and RF and SVM cannot leverage features incom- ing from their neighbouring nodes to learn node represen- tations. This is likely to affect the result for AI2D-RST, which includes 7300 grouping nodes that are used to create a hierarchy of diagram elements.Table 3 shows the results for node classification using var- ious graph neural network architectures.  Because the re- sults are not entirely comparable due to different node types present in the two resources, it is more reasonable to com- pare architectures. SAGE, GCN and GAT clearly outper- form SGC in classifying nodes from both resources, as does the random forest classifier. AI2D nodes are classified with particularly high accuracy, which may result from having to learn representations for only one node type, that is, the image constant ( N = 1000 ).  AI2D-RST, in turn, must learn representations from scratch for both image constants ( N = 1000 ) and grouping nodes ( N = 7300 ).Figure 3: Diagram #4120 in AI2D combines two diagram types: a cross-section with a cycle (cf. Figure 2)
+Because SAGE learns useful node representations for both resources, as reflected in high performance for all metrics, I chose this architecture for extracting node features for graph classification.
+4.3.2. Graph Classiﬁcation
+This task compares the performance of graph-based rep- resentations in AI2D and AI2D-RST for classifying entire diagrams . Here the aim is to evaluate to what extent graph neural networks can learn about the generic structure of pri- mary school science diagrams from the graph-based repre- sentations in AI2D and AI2D-RST.  Correctly identifying what the diagram attempts to communicate and how carries implications for tasks such as visual question answering, as the type of a diagram constrains the interpretation of key diagrammatic elements, such as the meaning of lines and arrows (Tversky et al., 2016; Alikhani and Stone, 2018). To enable a fair comparison, the target classes are derived from both AI2D and AI2D-RST.  Whereas AI2D includes 17 classes that represent the semantic content of diagrams, as exemplified by categories such as ‘parts of the Earth’, ‘volcano’, and ‘food chains and webs’, AI2D-RST classi- fies diagrams into abstract diagram types , such as cycles, networks, cross-sections and cut-outs.  More specifically, AI2D-RST provides classes for diagram types at two lev- els of granularity, fine-grained (12 classes) and coarse (5 classes), which are derived from the proposed schema for diagram types in AI2D-RST (Hiippala et al., under review). The 11 fine-grained classes in AI2D-RST shown in Fig- ure 2 are complemented by an additional class (‘mixed’),
+ Classes Original classes from AI2D ( N = 17 ) Model GAT GCN SAGE SGC Graphs AI2D G G+C AI2D G G+C AI2D G G+C AI2D G G+C Accuracy 0.53 + 0.54 0.49 0.52 + 0.55 0.5 * 0.58 0.5 0.52 0.55 0.54 0. 53 Macro F1 0.26 0.25 0.26 0.23 + 0.27 0.23 * 0.32 0.25 0.26 0.23 + 0.22 0.19 Weighted F1 0.53 0.56 0.52 0.5 0.53 0.51 * 0.6 0.54 0.54 0. 5 + 0.48 0.44 Classes Coarse classes from AI2D-RST ( N = 5 ) Model GAT GCN SAGE SGC Graphs AI2D G G+C AI2D G G+C AI2D G G+C AI2D G G+C Accuracy 0.59 + 0.61 0.58 0.6 * 0.63 0.61 0.6 0.58 0. 6 *0.56 0.5 0.51 Macro F1 0.46 * + 0.51 0.47 0.46 *0.5 0.47 0.47 0.48 *0.49 0.41 0.39 0.4 Weighted F1 0.56 * + 0.6 0.55 0.58 0.6 0.58 0. 57 0.56 0.58 0.5 0.47 0.48 Classes Fine-grained classes from AI2D-RST ( N = 12 ) Model GAT GCN SAGE SGC Graphs AI2D G G+C AI2D G G+C AI2D G G+C AI2D G G+C Accuracy 0.39 0.36 0.37 0.4 0.39 0. 42 0.42 0.41 0.43 0.39 0.31 + 0.36 Macro F1 0.27 0.25 0.25 0.24 0.26 *0.29 0.28 0.28 0.29 0.22 0.19 + 0.21 Weighted F1 0.36 0.34 0.34 0. 35 0.38 *0.39 0.39 0.38 0.4 0.31 0.27 + 0.31
+Table 5: Mean accuracy, macro F1 and weighted F1 scores for graph classification. The results are averaged over 20 runs.  The following abbreviations indicate the graph used: ‘AI2D’ for the original crow...(truncated)
+
+================================== Ai Message ==================================
+
+They are compared through two experiments that evaluate how well graph neural networks classify diagram parts and entire diagrams using graph-based representations from the crowd-sourced AI2D annotations and the expert AI2D-RST annotations. Performance is compared using accuracy, macro F1, and weighted F1 scores averaged over 20 runs, with statistical significance tested using the Mann–Whitney U test.

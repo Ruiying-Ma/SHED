@@ -1,0 +1,36 @@
+================================ Human Message =================================
+
+QUERY:
+What is the type of the project 'Birdview Avenue Improvements (CalOES Project)'?
+
+TABLE OF CONTENTS (TOC):
+1 | Capital Improvement Projects (Not Started)
+2 | Legacy Park Paver Repair Project
+3 | Malibu Bluffs Park South Walkway
+4 | Trancas Playground Resurfacing
+5 | PCH Median Improvements at Paradise Cove and Zuma Beach
+6 | Capital Improvement Projects (Completed) Civic Center Way Improvements
+7 | Civic Center Stormwater Diversion Structure
+8 | Corral Canyon Road Bridge Repairs (FEMA Project)
+9 | Corral Canyon Culvert Repairs (FEMA Project)
+10 | Birdview Avenue Improvements (CalOES Project)
+11 | Malibu Park Storm Drain Repairs
+12 | annex
+13 | 2021 Annual Street Maintenance
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_KlP1n7GO9BbnS23N0pFWClVw)
+ Call ID: call_KlP1n7GO9BbnS23N0pFWClVw
+  Args:
+    section_id: 10
+
+================================= Tool Message =================================
+Name: read_section
+
+Birdview Avenue Improvements (CalOES Project)
+Updates: This project was included in the Malibu Park Drainage Improvement.
+
+================================== Ai Message ==================================
+
+disaster

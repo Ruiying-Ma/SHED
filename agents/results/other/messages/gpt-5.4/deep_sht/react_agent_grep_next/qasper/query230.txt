@@ -1,0 +1,61 @@
+================================ Human Message =================================
+
+QUERY:
+What are two use cases that demonstrate capability of created system?
+
+TABLE OF CONTENTS (TOC):
+1 | Natural Language Generation for Non-Expert Users
+1.1 | 1 Introduction
+1.1.1 | 2 Background: Grammatical Framework
+1.1.1.1 | 3 Method
+1.1.1.1.1 | 3.1 Sentence Structure Recognition
+1.1.1.1.1.1 | Listing 3: Program Π1
+1.1.1.1.1.1.1 | 3.2 Sentence Components Recognition
+1.1.1.1.1.1.1.1 | 3.3 GF Grammar Encoder
+1.1.1.1.1.1.1.1.1 | 3.4 GF Grammar Exporter
+1.1.1.1.1.1.1.1.1.1 | 4 Experiments
+1.1.1.1.1.1.1.1.1.1.1 | 4.1 NLG for Annotated Ontologies
+1.1.1.1.1.1.1.1.1.1.1.1 | 4.2 Intermediate Representation for Wiki Pages
+1.1.1.1.1.1.1.1.1.1.1.1.1 | 5 Related Works
+1.1.1.1.1.1.1.1.1.1.1.1.1.1 | 6 Conclusions and Future Work
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_e2D6McrSWs4zkdcwGqqNlDKL)
+ Call ID: call_e2D6McrSWs4zkdcwGqqNlDKL
+  Args:
+    section_id: 1.1.1.1.1.1.1.1.1.1
+
+================================= Tool Message =================================
+Name: read_section
+
+4 Experiments
+We describe our method of generating natural language in two applications. The first application is to generate a natural language description for workflow created by the system built in the Phylotastic project described in [16]. Instead of requiring that the ontologies are annotated using Attempto, we use natural language sentences to annotate the ontologies.  To test the feasibility of the approach, we also conduct another use case with the second ontology, that is entirely different from the ontologies used in the Phylotastic project. The ontology 13 is about people and includes descriptions for certain class.The second application targets the challenge of creating an abstract Wikipedia from the BlueSky session of 2018 International Semantic Web Conference [23]. We create an intermediate representation that can be used to translate the original article in English to another language.  In this use case, we translate the intermediate representation back to English and measure how the translated version stacks up again the original one. We assess the generation quality automatically with BLEU-3 and ROUGE-L (F measure).  BLEU [18] and ROUGE [11] algorithms are chosen to evaluate our generator since the central idea of both metrixes is “the closer a machine translation is to a professional human translation, the better it is”, thus, they are well-aligned with our use cases’ purpose. In short, the higher BLUE and ROUGE score are, the more similar the hypothesis text and the reference text is.  In our use case, the hypothesis for BLEU and ROUGE is the generated English content from the intermediate representation, and the reference text is the original text from Wikipedia.
+4.1 NLG for Annotated Ontologies
+As described in [16], the author’s system retrieves a set of atoms from an ASP program such as those in Listing 6 where phylotastic FindScientificNamesFromWeb GET was shortened to service , propagates the atoms, and constructs a set of sentences having similar structure to the sentence “The input of phylotastic FindScientificNamesFromWeb GET is a web link. Its outputs are a set of species names and a set of scientific names” .  In this sentence, phylotastic FindScientificNamesFromWeb GET is the name of the service involved in the workflow of the Phylotastic project. All of the arguments of the atoms above are the names of classes and instances from Phylotastic ontology.Listing 6: Sample Set of Atoms input(service, web_link). typeof(web_link, url). output(service, species_names). typeof(species_names, names). output(service, scientific_names).  typeof(scientific_names, names).We replace the original Attempto annotations with the natural language annotations as in Table 4 and test with our system.13 Bookmarked URIs in Protege 5.5.0 Build beta-9 or http://owl.man.ac.uk/2006/07/sssw/people
+V.D. Nguyen, T. C. Son & E. Pontelli
+289
+Atom Annotation input(service, web link).  The input of service is a web link output(service, species names). The output of service is species names typeof(web link, url). The type of web link is url
+Table 4: Atoms from Phylotastic project and its annotation
+Tuple Text ( Kevin,has pet,Flossie ) Kevin has pets Flossie. ( Flossie,rdf:type,cow ) Flossie is cow. ( Mick,reads,Daily Mirror ) Mick reads Daily Mirror. Table 5: Sample outputs for the people ontology.With the same set of atoms as in Listing 6, our system generates the following description “In- put of phylotastic FindScientificNamesFromWeb GET is web link. Type of web link is url. Output of phylotastic FindScientificNamesFromWeb GET is scientific names. Output of phylotastic FindScientific- NamesFromWeb GET is species names. Type of scientific names is names.  Type of species name is names.” .We also test our system with the people ontology as noted above. We extract all comments about people and replace compound sentences with simple sentences, e.g., “Mick is male and drives a white van” is replaced by the two sentences “Mick is male” and “Mick drives a white van.” to create a collection of sample sentences.  We then use our system to generate a GF program which is used to generate sentences for RDF tuples. Sample outputs for some tuples are in Table 5. This shows that for targeted applications, our system could do a reasonable job.
+4.2 Intermediate Representation for Wiki Pages
+Since our system creates a GF program for a set of sentences, it could be used as an intermediate repre- sentation of a paragraph. This intermediate representation could be used by GF for automatic translation as GF is well-suited for cross-languages translation. On the other hand, we need to assess whether the intermediate representation is meaningful. This use case aims at checking the adequacy of the repre- sentation.  To do so, we generate the English sentences from the GF program and evaluate the quality of these sentences against the original ones. We randomly select 5 articles from 3 Wikipedia portals: People, Mathematics and Food & Drink.With the small set of rules introducing in this paper to recognize sentence structure, there would be very limited 4-gram in the generated text appearing in original Wikipedia corpus.  Therefore, we use BLEU-3 with equal weight distribution instead of BLEU-4 to assess the generated content. Table 6 shows the summary of the number of assessable sentences from our system. Out of 62 sentences from 3 portals, the system cannot determine the structure 2 sentences in Mathematics due to their complexity. This low number of failure shows that our 5 proposed sentence structures effectively act as a lower bound on sentence recognition module. In terms of quality, Table 7 shows the average of BLEU and ROUGE score for each portal. Note that the average BLUE score is calculated only on BLEU assessable sentences, while average ROUGE
+290
+Natural Language Generation for Non-Expert Users
+People Mathematics Food & drink #sentences 15 24 23 #sentences recognized 15 22 23 BLEU assessable 10 15 11
+Table 6: BLEU assessable sentences
+ People Mathematics Food & drink BLEU 39.1 33.4 52.2 ROUGE-1 20 17.9 14.6 ROUGE-2 6.7 6.7 5.5 ROUGE-L 11.4 10.5 8.13
+Table 7: BLUE and ROUGE score
+score is calculated on the sentences whose structure can be recognized and encoded by our system.  We note that the BLEU or ROUGE score might not be sufficiently high for a good quality translation. We believe that two reasons contribute to this low score. First, the present system uses fairly simple sentence structures. Second, it does not consider the use of relative clauses to enrich the sentences. This feature will be added to the next version of the system.Table 8 summarizes the result of this use case.  On the left are the paragraphs extracted from the Wikipedia page about Rice 14 in Food & Drink, Decimal 15 in Mathematics, and about Alieu Ebrima Cham Joof 16 from People. As we can see, the main points of the paragraphs are maintained.
+5 Related Works
+The systems developed in [5, 13, 12] use statistical generation method to produce descriptions of tables or explanation and recommendation from users’ reviews of an item. All three systems are capable of generating high quality descriptions and/or explanations. In comparing to these systems, our system does not use the statistical generation method. Instead, we use Grammatical Framework for the generation task.  A key difference between these systems and our system lies in the requirement of a large corpus of text in a specific domain for training and generation of these systems. Our system can work with very limited data and a wide range of domains.Another method for generating natural language explanation for an question-answering system is proposed in [9, 6].  [9] ([9]) describes a system that can give reasonable and supportive evidence to the answer to a question asked to an image, while [6] ([6]) generates explanations for scheduling problem using argumentation. [24] ([24]) use ASP to develop a system answering questions in the do-it-yourself domain. These papers use templates to generate answers. The generated GF program generated by our system, that is used for the NLG task, is automatically created from a provided input. 14 https://en.wikipedia.org/wiki/Rice
+15 https://en.wikipedia.org/wiki/Decimal
+16 https://en.wikipedia.org/wiki/Alieu Ebrima Cham Joof
+V.D. Nguyen, T. C. Son & E. Pontelli
+291
+Rice Rice is the seed of the grass species Oryza sativa (Asian rice) or Oryza glaberrima (African rice).  Rice is seed of grass species Oryza sativa As a cereal grain, it is the most widely consumed staple food for a large part of the world’s human population, especially in Asia. it is widely consumed staple food for large part of human population of world in Asia It is the agricultural commodity with the third-highest worldwide production (rice, 741.5 million tonnes in 2014), after sugarcane (1.9 billion tonnes) and maize (1. 0 billion tonnes). It is agricultural commodity with third- highest worldwide production after sugarcane Decimal The decimal numeral system is the standard system for denoting integer and non-integer numbers. decimal numeral system is standard system. It is the extension to non-integer numbers of the Hindu Arabic numeral system. It is extension to non-integer number of Hindu-Arabic numeral system. The way of denoting numbers in the decimal system is often referred to as decimal notation.  way is referred to decimal notation. Alieu Ebrima Cham Joof Alieu Ebrima Cham Joof (22 October 1924 ˘2013 2 April 2011) commonly known as Cham Joof or Alhaji Cham Joof, (pen name: Alh. A.E.  Cham Joof) was a Gambian historian, politi- cian, author, trade unionist, broadcaster, radio programme direc- tor, scout master, Pan-Africanist, lecturer, columnist, activist and an African nationalist. Cham Joof is politician, author, union- ist, broadcaster, radio programme di- rector, scout master, Pan-Afr...(truncated)
+
+================================== Ai Message ==================================
+
+Generating natural language descriptions for annotated ontologies/workflows, and creating an intermediate representation for Wikipedia pages that can be used for translation across languages.

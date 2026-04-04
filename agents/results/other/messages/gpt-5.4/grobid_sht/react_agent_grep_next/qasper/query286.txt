@@ -1,0 +1,63 @@
+================================ Human Message =================================
+
+QUERY:
+Were the Wikipedia edits that removed framings, presuppositions and attitudes from biased sentences a Wiki community effort, or were annotators trained to do it?
+
+TABLE OF CONTENTS (TOC):
+1 | Automatically Neutralizing Subjective Bias in Text
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | Source Target
+1.4 | 2 Wiki Neutrality Corpus (WNC)
+1.5 | Subcategory
+1.5.1 | 2.1 Dataset Properties
+1.6 | 3 Methods for Neutralizing Text
+1.6.1 | 3.1 MODULAR
+1.7 | Detection Module
+1.7.1 | 3.2 CONCURRENT
+1.8 | Method
+1.9 | 4.2 Wikipedia (WNC)
+1.10 | 4.3 Real-world Media
+1.11 | 5 Error Analysis
+1.12 | 6 Algorithmic Analysis
+1.12.1 | 6.1 Detecting Subjectivity
+1.12.2 | 6.2 Join Embedding
+1.13 | Join Embedding Ablation
+1.14 | 7 Related Work
+1.15 | Selected Word Output (input)
+1.16 | (input)
+1.17 | 8 Conclusion and Future Work
+1.18 | 9 Acknowledgements
+1.19 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_CJGDj5JyEthcJ7YavBaH3xOM)
+ Call ID: call_CJGDj5JyEthcJ7YavBaH3xOM
+  Args:
+    section_id: 1.4
+
+================================= Tool Message =================================
+Name: read_section
+
+2 Wiki Neutrality Corpus (WNC)
+The Wiki Neutrality Corpus consists of aligned sentences pre and post-neutralization by English Wikipedia editors (Table 1 provided NPOV-related justification (Zanzotto and Pennacchiotti 2010; Recasens, Danescu-Niculescu-Mizil, and Jurafsky 2013; Yang et al. 2017) . To maximize the precision of bias-related changes, we ignored revisions where
+• More than a single sentence was changed. • Minimal edits (character Levenshtein distance < 4).• Maximal edits (more than half of the words changed).• Edits where more than half of the words were proper nouns. • Edits that fixed spelling or grammatical errors.• Edits that added references or hyperlinks.• Edits that changed non-literary elements like tables or punctuation. We align sentences in the pre and post text by computing a sliding window (size k = 5) of pairwise BLEU (Papineni et al. 2002) between sentences and matching sentences with the biggest score (Faruqui et al. 2018; Tiedemann 2008) . Last, we discarded pairs whose length ratios were beyond the 95th percentile (Pryzant et al. 2017) . Corpus statistics are given in Table 2 . The final data are (1) a parallel corpus of 180k biased sentences and their neutral counterparts, and (2) 385k neutral sentences that were adjacent to a revised sentence at the time of editing but were not changed by the editor.  Note that following Recasens, Danescu-Niculescu-Mizil, and Jurafsky (2013) , the neutralizing experiments in Section 4 focus on the subset of WNC where the editor modified or deleted a single word in the source text ("Biased-word" in Table 2 ). <table><tr><td>Data</td><td colspan="4">Sentence Total pairs words (mean) Seq length # revised words (mean)</td></tr><tr><td>Biased-full</td><td>181,496</td><td colspan="2">10.2M 28.21</td><td>4.05</td></tr><tr><td colspan="2">Biased-word 55,503</td><td>2. 8M</td><td>26.22</td><td>1.00</td></tr><tr><td>Neutral</td><td>385,639</td><td colspan="2">17.4M 22.58</td><td>0.00</td></tr></table>
+Table 2 ). We used regular expressions to crawl 423,823 Wikipedia revisions between 2004 and 2019 where editors Corpus statistics. Table 1 also gives a categorization of these sample pairs using a slight extension of the typology of Recasens, Danescu-Niculescu-Mizil, and Jurafsky (2013) .  They defined framing bias as using subjective words or phrases linked with a particular point of view (using words like best or deepest or using pilfered from instead of based on), and epistemological bias as linguistic features that subtly (often via presupposition) modify the believability of a proposition.  We add to their two a third kind of subjectivity bias that also occurs in our data, which we call demographic bias, text with presuppositions about particular genders, races, or other demographic categories (like presupposing that all programmers are male).
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_LT3YrbZObGlQFv7K6oJTxUYQ)
+ Call ID: call_LT3YrbZObGlQFv7K6oJTxUYQ
+  Args:
+    pattern: annotator|trained|Wikipedia editors|community effort|framings|presuppositions|attitudes
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1 | Abstract
+Texts like news, encyclopedias, and some social media strive for objectivity. Yet bias in the form of inappropriate subjectivity -introducing attitudes via framing, presupposing truth, and casting doubt -remains ubiquitous. This kind of bias erodes our collective trust and fuels social conflict. To address this issue, we introduce a novel testbed for natural language generation: automatically bringing inappropriately subjective text into a neutral point of view ("neutralizing" biased text).  We also offer the first parallel corpus of biased language. The corpus contains 180,000 sentence pairs and originates from Wikipedia edits that removed various framings, presuppositions, and attitudes from biased sentences. Last, we propose two strong encoder-decoder baselines for the task. A straightforward yet opaque CONCURRENT system uses a BERT encoder to identify subjective words as part of the generation process.  An interpretable and controllable MODULAR algorithm separates these steps, using (1) a BERT-based classifier to identify problematic words and (2) a novel join embedding through which the classifier can edit the hidden states of the encoder. Large-scale human evaluation across four domains (encyclopedias, news headlines, books, and political speeches) suggests that these algorithms are a first step towards the automatic identification and reduction of bias.
+
+================================== Ai Message ==================================
+
+They were Wikipedia edits by English Wikipedia editors, not edits produced by trained annotators. The corpus originates from Wikipedia edits that removed various framings, presuppositions, and attitudes from biased sentences.

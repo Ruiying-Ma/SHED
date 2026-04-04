@@ -1,0 +1,94 @@
+================================ Human Message =================================
+
+QUERY:
+what datasets where used?
+
+TABLE OF CONTENTS (TOC):
+1 | Sentence Modeling via Multiple Word Embeddings and Multi-level Comparison for Semantic Textual Similarity
+1.1 | Abstract
+1.1.1 | 1 Introduction
+1.1.1.1 | 2 Related work
+1.1.1.1.1 | 3 Model description
+1.1.1.1.1.1 | 3.1 Multi-aspect word embedding
+1.1.1.1.1.1.1 | 3.2 Sentence modeling
+1.1.1.1.1.1.1.1 | 3.3 Multi-level comparison
+1.1.1.1.1.1.1.1.1 | 3.3.1 Word-word comparison
+1.1.1.1.1.1.1.1.1.1 | 3.3.2 Sentence-sentence comparison
+1.1.1.1.1.1.1.1.1.1.1 | Cosine similarity:
+1.1.1.1.1.1.1.1.1.1.1.1 | Multiplication vector & Absolute difference
+1.1.1.1.1.1.1.1.1.1.1.1.1 | Neural difference:
+1.1.1.1.1.1.1.1.1.1.1.1.1.1 | 3.3.3 Word-sentence comparison
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | 4 Tasks & Datasets
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | 5 Experiment setting
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | 5.1 Pre-trained word embeddings
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | 5.2 Model conﬁguration
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | 5.3 Training Setting
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | 5.3.1 Textual entailment recognition & Paraphrase identiﬁcation
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | 5.3.2 Semantic Textual Similarity
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | 6 Experiments and Discussion
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | 6.1 Overall evaluation
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | 6.2 Evaluation of exploiting multiple pre-trained word embeddings
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | 7 Conclusion
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | Acknowledgments
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_zBDLnOGtIenJotuKOHmqg8q8)
+ Call ID: call_zBDLnOGtIenJotuKOHmqg8q8
+  Args:
+    section_id: 1.1.1.1.1.1.1.1.1.1.1.1.1.1.1
+
+================================= Tool Message =================================
+Name: read_section
+
+4 Tasks & Datasets
+We evaluate our model on three tasks:
+• Textual entailment recognition : given a pair of sentences,we predict a direc- tional relation between the sentences (entail- ment/contradiction/neutral). We evaluate this task on SICK dataset. It was collected for the 2014 SemEval competition and includes examples of the lexical, syntactic and se- mantic phenomena and ignores other aspects of existing sentential datasets (i.e., idiomatic multiword expressions, named entities, tele- graphic language).
+• Semantic textual similarity : given a pair of sentences,we measure a semantic similarity score of this pair. We use two datasets for this task:
+– STSB :comprises a careful selection of the English data sets used in SemEval and *SEM STS shared tasks from 2012 to 2017. This dataset cover three genres: image captions, news headlines and user forums. Each sentence pair is annotated with a relatedness score ∈ [0 , 5] .
+– SICK : Each sentence pair is annotated with a relatedness score ∈ [1 ,5] .
+• Paraphrase identification : given a pair of sentences,we predict a binary label indi- cating whether the two sentences are para- phrases. Microsoft Research Paraphrase Cor- pus (MRPC) is used for this task. It includes pairs of sentences extracted from news source on the web.Table 1 shows the statistic of the three datasets. Because of not dealing with name entities and multi-word idioms, the vocabulary size of SICK is quite small compared to the others. Dataset Train Validation Test l | V | STSB 5,749 1,500 1,379 11 15,997 SICK 4,500 500 4,927 9 2,312 MRPC 3,576 500 1,725 21 18,003
+Table 1: Statistic of datasets. | V | , l denote the vo- cabulary size, and the average length of sentences respectively.
+5 Experiment setting
+5.1 Pre-trained word embeddings
+We study five pre-trained word embeddings 2 for our model:
+• word2vec is trained on Google News dataset (100 billion tokens).The model contains 300-dimensional vectors for 3 million words and phrases.
+• fastText is learned via skip-gram with sub- word information on Wikipedia text.The em- bedding representations in fastText are 300- dimensional vectors.
+• GloVe is a 300-dimensional word embedding model learned on aggregated global word- word co-occurrence statistics from Common Crawl (840 billion tokens).2 These embeddings are available at anonymous
+• Baroni uses a context-predict approach to learn a 400-dimensional semantic embedding model.It is trained on 2.8 billion tokens con- structed from ukWaC, the English Wikipedia and the British National Corpus.
+• SL999 is trained under the skip-gram objec- tive with negative sampling on word pairs from the paraphrase database PPDB .This 300-dimensional embedding model is tuned on SimLex-999 dataset ( Hill et al. , 2016 ).
+5.2 Model conﬁguration
+In all of the tasks, we used the same model config- uration as follows:
+• Convolutional filters: we used 1600 filters.It is also the dimension of the word embedding concatenated from the five pre-trained word embeddings.
+• LSTM dimension: we also selected 1600 for LSTM dimension.• Neural similarity layers: the dimension of b word , b sent ,b ws and b ws 0 are respectively 50, 5, 5 and 100.
+• Penultimate fully-connected layer:has the dimension of 250 and is followed by a drop- out layer ( p = 0 . 5 ).We conducted a grid search on 30% of STSB dataset to select these optimal hyper-parameters.
+5.3 Training Setting
+5.3.1 Textual entailment recognition & Paraphrase identiﬁcation
+In these tasks, we use the cross-entropy objec- tive function and employ AdaDelta as the stochas- tic gradient descent (SGD) update rule with mini- batch size as 30. Details of Adadelta method can be found in Zeiler ( 2012 ). During the training phase, the pre-trained word embeddings are fixed.
+5.3.2 Semantic Textual Similarity
+To compute a similarity score of a sentence pair in the range [1 , K ] , where K is an integer, we replace Eq. (27) with the equations in Tai et al. ( 2015 ) as follows:
+ˆ p θ = sof tmax ( W l 2 h s + b l 2 ) (28)
+ˆ y = r T ˆ p θ (29)
+ where W l 1 , W l 2 , b l 1 and b l 2 are parameters; r T = [1 , 2 , ..., K ] ; ˆ y is a predicted similarity score. A sparse target distribution p which satisfies y = r T p is computed as:
+ p i =    y − b y c , i = b y c + 1 b y c − y + 1 , i = b y c 0 otherwise (30)
+for i ∈ [1 , K ] , and y is the similarity score.To train the model, we minimize the regularized KL-divergence between p and ˆ p θ :
+ J ( θ ) = 1 m m X k =1 KL ( p ( k ) || ˆ p ( k ) θ ) (31)
+where m is the number of training pairs and θ de- notes the model parameters. The gradient descent optimization Adadelta is used to learn the model parameters. We also use mini-batch size as 30 and keep the pre-trained word embeddings fixed dur- ing the training phase.  We evaluate our models through Pearson correlation r .
+6 Experiments and Discussion
+This section describes two experiments: i) com- pare our model against recent systems; ii) evaluate the efficiency of using multiple pre-trained word embeddings.
+6.1 Overall evaluation
+Besides existing methods, we also compare our model with several sentence modeling approaches using multiple pre-trained word embeddings:
+• Word Average :e s = 1 n n X i =1 e concat w i (32)
+where e s is the sentence embedding of a n - words sentence, and e concat w i is from Eq. (1)
+• Project Average :e s = σ ( W ( 1 n n X i =1 e concat w i ) + b ) (33)
+where W is a 1600 × 1600 weight matrix, and b is a 1600 bias vector.
+• LSTM : apply Eq.(5-11) on e concat w i to con- struct the 1600 -dimension e s sentence em- bedding.Method STSB SICK-R SICK-E MRPC Ensemble models/Feature engineering DT TEAM ( Maharjan et al. , 2017 ) 79.2 - - - ECNU ( Tian et al. , 2017 ) 81 - - - BIT ( Wu et al. , 2017 ) 80. 9 - - - TF-KLD ( Ji and Eisenstein , 2013 ) - - - 80.41 / 85.96 Neural representation models with one embedding Multi-Perspective CNN ( He et al. , 2015 ) - 86.86 - 78.6/84.73 InferSent ( Conneau et al. , 2017 ) 75.8 88.4 86.1 76.2/83. 1 GRAN ( Wieting and Gimpel , 2017 ) 76.4 86 - - Paragram-Phrase ( Wieting et al. , 2016b ) 73.2 86.84 85.3 - HCTI ( Shao , 2017 ) 78.4 - - - Neural representation models with the five embeddings using sentence-sentence comparison (S) S-Word Average 71.06 81. 18 80.88 71.48/81.1 S-Project Average 75.12 86.53 85.12 75.48/82.47 S-LSTM 77.14 85.15 85.6 70.43/79.71 S-Max-CNN 81.87 88.3 84.33 76.35/83.75 S-MaxLSTM-CNN 82.2 88. 47 84.9 77.91/84.31 Neural representation models with the five embeddings using Multi-level comparison (M) M-Max-CNN 82.11 88.45 84.7 76.75/83.64 M-MaxLSTM-CNN 82.45 88.76 84.95 78.1/84.5
+ Table 2: Test set results with Pearson’s r score × 100 for STS tasks, and accuracy for other tasks. Bold- face values show the highest scores in each dataset. SICK-R and SICK-E denote the STS task and the entailment task in SICK dataset respectively.
+• Max-CNN : apply Eq.(2-4) on e concat w i to construct the 1600 -dimension e s sentence embedding.We report the results of these methods in Ta- ble 2 . Overall, our M-MaxLSTM-CNN shows competitive performances in these tasks. Espe- cially in the STS task, M-MaxLSTM-CNN out- performs the state-of-the-art methods on the two datasets.  Because STSB includes complicated samples compared to SICK, the performances of methods on STSB are quite lower. In STSB, the prior top performance methods use ensemble approaches mixing hand-crafted features (word alignment, syntactic features, N-gram overlaps) and neural sentence representations, while our ap- proach is only based on a neural sentence model- ing architecture.  In addition, we observed that In- ferSent shows the strong performance on SICK-R but quite low on STSB while our model consis- tently obtains the strong performances on both of the datasets. InferSent uses transfer knowledge on textual entailment data, consequently it obtains the strong performance on this entailment task.According to Wieting et al. ( 2016b ), using Word Average as the compositional architecture outper- forms the other architectures (e.g. , Project Aver- age, LSTM) for STS tasks. In a multiple word embeddings setting, however, Word Average does not show its efficiency. Each word embedding
+model has its own architecture as well as objective function. These factors makes the vector spaces of word embeddings are different. Therefore, we intuitively need a step to learn or refine a rep- resentation from a set of pre-trained word em- beddings rather than only averaging them.  Be- cause Project Average model, LSTM model and Max-CNN model have their parameters for learn- ing sentence embeddings, they significantly out- perform Word Average model.We observed that MaxLSTM-CNN outperforms Max-CNN in both of the settings (i.e., sentence- sentence comparison, Multi-level comparison). As mentioned in Section 1, Max-CNN ignores the property of word order.  Therefore, our model achieves improvement compared to Max-CNN by additionally employing LSTM for capturing this property.We only applied Multi-level comparison on Max-CNN and MaxLSTM-CNN because these encoders generate multi-aspect word embeddings. The experimental results prove the efficiency of using Multi-level comparison. In the textual en- tailment dataset SICK-E , the task mainly focuses on interpreting the meaning of a whole sentence pair rather than comparing word by word.  There- fore, the performance of Multi-level comparison is quite similar to sentence-sentence comparison in the SICK-E task. This is also the reason why
+Word embedding STSB SICK-R & SICK-E MRPC Pearson | V | avai (%) Pearson Acc | V | avai (%) Acc/F1 | V | avai (%) word2Vec 78.9 75.64 87.27 84.09 98.53 75.42/82. 13 67.81 fastText 79.95 84.27 87.59 83.42 99.18 74.31/81.75 79.04 Glove 80.1 91.71 88.21 84.71 99.78 74.9/82.782 89.85 SL999 80.31 94.76 87.26 84.55 99.83 76. 46/83.13 94.19 Baroni 79.81 90.54 86.9 83.99 98.83 74.84/82.4 87.92 All 82.45 95.65 88.76 84.95 99....(truncated)
+
+================================== Ai Message ==================================
+
+SICK, STSB, and MRPC were used. Specifically, SICK was used for textual entailment recognition and also for semantic textual similarity, STSB was used for semantic textual similarity, and MRPC was used for paraphrase identification.

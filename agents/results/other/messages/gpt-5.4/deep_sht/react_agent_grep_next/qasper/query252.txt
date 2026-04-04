@@ -1,0 +1,69 @@
+================================ Human Message =================================
+
+QUERY:
+How do the editors' annotations differ from those in existing datasets?
+
+TABLE OF CONTENTS (TOC):
+1 | KPTimes: A Large-Scale Dataset for Keyphrase Generation on News Documents Ygor Gallina Florian Boudin Beatrice Daille
+1.1 | Abstract
+1.1.1 | 1 Introduction
+1.1.1.1 | Muslim Women in Hijab Break Barriers: ‘Take the Good With the Bad’
+1.1.1.1.1 | 2 Existing datasets
+1.1.1.1.1.1 | 3 Building the KPTimes dataset
+1.1.1.1.1.1.1 | 4 Data analysis
+1.1.1.1.1.1.1.1 | 5 Performance of existing models
+1.1.1.1.1.1.1.1.1 | 5.1 Evaluation metrics
+1.1.1.1.1.1.1.1.1.1 | 5.2 Models
+1.1.1.1.1.1.1.1.1.1.1 | Baseline: FirstPhrase
+1.1.1.1.1.1.1.1.1.1.1.1 | Baseline, unsupervised: MultipartiteRank
+1.1.1.1.1.1.1.1.1.1.1.1.1 | State-of-the-art, supervised: CopyRNN
+1.1.1.1.1.1.1.1.1.1.1.1.1.1 | 5.3 Results
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | 6 Conclusion
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_M0QV44Y6QF9AI80VpXcfL5nL)
+ Call ID: call_M0QV44Y6QF9AI80VpXcfL5nL
+  Args:
+    pattern: existing datasets|annotations|editors
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1.1.1.1.1.1 | 4 Data analysis
+https://lac-group.com/rules-based-tagging-metadata/ https://www.crummy.com/software/BeautifulSoup/ We explored the KPTimes dataset to better under- stand how it stands out from the existing ones. First, we looked at how editors tag news articles. Figure 2 illustrates the difference between the an- notation behaviour of readers, authors and edi- tors through the number of times that each unique keyphrase is used in the gold standard.  We see that non-expert annotators use a larger, less con- trolled indexing vocabulary, in part because they lack the higher level of domain expertise that edi- tors have. For example, we observe that frequent keyphrases in KPTimes are close to topic descrip- tors (e.g. “ Baseball “, “ Politics and Government “) while those appearing only once are very precise (e.g. “ Marley’s Cafe “, “ Catherine E.  Connelly “). Annotations in KPTimes are arguably more uni- form and consistent, through the use of tag sug- gestions, which, as we will soon discuss in § 5.3 ,
+2 3 https://spiderbites.nytimes.com/ 4 https://archive.org/ 5
+6 The change of field name correspond to the introduction of the keywords tag as a W3C standard.7 https://www.japantimes. co.jp/
+makes it easier for supervised approaches to learn a good model.Figure 2: Distributions of gold keyphrase assignments.Next, we further looked at the characteristics of the gold keyphrases in KPTimes . Table 1 shows that the number of gold keyphrases per document is similar to the one observed for KP20k while the number of missing keyphrases is higher.  This indicates that editors are more likely to general- ize and assign keyphrases that do not occur in the document ( ≈ 55% ). It is therefore this ability to generalize that models should mimic in order to perform well on KPTimes . We also note that keyphrases are on average shorter in news datasets ( 1 . 5 words) than those in scientific paper datasets ( 2 . 4 words).  This may be due to the abundant use of longer, more specific phrases in scholarly doc- uments ( Jin et al. , 2013 ).Variants of keyphrases recovered from the metadata occur in 8% of the documents and repre- sent 810 sets of variants in the KPTimes test split. These variants often refer to the same concept (e.g. “ Marijuana; Pot; Weed “), but can sometimes be simply semantically related (e.g.  “ Bridges; Tunnels “). Thereafter, keyphrase variants will be used during model evaluation for reducing the number of mismatches associated with commonly used lexical overlap metrics.
+5 Performance of existing models
+We train and evaluate several keyphrase genera- tion models to understand the challenges of KPTi- mes and its usefulness for training models.
+5.1 Evaluation metrics
+We follow the common practice and evaluate the performance of each model in terms of f-measure (F 1 ) at the top N = 10 keyphrases, and apply stemming to reduce the number of mismatches. We also report the Mean Average Precision (MAP) scores of the ranked lists of keyphrases.
+5.2 Models
+Baseline: FirstPhrase
+Position is a strong feature for keyphrase extrac- tion, simply because texts are usually written so that the most important ideas go first ( Marcu , 1997 ). In news summarization for example, the lead baseline –that is, the first sentences from the document–, while incredibly simple, is still a com- petitive baseline ( Kedzie et al. , 2018 ).  Similar to the lead baseline, we compute the FirstPhrases baseline that extracts the first N keyphrase candi- dates 8 from a document.
+Baseline, unsupervised: MultipartiteRank
+The second baseline we consider, MultipartiteR- ank ( Boudin , 2018 ), represents the state-of-the- art in unsupervised graph-based keyphrase extrac- tion. It relies on a multipartite graph represen- tation to enforce topical diversity while ranking keyphrase candidates. Just as FirstPhrases, this model is bound to the content of the document and cannot generate missing keyphrases.  We use the implementation of MultipartiteRank available in pke 9 ( Boudin , 2016 ).
+State-of-the-art, supervised: CopyRNN
+The generative neural model we include in this study is CopyRNN ( Meng et al. , 2017 ), an encoder-decoder model that incorporates a copy- ing mechanism ( Gu et al. , 2016 ) in order to be able to generate phrases that rarely occur. When properly trained, this model was shown to be very effective in extracting keyphrases from scientific abstracts. CopyRNN has been further extended by ( Chen et al.  , 2018 ) to include correlation con- straints among keyphrases which we do not in- clude here as it yields comparable results.Two models were trained to bring evidence on the necessity to have datasets from multiple do- mains. CopySci was trained using scientific ab- stracts (KP20k) and CopyNews using newspaper articles ( KPTimes ), the two models use the same architecture.
+5.3 Results
+Model performances for each dataset are reported in Table 2 . Extractive baselines show the best re- sults for KPCrowd and DUC-2001 which is not surprising given that these datasets exhibit the
+8 Sequences of adjacent nouns with one or more preceding adjectives of length up to five words. 9 https://github.com/boudinfl/pke
+ KPCrowd DUC KPTimes JPTimes SemEval KP20k F @10 MAP F @10 MAP F @10 MAP F @10 MAP F @10 MAP F @10 MAP FirstPhrases 17.1 16.5 24.6 22.3 9.2 8.4 13.5 13.1 13.8 10.5 13.5 12.6 MultipartiteRank 18. 2 17.0 25.6 24.9 11.2 10.1 16.9 16.5 14.3 10.6 13.6 13.3 CopySci 15.5 11.1 12.7 9.7 11.0 10.6 18.9 19.8 20.3 13.8 25.4 28.7 CopyNews 8. 4 4.2 10.5 7.2 39.3 50.9 24.6 26.5 7.0 3.5 6.6 5.1
+Table 2: Performance on benchmark datasets composed of newspaper article, full scientific article and scientific article abstract. The generation models CopySci and CopyNews were trained respectively on KP20k and KPTimes . The dataset presented in this work are written in italic. lowest ratio of absent keyphrases. Neural-based models obtain the greatest performance, but only for the dataset on which they were trained. We therefore see that these models do not general- ize well across domains, confirming previous pre- liminary findings ( Meng et al. , 2017 ) and exacer- bating the need for further research on this topic.  Interestingly, CopyNews outperforms the other models on JPTimes and achieves very low scores for KPCrowd and DUC-2001, although all these datasets are from the same domain. This empha- sizes the differences that exist between the reader- and editor-assigned gold standard.  The score dif- ference may be explained by the ratio of absent keyphrases that differs greatly between the reader- annotated datasets and JPTimes (see Table 1 ), and thus question the use of these rather extractive datasets for evaluating keyphrase generation.Finally, we note that the performance of Copy- News on KPTimes is significantly higher than that of CopySci on KP20k, proving that a more uni- form and consistent annotation makes it easier to learn a good model.
+6 Conclusion
+In this paper we presented KPTimes , a large-scale dataset of newswire articles to train and test deep learning models for keyphrase genera- tion. The dataset and the code are available at https://github.com/ygorg/KPTimes . Large datasets have driven rapid improvement in other natural language generation tasks, such as machine translation or summarization.  We hope that KPTimes will play this role and help the com- munity in devising more robust and generalizable neural keyphrase generation models.
+References
+James Allan. 2012. Topic detection and tracking: event-based information organization ,volume 12. Springer Science & Business Media.Florian Boudin. 2016. pke: an open source python-based keyphrase extraction toolkit . In Proceedings of COLING 2016, the 26th Interna- tional Conference on Computational Linguistics: System Demonstrations , pages 69–73, Osaka, Japan. The COLING 2016 Organizing Committee. Florian Boudin. 2018.  Unsupervised keyphrase extraction with multipartite graphs . In Proceedings of the 2018 Conference of the North American Chapter of the Association for Computa- tional Linguistics: Human Language Technologies, Volume 2 (Short Papers) , pages 667–672, New Orleans, Louisiana. Association for Computational Linguistics.
+Jun Chen, Xiaoming Zhang, Yu Wu, Zhao Yan, and Zhoujun Li.2018. Keyphrase generation with correlation constraints . In Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing , pages 4057–4066, Brussels, Belgium. Association for Computational Linguistics.
+Wang Chen, Hou Pong Chan, Piji Li, Lidong Bing,and Irwin King. 2019. An integrated approach for keyphrase generation via exploring the power of retrieval and extraction In Proceedings of the 2019 Conference of the North American Chapter of the Association for Computa- tional Linguistics: Human Language Technologies, Volume 1 (Long and Short Papers) , pages 2846– 2856, Minneapolis, Minnesota. Association for Computational Linguistics..
+David A. Evans and Chengxiang Zhai. 1996.Noun phrase analysis in large unrestricted text for information retrieval In Proceedings of the 34th Annual Meeting of the Association for Computational Linguistics , pages 17–24, Santa Cruz, California, USA. Association for Computational Linguistics..
+Jiatao Gu, Zhengdong Lu, Hang Li, and Victor O.K.Li. 2016. Incorporating Copying Mechanism in Sequence-to-Sequence Learning In Proceedings of the 54th Annual Meeting of the
+.Association for Computational Linguistics (Volume 1: Long Papers) , pages 1631–1640, Berlin, Ger- many. Association for Computational Linguistics.
+Yiping Jin, Min-Yen Kan, Jun- Ping Ng,and Xiangnan He. 2013. Mining scientific terms and their definitions: A study of the ACL anthology In Proceedings of the 2013 Conference on Empirical Methods in Natural Language Processing , pages 780–790, Seattle, Washington, USA. Association for Computational Linguistics.
+Chris Kedzie, Kathleen...(truncated)
+
+================================== Ai Message ==================================
+
+Editors’ annotations are more uniform and consistent than those in existing datasets, likely because of tag suggestions and editors’ domain expertise. They use a more controlled vocabulary with frequent keyphrases resembling topic descriptors, and they are more likely to assign generalized keyphrases that do not occur in the document (about 55%).

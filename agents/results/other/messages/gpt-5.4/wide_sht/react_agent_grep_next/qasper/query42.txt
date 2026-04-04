@@ -1,0 +1,71 @@
+================================ Human Message =================================
+
+QUERY:
+what was their result?
+
+TABLE OF CONTENTS (TOC):
+1 | EmoAtt at EmoInt-2017: Inner attention sentence embedding for Emotion Intensity
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2 Proposed Approach
+1.4 | 3 Experimental Setup
+1.5 | 4 Results and Discussion
+1.6 | 4.1 Anger Dataset
+1.7 | 4.2 Joy Dataset
+1.8 | 4.3 Fear Dataset
+1.9 | 4.4 Sadness Dataset
+1.10 | 5 Conclusions
+1.11 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_7sfp4T7OGU8Xr33WP4Hs36zu)
+ Call ID: call_7sfp4T7OGU8Xr33WP4Hs36zu
+  Args:
+    section_id: 1.5
+
+================================= Tool Message =================================
+Name: read_section
+
+4 Results and Discussion
+In this section we report the results of the exper- iments we performed to test our proposed model. In general, as Table 2 shows, our intra-sentence attention RNN was able to outperform the Weka baseline ( Mohammad and Bravo-Marquez , 2017a )
+on the development dataset by a solid margin. Moreover, the model manages to do so without any additional resources, except pre-trained word embeddings.  These results are, however, reversed for the test dataset, where our model performs worse than the baseline. This shows that the model is not able to generalize well, which we think is related to the missing semantic information due to the vocabulary gap we observed between the datasets and the GloVe embeddings.To validate the usefulness of our binary fea- tures, we performed an ablation experiment and trained our best models for each corpus without them.  Table 3 summarizes our results in terms of Pearson correlation on the development portion of the datasets. As seen, performance decreases in all cases, which shows that indeed these features are critical for performance, allowing the model to better capture the semantics of words missing in GloVe. In this sense, we think the usage of ad- ditional features, such as the ones derived from emotion or sentiment lexicons could indeed boost our model capabilities. This is proposed for future work. On the other hand, our model also offers us very interesting insights on how the learning is per- formed, since we can inspect the attention weights that the neural network is assigning to each spe- cific token when predicting the emotion intensity. By visualizing these weights we can have a clear notion about the parts of the sentence that the model considers are more important. As Figure 1 shows, we see the model seems to be have learned to attend the words that naturally bear emotion or sentiment.  This is specially patent for the exam- ples extracted from the Joy dataset, where posi- tive words are generally identified. However, we also see some examples where the lack of seman- tic information about the input words, specially for hashtags or user mentions, makes the model unable to identify some of these the most salient words to predict emotion intensity. Several pre- processing techniques can be implemented to alle- viate this problem, which we intend to explore in the future.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_qhxyOaUSYedOIqnCYE897zlg)
+ Call ID: call_qhxyOaUSYedOIqnCYE897zlg
+  Args:
+    pattern: Table 2|Pearson|test dataset|development dataset
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.3 | 2 Proposed Approach
+Our work is related to deep learning techniques for emotion recognition in images ( Dhall et al. , 2015 ) and videos ( Ebrahimi Kahou et al. , 2015 ), as well as and emotion classification ( Lakomkin et al. , 2017 ). Our work is also related to Liu and Lane ( 2016 ), who introduced an attention RNN
+for slot filling in Natural Language Understanding.  Since in the task the input-output alignment is ex- plicit, they investigated how the alignment can be best utilized in encoder-decoder models conclud- ing that the attention mechanisms are helpful.EmoAtt is based on a bidirectional RNN that receives an embedded input sequence x = { x 1 , ..., x n } and returns a list of hidden vec- tors that capture the context each input token { h 1 , ..., h n } .  To improve the capabilities of the RNN to capture short-term temporal dependencies ( Mesnil et al. , 2013 ), we define the following:
+¯ x i = [ x i − d ; ... ; x i ; ... ; x i + d ] (1)
+Where ¯ x i can be regarded as a context win- dow of ordered word embedding vectors around position i , with a total size of 2 d + 1 .  To fur- ther complement the context-aware token repre- sentations, we concatenate each hidden vector to a vector of binary features b i , extracted from each tweet token, defining an augmented hidden state ¯ h i = [ h i ; b i ] . Finally, we combine our n aug- mented hidden states, compressing them into a single vector, using a global intra-sentence atten- tional component in a fashion similar to Vinyals et al.  ( 2015 ). Formally,
+u j = v > tanh( W a [¯ h n ; ¯ h j ]) (2) α j = softmax( u j ) (3) t = n X j =1 α j · ¯ h j (4)
+Where t is the vector that compresses the input sentence x , focusing on the relevant parts to esti- mate emotion intensity.  We input this compressed sentence representation into a feed-forward neural network, ˆ y = W s t , where ˆ y is the final predicted emotion intensity. As a loss function we use the mini-batch negative Pearson correlation with the gold-standard.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_38wNwUCY0685UXtZNJrJSUHw)
+ Call ID: call_38wNwUCY0685UXtZNJrJSUHw
+  Args:
+    section_id: 1.6
+
+================================= Tool Message =================================
+Name: read_section
+
+4.1 Anger Dataset
+For the anger dataset, our experiments showed that GloVe embeddings of dimension 50 outperformed others, obtaining an average gain of 0.066 corre- lation over embeddings of size 25 and of 0.021
+2 github.com/epochx/emoatt
+Corpus Dropout Embeddings λ h EmoAtt Baseline ρ dev ρ test ρ dev ρ test Sadness 0.8 GloVe Twitter 50 0. 20 50 0.586 0.520 0.562 0.648 Joy 0.8 GloVe Twitter 50 0.20 100 0.790 0.537 0.703 0.654 Anger 0.5 GloVe Twitter 50 0.01 100 0.734 0.470 0.605 0.639 Fear 0.9 GloVe Twitter 50 0. 05 100 0.644 0.561 0.574 0.652 Average 0.689 0.522 0.611 0.648
+Table 2: Summary of the best results.Dataset w/features w/o features Sadness 0.586 0.543 Joy 0.790 0.781 Anger 0.734 0.662 Fear 0.644 0.561
+ Table 3: Impact of adding our binary features.Figure 1: Example of attention weights for the Joy dataset. White denotes more weight.for embeddings of size 100. However on ly the first of these values was significant, with a p-value of 3 . 86 × 10 − 5 . Regarding the hidden size of the RNN, we could not find statistical difference across the tested sizes. Dropout also had inconsis- tent effects, but was generally useful.
+
+================================== Ai Message ==================================
+
+They report that EmoAtt outperformed the Weka baseline on the development set but underperformed it on the test set. In Table 2, EmoAtt achieved average Pearson correlations of 0.689 on development and 0.522 on test, versus the baseline’s 0.611 on development and 0.648 on test.

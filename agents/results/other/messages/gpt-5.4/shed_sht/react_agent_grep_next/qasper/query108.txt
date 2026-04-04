@@ -1,0 +1,48 @@
+================================ Human Message =================================
+
+QUERY:
+How does labeling scheme look like?
+
+TABLE OF CONTENTS (TOC):
+1 | Common-Knowledge Concept Recognition for SEVA
+1.1 | Abstract
+1.1.1 | INTRODUCTION
+1.1.2 | BACKGROUND AND MOTIVATION
+1.1.3 | CONCEPT RECOGNITION
+1.1.3.1 | BIO Labelling Scheme
+1.1.3.2 | Abbreviations
+1.1.3.3 | Common-Knowledge Deﬁnitions
+1.1.3.3.1 | Deﬁnition: Acceptable Risk
+1.1.3.4 | CR Dataset Construction and Pre-processing
+1.1.3.5 | Fine tuning with BERT
+1.1.4 | RELATION EXTRACTION
+1.1.4.1 | Hyponyms from Deﬁnitions
+1.1.4.2 | Hyponyms from POS tags
+1.1.4.3 | Relations from Abbreviations
+1.1.4.4 | Relation Extraction using Verb Phrase Chunking
+1.1.5 | CONCLUSION AND FUTURE WORK
+1.1.5.1 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_jM67KqRLlPxMp9dzSGwwbILN)
+ Call ID: call_jM67KqRLlPxMp9dzSGwwbILN
+  Args:
+    section_id: 1.1.3.1
+
+================================= Tool Message =================================
+Name: read_section
+
+BIO Labelling Scheme
+1. abb : represents abbreviations such as TRL representing Technology Readiness Level .2. grp : represents a group of people or an individual such as Electrical Engineers ,Systems Engineers or a Project Manager .
+3. syscon : represents any system concepts such as engineer- ing unit , product ,hardware , software , etc. They mostly represent physical concepts.
+4. opcon : represents operational concepts such as decision analysis process , technology maturity assessment ,system requirements review , etc.
+5. seterm :represents generic terms that are frequently used in SE text and those that do not fall under syscon or op- con such as project , mission , key performance parameter , audit etc.
+6. event : represents event-like information in SE text such as Pre-Phase A ,Phase A , Phase B , etc.
+7. org : represents an organization such as ‘NASA’ ,‘aerospace industry’ , etc.
+8. art : represents names of artifacts or instruments such as ‘AS1300’9. cardinal : represents numerical values such as ‘1’ , ‘100’ ,’one’ etc.
+10. loc : represents location-like entities such as component facilities or centralized facility .11. mea : represents measures, features, or behaviors such as cost , risk ,or feasibility .
+
+================================== Ai Message ==================================
+
+The labeling scheme is a BIO labelling scheme with entity types: abb, grp, syscon, opcon, seterm, event, org, art, cardinal, loc, and mea. These represent, respectively, abbreviations; groups or individuals; system concepts; operational concepts; generic SE terms; event-like information; organizations; artifacts or instruments; numerical values; location-like entities; and measures/features/behaviors.

@@ -1,0 +1,60 @@
+================================ Human Message =================================
+
+QUERY:
+How big are two introduced datasets?
+
+TABLE OF CONTENTS (TOC):
+1 | Automatically Inferring Gender Associations from Language
+1.1 | Kathleen McKeown
+1.1.1 | Abstract
+1.1.1.1 | 1 Introduction
+1.1.1.1.1 | 2 Related Work
+1.1.1.1.1.1 | 3 Data Collection
+1.1.1.1.1.1.1 | 4 Inferring Word-Level Associations
+1.1.1.1.1.1.1.1 | 4.1 Methods
+1.1.1.1.1.1.1.1.1 | 4.2 Findings
+1.1.1.1.1.1.1.1.1.1 | 5 Clustering & Cluster Labeling
+1.1.1.1.1.1.1.1.1.1.1 | 5.1 Methods
+1.1.1.1.1.1.1.1.1.1.1.1 | 5.2 Findings
+1.1.1.1.1.1.1.1.1.1.1.1.1 | 6 Human Evaluations
+1.1.1.1.1.1.1.1.1.1.1.1.1.1 | 7 Conclusion
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | References
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | A Appendix
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | A.1 Word-Level Results
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | A.2 Clustering and Cluster Labeling Results
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | A.3 Human Evaluation Results
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_x6znUAA0k3lsCR9HUqtlmYtM)
+ Call ID: call_x6znUAA0k3lsCR9HUqtlmYtM
+  Args:
+    section_id: 1.1.1.1.1.1
+
+================================= Tool Message =================================
+Name: read_section
+
+3 Data Collection
+Our first dataset contains articles from celebrity magazines People , UsWeekly , and E!News . We labeled each article for whether it was report- ing on men, women, or neither/unknown. 2 To do this, we first extracted the article’s topic tags. Some of these tags referred to people, but oth- ers to non-people entities, such as “Gift Ideas” or “Health. ” To distinguish between these types of tags, we queried each tag on Wikipedia and checked whether the top page result contained a “Born” entry in its infobox – if so, we concluded that the tag referred to a person.Then, from the person’s Wikipedia page, we de- termined their gender by checking whether the in- troductory paragraphs of the page contained more male or female pronouns.  This method was simple but effective, since pronouns in the introduction al- most always resolve to the subject of that page. In fact, on a sample of 80 tags that we manually an- notated, we found that comparing pronoun counts predicted gender with perfect accuracy. Finally, if an article tagged at least one woman and did not tag any men, we labeled the article as Female; in the opposite case, we labeled it as Male. Our second dataset contains reviews from Rate- MyProfessors (RMP), an online platform where students can review their professors. We included all 5,604 U.S. schools on RMP, and collected all reviews for CS professors at those schools. We la- beled each review with the gender of the professor whom it was about, which we determined by com- paring the count of male versus female pronouns over all reviews for that professor.  This method was again effective, because the reviews are ex-
+2 Our method unfortunately could not take into account non-binary gender identities, as it relied on she/her and he/his pronouns, and could not easily integrate the singular they/them, nor could we find sufficient examples of ze/zir or other non-binary pronouns in our data. That said, we will continue striving towards better inclusion, and hope in future work to expand our methods beyond the binary. pressly written about a certain professor, so the pronouns typically resolve to that professor.In addition to extracting the text of the articles or reviews, for each dataset we also collected var- ious useful metadata. For the celebrity dataset, we recorded each article’s timestamp and the name of the author, if available.  Storing author names creates the potential to examine the relationship between the gender of the author and the gender of the subject, such as asking if there are differ- ences between how women write about men and how men write about men. In this work, we did not yet pursue this direction because we wanted to begin with a simpler question of how gender is discussed: regardless of the gender of the au- thors, what is the content being put forth and con- sumed?  Furthermore, we were unable to extract author gender in the professor dataset since the RMP reviews are anonymous. However, in future work, we may explore the influence of author gen- der in the celebrity dataset.For the professor dataset, we captured metadata such as each review’s rating, which indicates how the student feels about the professor on a scale of AWFUL to AWESOME.  This additional variable in our data creates the option in future work to factor in sentiment; for example, we could study whether there are differences in language used when criticizing a female versus a male professor.
+4 Inferring Word-Level Associations
+Our first goal was to discover words that are sig- nificantly associated with men or women in a given domain. We employed an approach used by Bamman et al. 2014 in their work to analyze dif- ferences in how men and women write on Twitter.
+4.1 Methods
+First, to operationalize, we say that term i is as- sociated with gender j if, when discussing indi- viduals of gender j , i is used with unusual fre- quency – which we can check with statistical hy- pothesis tests. Let f i represent the likelihood of i appearing when discussing women or men. f i is unknown, but we can model the distribution of all possible f i using the corpus of texts that we have from the domain.  We construct a gender- balanced version of the corpus by randomly un- dersampling the more prevalent gender until the proportions of each gender are equal. Assuming a non-informative prior distribution on f i , the pos-
+ Female-Associated Male-Associated girl, cover, husband, wedding, gown, fash- ion, mom, pregnancy, photo, top, hair, look movie, president, wife, dad, death, film, host, assault, claim, miscon- duct, action, director respond, email, rec- ommend, help, love, accept, need, send, re- ply, communicate learn, teach, know, write, lecture, chal- lenge, solve, ramble, push, joke, bore easy, rude, wonder- ful, kind, caring, hot, strict, timely, mean, disorganized, beautiful knowledgeable, real, challenging, bril- liant, arrogant, hard, passionate, practical
+ Table 2: Top : Sample from the top-25 most gender- associated nouns in the celebrity domain. Middle : pro- fessor domain, sample from top-25 verbs . Bottom : professor domain, sample from top-25 adjectives . All associations listed are p ≤ 0 . 05 , with Bonferroni cor- rection. See Appendix for all top-25 nouns, verbs, and adjectives for both genders in both domains. terior distribution is Beta( k i , N − k i ), where k i is the count of i in the gender-balanced corpus and N is the total count of words in that corpus.As Bamman et al. 2014 discuss, “the distri- bution of the gender-specific counts can be de- scribed by an integral over all possible f i . This integral defines the Beta-Binomial distribution ( Gelman et al.  , 2004 ), and has a closed form so- lution.” We say that term i is significantly asso- ciated with gender j if the cumulative distribu- tion at k ij (the count of i in the j portion of the gender-balanced corpus) is p ≤ 0 . 05 .  As in the original work, we apply the Bonferroni correction ( Dunn , 1961 ) for multiple comparisons because we are computing statistical tests for thousands of hypotheses.
+4.2 Findings
+We applied this method to discover gender- associated words in both domains. In Table 2 , we present a sample of the most gender-associated nouns from the celebrity domain. Several themes emerge: for example, female celebrities seem to be more associated with appearance (“gown,” “photo,” “hair,” “look”), while male celebrities are more associated with creating content (“movie,” “film,” “host,” “director”).  This echoes real-world trends: for instance, on the red carpet, actresses tend to be asked more questions about their ap- pearance - what brands they are wearing, how
+long it took to get ready, etc. - while actors are asked questions about their careers and creative processes (as an example, see Selby 2014 ).Table 2 also includes some of the most gender- associated verbs and adjectives from the professor domain.  Female CS professors seem to be praised for being communicative and personal with stu- dents (“respond,” “communicate,” “kind,” “car- ing”), while male CS professors are recognized for being knowledgeable and challenging the stu- dents (“teach,”, “challenge,” “brilliant,” “practi- cal”).  These trends are well-supported by so- cial science literature, which has found that fe- male teachers are praised for “personalizing” in- struction and interacting extensively with students, while male teachers are praised for using “teacher as expert” styles that showcase mastery of material ( Statham et al. , 1991 ). These findings establish that there are clear dif- ferences in how people talk about women and men – even with Bonferroni correction, there are still over 500 significantly gender-associated nouns, verbs, and adjectives in the celebrity domain and over 200 in the professor domain. Furthermore, the results in both domains align with prior stud- ies and real world trends, which validates that our methods can capture meaningful patterns and innovatively provide evidence at the large-scale.  This analysis also hints that it can be helpful to abstract from words to topics to recognize higher- level patterns of gender associations, which moti- vates our next section on clustering.
+5 Clustering & Cluster Labeling
+With word-level associations in hand, our next goals were to discover coherent clusters among the words and to automatically label those clusters.
+5.1 Methods
+First, we trained domain-specific word embed- dings using the Word2Vec ( Mikolov et al. , 2013 ) CBOW model ( w ∈ R 100 ). Then, we used k- means clustering to cluster the embeddings of the gender-associated words. Since k-means may con- verge at local optima, we ran the algorithm 50 times and kept the model with the lowest sum of squared errors. To automatically label the clusters, we com- bined the grounded knowledge of WordNet ( Miller , 1995 ) and context-sensitive strengths of domain-specific word embeddings. Our algo-
+rithm is similar to Poostchi and Piccardi 2018 ’s approach, but we extend their method by introduc- ing domain-specific word embeddings for cluster- ing as well as a new technique for sense disam- biguation.  Given a cluster, our algorithm proceeds with the following three steps:
+1. Sense disambiguation :The goal is to as- sign each cluster word to one of its WordNet synsets; let S represent the collection of cho- sen synsets. We know that these words have been clustered in domain-specific embedding space, which means that in the context of the domain, these words are very close semanti- cally. Thus, we choose S ∗ that minimizes the total distance between its synsets.
+2. Candidate label generation : In this step, we generate L ,the set of possible cluster labels. Our approach is simple: we take the union of all hypernyms of the synsets in S ∗ .
+3. Candidate label ranking : Here, we rank the synsets in L .We want labels that are as close to all o...(truncated)
+
+================================== Ai Message ==================================
+
+The paper introduces two datasets: a celebrity dataset of articles from People, UsWeekly, and E!News, and a professor dataset consisting of all reviews for CS professors across all 5,604 U.S. schools on RateMyProfessors. The exact number of articles or reviews is not given.

@@ -1,0 +1,129 @@
+================================ Human Message =================================
+
+QUERY:
+Is this more effective for low-resource than high-resource languages?
+
+TABLE OF CONTENTS (TOC):
+1 | Evaluating the Cross-Lingual Effectiveness of Massively Multilingual Neural Machine Translation
+1.1 | Abstract
+1.1.1 | 1 Introduction
+1.1.1.1 | 2 Massively Multilingual Neural Machine Translation Model
+1.1.1.1.1 | 2.1 Model Architecture
+1.1.1.1.1.1 | 2.2 Pre-training
+1.1.1.1.1.1.1 | 2.3 Fine-tuning mNMT Encoder
+1.1.1.1.1.1.1.1 | 2.4 Differences with mBERT
+1.1.1.1.1.1.1.1.1 | 3 Experiments and Results
+1.1.1.1.1.1.1.1.1.1 | 3.1 XNLI: Cross-lingual NLI
+1.1.1.1.1.1.1.1.1.1.1 | 3.2 MLDoc: Document Classiﬁcation
+1.1.1.1.1.1.1.1.1.1.1.1 | 3.3 Cross-lingual Intent Classiﬁcation
+1.1.1.1.1.1.1.1.1.1.1.1.1 | 3.4 POS Tagging
+1.1.1.1.1.1.1.1.1.1.1.1.1.1 | 3.5 Named Entity Recognition
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | 4 Analysis
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | 5 Related Work
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | 6 Conclusion and Future Work
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | References
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | A Supplementary Material
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_bJnmwhNcqu5JqvNeTs3lFgxB)
+ Call ID: call_bJnmwhNcqu5JqvNeTs3lFgxB
+  Args:
+    pattern: low-resource|high-resource|resource
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | 6 Conclusion and Future Work
+We train a massively multilingual NMT system using parallel data from 103 languages and ex- ploit representations extracted from the encoder for cross-lingual transfer on various classification and sequence tagging tasks spanning over 50 lan- guages. We find that the positive language trans- fer visible in improved translation quality for low resource languages is also reflected in the cross- lingual transferability of the extracted representa- tions.  The gains observed on various tasks over mBERT suggest that the translation objective is competitive with specialized approaches to learn cross-lingual embeddings.We find that there is a trade off between the number of languages in the multilingual model and efficiency of the learned representations due to the limited capacity. Scaling up the model to in- clude more languages without diminishing trans- fer learning capability is a direction for future work.  Finally, one could also consider integrating mBERT’s objective with the translation objective to pre-train the mNMT system.
+References
+Roee Aharoni, Melvin Johnson, and Orhan Firat. 2019. Massively multilingual neural machine translation. arXiv preprint arXiv:1903.00089 .
+Mikel Artetxe and Holger Schwenk. 2018.Mas- sively multilingual sentence embeddings for zero- shot cross-lingual transfer and beyond. arXiv preprint arXiv:1812.10464 .
+Mia Xu Chen, Orhan Firat, Ankur Bapna,Melvin Johnson, Wolfgang Macherey, George Foster, Llion Jones, Mike Schuster, Noam Shazeer, Niki Parmar, Ashish Vaswani, Jakob Uszkoreit, Lukasz Kaiser, Zhifeng Chen, Yonghui Wu, and Macduff Hughes. 2018. The best of both worlds: Combining recent advances in neural machine translation .  In Proceed- ings of the 56th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Pa- pers) , pages 76–86, Melbourne, Australia. Associa- tion for Computational Linguistics.
+Alexis Conneau, Ruty Rinott, Guillaume Lample,Ad- ina Williams, Samuel R. Bowman, Holger Schwenk, and Veselin Stoyanov. 2018. Xnli: Evaluating cross- lingual sentence representations. In Proceedings of the 2018 Conference on Empirical Methods in Nat- ural Language Processing . Association for Compu- tational Linguistics.
+Jacob Devlin, Ming-Wei Chang, Kenton Lee, and Kristina Toutanova.2018. Bert: Pre-training of deep bidirectional transformers for language understand- ing. arXiv preprint arXiv:1810.04805 .
+Akiko Eriguchi, Melvin Johnson, Orhan Firat,Hideto Kazawa, and Wolfgang Macherey. 2018. Zero- shot cross-lingual classification using multilin- gual neural machine translation. arXiv preprint arXiv:1809.04686 .
+Manaal Faruqui and Chris Dyer. 2014.Improving vec- tor space word representations using multilingual correlation. In Proceedings of the 14th Conference of the European Chapter of the Association for Com- putational Linguistics , pages 462–471.
+Orhan Firat, Kyunghyun Cho, and Yoshua Ben- gio.2016. Multi-way, multilingual neural ma- chine translation with a shared attention mechanism. arXiv preprint arXiv:1601.01073 .
+Jeremy Howard and Sebastian Ruder. 2018.Universal language model fine-tuning for text classification. In Proceedings of the 56th Annual Meeting of the As- sociation for Computational Linguistics (Volume 1: Long Papers) , pages 328–339.
+Melvin Johnson, Mike Schuster, Quoc V Le, Maxim Krikun,Yonghui Wu, Zhifeng Chen, Nikhil Thorat, Fernanda Vi´egas, Martin Wattenberg, Greg Corrado, et al. 2017. Google’s multilingual neural machine translation system: Enabling zero-shot translation. Transactions of the Association of Computational Linguistics , 5(1):339–351.
+Taku Kudo and John Richardson. 2018. Sentencepiece:A simple and language independent subword tok- enizer and detokenizer for neural text processing. In Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing: System Demonstrations , pages 66–71.
+Guillaume Lample and Alexis Conneau. 2019.Cross- lingual language model pretraining. arXiv preprint arXiv:1901.07291 .
+Bryan McCann, James Bradbury, Caiming Xiong,and Richard Socher. 2017. Learned in translation: Con- textualized word vectors. In Advances in Neural In- formation Processing Systems , pages 6294–6305.
+Phoebe Mulcaire, Jungo Kasai, and Noah Smith.2019. Polyglot contextual representations im- prove crosslingual transfer. arXiv preprint arXiv:1902.09697 .
+Joakim Nivre, Mitchell Abrams,ˇ Zeljko Agi´c, Lars Ahrenberg, Lene Antonsen, Maria Jesus Aranzabe, Gashaw Arutie, Masayuki Asahara, Luma Ateyah, Mohammed Attia, et al. 2018. Universal dependen- cies 2.2.
+Kishore Papineni, Salim Roukos, Todd Ward,and Wei- Jing Zhu. 2002. Bleu: a method for automatic eval- uation of machine translation. In Proceedings of the 40th annual meeting on association for compu- tational linguistics , pages 311–318. Association for Computational Linguistics.
+Matthew Peters, Mark Neumann, Mohit Iyyer, Matt Gardner, Christopher Clark,Kenton Lee, and Luke Zettlemoyer. 2018. Deep contextualized word rep- resentations. In Proceedings of the 2018 Confer- ence of the North American Chapter of the Associ- ation for Computational Linguistics: Human Lan- guage Technologies, Volume 1 (Long Papers) , pages 2227–2237.
+Telmo Pires, Eva Schlinger, and Dan Garette. 2019.How multilingual is multilingual bert ? In Pro- ceedings of Association of Computational Linguis- tics (ACL) .
+Alec Radford, Karthik Narasimhan, Tim Salimans,and Ilya Sutskever. Improving language understanding by generative pre-training.
+Sebastian Ruder, Ivan Vuli´c, and Anders Søgaard.2017. A survey of cross-lingual word embedding models. arXiv preprint arXiv:1706.04902 .
+Erik F. Tjong Kim Sang. 2002.Introduction to the conll-2002 shared task: Language-independent named entity recognition . CoRR , cs.CL/0209010.
+Erik F Tjong Kim Sang and Fien De Meulder. 2003.Introduction to the conll-2003 shared task: Language-independent named entity recognition. In Proceedings of the Seventh Conference on Natural Language Learning at HLT-NAACL 2003 .
+Sebastian Schuster, Sonal Gupta, Rushin Shah, and Mike Lewis.2018. Cross-lingual transfer learning for multilingual task oriented dialog. arXiv preprint arXiv:1810.13327 .
+Holger Schwenk and Xian Li. 2018.A corpus for mul- tilingual document classification in eight languages. In Proceedings of the Eleventh International Confer- ence on Language Resources and Evaluation (LREC 2018) , Paris, France. European Language Resources Association (ELRA).
+Noam Shazeer and Mitchell Stern. 2018. Adafactor:Adaptive learning rates with sublinear memory cost. arXiv preprint arXiv:1804.04235 .
+Jonathan Shen, Patrick Nguyen, Yonghui Wu, and Zhifeng Chen et al.2019. Lingvo: a modular and scalable framework for sequence-to-sequence mod- eling. arXiv preprint arXiv:1902.08295 .
+Wilson L Taylor. 1953. cloze procedure: A new tool for measuring readability.Journalism Bulletin , 30(4):415–433.
+Shyam Upadhyay, Manaal Faruqui, Chris Dyer,and Dan Roth. 2016. Cross-lingual models of word em- beddings: An empirical comparison. In Proceed- ings of the 54th Annual Meeting of the Association for Computational Linguistics , pages 1661–1670.
+Jakob Uszkoreit, Jay M Ponte, Ashok C Popat,and Moshe Dubiner. 2010. Large scale parallel docu- ment mining for machine translation. In Proceed- ings of the 23rd International Conference on Com- putational Linguistics , pages 1101–1109. Associa- tion for Computational Linguistics.
+Ashish Vaswani, Noam Shazeer, Niki Parmar,Jakob Uszkoreit, Llion Jones, Aidan N Gomez, Łukasz Kaiser, and Illia Polosukhin. 2017. Attention is all you need. In Advances in Neural Information Pro- cessing Systems , pages 5998–6008.
+Shijie Wu and Mark Dredze. 2019. Beto,bentz, be- cas: The surprising cross-lingual effectiveness of bert. arXiv preprint arXiv:1904.09077 .
+Yonghui Wu, Mike Schuster, Zhifeng Chen,Quoc V Le, Mohammad Norouzi, Wolfgang Macherey, Maxim Krikun, Yuan Cao, Qin Gao, Klaus Macherey, et al. 2016. Google’s neural ma- chine translation system: Bridging the gap between human and machine translation. arXiv preprint arXiv:1609.08144 .
+Daniel Zeman, Jan Hajiˇc, Martin Popel,Martin Pot- thast, Milan Straka, Filip Ginter, Joakim Nivre, and Slav Petrov. 2018. Conll 2018 shared task: Mul- tilingual parsing from raw text to universal depen- dencies. In Proceedings of the CoNLL 2018 Shared Task: Multilingual Parsing from Raw Text to Univer- sal Dependencies , pages 1–21.
+A Supplementary Material
+In this section we provide the list of languages codes used throughout this paper and the statistics of the datasets used for the downstream tasks. Language Id Language Id Language Id Language Id Afrikaans af Galician gl Latvian lv Sindhi sd Albanian sq Georgian ka Lithuanian lt Sinhalese si Amharic am German de Luxembouish lb Slovak sk Arabic ar Greek el Macedonian mk Slovenian sl Armenian hy Gujarati gu Malagasy mg Somali so Azerbaijani az Haitian Creole ht Malay ms Spanish es Basque eu Hausa ha Malayalam ml Sundanese su Belarusian be Hawaiian haw Maltese mt Swahili sw Bengali bn Hebrew iw Maori mi Swedish sv Bosnian bs Hindi hi Marathi mr Tajik tg Bulgarian bg Hmong hmn Mongolian mn Tamil ta Burmese my Hungarian hu Nepali ne Telugu te Catalan ca Icelandic is Norwegian no Thai th Cebuano ceb Igbo ig Nyanja ny Turkish tr Chinese zh Indonesian id Pashto ps Ukrainian uk Corsican co Irish ga Persian fa Urdu ur Croatian hr Italian it Polish pl Uzbek uz Czech cs Japanese ja Portuguese pt Vietnamese vi Danish da Javanese jw Punjabi pa Welsh cy Dutch nl Kannada kn Romanian ro Xhosa xh Esperanto eo Kazakh kk Russian ru Yiddish yi Estonian et Khmer km Samoan sm Yoruba yo Filipino/Tagalog tl Korean ko Scots Gaelic gd Zulu zu Finnish fi Kurdish ku Serbian sr French fr Kyrgyz ky Sesotho st Frisian fy Lao lo Shona sn
+ Table 12: List of BCP-47 language codes used throughout this paper. . #Training Samples #Dev Sa...(truncated)
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_Nuoy830UaJG96GJx4oG6MD1e)
+ Call ID: call_Nuoy830UaJG96GJx4oG6MD1e
+  Args:
+    pattern: more effective|low resource languages|high resource languages|transfer visible
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | 6 Conclusion and Future Work
+We train a massively multilingual NMT system using parallel data from 103 languages and ex- ploit representations extracted from the encoder for cross-lingual transfer on various classification and sequence tagging tasks spanning over 50 lan- guages. We find that the positive language trans- fer visible in improved translation quality for low resource languages is also reflected in the cross- lingual transferability of the extracted representa- tions.  The gains observed on various tasks over mBERT suggest that the translation objective is competitive with specialized approaches to learn cross-lingual embeddings.We find that there is a trade off between the number of languages in the multilingual model and efficiency of the learned representations due to the limited capacity. Scaling up the model to in- clude more languages without diminishing trans- fer learning capability is a direction for future work.  Finally, one could also consider integrating mBERT’s objective with the translation objective to pre-train the mNMT system.
+References
+Roee Aharoni, Melvin Johnson, and Orhan Firat. 2019. Massively multilingual neural machine translation. arXiv preprint arXiv:1903.00089 .
+Mikel Artetxe and Holger Schwenk. 2018.Mas- sively multilingual sentence embeddings for zero- shot cross-lingual transfer and beyond. arXiv preprint arXiv:1812.10464 .
+Mia Xu Chen, Orhan Firat, Ankur Bapna,Melvin Johnson, Wolfgang Macherey, George Foster, Llion Jones, Mike Schuster, Noam Shazeer, Niki Parmar, Ashish Vaswani, Jakob Uszkoreit, Lukasz Kaiser, Zhifeng Chen, Yonghui Wu, and Macduff Hughes. 2018. The best of both worlds: Combining recent advances in neural machine translation .  In Proceed- ings of the 56th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Pa- pers) , pages 76–86, Melbourne, Australia. Associa- tion for Computational Linguistics.
+Alexis Conneau, Ruty Rinott, Guillaume Lample,Ad- ina Williams, Samuel R. Bowman, Holger Schwenk, and Veselin Stoyanov. 2018. Xnli: Evaluating cross- lingual sentence representations. In Proceedings of the 2018 Conference on Empirical Methods in Nat- ural Language Processing . Association for Compu- tational Linguistics.
+Jacob Devlin, Ming-Wei Chang, Kenton Lee, and Kristina Toutanova.2018. Bert: Pre-training of deep bidirectional transformers for language understand- ing. arXiv preprint arXiv:1810.04805 .
+Akiko Eriguchi, Melvin Johnson, Orhan Firat,Hideto Kazawa, and Wolfgang Macherey. 2018. Zero- shot cross-lingual classification using multilin- gual neural machine translation. arXiv preprint arXiv:1809.04686 .
+Manaal Faruqui and Chris Dyer. 2014.Improving vec- tor space word representations using multilingual correlation. In Proceedings of the 14th Conference of the European Chapter of the Association for Com- putational Linguistics , pages 462–471.
+Orhan Firat, Kyunghyun Cho, and Yoshua Ben- gio.2016. Multi-way, multilingual neural ma- chine translation with a shared attention mechanism. arXiv preprint arXiv:1601.01073 .
+Jeremy Howard and Sebastian Ruder. 2018.Universal language model fine-tuning for text classification. In Proceedings of the 56th Annual Meeting of the As- sociation for Computational Linguistics (Volume 1: Long Papers) , pages 328–339.
+Melvin Johnson, Mike Schuster, Quoc V Le, Maxim Krikun,Yonghui Wu, Zhifeng Chen, Nikhil Thorat, Fernanda Vi´egas, Martin Wattenberg, Greg Corrado, et al. 2017. Google’s multilingual neural machine translation system: Enabling zero-shot translation. Transactions of the Association of Computational Linguistics , 5(1):339–351.
+Taku Kudo and John Richardson. 2018. Sentencepiece:A simple and language independent subword tok- enizer and detokenizer for neural text processing. In Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing: System Demonstrations , pages 66–71.
+Guillaume Lample and Alexis Conneau. 2019.Cross- lingual language model pretraining. arXiv preprint arXiv:1901.07291 .
+Bryan McCann, James Bradbury, Caiming Xiong,and Richard Socher. 2017. Learned in translation: Con- textualized word vectors. In Advances in Neural In- formation Processing Systems , pages 6294–6305.
+Phoebe Mulcaire, Jungo Kasai, and Noah Smith.2019. Polyglot contextual representations im- prove crosslingual transfer. arXiv preprint arXiv:1902.09697 .
+Joakim Nivre, Mitchell Abrams,ˇ Zeljko Agi´c, Lars Ahrenberg, Lene Antonsen, Maria Jesus Aranzabe, Gashaw Arutie, Masayuki Asahara, Luma Ateyah, Mohammed Attia, et al. 2018. Universal dependen- cies 2.2.
+Kishore Papineni, Salim Roukos, Todd Ward,and Wei- Jing Zhu. 2002. Bleu: a method for automatic eval- uation of machine translation. In Proceedings of the 40th annual meeting on association for compu- tational linguistics , pages 311–318. Association for Computational Linguistics.
+Matthew Peters, Mark Neumann, Mohit Iyyer, Matt Gardner, Christopher Clark,Kenton Lee, and Luke Zettlemoyer. 2018. Deep contextualized word rep- resentations. In Proceedings of the 2018 Confer- ence of the North American Chapter of the Associ- ation for Computational Linguistics: Human Lan- guage Technologies, Volume 1 (Long Papers) , pages 2227–2237.
+Telmo Pires, Eva Schlinger, and Dan Garette. 2019.How multilingual is multilingual bert ? In Pro- ceedings of Association of Computational Linguis- tics (ACL) .
+Alec Radford, Karthik Narasimhan, Tim Salimans,and Ilya Sutskever. Improving language understanding by generative pre-training.
+Sebastian Ruder, Ivan Vuli´c, and Anders Søgaard.2017. A survey of cross-lingual word embedding models. arXiv preprint arXiv:1706.04902 .
+Erik F. Tjong Kim Sang. 2002.Introduction to the conll-2002 shared task: Language-independent named entity recognition . CoRR , cs.CL/0209010.
+Erik F Tjong Kim Sang and Fien De Meulder. 2003.Introduction to the conll-2003 shared task: Language-independent named entity recognition. In Proceedings of the Seventh Conference on Natural Language Learning at HLT-NAACL 2003 .
+Sebastian Schuster, Sonal Gupta, Rushin Shah, and Mike Lewis.2018. Cross-lingual transfer learning for multilingual task oriented dialog. arXiv preprint arXiv:1810.13327 .
+Holger Schwenk and Xian Li. 2018.A corpus for mul- tilingual document classification in eight languages. In Proceedings of the Eleventh International Confer- ence on Language Resources and Evaluation (LREC 2018) , Paris, France. European Language Resources Association (ELRA).
+Noam Shazeer and Mitchell Stern. 2018. Adafactor:Adaptive learning rates with sublinear memory cost. arXiv preprint arXiv:1804.04235 .
+Jonathan Shen, Patrick Nguyen, Yonghui Wu, and Zhifeng Chen et al.2019. Lingvo: a modular and scalable framework for sequence-to-sequence mod- eling. arXiv preprint arXiv:1902.08295 .
+Wilson L Taylor. 1953. cloze procedure: A new tool for measuring readability.Journalism Bulletin , 30(4):415–433.
+Shyam Upadhyay, Manaal Faruqui, Chris Dyer,and Dan Roth. 2016. Cross-lingual models of word em- beddings: An empirical comparison. In Proceed- ings of the 54th Annual Meeting of the Association for Computational Linguistics , pages 1661–1670.
+Jakob Uszkoreit, Jay M Ponte, Ashok C Popat,and Moshe Dubiner. 2010. Large scale parallel docu- ment mining for machine translation. In Proceed- ings of the 23rd International Conference on Com- putational Linguistics , pages 1101–1109. Associa- tion for Computational Linguistics.
+Ashish Vaswani, Noam Shazeer, Niki Parmar,Jakob Uszkoreit, Llion Jones, Aidan N Gomez, Łukasz Kaiser, and Illia Polosukhin. 2017. Attention is all you need. In Advances in Neural Information Pro- cessing Systems , pages 5998–6008.
+Shijie Wu and Mark Dredze. 2019. Beto,bentz, be- cas: The surprising cross-lingual effectiveness of bert. arXiv preprint arXiv:1904.09077 .
+Yonghui Wu, Mike Schuster, Zhifeng Chen,Quoc V Le, Mohammad Norouzi, Wolfgang Macherey, Maxim Krikun, Yuan Cao, Qin Gao, Klaus Macherey, et al. 2016. Google’s neural ma- chine translation system: Bridging the gap between human and machine translation. arXiv preprint arXiv:1609.08144 .
+Daniel Zeman, Jan Hajiˇc, Martin Popel,Martin Pot- thast, Milan Straka, Filip Ginter, Joakim Nivre, and Slav Petrov. 2018. Conll 2018 shared task: Mul- tilingual parsing from raw text to universal depen- dencies. In Proceedings of the CoNLL 2018 Shared Task: Multilingual Parsing from Raw Text to Univer- sal Dependencies , pages 1–21.
+A Supplementary Material
+In this section we provide the list of languages codes used throughout this paper and the statistics of the datasets used for the downstream tasks. Language Id Language Id Language Id Language Id Afrikaans af Galician gl Latvian lv Sindhi sd Albanian sq Georgian ka Lithuanian lt Sinhalese si Amharic am German de Luxembouish lb Slovak sk Arabic ar Greek el Macedonian mk Slovenian sl Armenian hy Gujarati gu Malagasy mg Somali so Azerbaijani az Haitian Creole ht Malay ms Spanish es Basque eu Hausa ha Malayalam ml Sundanese su Belarusian be Hawaiian haw Maltese mt Swahili sw Bengali bn Hebrew iw Maori mi Swedish sv Bosnian bs Hindi hi Marathi mr Tajik tg Bulgarian bg Hmong hmn Mongolian mn Tamil ta Burmese my Hungarian hu Nepali ne Telugu te Catalan ca Icelandic is Norwegian no Thai th Cebuano ceb Igbo ig Nyanja ny Turkish tr Chinese zh Indonesian id Pashto ps Ukrainian uk Corsican co Irish ga Persian fa Urdu ur Croatian hr Italian it Polish pl Uzbek uz Czech cs Japanese ja Portuguese pt Vietnamese vi Danish da Javanese jw Punjabi pa Welsh cy Dutch nl Kannada kn Romanian ro Xhosa xh Esperanto eo Kazakh kk Russian ru Yiddish yi Estonian et Khmer km Samoan sm Yoruba yo Filipino/Tagalog tl Korean ko Scots Gaelic gd Zulu zu Finnish fi Kurdish ku Serbian sr French fr Kyrgyz ky Sesotho st Frisian fy Lao lo Shona sn
+ Table 12: List of BCP-47 language codes used throughout this paper. . #Training Samples #Dev Sa...(truncated)
+
+================================== Ai Message ==================================
+
+Yes. The paper states that positive language transfer is visible in improved translation quality for low-resource languages and that this is also reflected in the cross-lingual transferability of the extracted representations.

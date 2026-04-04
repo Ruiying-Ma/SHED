@@ -1,0 +1,45 @@
+================================ Human Message =================================
+
+QUERY:
+Is their gating mechanism specially designed to handle one sentence bags?
+
+TABLE OF CONTENTS (TOC):
+1 | Self-Attention Enhanced Selective Gate with Entity-Aware Embedding for Distantly Supervised Relation Extraction
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2 Proposed Approach
+1.4 | 2.1 Entity-Aware Embedding
+1.5 | 2.2 Self-Attention Enhanced Neural Network
+1.6 | 2.3 Selective Gate
+1.7 | 2.4 Model Learning
+1.8 | 3 Experiments
+1.9 | 3.1 Relation Extraction Performance
+1.10 | 3.2 Ablation Study
+1.11 | 3.3 Case Study
+1.12 | 3.4 Error Analysis
+1.13 | 4 Conclusion
+1.14 | Acknowledgements
+1.15 | References
+1.16 | A Related Work
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_uaKMZtoITOqsFRvOfCQcCtDS)
+ Call ID: call_uaKMZtoITOqsFRvOfCQcCtDS
+  Args:
+    section_id: 1.6
+
+================================= Tool Message =================================
+Name: read_section
+
+2.3 Selective Gate
+Given a sentence bag B = [ s 1 , . . . , s m ] with common en- tity pair, where m is the number of sentences. As elabo- rated in Section 2.2, we can obtain S = [ s 1 , . . . , s m ] and U = [ u 1 , . . . , u m ] for each sentence in the bag, which are derived from PCNN and self-attention respectively. Unlike previous works under multi-instance framework that frequently use a selective attention module to aggregate sentence-level representations into bag-level one, we pro- pose a innovative selective gate mechanism to perform this aggregation. The selective gate can mitigate problems exist- ing in distantly supervised relation extraction and achieve a satisfactory empirical effectiveness.  Specifically, when han- dling the noisy instance problem, selective attention tries to produce a distribution over all sentence in a bag; but if there is only one sentence in the bag, even the only sentence is wrongly labeled, the selective attention mechanism will be low-effective or even completely useless. Note that al- most 80% of bags from popular relation extraction bench- mark consist of only one sentence, and many of them suf- fer from the wrong label problem.  In contrast, our proposed gate mechanism is competent to tackle such case by directly and dynamically aligning low gating value to the wrongly labeled instances and thus preventing noise representation being propagated.Particularly, a two-layer feed forward network is applied to each u j to sentence-wisely produce gating value, which is formally denoted as
+ g j = sigmoid( W ( g 1) σ ( W ( g 2) u j + b ( g 2) ) + b ( g 1) ) , (10) ∀ j = 1 , . . . , m,
+ where, W ( g 1) ∈ R 3 d c × d h , W ( g 2) ∈ R d h × d h , σ ( · ) denotes an activation function and g j ∈ (0 , 1) . Then, given the calcu- lated gating value, an mean aggregation performs over sen- tence embeddings [ s j ] m j =1 in the bag, and thus produces bag- level vector representation for further relation classification.  This procedure is formalized as
+c = 1 m m X j =1 g j · s j (11)
+Finally, c is fed into a multi-layer perceptron followed with | C | -way softmax function (i.e., an MLP classifier) to judge the relation between head and tail entities, where | C | is the number of distinctive relation categories. This can be regarded as a classification task (Long et al. 2012). Formally,
+ p = softmax(MLP( c )) ∈ R | C | . (12)
+
+================================== Ai Message ==================================
+
+Yes. The paper explicitly says the selective gate is designed to handle bags with only one sentence, where selective attention is ineffective, by dynamically assigning a low gating value to wrongly labeled instances.

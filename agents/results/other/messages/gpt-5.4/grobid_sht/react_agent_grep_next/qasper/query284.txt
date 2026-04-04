@@ -1,0 +1,60 @@
+================================ Human Message =================================
+
+QUERY:
+What does BEA stand for?
+
+TABLE OF CONTENTS (TOC):
+1 | The CUED's Grammatical Error Correction Systems for BEA-2019
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2.1 FST-based Grammatical Error Correction
+1.4 | 2.2 Experimental Setup
+1.5 | 2.3 Results
+1.6 | 3 Restricted Track Submission
+1.6.1 | 3.1 Experimental Setup
+1.7 | 4 Conclusion
+1.8 | Acknowledgments
+1.9 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_lFHy94K8Z7IXHzi5CX17j2IM)
+ Call ID: call_lFHy94K8Z7IXHzi5CX17j2IM
+  Args:
+    pattern: BEA
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1 | Abstract
+We describe two entries from the Cambridge University Engineering Department to the BEA 2019 Shared Task on grammatical error correction. Our submission to the lowresource track is based on prior work on using finite state transducers together with strong neural language models. Our system for the restricted track is a purely neural system consisting of neural language models and neural machine translation models trained with backtranslation and a combination of checkpoint averaging and fine-tuning -without the help of any additional tools like spell checkers.  The latter system has been used inside a separate system combination entry in cooperation with the Cambridge University Computer Lab.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_fgYqvEQsJsPQ5dc5hF8WtNOk)
+ Call ID: call_fgYqvEQsJsPQ5dc5hF8WtNOk
+  Args:
+    section_id: 1.2
+
+================================= Tool Message =================================
+Name: read_section
+
+1 Introduction
+The automatic correction of errors in text [In a such situaction → In such a situation] is receiving more and more attention from the natural language processing community. A series of competitions has been devoted to grammatical error correction (GEC): the CoNLL-2013 shared task (Ng et al., 2013) , the CoNLL-2014 shared task (Ng et al. , 2014) , and finally the BEA 2019 shared task (Bryant et al., 2019) . This paper presents the contributions from the Cambridge University Engineering Department to the latest GEC competition at the BEA 2019 workshop.We submitted systems to two different tracks. The low-resource track did not permit the use of parallel training data except a small development set with around 4K sentence pairs.  For our low-resource system we extended our prior work on finite state transducer based GEC (Stahlberg et al., 2019) to handle new error types such as punctuation errors as well as insertions and deletions of a small number of frequent words. For the restricted track, the organizers provided 1.2M pairs (560K without identity mappings) of corrected and uncorrected sentences.  Our goal on the restricted track was to explore the potential of purely neural models for grammatical error correction. 1 We confirm the results of Kasewa et al. (2018) and report substantial gains by applying back-translation (Sennrich et al., 2016b) to GEC -a data augmentation technique common in machine translation. Furthermore, we noticed that large parts of the training data do not match the target domain.  We mitigated the domain gap by over-sampling the in-domain training corpus, and by fine-tuning through continued training. Our final model is an ensemble of four neural machine translation (NMT) models and two neural language models (LMs) with Transformer architecture (Vaswani et al., 2017) . Our purely neural system was also part of the joint submission with the Cambridge University Computer Lab described by Yuan et al. (2019) .
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_uyXiYWhnI1psw8fFKF3zhkMu)
+ Call ID: call_uyXiYWhnI1psw8fFKF3zhkMu
+  Args:
+    pattern: Bryant et al\., 2019|workshop|shared task
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.2 | 1 Introduction
+The automatic correction of errors in text [In a such situaction → In such a situation] is receiving more and more attention from the natural language processing community. A series of competitions has been devoted to grammatical error correction (GEC): the CoNLL-2013 shared task (Ng et al., 2013) , the CoNLL-2014 shared task (Ng et al. , 2014) , and finally the BEA 2019 shared task (Bryant et al., 2019) . This paper presents the contributions from the Cambridge University Engineering Department to the latest GEC competition at the BEA 2019 workshop.We submitted systems to two different tracks. The low-resource track did not permit the use of parallel training data except a small development set with around 4K sentence pairs.  For our low-resource system we extended our prior work on finite state transducer based GEC (Stahlberg et al., 2019) to handle new error types such as punctuation errors as well as insertions and deletions of a small number of frequent words. For the restricted track, the organizers provided 1.2M pairs (560K without identity mappings) of corrected and uncorrected sentences.  Our goal on the restricted track was to explore the potential of purely neural models for grammatical error correction. 1 We confirm the results of Kasewa et al. (2018) and report substantial gains by applying back-translation (Sennrich et al., 2016b) to GEC -a data augmentation technique common in machine translation. Furthermore, we noticed that large parts of the training data do not match the target domain.  We mitigated the domain gap by over-sampling the in-domain training corpus, and by fine-tuning through continued training. Our final model is an ensemble of four neural machine translation (NMT) models and two neural language models (LMs) with Transformer architecture (Vaswani et al., 2017) . Our purely neural system was also part of the joint submission with the Cambridge University Computer Lab described by Yuan et al. (2019) .
+
+================================== Ai Message ==================================
+
+Unanswerable

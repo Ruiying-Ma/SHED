@@ -1,0 +1,46 @@
+================================ Human Message =================================
+
+QUERY:
+what is the size of the idn tagged corpus?
+
+TABLE OF CONTENTS (TOC):
+1 | Toward a Standardized and More Accurate Indonesian Part-of-Speech Tagging
+1.1 | Abstract
+1.2 | I. INTRODUCTION
+1.3 | A. Dataset
+1.4 | B. Baselines
+1.5 | D. Experiments Setup
+1.6 | E. Evaluation
+1.7 | IV. RESULTS AND DISCUSSION
+1.8 | V. CONCLUSION
+1.9 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_wznsRBBFDCBS8adxxqbfx2KO)
+ Call ID: call_wznsRBBFDCBS8adxxqbfx2KO
+  Args:
+    pattern: IDN Tagged Corpus|tagged corpus|corpus
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1 | Abstract
+Previous work in Indonesian part-of-speech (POS) tagging are hard to compare as they are not evaluated on a common dataset. Furthermore, in spite of the success of neural network models for English POS tagging, they are rarely explored for Indonesian. In this paper, we explored various techniques for Indonesian POS tagging, including rule-based, CRF, and neural network-based models. We evaluated our models on the IDN Tagged Corpus. A new state-of-the-art of 97. 47 F1 score is achieved with a recurrent neural network. To provide a standard for future work, we release the dataset split that we used publicly.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_sNz9TUiTTKFkAbuTDyw5Rexc)
+ Call ID: call_sNz9TUiTTKFkAbuTDyw5Rexc
+  Args:
+    section_id: 1.3
+
+================================= Tool Message =================================
+Name: read_section
+
+A. Dataset
+We used the IDN Tagged Corpus proposed in [12] . The corpus contains 10K sentences and 250K tokens that are tagged manually. Due to the small size, 3 we used 5-fold cross-validation to split the corpus into training, development, and test sets. We did not split multi-word expressions but treated them as if they are a single token. All 5 folds of the dataset are available publicly 4 to serve as a benchmark for future work.
+
+================================== Ai Message ==================================
+
+The IDN Tagged Corpus contains 10K sentences and 250K manually tagged tokens.

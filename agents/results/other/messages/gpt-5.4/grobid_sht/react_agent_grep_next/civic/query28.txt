@@ -1,0 +1,27 @@
+================================ Human Message =================================
+
+QUERY:
+What is the type of the project 'Broad Beach Road Water Quality Infrastructure Repairs'?
+
+TABLE OF CONTENTS (TOC):
+1 | Abstract
+2 | PCH Signal Synchronization System Improvements Project
+3 | Capital Improvement Projects (Completed) Storm Drain Trash Screens
+4 | Dume Drive and Fernhill Drive Speed Humps Project
+5 | annex
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_ctJTi4Q9sqsNJFWlcC0RltAN)
+ Call ID: call_ctJTi4Q9sqsNJFWlcC0RltAN
+  Args:
+    pattern: Broad Beach Road Water Quality Infrastructure Repairs
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+
+none

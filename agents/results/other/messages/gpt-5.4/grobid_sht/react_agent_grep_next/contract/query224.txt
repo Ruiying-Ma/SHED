@@ -1,0 +1,141 @@
+================================ Human Message =================================
+
+HYPOTHESIS:
+Confidentiality of Agreement: Receiving Party shall not disclose the fact that Agreement was agreed or negotiated.
+
+TABLE OF CONTENTS (TOC):
+1 | CONFIDENTIALITY AND NON-DISCLOSURE AGREEMENT between
+1.1 | 1.3 If any provision appearing in a definition or elsewhere in this Agreement is a s...
+1.2 | 1.4 Defined terms appearing in this Agreement in title case shall be given their mea...
+1.3 | 1.5 Reference to "month(s)" shall be construed as calendar month(s) (i.e. one or mor...
+1.4 | 1.6 Unless specifically otherwise provided, any number of days prescribed shall be d...
+1.5 | 1.7 Where figures are referred to in numerals and in words, and there is any conflic...
+1.6 | 1.10 The expiration or termination of this Agreement shall not affect such of the pro...
+1.7 | 1.11 Any communication required to be in writing in terms of this Agreement may be se...
+1.8 | 2.1 Client is a company which provides ……………….
+1.9 | 2.2 AfriGIS is a company which offers geographical data, customised mobile and web a...
+1.10 | 2.3 The Parties are currently engaged in proprietary discussions pertaining to ……………...
+1.11 | 2.4 The Parties wish to record the terms and conditions upon which each shall disclo...
+1.12 | 2.5 This Agreement shall also bind the Parties, notwithstanding the Signature Date, ...
+1.13 | 3.1 The Disclosing Party shall only disclose the Confidential Information to the Rec...
+1.14 | 3.2 The Receiving Party acknowledges that the Confidential Information is a valuable...
+1.15 | 3.3 The Receiving Party agrees that it will, during or after the course of their rel...
+1.16 | 3.4 Notwithstanding anything to the contrary contained in this Agreement the Parties...
+1.17 | 3.5 The Receiving Party agrees -
+1.18 | 7.2 As an alternative to the return of the material contemplated in clause 7.1, the ...
+1.19 | 7.3 The Receiving Party shall comply with a request in terms of this clause, within ...
+1.20 | 8 EXCLUDED CONFIDENTIAL INFORMATION
+1.21 | CO-OPERATION
+1.22 | WARRANTIES BY PARTIES
+1.23 | 13.1 In the event of any dispute or difference arising between the Parties relating t...
+1.24 | 13.2 The Parties irrevocably agree that the decision in any arbitration proceedings -...
+1.25 | 13.3 Nothing herein contained shall be deemed to prevent or prohibit either Party fro...
+1.26 | 13.4 The provisions of this clause will continue to be binding on the Parties notwith...
+1.27 | 14 STIPULATIO ALTERI
+1.28 | 15 NON-SOLICITATION
+1.29 | 20 COSTS
+1.30 | 21 GENERAL
+1.31 | 21.2 No Party shall be bound by any express or implied term, representation, warranty...
+1.32 | 21.3 Unless otherwise stipulated in this Agreement, no addition to, variation or cons...
+1.33 | 21.4 No indulgence which a Party ("the grantor") may grant to the other Party ("the g...
+1.34 | 21.5 The Parties undertake at all times to do all such things, to perform all such ac...
+1.35 | INFORMATION
+1.36 | STANDARD OF CARE
+1.37 | 7.1 The Disclosing Party may, at any time, request the Receiving Party to return any...
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_pFl0cmvCYXbw5I6T17dg4YqM)
+ Call ID: call_pFl0cmvCYXbw5I6T17dg4YqM
+  Args:
+    pattern: fact that (this )?Agreement|existence of (this )?Agreement|negotiat|disclose the fact|agreement was agreed
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.29 | 20 COSTS
+Each Party shall bear its own costs of and in connection with the negotiation, drafting and preparation of this Agreement.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_BFT5ssZCIGxEga09b2ieS6Ga)
+ Call ID: call_BFT5ssZCIGxEga09b2ieS6Ga
+  Args:
+    section_id: 1.15
+
+================================= Tool Message =================================
+Name: read_section
+
+3.3
+The Receiving Party agrees that it will, during or after the course of their relationship and/or the term of this Agreement as described in clause 9, keep the Confidential Information in the strictest confidence and will not disclose it to any third party for any reason or purpose whatsoever without the prior written consent of the Disclosing Party, save in accordance with the provisions of this Agreement, and the Parties undertake to each other that their holding and subsidiary companies or agents shall be bound by the provisions of this Agreement.  For avoidance of doubt, in this Agreement "third party" means any party other than Client and AfriGIS and their holding and subsidiary companies or agents.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_GTPjdOVXi9wBZIlJC1leArGH)
+ Call ID: call_GTPjdOVXi9wBZIlJC1leArGH
+  Args:
+    section_id: 1.17
+
+================================= Tool Message =================================
+Name: read_section
+
+3.5
+The Receiving Party agrees -
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_fYDbxNDwGl8SpWDlqcjheuxx)
+ Call ID: call_fYDbxNDwGl8SpWDlqcjheuxx
+  Args:
+    pattern: existence|agreement|negotiat|discussions|fact
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.10 | 2.3
+The Parties are currently engaged in proprietary discussions pertaining to …………………………... This entails the disclosure of Confidential Information.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_UlFLHwhhfD4PnwWqeL3qoyYg)
+ Call ID: call_UlFLHwhhfD4PnwWqeL3qoyYg
+  Args:
+    pattern: existence|agreement|negotiat|discussions|fact
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.22 | WARRANTIES BY PARTIES
+Each Party warrants that -11.1 it has the legal capacity and has taken all necessary corporate action required to empower and authorise it to enter into and implement this Agreement on the terms and conditions herein set out;
+11.2 this Agreement constitutes an agreement valid and binding on it and enforceable against it in accordance with its terms. BREACH
+ In the event that a Party should breach the provisions of this Agreement, then the other Party shall be entitled to invoke all remedies available to it in law including without limitation the institution of urgent interim proceedings, an action for damages and/or specific performance and/or any other equitable relief for any threatened or actual breach of the provisions of this Agreement. DISPUTES
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_OuTiecRYUAwFOzswax5n3aBe)
+ Call ID: call_OuTiecRYUAwFOzswax5n3aBe
+  Args:
+    pattern: existence|agreement|negotiat|discussions|fact
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.29 | 20 COSTS
+Each Party shall bear its own costs of and in connection with the negotiation, drafting and preparation of this Agreement.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_iMwvBhGUrp24paV1xeSZEJbN)
+ Call ID: call_iMwvBhGUrp24paV1xeSZEJbN
+  Args:
+    pattern: Neither party|publicity|announce|announcement|press release|existence of this Agreement|terms of this Agreement
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.16 | 3.4
+Notwithstanding anything to the contrary contained in this Agreement the Parties agree that the Confidential Information may be disclosed by the Receiving Party to its professional advisors on a need-to-know basis; provided that that Party takes whatever steps are necessary to procure that such professional advisors agree to abide by the terms of this Agreement to prevent the unauthorised disclosure of the Confidential Information to third parties.  For purposes of this clause, the Receiving Party's professional advisers and employees, directors or managers shall be deemed to be acting, in the event of a breach, as that Party's duly authorised agents.
+
+================================== Ai Message ==================================
+
+NotMentioned

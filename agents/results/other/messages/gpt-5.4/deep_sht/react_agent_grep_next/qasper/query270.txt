@@ -1,0 +1,69 @@
+================================ Human Message =================================
+
+QUERY:
+How is the event prediction task evaluated?
+
+TABLE OF CONTENTS (TOC):
+1 | Event Representation Learning Enhanced with External Commonsense Knowledge
+1.1 | Abstract
+1.1.1 | 1 Introduction
+1.1.1.1 | 2 Commonsense Knowledge Enhanced Event Representations
+1.1.1.1.1 | 2.1 Low-Rank Tensors for Event Embedding
+1.1.1.1.1.1 | 2.2 Intent Embedding
+1.1.1.1.1.1.1 | 2.3 Sentiment Embedding
+1.1.1.1.1.1.1.1 | 2.4 Joint Event, Intent and Sentiment Embedding
+1.1.1.1.1.1.1.1.1 | 3 Experiments
+1.1.1.1.1.1.1.1.1.1 | 3.1 Baselines
+1.1.1.1.1.1.1.1.1.1.1 | 3.2 Event Similarity Evaluation
+1.1.1.1.1.1.1.1.1.1.1.1 | 3.2.1 Hard Similarity Task
+1.1.1.1.1.1.1.1.1.1.1.1.1 | 3.2.2 Transitive Sentence Similarity
+1.1.1.1.1.1.1.1.1.1.1.1.1.1 | 3.2.3 Results
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | 3.2.4 Case Study
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | 3.3 Script Event Prediction
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | 3.4 Stock Market Prediction
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | 4 Related Work
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | 5 Conclusion
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | Acknowledgments
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_JgZduxkS5dCdsT2t1ECdGhFw)
+ Call ID: call_JgZduxkS5dCdsT2t1ECdGhFw
+  Args:
+    section_id: 1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1
+
+================================= Tool Message =================================
+Name: read_section
+
+3.3 Script Event Prediction
+Event is a kind of important real-world knowl- edge. Learning effective event representations can be benefit for numerous applications. Script event prediction ( Chambers and Jurafsky , 2008 ) is a challenging event-based commonsense reasoning task, which is defined as giving an existing event context, one needs to choose the most reasonable subsequent event from a candidate list.Following Li et al.  ( 2018a ), we evaluate on the standard multiple choice narrative cloze (MCNC) dataset ( Granroth-Wilding and Clark , 2016 ). As SGNN proposed by Li et al. ( 2018a ) achieved state-of-the-art performances for this task, we
+Figure 5: Experimental results on S&P 500 index pre- diction. “+Int” means that we encode the intent infor- mation into the original event embeddings. use the framework of SGNN, and only replace their input event embeddings with our intent and sentiment-enhanced event embeddings.Wang et al. ( 2017 ) and Li et al. ( 2018a ) showed that script event prediction is a challenging prob- lem, and even 1% of accuracy improvement is very difficult. Experimental results shown in Ta- ble 3 demonstrate that we can achieve more than 1. 5% improvements in single model comparison and more than 1.4% improvements in multi-model integration comparison, just by replacing the in- put embeddings, which confirms that better event understanding can lead to better inference results. An interesting result is that the event embeddings only incorporated with intents achieved the best result against other baselines. This confirms that capturing people’s intents is helpful to infer their next plan.  In addition, we notice that the event embeddings only incorporated with sentiment also achieve better performance than SGNN. This is mainly because the emotional consistency does also contribute to predicate the subsequent event.
+3.4 Stock Market Prediction
+It has been shown that news events influence the trends of stock price movements ( Luss and d’Aspremont , 2012 ). As news events affect hu- man decisions and the volatility of stock prices is influenced by human trading, it is reasonable to
+say that events can influence the stock market. In this section, we compare with several event- driven stock market prediction baseline methods: (1) Word , Luss and d’Aspremont ( 2012 ) use bag- of-words represent news events for stock predic- tion; (2) Event , Ding et al. ( 2014 ) represent events by subject-predicate-object triples for stock pre- diction; (3) NTN , Ding et al.  ( 2015 ) learn contin- ues event vectors for stock prediction; (4) KGEB , Ding et al. ( 2016 ) incorporate knowledge graph into event vectors for stock prediction.Experimental results are shown in Figure 5 . We find that knowledge-driven event embedding is a competitive baseline method, which incorporates world knowledge to improve the performances of event embeddings on the stock prediction.  Sen- timent is often discussed in predicting stock mar- ket, as positive or negative news can affect peo- ple’s trading decision, which in turn influences the movement of stock market. In this study, we em- pirically show that event emotions are effective for improving the performance of stock prediction (+2.4%).
+4 Related Work
+Recent advances in computing power and NLP technology enables more accurate models of events with structures. Using open information extraction to obtain structured events representa- tions, we find that the actor and object of events can be better captured ( Ding et al. , 2014 ). For example, a structured representation of the event above can be (Actor = Microsoft , Action = sues , Object = Barnes & Noble ).  They report improve- ments on stock market prediction using their struc- tured representation instead of words as features.One disadvantage of structured representations of events is that they lead to increased spar- sity, which potentially limits the predictive power. Ding et al. ( 2015 ) propose to address this issue by representing structured events using event em- beddings , which are dense vectors.  The goal of event representation learning is that similar events should be embedded close to each other in the same vector space, and distinct events should be farther from each other.Previous work investigated compositional mod- els for event embeddings. Granroth-Wilding and Clark ( 2016 ) concatenate word embeddings of event predicate and event arguments and then learn a nonlinear composition of them into an event rep-
+resentation by a neural network.  Event embed- dings are further concatenated and fed through an- other neural network to score how strongly they are expected to appear in the same chain. Modi ( 2016 ) learn the distributed event representations in a similar way and use that to predict prototypi- cal event orderings. Hu et al.  ( 2017 ) learn a dis- tributed event representation for an event descrip- tion short text rather than a structured event tu- ple based on a novel hierarchical LSTM model. Then these event embeddings are used to generate a short text describing a possible future subevent. This line of work combines the words in these phrases by passing the concatenation or addition of their word embeddings to a parameterized func- tion that maps the summed vector into event em- bedding space.  However, due to the additive na- ture of these models, it is difficult to distinguish subtle differences in an events surface form.To address this issue, Ding et al. ( 2015 ), and Weber et al. ( 2018 ) propose tensor-based compo- sition models, which can learn the semantic com- positionality over the subject, predicate and object of the event by combining them multiplicatively instead of only implicitly or additively, as with standard neural networks. However, previous work mainly focuses on the nature of the event and lose sight of external com- monsense knowledge, such as the intent and sen- timent of event participants. This paper proposes to encode intent and sentiment into event embed- dings, such that we can obtain a kind of more pow- erful event representations.
+5 Conclusion
+Understanding events requires effective repre- sentations that contain commonsense knowledge. High-quality event representations are valuable for many NLP downstream applications. This paper proposed a simple and effective framework to in- corporate commonsense knowledge into the learn- ing process of event embeddings. Experimental results on event similarity, script event prediction and stock prediction showed that commonsense knowledge enhanced event embeddings can im- prove the quality of event representations and ben- efit the downstream applications.
+Acknowledgments
+We thank the anonymous reviewers for their constructive comments, and gratefully acknowl-
+edge the support of the National Key Re- search and Development Program of China (SQ2018AAA010010), the National Key Re- search and Development Program of China (2018YFB1005103), the National Natural Science Foundation of China (NSFC) via Grant 61702137.
+References
+Erik Cambria, Soujanya Poria, Devamanyu Hazarika,and Kenneth Kwok. 2018. Senticnet 5: discover- ing conceptual primitives for sentiment analysis by means of context embeddings.  In Proceedings of the Thirty-Second AAAI Conference on Artificial Intelli- gence, (AAAI-18), the 30th innovative Applications of Artificial Intelligence (IAAI-18), and the 8th AAAI Symposium on Educational Advances in Artificial Intelligence (EAAI-18), New Orleans, Louisiana, USA, February 2-7, 2018 .
+Nathanael Chambers and Dan Jurafsky. 2008.Unsu- pervised learning of narrative event chains . In Pro- ceedings of ACL-08: HLT , pages 789–797. Associa- tion for Computational Linguistics.
+Xiao Ding, Yue Zhang, Ting Liu, and Junwen Duan.2014. Using structured events to predict stock price movement: An empirical investigation . In Proceed- ings of the 2014 Conference on Empirical Methods in Natural Language Processing, EMNLP 2014, Oc- tober 25-29, 2014, Doha, Qatar, A meeting of SIG- DAT, a Special Interest Group of the ACL , pages 1415–1425, Doha, Qatar. Association for Computa- tional Linguistics.
+Xiao Ding, Yue Zhang, Ting Liu, and Junwen Duan.2015. Deep learning for event-driven stock predic- tion. In Proceedings of the Twenty-Fourth Inter- national Joint Conference on Artificial Intelligence, IJCAI 2015, Buenos Aires, Argentina, July 25-31, 2015 , pages 2327–2333.
+Xiao Ding, Yue Zhang, Ting Liu, and Junwen Duan.2016. Knowledge-driven event embedding for stock prediction. In Proceedings of COLING 2016, the 26th International Conference on Computational Linguistics: Technical Papers , pages 2133–2142.
+Timothy Dozat and Christopher D Manning. 2016.Deep biaffine attention for neural dependency pars- ing. arXiv preprint arXiv:1611.01734 .
+John C Duchi, Elad Hazan, and Yoram Singer. 2011.Adaptive subgradient methods for online learning and stochastic optimization. Journal of Machine Learning Research , 12:2121–2159.
+Mark Granroth-Wilding and Stephen Christopher Clark. 2016.What happens next? event predic- tion using a compositional neural network model. In Proceedings of the Thirtieth AAAI Conference on Artificial Intelligence, February 12-17, 2016, Phoenix, Arizona, USA. , pages 2727–2733.
+Alex Graves and J¨urgen Schmidhuber. 2005.Frame- wise phoneme classification with bidirectional lstm and other neural network architectures. Neural Net- works , 18(5-6):602–610.
+Sepp Hochreiter and J¨urgen Schmidhuber. 1997.Long short-term memory. Neural computation , 9(8):1735–1780.
+Linmei Hu, Juanzi Li, Liqiang Nie, Xiao-Li Li,and Chao Shao. 2017. What happens next? future subevent prediction using contextual hierarchical lstm. In Proceedings of the Thirty-First AAAI Conference on Artificial Intelligence, February 4-9, 2017, San Francisco, California, USA. , pages 3450– 3456.
+Dimitri Kartsaklis and Mehrnoosh Sadrzadeh.2014. A study of entanglement in a cate...(truncated)
+
+================================== Ai Message ==================================
+
+It is evaluated on the standard multiple choice narrative cloze (MCNC) dataset. The task is defined as: given an existing event context, choose the most reasonable subsequent event from a candidate list.

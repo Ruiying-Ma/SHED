@@ -1,0 +1,124 @@
+================================ Human Message =================================
+
+HYPOTHESIS:
+Permissible copy: Receiving Party may create a copy of some Confidential Information in some circumstances.
+
+TABLE OF CONTENTS (TOC):
+1 | Mutual Non-disclosure and Conﬁdentiality Agreement
+1.1 | RECITALS
+1.2 | 1 Deﬁnitions and Interpretation
+1.3 | 2 The Commitment
+1.4 | 3 Safekeeping
+1.5 | 4 Limited internal dissemination
+1.6 | 5 Non-disclosure to third parties
+1.7 | 6 Discussions through authorised representatives only
+1.8 | 7 Exclusion from Conﬁdential Information
+1.9 | 8 Return of Conﬁdential Information
+1.10 | 9 No responsibility for information provided
+1.11 | 10 Breach of Undertaking
+1.12 | 11 Notices
+1.13 | 12 Counterparts
+1.14 | 13 Governing Law
+1.15 | 14 Jurisdiction
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_80ZbC9n1Dn9CuDVS7KRgz7VZ)
+ Call ID: call_80ZbC9n1Dn9CuDVS7KRgz7VZ
+  Args:
+    pattern: cop(y|ies|ied|ing)|duplicate|reproduc
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.2 | 1 Deﬁnitions and Interpretation
+1.1 1.1 In this Agreement: Confidential Information means:-
+(a) information relating to the Disclosing Party regarding its business, partners,
+ customers or financial affairs (including details relating to any software the copyright in respect of which is vested in the Disclosing Party) which is obtained by the Receiving Party, either before or after this undertaking is entered into and either in writing or orally from or pursuant to the discussions with the Personnel of the Disclosing Party;
+ (b) those portions of analyses, compilations, studies,
+ reports and other documents prepared by the Disclosing Party which contain or otherwise reflect or are generated from any such information as is specified in paragraph (a) above;
+(c) information of a commercially sensitive nature relating to the Disclosing Party obtained by observation during any visits to the Disclosing Party’s premises but subject always to the proviso set out in clause.Disclosing Party means the Party whose Confidential Information is disclosed to the Receiving Party
+ Personnel means any and all staff, employees, directors, officers and professional advisors of a Party
+Purpose means any and all discussions and negotiations relating to a potential agreement between the Parties hereto as more particularly set out in Recital (A)
+Receiving Party means the Party who is in receipt of Confidential Information
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_2wjngLaMYbSv136z76oS6ICf)
+ Call ID: call_2wjngLaMYbSv136z76oS6ICf
+  Args:
+    section_id: 1.8
+
+================================= Tool Message =================================
+Name: read_section
+
+7 Exclusion from Conﬁdential Information
+7.1 These terms and conditions will not apply to any Confidential Information which:
+(a) is in or becomes part of the public domain or is or otherwise becomes public knowledge by any means other than by breach by a Receiving Party or their Personnel of any obligation contained herein;
+ (b) was previously or is at any time hereafter disclosed to a Receiving Party by any third Party having the right to disclose the same provided that such source is not known to the Receiving Party to be bound by a confidentiality agreement with,
+ or other obligation to secrecy to, the Disclosing Party;
+(c) is released from the provisions of this undertaking by prior written consent given by a director or authorised representative of the Disclosing Party;
+ or
+ (d) was otherwise independently acquired or developed by the Receiving Party without violating its obligations hereunder.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_IdQPobV8I34jGdjeWEKjtIiJ)
+ Call ID: call_IdQPobV8I34jGdjeWEKjtIiJ
+  Args:
+    section_id: 1.9
+
+================================= Tool Message =================================
+Name: read_section
+
+8 Return of Conﬁdential Information
+8.1 The Receiving Party shall, immediately upon receipt of Notice to that effect:
+(a) return to the Disclosing Party all Confidential Information (including all copies held);
+(b) destroy those portions (and all copies) of any analyses, compilations, studies,
+ reports or other documents prepared by it for its use containing or reflecting or generated from, in whole or in part, any Confidential Information; and
+(c) expunge and destroy any Confidential Information from any computer,
+  word processor or other device in its possession or custody or control containing such information.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_K4iWblqxJMLwAQbfaoxEdjdL)
+ Call ID: call_K4iWblqxJMLwAQbfaoxEdjdL
+  Args:
+    section_id: 1.3
+
+================================= Tool Message =================================
+Name: read_section
+
+2 The Commitment
+2.1 In consideration of each Party agreeing to supply the other Party with Confidential Information for the Purpose, and in consideration of the mutual undertakings set out herein the Parties each hereby separately agree and irrevocably undertake to each other that they will only use Confidential Information for the Purpose and otherwise to act in accordance with the terms and conditions hereinafter contained.2. 2 The disclosure of Confidential Information by the Disclosing Party to the Receiving Party shall in no way be construed to imply any transfer of rights connected with the Confidential Information including, without limitation, any trade marks or business secrets.2.3 A Receiving Party’s obligations in respect of Confidential Information made available by the Disclosing Party pursuant to this Agreement shall continue notwithstanding the termination of the Purpose.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_qSNYx70KTInbQzNV85X3D66x)
+ Call ID: call_qSNYx70KTInbQzNV85X3D66x
+  Args:
+    section_id: 1.4
+
+================================= Tool Message =================================
+Name: read_section
+
+3 Safekeeping
+3.1 A Receiving Party shall treat and safeguard as private and confidential all of the Confidential Information and will take all reasonable precautions in dealing with any Confidential Information so as to prevent any third party from having access to the Confidential Information.2
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_k8puPby3OdGevl28PPeR9uQ4)
+ Call ID: call_k8puPby3OdGevl28PPeR9uQ4
+  Args:
+    section_id: 1.5
+
+================================= Tool Message =================================
+Name: read_section
+
+4 Limited internal dissemination
+4.1 A Receiving Party shall only disclose or reveal any Confidential Information disclosed to it to those of its Personnel who are required in the course of their duties to receive and consider the same in so far as is necessary to fulfil the Purpose.4.2 Prior to the disclosure of any Confidential Information to any such Personnel,
+ the Receiving Party shall inform them of the confidential nature of the material and of the provisions of this confidentiality undertaking and obtain written confirmation of their acceptance of these terms.
+
+================================== Ai Message ==================================
+
+Entailment

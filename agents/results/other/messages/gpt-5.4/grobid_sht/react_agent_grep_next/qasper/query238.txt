@@ -1,0 +1,52 @@
+================================ Human Message =================================
+
+QUERY:
+What conclusions do the authors draw about the aspects and mechanisms of personal recovery in bipolar disorder?
+
+TABLE OF CONTENTS (TOC):
+1 | A computational linguistic study of personal recovery in bipolar disorder
+1.1 | Abstract
+1.2 | 1 Introduction and background
+1.3 | 2 Data
+1.4 | 3 Methodology and Resources
+1.5 | Linguistic
+1.6 | 4 Ethical considerations
+1.7 | 5 Impact and conclusion
+1.8 | Acknowledgments
+1.9 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_yEeWzYvOojV4n2tGgamLiJIR)
+ Call ID: call_yEeWzYvOojV4n2tGgamLiJIR
+  Args:
+    section_id: 1.7
+
+================================= Tool Message =================================
+Name: read_section
+
+5 Impact and conclusion
+The importance of the recovery concept in the design of mental health services has recently been prominently reinforced, suggesting recoveryoriented social enterprises as key component of the integrated service (van Os et al., 2019) . We think that a recovery approach as leading principle for national or global health service strategies, should be informed by voices of individuals as diverse as those it is supposed to serve.  Therefore, we expect the proposed investigations of views on recovery by previously under-researched ethnic, language, and cultural groups to yield valuable insights on the appropriateness of the recovery approach for a wider population. The datasets collected in this project can serve as useful resources for future research. More generally, our socialmedia data-driven approach could be applied to investigate other areas of mental health if it proves successful in leading to relevant new insights. Finally, this project is an interdisciplinary endeavour, combining clinical psychology, input from individuals with lived experience of BD, and computational linguistics. While this comes with the challenges of cross-disciplinary research, it has the potential to apply and develop state-of-the-art NLP methods in a way that is psychologically and ethically sound as well as informed and approved by affected people to increase our knowledge of severe mental illnesses such as BD.Email communication with the first author ofCoppersmith et al.  (2015).http://ir.cs.georgetown.edu/data/ smhd/
+See Section
+for ethical considerations on this. 4 https://github.com/CLD2Owners/cld2
+https://ourdatahelps.org/
+https://7cups.com/
+https://cdn.cms-twdigitalassets. com/content/dam/legal-twitter/ site-assets/privacy-policy-new/ Privacy-Policy-Terms-of-Service_EN.pdf
+www. redditinc.com/policies/ privacy-policy
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_xRkjnr7RnMm3Td74a4RZ98yQ)
+ Call ID: call_xRkjnr7RnMm3Td74a4RZ98yQ
+  Args:
+    section_id: 1.1
+
+================================= Tool Message =================================
+Name: read_section
+
+Abstract
+Mental health research can benefit increasingly fruitfully from computational linguistics methods, given the abundant availability of language data in the internet and advances of computational tools. This interdisciplinary project will collect and analyse social media data of individuals diagnosed with bipolar disorder with regard to their recovery experiences.  Personal recovery -living a satisfying and contributing life along symptoms of severe mental health issues -so far has only been investigated qualitatively with structured interviews and quantitatively with standardised questionnaires with mainly English-speaking participants in Western countries. Complementary to this evidence, computational linguistic methods allow us to analyse firstperson accounts shared online in large quantities, representing unstructured settings and a more heterogeneous, multilingual population, to draw a more complete picture of the aspects and mechanisms of personal recovery in bipolar disorder.
+
+================================== Ai Message ==================================
+
+They aim to draw “a more complete picture of the aspects and mechanisms of personal recovery in bipolar disorder” by complementing prior qualitative interviews and standardized questionnaires with computational analysis of large-scale first-person social media accounts. The authors conclude this should broaden understanding beyond mainly English-speaking Western participants and provide insights informed by a more heterogeneous, multilingual population.

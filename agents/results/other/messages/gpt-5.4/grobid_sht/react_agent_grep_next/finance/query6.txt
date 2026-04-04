@@ -1,0 +1,176 @@
+================================ Human Message =================================
+
+QUERY:
+Which debt securities are registered to trade on a national securities exchange under 3M's name as of Q2 of 2023?
+
+TABLE OF CONTENTS (TOC):
+1 | 3M Company and Subsidiaries Consolidated Balance Sheet (Unaudited)
+1.1 | Basis of Presentation
+1.2 | Earnings (Loss) Per Share
+1.3 | Supplier Finance Program Obligations
+1.4 | New Accounting Pronouncements
+1.5 | Contract Balances:
+1.6 | Operating Lease Revenue:
+1.7 | Medical
+1.8 | NOTE 3. Acquisitions and Divestitures
+1.9 | Acquisitions:
+1.10 | 2023 acquisitions:
+1.11 | Divestitures:
+1.11.1 | divestitures and previously announced divestitures:
+1.12 | Operating income and held-for-sale amounts:
+1.13 | Goodwill
+1.13.1 | to 2025 Structural Reorganization Actions
+1.14 | Divestiture-Related Restructuring:
+1.15 | NOTE 6. Supplemental Income (Loss) Statement Information
+1.16 | NOTE 7. Supplemental Equity and Comprehensive Income (Loss) Information
+1.17 | Consolidated Changes in Equity
+1.18 | NOTE 8. Income Taxes
+1.19 | NOTE 9. Marketable Securities
+1.20 | Future Maturities of Long-term Debt
+1.21 | NOTE 12. Derivatives
+1.22 | Statement of Income (Loss) Location and Impact of Cash Flow and Fair Value Derivative Instruments and Derivatives Not Designated as Hedging Instruments
+1.23 | Location, Fair Value, and Gross Notional Amounts of Derivative Instruments
+1.24 | Credit Risk and Offsetting of Assets and Liabilities of Derivative Instruments
+1.25 | Offsetting of Financial Assets under Master Netting Agreements with Derivative Counterparties
+1.26 | Currency Effects
+1.27 | NOTE 13. Fair Value Measurements
+1.28 | Assets and Liabilities that are Measured at Fair Value on a Nonrecurring Basis:
+1.29 | Fair Value of Financial Instruments:
+1.30 | NOTE 14. Commitments and Contingencies
+1.31 | Respirator Mask/Asbestos Litigation
+1.32 | Respirator Mask/Asbestos Liabilities and Insurance Receivables
+1.33 | Environmental Matters and Litigation
+1.34 | Environmental Matters
+1.35 | PFAS Regulatory and Legislative Activity
+1.36 | Europe
+1.37 | United States: Federal Activity
+1.38 | State Attorneys General Litigation related to PFAS
+1.39 | Aqueous Film
+1.40 | AFFF MDL and Water System Cases
+1.41 | Other AFFF Cases
+1.42 | Other PFAS-related Product and Environmental Litigation
+1.43 | Other PFAS-related Matters
+1.44 | Other Environmental Litigation
+1.45 | Environmental Liabilities and Insurance Receivables
+1.46 | Product Liability Litigation
+1.47 | Securities and Shareholder Litigation
+1.48 | Business Segment Information
+1.49 | Earnings (loss) per share attributable to 3M common shareholders -diluted:
+1.50 | Raw material impact:
+1.51 | Foreign exchange impacts
+1.52 | Income tax rate:
+1.53 | Shares of common stock outstanding:
+1.54 | Sales and operating income (loss) by business segment:
+1.55 | Sales by geographic area:
+1.56 | Managing currency risks:
+1.57 | First six months 2023 results:
+1.58 | Transportation and Electronics Business:
+1.59 | Second quarter 2023 results:
+1.60 | FINANCIAL CONDITION AND LIQUIDITY
+1.61 | Total debt:
+1.62 | Cash, cash equivalents and marketable securities:
+1.63 | Net Debt (non-GAAP measure):
+1.64 | Balance Sheet:
+1.65 | Working capital (non-GAAP measure):
+1.66 | Free Cash Flow (non-GAAP measure):
+1.67 | Risks Related to Our Products and Customer Preferences
+1.68 | Disaggregated revenue information:
+1.69 | Compliance Matter
+1.70 | NOTE 15. Business Segments
+1.71 | Reflecting gains/losses from sale of property, plant and equipment (PPE) and other assets within Corporate and Unallocated Change
+1.72 | Movement of certain businesses between segments
+1.73 | Item 2. Management's Discussion and Analysis of Financial Condition and Results of Operations.
+1.74 | OVERVIEW
+1.75 | Certain amounts adjusted for special items -(non-GAAP measures):
+1.76 | Divestiture costs:
+1.77 | Manufactured PFAS products:
+1.78 | Financial condition:
+1.79 | Net Sales:
+1.80 | Cost of Sales:
+1.81 | Selling, General and Administrative Expenses:
+1.82 | Research, Development and Related Expenses:
+1.83 | Other Expense (Income), Net:
+1.84 | Provision (benefit) for Income Taxes:
+1.85 | Income from Unconsolidated Subsidiaries, Net of Taxes:
+1.86 | Net Income (Loss) Attributable to Noncontrolling Interest:
+1.87 | Significant Accounting Policies:
+1.88 | PERFORMANCE BY BUSINESS SEGMENT
+1.89 | Corporate and Unallocated:
+1.90 | Corporate Special Items
+1.91 | Other Corporate Expense -Net
+1.92 | Operating Business Segments:
+1.93 | Cash Flows:
+1.94 | Cash Flows from Operating Activities:
+1.95 | Cautionary Note Concerning Factors That May Affect Future Results
+1.96 | * Unexpected events, such as those related to the coronavirus (COVID-19) public health crisis, may increase the Company's cost of doing business and disrupt the Company's operations.
+1.97 | Risks Related to Legal and Regulatory Proceedings
+1.98 | Risks Related to Our Business
+1.99 | Risks Related to Financial and Capital Markets and Tax Matters
+1.100 | Risks Related to the Voluntary Chapter 11 Proceedings Initiated by the Company's Aearo Entities
+1.101 | Insider Trading Arrangements and Policies
+1.102 | Disclosure Under Iran Threat Reduction and Syria Human Rights Act of 2012
+1.103 | Protection of Intellectual Property Rights in Iran Pursuant to Specific License
+1.104 | SIGNATURES
+1.105 | SARBANES-OXLEY SECTION 906 CERTIFICATION
+1.106 | EXHIBIT 95 MINE SAFETY DISCLOSURES
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_2KgJe5I5QLaWivrIByzCiKp4)
+ Call ID: call_2KgJe5I5QLaWivrIByzCiKp4
+  Args:
+    pattern: registered pursuant to Section 12\(b\)|national securities exchange|debt securities
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.61 | Total debt:
+The strength of 3M's credit profile and significant ongoing cash flows provide 3M proven access to capital markets. Additionally, the Company's debt maturity profile is staggered to help ensure refinancing needs in any given year are reasonable in proportion to the total portfolio. As of June 2023, 3M has a credit rating of A2, negative outlook from Moody's Investors Service, and a credit rating of A-, CreditWatch negative from S&P Global Ratings. The Company's total debt at June 30, 2023 was consistent when compared to December 31, 2022 as maturities of $1.8 billion of fixed-rate notes were offset by issuances of commercial paper of $1.8 billion. For discussion of repayments of and proceeds from debt refer to the following Cash Flows from Financing Activities section. In July 2017, the United Kingdom's Financial Conduct Authority announced that it would no longer require banks to submit rates for the London InterBank Offered Rate ("LIBOR") after 2021. In November 2020, the ICE Benchmark Administration (IBA), LIBOR's administrator, proposed extending the publication of USD LIBOR through June 2023.  Subsequently, in March of 2021, IBA ceased publication of certain LIBOR rates after December 31, 2021. USD LIBOR rates that did not cease on December 31, 2021 will continue to be published through June 30, 2023, and certain USD LIBOR rates subject to a synthetic methodology will continue to be published until September 2024.  The Company anticipates its debt securities, bank facilities, and derivative instruments that previously utilized LIBOR as the reference rate will transition to the Secured Overnight Financing Rate, or SOFR, as a reference rate as necessary.Effective February 8, 2023, the Company updated its "well-known seasoned issuer" (WKSI) shelf registration statement, which registers an indeterminate amount of debt or equity securities for future issuance and sale.  This replaced 3M's previous shelf registration dated February 10, 2020. In May 2016, 3M entered into an amended and restated distribution agreement relating to the future issuance and sale (from time to time) of the Company's medium-term notes program (Series F), up to the aggregate principal amount of $18 billion, which was an increase from the previous aggregate principal amount up to $9 billion of the same Series.  As of June 30, 2023, the total amount of debt issued as part of the medium-term notes program (Series F), inclusive of debt issued in February 2019 and prior years is approximately $17.6 billion (utilizing the foreign exchange rates applicable at the time of issuance for the euro denominated debt).  Information with respect to long-term debt issuances and maturities for the periods presented is included in Note 10 of this Form 10-Q and Note 12 in 3M's 2022 Annual Report on Form 10-K.In May 2023, 3M entered into a $4.25 billion five-year revolving credit facility expiring in 2028; the facility was amended in July 2023.  The revolving credit agreement includes a provision under which 3M may request an increase of up to $1.0 billion (at lender's discretion), bringing the total facility up to $5.25 billion. The agreement replaced the amended and restated $3.0 billion, five-year revolving credit agreement and the $1.25 billion 364-day credit facility that would have expired in November 2024 and November 2023, respectively.  The credit facility was undrawn at June 30, 2023. Under the $4.25 billion credit facility, the Company is required to maintain its EBITDA to Interest Ratio as of the end of each fiscal quarter at not less than 3.0 to 1. This is calculated (based on amounts defined in the amended agreement) as the ratio of consolidated total EBITDA for the four consecutive quarters then ended to total interest expense on all funded debt for the same period.  At June 30, 2023, this ratio, reflecting the July 2023 amendment, was approximately 17 to 1. Debt covenants do not restrict the payment of dividends.The Company also had $315 million in stand-alone letters of credit and bank guarantees issued and outstanding at June 30, 2023. These instruments are utilized in connection with normal business activities.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_8TbNDJxdUuqoCDljcfnrsDIT)
+ Call ID: call_8TbNDJxdUuqoCDljcfnrsDIT
+  Args:
+    pattern: Title of each class|registered to trade|exchange|notes due
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.13 | Goodwill
+There was no goodwill recorded from acquisitions during the first six months of 2023. The amounts in the "Translation and other" row in the following table primarily relate to changes in foreign currency exchange rates.The preceding expected amortization expense is an estimate. Actual amounts of amortization expense may differ from estimated amounts due to additional intangible asset acquisitions, changes in foreign currency exchange rates, impairment of intangible assets, accelerated amortization of intangible assets and other events.  3M expenses the costs incurred to renew or extend the term of intangible assets.
+to 2025 Structural Reorganization Actions
+In the first quarter of 2023, 3M announced it would undertake structural reorganization actions to reduce the size of the corporate center of the Company, simplify supply chain, streamline 3M's geographic footprint, reduce layers of management, further align business go-to-market models to customers, and reduce manufacturing roles to align with production volumes.  During the first six months of 2023, management approved and committed to undertake associated actions impacting approximately 5,100 positions resulting in a pre-tax charge of $52 million and $212 million in the first and second quarters of 2023, respectively. Remaining activities related to the restructuring actions approved and committed under this initiative are expected to be largely completed through the end of 2023. 3M expects to commit to further actions under this initiative.  This aggregate initiative beginning in the first quarter of 2023 and continuing through 2025 is expected to impact approximately 8,500 positions worldwide with an expected pre-tax charge of $700 million to $900 million over that period.The related restructuring charges for periods presented were recorded in the income (loss) statement as follows:
+(Millions)
+ Three months ended June 30, 2023 Six months ended June 30, 2023 Cost of sales $ 47 $ 63 Selling, general and administrative expenses 146 178 Research, development and related expenses 19 23 Total operating income impact $ 212 $ 264
+The business segment operating income (loss) impact of these restructuring charges is summarized as follows:
+ Three months ended June 30, 2023 Six months ended June 30, 2023 (Millions) Employee Related Asset-Related and Other Total Employee Related Asset-Related and Other Total Safety and Industrial $ 44 $ -$ 44 $ 54 $ -$ 54 Transportation and Electronics 25 -25 37 -37 Health Care 10 -10 12 -12 Consumer 13 -13 16 -16 Corporate and unallocated 100 20 120 125 20 145 Total operating expense $ 192 $ 20 $ 212 $ 244 $ 20 $ 264 Restructuring actions, including cash and non-cash impacts, follow: (Millions) Employee-Related Asset-Related and Other Total Expense incurred in the first quarter of 2023 $ 52 $ -$ 52 Incremental expense incurred in the second quarter of 2023 192 20 212 Non-cash changes -(20) (20) Cash payments (56) -(56) Accrued restructuring action balance as of June 30, 2023 $ 188 $ -$ 188 2022 Restructuring Actions Operational/Marketing Capability Restructuring:
+ As described in Note 5 in 3M's 2022 Annual Report on Form 10-K, in late 2020, 3M announced it would undertake certain actions beginning in the fourth quarter of 2020 to further enhance its operations and marketing capabilities to take advantage of certain global market trends while de-prioritizing investments in slower-growth end markets.  In the first quarter of 2022, management approved and committed to undertake the remaining actions under this initiative resulting in a pre-tax charge of $18 million. This initiative, beginning in 2020 and ending with committed first quarter 2022 actions, impacted approximately 3,100 positions worldwide with a pre-tax charge of approximately $280 million over that period. Activities related to this restructuring were largely completed in the third quarter of 2022.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_5P02s1wSuLkHbc35EgleE0Wd)
+ Call ID: call_5P02s1wSuLkHbc35EgleE0Wd
+  Args:
+    pattern: 0\.000%|1\.500%|notes due|debt securities registered
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_HjsMlAKGMTalT0h8Ii3R1Zfr)
+ Call ID: call_HjsMlAKGMTalT0h8Ii3R1Zfr
+  Args:
+    pattern: registered pursuant to Section 12\(b\) of the Act
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+
+None.

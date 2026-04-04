@@ -1,0 +1,100 @@
+================================ Human Message =================================
+
+QUERY:
+Do they compare against popular topic models, such as LDA?
+
+TABLE OF CONTENTS (TOC):
+1 | Toward Interpretable Topic Discovery via Anchored Correlation Explanation
+1.1 | Abstract
+1.1.1 | 1. Introduction
+1.1.1.1 | 2. Methods
+1.1.1.1.1 | 3. Related Work
+1.1.1.1.1.1 | 4. Results and Discussion
+1.1.1.1.1.1.1 | 4.1. 20 Newsgroups
+1.1.1.1.1.1.1.1 | 4.2. i2b2 Obesity Challenge 2008
+1.1.1.1.1.1.1.1.1 | 4.3. Anchored CorEx for Discriminative Tasks
+1.1.1.1.1.1.1.1.1.1 | 5. Conclusion
+1.1.1.1.1.1.1.1.1.1.1 | Acknowledgements
+1.1.1.1.1.1.1.1.1.1.1.1 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_YFgmrXG1Yj8BsUQ7dJlgFP3X)
+ Call ID: call_YFgmrXG1Yj8BsUQ7dJlgFP3X
+  Args:
+    pattern: LDA|latent dirichlet|topic model|compare|baseline
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1.1.1.1.1.1.1.1.1.1.1 | References
+Agarwal, V., Podchiyska, T., Banda, J.M., Goel, V., Leung, T. I., Minty, E. P., Sweeney, T. E., Gyang, E., and N.H., Shah. Learning statistical models of phenotypes using noisy labeled training data. Journal of the American Medical Informatics Association (JAMIA) , 2016.
+Andrzejewski, David and Zhu, Xiaojin.Latent dirichlet allocation with topic-in-set knowledge. In Proceedings of the NAACL HLT 2009 Workshop on Semi-Supervised Learning for Natural Language Processing , pp. 43–48, 2009.
+Andrzejewski, David, Zhu, Xiaojin, and Craven,Mark. Incorporating domain knowledge into topic modeling via dirichlet forest priors. In Proceedings of the 26th Annual International Conference on Machine Learning , pp. 25–32, 2009.
+Arora, Sanjeev, Ge, Rong, and Moitra, Ankur.Learning topic models – going beyond svd. In Proceedings of the 2012 IEEE 53rd Annual Symposium on Foundations of Computer Science , FOCS ’12, pp. 1–10, 2012.
+Chapman, Wendy W., Bridewell, Will, Hanbury, Paul,Cooper, Gregory F., and Buchanan, Bruce G. A simple algorithm for identifying negated findings and diseases in discharge summaries. Journal of Biomedical Informatics , 34(5):301 – 310, 2001. ISSN 1532-0464.
+Chen, Peixian, Zhang, Nevin L, Poon, Leonard KM,and Chen, Zhourong. Progressive EM for latent tree models and hierarchical topic detection. arXiv preprint arXiv:1508.00973 , 2015.
+Chen, Yukun, Carroll, Robert J, Hinz,Eugenia R McPeek, Shah, Anushi, Eyler, Anne E, Denny, Joshua C, and Xu, Hua. Applying active learning to high-throughput phenotyping algorithms for electronic health records data. Journal of the American Medical Informatics Association , 20(e2):e253– e259, 2013.
+Craven, Mark and Kumlien, Johan.Constructing biological knowledge bases by extracting information from text sources. In Proceedings of the Seventh International Conference on Intelligent Systems for Molecular Biology , pp. 77–86, 1999.
+Dai, Manhong, Shah, Nigam H, Xuan, Wei,Musen, Mark A, Watson, Stanley J, Athey, Brian D, Meng, Fan, et al. An efficient solution for mapping free text to ontology terms. AMIA Summit on Translational Bioinformatics , 21, 2008.
+Halpern, Y., Horng, S., and Sontag, D.Anchored Discrete Factor Analysis. ArXiv e-prints , November 2015.
+Halpern, Yoni, Choi, Youngduck, Horng, Steven,and Sontag, David. Using anchors to estimate clinical state without labeled data. In Proceedings of the American Medical Informatics Assocation (AMIA) 2015 Annual Symposium , 2014.
+Jagarlamudi, Jagadeesh, Daum´e III, Hal,and Udupa, Raghaven- dra. Incorporating lexical priors into topic models. In Proceedings of the 13th Conference of the European Chapter of the Association for Computational Linguistics , pp. 204–213, 2012.
+Lee, Moontae and Mimno, David.Low-dimensional embeddings for interpretable anchor-based topic inference. In Proceedings of Empirical Methods in Natural Language Processing , 2014.
+Mintz, Mike, Bills, Steven, Snow, Rion,and Jurafsky, Dan. Distant supervision for relation extraction without labeled data. In Proceedings of the Joint Conference of the 47th Annual Meeting of the ACL and the 4th International Joint Conference on Natural Language Processing of the AFNLP: Volume 2 - Volume 2 , ACL ’09, pp. 1003–1011, 2009.
+Newton, Katherine M, Peissig, Peggy L, Kho, Abel Ngo,Bielinski, Suzette J, Berg, Richard L, Choudhary, Vidhu, Basford, Melissa, Chute, Christopher G, Kullo, Iftikhar J, Li, Rongling, Pacheco, Jennifer A, Rasmussen, Luke V, Spangler, Leslie, and Denny, Joshua C. Validation of electronic medical record-based phenotyping algorithms: results and lessons learned from the emerge network.  Journal of the American Medical Informatics Association , 20(e1):e147–e154, 2013.
+Nguyen, Thang, Hu, Yuening, and Boyd-Graber,Jordan L. Anchors regularized: Adding robustness and extensibility to scalable topic-modeling algorithms. In Assocation for Computational Linguistics , pp. 359–369, 2014.
+Slonim, Noam, Friedman, Nir, and Tishby,Naftali. Multivariate information bottleneck. Neural Computation , 18(8):1739– 1789, 2006.
+Tishby, Naftali, Pereira, Fernando C, and Bialek,William. The information bottleneck method. In The Proceedings of the 37th Annual Allerton Conference on Communication, Control, and Computing , pp. 368–377, 2000.
+Uzuner, ¨ Ozlem.Recognizing obesity and comorbidities in sparse data. Journal of the American Medical Informatics Association , 16(4):561–570, 2009.
+Ver Steeg, Greg. Open source project implementing hierarchical topic models on sparse data,2016. URL http://github. com/gregversteeg/corex_topic .
+Ver Steeg, Greg and Galstyan, Aram.Discovering structure in high-dimensional data through correlation explanation. Advances in Neural Information Processing Systems (NIPS) , 2014.
+Ver Steeg, Greg and Galstyan, Aram.Maximally informative hierarchical representations of high-dimensional data. In Proceedings of the Sixteenth International Conference on Artificial Intelligence and Statistics (AISTATS) , 2015.
+Wagstaff, Kiri, Cardie, Claire, Rogers, Seth,Schr¨odl, Stefan, et al. Constrained k-means clustering with background knowledge. In ICML , volume 1, pp. 577–584, 2001.
+Watanabe, Satosi. Information theoretical analysis of multivariate correlation.IBM Journal of research and development , 4(1): 66–82, 1960.Hodas, Nathan, Ver Steeg, Greg, Harrison, Joshua, Chikkagoudar, Satish, Bell, Eric, and Corley, Courtney. Disentangling the lexicons of disaster response in twitter. In The 3rd International Workshop on Social Web for Disaster Management (SWDM’15) , 2015. 105
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_dBslSkpk4RcXzULpgqrRdYpL)
+ Call ID: call_dBslSkpk4RcXzULpgqrRdYpL
+  Args:
+    section_id: 1.1.1.1.1.1
+
+================================= Tool Message =================================
+Name: read_section
+
+4. Results and Discussion
+To demonstrate the utility of Anchored CorEx, we run experiments on two document collections: 20 Newsgroups and the i2b2 2008 Obesity Challenge ( Uzuner , 2009 ) data set. Both corpora provide ground truth labels for latent classes that may be thought of as topics.102
+Toward Interpretable Topic Discovery via Anchored Correlation Explanation
+note useful water
+Figure 1. A hierarchical topic model learned by CorEx.  Anchored latent factors are labeled in red with anchor words marked with a “*”.
+4.1. 20 Newsgroups
+The 20 Newsgroups data set is suitable for a straightfor- ward evaluation of anchored topic models. The latent classes represent mutually exclusive categories, and each document is known to originate from a single category. We find that the correlation structure among the latent classes is less complex than in the Obesity Challenge data. Further, each category tends to exhibit some specialized vocabulary not used extensively in other categories (thus satisfying the anchor assumption from Arora et al. ( 2012 )). To prepare the data, we removed headers, footers, and quotes and reduced the vocabulary to the most frequent 20,000 words. Each document was represented as a binary bag-of-words vector. In all experiemnts, we used the standard training/test split. All CorEx models used three layers of 40, 3, and 1 factors. Figure 1 shows an example hierarchical topic model extracted by Anchored CorEx.
+4.2. i2b2 Obesity Challenge 2008
+The Obesity Challenge 2008 data set 1 includes 1237 dei- dentified clinical discharge summaries from the Partners HealthCare Research Patient Data Repository. All sum- maries have been labeled by clinical experts with obesity and 15 other conditions commonly comorbid with obesity, ranging from Coronary Artery Disease (663 positives) to Depression (247) to Hypertriglyceridemia (62). We preprocessed each document with a standard biomed- ical text pipeline that extracts common medical terms and phrases (grouping neighboring words where appropriate) and detecting negation (“not” is prepended to negated terms) ( Dai et al. , 2008 ; Chapman et al. , 2001 ). We converted each document to a binary bag-of-words with a vocabulary of 4114 (possibly negated) medical phrases.  We used the 60/40 training/test split from the competition.We are primarily interested in the ability of Anchored CorEx to extract latent topics that are unambiguously associated with the 16 known conditions. We train a series of CorEx models with 32 latent topics in the first layer, each using a different anchor strategy.  Table 1 shows the Obesity and Obstructive Sleep Apnea (OSA) topics for three iterations of Anchored CorEx with the ten most important terms (highest weighted connections to the latent factor) listed for each topic. Unsupervised CorEx (first row) does not discover any topics obviously related to obesity or OSA, so we choose the topics to which the terms obesity and obstructive sleep apnea are assigned.  No unambiguous Obesity or OSA topics emerge even as the number of latent factors is decreased or increased.In the second iteration (second row), we add the common name of each of the 16 diseases as an anchor to one factor (16 total). Adding obesity as an anchor produces a clear Obesity topic, including several medications known to cause weight gain (e.g., acebutolol , klonopin ).  The anchored OSA topic, however, is quite poor and in fact re- sembles the rather generic topic to which obstructive sleep apnea is assigned by Unsupervised CorEx. It includes many spurious or non-specific terms like drug .This is likely due to the fact that obesity is a major risk factor of OSA, and so OSA symptoms are highly correlated with obesity and its other symptoms.  Thus, the total correlation objective will attempt to group obesity and OSA-related terms together under a single latent factor. The sparse connection constraint mentioned in section 2 prevents them from being connected to multiple factors. Indeed, sleep apnea appears in the obesity topic, suggesting the two topics are competing to explain OSA terms. In the third iteration, we correct this by adding sleep apnea as a second anchor to the OSA topic, and the resulting topic is clearly associated with OSA, including terms related to respiratory problems and medications used to treat (or believed to increase risk for) OSA. There is no noticeable
+1 https://www.i2b2.org/NLP/DataSets/Main. php
+103
+Toward Interpretable Topic Discovery via Anchored Correlation Explanation
+ Obesity Obstructive Sleep Apnea Anchors Topic AUC Topic AUC not fever , not chill , not diarrhea , not dysuria , 0.600 use , drug , complication , allergy , 0. 686 not cough , not abdominal pain , not guarding , sodium , infection , furosemide, docusate , not rebound , not palpitation , not night sweats shortness of breath, esomeprazole One per topic obesity , sleep apnea , morbid obese, obese, 0.762 use , complication , drug , allergy , sodium , 0. 546 for each disease labor , acebutolol, vaginal bleeding , infection , furosemide, docusate , klonopin, valproic acid, bacteruria shortness of breath, obstructive sleep apnea Add second OSA obesity , morbid obese, obese, labor , 0.757 sleep apnea , obstructive sleep apnea , 0. 826 anchor not non-compliant, acebutolol, oxygen, duoneb, desaturation, singulair, vaginal bleeding , problem , pulmonary hypertension, hypoxemia, not deep venous thrombosis, overweight pap smear , vicodin
+Table 1. Evolution of Obesity and Obstructive Sleep Apnea (OSA) topics as anchors are added. Colors and font weight indicate anchors , spurious terms , and intruder terms from other known topics .  Multiword and negated terms are the result of the preprocessing pipeline.reduction in quality in the Obesity topic.
+4.3. Anchored CorEx for Discriminative Tasks
+In a series of follow-up experiments, we investigate the suitability of using anchored CorEx to perform weakly supervised classification. We interpret each anchored latent factor as a classifier for an associated class label and then compute test set F1 (using a threshold of 0.5) and area under the curve (AUC) scores (Obesity Challenge only).Anchors F 1 Anch F 1 U nsup Jesus 0.42 0.45 God 0. 49 0.43 Jesus,Christian 0.55 0.45 Naive Bayes 0.75
+Table 2. F1 scores on soc.religion.christianity .Table 2 compares the classification performance of Unsupervised and Anchored CorEx on the soc.religion.christianity category from 20 Newsgroups for different choices of anchors.  For both types of CorEx, the topic containing the corresponding terms is used as the classifier, but for Anchored CorEx those terms are also used as anchors when estimating the latent factor. Unsupervised CorEx does a reasonable job of discovering a coherent religion topic that already contains the terms God , Christian , and Jesus . However, using the terms Jesus and Christian as anchors yields a topic that better predicts the actual soc.religion.christianity category. Table 3 shows the Macro-AUC and F1 scores (averaged across all diseases) on the Obesity Challenge data for the final anchored CorEx model and a Naive Bayes (NB) baseline, in which we train a separate classifier for each
+Classifier Macro-AUC Macro-F1 Naive Bayes 0.7120 0.4638 Anchored CorEx 0.7445 0.5328
+Table 3. Classification performance on Obesity 2008. disease. Surprisingly, Anchored CorEx outperforms Naive Bayes (NB) by a large margin. Of course, Anchored CorEx is not a replacement for supervised learning: NB beats Anchored CorEx on 20 Newsgroups and does not represent a “strong” baseline for Obesity 2008 (teams scored above 0.7 in Macro-F1 during the competition).  It is nonetheless remarkable that Anchored CorEx performs as well as it does given that it is fundamentally unsupervised.
+5. Conclusion
+We have introduced a simple information theoretic ap- proach to topic modeling that can leverage domain knowl- edge specified informally as anchors . Our framework uses a novel combination of CorEx and the information bottleneck. Preliminary results suggest it can extract more precise, interpretable topics through a lightweight interactive process. We next plan to perform further empirical evaluations and to extend the algorithm to handle complex latent structures present in health care data.
+Acknowledgements
+This work was partially supported by DARPA award HR0011-15-C-0115. David Kale was supported by the Alfred E. Mann Innovation in Engineering Doctoral Fellowship.104
+Toward Interpretable Topic Discovery via Anchored Correlation Explanation
+References
+Agarwal, V., Podchiyska, T., Banda, J.M., Goel, V., Leung, T. I., Minty, E. P., Sweeney, T. E., Gyang, E., and N.H., Shah. Learning statistical models of phenotypes using noisy labeled training data. Journal of the American Medical Informatics Association (JAMIA) , 2016.
+Andrzejewski, David and Zhu, Xiaojin.Latent dirichlet allocation with topic-in-set knowledge. In Proceedings of the NAACL HLT 2009 Workshop on Semi-Supervised Learning for Natural Language Processing , pp. 43–48, 2009.
+Andrzejewski, David, Zhu, Xiaojin, and Craven,Mark. Incorporating domain knowledge into topic modeling via dirichlet forest priors. In Proceedings of the 26th Annual International Conference on Machine Learning , pp. 25–32, 2009.
+Arora, Sanjeev, Ge, Rong, and Moitra, Ankur.Learning topic models – going beyond svd. In Proceedings of the 2012 IEEE 53rd Annual Symposium on Foundations of Computer Science , FOCS ’12, pp. 1–10, 2012.
+Chapman, Wendy W., Bridewell, Will, Hanbury, Paul,Cooper, Gregory F., and Buchanan, Bruce G. A simple algorithm for identifying negated findings and diseases in discharge summaries. Journal of Biomedical Informatics , 34(5):301 – 310, 2001. ISSN 1532-0464.
+Chen, Peixian, Zhang, Nevin L, Poon, Leonard KM,and Chen, Zhourong. Progressive EM for latent tree models and hierarchical topic detection. arXiv preprint arXiv:1508.009...(truncated)
+
+================================== Ai Message ==================================
+
+No. In the reported experiments, they compare Anchored/Unsupervised CorEx against Naive Bayes, not against popular topic models such as LDA.

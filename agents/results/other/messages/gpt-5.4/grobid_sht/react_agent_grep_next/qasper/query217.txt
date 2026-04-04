@@ -1,0 +1,72 @@
+================================ Human Message =================================
+
+QUERY:
+what domains are explored?
+
+TABLE OF CONTENTS (TOC):
+1 | #SarcasmDetection is soooo general! Towards a Domain-Independent Approach for Detecting Sarcasm
+1.1 | Abstract
+1.2 | Introduction
+1.3 | Related Work
+1.4 | Sarcasm Detection on Twitter
+1.5 | Sarcasm Detection on Amazon Reviews
+1.6 | Methods Data Collection
+1.7 | Liu05
+1.8 | Features
+1.9 | Domain-Specific Features
+1.10 | General Features
+1.11 | Evaluation
+1.12 | Most Polar Score
+1.13 | Avg. Polarity of the Instance (Liu05)
+1.14 | N-gram PMI Scores
+1.15 | All-Caps Words
+1.16 | Specific Character Features
+1.17 | Largest Score Gap
+1.18 | Results
+1.19 | Discussion
+1.20 | Conclusions
+1.21 | Acknowledgments
+1.22 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_tgWivPkLuGsehWYt5Y5DzzZT)
+ Call ID: call_tgWivPkLuGsehWYt5Y5DzzZT
+  Args:
+    section_id: 1.1
+
+================================= Tool Message =================================
+Name: read_section
+
+Abstract
+Automatic sarcasm detection methods have traditionally been designed for maximum performance on a specific domain. This poses challenges for those wishing to transfer those approaches to other existing or novel domains, which may be typified by very different language characteristics. We develop a general set of features and evaluate it under different training scenarios utilizing in-domain and/or out-of-domain training data. The best-performing scenario, training on both while employing a domain adaptation step, achieves an F1 of 0. 780, which is well above baseline F1-measures of 0.515 and 0.345. We also show that the approach outperforms the best results from prior work on the same target domain.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_hipgrJrRkfE2OgYfX36y1gOs)
+ Call ID: call_hipgrJrRkfE2OgYfX36y1gOs
+  Args:
+    section_id: 1.4
+
+================================= Tool Message =================================
+Name: read_section
+
+Sarcasm Detection on Twitter
+Twitter is a micro-blogging service that allows users to post short "tweets" to share content or describe their feelings or opinions in 140 characters or less. For researchers, it boasts a low cost of annotation and plentiful supply of data (users often self-label their tweets using the "#" symbol-many explicitly label their sarcastic tweets using the hashtag "#sarcasm").  A variety of approaches have been taken toward automatically detecting sarcasm on Twitter, including explicitly using the information present in a tweet's hashtag(s); Maynard and Greenwood (2014) learned which hashtags characteristically corresponded with sarcastic tweets, and used the presence of those indicators to predict other sarcastic tweets, with high success. Liebrecht, Kunneman, and van den Bosch (2013) detected sarcasm in Dutch tweets using unigram, bigram, and trigram features.  Rajadesingan, Zafarani, and Liu (2015) detected sarcastic tweets based on features adapted from behavioral models of 2 hilt.cse.unt.edu/resources.html arXiv:1806.03369v1 [cs.CL] 8 Jun 2018 sarcasm usage, drawing extensively from individual users' Twitter histories and relying heavily on situational context and user characteristics.  The system also employed lexical features and grammatical correctness as a means of modelling different aspects of the user's behavior.Other researchers have had success identifying sarcasm by a tweet's use of positive sentiment to describe a negative situation (Riloff et al.  2013), employing contextual (Bamman and Smith 2015) or pragmatic (González-Ibáñez, Muresan, and Wacholder 2011) features, and observing the writing style and emotional scenario of a tweet (Reyes, Rosso, and Veale 2013) . An underlying theme among these methods is that the features are generally designed specifically for use with tweets.  A major challenge in developing a more general approach for sarcasm detection lies in developing features that are present across many domains, yet still specific enough to reliably capture the differences between sarcastic and non-sarcastic text.Finally, some researchers have recently explored approaches that rely on word embeddings and/or carefully tailored neural networks, rather than on task-specific feature design (Ghosh, Guo, and Muresan 2015; Ghosh and Veale 2016; Amir et al.  2016) . Since neural networks offer little transparency, it is uncertain whether the features learned in these approaches would be easily transferable across text domains for this task (prior research on other tasks suggests that the features computed by deep neural networks grow increasingly specific to the training dataset-and in turn, to the training domain-with each layer (Yosinski et al. 2014) ).  Although an interesting question, the focus herein is on uncovering the specific types of features capable of leveraging general patterns for sarcasm detection, and this can be more easily examined using shallower learning algorithms.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_kQ1Q9u5AgI5uEeOetDtztpGV)
+ Call ID: call_kQ1Q9u5AgI5uEeOetDtztpGV
+  Args:
+    section_id: 1.5
+
+================================= Tool Message =================================
+Name: read_section
+
+Sarcasm Detection on Amazon Reviews
+Research on automatic sarcasm detection in other domains has been limited, but recently a publicly-available corpus of sarcastic and non-sarcastic Amazon product reviews was released by Filatova (2012) to facilitate research. Buschmeier, Cimiano, and Klinger (2014) test many feature combinations on this dataset, including those based on metadata (e.g., Amazon star rating), sentiment, grammar, the presence of interjections (e.g. , "wow") or laughter (e.g., through onomatopoeia or acronyms such as "lol"), the presence of emoticons, and bag-of-words features. Their highest F 1 (0.744) is achieved using all of these with a logistic regression classifier; however, using only the star rating, they still achieve an F 1 of 0.717.  This highlights the need for high-performing, general features for sarcasm detection; metadata features are highly domain-specific, and even bag-of-words trends may be unique to certain domains ("trump" was one of the most common unigrams in our own Twitter training set, but only occurred once across all Amazon product reviews). Prior to the release of Filatova's dataset, Davidov, Tsur, and Rappoport (2010) developed a semi-supervised approach to classify tweets or Amazon reviews as sarcastic or non-sarcastic by clustering samples based on grammatical features and the full or partial presence of automaticallyextracted text patterns. They evaluated their work on a sam- ple of the classified instances annotated by anonymous users on Amazon Mechanical Turk.  They tested several different seed sets with their approach, one of which contained a mixture of positive Amazon reviews, positive #sarcasm-tagged tweets, and a manually-selected sample of negative tweets. Although they did not report test results on Amazon reviews using this seed set, they did report test results on #sarcasmtagged tweets, achieving an F-measure of 0.545.  Their work is the closest to ours, because it attempts to harness training samples from both the Twitter and Amazon review domains.
+
+================================== Ai Message ==================================
+
+Twitter and Amazon product reviews.

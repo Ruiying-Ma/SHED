@@ -1,0 +1,71 @@
+================================ Human Message =================================
+
+QUERY:
+How slow is the unparallelizable ART model in the first place?  
+
+TABLE OF CONTENTS (TOC):
+1 | Hint-Based Training for Non-Autoregressive Machine Translation
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2 Approach
+1.3.1 | 2.1 Observation: Illed States and Attentions
+1.3.2 | 2.2 Hints from the ART teacher Model
+1.4 | 3 Experiments
+1.4.1 | 3.1 Experimental Settings
+1.4.2 | 3.2 Inference
+1.4.3 | 3.3 Experimental Results
+1.5 | 4 Conclusion
+1.6 | Acknowledgment
+1.7 | References
+1.8 | Appendix
+1.8.1 | A Related Works
+1.8.1.1 | A.1 AutoRegressive Translation
+1.8.1.2 | A.2 Non-AutoRegressive Translation
+1.8.1.3 | A.3 Knowledge Distillation and Hint-Based Training
+1.8.2 | B Network Architecture
+1.8.3 | C Extra Experimental Settings
+1.8.4 | D Case Study
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_OKeIhlLDVD0P3KEmv8JPpXq1)
+ Call ID: call_OKeIhlLDVD0P3KEmv8JPpXq1
+  Args:
+    pattern: slow|latency|speedup|inference time|how slow|unparallelizable|parallelizable
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1 | Abstract
+Due to the unparallelizable nature of the autoregressive factorization, AutoRegressive Translation (ART) models have to generate tokens sequentially during decoding and thus suffer from high inference latency. Non- AutoRegressive Translation (NART) models were proposed to reduce the inference time, but could only achieve inferior translation ac- curacy. In this paper, we proposed a novel approach to leveraging the hints from hidden states and word alignments to help the training of NART models.  The results achieve signif- icant improvement over previous NART mod- els for the WMT14 En-De and De-En datasets and are even comparable to a strong LSTM- based ART baseline but one order of magni- tude faster in inference.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_SVc1MvsQRTLbURSgvm49rklt)
+ Call ID: call_SVc1MvsQRTLbURSgvm49rklt
+  Args:
+    section_id: 1.4.2
+
+================================= Tool Message =================================
+Name: read_section
+
+3.2 Inference
+During training, T y does not need to be predicted as the target sentence is given. During testing, we have to predict the length of the target sentence for each source sentence. In many languages, the length of the target sentence can be roughly es- timated from the length of the source sentence. We choose a simple method to avoid the computa- tional overhead, which uses input length to deter-
+ mine target sentence length: T y = T x + C , where C is a constant bias determined by the average length differences between the source and target training sentences. We can also predict the target length ranging from [( T x + C ) − B, ( T x + C )+ B ] , where B is the halfwidth. By doing this, we can obtain multiple translation results with different lengths.  Note that we choose this method only to show the effectiveness of our proposed method and a more advanced length estimation method can be used to further improve the performance.Once we have multiple translation results, we additionally use our ART teacher model to eval- uate each result and select the one that achieves the highest probability.  As the evaluation is fully parallelizable (since it is identical to the parallel training of the ART model), this rescoring opera- tion will not hurt the non-autoregressive property of the NART model.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_ojWDjKkikoOEOV8uuPZ5PzGZ)
+ Call ID: call_ojWDjKkikoOEOV8uuPZ5PzGZ
+  Args:
+    pattern: one order of magnitude faster|faster in inference|latency|speedup
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1 | Abstract
+Due to the unparallelizable nature of the autoregressive factorization, AutoRegressive Translation (ART) models have to generate tokens sequentially during decoding and thus suffer from high inference latency. Non- AutoRegressive Translation (NART) models were proposed to reduce the inference time, but could only achieve inferior translation ac- curacy. In this paper, we proposed a novel approach to leveraging the hints from hidden states and word alignments to help the training of NART models.  The results achieve signif- icant improvement over previous NART mod- els for the WMT14 En-De and De-En datasets and are even comparable to a strong LSTM- based ART baseline but one order of magni- tude faster in inference.
+
+================================== Ai Message ==================================
+
+The paper says the autoregressive translation model suffers from high inference latency because it must generate tokens sequentially during decoding. It also states that the proposed non-autoregressive model is one order of magnitude faster in inference than a strong LSTM-based ART baseline.

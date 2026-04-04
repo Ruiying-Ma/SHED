@@ -1,0 +1,40 @@
+================================ Human Message =================================
+
+HYPOTHESIS:
+Notice on compelled disclosure: Receiving Party shall notify Disclosing Party in case Receiving Party is required by law, regulation or judicial process to disclose any Confidential Information.
+
+TABLE OF CONTENTS (TOC):
+1 | Abstract
+2 | VIDAR SYSTEMS CORPORATION RECEIVER
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_BK4Zc3mjzilJABbpxj4Kv6BB)
+ Call ID: call_BK4Zc3mjzilJABbpxj4Kv6BB
+  Args:
+    pattern: required by law|judicial process|regulation|notify|notice|compelled disclosure|disclose any Confidential Information
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_VPfz3ReLFdTsjV96aFd5Buxk)
+ Call ID: call_VPfz3ReLFdTsjV96aFd5Buxk
+  Args:
+    section_id: 2
+
+================================= Tool Message =================================
+Name: read_section
+
+VIDAR SYSTEMS CORPORATION RECEIVER
+By: _____________________________ Signature
+18268-001 Rev B
+<table><tr><td>3. Additional Disclosures.  Receiver may disclose Confidential Information if the same:</td></tr><tr><td>(a) was generally at the time it was disclosed other than as a result of a</td></tr><tr><td>disclosure made by Receiver;</td></tr><tr><td>(b) was known to the Receiver at the time it received such information, as evidenced</td></tr><tr><td>by contemporaneous documentation in Receiver's files;</td></tr><tr><td>(c) is disclosed with the prior written approval of VIDAR;</td></tr><tr><td>(d) becomes known to Receiver on a non-confidential basis from a source other than</td></tr><tr><td>VIDAR without breach of this Agreement by Receiver;</td></tr><tr><td>(e) is disclosed to a third party by VIDAR without restrictions against non-disclosure</td></tr><tr><td>similar to those contained in this Agreement;</td></tr><tr><td>2.  Receiver's Obligations.  Receiver shall: (i) hold the Confidential Information in strict</td></tr><tr><td>confidence; (ii) use the Confidential Information only for the purposes as expressly</td></tr><tr><td>directed by VIDAR; and (iii) provide such information only to those of its personnel</td></tr><tr><td>who: (y) have a need to know the same to further VIDAR's interests; and (z) become</td></tr><tr><td>a party to and bound by a confidentiality agreement at least as restrictive as this</td></tr><tr><td>Agreement prior to receiving any such information.  Receiver will not disclose</td></tr><tr><td>Confidential Information to any party who do not meet the preceding requirements. </td></tr><tr><td>Receiver shall use the same degree of care to protect and safeguard the</td></tr><tr><td>confidentiality of Confidential Information as it uses to protect and safeguard the</td></tr><tr><td>confidentiality of its own proprietary information, and Receiver represents, warrants</td></tr><tr><td>and covenants to VIDAR that such degree of care is reasonably designed to protect</td></tr><tr><td>the confidentiality of the Confidential Information. </td></tr></table>
+ Table Except for the limited right to use the Confidential Information as set forth above, all intellectual property, patent, copyright, trademark, trade secret and all other rights and interests in the Confidential Information and the products, inventions, ideas, works, creation, symbols, data, reports, opinions and all other concepts and materials developed, invented, reduced to practice, authored or created by Receiver (including portions and derivatives thereof) in any medium arising from or relating to this Agreement ("Intellectual Property") shall be the sole and exclusive property of VIDAR.  c) Receiver shall promptly disclose all Intellectual Property VIDAR and shall make and maintain adequate and current written records of all Intellectual Property.  Receiver agrees to take all actions, execute all instruments and fully cooperate with VIDAR, its successors, assigns or nominees in which, in the opinion of VIDAR, are expedient or necessary at any time to file, prosecute, register, evidence, secure, maintain or litigate all such VIDAR rights and interests in the Intellectual Property throughout the world, including all commercial, legal or administrative proceedings involving the same.  All expenses of applying for and obtaining such rights and interests shall be borne by VIDAR. VIDAR shall reimburse Receiver for pre-approved expenses paid in connection with such cooperation.6. Return of ConfidentialInformation. Upon the request of VIDAR or the termination or expiration of this Confidential Agreement, Receiver shall promptly return to VIDAR all copies of the Confidential Information and obtained by Receiver. 7. Disclaimer.  Receiver acknowledges that the Confidential Information may relate to processes or products that are developmental and may or may not have been reduced to practical application in prototype form. Accordingly, Receiver understands that neither VIDAR has made or makes any representation or warranty as to the accuracy, completeness or value of the Confidential Information.
+
+================================== Ai Message ==================================
+
+NotMentioned

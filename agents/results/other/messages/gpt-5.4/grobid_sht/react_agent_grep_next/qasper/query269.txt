@@ -1,0 +1,140 @@
+================================ Human Message =================================
+
+QUERY:
+What is the machine learning method used to make the predictions?
+
+TABLE OF CONTENTS (TOC):
+1 | Event Representation Learning Enhanced with External Commonsense Knowledge
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2 Commonsense Knowledge Enhanced Event Representations
+1.3.1 | 2.1 Low-Rank Tensors for Event Embedding
+1.3.2 | 2.2 Intent Embedding
+1.3.3 | 2.3 Sentiment Embedding
+1.3.4 | 2.4 Joint Event, Intent and Sentiment Embedding
+1.4 | 3 Experiments
+1.4.1 | 3.1 Baselines
+1.4.2 | 3.2.1 Hard Similarity Task
+1.4.3 | 3.2.2 Transitive Sentence Similarity
+1.4.4 | 3.2.3 Results
+1.4.5 | 3.2.4 Case Study
+1.4.6 | 3.3 Script Event Prediction
+1.4.7 | 3.4 Stock Market Prediction
+1.5 | 4 Related Work
+1.6 | 5 Conclusion
+1.7 | Acknowledgments
+1.8 | availability
+1.9 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_uY7PYoBi4zCRGW3f9GWD3x52)
+ Call ID: call_uY7PYoBi4zCRGW3f9GWD3x52
+  Args:
+    pattern: predict|prediction|predictions
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1 | Abstract
+Prior work has proposed effective methods to learn event representations that can capture syntactic and semantic information over text corpus, demonstrating their effectiveness for downstream tasks such as script event prediction. On the other hand, events extracted from raw texts lacks of commonsense knowledge, such as the intents and emotions of the event participants, which are useful for distinguishing event pairs when there are only subtle differences in their surface realizations.  To address this issue, this paper proposes to leverage external commonsense knowledge about the intent and sentiment of the event. Experiments on three event-related tasks, i.e., event similarity, script event prediction and stock market prediction, show that our model obtains much better event embeddings for the tasks, achieving 78% improvements on hard similarity task, yielding more precise inferences on subsequent events under given contexts, and better accuracies in predicting the volatilities of the stock market 1 .
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_28LsDCTBvUKDcNDSunSp6Pho)
+ Call ID: call_28LsDCTBvUKDcNDSunSp6Pho
+  Args:
+    pattern: stock market prediction|script event prediction|method|classifier|regression|SVM|logistic|random forest|neural
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1 | Abstract
+Prior work has proposed effective methods to learn event representations that can capture syntactic and semantic information over text corpus, demonstrating their effectiveness for downstream tasks such as script event prediction. On the other hand, events extracted from raw texts lacks of commonsense knowledge, such as the intents and emotions of the event participants, which are useful for distinguishing event pairs when there are only subtle differences in their surface realizations.  To address this issue, this paper proposes to leverage external commonsense knowledge about the intent and sentiment of the event. Experiments on three event-related tasks, i.e., event similarity, script event prediction and stock market prediction, show that our model obtains much better event embeddings for the tasks, achieving 78% improvements on hard similarity task, yielding more precise inferences on subsequent events under given contexts, and better accuracies in predicting the volatilities of the stock market 1 .
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_48XM7RdqV6Nn6Omz9yHWa1sb)
+ Call ID: call_48XM7RdqV6Nn6Omz9yHWa1sb
+  Args:
+    section_id: 1.4.6
+
+================================= Tool Message =================================
+Name: read_section
+
+3.3 Script Event Prediction
+Event is a kind of important real-world knowledge. Learning effective event representations can be benefit for numerous applications. Script event prediction (Chambers and Jurafsky, 2008 ) is a challenging event-based commonsense reasoning task, which is defined as giving an existing event context, one needs to choose the most reasonable subsequent event from a candidate list. Following Li et al.  (2018a) , we evaluate on the standard multiple choice narrative cloze (MCNC) dataset (Granroth-Wilding and Clark, 2016) . As SGNN proposed by Li et al. (2018a) use the framework of SGNN, and only replace their input event embeddings with our intent and sentiment-enhanced event embeddings. Wang et al. (2017) and Li et al.  (2018a) showed that script event prediction is a challenging problem, and even 1% of accuracy improvement is very difficult. Experimental results shown in Table 3 demonstrate that we can achieve more than 1.5% improvements in single model comparison and more than 1.4% improvements in multi-model integration comparison, just by replacing the input embeddings, which confirms that better event understanding can lead to better inference results.  An interesting result is that the event embeddings only incorporated with intents achieved the best result against other baselines. This confirms that capturing people's intents is helpful to infer their next plan. In addition, we notice that the event embeddings only incorporated with sentiment also achieve better performance than SGNN. This is mainly because the emotional consistency does also contribute to predicate the subsequent event.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_YvyYlhFNsQHj46pqKA5XNFe5)
+ Call ID: call_YvyYlhFNsQHj46pqKA5XNFe5
+  Args:
+    section_id: 1.4.7
+
+================================= Tool Message =================================
+Name: read_section
+
+3.4 Stock Market Prediction
+It has been shown that news events influence the trends of stock price movements (Luss and d'Aspremont, 2012) . As news events affect human decisions and the volatility of stock prices is influenced by human trading, it is reasonable to say that events can influence the stock market.In this section, we compare with several eventdriven stock market prediction baseline methods:
+ (1) Word, Luss and d'Aspremont (2012) Experimental results are shown in Figure 5 . We find that knowledge-driven event embedding is a competitive baseline method, which incorporates world knowledge to improve the performances of event embeddings on the stock prediction. Sentiment is often discussed in predicting stock market, as positive or negative news can affect people's trading decision, which in turn influences the movement of stock market.  In this study, we empirically show that event emotions are effective for improving the performance of stock prediction (+2.4%).
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_wsfS42IXumuZGS5FghOGMjAE)
+ Call ID: call_wsfS42IXumuZGS5FghOGMjAE
+  Args:
+    pattern: SGNN|support vector|logistic regression|random forest|softmax|multiple choice narrative cloze|choose the most reasonable subsequent event
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.3.3 | 2.3 Sentiment Embedding
+Sentiment embedding refers to encoding the event participants' emotions into event vectors, which is mainly used to explain how does the actor feel after the event. For example, given two events "Per-sonX broke record" and "PersonX broke vase", there are only subtle differences in their surface realizations, however, the emotions of PersonX are totally different.  After "PersonX broke record", PersonX may be feel happy, while after "PersonX broke vase", PersonX could be feel sad. With the emotions, we can also effectively distinguish these superficial similar events.We also use ATOMIC (Sap et al., 2019) as the event sentiment labeled dataset. In this dataset, the sentiment of the event is labeled as words.  For example, the sentiment of "PersonX broke vase" is labeled as "(sad, be regretful, feel sorry, afraid)". We use SenticNet (Cambria et al., 2018) to normalize these emotion words (W = {w 1 , w 2 , . . . , w n }) as the positive (labeled as 1) or the negative (labeled as -1) sentiment.  The sentiment polarity of the event P e is dependent on the polarity of the labeled emotion words P W : P e = 1, if i P w i > 0, or P e = -1, if i P w i < 0. We use the softmax binary classifier to learn sentiment enhanced event embeddings. The input of the classifier is event embeddings, and the output is its sentiment polarity (positive or negative).  The model is trained in a supervised manner by minimizing the cross entropy error of the sentiment classification, whose loss function is given below.LS = - xe∈C l∈L p g l (xe) • log(p l (xe))
+ where C means all training instances, L is the collection of sentiment categories, x e means an event vector, p l (x e ) is the probability of predicting x e as class l, p g l (x e ) indicates whether class l is the correct sentiment category, whose value is 1 or -1.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_0G4jI3uxLw4ZCEvKAbNS0GoV)
+ Call ID: call_0G4jI3uxLw4ZCEvKAbNS0GoV
+  Args:
+    pattern: make the predictions|used to make the predictions|prediction baseline methods|framework
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.3 | 2 Commonsense Knowledge Enhanced Event Representations
+The joint embedding framework is shown in Figure 2. We begin by introducing the baseline event embedding learning model, which serves as the basis of the proposed framework. Then, we show how to model intent and sentiment information. Subsequently, we describe the proposed joint model by integrating intent and sentiment into the original objective function to help learn high-quality event representations, and introduce the training details.
+2.1 Low-Rank Tensors for Event Embedding
+The goal of event embedding is to learn lowdimension dense vector representations for event tuples E = (A, P, O), where P is the action or predicate, A is the actor or subject and O is the object on which the action is performed. Event embedding models compound vector representations over its predicate and arguments representations. The challenge is that the composition models should be effective for learning the interactions between the predicate and the argument. Simple additive transformations are incompetent.We follow Ding et al.  (2015) modelling such informative interactions through tensor composition. The architecture of neural tensor network (NTN) for learning event embeddings is shown in Figure 3 , where the bilinear tensors are used to explicitly model the relationship between the actor and the action, and that between the object and the action.Figure 3: Baseline event-embedding model.The inputs of NTN are the word embeddings of A, P and O, and the outputs are event embeddings.  We initialized our word representations using publicly available d-dimensional (d = 100) GloVe vectors (Pennington et al., 2014) . As most event arguments consist of several words, we represent the actor, action and object as the average of their word embeddings, respectively.From Figure 3 , S 1 ∈ R d is computed by:
+ S1 = f A T T [1:k] 1 P + W A P + b g(S1) = g(A, P ) = U T S1
+where T
+[1:k] 1 ∈ R d×d×k is a tensor, which is a set of k matrices, each with d × d dimensions. The bilinear tensor product A T T [1:k] 1 P is a vec- tor r ∈ R k ,
+ where each entry is computed by one slice of the tensor (r i = A T T
+[i] 1 P, i = 1, • • • , k).The other parameters are a standard feed-forward neural network, where W ∈ R k×2d is the weight matrix, b ∈ R k is the bias vector, U ∈ R k is a One problem with tensors is curse of dimensionality, which limits the wide application of tensors in many areas.  It is therefore essential to approximate tensors of higher order in a compressed scheme, for example, a low-rank tensor decomposition. To decrease the number of parameters in standard neural tensor network, we make lowrank approximation that represents each matrix by two low-rank matrices plus diagonal, as illustrated in Figure 4 . Formally, the parameter of the i-th slice is
+Figure 4: An illustration of low-rank neural tensor network for learning event embeddings. T [i] appr = T [i 1 ] × T [i 2 ] + diag(t [i] ), where T [i 1 ] ∈ R d×n , T [i 2 ] ∈ R n×d , t [i] ∈ R d , n is a hyper-parameter,
+which is used for adjusting the degree of tensor decomposition. The output of neural tensor layer is formalized as follows. S1 = f A T [Tappr] [1:k] 1 P + W A P + b ,
+where [T appr ]
+[1:k] 1
+is the low-rank tensor that defines multiple low-rank bilinear layers. k is the slice number of neural tensor network which is also equal to the output length of S 1 . We assume that event tuples in the training data should be scored higher than corrupted tuples, in which one of the event arguments is replaced with a random argument. Formally, the corrupted event tuple is E r = (A r , P, O), which is derived by replacing each word in A with a random word w r in our dictionary D (which contains all the words in the training data) to obtain a corrupted counterpart A r . We calculate the margin loss of the two event tuples as:
+ LE = loss(E, E r ) = max(0, 1 -g(E) + g(E r )) + λ Φ 2 2 ,
+where Φ = (T 1 , T 2 , T 3 , W, b) is the set of model parameters. The standard L 2 regularization is used, for which the weight λ is set as 0.0001. The algorithm goes over the training set for multiple iterations.  For each training instance, if the loss loss(E, E r ) = max(0, 1-g(E)+g(E r )) is equal to zero, the online training algorithm continues to process the next event tuple. Otherwise, the parameters are updated to minimize the loss using back-propagation (Rumelhart et al., 1985) .
+2.2 Intent Embedding
+Intent embedding refers to encoding the event participants' intents into event vectors, which is mainly used to explain why the actor performed the action. For example, given two events "PersonX threw basketball" and "PersonX threw bomb", there are only subtle differences in their surface realizations, however, the intents are totally different. "PersonX threw basketball" is just for fun, while "PersonX threw bomb" could be a terrorist attack.  With the intents, we can easily distinguish these superficial similar events.One challenge for incorporating intents into event embeddings is that we should have a largescale labeled dataset, which annotated the event and its actor's intents. Recently, Rashkin et al. ( 2018) and Sap et al. (2019) released such valuable commonsense knowledge dataset (ATOMIC), which consists of 25,000 event phrases covering a diverse range of daily-life events and situations.  For example, given an event "PersonX drinks coffee in the morning", the dataset labels PersonX's likely intent is "PersonX wants to stay awake".We notice that the intents labeled in ATOMIC is a sentence. Hence, intent embedding is actually a sentence representation learning task.  There are a number of deep neural networks for learning distributed sentence vectors, in which bi-directional LSTMs (BiLSTM) (Hochreiter and Schmidhuber, 1997) have been a dominant one, giving state-ofthe-art performances in language modelling (Peters et al., 2018) and syntactic parsing (Dozat and Manning, 2016) . Hence, we use the BiLSTM model to learn intent representations, which is composed of two directed LSTM networks. In the forward direction, LSTM processes the input from the left to right and in the backward direction, it processes the input from right to left. In each LSTM component, it reads the input words recurrently using a single hidden state.Taking the forward LSTM network as an example, we first define the initial state as -→ h 0 . LSTM reads the input word distributed vectors x 0 , x 1 , . . . , x n , and recurrently calculates the state transition -→ h 1 , . . . , -→ h n+1 the same as Graves and Schmidhuber (2005) .The backward LSTM networks shares the same recurrent state transition procedure as the forward LSTM network.  It also first defines an initial state ←h n+1 , and reads the input word representations x n , x n-1 , . . . , x 0 , transforming their values to ←h n , ←h n-1 , . . . , ←h 0 , respectively. The BiLSTM model uses the concatenated vector of -→ h t and ←h t as the hidden vector for the t-th word:
+ h t = [ -→ h t ; ← - h t ]
+A single hidden vector representation v i of the input intent can be obtained by concatenating the last hidden states of the two LSTMs:
+vi = [ -→ h n+1 ; ← - h 0 ]
+In the training process, we calculate the similarity between a given event vector v e and its related intent vector v i . For effectively training the model, we devise a ranking type loss function as follows:
+ LI = max(0, 1 -cosine(ve, vi) + cosine(ve, v i )) (6)
+where v i is the incorrect intent for v e , which is randomly selected from the annotated dataset.
+2.3 Sentiment Embedding
+Sentiment embedding refers to encoding the event participants' emotions into event vectors, which is mainly used to explain how does the actor feel after the event. For example, given two events "Per-sonX broke record" and "PersonX broke vase", there are only subtle differences in their surface realizations, however, the emotions of PersonX are totally different.  After "PersonX broke record", PersonX may be feel happy, while after "PersonX broke vase", PersonX could be feel sad. With the emotions, we can also effectively distinguish these superficial similar events.We also use ATOMIC (Sap et al., 2019) as the event sentiment labeled dataset. In this dataset, the sentiment of the event is labeled as words.  For example, the sentiment of "PersonX broke vase" is labeled as "(sad, be regretful, feel sorry, afraid)". We use SenticNet (Cambria et al., 2018) to normalize these emotion words (W = {w 1 , w 2 , . . . , w n }) as the positive (labeled as 1) or the negative (labeled as -1) sentiment.  The sentiment polarity of the event P e is dependent on the polarity of the labeled emotion words P W : P e = 1, if i P w i > 0, or P e = -1, if i P w i < 0. We use the softmax binary classifier to learn sentiment enhanced event embeddings. The input of the classifier is event embeddings, and the output is its sentiment polarity (positive or negative).  The model is trained in a supervised manner by minimizing the cross entropy error of the sentiment classification, whose loss function is given below.LS = - xe∈C l∈L p g l (xe) • log(p l (xe))
+ where C means all training instances, L is the collection of sentiment categories, x e means an event vector, p l (x e ) is the probability of predicting x e as class l, p g l (x e ) indicates whether class l is the correct sentiment category, whose value is 1 or -1.
+2.4 Joint Event, Intent and Sentiment Embedding
+Given a training event corpus with annotated intents and emotions, our model jointly minimizes a linear combination of the loss functions on events, intents and sentiment:
+L = αLE + βLI + γLS (8)
+where α, β, γ ∈ [0, 1] are model parameters to weight the three loss functions.We use the New York Times Gigaword Corpus (LDC2007T07) for pre-training event embeddings.  Event triples are extracted based on the Open Information Extraction technolo...(truncated)
+
+================================== Ai Message ==================================
+
+The paper uses SGNN for script event prediction, replacing its input event embeddings with the proposed intent and sentiment-enhanced event embeddings. For sentiment-based prediction, it uses a softmax binary classifier.

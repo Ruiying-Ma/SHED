@@ -1,0 +1,56 @@
+================================ Human Message =================================
+
+QUERY:
+What metric is used to measure translation accuracy?
+
+TABLE OF CONTENTS (TOC):
+1 | Hint-Based Training for Non-Autoregressive Machine Translation
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2 Approach
+1.3.1 | 2.1 Observation: Illed States and Attentions
+1.3.2 | 2.2 Hints from the ART teacher Model
+1.4 | 3.1 Experimental Settings
+1.5 | 3.2 Inference
+1.6 | 3.3 Experimental Results
+1.7 | Autoregressive models
+1.8 | 4 Conclusion
+1.9 | C Extra Experimental Settings
+1.10 | BLEU scores
+1.11 | D Case Study
+1.12 | Acknowledgment
+1.13 | Appendix A Related Works
+1.14 | A.2 Non-AutoRegressive Translation
+1.15 | A.3 Knowledge Distillation and Hint-Based Training
+1.16 | B Network Architecture
+1.17 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_dup2ykhHCw8IgaZ5ZTxIaSTY)
+ Call ID: call_dup2ykhHCw8IgaZ5ZTxIaSTY
+  Args:
+    pattern: translation accuracy|measure.*translation|BLEU
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1 | Abstract
+Due to the unparallelizable nature of the autoregressive factorization, AutoRegressive Translation (ART) models have to generate tokens sequentially during decoding and thus suffer from high inference latency. Non-AutoRegressive Translation (NART) models were proposed to reduce the inference time, but could only achieve inferior translation accuracy. In this paper, we proposed a novel approach to leveraging the hints from hidden states and word alignments to help the training of NART models.  The results achieve significant improvement over previous NART models for the WMT14 En-De and De-En datasets and are even comparable to a strong LSTMbased ART baseline but one order of magnitude faster in inference.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_rgvc0XJQJUkCQHlojOLXD2Bh)
+ Call ID: call_rgvc0XJQJUkCQHlojOLXD2Bh
+  Args:
+    pattern: BLEU
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.10 | BLEU scores
+We use the BLEU score (Papineni et al., 2002) as our evaluation measure. During inference, we set C to 2, -2, 2 for WMT14 En-De, De-En and IWSLT14 De-En datasets respectively, according to the average lengths of different languages in the training sets. When using the teacher to rescore, we set B = 4 and thus have 9 candidates in total.  We also evaluate the average per-sentence decoding latencies on one NVIDIA TITAN Xp GPU card by decoding on WMT14 En-De test sets with batch size 1 for our ART teacher model and NART models, and calculate the speedup based on them.
+
+================================== Ai Message ==================================
+
+BLEU score.

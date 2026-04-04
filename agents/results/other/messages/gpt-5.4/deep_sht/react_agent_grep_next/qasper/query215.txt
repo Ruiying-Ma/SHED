@@ -1,0 +1,135 @@
+================================ Human Message =================================
+
+QUERY:
+what was the previous best results model?
+
+TABLE OF CONTENTS (TOC):
+1 | #SarcasmDetection is soooo general! Towards a Domain-Independent Approach for Detecting Sarcasm
+1.1 | Natalie Parde and Rodney D. Nielsen
+1.1.1 | Abstract
+1.1.1.1 | Introduction
+1.1.1.1.1 | Related Work
+1.1.1.1.1.1 | Sarcasm Detection on Twitter
+1.1.1.1.1.1.1 | Sarcasm Detection on Amazon Reviews
+1.1.1.1.1.1.1.1 | Methods
+1.1.1.1.1.1.1.1.1 | Data Collection
+1.1.1.1.1.1.1.1.1.1 | Features
+1.1.1.1.1.1.1.1.1.1.1 | Evaluation
+1.1.1.1.1.1.1.1.1.1.1.1 | Results
+1.1.1.1.1.1.1.1.1.1.1.1.1 | Discussion
+1.1.1.1.1.1.1.1.1.1.1.1.1.1 | Conclusions
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | Acknowledgments
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_bzbbc0JYvGjOkwAFa9Eq3p7H)
+ Call ID: call_bzbbc0JYvGjOkwAFa9Eq3p7H
+  Args:
+    pattern: previous best|best results|baseline|state-of-the-art|previous.*model
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1.1.1.1.1.1.1.1.1.1.1.1 | Discussion
+When testing on Amazon reviews, the worst-performing case was that in which the classifier was trained only on Twitter data (it did not manage to outperform either base- line). This underscores the inherent variations in the data across the two domains; despite the fact that many of the features were deliberately designed to be generalizable and robust to domain-specific idiosyncrasies, the different trends across domains still confused the classifier. However, combining all of that same Twitter data with a much smaller amount of Amazon data (3998 Twitter train- ing instances relative to 1003 Amazon training instances) and applying EasyAdapt to the combined dataset performed quite well ( F 1 =0.780). The classifier was able to take advan- tage of a wealth of additional Twitter samples that had led to terrible performance on their own ( F 1 =0.276).  Thus, the high performance demonstrated when the EasyAdapt algo- rithm is applied to the training data from the two domains is particularly impressive. It shows that more data is indeed better data—provided that the proper features are selected and the classifier is properly guided in handling it.Overall, the system cut the error rate from .256 to .220, representing a 14% relative reduction in error over prior best results on the Amazon dataset. Our results testing on
+ Figure 1: Example from Amazon Product Reviews
+Twitter are not directly comparable to others, since prior work’s datasets could not be released; however, our re- sults ( F 1 =0.583) are in line with those reported previously (Riloff et al. (2013): F 1 =0.51; Davidov, Tsur, and Rappoport (2010): F 1 =0.545).  Additionally, our Twitter data did not contain many indicators shown to be discriminative in the past (leading our general features to be better predictors of sarcasm even when training/testing entirely within the do- main), and our focus in developing features was on general performance rather than performance on Twitter specifically.Both datasets were somewhat noisy. Many full-length re- views that were marked as “sarcastic” were only partially so, and included other sentences that were not sarcastic at all.  This may have been particularly problematic when strong polarity was present in those sentences. An example of this is shown in Figure 1, where the highlighted portion of the re- view indicates the sarcastic segment submitted by the anno- tator, and awesome , the most polar word in the entire review (circled), is outside that highlighted sentence. Since tweets are self-labeled, users’ own varying defini- tions of sarcasm lead to some extreme idiosyncrasies in the kinds of tweets labeled as sarcastic. Sarcastic tweets were also often dependent upon outside context. Some examples include (#sarcasm tags were removed in the actual dataset): “My daughter’s 5th grade play went over as professional, flawless, and well rehearsed as a Trump speech.  #sarcasm,” “#MilanAlessandria Mario Balotelli scored the fifth goal in the 5-0 win. He should play for the #Azzurri at #EURO2016.8 Further analysis of the Twitter-specific features revealed that contains sarcasm hashtag, contains sarcastic smiley, and con- tains sarcasm indicator phrase all led to F 1 = 0 .  0 when used indi- vidually; although these performed quite well in prior work, our Twitter dataset did not contain the indicators with high enough fre- quency to have any impact on the overall classification outcome.#sarcasm,” and “Good morning #sarcasm.”
+ Finally, some past research has found that it is more diffi- cult to discriminate between sarcastic and non-sarcastic texts when the non-sarcastic texts contain sentiment (Gonz´alez- Ib´a˜nez, Muresan, and Wacholder 2011; Ghosh, Guo, and Muresan 2015).  Since our non-sarcastic tweets are emotionally-charged, our classifier may have exhibited lower performance than it would have with only neutral non- sarcastic tweets. Since distinguishing between literal and sarcastic sentiment is useful for real-world applications of sarcasm detection, we consider the presence of sentiment in our dataset to be a worthwhile challenge.Regarding the general features developed for this work, the polarity- and subjectivity-based features performed well, while performance using only PMI features was lower.  PMI scores in particular may have been negatively impacted by common Twitter characteristics, such as the trend to join keywords together in hashtags, and the use of acronyms that are unconventional in other domains. These issues could be addressed to some extent in the future via word segmenta- tion tools, spell-checkers, and acronym expansion.
+Conclusions
+This work develops a set of domain-independent features and demonstrates their usefulness for general sarcasm de- tection. Moreover, it shows that by applying a domain adap- tation step to the extracted features, even a surplus of “bad” training data can be used to improve the performance of the classifier on target domain data, reducing error by 14% rela- tive to prior work.  The Twitter corpus described in this paper is publicly available for research purposes, 2 and represents a substantial contribution to multiple NLP sub-communities. This shared corpus of tweets annotated for sarcasm will has- ten the advancement of further research. In the future, we plan to extend our approach to detect sarcasm in a com- pletely novel domain, literature, eventually integrating the work into an application to support reading comprehension.
+Acknowledgments
+This material is based upon work supported by the NSF Graduate Research Fellowship Program under Grant 1144248, and the NSF under Grant 1262860. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.
+References
+[Amir et al. 2016] Amir, S.; Wallace, B.C.; Lyu, H.; Car- valho, P.; and Silva, M. J. 2016. Modelling context with user embeddings for sarcasm detection in social media. In Proc. of CoNLL .
+[Bamman and Smith 2015] Bamman, D., and Smith, N.2015. Contextualized sarcasm detection on twitter. In Proc. of ICWSM .
+[Brants and Franz 2006] Brants, T., and Franz, A.2006. Web 1t 5-gram v1.
+[Burfoot and Baldwin 2009] Burfoot, C., and Baldwin, T.2009. Automatic satire detection: Are you having a laugh? In Proc. of ACL-IJCNLP .
+[Buschmeier, Cimiano,and Klinger 2014] Buschmeier, K.; Cimiano, P.; and Klinger, R. 2014. An impact analysis of features in a classification approach to irony detection in product reviews. In Proc. of WASSA .
+[Daum´e III 2007] Daum´e III, H.2007. Frustratingly easy domain adaptation. In Proc. of ACL .
+[Davidov, Tsur, and Rappoport 2010] Davidov,D.; Tsur, O.; and Rappoport, A. 2010. Semi-supervised recognition of sarcasm in twitter and amazon. In Proc. of CoNLL .
+[Ekman 1992] Ekman, P. 1992.An argument for basic emo- tions. Cognition and Emotion 6(3-4).
+[Filatova 2012] Filatova, E. 2012.Irony and sarcasm: Cor- pus generation and analysis using crowdsourcing. In Proc. of LREC .
+[Ghosh and Veale 2016] Ghosh, A., and Veale,T. 2016. Fracking sarcasm using neural network. In Proc. of WASSA .
+[Ghosh, Guo, and Muresan 2015] Ghosh,D.; Guo, W.; and Muresan, S. 2015. Sarcastic or not: Word embeddings to predict the literal or sarcastic meaning of words. In Proc. of EMNLP .
+[Gonz´alez-Ib´a˜nez, Muresan,and Wacholder 2011] Gonz´alez-Ib´a˜nez, R.; Muresan, S.; and Wacholder, N. 2011. Identifying sarcasm in twitter: A closer look. In Proc. of ACL-HLT .
+[Hansen et al. 2011] Hansen, L. K.; Arvidsson,A.; Nielsen, F. A.; Colleoni, E.; and Etter, M. 2011. Good friends, bad news - affect and virality in twitter. In Proc. of FutureTech .
+[Justo et al. 2014] Justo, R.; Corcoran,T.; Lukin, S.; Walker, M.; and Torres, M. 2014. Extracting relevant knowledge for the detection of sarcasm and nastiness in the social web. Knowl.-Based Sys.
+[Kipps et al. 2009] Kipps, C.; Nestor,P.; Acosta-Cabronero, J.; Arnold, R.; and Hodges, J. 2009. Understanding social dysfunction in the behavioural variant of frontotemporal de- mentia: the role of emotion and sarcasm processing. Brain 132(3).
+[Liebrecht, Kunneman,and van den Bosch 2013] Liebrecht, C.; Kunneman, F.; and van den Bosch, A. 2013. The perfect solution for detecting sarcasm in tweets# not. In Proc. of WASSA .
+[Liu, Hu, and Cheng 2005] Liu, B.; Hu, M.;Hu, M.; and Cheng, J. 2005. Opinion observer: Analyzing and comparing opinions on the web. In WWW’05 .
+[Manning et al. 2014] Manning, C. D.;Surdeanu, M.; Bauer, J.; Finkel, J.; Bethard, S. J.; and McClosky, D. 2014. The Stanford CoreNLP natural language processing toolkit. In ACL Sys. Demos .
+[Maynard and Greenwood 2014] Maynard, D., and Green- wood,M. 2014. Who cares about sarcastic tweets? investi- gating the impact of sarcasm on sentiment analysis. In Proc. of LREC .
+[Owoputi et al. 2013] Owoputi, O.;Dyer, C.; Gimpel, K.; Schneider, N.; and Smith, N. 2013. Improved part-of-speech tagging for online conversational text with word clusters. In Proc. of NAACL .[Rajadesingan, Zafarani, and Liu 2015] Rajadesingan, A.; Zafarani, R.; and Liu, H. 2015.  Sarcasm detection on twitter: A behavioral modeling approach. In Proc. of WSDM .
+[Reyes, Rosso, and Veale 2013] Reyes, A.;Rosso, P.; and Veale, T. 2013. A multidimensional approach for detect- ing irony in twitter. Language Resources and Evaluation 47(1).
+[Riloff et al. 2013] Riloff, E.; Qadir,A.; Surve, P.; De Silva, L.; Gilbert, N.; and Huang, R. 2013. Sarcasm as contrast between a positive sentiment and negative situation. In Proc. of EMNLP .
+[Walker et al. 2012] Walker, M.; Tree, J. F.;Tree, J. F.; Anand, P.; Ab- bott, R.; and King, J. 2012. A corpus for research on delib- eration and debate. In Proc. of LREC .
+[Wilson, Wiebe, and Hoffmann 2005] Wilson, T.;Wiebe, J.; and Hoffmann, P. 2005. Recognizing contextual polarit...(truncated)
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_zE5IdG42n9jgNfkjwYLCGfG3)
+ Call ID: call_zE5IdG42n9jgNfkjwYLCGfG3
+  Args:
+    pattern: Amazon.*prior work|prior best results|Davidov|best-performing.*Amazon|baseline.*Amazon
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | References
+[Amir et al. 2016] Amir, S.; Wallace, B.C.; Lyu, H.; Car- valho, P.; and Silva, M. J. 2016. Modelling context with user embeddings for sarcasm detection in social media. In Proc. of CoNLL .
+[Bamman and Smith 2015] Bamman, D., and Smith, N.2015. Contextualized sarcasm detection on twitter. In Proc. of ICWSM .
+[Brants and Franz 2006] Brants, T., and Franz, A.2006. Web 1t 5-gram v1.
+[Burfoot and Baldwin 2009] Burfoot, C., and Baldwin, T.2009. Automatic satire detection: Are you having a laugh? In Proc. of ACL-IJCNLP .
+[Buschmeier, Cimiano,and Klinger 2014] Buschmeier, K.; Cimiano, P.; and Klinger, R. 2014. An impact analysis of features in a classification approach to irony detection in product reviews. In Proc. of WASSA .
+[Daum´e III 2007] Daum´e III, H.2007. Frustratingly easy domain adaptation. In Proc. of ACL .
+[Davidov, Tsur, and Rappoport 2010] Davidov,D.; Tsur, O.; and Rappoport, A. 2010. Semi-supervised recognition of sarcasm in twitter and amazon. In Proc. of CoNLL .
+[Ekman 1992] Ekman, P. 1992.An argument for basic emo- tions. Cognition and Emotion 6(3-4).
+[Filatova 2012] Filatova, E. 2012.Irony and sarcasm: Cor- pus generation and analysis using crowdsourcing. In Proc. of LREC .
+[Ghosh and Veale 2016] Ghosh, A., and Veale,T. 2016. Fracking sarcasm using neural network. In Proc. of WASSA .
+[Ghosh, Guo, and Muresan 2015] Ghosh,D.; Guo, W.; and Muresan, S. 2015. Sarcastic or not: Word embeddings to predict the literal or sarcastic meaning of words. In Proc. of EMNLP .
+[Gonz´alez-Ib´a˜nez, Muresan,and Wacholder 2011] Gonz´alez-Ib´a˜nez, R.; Muresan, S.; and Wacholder, N. 2011. Identifying sarcasm in twitter: A closer look. In Proc. of ACL-HLT .
+[Hansen et al. 2011] Hansen, L. K.; Arvidsson,A.; Nielsen, F. A.; Colleoni, E.; and Etter, M. 2011. Good friends, bad news - affect and virality in twitter. In Proc. of FutureTech .
+[Justo et al. 2014] Justo, R.; Corcoran,T.; Lukin, S.; Walker, M.; and Torres, M. 2014. Extracting relevant knowledge for the detection of sarcasm and nastiness in the social web. Knowl.-Based Sys.
+[Kipps et al. 2009] Kipps, C.; Nestor,P.; Acosta-Cabronero, J.; Arnold, R.; and Hodges, J. 2009. Understanding social dysfunction in the behavioural variant of frontotemporal de- mentia: the role of emotion and sarcasm processing. Brain 132(3).
+[Liebrecht, Kunneman,and van den Bosch 2013] Liebrecht, C.; Kunneman, F.; and van den Bosch, A. 2013. The perfect solution for detecting sarcasm in tweets# not. In Proc. of WASSA .
+[Liu, Hu, and Cheng 2005] Liu, B.; Hu, M.;Hu, M.; and Cheng, J. 2005. Opinion observer: Analyzing and comparing opinions on the web. In WWW’05 .
+[Manning et al. 2014] Manning, C. D.;Surdeanu, M.; Bauer, J.; Finkel, J.; Bethard, S. J.; and McClosky, D. 2014. The Stanford CoreNLP natural language processing toolkit. In ACL Sys. Demos .
+[Maynard and Greenwood 2014] Maynard, D., and Green- wood,M. 2014. Who cares about sarcastic tweets? investi- gating the impact of sarcasm on sentiment analysis. In Proc. of LREC .
+[Owoputi et al. 2013] Owoputi, O.;Dyer, C.; Gimpel, K.; Schneider, N.; and Smith, N. 2013. Improved part-of-speech tagging for online conversational text with word clusters. In Proc. of NAACL .[Rajadesingan, Zafarani, and Liu 2015] Rajadesingan, A.; Zafarani, R.; and Liu, H. 2015.  Sarcasm detection on twitter: A behavioral modeling approach. In Proc. of WSDM .
+[Reyes, Rosso, and Veale 2013] Reyes, A.;Rosso, P.; and Veale, T. 2013. A multidimensional approach for detect- ing irony in twitter. Language Resources and Evaluation 47(1).
+[Riloff et al. 2013] Riloff, E.; Qadir,A.; Surve, P.; De Silva, L.; Gilbert, N.; and Huang, R. 2013. Sarcasm as contrast between a positive sentiment and negative situation. In Proc. of EMNLP .
+[Walker et al. 2012] Walker, M.; Tree, J. F.;Tree, J. F.; Anand, P.; Ab- bott, R.; and King, J. 2012. A corpus for research on delib- eration and debate. In Proc. of LREC .
+[Wilson, Wiebe, and Hoffmann 2005] Wilson, T.;Wiebe, J.; and Hoffmann, P. 2005. Recognizing contextual polarity in phrase-level sentiment analysis. In Proc. of HLT-EMNLP .
+[Yosinski et al. 2014] Yosinski, J.; Clune,J.; Bengio, Y.; and Lipson, H. 2014. How transferable are features in deep neural networks? In Proc. of NIPS .
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_TewlhRkUqfxDsFtw8HuYmRuH)
+ Call ID: call_TewlhRkUqfxDsFtw8HuYmRuH
+  Args:
+    section_id: 1.1.1.1.1
+
+================================= Tool Message =================================
+Name: read_section
+
+Related Work
+The majority of work on automatic sarcasm detection has been done using Twitter, and to a smaller extent Amazon product reviews. Research outside of those domains has been scarce, but interesting. Notably, Burfoot and Baldwin (2009) automatically detected satirical news articles using unigrams, lexical features, and semantic validity features, and Justo et al.  (2014) used n-gram, linguistic, and semantic features to detect the presence of sarcasm in the Internet Ar- gument Corpus (Walker et al. 2012). The remainder of this section describes prior work with Twitter and Amazon.
+Sarcasm Detection on Twitter
+Twitter is a micro-blogging service that allows users to post short “tweets” to share content or describe their feelings or opinions in 140 characters or less. For researchers, it boasts a low cost of annotation and plentiful supply of data (users often self-label their tweets using the “#” symbol—many ex- plicitly label their sarcastic tweets using the hashtag “#sar- casm”).  A variety of approaches have been taken toward au- tomatically detecting sarcasm on Twitter, including explic- itly using the information present in a tweet’s hashtag(s); Maynard and Greenwood (2014) learned which hashtags characteristically corresponded with sarcastic tweets, and used the presence of those indicators to predict other sar- castic tweets, with high success.  Liebrecht, Kunneman, and van den Bosch (2013) detected sarcasm in Dutch tweets us- ing unigram, bigram, and trigram features.Rajadesingan, Zafarani, and Liu (2015) detected sarcastic tweets based on features adapted from behavioral models of
+Copyright c 2017, Association for the Advancement of Artificial Intelligence (www.aaai.org). All rights reserved. 1 merriam-webster. com/dictionary/sarcasm
+2 hilt.cse.unt.edu/resources.html
+sarcasm usage, drawing extensively from individual users’ Twitter histories and relying heavily on situational context and user characteristics. The system also employed lexical features and grammatical correctness as a means of mod- elling different aspects of the user’s behavior.Other researchers have had success identifying sarcasm by a tweet’s use of positive sentiment to describe a negative situation (Riloff et al.  2013), employing contextual (Bam- man and Smith 2015) or pragmatic (Gonz´alez-Ib´a˜nez, Mure- san, and Wacholder 2011) features, and observing the writ- ing style and emotional scenario of a tweet (Reyes, Rosso, and Veale 2013). An underlying theme among these meth- ods is that the features are generally designed specifically for use with tweets.  A major challenge in developing a more general approach for sarcasm detection lies in developing features that are present across many domains, yet still spe- cific enough to reliably capture the differences between sar- castic and non-sarcastic text. Finally, some researchers have recently explored ap- proaches that rely on word embeddings and/or carefully tai- lored neural networks, rather than on task-specific feature design (Ghosh, Guo, and Muresan 2015; Ghosh and Veale 2016; Amir et al. 2016).  Since neural networks offer little transparency, it is uncertain whether the features learned in these approaches would be easily transferable across text do- mains for this task (prior research on other tasks suggests that the features computed by deep neural networks grow increasingly specific to the training dataset—and in turn, to the training domain—with each layer (Yosinski et al. 2014)).  Although an interesting question, the focus herein is on un- covering the specific types of features capable of leveraging general patterns for sarcasm detection, and this can be more easily examined using shallower learning algorithms.
+Sarcasm Detection on Amazon Reviews
+Research on automatic sarcasm detection in other domains has been limited, but recently a publicly-available corpus of sarcastic and non-sarcastic Amazon product reviews was re- leased by Filatova (2012) to facilitate research. Buschmeier, Cimiano, and Klinger (2014) test many feature combina- tions on this dataset, including those based on metadata (e.g. , Amazon star rating), sentiment, grammar, the presence of interjections (e.g., “wow”) or laughter (e.g., through ono- matopoeia or acronyms such as “lol”), the presence of emoti- cons, and bag-of-words features. Their highest F 1 (0. 744) is achieved using all of these with a logistic regression clas- sifier; however, using only the star rating, they still achieve an F 1 of 0.717.  This highlights the need for high-performing, general features for sarcasm detection; metadata features are highly domain-specific, and even bag-of-words trends may be unique to certain domains (“trump” was one of the most common unigrams in our own Twitter training set, but only occurred once across all Amazon product reviews). Prior to the release of Filatova’s dataset, Davidov, Tsur, and Rappoport (2010) developed a semi-supervised ap- proach to classify tweets or Amazon reviews as sarcastic or non-sarcastic by clustering samples based on grammatical features and the full or partial presence of automatically- extracted text patterns. They evaluated their work on a sam-
+Sarcastic (Train/Test) Non-Sar.  (Train/Test) Twitter 1959 (1568/391) 3039 (2430/609) Amazon 437 (350/87) 817 (653/164) Table 1: Twitter and Amazon Dataset Distributions
+ple of the classified instances annotated by anonymous users on Amazon Mechanical Turk.  They tested several different seed sets with their approach, one of which contained a mix- ture of positive Amazon reviews, positive #sarcasm-tagged tweets, and a manually-selected sample of negative tweets. Although they did not report test results on Amazon reviews using this seed set, they did report test results on #sarcasm- tagged tweets, achieving an F-measure of 0.545.  Their work is the closest to ours, because it attempts to harness training samples from both the Twitter and Amazon review domains.
+Methods
+Data Collection
+Data was taken from two domains: Twitter, and Amazon product reviews. The Amazon reviews were from the pub- licly available sarcasm corpus developed by Filatova (2012). To build our Twitter dataset, tweets containing exactly one of the trailing hashtags “#sarcasm,” “#happiness,” “#sad- ness,” “#anger,” “#surprise,” “#fear,” and “#disgust” were downloaded regularly during February and March 2016.  Tweets containing the latter six hashtags, corresponding to Ekman’s six basic emotions (Ekman 1992), were labeled as non-sarcastic. Those hashtags were chosen because their associated tweets were expected to still express opinions, similarly to sarcastic tweets, but in a non-sarcastic way.  Tweets containing #sarcasm were labeled as sarcastic; an- notating tweets with the #sarcasm hashtag as such is con- sistent with the vast majority of prior work in the Twitter domain (Gonz´alez-Ib´a˜nez, Muresan, and Wacholder 2011; Liebrecht, Kunneman, and van den Bosch 2013; May- nard and Greenwood 2014; Rajadesingan, Zafarani, and Liu 2015; Bamman and Smith 2015; Ghosh, Guo, and Muresan 2015; Amir et al.  2016).The downloaded tweets were filtered to remove retweets, “@replies,” and tweets containing links. Retweets were re- moved to avoid having duplicate copies of identical tweets in the dataset, @replies were removed in case the hashtag re- ferred to content in the tweet to which it replied rather than content in the tweet itself, and tweets with links were like- wise removed in case the hashtag referred to content in the link rather than in the tweet itself.  Requiring that the speci- fied hashtag trailed the rest of the tweet (it could only be fol- lowed by other hashtags) was done based on the observation that when sarcastic or emotional hashtags occur in the main tweet body, the tweet generally discusses sarcasm or the specified emotion, rather than actually expressing sarcasm or the specified emotion. Finally, requiring that only one of the specified hashtags trailed the tweet eliminated cases of ambiguity between sarcastic and non-sarcastic tweets.  All trailing “#sarcasm” or emotion hashtags were removed from the data before training and testing, and both datasets were randomly divided into training (80%) and testing (20%) sets. Further details are shown in Table 1.Resource Description Liu05 Opinion lexicon containing 2006 pos. words and 4783 neg. words (Liu, Hu, and Cheng 2005).  MPQA Subjectivity lexicon containing strongly or weakly subjective positive (2718) or negative (4910) words (Wilson, Wiebe, and Hoffmann 2005). AFINN Sentiment lexicon for microblogs (Hansen et al. 2011) containing 2477 words/phrases labeled with values from -5 (negative) to +5 (positive).  Google Web1T Large collection of n-grams and their frequencies scraped from the web (Brants and Franz 2006). Table 2: Lexical Resources
+Features
+Three feature sets were developed (one general, and two tar- geted toward Twitter and Amazon, respectively). Resources used to develop the features are described in Table 2.  Five classifiers (Na¨ıve Bayes, J48, Bagging, DecisionTable, and SVM), all from the Weka 3 library, were tested using five- fold cross-validation on the training sets, and the highest- scoring (Na¨ıve Bayes) was selected for use on the test set.Domain-Specific Features The Twitter- ( T ) and Amazon- specific ( A ) features are shown in Table 3.  Domain-specific features were still computed for instances from the other do- main unless it was impossible to compute those features in that domain (i.e., Amazon Star Rating for Twitter instances), in which case they were left empty. Twitter-specific fea- tures are based on the work of Maynard and Greenwood (2014) and Riloff et al. (2013).  Maynard and Greenwood de- tect sarcastic tweets by checking for the presence of learned hashtags that correspond with sarcastic tweets, as well as sarcasm-indicator phrases and emoticons. We con...(truncated)
+
+================================== Ai Message ==================================
+
+Buschmeier, Cimiano, and Klinger (2014)’s logistic regression classifier using metadata, sentiment, grammar, interjections/laughter, emoticons, and bag-of-words features. It achieved the prior best F1 of 0.744 on the Amazon dataset.

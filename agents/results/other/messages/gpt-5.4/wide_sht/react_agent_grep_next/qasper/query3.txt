@@ -1,0 +1,64 @@
+================================ Human Message =================================
+
+QUERY:
+What are the evaluation metrics and criteria used to evaluate the model performance?
+
+TABLE OF CONTENTS (TOC):
+1 | End-to-End Trainable Non-Collaborative Dialog System
+1.1 | Abstract
+1.2 | Introduction
+1.3 | Related Work
+1.4 | Non-Collaborative Task Annotation Scheme
+1.5 | Datasets
+1.6 | ANTISCAM Dataset
+1.7 | PERSUASIONFORGOOD Dataset
+1.8 | Model
+1.9 | Background
+1.10 | Intent and Semantic Slot Classiﬁers
+1.11 | Response Generation
+1.12 | Response Filtering
+1.13 | Experiments
+1.14 | Baseline Models
+1.15 | Automatic Evaluation Metrics
+1.16 | Human Evaluation Metrics
+1.17 | Results and Analysis
+1.18 | Conclusion and Future Work
+1.19 | Acknowledgements
+1.20 | Appendix
+1.21 | Anti-Scam Collection Setting
+1.22 | Training details
+1.23 | Example Dialog
+1.24 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_Ocj7WZVgXnYzBIBz3nuZ9Ucv)
+ Call ID: call_Ocj7WZVgXnYzBIBz3nuZ9Ucv
+  Args:
+    section_id: 1.15
+
+================================= Tool Message =================================
+Name: read_section
+
+Automatic Evaluation Metrics
+Perplexity Since the canonical measure of a good language model is perplexity, which indicates the error rate of the ex-
+Automatic Evaluation Metrics Human Evaluation Metrics Model PPL RIP RSP ERIP ERSP Fluency Coherence Engagement Length TaskSuc TransferTransfo 32.96 34.8% 46.0% 48.0% 56.3% 3.48 2.85 2.68 8.5 1. 025 Hybrid - 32.0% 44.0% 45.7% 55.3% 3.25 2.76 2.60 8.2 0.975 MISSA 21.07 35.1% 46.6% 47.2% 58.6% 4.18 3.75 3.69 14.9 1.294 MISSA-sel 30.54 31. 6% 42.4% 44.2% 53.8% 3.60 2.92 2.87 9.9 1.000 MISSA-con 24.46 33.8% 45.6% 46.0% 57.3% 3.78 3.68 3.78 14.8 1.341
+ Table 3: Experiments results with both automatic and human evaluation on A NTI S CAM dataset.pected word. We choose perplexity to evaluate the model performance.Response-Intent Prediction (RIP) & Response-Slot Pre- diction (RSP) Different from open-domain dialog systems, we care about the intents of the system response in non- collaborative tasks as we hope to know if the system re- sponse satisfies user intents.  For example, in the anti-scam task, if the attacker elicits information from the system, we need to know if the system refuses or agrees to provide the information. Therefore we care about intent prediction for the generated system response. Since our baselines are more suited for social chat as they cannot produce system intents, we use the system intent and slot classifiers trained in our model to predict their responses’ intents and slots.  The in- tent predictor achieves a 84% accuracy and the semantic slot predictor achieves 77% on the A NTI S CAM dataset. Then we compare the predicted values with human-annotated ground truth in the dataset to compute the response-intent prediction (RIP) and response-slot prediction (RSP). Extended Response-Intent Prediction (ERIP) & Ex- tended Response-Slot Prediction (ERSP) With Response- Intent Prediction , we verify the predicted intents to evalu- ate the coherence of the dialog. However, the real mapping between human-intent and system-intent is much more com- plicated as there might be multiple acceptable system-intents for the same human-intent.  Therefore, we also design a met- ric to evaluate if the predicted system-intent is in the set of acceptable intents. Specifically, we estimate the transition probability p ( I i | I j ) by counting the frequency of all the bi- gram human-intent and system-intent pairs in the training data.  During the test stage, if the predicted intent matches the ground truth, we set the score as 1, otherwise we set the score as p ( I predict | I i ) where I i is the intent of the input hu- man utterance. We then report the average value of those scores over turns as the final extended response-intent pre- diction result.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_hn8NNKfl9lXyKIeu3JSwak2K)
+ Call ID: call_hn8NNKfl9lXyKIeu3JSwak2K
+  Args:
+    section_id: 1.16
+
+================================= Tool Message =================================
+Name: read_section
+
+Human Evaluation Metrics
+Automatic metrics only validate the systems performance on a single dimension at a time. The ultimate holistic evalua- tion should be conducted by having the trained system in- teract with human users. Therefore we also conduct human evaluations for the dialog system built on A NTI S CAM . We test our models and baselines with 15 college-student volun- teers.  Each of them is asked to pretend to be an attacker and interact with all the models for at least three times to avoid randomness. We in total collect 225 number of dialogs. Each time, volunteers are required to use similar sentences and
+strategies to interact with all five models and score each model based on the metrics listed below at the end of the current round.  Each model receives a total of 45 human rat- ings, and the average score is reported as the final human- evaluation score. In total, we design five different metrics to assess the models’ conversational ability whilst interacting with humans. The results are shown in Table 3.Fluency Fluency is used to explore different models’ lan- guage generation quality. Coherence Different from single sentence’s fluency, coher- ence focuses more on the logical consistency between sen- tences in each turn.Engagement In the anti-scam scenario, one of our missions is to keep engaging with the attackers to waste their time. So we directly ask volunteers (attackers) to what extend they would like to continue chatting with the system.Dialog length (Length) Engagement is a subjective metric.  Anti-scam system’s goal is to engage user in the conversa- tion longer in order to limit their harm to other potential victims. So we count the dialog length as another metric to evaluate system performance.Task Success Score (TaskSuc) The other goal of the anti- scam system is to elicit attacker’s personal information. We count the average type of information (name, address and phone number) that the system obtained from attackers as the task success score.
+
+================================== Ai Message ==================================
+
+The model is evaluated with automatic metrics: Perplexity (PPL), Response-Intent Prediction (RIP), Response-Slot Prediction (RSP), Extended Response-Intent Prediction (ERIP), and Extended Response-Slot Prediction (ERSP). RIP and RSP compare predicted response intents/slots against human-annotated ground truth, while ERIP/ERSP allow multiple acceptable system intents by scoring exact matches as 1 and otherwise using the transition probability \(p(I_{predict}\mid I_i)\) estimated from training-data human-intent/system-intent bigrams. Human evaluation uses Fluency, Coherence, Engagement, Dialog Length, and Task Success Score, where task success is the average types of attacker information obtained (name, address, phone number).

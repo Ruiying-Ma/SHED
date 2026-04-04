@@ -1,0 +1,55 @@
+================================ Human Message =================================
+
+QUERY:
+What type of nerual keyphrase generation models are trained?
+
+TABLE OF CONTENTS (TOC):
+1 | KPTimes: A Large-Scale Dataset for Keyphrase Generation on News Documents
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2 Existing datasets
+1.4 | 3 Building the KPTimes dataset
+1.5 | 4 Data analysis
+1.6 | 5 Performance of existing models
+1.6.1 | 5.1 Evaluation metrics
+1.6.2 | 5.2 Models
+1.7 | Baseline, unsupervised: MultipartiteRank
+1.8 | State-of-the-art, supervised: CopyRNN
+1.8.1 | 5.3 Results
+1.9 | 6 Conclusion
+1.10 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_FBZYoC7HpDJ2GqDjVOsk5mS9)
+ Call ID: call_FBZYoC7HpDJ2GqDjVOsk5mS9
+  Args:
+    section_id: 1.6.2
+
+================================= Tool Message =================================
+Name: read_section
+
+5.2 Models
+Baseline: FirstPhrase Position is a strong feature for keyphrase extraction, simply because texts are usually written so that the most important ideas go first (Marcu, 1997) . In news summarization for example, the lead baseline -that is, the first sentences from the document-, while incredibly simple, is still a competitive baseline (Kedzie et al., 2018) .  Similar to the lead baseline, we compute the FirstPhrases baseline that extracts the first N keyphrase candidates8 from a document.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_eh8CxkW7SoN0BN9su7yMBFHO)
+ Call ID: call_eh8CxkW7SoN0BN9su7yMBFHO
+  Args:
+    section_id: 1.8
+
+================================= Tool Message =================================
+Name: read_section
+
+State-of-the-art, supervised: CopyRNN
+The generative neural model we include in this study is CopyRNN (Meng et al., 2017) , an encoder-decoder model that incorporates a copying mechanism (Gu et al., 2016) in order to be able to generate phrases that rarely occur. When properly trained, this model was shown to be very effective in extracting keyphrases from scientific abstracts. CopyRNN has been further extended by (Chen et al. , 2018) to include correlation constraints among keyphrases which we do not include here as it yields comparable results.Two models were trained to bring evidence on the necessity to have datasets from multiple domains. CopySci was trained using scientific abstracts (KP20k) and CopyNews using newspaper articles (KPTimes), the two models use the same architecture.
+5.3 Results
+Model performances for each dataset are reported in Table 2 . Extractive baselines show the best results for KPCrowd and DUC-2001 which is not surprising given that these datasets exhibit the KPCrowd
+<table><tr><td colspan="2">FirstPhrases 17.1 16.5</td><td>24.6 22.3</td><td>9.2 8.4</td><td>13. 5 13.1</td><td>13.8 10.5</td><td>13.5 12.6</td></tr><tr><td colspan="2">MultipartiteRank 18.2 17.0</td><td>25.6 24.9</td><td>11.2 10.1</td><td>16.9 16.5</td><td>14.3 10. 6</td><td>13.6 13.3</td></tr><tr><td colspan="2">CopySci 15.5 11.1</td><td>12.7 9.7</td><td>11.0 10.6</td><td>18.9 19.8</td><td>20.3 13.8</td><td>25.4 28. 7</td></tr><tr><td>CopyNews</td><td>8.4 4.2</td><td>10.5 7.2</td><td>39.3 50.9</td><td>24.6 26.5</td><td>7.0 3.5</td><td>6.6 5.1</td></tr></table>
+ Table 2 Performance on benchmark datasets composed of newspaper article, full scientific article and scientific article abstract. The generation models CopySci and CopyNews were trained respectively on KP20k and KPTimes. The dataset presented in this work are written in italic.DUC KPTimes JPTimes SemEval KP20k
+F@10 MAP F@10 MAP F@10 MAP F@10 MAP F@10 MAP F@10 MAP lowest ratio of absent keyphrases.  Neural-based models obtain the greatest performance, but only for the dataset on which they were trained. We therefore see that these models do not generalize well across domains, confirming previous preliminary findings (Meng et al., 2017) and exacerbating the need for further research on this topic. Interestingly, CopyNews outperforms the other models on JPTimes and achieves very low scores for KPCrowd and DUC-2001, although all these datasets are from the same domain.  This emphasizes the differences that exist between the readerand editor-assigned gold standard. The score difference may be explained by the ratio of absent keyphrases that differs greatly between the readerannotated datasets and JPTimes (see Table 1 ), and thus question the use of these rather extractive datasets for evaluating keyphrase generation. Finally, we note that the performance of Copy-News on KPTimes is significantly higher than that of CopySci on KP20k, proving that a more uniform and consistent annotation makes it easier to learn a good model.
+
+================================== Ai Message ==================================
+
+Two generative neural keyphrase generation models are trained: CopySci and CopyNews. They are both CopyRNN encoder-decoder models with a copying mechanism, trained respectively on scientific abstracts (KP20k) and newspaper articles (KPTimes).

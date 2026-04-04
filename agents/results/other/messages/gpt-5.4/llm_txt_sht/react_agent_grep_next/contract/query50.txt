@@ -1,0 +1,35 @@
+================================ Human Message =================================
+
+HYPOTHESIS:
+Limited use: Receiving Party shall not use any Confidential Information for any purpose other than the purposes stated in Agreement.
+
+TABLE OF CONTENTS (TOC):
+1 | Non-Disclosure Agreement
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_qxboXBiCj8238svI5BYXnNlf)
+ Call ID: call_qxboXBiCj8238svI5BYXnNlf
+  Args:
+    section_id: 1
+
+================================= Tool Message =================================
+Name: read_section
+
+Non-Disclosure Agreement
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_XRFrNPg0UT6PjpqFJjdajJXm)
+ Call ID: call_XRFrNPg0UT6PjpqFJjdajJXm
+  Args:
+    pattern: (?i)purpose|use|Confidential Information
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+
+NotMentioned

@@ -1,0 +1,47 @@
+================================ Human Message =================================
+
+QUERY:
+what was the baseline?
+
+TABLE OF CONTENTS (TOC):
+1 | Lexical Bias In Essay Level Prediction
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2 Problem Definition
+1.4 | 3 Feature Extaction
+1.5 | Essay text
+1.6 | 4 Model Selection and Evaluation
+1.7 | 5 Conclusion
+1.8 | Acknoledgements
+1.9 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_1m2foUJRDz0mdP4LrIB32qps)
+ Call ID: call_1m2foUJRDz0mdP4LrIB32qps
+  Args:
+    pattern: [Bb]aseline
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+No more matches found.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_eZywOYuVufgeuoCz94cEPnqE)
+ Call ID: call_eZywOYuVufgeuoCz94cEPnqE
+  Args:
+    section_id: 1.6
+
+================================= Tool Message =================================
+Name: read_section
+
+4 Model Selection and Evaluation
+As the class distribution in the training data is not balanced, I have used stratified cross-validation for validation purposes and for hyper-parameter selection. As a classification1 algorithm, I have used gradient boosted trees trained with gradientbased one-side sampling as implemented in the Light Gradient Boosting Machine toolkit released by Microsoft.9 . The depth of the trees was set to 3, the learning rate to 0.06 and the number of trees to 4,000.  Also, to combat the class imbalance in the training labels I assigned class weights at each class so that errors in the frequent classes incur less penalties than error in the infrequent.Evaluation Figure 2 illustrates the performance the Gradient Boosted Trees achieve on each of the feature sets. Complementary and for reference, Table 3 presents the accuracy scores of each feature set. Notice that the best performance is obtained when all features are used.  Adding the perdocument topic distributions infered by the topic models seems to improve the results considerably. Table 3 : Stratified 3-fold cross-validation scores for the official measure of the challenge.Figure 2: The accuracy scores of each feature set using 3-fold cross validation on the training data.In order to better evaluate the effect of each family of features without the bias of the ordering of adding families of features, Table 4 presents an ablation study.  The Table presents the scores achieved when using all features as well as the scores achieved when removing a particular family of features. In this sense, one can estimate the added value of each family. From the table we notice that the most effective features are the numerical features, the document distributions learned with LDA and the scores from the language models. When removing the features of this family we notice the biggest reduction in performance.  For reference, the table presents the performance of a tuned Logistic Regression with the same class weights for the class imbalance. Gradient Boosted trees outperform Logistic Regression by a large margin in terms of E, proving their efficiency for classification tasks.<table><tr><td>Features</td><td/><td/><td/><td colspan="3">Error (E) Accuracy</td></tr><tr><td colspan="4">All features (Winning solution)</td><td>4. 97</td><td/><td>98.2</td></tr><tr><td colspan="4">All features (Log. Regression)</td><td>10.10</td><td/><td>97.2</td></tr><tr><td colspan="3">-Numerical Features</td><td/><td>14.65</td><td/><td>95. 6</td></tr><tr><td colspan="3">-Language Models</td><td/><td>5.66</td><td/><td>98.1</td></tr><tr><td>-Clusters</td><td/><td/><td/><td>4.99</td><td/><td>98.1</td></tr><tr><td colspan="4">-Latent Dirichlet Allocation</td><td>7. 14</td><td/><td>97.3</td></tr><tr><td colspan="3">-Part-Of-Speech tags</td><td/><td>5.01</td><td/><td>98.1</td></tr><tr><td colspan="2">-Bag-of-words</td><td/><td/><td>5.52</td><td/><td>97. 7</td></tr><tr><td colspan="3">Reduced feature set</td><td/><td>4.90</td><td/><td>98. 2</td></tr><tr><td/><td>A1</td><td>A2</td><td>B1</td><td>B2</td><td>C1</td><td>C2</td></tr><tr><td colspan="2">A1 11,224</td><td>54</td><td>3</td><td>0</td><td>1</td><td>0</td></tr><tr><td>A2</td><td>99</td><td>7,531</td><td>42</td><td>0</td><td>0</td><td>0</td></tr><tr><td>B1</td><td>30</td><td>95</td><td>5,297</td><td>23</td><td>7</td><td>1</td></tr><tr><td>B2</td><td>0</td><td>4</td><td>32</td><td>2,273</td><td>14</td><td>1</td></tr><tr><td>C1</td><td>7</td><td>2</td><td>7</td><td>35</td><td colspan="2">465 19</td></tr><tr><td>C2</td><td>1</td><td>2</td><td>2</td><td>6</td><td>4</td><td>29</td></tr></table>
+ Table 4 Ablation study to explore the importance of different feature families.Another interesting point concerns the effect of some features on the two evaluation measures that Table 4 presents. Notice, for instance, that while language models are quite important for the custom error metric E (Eq. 1) of the challenge, their effect is smaller for accuracy. This suggests that adding them reduces the size of the errors considerably, but does not increase much the correctly classified instances. The last observation on the impact of the features on the evaluation measures motivates an er- ror analysis step to examine the errors the model produces. Table 5 presents the confusion matrix of the 3-fold cross-validated predictions in the training data. As expected, the majority of examples appear in the diagonal denoting correct classification. Most of the errors that occur are in neighboring categories suggesting that it can be difficult to differentiate between them.  Lastly, very few misclassification errors occur between categories that are far with respect to the given order of language levels which suggests that the system successfully differentiates between them.<table/>
+Table 5 Confusion matrix of the 3-fold stratified cross validation. The C i,j value is the number of predictions known to be in group i and predicted to be in group j. Notice how most of the mis-classification errors occur between close categories.
+
+================================== Ai Message ==================================
+
+For reference, the baseline was a tuned Logistic Regression with the same class weights for class imbalance. It achieved error 10.10 and accuracy 97.2 using all features.

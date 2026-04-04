@@ -1,0 +1,83 @@
+================================ Human Message =================================
+
+QUERY:
+Where did the joke data come from?
+
+TABLE OF CONTENTS (TOC):
+1 | Knowledge Amalgam: Generating Jokes and Quotes Together∗ Bhargav Chippada, Shubajit Saha Microsoft R&D bhargav.chippada@microsoft.com, shubajit.saha@microsoft.com
+1.1 | Abstract
+1.1.1 | 1 Introduction
+1.1.1.1 | 2 Related Work
+1.1.1.1.1 | 2.1 Recurrent Neural Networks
+1.1.1.1.1.1 | 2.2 Humor Generation
+1.1.1.1.1.1.1 | 3 Approach
+1.1.1.1.1.1.1.1 | 3.1 Dataset
+1.1.1.1.1.1.1.1.1 | 3.2 Controlled LSTM Architecture
+1.1.1.1.1.1.1.1.1.1 | 3.3 Model Parameters
+1.1.1.1.1.1.1.1.1.1.1 | 4 Experiments
+1.1.1.1.1.1.1.1.1.1.1.1 | 4.1 Just Jokes
+1.1.1.1.1.1.1.1.1.1.1.1.1 | 4.2 Forward and Reverse Jokes
+1.1.1.1.1.1.1.1.1.1.1.1.1.1 | 4.3 Jokes, Quotes, and Tweets
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | 5 Evaluation
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | 6 Conclusion
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_Z0e6xDkKhodghQBAObn6YIwO)
+ Call ID: call_Z0e6xDkKhodghQBAObn6YIwO
+  Args:
+    section_id: 3.1
+
+================================= Tool Message =================================
+Name: read_section
+
+Tool 'read_section' failed after 1 attempt with RuntimeError: Section ID 3.1 not found in TOC.. Please try again.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_NC6JNmrwI15eOBqjcLnOKEx6)
+ Call ID: call_NC6JNmrwI15eOBqjcLnOKEx6
+  Args:
+    section_id: 1.1.1.1.1.1.1.1
+
+================================= Tool Message =================================
+Name: read_section
+
+3.1 Dataset
+Our training data consists of jokes, quotes, and tweets from different sources. We combined multiple sources and de- duplicated them to arrive at a large corpus for training. The two sources for jokes are CrowdTruth 1 and Subreddits 2 . Af- ter cleaning, we ended up with 96910 jokes and a vocabulary size of 8922 words. The two sources for quotes are Quota- bles 3 and the TheWebMiner 4 .  After cleaning, we ended up with 43383 quotes and a vocabulary size of 8916 words. We downloaded the scraped tweets from kaggle 5 and ended up with 130250 tweets with a vocabulary size of 10805 words after cleaning. We constrained the vocabulary to about 10000 words in each case.  Finally, we combined the jokes, quotes, and tweets along with their class labels (joke is 0, quote is 1, tweet is 2) into a single unified dataset. The combined dataset consists of 270543 sentences and a vocabulary size of 12614 words. Each sentence starts with a ’sos’ tag and ends with a ’eos’ tag to denote the start and end of sentences. The fi- nal datasets can be found on our github 6 repository.  When we train the controlled LSTM with the combined data, we use weighted sample strategy so that the three categories con- tribute equally to loss even though their numbers are different.
+3.2 Controlled LSTM Architecture
+We decided to use word-level LSTM so that the network only has to learn the semantics of a sentence and not the structure of words as is the case for a char-RNN network. We tokenized
+each of our training examples into words and punctuation. At every time step of the recurrent neural network, we pass the one-hot encoded input word and the one-hot encoded sen- tence category.  Also, we use pre-trained GloVe 7 vectors of 200 dimensions for word representation as one of the embed- ding layers. Figure 2 shows the final architecture we used for training a single deep learning neural network with jokes, quotes, and tweets together with category tag and were able to successfully generate text with corresponding category later by setting the category input.Figure 1: Sequence to Sequence
+Figure 2: Controlled Stacked LSTM
+Figure 3: Sequence to Sequence with Category Tag
+ 1 github.com/CrowdTruth/ Short-Text-Corpus-For-Humor-Detection 2 kaggle.com/abhinavmoudgil95/short-jokes 3 github.com/alvations/Quotables 4 thewebminer.com/buy-famous-quotes-database 5 kaggle.com/kazanova/sentiment140 6 github. com/bhargavchippada/ humor-generation/tree/master/datasets
+7 nlp.stanford.edu/projects/glove/
+3.3 Model Parameters
+Our final model has the following number of neurons at each layer. We used dropout and regularization to avoid over- fitting so we observed the network size to not have any sig- nificant effect upon increasing.
+• Vocabulary size: 12614• GloVe embedding dim: 200• Input embedding dim: 512• First dense layer dim: 512• LSTM-1 hidden layer dim: 1024• LSTM-2 hidden layer dim: 512• Final Dense layer dim: 512• DropOut factor: 0.2• Regularization factor: 0.00001• Input sequence length: 134 Experiments
+To show that controlled LSTMs work, we conducted three main experiments. The first experiment was to train the net- work with just jokes for a baseline model. Second, we trained the model with the words of the jokes in the correct order (tag = 0) and reverse order (tag = 1) to show that the LSTM will learn to generate jokes in forward and reverse order according to the input category tag as an extreme case.  Finally, our third experiment was training the network with all three categories (jokes, quotes, and tweets) to show how the network learns to generate different emotions in the text when we input same prefix text but different category.
+4.1 Just Jokes
+The first experiment was training the model with just jokes.Examples of generated jokes:
+• i had to use a new word. plagiarism!• i had to use a lot of money in the closet.i just got laid by a chick.
+• yo mama is so hairy that bigfoot is seeing her last night.4.2 Forward and Reverse Jokes
+To validate our controlled model approach, we use the jokes dataset and create another reversed jokes dataset which essentially consists of every joke in reversed order of words. We train our LSTM model with the combined data with control bit set different for the two instances and later ask it to generate jokes in the required order by setting the control bit. We found that the LSTM was surprisingly good at learning the semantics of correct and reversed sentences.Example reversed joke: eos . it smell can you ?  horny and hungry being between difference the what’s sos
+In the correct order: sos what’s the difference between being hungry and horny ? you can smell it . eos
+Importantly, the sentence is semantically correct in the reverse order meaning the LSTM learns both the forward and reverse semantics and generates text in the required order depending on input category/control bit.
+4.3 Jokes, Quotes, and Tweets
+Finally, we trained the network with all three types: jokes, quotes, and tweets with their corresponding category tags (joke = 0, quote = 1, tweet = 2) as an auxiliary input. We found the network to be able to generate text with target cate- gory depending on the input tag and same seed words.  Also, we found the jokes generated by this model to be far less of- fensive compared to the jokes generated by a network trained on just humor dataset proving the mixture of information hypothesis. Figure 6, figure 7 and figure 8 show examples of sentences with different sentiments generated on different category inputs. While generating new texts, we use random- ization to make our generated texts more diverse.  We use a parameter named exploration factor to decide whether to pick the next word with the highest probability as predicted by the model or to pick a word with probabilities equal to the out- put of softmax layer. If exploration factor is 0 then we will always pick the word with the highest probability else if it’s 0.3 then 30% of the times we pick a word according to soft- max output layer probabilities. We found that a low non-zero exploration factor gave the best results. Figure 4: Loss and Accuracy for 8 epochs
+5 Evaluation
+We evaluated the similarity of the generated texts with train- ing data objectively and the humor content subjectively. We also checked the syntactic correctness of the generated sen- tences.For measuring the similarity of the generated texts we used Phrase Overlap match and K-gram-Jaccard similarity as our criteria.  The Phrase Overlap criterion introduced by [Banerjee and Pedersen, 2003] and extended by [Ponzetto and Strube, 2007] is chosen because it gives more weight to multi token phrase overlaps as its rarer.Overlap phrase ( s 1 , s 2) = n X i =1 X m i 2 (1)
+ sim ( s 1 , s 2) = tanh Overlap phrase ( s 1 , s 2) | s 1 | + | s 2 | (2)
+Category Exploration K-Jaccard Phrase Overlap Jokes 0.9 0.09 0.46 Quotes 0.9 0.08 0.43 Tweets 0.9 0.09 0.49
+ Table 1: Similarity measure with exploration = 0.9
+Category Exploration K-Jaccard Phrase Overlap Jokes 0.1 0.26 0.75 Quotes 0.1 0.14 0.71 Tweets 0.1 0.26 0.80
+Table 2: Similarity measure with exploration = 0.1
+ The lower the sim ( overlap,phrase ) ( s 1 , s 2) value the novel the generated text which is indicative of the fact that our model is able to generalize beyond the training instances. For our ex- periment, we randomly sampled 100 instances from the train- ing data and split the instances into two halves. We use the prefix half as the seed text to generate the categorical text (control tag set to 0,1 and 2).  We then average the maximums of the Phrase Overlap metric between the generated texts (ex- cluding the seed text) and all remaining training examples in our corpus to arrive at our final aggregated similarity score.While comparing sentences with high Phrase Overlap score we found that the metric is giving a high score due to the presence of common bigram and trigram phrases.  Also, the fact that there are a lot of popular phrases and templates in- creases the chance of a higher multigram match. For instance, there are a large number of template jokes in our corpus like ”Knock Knock who’s there?” or ”Yo mama so fat...” so it is expected that our model will pick up these common phrases.For example, the generated quote ”i love the music that i love because i love it .  i can’t tell you how to live without it” and ”i am always training because i love it” has a Phrase Overlap score of 0.66 because of the presence of the four- gram phrase ”because i love it” and multiple occurrences of bigram phrase ”i love” but these two texts are very different semantically.  Overlap of bigrams, trigrams, and even 4-grams can be expected between texts with very different meaning but phrase overlap score heavily penalizes such matches.We also used the K-gram-Jaccard score to compute the similarity measure. We use K = 4 to overcome the draw- backs of Phrase Overlap and compute the similarity measure of generated texts with the examples in training corpus. For two sets A and B Jaccard score is defined as
+ J S ( A, B ) = | A ∪ B | A ∩ B (3)
+We observe that with increasing exploration factor, the sim- ilarity measures decrease. This is expected because with higher exploration value we are allowing the generator to pick a not so best word which leads to more variations in the text but with lesser coherence. To evaluate the syntactic correctness of the generated sen- tences we have used the Link Grammar Parser for English language developed by [Grinberg et al. , 1995] 8 which uses
+the idea of linkages. A linkage is the relationship between different words in a sentence from a syntactic point of view. We use the Link Grammar Parser to find number of valid link- ages of the sentence after post processing.  We break the gen- erated jokes, quotes, tweets into individual sentences. Since the parsing is dependent on capitalization and our training data has b...(truncated)
+
+================================== Ai Message ==================================
+
+The joke data came from two sources: CrowdTruth and Subreddits.

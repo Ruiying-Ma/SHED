@@ -1,0 +1,50 @@
+================================ Human Message =================================
+
+QUERY:
+what neural network models were explored?
+
+TABLE OF CONTENTS (TOC):
+1 | Toward a Standardized and More Accurate Indonesian Part-of-Speech Tagging
+1.1 | Abstract
+1.2 | I. INTRODUCTION
+1.3 | A. Dataset
+1.4 | B. Baselines
+1.5 | D. Experiments Setup
+1.6 | E. Evaluation
+1.7 | IV. RESULTS AND DISCUSSION
+1.8 | V. CONCLUSION
+1.9 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_u76huiKizW6OJJwxX21zZ45n)
+ Call ID: call_u76huiKizW6OJJwxX21zZ45n
+  Args:
+    pattern: neural|network|BiLSTM|LSTM|CNN|CRF|embedding|model
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1 | Abstract
+Previous work in Indonesian part-of-speech (POS) tagging are hard to compare as they are not evaluated on a common dataset. Furthermore, in spite of the success of neural network models for English POS tagging, they are rarely explored for Indonesian. In this paper, we explored various techniques for Indonesian POS tagging, including rule-based, CRF, and neural network-based models. We evaluated our models on the IDN Tagged Corpus. A new state-of-the-art of 97. 47 F1 score is achieved with a recurrent neural network. To provide a standard for future work, we release the dataset split that we used publicly.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_COGqrneGM1ESjvsppqxtxVkd)
+ Call ID: call_COGqrneGM1ESjvsppqxtxVkd
+  Args:
+    section_id: 1.7
+
+================================= Tool Message =================================
+Name: read_section
+
+IV. RESULTS AND DISCUSSION
+Firstly, we report on our tuning experiments for the neural tagger. Table I shows the evaluation results of the many configurations of our neural tagger on the development set. We group the results by the encoding and prediction step [11] , [18] , [10] . Therefore, we will use this tagger to represent the neural model hereinafter. <table><tr><td>Architecture</td><td>Mean F 1</td></tr><tr><td>Feedforward + softmax</td><td>97.25</td></tr><tr><td>Feedforward + CRF</td><td>97.46</td></tr><tr><td>biLSTM + softmax</td><td>97. 57</td></tr><tr><td>biLSTM + CRF</td><td>97.60</td></tr></table>
+Table I F 1 SCORE OF EACH NEURAL TAGGER ARCHITECTURE
+To understand the performance of the neural model for each tag, we plot the confusion matrix from the development set of the first fold in Fig. 2 . The figure shows that the model can predict most tags almost perfectly, except for X and WH tag.  The X tag is described as "a word or part of a sentence which its category is unknown or uncertain". 11 The X tag is rather rare, as it only appears 397 times out of over 250K tokens. Some words annotated as X are typos and slang words. Some foreign terms and abbreviations are also annotated with X. The model might get confused as such words are usually tagged with a noun tag (NN or NNP).  We also see that the model seems to confuse question words (WH) such as apa (what) or siapa (who) as SC since these words may be used in subordinate clauses as well. Looking at the data closely, we found that the tagging of such words are inconsistent. This inconsistency contributes to the inability of the model to distinguish the two tags well.Next, we present the result of evaluating the baselines and other comparisons on the test set in Table II .  The F 1 scores are averaged over the 5 cross-validation folds. We see that MAJOR baseline performs very poorly compared to the MEMO baseline, which surprisingly achieves over 90 F 1 points. This result suggests that MEMO is a more suitable baseline for this dataset in contrast with MAJOR. The result also provides evidence to the usefulness of our evaluation metric which heavily penalizes a simple majority vote model. Furthermore, we notice that the rulebased tagger by Rashel et al.  [8] performs worse than MEMO, indicating that MEMO is not just suitable but also quite a strong baseline. Moving on, we observe how CRF has 6 points advantage over MEMO, signaling that incorporating contextual features and modeling tag-to-tag transitions are useful. Lastly, the biLSTM with CRF tagger performs the best with 97.47 F 1 score. <table><tr><td/><td/><td>Method</td><td>F 1</td></tr><tr><td/><td/><td>MAJOR</td><td>9.39 (0.21)</td></tr><tr><td/><td/><td>MEMO</td><td>90.62 (0.82)</td></tr><tr><td/><td/><td>Rashel et al. [15]</td><td>85. 77 (0.22)</td></tr><tr><td/><td/><td>CRF</td><td>96.22 (0.22)</td></tr><tr><td/><td/><td>biLSTM + CRF</td><td>97.47 (0. 11)</td></tr><tr><td/><td/><td>Table III</td><td/></tr><tr><td/><td/><td colspan="2">FEATURE ABLATION OF THE BEST NEURAL TAGGER</td></tr><tr><td/><td/><td>Neural tagger</td><td>F 1</td></tr><tr><td/><td colspan="2">biLSTM + CRF</td><td>96.06 (+0. 00)</td></tr><tr><td/><td colspan="2">biLSTM + CRF + chars</td><td>97.42 (+1.36)</td></tr><tr><td/><td colspan="2">biLSTM + CRF + chars + prefix</td><td>97.50 (+0.08)</td></tr><tr><td/><td colspan="3">biLSTM + CRF + chars + prefix + suffix 97. 60 (+0.10)</td></tr><tr><td>True</td><td>CC IN NND OD PR UH Z X WH VB SYM SC RP RB PRP NNP NN NEG MD JJ FW DT CD</td><td colspan="2">CC CD DT FW IN JJ MD NEG NN NND NNP OD PR PRP RB RP SC Predicted SYM UH VB WH X Z</td><td>0.0 0. 2 0.4 0.6 0.8 1.0</td></tr></table>
+Table II F 1 SCORE OF EACH METHOD, AVERAGED OVER 5 FOLDS Figure 2. Confusion matrix of the best biLSTM with CRF tagger from the development set of the first fold. The tagger seems to have difficulties dealing with words annotated as X and confuse WH as SC.configuration.  For each group, we show the highest F 1 score among many embedding configurations. As we can see, biLSTM with CRF layer achieves 97.60 F 1 score, the best score on the development set. This result agrees with many previous work in neural sequence labeling that a bidirectional LSTM with CRF layer performs best
+ To understand how each feature in the embedding step affects the neural tagger, we performed feature ablation on the development set and put the result in Table III . We see that with only words as features (first row), the neural tagger only achieves 96.06 F 1 score. Employing character features boosts the score up to 97.42, a gain of 1.36 points. Adding prefix and suffix features improves the performance further by 0.08 and 0. 10 points respectively. From this result, we see that it is the character features that positively affect the neural tagger the most.
+
+================================== Ai Message ==================================
+
+The neural network models explored were feedforward and bidirectional LSTM (biLSTM) taggers, each paired with either a softmax or a CRF prediction layer: Feedforward + softmax, Feedforward + CRF, biLSTM + softmax, and biLSTM + CRF. They also examined feature variants for the best neural tagger, adding character, prefix, and suffix features.

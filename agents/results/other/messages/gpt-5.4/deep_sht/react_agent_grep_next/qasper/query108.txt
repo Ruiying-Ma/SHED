@@ -1,0 +1,92 @@
+================================ Human Message =================================
+
+QUERY:
+How does labeling scheme look like?
+
+TABLE OF CONTENTS (TOC):
+1 | Common-Knowledge Concept Recognition for SEVA
+1.1 | Abstract
+1.1.1 | INTRODUCTION
+1.1.1.1 | BACKGROUND AND MOTIVATION
+1.1.1.1.1 | CONCEPT RECOGNITION
+1.1.1.1.1.1 | BIO Labelling Scheme
+1.1.1.1.1.1.1 | Abbreviations
+1.1.1.1.1.1.1.1 | Common-Knowledge Deﬁnitions
+1.1.1.1.1.1.1.1.1 | Deﬁnition: Acceptable Risk
+1.1.1.1.1.1.1.1.1.1 | CR Dataset Construction and Pre-processing
+1.1.1.1.1.1.1.1.1.1.1 | Fine tuning with BERT
+1.1.1.1.1.1.1.1.1.1.1.1 | RELATION EXTRACTION
+1.1.1.1.1.1.1.1.1.1.1.1.1 | Hyponyms from Deﬁnitions
+1.1.1.1.1.1.1.1.1.1.1.1.1.1 | Hyponyms from POS tags
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | Relations from Abbreviations
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | Relation Extraction using Verb Phrase Chunking
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | CONCLUSION AND FUTURE WORK
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_hYNPvWnu7YzQiP32HbY7BsWE)
+ Call ID: call_hYNPvWnu7YzQiP32HbY7BsWE
+  Args:
+    section_id: 1.1.1.1.1.1
+
+================================= Tool Message =================================
+Name: read_section
+
+BIO Labelling Scheme
+1. abb : represents abbreviations such as TRL representing Technology Readiness Level .2. grp : represents a group of people or an individual such as Electrical Engineers ,Systems Engineers or a Project Manager .
+3. syscon : represents any system concepts such as engineer- ing unit , product ,hardware , software , etc. They mostly represent physical concepts.
+4. opcon : represents operational concepts such as decision analysis process , technology maturity assessment ,system requirements review , etc.
+5. seterm :represents generic terms that are frequently used in SE text and those that do not fall under syscon or op- con such as project , mission , key performance parameter , audit etc.
+6. event : represents event-like information in SE text such as Pre-Phase A ,Phase A , Phase B , etc.
+7. org : represents an organization such as ‘NASA’ ,‘aerospace industry’ , etc.
+8. art : represents names of artifacts or instruments such as ‘AS1300’9. cardinal : represents numerical values such as ‘1’ , ‘100’ ,’one’ etc.
+10. loc : represents location-like entities such as component facilities or centralized facility .11. mea : represents measures, features, or behaviors such as cost , risk ,or feasibility .
+Abbreviations
+Abbreviations are used frequently in SE text. We automat- ically extract abbreviations using simple pattern-matching around parentheses. Given below is a sample regex that matches most abbreviations in the SE handbook.r"\([ ]*[A-Z][A-Za-z]*[ ]*\)"
+An iterative regex matching procedure using this pattern over the preceding words will produce the full phrase of the abbreviation.  ‘A process to determine a systems technologi- cal maturity based on Technology Readiness Levels (TRLs)’ produces the abbreviation TRL which stands for Technology Readiness Levels . ‘Define one or more initial Concept of Operations (ConOps) scenarios’ produces the abbreviation ConOps which stands for Concept of Operations . We pre- label these abbreviations as concept entities. Many of these abbreviations are also provided in the Appendix section of the handbook which is also extracted and used as concepts.
+Common-Knowledge Deﬁnitions
+Various locations of the handbook and the glossary pro- vide definitions of several SE concepts. We collect these and compile a comprehensive definitions document which is also used for the concept recognition task. An example definition and its description is shown below:
+Deﬁnition: Acceptable Risk
+Description : The risk that is understood and agreed to by the program/project, governing authority, mission direc- torate, and other customer(s) such that no further specific mitigating action is required.Figure 2: A Snippet of the concept-labelled dataset
+ O 73944 B-cardinal 414 I-grp 132 B-opcon 5530 B-abb 354 B-org 87 B-syscon 1640 B-event 350 I-seterm 26 B-seterm 1431 I-event 218 B-art 17 I-opcon 1334 I-syscon 201 I-org 12 B-mea 1117 I-abb 156 I-loc 3 B-grp 499 I-mea 145 B-loc 2
+ Table 1: Unique Tag Count from the CR dataset
+CR Dataset Construction and Pre-processing
+Using python tools such as PyPDF2 , NLTK , and RegEx we build a pipeline to convert PDF to raw text along with ex- tensive pre-processing which includes joining sentences that are split, removing URLs, shortening duplicate non-alpha characters, and replacing full forms of abbreviations with their shortened forms. We assume that the SE text is free of spelling errors. For the CR dataset, we select coherent paragraphs and full sentences by avoiding headers and short blurbs.  Using domain keywords and a domain expert, we an- notate roughly 3700 sentences at the word-token level. An example is shown in Figure 2 and the unique tag count is shown in Table 1.
+Fine tuning with BERT
+Any language model can be used for the purpose of cus- tomizing an NER problem to CR. We choose to go with BERT (Devlin et al. 2018) because of its general-purpose nature and usage of contextualized word embeddings.In the hand-labelled dataset, each word gets a label. The idea is to perform multi-class classification using BERT’s pre-trained cased language model.  We use pytorch trans- formers and hugging face as per the tutorial by (Huang 2019) which uses BertF orT okenClassif ication . The text is embedded as tokens and masks with a maximum to- ken length. This embedded tokens are provided as the input to the pre-trained BERT model for a full fine-tuning. The model gives an F1-score of 0 . 89 for the concept recognition task.  An 80-20 data split is used for training and evaluation. Detailed performance of the CR is shown in Table 2 and 3. Additionally, we also implemented CR using spaCy (Honni- bal and Johnson 2015) which also produced similar results.
+RELATION EXTRACTION
+In this work, for relation extraction, we focus on hyponyms and verb phrase chunking. Hyponyms are more specific con- cepts such as earth to planet or rose to flower . Verb phrase
+precision recall f1-score support syscon 0.94 0.89 0.91 320 opcon 0.87 0.91 0.89 1154 seterm 0.98 0.94 0. 96 287 mea 0.91 0.90 0.90 248 grp 0.94 0.93 0.94 89 org 1.00 0.11 0.21 26 cardinal 0.90 0.92 0.91 71 event 0.71 0.78 0.76 77 abb 0.82 0.58 0.68 79 art 0. 00 0.00 0.00 4 loc 0.00 0.00 0.00 1 micro/macro-avg 0.90 0.88 0.88 2356
+Table 2: Performance of different labels
+F1-Score Accuracy Accuracy without ‘O’-tag 0.89 0.97 0.86
+ Table 3: Overall Performance of CR; For fairness, we also provide the accuracy when the most common ‘O’-tag is ex- cluded from the analysis.chunking connects the named entities recognized by the CR model through verbs.
+Hyponyms from Deﬁnitions
+The definition document consists of 241 SE definitions and their descriptions. We iteratively construct entities in increasing order of number of words in the definitions with the help of their parts-of-speech tags. This helps in creating subset-of relation between a lower-word entity and a higher-word entity. Each root entity is lemmatized such that entities like processes and process appear only once.
+Hyponyms from POS tags
+Using the words (especially nouns) that surround an already identified named entity, more specific entities can be iden- tified. This is performed on a few selected entity tags such as opcon and syscon . For example, consider the sentence ‘SE functions should be performed’ . ‘SE’ has tag NNP and ‘functions’ has tag NNS . We create a relation called subset-of between ‘SE functions’ and ‘SE’ .
+Relations from Abbreviations
+Relations from abbreviations are simple direct connections between the abbreviation and its full form described in
+the abbreviations dataset. Figure 3 shows a snippet of knowledge graph constructed using stands-for and subset-of relationships. Larger graphs are shown in the demo.Figure 3: A snippet of the knowledge graph generated
+Relation Extraction using Verb Phrase Chunking
+Finally, we explore creating contextual triples from sen- tences using all the entities extracted using the CR model and entities from definitions. Only those phrases that con- nect two entities are selected for verb phrase extraction. Us- ing NLTK’s regex parser and chunker, a grammar such as
+VP: {(<MD>|<R.*>|<I.*>|<VB.*>|<JJ.*>| <TO>)*<VB. *>+(<MD>|<R.*>|<I.*>|<VB.*>| <JJ.*>|<TO>)*}
+with at least one verb, can extract relation-like phrases from the phrase that links two concepts. An example is shown in Figure 4. Further investigation of relation extraction from SE handbook is left as future work.Figure 4: Relation Extraction using Verb Phrase
+CONCLUSION AND FUTURE WORK
+We presented a common-knowledge concept extractor for the Systems Engineer’s Virtual Assistant (SEVA) system and showed how it can be beneficial for downstream tasks such as relation extraction and knowledge graph construc- tion. We construct a word-level annotated dataset with the help of a domain expert by carefully defining a labelling scheme to train a sequence labelling task to recognize SE concepts. Further, we also construct some essential datasets from the SE domain which can be used for future re- search.  Future directions include constructing a comprehen- sive common-knowledge relation extractor from SE hand- book and incorporating such human knowledge into a more comprehensive machine-processable commonsense knowl- edge base for the SE domain.
+References
+[AI2 Allen Institute for AI ] AI2 Allen Institute for AI. Aristo:An intelligent system that reads, learns, and reasons about science. https://allenai.org/aristo/ . Ac- cessed: 2019-08-12.
+[Baevski et al. 2019] Baevski, A.;Edunov, S.; Liu, Y.; Zettle- moyer, L.; and Auli, M. 2019. Cloze-driven pretraining of self-attention networks. arXiv preprint arXiv:1903.07785 .
+[Devlin et al. 2018] Devlin, J.; Chang, M.-W.; Lee, K.; and Toutanova, K. 2018. Bert: Pre-training of deep bidirectional transformers for language understanding. arXiv preprint arXiv:1810.04805 .
+[Elaasar 2019] Elaasar, M. 2019.Open casesar; the case for integrated model centric engineering.
+[Etzioni et al. 2011] Etzioni, O.; Fader,A.; Christensen, J.; Soderland, S.; and Mausam. 2011. Open information ex- traction: the second generation. IJCAI 3–10.
+[Hart 2015] Hart, L. E. 2015.Introduc- tion to model-based system engineering (mbse) and sysml. http://www.incose.org/ docs/default-source/delaware-valley/ mbse-overview-incose-30-july-2015.pdf . Ac- cessed: 11-09-2017.
+[Hearst 1992] Hearst, M. A. 1992.Automatic acquisition of hyponyms from large text corpora. In Proceedings of the 14th conference on Computational linguistics-Vol. 2 , 539– 545. ACL.
+[Honnibal and Johnson 2015] Honnibal, M., and Johnson,M. 2015. An improved non-monotonic transition system for dependency parsing. In Proceedings of the 2015 Confer- ence on Empirical Methods in Natural Language Process- ing , 1373–1378. ACL.
+[Huang 2019] Huang, B. 2019.Ner with bert in action.
+[JPL 2016] JPL. 2016.Imce ontological modeling frame- work.
+[Krishnan, Coronado, and Reed 2019] Krishnan, J.;...(truncated)
+
+================================== Ai Message ==================================
+
+The labeling scheme uses a BIO format with tags for 11 concept types: abb, grp, syscon, opcon, seterm, event, org, art, cardinal, loc, and mea. These denote abbreviations, groups/individuals, system concepts, operational concepts, generic SE terms, events, organizations, artifacts/instruments, numerical values, locations, and measures/features/behaviors, respectively.

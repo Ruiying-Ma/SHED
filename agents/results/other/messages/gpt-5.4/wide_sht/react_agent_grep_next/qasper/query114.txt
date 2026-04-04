@@ -1,0 +1,52 @@
+================================ Human Message =================================
+
+QUERY:
+Do they annotate their own dataset?
+
+TABLE OF CONTENTS (TOC):
+1 | Automatic Argumentative-Zoning Using Word2vec
+1.1 | 1 Introduction
+1.2 | 2 Related Work
+1.3 | 3 Methodology
+1.4 | 3.1 Models
+1.5 | 3.2 Classiﬁcation and evaluation
+1.6 | 4 Experimental Evaluation
+1.7 | 4.1 Training Dataset
+1.8 | 4.2 Test Dataset
+1.9 | 4.3 Training strategy
+1.10 | 4.4 Parameters
+1.11 | 4.5 Strategy of dealing with unbalanced data
+1.12 | 4.6 Results of classiﬁcation for per category
+1.13 | 5 Discussion
+1.14 | 6 Conclusion
+1.15 | Bibliography
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_G8rTBtDFayAzALwZTnTlmELY)
+ Call ID: call_G8rTBtDFayAzALwZTnTlmELY
+  Args:
+    section_id: 1.8
+
+================================= Tool Message =================================
+Name: read_section
+
+4.2 Test Dataset
+Argumentative Zoning Corpus ( AZ corpus) consists of 80 AZ − annotated conference articles in computational linguistics, originally drawn from the Cmplg arXiv. 5 . After Concatenating sub-sentences, 7,347 labeled sentences were obtained.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_ZXHdfxxWBfAqEmnuzz17Pyk5)
+ Call ID: call_ZXHdfxxWBfAqEmnuzz17Pyk5
+  Args:
+    section_id: 1.7
+
+================================= Tool Message =================================
+Name: read_section
+
+4.1 Training Dataset
+ACL collection. ACL Anthology Reference Corpus 3 contains the canoni- cal 10,921 computational linguistics papers, from which 622,144 sentences were generated after filtering out sentences with lower quality.M ixedAbs collection contains 6,778 sentences, extracted from the ti- tles and abstracts of publications provided by WEB OF SCIENCE 4 .
+
+================================== Ai Message ==================================
+
+No. They use existing annotated data: the test dataset is the Argumentative Zoning Corpus, which consists of 80 AZ-annotated conference articles.

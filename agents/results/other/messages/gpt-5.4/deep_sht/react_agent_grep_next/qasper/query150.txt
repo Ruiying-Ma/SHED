@@ -1,0 +1,62 @@
+================================ Human Message =================================
+
+QUERY:
+How did they annotate the corpus?
+
+TABLE OF CONTENTS (TOC):
+1 | A Corpus of Adpositional Supersenses for Mandarin Chinese Siyao Peng, Yang Liu, Yilun Zhu, Austin Blodgett, Yushi Zhao, Nathan Schneider
+1.1 | Abstract
+1.1.1 | 1. Introduction
+1.1.1.1 | 2. Related Work
+1.1.1.1.1 | 2.1. Chinese Adpositions and Roles
+1.1.1.1.1.1 | 2.2. SNACS: Adposition Supersenses
+1.1.1.1.1.1.1 | 3. Adposition Criteria in Mandarin Chinese
+1.1.1.1.1.1.1.1 | 4. Corpus Annotation
+1.1.1.1.1.1.1.1.1 | 4.1. Preprocessing
+1.1.1.1.1.1.1.1.1.1 | 4.2. Reliability of Annotation
+1.1.1.1.1.1.1.1.1.1.1 | 5. Corpus Analysis
+1.1.1.1.1.1.1.1.1.1.1.1 | 5.1. Adpositions in Chinese
+1.1.1.1.1.1.1.1.1.1.1.1.1 | 5.2. Supersense & Construal Distributions in Chinese versus English
+1.1.1.1.1.1.1.1.1.1.1.1.1.1 | 6. POS Tagging of Adposition Targets
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | 7. Conclusion
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | Acknowledgements
+1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_cYlbHaOuXsgWsRSjIKB8SSZ1)
+ Call ID: call_cYlbHaOuXsgWsRSjIKB8SSZ1
+  Args:
+    section_id: 1.1.1.1.1.1.1.1
+
+================================= Tool Message =================================
+Name: read_section
+
+4. Corpus Annotation
+We chose to annotate the novella The Little Prince because it has been translated into hundreds of languages and di- alects, which enables comparisons of linguistic phenomena across languages on bitexts. This is the first Chinese cor- pus to undergo SNACS annotation. Ongoing adpositional supersense projects on The Little Prince include English, German, French, and Korean. In addition, The Little Prince has received large attention from other semantic frameworks
+ and corpora, including the English (Banarescu et al., 2013) and Chinese (Li et al., 2016) AMR corpora.
+4.1. Preprocessing
+We use the same Chinese translation of The Little Prince as the Chinese AMR corpus (Li et al., 2016), which is also sentence-aligned with the English AMR corpus (Banarescu et al., 2013). These bitext annotations in multiple languages and annotation semantic frameworks can facilitate cross- framework comparisons.Prior to supersense annotation, we conducted the following preprocessing steps in order to identify the adposition targets that merit supersense annotation. Tokenization After automatic tokenization using Jieba, 7 we conducted manual corrections to ensure that all potential adpositions occur as separate tokens, closely following the Chinese Penn Treebank segmentation guidelines (Xia, 2000). The final corpus includes all 27 chapters of The Little Prince , with a total of 20k tokens.Adposition Targets All annotators jointly identified ad- position targets according to the criteria discussed in §3.  Manual identification of adpositions was necessary as an automatic POS tagger was found unsuitable for our criteria (§6).Data Format Though parsing is not essential to this an- notation project, we ran the StanfordNLP (Qi et al., 2018) dependency parser to obtain POS tags and dependency trees.  These are stored alongside supersense annotations in the CoNLL-U-Lex format (modeled after the STREUSLE cor- pus; Schneider and Smith, 2015; Schneider et al., 2018). CoNLL-U-Lex extends the CoNLL-U format used by the Universal Dependencies (UD; Nivre et al., 2016) project to add additional columns for lexical semantic annotations. 8
+4.2. Reliability of Annotation
+The corpus is jointly annotated by three native Mandarin Chi- nese speakers, all of whom have received advanced training in theoretical and computational linguistics. Supersense la- beling was performed cooperatively by 3 annotators for 25% (235/933) of the adposition targets, and for the remainder, independently by the 3 annotators, followed by cooperative adjudication.  Annotation was conducted in two phases, and therefore we present two inter-annotator agreement studies to demonstrate the reproducibility of SNACS and the relia- bility of the adapted scheme for Chinese.Table 1 shows raw agreement and Cohen’s kappa across three annotators computed by averaging three pairwise com- parisons. Agreement levels on scene role, function, and full construal are high for both phases, attesting to the validity of the annotation framework in Chinese.  However, there is a slight decrease from Phase 1 to Phase 2, possibly due to the seven newly attested adpositions in Phase 2 and the 1-year interval between the two annotation phases.IAA S AMPLES Phase Time Chapters # Adpositions Phase 1 July 2018 15–20 111 Phase 2 Sept 2019 26–27 124 R AW A GREEMENT Phase Scene Function Construal Phase 1 .92 .95 . 90 Phase 2 .93 .90 .89 K APPA Phase Scene Function Construal Phase 1 .90 .93 .88 Phase 2 .92 .88 .88
+Table 1: Inter-annotator agreement (IAA) results on two samples from different phases of the project.Toks.  Types Chapters 27 NA Sentences 1,597 NA Tokens 20,287 NA Adpositions 933 70 Prepositions 667 42 Postpositions 266 28 Supersenses 933 29 Scene roles 933 28 Functions 933 26 Construals 933 41 Congruent (scene=fxn) 803 25 Divergent (scene ≠ fxn) 130 16
+ Table 2: Statistics of the final Mandarin The Little Prince Corpus (the Chinese SNACS Corpus). Tokenization, identification of adpo- sition targets, and supersense labeling were performed manually.
+5. Corpus Analysis
+Our corpus contains 933 manually identified adpositions. Of these, 70 distinct adpositions, 28 distinct scene roles, 26 distinct functions, and 41 distinct full construals are attested in annotation. Full statistics of token and type frequencies are shown in Table 2. This section presents the most frequent adpositions in Mandarin Chinese, as well as quantitative and qualitative comparisons of scene roles, functions, and construals between Chinese and English annotations.
+5.1. Adpositions in Chinese
+We analyze semantic and distributional properties of ad- positions in Mandarin Chinese. The top 5 most frequent prepositions and postpositions are shown in Table 3. Prepo- sitions include canonical adpositions such as y¯ınwèi and coverbs such as zài . Postpositions are localizers such as shàng and zh¯ong . We observe that prepositions zài and duì are dominant in the corpus (greater than 10%).  Other top ad- positions are distributed quite evenly between prepositions and postpositions. On the low end, 27 out of the 70 attested adposition types occur only once in the corpus.Prep. Trans. % Count zài on 18.4 172 duì to 11.0 103 bˇa theme marker 7.2 67 y¯ınwèi due to 4.7 44 gˇei to 3. 5 33 Total 44.9 419 Postp. Trans. % Count shàng on top of 9.5 89 zh¯ong in the middle of 4.9 46 lˇı inside of 3.9 36 láishu¯o to one’s regard 2.7 25 shí at the time of 2.1 20 Total 23.2 216
+ Table 3: Percentages and counts of the top 5 prepositions and postpositions in Chinese Little Prince . The percentages are out of all adpositions.
+5.2. Supersense & Construal Distributions in Chinese versus English
+The distribution of scene role and function types in Chinese and English reflects the differences and similarities of adpo- sition semantics in both languages. In table 4 we compare this corpus with the largest English adposition supersense corpus, STREUSLE version 4.1 (Schneider et al., 2018), which consists of web reviews. We note that the Chinese corpus is proportionally smaller than the English one in terms of token and adposition counts.  9 Moreover, there are fewer scene role, function and construal types attested in Chinese. The proportion of construals in which the scene role differs from the function (scene ≠ fxn) is also halved in Chinese. In this section, we delve into comparisons regard- ing scene roles, functions, and full construals between the two corpora both quantitatively and qualitatively. Overall Distribution of Supersenses Figures 2 and 3 present the top 10 scene roles and functions in Mandarin Chinese and their distributions in English. It is worth noting that since more scene role and function types are attested in the larger STREUSLE dataset, the percentages of these supersenses in English are in general lower than the ones in Chinese.There are a few observations in these distributions that are of particular interest.  For some of the examples, we use an annotated subset of the English Little Prince corpus for qualitative comparisons, whereas all quantitative results in English refer to the larger STREUSLE corpus of English Web Treebank reviews (Schneider et al., 2018).Fewer Adpositions in Chinese As shown in Table 4, the percentage of adposition targets over tokens in Chinese is only half of that in English.  This is due to the fact that Chinese has a stronger preference to convey semantic infor- mation via verbal or nominal forms. Examples (6, 7) show that the prepositions used in English, of and in , are trans- lated as copula verbs ( shì ) and progressives ( zhèngzài ) in Chinese. Corresponding to Figures 2 and 3, the proportion
+7 https://github.com/fxsjy/jieba
+ 8 https://github.com/nert-nlp/streusle/blob/master/ CONLLULEX.md
+9 We exclude possessives and multi-word expressions that are annotated in the English corpus since possessives are not formed by adpositional phrases in Mandarin Chinese.toks % adps uniq adps uniq scene uniq fxn uniq cons scene ≠ fxn % scene ≠ fxn Chinese: Little Prince 20k 4. 6% 70 28 26 41 16 14% English: EWT Reviews 55k 7.4% 111 47 40 170 130 27%
+Table 4: Statistics of Adpositional Supersenses in Chinese versus English.  % adps presents the proportion of adposition targets over all token counts; uniq adps/scene/fxn/cons demonstrates the type frequency of adposition tokens, scene role and function supersense and construals; scene ≠ fxn and % scene ≠ fxn shows the type frequency and proportion of divergent construals.Figure 2: Top 10 most frequent scene roles in Chinese versus English . Figure 3: Top 10 most frequent functions in Chinese versus En- glish .of the supersense label T OPIC in English is higher than that in Chinese; and similarly, the supersense label I DENTITY is not attested in Chinese for either scene role or function.
+(6) It was a picture of: T OPIC a boa constrictor in:M ANNER the act of: I DENTITY swallowing an animal . ( en_lpp_1943.3 )
+(7) [huà draw de] DE shì COP [[yì one tiáo CL mˇangshé] boa zhèngzài PROG t¯unshí swallow [yì one zh¯ı CL dà big yˇeshòu]] animal ‘The drawing is a boa swallowing a big animal’.( en_lpp_1943.3 )
+Larger Proportion of L OCUS in Chinese In both Fig- ure 2 and Figure 3, the percentages of L OCUS as scene role and function are twice that of the English corpus respec-
+tively. This corresponds to the fact that fewer supersense types occur in Mandarin Chinese than in English.  As a re- sult, generic locative and temporal adpositions, as well as adpositions tied to thematic roles, have larger proportions in Chinese than in English.E XPERIENCER as Function in Chinese Despite the fact that there are fewer supersense types attested in Chinese, E XPERIENCER as a function is specific to Chinese as it does not have any prototypical adpositions in English (Schneider et al., 2019).  In (8), the scene role E XPERIENCER is ex- pressed through the preposition to and con...(truncated)
+
+================================== Ai Message ==================================
+
+They annotated the Mandarin Chinese translation of The Little Prince with SNACS adpositional supersenses. After automatic Jieba tokenization and manual correction, all annotators jointly manually identified adposition targets, then three native Mandarin-speaking annotators labeled supersenses cooperatively for 25% of targets and independently for the rest, followed by cooperative adjudication. The annotations were stored with POS tags and dependency parses in CoNLL-U-Lex format.

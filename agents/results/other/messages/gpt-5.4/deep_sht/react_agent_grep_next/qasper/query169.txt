@@ -1,0 +1,53 @@
+================================ Human Message =================================
+
+QUERY:
+Which subsystem outperformed the others?
+
+TABLE OF CONTENTS (TOC):
+1 | THUEE SYSTEM DESCRIPTION FOR NIST 2019 SRE CTS CHALLENGE
+1.1 | ABSTRACT
+1.1.1 | 1. INTRODUCTION
+1.1.1.1 | 2. DATA USAGE
+1.1.1.1.1 | 3. SYSTEMS
+1.1.1.1.1.1 | 3.1. Etdnn/ams
+1.1.1.1.1.1.1 | 3.2. ftdnn/as
+1.1.1.1.1.1.1.1 | 3.3. eftdnn/ams
+1.1.1.1.1.1.1.1.1 | 3.4. resnet
+1.1.1.1.1.1.1.1.1.1 | 3.5. multitask
+1.1.1.1.1.1.1.1.1.1.1 | 3.6. c-vector
+1.1.1.1.1.1.1.1.1.1.1.1 | 4. FEATURE AND BACK-END
+1.1.1.1.1.1.1.1.1.1.1.1.1 | 5. FUSION
+1.1.1.1.1.1.1.1.1.1.1.1.1.1 | 6. REFERENCES
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_j5BS1e1RVi7SD46jXVABqEMY)
+ Call ID: call_j5BS1e1RVi7SD46jXVABqEMY
+  Args:
+    pattern: outperform|outperformed|better than|best|subsystem
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1.1.1.1.1.1.1.1.1.1.1 | 4. FEATURE AND BACK-END
+23-dimensional MFCC (20-3700Hz) is extracted as feature for etdnn/ams, ftdnn/as, eftdnn/ams, multitask and c-vector subsys-
+Fig. 2 . multitask architecture for the speaker embedding extraction.Table 8 . Subsystem performance on SRE18 DEV and EVAL set. System SRE18 DEV SRE18 EVAL EER(%) min-DCF EER(%) min-DCF etdnn 3.95 0.222 2.59 0.198 ftdnn 4.28 0.258 2.89 0.217 eftdnn 3.67 0.196 2.56 0.204 resnet 4.02 0.253 3.50 0. 255 multitask 4.35 0.276 3.58 0.278 c-vector 3.92 0.252 3.10 0.249 fused 3.45 0.164 2.25 0.175
+tems. 23-dimensional Fbank is used as feature for ResNet 16kHz subsystems. A simple energy-based VAD is used based on the C0 component of the MFCC feature [9]. For each neural network, its training data are augmented using the public accessible MUSAN and RIRS NOISES as the noise source. Two-fold data augmentation is applied for etdnn/ams, ftdnn/as, resnet, multitask and cvector subsystems. For eftdnn/ams subsystem, five-fold data augmentation is applied.After the embeddings are extracted, they are then transformed to 150 dimension using LDA. Then, embeddings are projected into unit sphere.  At last, adapted PLDA with no dimension reduction is applied.The execution time is test on Intel Xeon E5-2680 v4. Extracting x-vector cost about 0.087RT. Single trial cost around 0.09RT. The memory cost about 1G for a x-vector extraction and a single trial. In the inference, only CPU is used. The speed test was performed on Intel Xeon E5-2680 v4 for etdnn ams, multitask, c-vector and ResNet system. Test on Intel Xeon Platinum 8168 for ftdnn and eftdnn system. Extracting em- bedding cost about 0.103RT for etdnn ams, 0.089RT for multitask, 0.092RT for c-vector, 0. 132RT for eftdnn, 0.0639RT for ftdnn, and 0.112RT for ResNet. Single trial cost around 1.2ms for etdnn ams, 0.9ms for multitask, 0.9ms for c-vector, 0.059s for eftdnn, 0.0288s for ftdnn, 1.0ms for ResNet.  The memory cost about 1G for an em- bedding extraction and a single trial. In the inference, we just use CPU.
+5. FUSION
+Our primary system is the linear fusion of all the above six subsys- tems by BOSARIS Toolkit on SRE19 dev and eval [10]. Before the fusion, each score is calibrated by PAV method ( pav calibrate scores) on our development database. It is evaluated by the primary metric provided by NIST SRE 2019.
+6. REFERENCES
+[1] “Nist 2019 speaker recognition evaluation:Cts chal- lenge,” https://www.nist.gov/itl/iad/mig/ nist-2019-speaker-recognition-evaluation .
+[2] Yi Liu, Liang He, and Jia Liu,“Large margin softmax loss for speaker verification,” in INTERSPEECH , 2019, pp. 2873– 2877.
+[3] Jesus Villalba, Nanxin Chen, David Snyder,Daniel Garcia- Romero, Alan McCree, and etc, “The jhu-mit system descrip-
+tion for nist sre18,” in NIST Speaker Recognition Evaluation Workshop , 2018.
+[4] David Snyder, Daniel Garcia-Romero, Daniel Povey,and San- jeev Khudanpur, “Deep neural network embeddings for text- independent speaker verification,” in INTERSPEECH , 2017, pp. 999–1003.
+[5] F. Wang, J. Cheng, W. Liu, and H.Liu, “Additive margin soft- max for face verification,” IEEE Signal Processing Letters , vol. 25, no. 7, pp. 926–930, July 2018.
+[6] Kaiming He, Xiangyu Zhang, Shaoqing Ren,and Jian Sun, “Deep residual learning for image recognition,” in CVPR , 2016, pp. 770–778.
+[7] Yi Liu, Liang He, Jia Liu, and Michael T.Johnson, “Speaker embedding extraction with phonetic information,” in INTER- SPEECH , 2018, pp. 2247–2251.
+[8] Yi Liu, Liang He, Jia Liu, and Michael T.Johnson, “Intro- ducing phonetic information to speaker embedding for speaker verification,” EURASIP Journal on Audio, Speech, and Music Processing , accept.
+[9] Daniel Povey, Arnab Ghoshal, Gilles Boulianne,Lukas Bur- get, Ondrej Glembek, Nagendra Goel, Mirko Hannemann, Petr Motlicek, Yanmin Qian, Petr Schwarz, Jan Silovsky, Georg Stemmer, and Karel Vesely, “The kaldi speech recognition toolkit,” in IEEE Automatic Speech Recognition and Under- standing Workshop (ASRU) , 2011.
+[10] N. Br¨ummer and E. de Villiers,“The BOSARIS Toolkit: The- ory, Algorithms and Code for Surviving the New DCF,” arXiv e-prints , Apr. 2013.
+
+================================== Ai Message ==================================
+
+The eftdnn subsystem outperformed the others.

@@ -1,0 +1,60 @@
+================================ Human Message =================================
+
+QUERY:
+How do they incorporate direction and relative distance in attention?
+
+TABLE OF CONTENTS (TOC):
+1 | TENER: Adapting Transformer Encoder for Named Entity Recognition
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2 Related Work
+1.3.1 | 2.1 Neural Architecture for NER
+1.3.2 | 2.2 Transformer
+1.3.2.1 | 2.2.1 Transformer Encoder Architecture
+1.3.2.2 | 2.2.2 Position Embedding
+1.4 | 3 Proposed Model
+1.4.1 | 3.1 Embedding Layer
+1.4.2 | 3.2 Encoding Layer with Adapted Transformer
+1.4.2.1 | 3.2.1 Direction- and Distance-Aware Attention
+1.4.2.2 | 3.2.2 Un-scaled Dot-Product Attention
+1.4.3 | 3.3 CRF Layer
+1.5 | 4 Experiment
+1.5.1 | 4.1 Data
+1.5.2 | 4.2 Results on Chinese NER Datasets
+1.5.3 | 4.3 Results on English NER datasets
+1.5.4 | 4.4 Analysis of Different Character Encoders
+1.5.5 | 4.5 Convergent Speed Comparison
+1.6 | 5 Conclusion
+1.7 | References
+1.8 | 6 Supplemental Material
+1.8.1 | 6.1 Character Encoder
+1.8.2 | 6.2 Hyper-parameters
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_Eug6gwika1qq2uUojwfvrOO5)
+ Call ID: call_Eug6gwika1qq2uUojwfvrOO5
+  Args:
+    section_id: 1.4.2.1
+
+================================= Tool Message =================================
+Name: read_section
+
+3.2.1 Direction- and Distance-Aware Attention
+Inspired by the success of BiLSTM in NER tasks, we consider what properties the Transformer lacks compared to BiLSTM-based models. One obser- vation is that BiLSTM can discriminatively collect the context information of a token from its left and right sides. But it is not easy for the Transformer to distinguish which side the context information comes from. Although the dot product between two sinu- soidal position embeddings is able to reflect their distance, it lacks directionality and this property will be broken by the vanilla Transformer atten- tion. To illustrate this, we first prove two proper- ties of the sinusoidal position embeddings.Property 1.  For an offset k and a position t , P E T t + k P E t only depends on k , which means the dot product of two sinusoidal position embeddings can reflect the distance between two tokens.Proof. Based on the definitions of Eq.( 8 ) and Eq.( 9 ), the position embedding of t -th token is
+ P E t =        sin( c 0 t ) cos( c 0 t ) . sin( c d 2 − 1 t ) cos( c d 2 − 1 t )        , (10)
+ where d is the dimension of the position embed- ding, c i is a constant decided by i , and its value is 1 / 10000 2 i/d .Therefore,
+ P E T t P E t + k = d 2 − 1 X j =0 [sin( c j t ) sin( c j ( t + k )) + cos( c j t ) cos( c j ( t + k ))] (11) = d 2 − 1 X j =0 cos( c j ( t − ( t + k ))) (12) = d 2 − 1 X j =0 cos( c j k ) , (13)
+ where Eq.( 11 ) to Eq.( 12 ) is based on the equation cos( x − y ) = sin( x ) sin( y ) + cos( x ) cos( y ) .Figure 3: Dot product between two sinusoidal posi- tion embeddings whose distance is k . It is clear that the product is symmetrical, and with the increment of | k | , it has a trend to decrease, but this decrease is not monotonous. Figure 4: The upper line is the product between P E T t P E t + k . The lower two lines are the prod- ucts of P E T t W P E t + k with two random W s. Al- though P E T t P E t + k can reflect the distance, the P E T t W P E t + k has no clear pattern.Property 2.  For an offset k and a position t , P E T t P E t − k = P E T t P E t + k , which means the si- nusoidal position embeddings is unware of direc- tionality.Proof. Let j = t − k , according to property 1, we have
+P E T t P E t + k = P E T j P E j + k (14) = P E T t − k P E t .  (15)
+The relation between d , k and P E T t P E t + k is displayed in Fig 3 . The sinusoidal position embed- dings are distance-aware but lacks directionality.However, the property of distance-awareness also disappears when P E t is projected into the query and key space of self-attention.  Since in vanilla Transformer the calculation between P E t and P E t + k is actually P E T t W T q W k P E t + k , where
+W q , W k are parameters in Eq.( 1 ). Mathematically, it can be viewed as P E T t W P E t + k with only one parameter W .  The relation between P E T t P E t + k and P E T t W P E t + k is depicted in Fig 4 .Therefore, to improve the Transformer with direction- and distance-aware characteristic, we calculate the attention scores using the equations below:
+Q, K, V = HW q , H d k , HW v , (16) R t − j = [ .  sin( t − j 10000 2 i/d k ) cos( t − j 10000 2 i/d k ) . ] T , (17) A rel t,j = Q t K T j + Q t R T t − j + u K T j + v R T t − j , (18)
+Attn( Q, K, V ) = softmax( A rel ) V, (19)
+ where t is index of the target token, j is the in- dex of the context token, Q t , K j is the query vector and key vector of token t, j respectively, W q , W v ∈ R d × d k . To get H d k ∈ R l × d k , we first split H into d/d k partitions in the second dimension, then for each head we use one parti- tion.  u ∈ R d k , v ∈ R d k are learnable parame- ters, R t − j is the relative positional encoding, and R t − j ∈ R d k , i in Eq.( 17 ) is in the range [0 , d k 2 ] . Q T t K j in Eq. ( 18 ) is the attention score between two tokens; Q T t R t − j is the t th token’s bias on cer- tain relative distance; u T K j is the bias on the j th token; v T R t − j is the bias term for certain distance and direction.Based on Eq.( 17 ), we have
+ R t , R − t =        sin( c 0 t ) cos( c 0 t ) .  sin( c d 2 − 1 t ) cos( c d 2 − 1 t )        ,        − sin( c 0 t ) cos( c 0 t ) .  − sin( c d 2 − 1 t ) cos( c d 2 − 1 t )        , (20)
+because sin( − x ) = − sin( x ) , cos( x ) = cos( − x ) .  This means for an offset t , the forward and back- ward relative positional encoding are the same with respect to the cos( c i t ) terms, but is the oppo- site with respect to the sin( c i t ) terms. Therefore, by using R t − j , the attention score can distinguish different directions and distances.The above improvement is based on the work ( Shaw et al. , 2018 ; Dai et al. , 2019 ).  Since the size of NER datasets is usually small, we avoid direct multiplication of two learnable parameters, because they can be represented by one learnable parameter. Therefore we do not use W k in Eq.( 16 ). The multi-head version is the same as Eq.( 6 ), but we discard W o since it is directly multiplied by W 1 in Eq.( 7 ).Table 1: Details of Datasets. Dataset Type Train Dev Test English CoNLL2003 Sentence 14.0k 3.2k 3.5k Token 203.6k 51.4k 46.4k OntoNotes 5.0 Sentence 59.9k 8.5k 8.3k Token 1088.5k 147.7k 152.7k Chinese OntoNotes 4.0 Sentence 15.7k 4. 3k 4.3k Token 491.9k 200.5k 208.1k MSRA Sentence 46.4k 4.4k 4.4k Token 2169.9k 172.6k 172.6k Weibo Sentence 1.4k 0.3k 0.3k Token 73.5k 14.4k 14.8k Resume Sentence 3. 8k 0.5k 0.5k Token 124.1k 13.9k 15.1k
+
+================================== Ai Message ==================================
+
+They incorporate direction and relative distance by adding a relative positional encoding \(R_{t-j}\), defined from the offset \(t-j\), directly into the attention score: \(A^{rel}_{t,j}=Q_tK_j^T+Q_tR_{t-j}^T+uK_j^T+vR_{t-j}^T\). Because \(R_{t-j}\) uses sinusoidal terms where the cosine parts are the same for forward/backward offsets but the sine parts change sign, the attention can distinguish both distance and direction.

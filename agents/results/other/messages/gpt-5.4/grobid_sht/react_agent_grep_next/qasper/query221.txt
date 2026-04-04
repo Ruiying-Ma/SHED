@@ -1,0 +1,51 @@
+================================ Human Message =================================
+
+QUERY:
+Which method best performs on the offensive language identification task?
+
+TABLE OF CONTENTS (TOC):
+1 | Offensive Language Identification in Greek
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2 Related Work
+1.3.1 | 2.1 Non-English Datasets
+1.4 | 3 The OGTD Dataset
+1.4.1 | 3.1 Pre-processing and annotation
+1.5 | 4 Methods
+1.5.1 | 4.1.2 Deep Learning Models
+1.5.2 | 4.2 Results
+1.5.3 | 4.3 Discussion
+1.6 | 5 Conclusion
+1.6.1 | 5.1 Ongoing -OGTD v2.0 and OffensEval 2020
+1.7 | Acknowledgements
+1.8 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_zDlU0la9ugQkEGWDgcPYyZNs)
+ Call ID: call_zDlU0la9ugQkEGWDgcPYyZNs
+  Args:
+    section_id: 1.5.2
+
+================================= Tool Message =================================
+Name: read_section
+
+4.2 Results
+The
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_mF3IJDpg6Q7Sr8ojQyfeM7iX)
+ Call ID: call_mF3IJDpg6Q7Sr8ojQyfeM7iX
+  Args:
+    section_id: 1.5.3
+
+================================= Tool Message =================================
+Name: read_section
+
+4.3 Discussion
+The data annotated in OGTD proved to be facilitating in offensive language detection with a significant success for Greek, taking into consideration its size and label distribution, with the best model (LSTM and GRU with Attention) achieving a F1-macro of 0.89. Among the classical machine learning approaches, the linear SVM model achieved the best results, 0.
+
+================================== Ai Message ==================================
+
+LSTM and GRU with Attention performs best on the offensive language identification task, achieving an F1-macro of 0.89.

@@ -1,0 +1,90 @@
+================================ Human Message =================================
+
+QUERY:
+Do they annotate their own dataset?
+
+TABLE OF CONTENTS (TOC):
+1 | Automatic Argumentative-Zoning Using Word2vec
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 3.1 Models
+1.4 | 3.2 Classification and evaluation
+1.5 | 4.1 Training Dataset
+1.6 | 4.2 Test Dataset
+1.7 | 4.3 Training strategy
+1.8 | 4.4 Parameters
+1.9 | 4.5 Strategy of dealing with unbalanced data
+1.10 | 4.6 Results of classification for per category
+1.11 | 5 Discussion
+1.12 | 6 Conclusion
+1.13 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_jvmgZrroNGA45OLdEXWAJaRD)
+ Call ID: call_jvmgZrroNGA45OLdEXWAJaRD
+  Args:
+    section_id: 1.5
+
+================================= Tool Message =================================
+Name: read_section
+
+4.1 Training Dataset
+ACL collection. ACL Anthology Reference Corpus3 contains the canonical 10,921 computational linguistics papers, from which 622,144 sentences were generated after filtering out sentences with lower quality.M ixedAbs collection contains 6,778 sentences, extracted from the titles and abstracts of publications provided by WEB OF SCIENCE4 .
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_8fdmRKoASyboEUN54UFkovNz)
+ Call ID: call_8fdmRKoASyboEUN54UFkovNz
+  Args:
+    section_id: 1.6
+
+================================= Tool Message =================================
+Name: read_section
+
+4.2 Test Dataset
+Argumentative Zoning Corpus (AZ corpus) consists of 80 AZ-annotated conference articles in computational linguistics, originally drawn from the Cmplg arXiv. 5 . After Concatenating sub-sentences, 7,347 labeled sentences were obtained.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_kLEbZUtuH3OETpdlJQH8I8Lf)
+ Call ID: call_kLEbZUtuH3OETpdlJQH8I8Lf
+  Args:
+    pattern: annotat|annotated|annotation
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1 | Abstract
+In comparison with document summarization on the articles from social media and newswire, argumentative zoning (AZ) is an important task in scientific paper analysis. Traditional methodology to carry on this task relies on feature engineering from different levels. In this paper, three models of generating sentence vectors for the task of sentence classification were explored and compared. The proposed approach builds sentence representations using learned embeddings based on neural network. The learned word embeddings formed a feature space, to which the examined sentence is mapped to.  Those features are input into the classifiers for supervised classification. Using 10-cross-validation scheme, evaluation was conducted on the Argumentative-Zoning (AZ) annotated articles. The results showed that simply averaging the word vectors in a sentence works better than the paragraph to vector algorithm and by integrating specific cuewords into the loss function of the neural network can improve the classification performance. In comparison with the hand-crafted features, the word2vec method won for most of the categories.  However, the hand-crafted features showed their strength on classifying some of the categories.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_gPrNE2nCvEOamd3yLJcTXW66)
+ Call ID: call_gPrNE2nCvEOamd3yLJcTXW66
+  Args:
+    pattern: annotat|annotated|annotation
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.12 | 6 Conclusion
+In this paper, different word embedding models on the task of argumentative zoning were compared . The results showed that word embeddings are effective on sentence classification from scientific papers. Word embeddings trained on a relevant corpus can capture the semantic features of statements and they are easier to be obtained than hand engineered features.To improve the sentence classification for a specific category, integrating word specific embedding strategy helps. The size of the feature pool doesn't matter too much on the results, nor does the vocabulary size.  In comparison, the domain of the training corpus affects the classification performance.These texts were randomly selected from Argumentative Zoning Corpus, which is described in dataset section.This is a general case to show how to improve the classification result by integrating cuewords to the embeddings.http : //acl-arc.comp.nus.edu.sg/
+webof knowledge.com
+http : //www.cl.cam.ac.uk/˜sht25/AZ corpus. html
+https : //www.kaggle.com/c/word2vec -nlptutorial/details/part -2 -wordvectors
+Note that it is not completely compatible with Teufel 2002 results, since the dataset is different due to the sentence concatenation in this paper. But Teufel's reports could be a reference. <table><tr><td>Rhetorical Status</td><td>Examples</td></tr><tr><td>AIM</td><td>This paper discusses the lexicographical concept of lexical functions</td></tr><tr><td/><td>Mel'cuk and Zolkovsky 1984 and their potential exploitation in the</td></tr><tr><td/><td>development of a machine translation lexicon designed to handle collocations. </td></tr><tr><td>CTR</td><td>In two of the tasks, the training data is generated by</td></tr><tr><td/><td>a probabilistic context-free grammar and in both tasks our</td></tr><tr><td/><td>algorithm outperforms the other techniques. </td></tr><tr><td>OWN</td><td>We have explored examples of the kinds of tree sets</td></tr><tr><td/><td>and string languages that this system can generate.</td></tr><tr><td>BKG</td><td>English has a very limited system, marking little</td></tr><tr><td/><td>more than plurality on nouns and a restricted range of verb properties. </td></tr><tr><td>OTH</td><td>For this small example, writing such an apply predicate</td></tr><tr><td/><td>is not difficult.</td></tr><tr><td>BAS</td><td>Following Pereira et al.  1993, we measure word</td></tr><tr><td/><td>similarity by the relative entropy, or Kullback-Leibler</td></tr><tr><td/><td>distance, between the corresponding conditional distributions. </td></tr><tr><td>TXT</td><td>The next section describes the binary representation</td></tr><tr><td/><td>and the length formul derived from it in detail;</td></tr><tr><td/><td>readers satisfied with the intuitive descriptions</td></tr><tr><td/><td>presented so far should skip ahead to the Phonotactics sub-section.</td></tr></table>
+ Table Examples of annotated sentences with their rhetorical status
+ <table><tr><td/><td colspan="2">Number of features Vocabulary size</td></tr><tr><td>AV GW V EC ACL+AZ 300</td><td>300</td><td>13685</td></tr><tr><td>AV GW V EC ACL+AZ 100</td><td>100</td><td>14325</td></tr><tr><td>P ARAV EC ACL+AZ 100</td><td>100</td><td>74261</td></tr><tr><td>AV GW V EC MixedAbs 100</td><td>100</td><td>4126</td></tr><tr><td>AV GW V EC BSW E 100</td><td>100</td><td>643</td></tr><tr><td>AV GW V EC Brown model</td><td>100</td><td>56057</td></tr></table>
+ Table Characteristics of word embeddings based on different model and dataset
+<table/>
+Table. 3 shows the distribution of rhetorical categories from the AZ test dataset. The categories OWN and OTH are significantly outnumbering other categories.<table><tr><td colspan="3">Category Number of Sentences Percentage</td></tr><tr><td>OWN</td><td>4868</td><td>0. 54</td></tr><tr><td>OTH</td><td>1927</td><td>0.21</td></tr><tr><td>BKG</td><td>644</td><td>0.07</td></tr><tr><td>BAS</td><td>641</td><td>0.07</td></tr><tr><td>CTR</td><td>451</td><td>0. 05</td></tr><tr><td>AIM</td><td>303</td><td>0.03</td></tr><tr><td>TXT</td><td>191</td><td>0.02</td></tr></table>
+Table Distribution of rhetorical categories
+ <table><tr><td>Method</td><td>AIM</td><td>CTR</td><td>BKG</td><td>BAS</td></tr><tr><td colspan="5">AV GW V EC ACL+AZ 300 0.29/0.82/0.43 0.34/0.75/0.47 0.36/0.72/0.48 0.10/0.72/0. 17</td></tr><tr><td colspan="5">AV GW V EC ACL+AZ 100 0.29/0.85/0.43 0.29/0.80/0.42 0.36/0.68/0.47 0.11/0.87/0.20</td></tr><tr><td colspan="5">P ARAV EC ACL+AZ 100 0.60/0. 03/0.06 0.20/0.004/0.009 0.39/0.02/0.04 0.00/0.00/0.00</td></tr><tr><td colspan="5">AV GW V EC MixedAbs 100 0.11/0.73/0.19 0.11/0.71/0.20 0.14/0.62/0.23 0. 04/0.65/0.08</td></tr><tr><td colspan="5">AV GW V EC Brown model 100 0.19/0.73/0.30 0.38/0.56/0.45 0.19/0.55/0.28 0.05/0.72/0. 10</td></tr><tr><td>AV GW V EC BSW E 100</td><td>-</td><td>-</td><td>-</td><td>0.14/0.63/0.23</td></tr><tr><td>Cuewords</td><td colspan="2">0.13/0.55/0.21 0.33/0.20/0. 25</td><td>-</td><td>0.08/0.36/0.13</td></tr><tr><td>Teufel 2002</td><td colspan="4">0.44/0.65/0.52 0.34/0.20/0.26 0.40/0.50/0.45 0.37/0.40/0. 38</td></tr><tr><td>Baseline</td><td colspan="4">0.30/0.07/0.11 0.31/0.12/0.17 0.32/0.17/0.22 0.15/0.05/0.07</td></tr></table>
+Table. 4 and 5 show the classification performance of different methods.  Performance of sentence classification per category I (precision/recall/Fmeasure)
+<table><tr><td/><td>TXT</td><td>OWN</td><td>OTH</td></tr><tr><td colspan="4">AV GW V EC ACL+AZ 300 0.51/0.87/0.64 0.61/0.71/0.65 0.49/0.65/0. 56</td></tr><tr><td colspan="4">AV GW V EC ACL+AZ 100 0.47/0.88/0.61 0.59/0.68/0.63 0.49/0.69/0.57</td></tr><tr><td colspan="4">P ARAV EC ACL+AZ 100 0.52/0.11/0.18 0.62/0. 98/0.76 0.35/0.004/0.009</td></tr><tr><td colspan="4">AV GW V EC MixedAbs 100 0.15/0.75/0.25 0.72/0.56/0.63 0.21/0.61/0.31</td></tr><tr><td colspan="4">AV GW V EC Brown model 100 0.30/0. 72/0.42 0.56/0.52/0.54 0.42/0.66/0.51</td></tr><tr><td>Teufel 2002</td><td colspan="3">0.57/0.66/0.61 0.84/0.88/0.86 0.52/0.39/0. 44</td></tr><tr><td>Baseline</td><td colspan="3">0.56/0.15/0.23 0.78/0.90/0.83 0.47/0.42/0.44</td></tr></table>
+Table Performance of sentence classification per category II (precision/recall/Fmeasure)
+
+================================== Ai Message ==================================
+
+No. They use the existing Argumentative Zoning Corpus, which consists of 80 AZ-annotated conference articles.

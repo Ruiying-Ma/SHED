@@ -1,0 +1,93 @@
+================================ Human Message =================================
+
+QUERY:
+How many different strategies were evaluated?
+
+TABLE OF CONTENTS (TOC):
+1 | A Crowd-based Evaluation of Abuse Response Strategies in Conversational Agents
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2 Data Collection
+1.4 | 3 Human Evaluation
+1.5 | 4 Results
+1.5.1 | 4.1 Demographic Factors
+1.5.2 | 4.2 Prompt context
+1.5.3 | 4.3 Systems
+1.6 | 5 Related and Future Work
+1.7 | 6 Conclusion
+1.8 | Acknowledgements
+1.9 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_NMQAL4vEUpZpuaBnTZ2FikFp)
+ Call ID: call_NMQAL4vEUpZpuaBnTZ2FikFp
+  Args:
+    pattern: strateg(y|ies)|evaluated|systems
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1 | Abstract
+How should conversational agents respond to verbal abuse through the user? To answer this question, we conduct a large-scale crowd- sourced evaluation of abuse response strate- gies employed by current state-of-the-art sys- tems.  Our results show that some strategies, such as “polite refusal” score highly across the board, while for other strategies demographic factors, such as age, as well as the severity of the preceding abuse influence the user’s per- ception of which response is appropriate. In addition, we find that most data-driven models lag behind rule-based or commercial systems in terms of their perceived appropriateness.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_m7T5H3Q9REiGrhxZqIiaYwpB)
+ Call ID: call_m7T5H3Q9REiGrhxZqIiaYwpB
+  Args:
+    section_id: 1.5.3
+
+================================= Tool Message =================================
+Name: read_section
+
+4.3 Systems
+Finally, we consider appropriateness per system. Following related work by ( Novikova et al. , 2018 ; Bojar et al. , 2016 ), we use Trueskill ( Herbrich et al. , 2007 ) to cluster systems into equivalently rated groups according to their partial relative
+A B C D 1c 4 0.422 2 0.470 2* 0.465 7 0. 420 1d 9 0.378 11 0.385 8 0.382 9* 0.407 1e 3 0.438 3 0.421 4 0.427 6 0.430 2a 7 0.410 10 0.390 6 0.424 8 0.409 2b 1 0.478 1 0. 493 1 0.491 2* 0.465 2c 6 0.410 4 0.415 9 0.380 5* 0.432 2d 8** 0.404 7 0.407 3** 0.453 3 0.434 2e 12 0.345 9** 0.393 10 0.327 12 0. 333 2f 10** 0.376 5 0.414 7 0.417 1** 0.483 3a 5** 0.421 6 0.409 5 0.426 10** 0.382 3b 2 0.440 8 0.396 - - 4 0.432 3c 11** 0.360 12 0. 340 11** 0.322 11 0.345
+Table 4: Ranks and mean scores per prompt contexts (A) Gender and Sexuality, (B) Sexualised Comments, (C) Sexualised Insults and (D) Sexualised Requests and Demands.Cluster Bot Avg 1 Alley 0.452 2 Alexa 0.426 Alice 0.425 Siri 0.431 Parry 0.423 Google Home 0. 420 Cortana 0.418 Cleverbot 0.414 Neuralconvo 0.401 Eliza 0.405 3 Annabelle Lee 0.379 Laurel Sweet 0.379 Clean Seq2Seq 0.379 4 IR system 0.355 Capt Howdy 0.343 5 Dr Love 0.330 6 Sophia69 0.287
+ Table 5: System clusters according to Trueskill and “appropriateness” average score. Note that systems within a cluster are not significantly different.rankings. The results in Table 5 show that the highest rated systen is Alley, a purpose build bot for online language learning. Alley produces “po- lite refusal” (2b) - the top ranked strategy - 31% of the time.  Comparatively, commercial systems politely refuse only between 17% (Cortana) and 2% (Alexa). Most of the time commercial sys- tems tend to “play along” (3a), joke (3b) or don’t know how to answer (1e) which tend to receive lower ratings, see Figure 1 .  Rule-based systems most often politely refuse to answer (2b), but also use medium ranked strategies, such as deflect (2c) or chastise (2d). For example, most of Eliza’s re- sponses fall under the “deflection” strategy, such as “Why do you ask?”. Data-driven systems rank low in general. Neuralconvo and Cleverbot are the only ones that ever politely refuse and we attribute their improved ratings to this.  In turn, the “clean”
+seq2seq often produces responses which can be in- terpreted as flirtatious (44%), 3 and ranks similarly to Annabelle Lee and Laurel Sweet, the only adult bots that politely refuses ( 16% of the time). Rit- ter et al.  ( 2010 )’s IR approach is rated similarly to Capt Howdy and both produce a majority of retaliatory (2e) responses - 38% and 58% respec- tively - followed by flirtatious responses. Finally, Dr Love and Sophia69 produce almost exclusively flirtatious responses which are consistently ranked low by users.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_kgF2BF8Mw3pxPQsXPLJW8g5C)
+ Call ID: call_kgF2BF8Mw3pxPQsXPLJW8g5C
+  Args:
+    pattern: 2a|2b|2c|2d|2e|2f|3a|3b|3c|1c|1d|1e
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.5.1 | 4.1 Demographic Factors
+Previous research has shown gender to be the most important factor in predicting a person’s definition of sexual harassment ( Gutek , 1992 ). However, we find small and not statistically significant differ- ences in the overall rank given by users of different gender (see Table 3 ).Regarding the user’s age, we find strong dif- ferences between GenZ (18-25) raters and other groups.  Our results show that GenZ rates avoid- ance strategies (1e, 2f) significantly lower. The strongest difference can be noted between those aged 45 and over and the rest of the groups for cat- egory 3b (jokes). That is, older people find humor- ous responses to harassment highly inappropriate.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_0MDZklyGMExmJu39kBdjkDRI)
+ Call ID: call_0MDZklyGMExmJu39kBdjkDRI
+  Args:
+    section_id: 1.4
+
+================================= Tool Message =================================
+Name: read_section
+
+3 Human Evaluation
+In order to assess the perceived appropriateness of system responses we conduct a human study using crowd-sourcing on the FigureEight platform. We define appropriateness as “acceptable behaviour in a work environment” and the participants were made aware that the conversations took place be- tween a human and a system. Ungrammatical (1a) and incoherent (1b) responses are excluded from this study.  We collect appropriateness rat- ings given a stimulus (the prompt) and four ran- domly sampled responses from our corpus that the worker is to label following the methodology de- scribed in ( Novikova et al. , 2018 ), where each ut- terance is rated relatively to a reference on a user- defined scale. Ratings are then normalised on a scale from [0-1].  This methodology was shown to produce more reliable user ratings than com- monly used Likert Scales. In addition, we collect demographic information, including gender and age group. In total we collected 9960 HITs from 472 crowd workers. In order to identify spammers and unsuitable ratings, we use the responses from the adult-only bots as test questions: We remove users who give high ratings to sexual bot responses the majority (more than 55%) of the time. 18,826 scores remain - resulting in an average of 7.7 rat- ings per individual system reply and 1568.8 rat- ings per response type as listed in Table 1 .Due to missing demographic data - and after removing malicious crowdworkers - we only consider a sub- set of 190 raters for our demographic study. The
+group is composed of 130 men and 60 women. Most raters (62. 6%) are under the age of 44, with similar proportions across age groups for men and women. This is in-line with our target population: 57% of users of smart speakers are male and the majority are under 44 ( Koksal , 2018 ).
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_m94Ss6NjBQzxVoPwsFzvDVnB)
+ Call ID: call_m94Ss6NjBQzxVoPwsFzvDVnB
+  Args:
+    pattern: Table 1|response type|strategies
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1 | Abstract
+How should conversational agents respond to verbal abuse through the user? To answer this question, we conduct a large-scale crowd- sourced evaluation of abuse response strate- gies employed by current state-of-the-art sys- tems.  Our results show that some strategies, such as “polite refusal” score highly across the board, while for other strategies demographic factors, such as age, as well as the severity of the preceding abuse influence the user’s per- ception of which response is appropriate. In addition, we find that most data-driven models lag behind rule-based or commercial systems in terms of their perceived appropriateness.
+
+================================== Ai Message ==================================
+
+11

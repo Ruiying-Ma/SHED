@@ -1,0 +1,56 @@
+================================ Human Message =================================
+
+QUERY:
+What is argumentative zoning?
+
+TABLE OF CONTENTS (TOC):
+1 | Automatic Argumentative-Zoning Using Word2vec
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 3.1 Models
+1.4 | 3.2 Classification and evaluation
+1.5 | 4.1 Training Dataset
+1.6 | 4.2 Test Dataset
+1.7 | 4.3 Training strategy
+1.8 | 4.4 Parameters
+1.9 | 4.5 Strategy of dealing with unbalanced data
+1.10 | 4.6 Results of classification for per category
+1.11 | 5 Discussion
+1.12 | 6 Conclusion
+1.13 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_a4iMg14OOvDG3p7Yrzo8Bn22)
+ Call ID: call_a4iMg14OOvDG3p7Yrzo8Bn22
+  Args:
+    pattern: argumentative zoning|Argumentative-Zoning|AZ
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1 | Abstract
+In comparison with document summarization on the articles from social media and newswire, argumentative zoning (AZ) is an important task in scientific paper analysis. Traditional methodology to carry on this task relies on feature engineering from different levels. In this paper, three models of generating sentence vectors for the task of sentence classification were explored and compared. The proposed approach builds sentence representations using learned embeddings based on neural network. The learned word embeddings formed a feature space, to which the examined sentence is mapped to.  Those features are input into the classifiers for supervised classification. Using 10-cross-validation scheme, evaluation was conducted on the Argumentative-Zoning (AZ) annotated articles. The results showed that simply averaging the word vectors in a sentence works better than the paragraph to vector algorithm and by integrating specific cuewords into the loss function of the neural network can improve the classification performance. In comparison with the hand-crafted features, the word2vec method won for most of the categories.  However, the hand-crafted features showed their strength on classifying some of the categories.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_MxbEPcpXTkIQ4v7lLrlxDC7z)
+ Call ID: call_MxbEPcpXTkIQ4v7lLrlxDC7z
+  Args:
+    section_id: 1.2
+
+================================= Tool Message =================================
+Name: read_section
+
+1 Introduction
+One of the crucial tasks for researchers to carry out scientific investigations is to detect existing ideas that are related to their research topics. Research ideas are usually documented in scientific publications. Normally, there is one main idea stated in the abstract, explicitly presenting the aim of the paper. There are also other sub-ideas distributed across the entire paper. As the growth rate of scientific publication has been rising dramatically, researchers are overwhelmed by the explosive information.  It is almost impossible to digest the ideas contained in the documents emerged everyday. Therefore, computer assisted technologies such as document summarization are expected to play a role in condensing information and providing readers with more relevant short texts. Unlike document summarization from news circles, where the task is to identify centroid sentences [1] or to extract the first few sentences of the paragraphs [2] , summarization of scientific articles involves extra text processing stage [3] .  After highest ranked texts are extracted, rhetorical status analysis will be conducted on the selected sentences. Rhetorical sentence classification, also known as argumentative zoning (AZ) [4] , is a process of assigning rhetorical status to the extracted sentences. The results of AZ provide readers with general discourse context from which the scientific ideas could be better linked, compared and analyzed. For example, given a specific task, which sentences should be shown to the reader is related to the features of the sentences.  For the task of identifying a paper's unique contribution, sentences expressing research purpose should be retrieved with higher priority. For comparing ideas, statements of comparison with other works would be more useful. Teufel et. al. [3] introduced their rhetorical annotation scheme which takes into account of the aspects of argumentation, metadiscourse and relatedness to other works. Their scheme resulted seven categories of rhetorical status and the categories are assigned to full sentences.  Examples1 of human annotated sentences with their rhetorical status are shown in Table . 1. The seven categories are aim, contrast, own, background, other, basis and textual. Analyzing the rhetorical status of sentences manually requires huge amount of efforts, especially for structuring information from multiple documents. Fortunately, computer algorithms have been introduced to solve this problem.  With the development of artificial intelligence, machine learning and computational linguistics, Natural Language Processing (NLP) has become a popular research area [5, 6] . NLP covers the applications from document retrieval, text categorization [7] , document summarization [8] to sentiment analysis [9, 10] . Those applications are targeting different types of text resources, such as articles from social media [11] and scientific publications [3] .  There are several approaches to tackle these tasks. From machine learning prospective, text can be analysed via supervised [3] , semi-supervised [12] and unsupervised [13] algorithms. Document summarization from social media and news circles has received much attention for the past decades. Those problems have been addressed from many angles, one of which is feature extraction and representation. At the early stage of document summarization, features are usually engineered manually.  Although the hand-crafted features have shown the ability for document summarization and sentiment analysis [14, 10] , there are not enough efficient features to capture the semantic relations between words, phrases and sentences. Moreover, building a sufficient pool of features manually is difficult, because it requires expert knowledge and it is time-consuming. Teufel et. al. [3] have built feature pool of sixteen types of features to classify sentences, such as the position of sentence, sentence length and tense.  Widyantoro et. al. used content features, qualifying adjectives and meta-discourse features [15] to explore AZ task. It took efforts to engineer these features and it is also time consuming to optimize the combination of the entire features. With the advent of neural networks [16] , it is possible for computers to learn feature representations automatically. Recently, word embedding technique [17] has been widely used in the NLP community.  There are plenty of cases where word embedding and sentence representations have been applied to short text classification [18] and paraphrase detection [19] . However, the effectiveness of this technique on AZ needs further study. The research question is, is it possible to extract word embeddings as features to classify sentences into the seven categories mentioned above using supervised machine learning approach?The tool of word2vec proposed by Mikolov et al. [17] has gained a lot attention recently.  With word2vec tool, word embeddings can be learnt from big amount of text corpus and the semantic relationships between words can be measured by the cosine distances between the vectors. The idea behind word embeddings is to use distributed representation [20] to map each word into k-dimension vector. How these vectors are generated using word2vec tool? The common method to derive the vectors is using neural probabilistic language model [21] .  The underlying word representations for each word are obtained while training the language model. Similar to the mechanism in language model, Mikolov et al. [17] introduced two architectures: Skip-gram model and continuous bag of words (CBOW) model. Each of the model has two different training strategies, such as hierarchical softmax and negative sampling. Both these two models have three layers: input, projection and output layer. The word vectors are obtained once the models are optimized.  Usually, this optimizing process is done using stochastic gradient descent method. It doesn't need labels when training the models, which makes word2vec algorithm more valuable compared with traditional supervised machine learning methods that require a big amount of annotated data. Given enough text corpus, the word2vec can generate meaningful representations.Word2vec has been applied to sentiment analysis [22, 23, 24 ] and text classification [25] .  Sadeghian and Sharafat [26] explored averaging of the word vectors in a sentiment review statement. Their results indicated that word2vec models significantly outperform the vanilla bag-of-words model. Amongst the word2vec based models, softmax provides the best form of classification. Tang et al. [22] used the concatenation of vectors derived from different convolutional layers to analyze the sentiment statements. They also trained sentiment-specific word embeddings to improve the twitter sentiment classification results.  This work is aiming at learning word embeddings for the task of AZ. The results were compared from three aspects: the impact of the training corpus, the effectiveness of specific word embeddings and different ways of constructing sentence representations based on the learned word vectors.Le and Mikolov [27] introduced the concept of word vector representation in a formal way:
+Given a sequence of training words w =< w 1 , x 2 , ... , w n >, the objective of the word2vec model is to maximize the average log probability:
+1 T T -k t=k log p(w t |w t-k , ..., w t+k ) (1)
+Using softmax technique, the prediction can be formalized as: p(w t |w t-k , ..., w t+k ) = e yw t e yw y (2)
+ Each of y i is un-normalized log probability for each output word i:
+y = b + U h(w t-k , ..., w t+k ; W ) (3)
+3 Methodology
+
+================================== Ai Message ==================================
+
+Argumentative zoning (AZ), also called rhetorical sentence classification, is the process of assigning rhetorical status to extracted sentences in scientific articles. It provides readers with general discourse context so that scientific ideas can be better linked, compared, and analyzed.

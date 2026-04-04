@@ -1,0 +1,112 @@
+================================ Human Message =================================
+
+QUERY:
+By how much do their cross-lingual models lag behind other models?
+
+TABLE OF CONTENTS (TOC):
+1 | XPersona: Evaluating Multilingual Personalized Chatbot
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2 Related Work
+1.4 | 3 Data Collection
+1.5 | 4 Multilingual Personalized Conversational Models
+1.5.1 | 4.1 Model Architecture
+1.5.2 | 4.2 Training Strategy
+1.6 | 5.1 Evaluation Metrics
+1.7 | 5.2 Implementation Details
+1.8 | 5.3.1 Quantitative Analysis
+1.9 | 5.3.2 Qualitative Analysis and Discussion
+1.10 | Monolingual & Multilingual
+1.11 | (I like to watch tv) Sys i really like hiking and listening to music
+1.12 | 6 Conclusion
+1.13 | A.1 Annotation Instructions
+1.14 | A.2 Training Set Statistics
+1.15 | B Model Detail
+1.16 | C Human Evaluation
+1.17 | D Generated Samples D.1 Mixed-language Samples
+1.18 | D.2 Model Comparison Samples
+1.19 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_aPBqm1YhUpsV5kMmaaggnkOW)
+ Call ID: call_aPBqm1YhUpsV5kMmaaggnkOW
+  Args:
+    pattern: lag behind|cross-lingual|other models
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1 | Abstract
+Personalized dialogue systems are an essential step toward better human-machine interaction.Existing personalized dialogue agents rely on properly designed conversational datasets, which are mostly monolingual (e.g., English), which greatly limits the usage of conversational agents in other languages. In this paper, we propose a multi-lingual extension of Persona-Chat (Zhang et al., 2018), namely XPersona.  Our dataset includes persona conversations in six different languages other than English for building and evaluating multilingual personalized agents. We experiment with both multilingual and cross-lingual trained baselines, and evaluate them against monolingual and translation-pipeline models using both automatic and human evaluation. Experimental results show that the multilingual trained models outperform the translationpipeline and that they are on par with the monolingual models, with the advantage of having a single model across multiple languages.  On the other hand, the state-of-theart cross-lingual trained models achieve inferior performance to the other models, showing that cross-lingual conversation modeling is a challenging task. We hope that our dataset and baselines 1 will accelerate research in multilingual dialogue systems. * * Equal contributions. Listing order is random 1 Datasets and all the baselines are available in https: //github.com/HLTCHKUST/Xpersona
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_EWX4TMkr9fDwcWmAvwfiNZW4)
+ Call ID: call_EWX4TMkr9fDwcWmAvwfiNZW4
+  Args:
+    pattern: cross-lingual.*(inferior|behind|lag|lower)|on par|translation-pipeline|monolingual
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1 | Abstract
+Personalized dialogue systems are an essential step toward better human-machine interaction.Existing personalized dialogue agents rely on properly designed conversational datasets, which are mostly monolingual (e.g., English), which greatly limits the usage of conversational agents in other languages. In this paper, we propose a multi-lingual extension of Persona-Chat (Zhang et al., 2018), namely XPersona.  Our dataset includes persona conversations in six different languages other than English for building and evaluating multilingual personalized agents. We experiment with both multilingual and cross-lingual trained baselines, and evaluate them against monolingual and translation-pipeline models using both automatic and human evaluation. Experimental results show that the multilingual trained models outperform the translationpipeline and that they are on par with the monolingual models, with the advantage of having a single model across multiple languages.  On the other hand, the state-of-theart cross-lingual trained models achieve inferior performance to the other models, showing that cross-lingual conversation modeling is a challenging task. We hope that our dataset and baselines 1 will accelerate research in multilingual dialogue systems. * * Equal contributions. Listing order is random 1 Datasets and all the baselines are available in https: //github.com/HLTCHKUST/Xpersona
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_Rf2US8TdxIrQMWKXWlUsnu5c)
+ Call ID: call_Rf2US8TdxIrQMWKXWlUsnu5c
+  Args:
+    section_id: 1.8
+
+================================= Tool Message =================================
+Name: read_section
+
+5.3.1 Quantitative Analysis
+Table 4 shows the human evaluation result of comparing M-CausalBert (Multi) against the human, translation-based Poly-encoder (Poly), and monolingual CausalBert (Mono). The results illustrate that Multi outperforms Mono in English and Chinese, and is on par with Mono in other languages. On the other hand, Poly shows a strong performance in English as it was pre-trained with a large-scale English conversation corpus.  In contrast, the performance of Poly drops in other languages, which indicates that the imperfect translation affects translation-based systems. We also conduct M-CausalBert (Multi) against XNLG (cross) human evaluation, and Multi achieve nearly 100 percent winning rate. <table><tr><td/><td>Lang</td><td colspan="6">Engageness Human Mono Poly Human Mono Poly Human Mono Poly Interestingness Humanness</td></tr><tr><td>Multi Wins %</td><td>En Fr Id It Jp</td><td>23.33 32.00 21.67 35.00 18.33</td><td>68.57 36.36 55.17 42. 86 51.67 65.45 48.33 56.36 50.00 61.82</td><td>23.33 16.00 23.33 30.00 13.33</td><td>64.29 32.73 53.45 48.21 46.67 55.45 48.33 53.64 43.33 45.45</td><td>30. 00 28.00 25.00 30.00 18.33</td><td>62.86 42.73 50.00 44.64 46.67 65.45 40.00 57.27 51.67 59.09</td></tr><tr><td/><td>Ko</td><td>30.00</td><td>52.46 62.39</td><td>26. 67</td><td>50.82 59.63</td><td>28.33</td><td>52.46 64.22</td></tr><tr><td/><td>Zh</td><td>36.67</td><td>55.00 65.45</td><td>36.67</td><td>60.00 61.82</td><td>36.67</td><td>55. 00 70.91</td></tr></table>
+Table 4 Results of ACUTE-EVAL human evaluation. Tests are conducted pairwise between M-CausalBert (Multi.) and other models (Human, Poly-encoder (Poly), Monolingual CausalBert (Mono)). Numbers indicate the winning rate of Multi. Numbers in bold are statistically significant (p < 0.05).
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_ToRdsbLPPmKSXbrIYmpBPbjS)
+ Call ID: call_ToRdsbLPPmKSXbrIYmpBPbjS
+  Args:
+    pattern: 100 percent winning rate|cross\)|XNLG|cross-lingual trained models
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1 | Abstract
+Personalized dialogue systems are an essential step toward better human-machine interaction.Existing personalized dialogue agents rely on properly designed conversational datasets, which are mostly monolingual (e.g., English), which greatly limits the usage of conversational agents in other languages. In this paper, we propose a multi-lingual extension of Persona-Chat (Zhang et al., 2018), namely XPersona.  Our dataset includes persona conversations in six different languages other than English for building and evaluating multilingual personalized agents. We experiment with both multilingual and cross-lingual trained baselines, and evaluate them against monolingual and translation-pipeline models using both automatic and human evaluation. Experimental results show that the multilingual trained models outperform the translationpipeline and that they are on par with the monolingual models, with the advantage of having a single model across multiple languages.  On the other hand, the state-of-theart cross-lingual trained models achieve inferior performance to the other models, showing that cross-lingual conversation modeling is a challenging task. We hope that our dataset and baselines 1 will accelerate research in multilingual dialogue systems. * * Equal contributions. Listing order is random 1 Datasets and all the baselines are available in https: //github.com/HLTCHKUST/Xpersona
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_iSg1wW3AhtG1v6sr7ETrpriw)
+ Call ID: call_iSg1wW3AhtG1v6sr7ETrpriw
+  Args:
+    section_id: 1.9
+
+================================= Tool Message =================================
+Name: read_section
+
+5.3.2 Qualitative Analysis and Discussion
+We randomly sample 7 self-chat dialogues for each baseline model in the seven languages and report them in Appendix D., And we summarize the generation of each model as follows:
+Poly Poly-encoder, pretrained on 174 million Reddit data, can accurately retrieve coherent and diverse responses in English. However, in the other six languages, some of the retrieved responses are digressive due to translation error.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_0mPjknhs6JLszplurwSoD2qp)
+ Call ID: call_0mPjknhs6JLszplurwSoD2qp
+  Args:
+    pattern: Table 3|BLEU|F1|cross
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1 | Abstract
+Personalized dialogue systems are an essential step toward better human-machine interaction.Existing personalized dialogue agents rely on properly designed conversational datasets, which are mostly monolingual (e.g., English), which greatly limits the usage of conversational agents in other languages. In this paper, we propose a multi-lingual extension of Persona-Chat (Zhang et al., 2018), namely XPersona.  Our dataset includes persona conversations in six different languages other than English for building and evaluating multilingual personalized agents. We experiment with both multilingual and cross-lingual trained baselines, and evaluate them against monolingual and translation-pipeline models using both automatic and human evaluation. Experimental results show that the multilingual trained models outperform the translationpipeline and that they are on par with the monolingual models, with the advantage of having a single model across multiple languages.  On the other hand, the state-of-theart cross-lingual trained models achieve inferior performance to the other models, showing that cross-lingual conversation modeling is a challenging task. We hope that our dataset and baselines 1 will accelerate research in multilingual dialogue systems. * * Equal contributions. Listing order is random 1 Datasets and all the baselines are available in https: //github.com/HLTCHKUST/Xpersona
+
+================================== Ai Message ==================================
+
+Unanswerable

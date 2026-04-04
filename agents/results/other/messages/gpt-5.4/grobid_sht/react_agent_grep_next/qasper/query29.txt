@@ -1,0 +1,65 @@
+================================ Human Message =================================
+
+QUERY:
+Was the automatic annotation evaluated?
+
+TABLE OF CONTENTS (TOC):
+1 | A Dataset of German Legal Documents for Named Entity Recognition
+1.1 | Abstract
+1.2 | 1 Introduction and Motivation
+1.3 | 2 Related Work
+1.4 | 3 Annotation of the Dataset
+1.4.1 | 3.1 Named Entities vs. Legal Entities
+1.4.2 | 3.2 Semantic Classes
+1.5 | 4 Description of the Dataset
+1.5.1 | 4.1 Original Source Documents
+1.5.2 | 4.2 Annotation of Named Entities
+1.5.3 | 4.3 Annotation of Time Expressions
+1.6 | 5 Evaluation
+1.7 | 6 Conclusions and Future Work
+1.8 | Acknowledgements
+1.9 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_dfbWvPdsph8q5Uh6kS6p53gR)
+ Call ID: call_dfbWvPdsph8q5Uh6kS6p53gR
+  Args:
+    pattern: automatic annot|automatically annot|automatic annotation
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1 | Abstract
+We describe a dataset developed for Named Entity Recognition in German federal court decisions. It consists of approx. 67,000 sentences with over 2 million tokens. The resource contains 54,000 manually annotated entities, mapped to 19 fine-grained semantic classes : person, judge, lawyer, country, city, street, landscape, organization, company, institution, court, brand, law, ordinance, European legal norm, regulation, contract, court decision, and legal literature.  The legal documents were, furthermore, automatically annotated with more than 35,000 TimeML-based time expressions. The dataset, which is available under a CC-BY 4.0 license in the CoNNL-2002 format, was developed for training an NER service for German legal documents in the EU project Lynx.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_r1LlI7cStNsy0F9relxliT9W)
+ Call ID: call_r1LlI7cStNsy0F9relxliT9W
+  Args:
+    section_id: 1.6
+
+================================= Tool Message =================================
+Name: read_section
+
+5 Evaluation
+The dataset was thoroughly evaluated, see Leitner et al. (2019) for more details. As state of the art models, Conditional Random Fields (CRFs) and bidirectional Long-Short Term Memory Networks (BiL-STMs) were tested with the two variants of annotation. For CRFs, these are: CRF-F (with features), CRF-FG (with features and gazetteers), CRF-FGL (with features, gazetteers and lookup).  For BiLSTM, we used models with pre-trained word embeddings (Reimers et al., 2014) : BiLSTM-CRF (Huang et al., 2015) , BiLSTM-CRF+ with character embeddings from BiLSTM (Lample et al., 2016) , and BiLSTM-CNN-CRF with character embeddings from CNN (Ma and Hovy, 2016) .  To evaluate the performance we used stratified 10-fold cross-validation. As expected, BiLSTMs perform best (see Table 4 ). The F 1 score for the fine-grained classification reaches 95.46 and 95.95 for the coarse-grained one. CRFs reach up to 93.23 F 1 for the fine-grained classes and 93.22 F 1 for the coarse-grained ones.  Both models perform best for judge, court and law.<table><tr><td/><td colspan="2">Prec % Rec %</td><td>F 1</td></tr><tr><td colspan="4">Annotation with fine-grained semantic classes</td></tr><tr><td>CRF-F</td><td>94.28</td><td>91.85</td><td>93. 05</td></tr><tr><td>CRF-FG</td><td>94.31</td><td>91.96</td><td>93.12</td></tr><tr><td>CRF-FGL</td><td>94.37</td><td>92.12</td><td>93. 23</td></tr><tr><td colspan="4">Annotation with coarse-grained semantic classes</td></tr><tr><td>CRF-F</td><td>94.17</td><td>92.07</td><td>93.11</td></tr><tr><td>CRF-FG</td><td>94.26</td><td>92.20</td><td>93. 22</td></tr><tr><td>CRF-FGL</td><td>94.22</td><td>92.25</td><td>93.22</td></tr><tr><td colspan="4">Annotation with fine-grained semantic classes</td></tr><tr><td>BiLSTM-CRF</td><td>93.80</td><td>93.70</td><td>93. 75</td></tr><tr><td>BiLSTM-CRF+</td><td>95.36</td><td>95.57</td><td>95.46</td></tr><tr><td colspan="2">BiLSTM-CNN-CRF 95.34</td><td>95.58</td><td>95. 46</td></tr><tr><td colspan="4">Annotation with coarse-grained semantic classes</td></tr><tr><td>BiLSTM-CRF</td><td>94.86</td><td>94.49</td><td>94.68</td></tr><tr><td>BiLSTM-CRF+</td><td>95.84</td><td>96.07</td><td>95. 95</td></tr><tr><td colspan="2">BiLSTM-CNN-CRF 95.71</td><td>95.87</td><td>95.79</td></tr></table>
+Table 4 Precision, recall and F 1 values of the CRF and
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_X4ZwGcYfJZiEM9G0xGy3Eiuq)
+ Call ID: call_X4ZwGcYfJZiEM9G0xGy3Eiuq
+  Args:
+    section_id: 1.5.3
+
+================================= Tool Message =================================
+Name: read_section
+
+4.3 Annotation of Time Expressions
+All court decisions were annotated automatically for time expressions using a customised version of HeidelTime (Strötgen and Gertz, 2013) , which was adapted to the legal domain (Weißenhorn, 2018) . This version of Heideltime achieves an F 1 value of 89.1 for partial identification and normalization. It recognizes four TIMEX3-types of time expressions (Verhagen et al., 2010)
+
+================================== Ai Message ==================================
+
+Yes. The automatically annotated time expressions were evaluated: the customised HeidelTime version achieved an F1 value of 89.1 for partial identification and normalization.

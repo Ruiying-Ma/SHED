@@ -1,0 +1,76 @@
+================================ Human Message =================================
+
+QUERY:
+What dialects of Chinese are explored?
+
+TABLE OF CONTENTS (TOC):
+1 | Chinese Embedding via Stroke and Glyph Information: A Dual-channel View
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2 Releated Work
+1.3.1 | 2.1 Morphological Word Representations
+1.3.2 | 2.2 Embedding for Chinese Language
+1.4 | 3 DWE Model
+1.5 | 4 Experiments
+1.5.1 | 4.1 Dataset Preparation
+1.5.2 | 4.2 Experimental Setup
+1.5.3 | 4.3 Baseline Methods
+1.5.4 | 4.4 Experimental Results
+1.6 | 5 Conclusions
+1.7 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_2qQojjiGY8v93gDEgotAnOG6)
+ Call ID: call_2qQojjiGY8v93gDEgotAnOG6
+  Args:
+    pattern: dialect|dialects|Chinese
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1 | Abstract
+Recent studies have consistently given posi- tive hints that morphology is helpful in enrich- ing word embeddings. In this paper, we ar- gue that Chinese word embeddings can be sub- stantially enriched by the morphological infor- mation hidden in characters which is reflected not only in strokes order sequentially, but also in character glyphs spatially.  Then, we pro- pose a novel Dual-channel Word Embedding (DWE) model to realize the joint learning of sequential and spatial information of charac- ters. Through the evaluation on both word similarity and word analogy tasks, our model shows its rationality and superiority in mod- elling the morphology of Chinese.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_2PvIRAYseOrIP3XJI2o2b37J)
+ Call ID: call_2PvIRAYseOrIP3XJI2o2b37J
+  Args:
+    section_id: 1.5.1
+
+================================= Tool Message =================================
+Name: read_section
+
+4.1 Dataset Preparation
+We download parts of Chinese Wikipedia articles from Large-Scale Chinese Datasets for NLP 5 . For word segmentation and filtering the stopwords, we apply the jieba 6 toolkit based on the stopwords ta- ble 7 . Finally, we get 11,529,432 segmented words. In accordance with their work ( Chen et al.  , 2015 ), all items whose Unicode falls into the range be- tween 0x4E00 and 0x9FA5 are Chinese charac- ters. We crawl the stroke information of all 20,402 characters from an online dictionary 8 and render each character glyph to a 28 × 28 1-bit grayscale bitmap by using Pillow 9 .
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_MG3CGmMoHZZIafvPT2RRELTI)
+ Call ID: call_MG3CGmMoHZZIafvPT2RRELTI
+  Args:
+    pattern: Mandarin|Cantonese|dialect|Taiwanese|Hokkien|Wu|Min|Chinese Wikipedia|Traditional|Simplified
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.3.1 | 2.1 Morphological Word Representations
+Traditional methods on getting word embeddings are mainly based on the distributional hypothesis ( Harris , 1954 ): words with similar contexts tend to have similar semantics. To explore more inter- pretable models, some scholars have gradually no- ticed the importance of the morphology of words in conveying semantics ( Luong et al. , 2013 ; Qiu et al.  , 2014 ), and some studies have proved that the morphology of words can indeed enrich the semantics of word embeddings ( Sak et al. , 2010 ; Soricut and Och , 2015 ; Cotterell and Sch¨utze , 2015 ). More recently, Wieting et al. ( 2016 ) pro- posed to represent words using character n -gram count vectors. Further, Bojanowski et al.  ( 2017 ) improved the classic skip-gram model ( Mikolov et al. , 2013 ) by taking subwords into account in the acquisition of word embeddings, which is in- structive for us to regard certain stroke sequences as roots in English.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_iJIuMCu5S8ys62Vsu2oWNko6)
+ Call ID: call_iJIuMCu5S8ys62Vsu2oWNko6
+  Args:
+    pattern: Mandarin|Cantonese|Taiwan|Hong Kong|mainland|Simplified|Traditional
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.3.1 | 2.1 Morphological Word Representations
+Traditional methods on getting word embeddings are mainly based on the distributional hypothesis ( Harris , 1954 ): words with similar contexts tend to have similar semantics. To explore more inter- pretable models, some scholars have gradually no- ticed the importance of the morphology of words in conveying semantics ( Luong et al. , 2013 ; Qiu et al.  , 2014 ), and some studies have proved that the morphology of words can indeed enrich the semantics of word embeddings ( Sak et al. , 2010 ; Soricut and Och , 2015 ; Cotterell and Sch¨utze , 2015 ). More recently, Wieting et al. ( 2016 ) pro- posed to represent words using character n -gram count vectors. Further, Bojanowski et al.  ( 2017 ) improved the classic skip-gram model ( Mikolov et al. , 2013 ) by taking subwords into account in the acquisition of word embeddings, which is in- structive for us to regard certain stroke sequences as roots in English.
+
+================================== Ai Message ==================================
+
+Unanswerable

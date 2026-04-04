@@ -1,0 +1,74 @@
+================================ Human Message =================================
+
+HYPOTHESIS:
+Confidentiality of Agreement: Receiving Party shall not disclose the fact that Agreement was agreed or negotiated.
+
+TABLE OF CONTENTS (TOC):
+1 | Non-Disclosure Agreement
+2 | Parties: [NAME OF INDIVIDUAL RECEIVING INFORMATION] of [address of individual] and FRODSHAM TOWN COUNCIL whose registered office is at CASTLE PARK HOUSE, CASTLE PARK, FRODSHAM, WA6 6SB (the Discloser)
+2.1 | 1.   The Discloser intends to disclose information (the Confidential Information) t...
+2.2 | 2.   The Recipient undertakes not to use the Confidential Information for any purpo...
+2.3 | 3.   The Recipient undertakes to keep the Confidential Information secure and not t...
+2.4 | 4.   The undertakings in clauses 2 and 3 above apply to all of the information disc...
+2.4.1 | a)  any information which is or in future comes into the public domain (unless as a result of the breach of this Agreement);
+2.4.2 | b)  any information which is already known to the Recipient and which was not subject to any obligation of confidence before it was disclosed to the Recipient by the Discloser.
+2.5 | 5.   Nothing in this Agreement will prevent the Recipient from making any disclosur...
+2.6 | 6.  The Recipient will, on request from the Discloser,
+2.7 | 7.  Neither this Agreement nor the supply of any information grants the Recipient any licence,
+2.8 | 8.   The undertakings in clauses 2 and 3 will continue in force indefinitely.
+2.9 | 9.  This Agreement is governed by, and is to be construed in accordance with,
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_UPVHk8ajcR7ALBWTdTIsInXA)
+ Call ID: call_UPVHk8ajcR7ALBWTdTIsInXA
+  Args:
+    section_id: 2.3
+
+================================= Tool Message =================================
+Name: read_section
+
+3.The Recipient undertakes to keep the Confidential Information secure and not to disclose it to any third party.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_pcEPUrQazSQErUncZOTC6PYp)
+ Call ID: call_pcEPUrQazSQErUncZOTC6PYp
+  Args:
+    section_id: 2.1
+
+================================= Tool Message =================================
+Name: read_section
+
+1.The Discloser intends to disclose information (the Confidential Information) to the Recipient for the purpose of recommendation of future land use of the decommissioned play area on Ship Street (the Purpose).
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_00DTYvqnCHsCFLfq0GykfHbI)
+ Call ID: call_00DTYvqnCHsCFLfq0GykfHbI
+  Args:
+    section_id: 2.4
+
+================================= Tool Message =================================
+Name: read_section
+
+4.The undertakings in clauses 2 and 3 above apply to all of the information disclosed by the Discloser to the Recipient, regardless of the way or form in which it is disclosed or recorded but they do not apply to:
+a)  any information which is or in future comes into the public domain (unless as a result of the breach of this Agreement);or
+b)  any information which is already known to the Recipient and which was not subject to any obligation of confidence before it was disclosed to the Recipient by the Discloser.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_5uC6MsremBaCcHowLlzVCi8v)
+ Call ID: call_5uC6MsremBaCcHowLlzVCi8v
+  Args:
+    pattern: (?i)agreement|negotiat|fact
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1 | Non-Disclosure Agreement
+Date:
+
+================================== Ai Message ==================================
+
+NotMentioned

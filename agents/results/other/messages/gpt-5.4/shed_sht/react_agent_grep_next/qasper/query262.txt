@@ -1,0 +1,47 @@
+================================ Human Message =================================
+
+QUERY:
+What metric is used to measure translation accuracy?
+
+TABLE OF CONTENTS (TOC):
+1 | Abstract
+2 | 1 Introduction
+3 | 2 Approach
+3.1 | 2.1 Observation: Illed States and Attentions
+3.2 | 2.2 Hints from the ART teacher Model
+4 | 3 Experiments
+4.1 | 3.1 Experimental Settings
+4.2 | 3.2 Inference
+4.3 | 3.3 Experimental Results
+5 | 4 Conclusion
+6 | Acknowledgment
+7 | References
+8 | Appendix
+9 | A Related Works
+9.1 | A.1 AutoRegressive Translation
+9.2 | A.2 Non-AutoRegressive Translation
+9.3 | A.3 Knowledge Distillation and Hint-Based Training
+10 | B Network Architecture
+11 | C Extra Experimental Settings
+12 | D Case Study
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_solGLPnDABoAVLucG0vPF3Vu)
+ Call ID: call_solGLPnDABoAVLucG0vPF3Vu
+  Args:
+    pattern: translation accuracy|BLEU|metric
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+11 | C Extra Experimental Settings
+Dataset specifications The split of the train- ing/validation/test sets of the IWSLT14 dataset 4 contain about 153K/7K/7K sentence pairs, respec- tively. The training set of the WMT14 dataset 5
+3 Following ( Vaswani et al. , 2017 ; Gu et al.  , 2017 ) we also use positional embedding to model relative correlation be- tween positions and add it to word embedding in both source and target sides. The positional embedding is represented by a sinusoidal function of different frequencies to encode dif- ferent positions.  Specifically, the positional encoding e pos is computed as e pos ( j, k ) = sin( j/ 10000 k/d ) (for even k ) or cos( j/ 10000 k/d ) (for odd k ), where j is the position index and k is the dimension index of the embedding vector.4 https://wit3.fbk.eu/
+5 http://www.statmt.org/wmt14/translation-task
+ Source: ich weiß , dass wir es können , und soweit es mich betrifft ist das etwas , was die welt jetzt braucht . Target: i know that we can , and as far as i &apos;m concerned , that &apos;s something the world needs right now . ART: i know that we can , and as far as i &apos;m concerned , that &apos;s something that the world needs now .  NART w/o Hints: i know that we can it , , as as as as it it it is , it &apos;s something that the world needs now . NART w/ Hints: i know that we can do it and as as &apos;s m concerned , that &apos;s something that the world needs now . Source: jeden morgen fliegen sie 240 kilometer zur farm . Target: every morning , they fly 240 miles into the farm .  ART: every morning , they fly 240 miles to the farm . NART w/o Hints: every morning , you fly 240 miles to every morning . NART w/ Hints: every morning , they fly 240 miles to the farm . Source: aber bei youtube werden mehr als 48 stunden video pro minute hochgeladen . Target: but there are over 48 hours of video uploaded to youtube every minute .  ART: but on youtube , more than 48 hours of video are uploaded per minute . NART w/o Hints: but on youtube , uploaded than 48 hours hours of video per minute . NART w/ Hints: but on youtube , more than 48 hours video are uploaded per minute .Table 3: Cases on IWSLT14 De-En.contains 4.5M parallel sentence pairs.  New- stest2014 is used as the test set, and Newstest2013 is used as the validation set. In both datasets, to- kens are split into a 32000 word-piece dictionary ( Wu et al. , 2016 ) which is shared in source and target languages.Model specifications For the WMT14 dataset, we use the default network architecture of the base Transformer model in Vaswani et al.  ( 2017 ), which consists of a 6-layer encoder and 6-layer de- coder. The size of hidden nodes and embeddings are set to 512. For the IWSLT14 dataset, we use a smaller architecture, which consists of a 5-layer encoder, and a 5-layer decoder. The size of hid- den states and embeddings are set to 256 and the number of heads is set to 4. Hyperparameter specifications Hyperparame- ters ( τ, γ st , γ tr , λ, µ ) are determined to make the scales of three loss components similar after ini- tialization. Specifically, we use τ = 0 . 3 , γ st = 0 . 1 , γ tr = 0 . 9 , λ = 5 . 0 , µ = 1 . 0 for IWSLT14 De-En, τ = 0 .  3 , γ st = 0 . 5 , γ tr = 0 . 9 , λ = 5 . 0 , µ = 1 . 0 for WMT14 De-En and WMT14 En- De.BLEU scores We use the BLEU score ( Papineni et al. , 2002 ) as our evaluation measure.  During inference, we set C to 2 , − 2 , 2 for WMT14 En- De, De-En and IWSLT14 De-En datasets respec- tively, according to the average lengths of differ- ent languages in the training sets. When using the teacher to rescore, we set B = 4 and thus have 9 candidates in total. We also evaluate the average per-sentence decoding latencies on one NVIDIA
+ TITAN Xp GPU card by decoding on WMT14 En-De test sets with batch size 1 for our ART teacher model and NART models, and calculate the speedup based on them.
+
+================================== Ai Message ==================================
+
+BLEU score is used to measure translation accuracy.

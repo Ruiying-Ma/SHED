@@ -1,0 +1,51 @@
+================================ Human Message =================================
+
+QUERY:
+What type of nerual keyphrase generation models are trained?
+
+TABLE OF CONTENTS (TOC):
+1 | KPTimes: A Large-Scale Dataset for Keyphrase Generation on News Documents Ygor Gallina Florian Boudin Beatrice Daille
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | Muslim Women in Hijab Break Barriers: ‘Take the Good With the Bad’
+1.4 | 2 Existing datasets
+1.5 | 3 Building the KPTimes dataset
+1.6 | 4 Data analysis
+1.7 | 5 Performance of existing models
+1.8 | 5.1 Evaluation metrics
+1.9 | 5.2 Models
+1.10 | Baseline: FirstPhrase
+1.11 | Baseline, unsupervised: MultipartiteRank
+1.12 | State-of-the-art, supervised: CopyRNN
+1.13 | 5.3 Results
+1.14 | 6 Conclusion
+1.15 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_9XdvgDGcpuWFpTJ2czdGLO1K)
+ Call ID: call_9XdvgDGcpuWFpTJ2czdGLO1K
+  Args:
+    section_id: 1.9
+
+================================= Tool Message =================================
+Name: read_section
+
+5.2 Models
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_rL0j5tfPE2cbkW5fnMgZp6Hp)
+ Call ID: call_rL0j5tfPE2cbkW5fnMgZp6Hp
+  Args:
+    section_id: 1.12
+
+================================= Tool Message =================================
+Name: read_section
+
+State-of-the-art, supervised: CopyRNN
+The generative neural model we include in this study is CopyRNN ( Meng et al. , 2017 ), an encoder-decoder model that incorporates a copy- ing mechanism ( Gu et al. , 2016 ) in order to be able to generate phrases that rarely occur. When properly trained, this model was shown to be very effective in extracting keyphrases from scientific abstracts. CopyRNN has been further extended by ( Chen et al.  , 2018 ) to include correlation con- straints among keyphrases which we do not in- clude here as it yields comparable results.Two models were trained to bring evidence on the necessity to have datasets from multiple do- mains. CopySci was trained using scientific ab- stracts (KP20k) and CopyNews using newspaper articles ( KPTimes ), the two models use the same architecture.
+
+================================== Ai Message ==================================
+
+Two generative neural keyphrase generation models are trained: CopySci, trained on scientific abstracts (KP20k), and CopyNews, trained on newspaper articles (KPTimes). Both use the same CopyRNN encoder-decoder architecture with a copying mechanism.

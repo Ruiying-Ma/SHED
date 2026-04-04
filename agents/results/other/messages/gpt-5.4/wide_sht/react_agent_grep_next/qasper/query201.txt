@@ -1,0 +1,66 @@
+================================ Human Message =================================
+
+QUERY:
+What is the baseline model?
+
+TABLE OF CONTENTS (TOC):
+1 | Time to Take Emoji Seriously: They Vastly Improve Casual Conversational Models
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2 Related work
+1.4 | 3 Emoji-rich datasets are hard to ﬁnd
+1.5 | 4 Fine-tuning BERT with emoji support
+1.6 | 4.1 Tokenizing emoji
+1.7 | 4.2 Training and ﬁne-tuning
+1.8 | 4.3 evaluation metrics
+1.9 | 5 Emoji provide additional context to response selec- tion models
+1.10 | 6 Conclusion and future work
+1.11 | Acknowledgements
+1.12 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_JSLu4CFBipS5q2fPhG78mJUd)
+ Call ID: call_JSLu4CFBipS5q2fPhG78mJUd
+  Args:
+    pattern: baseline
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.10 | 6 Conclusion and future work
+In this paper we discussed the current state of emoji usage for conversational systems, which mainly lacks large baseline datasets. When looking at public datasets, conver- sational AI makers have to choose between dataset size and emoji support, with some datasets at least containing a few textual emoticons. We argued that this duality results in systems that fail to capture some information encoded in those emoji and in turn fail to respond adequately. Based on this premise, we investigated how a response selection system based on BERT can be modified to support emoji. We proposed a format and tokenization method that’s indifferent to current Unicode specifications, and thus also works for datasets containing custom emoji.Evaluation of this emoji-aware system increased the 1-of-100 accuracy from 12.7% for the baseline to 17.8%.  Thus showing that supporting emoji correctly can help increasing performance for more casual systems, without having to rely on labeling or external descriptions for those emoji.However, the lack of high-quality, general datasets with emoji limits our conversa- tional model. Working towards larger casual conversational datasets would help both for our model, and for the conversational NLP community in general.7
+ We investigated the impact of emoji for conversational models and one could argue that these conclusions—or even the BERT model—can be generalized. We didn’t in- vestigate whether other tasks also benefited from our fine-tuned BERT model with the additional emoji tokens.During evaluation, we also observed utterances with only emoji characters. Even with our model that supports emoji, it could still be difficult to extract information like the subject of a conversation.  Some of these utterances—but not all—were part of a larger conversation, so an interesting question could be how additional information affects the model.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_5NRC5EUOCjuoqvXDj8fhBVoe)
+ Call ID: call_5NRC5EUOCjuoqvXDj8fhBVoe
+  Args:
+    pattern: 12.7%|baseline model|for the baseline|BERT
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1 | Abstract
+Graphical emoji are ubiquitous in modern-day online conversations. So is a single thumbs-up emoji able to signify an agreement, without any words. We argue that the current state-of-the-art systems are ill-equipped to correctly interpret these emoji, especially in a conversational context. However, in a casual context, the benefits might be high: a better understanding of users’ utterances and more natural, emoji-rich responses. With this in mind, we modify BERT to fully support emoji, both from the Unicode Standard and custom emoji. This modified BERT is then trained on a corpus of question-answer (QA) tuples with a high number of emoji, where we’re able to increase the 1-of-100 accuracy from 12.7% for the current state-of-the-art to 17.8% for our model with emoji support.
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_C6c8WdpjJEaBvbeSONo7vd8r)
+ Call ID: call_C6c8WdpjJEaBvbeSONo7vd8r
+  Args:
+    section_id: 1.9
+
+================================= Tool Message =================================
+Name: read_section
+
+5 Emoji provide additional context to response selec- tion models
+After training of the language model with additional tokens for all Unicode emoji, we achieved a final perplexity of 2.0281. For comparison, the BERT model with 16 heads achieved a perplexity of 3.23 [6], but this is on a general dataset.For the sentence prediction task, Table 2 shows the results of the baseline and our model with additional emoji tokens. For each of the 600 utterance pairs of the held-out
+6
+ Table 2: 1-of-100 accuracy and mean ranking out of 100 candidates on the test set of 600 utterance tuples.Model 1-of-100 ACC Mean rank bert-base-multilingual-cased 12.7% 33 bert-base-multilingual-cased with emoji tokens 17.8% 31
+test set, we added 99 randomly selected negative candidates, as described in Subsec- tion 4.3.  The 1-out-of-100 accuracy measures how often the true candidate was cor- rectly selected and the mean rank gives an indication of how the model performs if it fails to correctly select the positive candidate.The baseline correctly picks 12.7% of all candidate responses, out of 100. Given that the dataset is focussed on support questions and multiple responses are likely to be relevant, this baseline already performs admirable.  For reference, a BERT model on the OpenSubtitles dataset [18] achieves a 1-of-100 accuracy between 12.2% and 17.5%, depending on the model size [11].Our model improves on this baseline with a 1-of-100 accuracy of 17.8%. The mean rank remains almost the same. This indicates that the emoji tokens do help with with picking the correct response, but don’t really aide when selecting alternative suitable candidates.  One possible explanation is that when emoji are used (this is the case for 8.75% of all utterances), including those tokens helps matching those based on those emoji and their meaning. When there are no emoji present, our model might be just as clueless as the baseline.
+
+================================== Ai Message ==================================
+
+bert-base-multilingual-cased

@@ -1,0 +1,57 @@
+================================ Human Message =================================
+
+QUERY:
+What is the performance of the best model?
+
+TABLE OF CONTENTS (TOC):
+1 | Offensive Language Identification in Greek
+1.1 | Abstract
+1.2 | 1 Introduction
+1.3 | 2 Related Work
+1.3.1 | 2.1 Non-English Datasets
+1.4 | 3 The OGTD Dataset
+1.4.1 | 3.1 Pre-processing and annotation
+1.5 | 4 Methods
+1.5.1 | 4.1.2 Deep Learning Models
+1.5.2 | 4.2 Results
+1.5.3 | 4.3 Discussion
+1.6 | 5 Conclusion
+1.6.1 | 5.1 Ongoing -OGTD v2.0 and OffensEval 2020
+1.7 | Acknowledgements
+1.8 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_wYLVJueoQJyit9mHqXU7X8Js)
+ Call ID: call_wYLVJueoQJyit9mHqXU7X8Js
+  Args:
+    section_id: 1.5.2
+
+================================= Tool Message =================================
+Name: read_section
+
+4.2 Results
+The
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_BUZVy3FVGf2GuaZSTn6Y0GgS)
+ Call ID: call_BUZVy3FVGf2GuaZSTn6Y0GgS
+  Args:
+    section_id: 1.5
+
+================================= Tool Message =================================
+Name: read_section
+
+4 Methods
+Before experimenting with OGTD, an unique aspect of Greek which is the accentuation of characters for correct pronunciation needed to be normalized. When posting a tweet, many users omit accents due to their haste, resulting in a mixed dataset containing fully accented tweets, partially-accented tweets, and non-accented tweets. To achieve data uniformity and to avoid ambiguity, every word is lower-cased and then normalized to its non-accented equivalent. Several experiments were conducted with the OGTD, each one utilizing a different combination from a pool of features (e.g. TF/IDF unigrams, bigrams, POS and dependency relation tags) to train machine learning models. These features were selected based on previous methodology used by researchers and taking the dataset size into consideration. The TF-IDF weighted features are often used for text classification and are useful for determining how important a word is to a post in a corpus.  The threshold for corpus specific words was set to 80%, ignoring terms appearing in more than 80% of the documents while the minimum document frequency was set to 6, and both unigrams and bigrams were tested. Given the consistent use of linguistic features for training machine learning models and results from previous work for offensive language detection, partof-speech (POS) and dependency relation tags were considered as additional features.  Using the spaCy 3 pipeline for Greek, POS-tags and dependency relations were extracted for every token in a tweet, which were then transformed to count matrices. A sentiment lexicon was considered, but one suitable for this project is as of yet unavailable for Greek.For the first six deep learning models we used Greek word embeddings trained on a large Greek web corpus (Outsios 3 https://spacy.io/ et al., 2018).  Each Greek word can be represented with a 300 dimensional vector using the trained model. The vector then can be used to feed in to the deep learning models which will be described in section 4.1.2.. For the last deep learning architecture we wanted to use a BERT (Devlin et al., 2019) The gradient of the loss is estimated each sample at a time and the SGDC is updated along the way with a decreasing learning rate.  The parameters for maximum epochs and the stopping criterion were defined using the default values in scikit-learn. The final classifier was two models based on the Bayes theorem: Multinomial Naïve Bayes, which works with occurrence counts, and Bernoulli Naïve Bayes, which is designed for binary features.
+4.1.2 Deep Learning Models
+Six different deep learning models were considered. All of these models have been used in an aggression detection task. The models are Pooled GRU (Plum et al., 2019) (Devlin et al., 2019) . These models has been used in HASOC 2019 and achieved a third place finish in English task and a eighth place finish in German and Hindi subtasks (Ranasinghe et al., 2019) .  Parameters described in (Ranasinghe et al., 2019) were used as the default parameters in order to ease the training process. The code for the deep learning has been made available on Github5 .
+4.2 Results
+The
+4.3 Discussion
+The data annotated in OGTD proved to be facilitating in offensive language detection with a significant success for Greek, taking into consideration its size and label distribution, with the best model (LSTM and GRU with Attention) achieving a F1-macro of 0.89. Among the classical machine learning approaches, the linear SVM model achieved the best results, 0.
+
+================================== Ai Message ==================================
+
+The best model, LSTM and GRU with Attention, achieved an F1-macro of 0.89.

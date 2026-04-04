@@ -1,0 +1,90 @@
+================================ Human Message =================================
+
+QUERY:
+What translation models are explored?
+
+TABLE OF CONTENTS (TOC):
+1 | Can Neural Networks Learn Symbolic Rewriting?
+1.1 | Abstract
+1.1.1 | 1. Introduction
+1.1.1.1 | 2. Data
+1.1.1.1.1 | 2.1. The AIM data set
+1.1.1.1.1.1 | 2.2. The polynomial data set
+1.1.1.1.1.1.1 | 3. Experiments
+1.1.1.1.1.1.1.1 | 3.1. AIM data set
+1.1.1.1.1.1.1.1.1 | 3.2. Polynomial data set
+1.1.1.1.1.1.1.1.1.1 | 4. Conclusions and future work
+1.1.1.1.1.1.1.1.1.1.1 | 5. Update: Integration data sets from Facebook Research experiments
+1.1.1.1.1.1.1.1.1.1.1.1 | Acknowledgements
+1.1.1.1.1.1.1.1.1.1.1.1.1 | References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_I5YaWYxRtM2ZFjVZtx6EJKCb)
+ Call ID: call_I5YaWYxRtM2ZFjVZtx6EJKCb
+  Args:
+    pattern: translation model|translation models|seq2seq|transformer|LSTM|GRU|RNN|attention
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.1.1.1.1.1.1.1.1.1.1.1.1 | References
+Bancerek, G., Naumowicz, A., and Urban, J.System description: XSL-based translator of Mizar to LaTeX. In Rabe, F., Farmer, W. M., Passmore, G. O., and Youssef, A. (eds.), Intelligent Computer Mathematics - 11th International Conference, CICM 2018, Hagen- berg, Austria, August 13-17, 2018, Proceedings , vol- ume 11006 of Lecture Notes in Computer Science , pp. 1–6. Springer, 2018. ISBN 978-3-319-96811-7. doi: 10.1007/978-3-319-96812-4 \ 1. URL https://doi. org/10.1007/978-3-319-96812-4_1 .
+Chakraborty, S., Allamanis, M., and Ray, B.Tree2tree neu- ral translation model for learning source code changes. CoRR , abs/1810.00314, 2018. URL http://arxiv. org/abs/1810.00314 .
+Evans, R., Saxton, D., Amos, D., Kohli,P., and Grefen- stette, E. Can neural networks understand logical en- tailment? In International Conference on Learning Representations , 2018. URL https://openreview. net/forum?id=SkZxCk-0Z .
+Kaliszyk, C., Urban, J., Vyskoˇcil,J., and Geuvers, H. Developing corpus-based translation methods be- tween informal and formal mathematics: Project de- scription. In Watt, S. M., Davenport, J. H., Sex- ton, A. P., Sojka, P., and Urban, J. (eds. ), Intel- ligent Computer Mathematics - International Confer- ence, CICM 2014, Coimbra, Portugal, July 7-11, 2014. Proceedings , volume 8543 of LNCS , pp. 435–439. Springer, 2014. ISBN 978-3-319-08433-6. doi: 10. 1007/978-3-319-08434-3 34.  URL http://dx.doi. org/10.1007/978-3-319-08434-3_34 .
+Kaliszyk, C., Urban, J., and Vyskoˇcil,J. Learning to parse on aligned corpora (rough diamond). In Urban, C. and Zhang, X. (eds.), Interactive Theorem Prov- ing - 6th International Conference, ITP 2015, Nanjing, China, August 24-27, 2015, Proceedings , volume 9236 of Lecture Notes in Computer Science , pp. 227–233. Springer, 2015. ISBN 978-3-319-22101-4.  doi: 10. 1007/978-3-319-22102-1 15. URL http://dx.doi. org/10.1007/978-3-319-22102-1_15 .
+Kaliszyk, C., Urban, J., and Vyskocil,J. Automat- ing formalization by statistical and semantic parsing of mathematics. In Ayala-Rinc´on, M. and Mu˜noz, C. A. (eds. ), Interactive Theorem Proving - 8th Interna- tional Conference, ITP 2017, Bras´ılia, Brazil, Septem- ber 26-29, 2017, Proceedings , volume 10499 of Lec- ture Notes in Computer Science , pp. 12–27. Springer, 2017. ISBN 978-3-319-66106-3. doi: 10. 1007/ 978-3-319-66107-0 \ 2. URL https://doi.org/ 10.1007/978-3-319-66107-0_2 .
+Kinyon, M. K., Veroff, R.,M. K., Veroff, R., and Vojtechovsk´y, P. Loops with abelian inner mapping groups: An application of automated deduction. In Bonacina, M. P. and Stickel, M. E. (eds.), Automated Reasoning and Mathematics - Essays in Memory of William W. McCune , volume 7788 of Lecture Notes in Computer Science , pp. 151– 164. Springer, 2013.  ISBN 978-3-642-36674-1. doi: 10.1007/978-3-642-36675-8 \ 8. URL https://doi. org/10.1007/978-3-642-36675-8_8 .Neural Rewriting
+Lample, G. and Charton, F.Deep learning for sym- bolic mathematics. In 8th International Confer- ence on Learning Representations, ICLR 2020, Addis Ababa, Ethiopia, April 26-30, 2020 . OpenReview.net, 2020. URL https://openreview.net/forum? id=S1eZYeHFDS .
+Luong, M., Brevdo, E., and Zhao, R.Neu- ral machine translation (seq2seq) tutorial. https://github.com/tensorflow/nmt , 2017.
+Miao, N., Wang, H., Le, R., Tao, C.,N., Wang, H., Le, R., Tao, C., Shang, M., Yan, R., and Zhao, D. Tree2tree learning with memory unit, 2018. URL https://openreview.net/forum? id=Syt0r4bRZ .
+Muggleton, S. and De Raedt, L.Inductive logic program- ming: Theory and methods. The Journal of Logic Pro- gramming , 19:629–679, 1994.
+Piotrowski, B. and Urban, J.Guiding theorem proving by recurrent neural networks. CoRR , abs/1905.07961, 2019. URL http://arxiv.org/abs/1905.07961 .
+Piotrowski, B. and Urban, J.Stateful premise selection by recurrent neural networks. CoRR , abs/2004.08212, 2020. URL https://arxiv.org/abs/2004.08212 .
+Piotrowski, B., Brown, C., Urban, J.,B., Brown, C., Urban, J., and Kaliszyk, C. Can neural networks learn symbolic rewriting? In Proceedings of AITP 2019 , 2019. URL http:// aitp-conference.org/2019/abstract/ paper%2014.pdf .
+Sutcliffe, G. The TPTP Problem Library and Associated Infrastructure.From CNF to TH0, TPTP v6.4.0. Journal of Automated Reasoning , 59(4):483–502, 2017.
+Urban, J. Experimenting with machine learning in au- tomatic theorem proving.Master’s thesis, Faculty of Mathematics and Physics, Charles University, Prague, 1998. English summary at https://www.ciirc. cvut.cz/˜urbanjo3/MScThesisPaper.pdf .
+Vaswani, A., Shazeer, N., Parmar, N.,A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., Kaiser, L., and Polosukhin, I. At- tention is all you need. In Guyon, I., von Luxburg, U., Bengio, S., Wallach, H. M., Fergus, R., Vishwanathan, S. V.  N., and Garnett, R. (eds.), Advances in Neural Infor- mation Processing Systems 30: Annual Conference on Neural Information Processing Systems 2017, 4-9 De- cember 2017, Long Beach, CA, USA , pp. 6000–6010, 2017. URL http://papers.nips.cc/paper/ 7181-attention-is-all-you-need .
+Wang, Q., Kaliszyk, C., and Urban, J.First experiments with neural translation of informal to formal mathemat- ics. In Rabe, F., Farmer, W. M., Passmore, G. O., and
+Youssef, A. (eds.), 11th International Conference on In- telligent Computer Mathematics (CICM 2018) , volume 11006 of LNCS , pp. 255–270. Springer, 2018. doi: 10.  1007/978-3-319-96812-4 \ 22. URL https://doi. org/10.1007/978-3-319-96812-4_22 .
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_BWegauffWqAU4PGyBcyeHabd)
+ Call ID: call_BWegauffWqAU4PGyBcyeHabd
+  Args:
+    section_id: 1.1.1.1.1.1.1
+
+================================= Tool Message =================================
+Name: read_section
+
+3. Experiments
+For experiments with both data sets, we used an established NMT architecture ( Luong et al. , 2017 ) based on LSTMs (long short-term memory cells) and implementing the at- tention mechanism. 4
+After a small grid search, we decided to inherit most of the hyperparameters of the model from the best re- sults achieved in ( Wang et al. , 2018 ) where L A TEX-to-Mizar translation is learned.  We used relatively small LSTM cells consisting of 2 layers with 128 units. The “scaled Luong” version of the attention mechanism was used, as well as dropout with rate equal 0 . 2 . The number of training steps was 10000 . (This setting was used for all our experiments described below.)
+3.1. AIM data set
+First, NMT models were trained for each of the 20 rewrite rules in the AIM data set. It turned out that the models, as long as the number of examples was greater than 1000 , were able to learn the rewriting task very well, reaching 90% of accuracy on separated test sets. This means that the task of applying a single rewrite step seems relatively easy to learn by NMT. See Table 4 for all the results. We also run an experiment on the joint set of all rewrite rules (consisting of 41396 examples). Here the task was more difficult as a model needed not only to apply rewriting correctly, but also choose “the right” rewrite rule applicable for a given term. Nevertheless, the performance was also very good, reaching 83% accuracy.
+3.2. Polynomial data set
+Then experiments on more challenging but also much larger data sets for polynomial normalization were per- formed. Depending on the difficulty of the data, accuracy on the test sets achieved in our experiments varied between 70% and 99% . The results in terms of accuracy are shown in Table 5 .This high performance of the model encouraged a closer inspection of the results. First, we checked if in the test sets
+3 The described polynomial data are available at https://github. com/BartoszPiotrowski/ rewriting-with-NNs/tree/master/data/ polynomial
+4 We also experimented with the Transformer model ( Vaswani et al. , 2017 ) but the results were worse. This could be due to a limited grid search we performed as Transformer is known to be very sensitive to hyperparameters.Neural Rewriting
+Table 4. Results of experiments with AIM data. (Names of the rules correspond to folder names in the Github repo. )
+Rule: Training examples: Test examples: Accuracy on test: abstrused1u 2472 1096 86.5% abstrused2u 2056 960 89.2% abstrused3u 1409 666 84.3% abstrused4u 1633 743 87.4% abstrused5u 2561 1190 89. 5% abstrused6u 81 40 12.5% abstrused7u 76 37 0.0% abstrused8u 79 39 2.5% abstrused9u 1724 817 86.7% abstrused10u 3353 1573 82.9% abstrused11u 10230 4604 79. 0% abstrused12u 7201 3153 87.2% instused1u 198 97 20.6% instused2u 196 87 25.2% instused3u 83 41 29.2% instused4u 105 47 2.1% instused5u 444 188 59.5% instused6u 1160 531 87. 5% instused7u 307 144 13.8% instused8u 116 54 3.7% union of all 41396 11826 83.2%
+there are input examples which differ from these in training sets only by renaming of variables. Indeed, for each of the data sets in test sets are 5 − 15% of such “renamed” examples.  After filtering them out, the measured accuracy drops – but only by 1 − 2% .An examination of the examples wrongly rewritten by the model was done. It turns out that the wrong outputs al- most always parse (in 97 − 99% of cases, they are legal polynomial terms). Notably, depending on the difficulty of the data set, as much as 18 − 64% of incorrect outputs are wrong only with respect to the constants in the terms.  (Typ- ically, the NMT model proposes too low constants com- pared to the correct ones.) Below 1% of wrong outputs is correct modulo variable renaming.
+4. Conclusions and future work
+NMT is not typically applied to symbolic problems, but sur- prisingly, it performed very well for both described tasks. The first one was easier in terms of complexity of the rewrit- ing (only one application of a rewrite rule was performed), but the number of examples was quite limited. The sec- ond task involved more difficult rewriting – multiple differ- ent rewrite steps were performed to construct the examples. Nevertheless, provided many examples, NMT could learn normalizing polynomials. Table 5. Chosen results of experiments with polynomials.(Characteristic of formulas concerns the input polynomials. La- bels of the data sets correspond to folder names in the Github repo.)
+Label Function symbols Constant symbols Num. of variables Accuracy on test poly1 + , ∗ 0 , 1 1 99 . 2% poly2 + , ∗ 0 , 1 2 97 .  4% poly3 + , ∗ 0 , 1 3 88 . 2% poly4 + , ∗ 0 , 1 , 2 , 3 , 4 , 5 5 83 . 4% poly5 + , ∗ , ˆ 0 , 1 2 85 . 5% poly6 + , ∗ , ˆ 0 , 1 , 2 3 71 .  8%
+We hope this work provides a baseline and inspiration for continuing this line of research. We see several interesting directions this work can be extended.Firstly, more interesting and difficult rewriting problems need to be provided for better delineation of the strength of the neural models. The described data are relatively simple and with no direct relevance to the real unsolved symbolic problems.  But the results on these simple prob- lems are encouraging enough to try with more challenging ones, related to real difficulties – e.g., these from TPDB data base. 5
+Secondly, we are going to develop and test new kinds of neural models tailored for the problem of comprehending symbolic expressions.  Specifically, we are going to im- plement an approach based on the idea of TreeNN, which may be another effective approach for this kind of tasks ( Evans et al. , 2018 ; Miao et al. , 2018 ; Chakraborty et al. , 2018 ). TreeNNs are built recursively from modules , where the modules correspond to parts of symbolic expression (symbols) and the shape of the network reflects the parse tree of the processed expression.  This way model is ex- plicitly informed on the exact structure of the expression, which in case of formal logic is always unambiguous and easy to extract. Perhaps this way the model could learn more efficiently from examples (and achieve higher results even on the small AIM data sets).  The authors have a pos- itive experience of applying TreeNNs to learn remainders of arithmetical expressions modulo small natural numbers – TreeNNs outperformed here neural models based on LSTM cells, giving almost perfect accuracy. However, this is un- clear how to translate this TreeNN methodology to the tasks with the structured output, like the symbolic rewriting task.Thirdly, there is an idea of integrating neural rewriting ar- chitectures into the larger systems for automated reasoning.  This can be motivated by the interesting contrast between some simpler ILP systems suffering from the combinatorial explosion in the presence of a large number of examples
+5 http://termination-portal.org/wiki/TPDB
+Neural Rewriting
+and neural methods which definitely benefit from large data sets.We hope that this work will inspire and trigger a discussion on the above (and other) ideas.
+5. Update: Integration data sets from Facebook Research experiments
+The work of Lample & Charton ( 2020 ) joined recently the line of research pursued by us here: 6 applying sequence-to- sequence neural architectures to symbolic rewriting tasks. In case of ( Lample & Charton , 2020 ) the symbolic tasks are integration of a chosen set of functions (basically poly- nomials plus trigonometry, exp and log) and solving a class of differential equations.  These tasks are less abstract than rewriting in the AIM loops theory and involve some more operations than our polynomial dataset. The datasets are orders of magnitude larger than ours.The training examples were generated by a randomized procedure, similarly to our polynomial dataset. The neu- ral model used there – Transformer ( Vaswani et al. , 2017 ) – is also a non-modified architecture originally designed for the neural machine translation.  A step in their pipe- line was preprocessing the symbolic expressions by trans- lating them to more compact prefix notation. This prepro- cessing step was used by us in the first version of our ear- lier work 7 on guiding theorem provers by recurrent neu- ral networks ( Piotrowski & Urban , 2019 ). No experimen- tal justification of usefulness of prefix notation is provided in ( Lample & Charton , 2020 ).  We have found in another work that this is not always beneficial ( Piotrowski & Urban , 2020 ).)
+The performance of the trained models in ( Lample & Charton , 2020 ) was quite high, reaching 99%. Here we analyze closer this experiment and compare with our methods and datasets. First, we wanted to see how the relatively small models used originally by us perform on these data.  We took 3 data sets related to various kinds of integration operations (BWD, FWD, IBP) used in ( Lample & Charton , 2020 ) and applied the NMT model with exactly the same hyperparameters as described in 3 . Additionally, we trained an NMT model implemented in OpenNMT, leaving all the hyperparameters in their default settings. 8 Table 6 shows the accuracy of the trained models
+Table 6.  Prediction accuracies of the three NMT models – the model used in the previous experiments in this work, the de- fault OpenNMT model, and the Transformer model used in ( Lample & Charton , 2020 ) – on the three integration data sets.Data set small NMT default OpenNMT Transformer BWD 18.4% 67.7% 99.6% FWD 14.8% 55.7% 97. 2% IBP 17.7% 64.5% 99.3%
+on the test sets, along with the reported accuracies of the Transformer model.We see that the small NMT model performs much worse than the Transformer model from ( Lample & Charton , 2020 ), while the performance of the default OpenNMT model is already quite good. However, the Transformer model in ( Lample & Charton , 2020 ) was much larger.  The authors do not report on how long the model was trained and what infrastructure was us...(truncated)
+
+================================== Ai Message ==================================
+
+An established NMT seq2seq architecture based on LSTMs with the scaled Luong attention mechanism is explored. They also experimented with the Transformer model, and in the update they additionally compare their small NMT model, a default OpenNMT model, and the Transformer model.

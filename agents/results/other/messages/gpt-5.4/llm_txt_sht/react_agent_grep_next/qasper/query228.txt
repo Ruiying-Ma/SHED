@@ -1,0 +1,65 @@
+================================ Human Message =================================
+
+QUERY:
+How many annotators do they have for their dataset?
+
+TABLE OF CONTENTS (TOC):
+1 | MultiBooked: A Corpus of Basque and Catalan Hotel Reviews Annotated for Aspect-level Sentiment Classiﬁcation.
+1.1 | Abstract
+1.2 | 1. Introduction
+1.3 | 2. Related Work
+1.4 | 3. Data Collection
+1.5 | 4. Annotation
+1.5.1 | 4.1. Guidelines
+1.5.2 | 4.2. Process
+1.5.3 | 4.3. Dataset Characteristics
+1.5.4 | 4.4. Agreement Scores
+1.6 | 5. Difﬁcult Examples
+1.7 | 6. Benchmarks
+1.8 | 7. Conclusion
+1.9 | 8. Bibliographical References
+1.10 | 9. Language Resource References
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_UPY4E4ZIRgae1IN7xcj8YMn7)
+ Call ID: call_UPY4E4ZIRgae1IN7xcj8YMn7
+  Args:
+    pattern: annotator|annotators|annotation process|Process
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.2 | 1. Introduction
+Sentiment analysis has become an established field with a number of subfields (aspect-level sentiment analysis, so- cial media sentiment analysis, cross-lingual sentiment anal- ysis), all of which require some kind of annotated resource, either to train a machine-learning based classifier or to test the performance of proposed approaches.Although much research into multi-lingual and cross- lingual sentiment analysis has focused on unsuper- vised or semi-supervised approaches (A.R.  et al., 2012; Perez-Rosas et al., 2012; Gao et al., 2015), these tech- niques still require certain resources (linked wordnets, seed lexicon) and do not generally reach the performance of su- pervised approaches.In English the state-of-the-art for binary sentiment analysis often reaches nearly 90 percent accuracy (Tai et al. , 2015; Kim, 2014; Irsoy and Cardie, 2014), but for other lan- guages there is a marked drop in accuracy. This is mainly due to the lack of annotations and resources in these lan- guages. This is especially true of corpora annotated at aspect-level.  Unlike document- or tweet-level annotation, aspect-level annotation requires a large amount of effort from the annotators, which further reduces the likelihood of finding an aspect-level sentiment corpus in under-resourced languages. We are, however, aware of one corpus anno- tated for aspects in German (Klinger and Cimiano, 2014), although German is not a particularly low-resource lan- guage. The movement towards multi-lingual datasets for sentiment analysis is important because many languages offer differ- ent challenges, such as complex morphology or highly pro- ductive word formation, which can not be overcome by fo- cusing only on English data.The novelty of this work lies in creating corpora which cover both Basque and Catalan languages and are an- notated in such a way that they are compatible with similarly compiled corpora available in a number of languages (Agerri et al. , 2013). This allows for further research into cross-lingual sentiment analysis, as well as introducing the first resource for aspect-level sentiment analysis in Catalan and Basque. The corpus is available
+at http://hdl.handle.net/10230/33928 or https://jbarnesspain.github.io/resources/ .
+
+================================== Ai Message ==================================
+Tool Calls:
+  read_section (call_VDA4ZuX2bfQQcYDNbcZ22Eql)
+ Call ID: call_VDA4ZuX2bfQQcYDNbcZ22Eql
+  Args:
+    section_id: 1.5.2
+
+================================= Tool Message =================================
+Name: read_section
+
+4.2. Process
+We used the KafAnnotator Tool (Agerri et al., 2013) to an- notate each review. This tool allows the user to select a span of tokens and to annotate them as any of the four la- bels mentioned in Section 4.1.The annotation of each corpus was performed in three phases: first, each annotator annotated a small number of reviews (20-50), after which they compared annotations and discussed any differences.  Second, the annotators an- notated half of the remaining reviews and met again to dis- cuss any new differences. Finally, they annotated the re- maining reviews. For cases of conflict after the final itera- tion, a third annotator decided between the two.The final Catalan corpus contains 567 annotated reviews and the final Basque corpus 343.
+
+================================== Ai Message ==================================
+Tool Calls:
+  grep_search_next (call_89JCHFXJBLXLPXlYJXXnXx6h)
+ Call ID: call_89JCHFXJBLXLPXlYJXXnXx6h
+  Args:
+    pattern: third annotator|each annotator|two annotators|annotated half
+
+================================= Tool Message =================================
+Name: grep_search_next
+
+1.5.2 | 4.2. Process
+We used the KafAnnotator Tool (Agerri et al., 2013) to an- notate each review. This tool allows the user to select a span of tokens and to annotate them as any of the four la- bels mentioned in Section 4.1.The annotation of each corpus was performed in three phases: first, each annotator annotated a small number of reviews (20-50), after which they compared annotations and discussed any differences.  Second, the annotators an- notated half of the remaining reviews and met again to dis- cuss any new differences. Finally, they annotated the re- maining reviews. For cases of conflict after the final itera- tion, a third annotator decided between the two.The final Catalan corpus contains 567 annotated reviews and the final Basque corpus 343.
+
+================================== Ai Message ==================================
+
+3 annotators.
