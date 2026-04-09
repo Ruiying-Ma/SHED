@@ -10,7 +10,7 @@ import time
 from config import DATASET_LIST, DATA_ROOT_FOLDER
 from agents.utils import get_baseline_messages, get_llm_response, pretty_repr, get_doc_txt, get_result_path
 
-MAX_OUTPUT_TOKENS = 150
+# MAX_OUTPUT_TOKENS = 150
 
 DEBUG = False
 
@@ -30,27 +30,31 @@ if __name__ == "__main__":
     # reasoning_effort = 'medium'
     reasoning_effort = None
 
-    for model in ['gpt-5.4', 'gpt-5-mini']:
+    for model in [
+        'gpt-5.4', 
+        # 'gpt-5-mini'
+    ]:
 
-        for dataset in DATASET_LIST[3:4]:
+        for dataset in DATASET_LIST[:-1]:
             print(f"Baseline: {dataset}")
             queries_path = Path(DATA_ROOT_FOLDER) / dataset / "queries.json"
             with open(queries_path, 'r') as file:
                 queries = json.load(file)
             
-            num_queries = int(len(queries) * 0.2)
+            result_jsonl_path = get_result_path(dataset, model, "baseline", 'intrinsic')
 
-            result_jsonl_path = get_result_path(dataset, model, "baseline")
-
-            if dataset == "civic":
-                start_id = 1
-                end_id = len(queries)
-            elif dataset == 'finance':
-                start_id = 30
-                end_id = 74
-            else:
+            if dataset == "civic_rand_v1":
                 start_id = 0
-                end_id = num_queries
+                end_id = len(queries)
+            elif dataset == 'finance_rand_v1':
+                start_id = 0
+                end_id = 74
+            elif dataset == 'contract_rand_v0_1':
+                start_id = 0
+                end_id = 248
+            elif dataset == 'qasper':
+                start_id = 0
+                end_id = 290
 
             for qinfo in queries[start_id:end_id]:
                 print(f"\tquery id: {qinfo['id']}")

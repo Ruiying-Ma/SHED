@@ -8,15 +8,26 @@ import logging_config
 import time
 
 from config import DATASET_LIST, DATA_ROOT_FOLDER
-from agents.utils import get_toc_numbered, get_doc_txt, get_toc_in_context_messages, get_llm_response, pretty_repr, get_result_path
-
+from agents.utils import get_toc_numbered_clean, get_doc_txt, get_toc_in_context_messages, get_llm_response, pretty_repr, get_result_path, LLMResponse
+from agents.accuracy import INVALID_CIVIC_QUERY_IDS
 MAX_OUTPUT_TOKENS = 150
 
-DEBUG = True
+DEBUG = False
 
 def run_toc_in_context_per_query(dataset, qinfo, model, sht_type):
     doc_txt = get_doc_txt(dataset, qinfo["file_name"])
-    toc_numbered_txt = get_toc_numbered(dataset, qinfo["file_name"])
+    try:
+        toc_numbered_txt = get_toc_numbered_clean(dataset, qinfo["file_name"], sht_type)
+    except Exception as e:
+        response = LLMResponse(
+            is_success=False,
+            message=f"{type(e).__name__}: {str(e)}",
+            latency=0.0,
+            input_tokens=0,
+            cached_tokens=0,
+            output_tokens=0,
+        )
+        return response
     query = qinfo["query"]
     messages = get_toc_in_context_messages(dataset, query, doc_txt, toc_numbered_txt)
     if DEBUG == True:
@@ -29,37 +40,40 @@ def run_toc_in_context_per_query(dataset, qinfo, model, sht_type):
 
 if __name__ == "__main__":
     for sht_type in [
-        'deep',
-        'wide',
-        'grobid',
-        'shed'
+        # 'deep',
+        # 'wide',
+        # 'grobid',
+        # '',
+        # 'llm_txt_sht',
+        'intrinsic',
     ]:
-        for model in ['gpt-5.4', 
+        for model in [
+            'gpt-5.4', 
                     #   'gpt-5-mini'
-                    ]:
-            for dataset in DATASET_LIST[:1]:
-                print(f"toc_in_context: {dataset}")
+        ]:
+            for dataset in DATASET_LIST[:-1]:
+                print(f"toc_in_context ({model}, {sht_type}): {dataset}")
                 queries_path = Path(DATA_ROOT_FOLDER) / dataset / "queries.json"
                 with open(queries_path, 'r') as file:
                     queries = json.load(file)
                 
-                num_queries = int(len(queries) * 0.2)
+                result_jsonl_path = get_result_path(dataset, model, "toc_in_context", sht_type)
 
-                result_jsonl_path = get_result_path(dataset, model, "toc_in_context")
-
-                if dataset == "civic":
+                if dataset == "civic_rand_v1":
                     start_id = 0
                     end_id = len(queries)
-                elif dataset == 'finance':
+                elif dataset == 'finance_rand_v1':
                     start_id = 0
                     end_id = 74
-                else:
+                elif dataset == 'contract_rand_v0_1':
+                    start_id = 26
+                    end_id = 248
+                elif dataset == 'qasper':
                     start_id = 0
-                    end_id = num_queries
+                    end_id = 290
 
-                for qinfo in queries[:1]:
-                    print(f"\tquery id: {qinfo['id']}")
-                    result = run_toc_in_context_per_query(dataset, qinfo, model)
+                for qinfo in queries[start_id:end_id]:
+                    result = run_toc_in_context_per_query(dataset, qinfo, model, sht_type)
                     if DEBUG == False:
                         with open(result_jsonl_path, 'a') as file:
                             contents = json.dumps(result) + "\n"
