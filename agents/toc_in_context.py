@@ -14,8 +14,26 @@ MAX_OUTPUT_TOKENS = 150
 
 DEBUG = False
 
+def get_txt(dataset, qinfo):
+    assert dataset in ['contract_rand_v0_1', 'finance_rand_v1', 'qasper_rand_v1']
+    with open(Path(DATA_ROOT_FOLDER) / dataset / "intrinsic" / "toc_greptext_clean" / (qinfo["file_name"] + ".json"), 'r') as file:
+        toc_greptext = json.load(file)
+    doc_txt = ""
+    for level_str, text_span in toc_greptext.items():
+        heading = text_span['heading']
+        contxt = text_span['text']
+        if heading.strip() != "":
+            doc_txt += f"{heading}\n"
+        if contxt.strip() != "":
+            doc_txt += f"{contxt}\n"
+
+    return doc_txt
+
 def run_toc_in_context_per_query(dataset, qinfo, model, sht_type):
-    doc_txt = get_doc_txt(dataset, qinfo["file_name"])
+    if dataset != "civic_rand_v1":
+        doc_txt = get_txt(dataset, qinfo)
+    else:
+        doc_txt = get_doc_txt(dataset, qinfo["file_name"])
     try:
         toc_numbered_txt = get_toc_numbered_clean(dataset, qinfo["file_name"], sht_type)
     except Exception as e:
@@ -51,7 +69,7 @@ if __name__ == "__main__":
             'gpt-5.4', 
                     #   'gpt-5-mini'
         ]:
-            for dataset in DATASET_LIST[:-1]:
+            for dataset in DATASET_LIST[-1:]:
                 print(f"toc_in_context ({model}, {sht_type}): {dataset}")
                 queries_path = Path(DATA_ROOT_FOLDER) / dataset / "queries.json"
                 with open(queries_path, 'r') as file:
@@ -66,11 +84,13 @@ if __name__ == "__main__":
                     start_id = 0
                     end_id = 74
                 elif dataset == 'contract_rand_v0_1':
-                    start_id = 26
+                    start_id = 0
                     end_id = 248
-                elif dataset == 'qasper':
+                elif dataset == 'qasper_rand_v1':
                     start_id = 0
                     end_id = 290
+                else:
+                    raise ValueError(f"Invalid dataset: {dataset}")
 
                 for qinfo in queries[start_id:end_id]:
                     result = run_toc_in_context_per_query(dataset, qinfo, model, sht_type)
