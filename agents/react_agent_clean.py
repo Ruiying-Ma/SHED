@@ -25,6 +25,7 @@ from langchain.tools import tool, ToolRuntime
 from langchain_core.messages.utils import trim_messages, count_tokens_approximately
 from langchain.chat_models import init_chat_model
 from langgraph.types import Command
+from agents.merge_toc_textspan_clean import merge_toc_textspan_per_query
 
 DEBUG = False
 AGENT_NAME = "react_agent_clean"
@@ -36,7 +37,17 @@ def get_toc_numbered_clean(dataset, filename, sht_type):
         toc_path = Path(DATA_ROOT_FOLDER) / dataset / sht_type / "toc_numbered_clean" / (filename + ".txt")
     return toc_path.read_text().strip()
 
-def get_toc_textspan_clean(dataset, filename, sht_type):
+def get_toc_textspan_clean(dataset, qinfo, sht_type):
+    if sht_type == 'deep':
+        return merge_toc_textspan_per_query(
+            orig_dataset=dataset.split("_")[0],
+            new_file_name=qinfo["file_name"],
+            sht_type="deep",
+            new_file_names=qinfo['new_file_names'],
+            merged_dataset="finance_rand_v1",
+            need_store=False,
+        )
+    filename = qinfo["file_name"]
     if dataset == "civic_new":
         toc_textspan_path = Path(DATA_ROOT_FOLDER) / "civic" / sht_type / "toc_textspan_clean" / (filename + ".json")
     else:
@@ -174,14 +185,6 @@ def create_model(model_name):
     return model
 
 def run_agent_per_query(dataset, qinfo, model, sht_type):
-    query = qinfo["query"]
-    toc_numbered : str = get_toc_numbered_clean(dataset, qinfo["file_name"], sht_type)
-    toc_textspan = get_toc_textspan_clean(dataset, qinfo["file_name"], sht_type)
-    # assert len(toc_numbered.strip().splitlines()) == len(toc_textspan)
-
-    if DEBUG == True:
-        print(get_agent_system_message(dataset).content)
-
     agent = create_agent(
         model=create_model(model),
         tools=[read_section],
@@ -209,8 +212,17 @@ def run_agent_per_query(dataset, qinfo, model, sht_type):
     prefix = "QUERY"
     if dataset == "contract":
         prefix = "HYPOTHESIS"
+    
     start_time = time.time()
     try:
+        query = qinfo["query"]
+        toc_numbered : str = get_toc_numbered_clean(dataset, qinfo["file_name"], sht_type)
+        toc_textspan = get_toc_textspan_clean(dataset, qinfo, sht_type)
+        # assert len(toc_numbered.strip().splitlines()) == len(toc_textspan)
+
+        if DEBUG == True:
+            print(get_agent_system_message(dataset).content)
+        start_time = time.time()
         final_state: AgentState = agent.invoke(
             input=AgentState(messages=[HumanMessage(content=f"{prefix}:\n{query}\n\nTABLE OF CONTENTS (TOC):\n{toc_numbered}")]),
             context=DocAgentContext(toc_textspan=toc_textspan),
@@ -241,7 +253,11 @@ def run_agent_per_query(dataset, qinfo, model, sht_type):
         )
         llm_response['id'] = qinfo['id']
 
-        final_messages = list(agent.get_state_history(config=runnable_config))[0].values['messages']
+        try:
+            final_messages = list(agent.get_state_history(config=runnable_config))[0].values['messages']
+        except Exception as e2:
+            logging.warning(f"Error retrieving messages after agent failure: {type(e2).__name__}: {str(e2)}\n\n{traceback.format_exc()}")
+            final_messages = []
         
     finally:
         with open(answer_path, 'a') as file:
@@ -267,102 +283,73 @@ if __name__ == "__main__":
     #     # 'deep',
     #     'wide',
     #     # 'grobid',
-    #     '',
+    #     # '',
     #     # 'llm_txt_sht',
     #     # 'intrinsic'
     # ]:
-    import argparse
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--dataset", type=str, default="", help="The dataset to run the agent on. If not specified, the agent will run on all datasets.")
-    parser.add_argument("--sht", type=str, default="", help="The type of SHT to use. Options: 'deep', 'wide', 'grobid', 'llm_txt_sht', 'intrinsic', or ''.")
-    args = parser.parse_args()
-    sht_type = args.sht.strip().lower()
-    dataset = args.dataset.strip().lower()
-    assert dataset in DATASET_LIST + [
-        'civic_new',
-        "civic_rand",
-        "civic_rand_v1",
-        'contract_new',
-        'contract_rand',
-        'contract_rand_v0_1',
-        'contract_rand_v1',
-        'contract_rand_v2',
-        'contract_rand_v3',
-        'finance_rand',
-        'finance_rand_v1',
-        "qasper_rand_v1",
-    ]
-    assert sht_type in ['deep', 'wide', 'grobid', 'llm_txt_sht', 'intrinsic', ''], f"Invalid sht type {sht_type}. Supported sht types are: 'deep', 'wide', 'grobid', 'llm_txt_sht', 'intrinsic', or ''."
+        import argparse
+        parser = argparse.ArgumentParser()
+        # parser.add_argument("--dataset", type=str, default="", help="The dataset to run the agent on. If not specified, the agent will run on all datasets.")
+        parser.add_argument("--sht", type=str, default="", help="The type of SHT to use. Options: 'deep', 'wide', 'grobid', 'llm_txt_sht', 'intrinsic', or ''.")
+        args = parser.parse_args()
+        sht_type = args.sht.strip().lower()
+    # dataset = args.dataset.strip().lower()
+    # assert dataset in DATASET_LIST + [
+    #     'civic_new',
+    #     "civic_rand",
+    #     "civic_rand_v1",
+    #     'contract_new',
+    #     'contract_rand',
+    #     'contract_rand_v0_1',
+    #     'contract_rand_v1',
+    #     'contract_rand_v2',
+    #     'contract_rand_v3',
+    #     'finance_rand',
+    #     'finance_rand_v1',
+    #     "qasper_rand_v1",
+    # ]
+    # assert sht_type in ['deep', 'wide', 'grobid', 'llm_txt_sht', 'intrinsic', ''], f"Invalid sht type {sht_type}. Supported sht types are: 'deep', 'wide', 'grobid', 'llm_txt_sht', 'intrinsic', or ''."
 
-    for model in ['gpt-5.4']:
-        # for dataset in DATASET_LIST[]:
-        # for dataset in ['contract_rand_v0_1']:
-        # for dataset in ['office']:
-            print(f"{AGENT_NAME} ({model}, {sht_type}): {dataset}")
-            queries_path = Path(DATA_ROOT_FOLDER) / dataset / "queries.json"
-            with open(queries_path, 'r') as file:
-                queries = json.load(file)
-            
-            num_queries = int(len(queries) * 0.2)
+        for model in ['gpt-5.4']:
+            for dataset in DATASET_LIST:
+            # for dataset in ['contract_rand_v0_1']:
+            # for dataset in ['office']:
+                print(f"{AGENT_NAME} ({model}, {sht_type}): {dataset}")
+                queries_path = Path(DATA_ROOT_FOLDER) / dataset / "queries.json"
+                with open(queries_path, 'r') as file:
+                    queries = json.load(file)
+                
 
-            result_jsonl_path = get_result_path(dataset, model, AGENT_NAME, sht_type)
-            
-            # failed_query_ids = []
-            # with open(result_jsonl_path, 'r') as file:
-            #     for l in file:
-            #         record = json.loads(l.strip())
-            #         if record['is_success'] == False and "ModelCallLimitExceededError" in record['message']:
-            #             failed_query_ids.append(record['id'])
+                result_jsonl_path = get_result_path(dataset, model, AGENT_NAME, sht_type)
+                
+                # failed_query_ids = []
+                # with open(result_jsonl_path, 'r') as file:
+                #     for l in file:
+                #         record = json.loads(l.strip())
+                #         if record['is_success'] == False and "ModelCallLimitExceededError" in record['message']:
+                #             failed_query_ids.append(record['id'])
 
-            # print(len(failed_query_ids))
-            # for qinfo in queries:
-            #     if qinfo['id'] in failed_query_ids:
-            #         print(f"\tquery id: {qinfo['id']}")
-            #         run_agent_per_query(dataset, qinfo, model, sht_type)
+                # print(len(failed_query_ids))
+                # for qinfo in queries:
+                #     if qinfo['id'] in failed_query_ids:
+                #         print(f"\tquery id: {qinfo['id']}")
+                #         run_agent_per_query(dataset, qinfo, model, sht_type)
 
-            if dataset in ['civic', "civic_new", 'office']:
-                start_id = 0
-                end_id = len(queries)
-            elif dataset == 'qasper_rand_v1':
-                start_id = 0
-                end_id = 290
-            elif dataset == "finance":
-                start_id = 0
-                end_id = 74
-            elif dataset == 'finance_rand':
-                start_id = 0
-                end_id = 74
-            elif dataset == 'finance_rand_v1':
-                start_id = 0
-                end_id = 74
-            elif dataset == 'contract_new':
-                start_id = 1
-                end_id = 170
-            elif dataset == 'contract_rand':
-                start_id = 0
-                end_id = 248
-            elif dataset == 'contract_rand_v0_1':
-                start_id = 0
-                end_id = 248
-            elif dataset == 'contract_rand_v1':
-                start_id = 0
-                end_id = 248
-            elif dataset == 'contract_rand_v2':
-                start_id = 0
-                end_id = 248
-            elif dataset == 'contract_rand_v3':
-                start_id = 0
-                end_id = 248
-            elif dataset == 'civic_rand':
-                start_id = 0
-                end_id = 107
-            elif dataset == 'civic_rand_v1':
-                start_id = 0
-                end_id = 107
-            else:
-                start_id = 0
-                end_id = num_queries
+                if dataset == "civic_rand_v1":
+                    start_id = 0
+                    end_id = len(queries)
+                elif dataset == 'finance_rand_v1':
+                    start_id = 0
+                    end_id = 74
+                elif dataset == 'contract_rand_v0_1':
+                    start_id = 0
+                    end_id = 248
+                elif dataset == 'qasper_rand_v1':
+                    start_id = 0
+                    end_id = 290
+                else:
+                    raise ValueError(f"Invalid dataset: {dataset}")
 
-            for qinfo in queries[:0]:
-                print(f"\tquery id: {qinfo['id']}")
-                run_agent_per_query(dataset, qinfo, model, sht_type)
+                for qinfo in queries[start_id:end_id]:
+                    print(f"\tquery id: {qinfo['id']}")
+                    run_agent_per_query(dataset, qinfo, model, sht_type)
