@@ -1,0 +1,66 @@
+{"true_np": "1.1", "true_header": "Predicting the Role of Political Trolls in Social Media", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1", "max_precision_np": "1", "max_f1_np": "1"}
+{"true_np": "1.1.1", "true_header": "Predicting the role of political trolls in social media", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1", "max_precision_np": "1", "max_f1_np": "1"}
+{"true_np": "1.1.1.1", "true_header": "Abstract", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.1", "max_precision_np": "1.1", "max_f1_np": "1.1"}
+{"true_np": "1.1.1.2", "true_header": "Introduction", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.2", "max_precision_np": "1.2", "max_f1_np": "1.2"}
+{"true_np": "1.1.1.3", "true_header": "Related work", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.3", "max_precision_np": "1.3", "max_f1_np": "1.3"}
+{"true_np": "1.1.1.3.1", "true_header": "Trolls and opinion manipulation", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.3.1", "max_precision_np": "1.3.1", "max_f1_np": "1.3.1"}
+{"true_np": "1.1.1.3.2", "true_header": "Understanding the role of political trolls", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.3.2", "max_precision_np": "1.3.2", "max_f1_np": "1.3.2"}
+{"true_np": "1.1.1.3.3", "true_header": "Graph embeddings", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.3.3", "max_precision_np": "1.3.3", "max_f1_np": "1.3.3"}
+{"true_np": "1.1.1.4", "true_header": "Method", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.4", "max_precision_np": "1.4", "max_f1_np": "1.4"}
+{"true_np": "1.1.1.4.1", "true_header": "Embeddings", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.4.1", "max_precision_np": "1.4", "max_f1_np": "1.4.1"}
+{"true_np": "1.1.1.4.1.1", "true_header": "U2h", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.4.1.1", "max_precision_np": "1.4.1.1", "max_f1_np": "1.4.1.1"}
+{"true_np": "1.1.1.4.1.2", "true_header": "U2m", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.4.1.2", "max_precision_np": "1.4.1.2", "max_f1_np": "1.4.1.2"}
+{"true_np": "1.1.1.4.1.3", "true_header": "Bert", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.4.1.3", "max_precision_np": "1.4.1", "max_f1_np": "1.4.1.3"}
+{"true_np": "1.1.1.4.2", "true_header": "Fully supervised learning (t1)", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.4.2", "max_precision_np": "1.4.2", "max_f1_np": "1.4.2"}
+{"true_np": "1.1.1.4.3", "true_header": "Distant supervision (t2)", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.4.3", "max_precision_np": "1.4.3", "max_f1_np": "1.4.3"}
+{"true_np": "1.1.1.5", "true_header": "Data", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.5", "max_precision_np": "1.5", "max_f1_np": "1.5"}
+{"true_np": "1.1.1.5.1", "true_header": "Ira russian troll tweets", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.5.1", "max_precision_np": "1.5.1", "max_f1_np": "1.5.1"}
+{"true_np": "1.1.1.5.2", "true_header": "Media bias/fact check", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.5.2", "max_precision_np": "1.5.2", "max_f1_np": "1.5.2"}
+{"true_np": "1.1.1.6", "true_header": "Experiments and evaluation", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.6", "max_precision_np": "1.6", "max_f1_np": "1.6"}
+{"true_np": "1.1.1.6.1", "true_header": "Experimental setup", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.6.1", "max_precision_np": "1.6.1", "max_f1_np": "1.6.1"}
+{"true_np": "1.1.1.6.2", "true_header": "Evaluation results", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.6.2", "max_precision_np": "1.6.2", "max_f1_np": "1.6.2"}
+{"true_np": "1.1.1.7", "true_header": "Discussion", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.7", "max_precision_np": "1.7", "max_f1_np": "1.7"}
+{"true_np": "1.1.1.7.1", "true_header": "Ablation study", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.7.1", "max_precision_np": "1.7.1", "max_f1_np": "1.7.1"}
+{"true_np": "1.1.1.7.2", "true_header": "Comparison to full supervision", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.7.2", "max_precision_np": "1.7.2", "max_f1_np": "1.7.2"}
+{"true_np": "1.1.1.7.3", "true_header": "Reverse classification: media from trolls", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.7.3", "max_precision_np": "1.7.3", "max_f1_np": "1.7.3"}
+{"true_np": "1.1.1.8", "true_header": "Conclusion and future work", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.8", "max_precision_np": "1.8", "max_f1_np": "1.8"}
+{"true_np": "1.1.1.9", "true_header": "Acknowledgments", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.9", "max_precision_np": "1.9", "max_f1_np": "1.9"}
+{"true_np": "1.1.1.10", "true_header": "References", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.10", "max_precision_np": "1.10", "max_f1_np": "1.10"}
+{"true_np": "1.2", "true_header": "", "max_recall": 0.0, "max_precision": 0.0, "max_f1": 0.0, "max_recall_np": null, "max_precision_np": null, "max_f1_np": null}
+{"true_np": "1.2.1", "true_header": "Olylingual w ordnet", "max_recall": 0.0, "max_precision": 0.0, "max_f1": 0.0, "max_recall_np": null, "max_precision_np": null, "max_f1_np": null}
+{"true_np": "1.2.1.1", "true_header": "Introduction", "max_recall": 0.25, "max_precision": 0.1, "max_f1": 0.14285714285714288, "max_recall_np": "1.2", "max_precision_np": "1.2", "max_f1_np": "1.2"}
+{"true_np": "1.2.1.1.1", "true_header": "The languages covered in polylingual wordnet", "max_recall": 0.6, "max_precision": 0.8571428571428571, "max_f1": 0.7058823529411764, "max_recall_np": "2.1.1", "max_precision_np": "2.1.1", "max_f1_np": "2.1.1"}
+{"true_np": "1.2.1.1.2", "true_header": "Development of polylingual wordnet", "max_recall": 0.5, "max_precision": 0.8, "max_f1": 0.6153846153846154, "max_recall_np": "2.1.2", "max_precision_np": "2.1.2", "max_f1_np": "2.1.2"}
+{"true_np": "1.2.1.1.3", "true_header": "Applications of polylingual wordnet", "max_recall": 0.5, "max_precision": 0.8, "max_f1": 0.6153846153846154, "max_recall_np": "2.1.3", "max_precision_np": "2.1.3", "max_f1_np": "2.1.3"}
+{"true_np": "1.2.1.2", "true_header": "Current state of the polylingual wordnet", "max_recall": 0.6666666666666666, "max_precision": 1.0, "max_f1": 0.8, "max_recall_np": "2.2", "max_precision_np": "2.2", "max_f1_np": "2.2"}
+{"true_np": "1.2.1.2.1", "true_header": "Native statistics", "max_recall": 0.7272727272727273, "max_precision": 1.0, "max_f1": 0.8421052631578948, "max_recall_np": "2.2.1", "max_precision_np": "2.2.1", "max_f1_np": "2.2.1"}
+{"true_np": "1.2.1.2.2", "true_header": "Special characteristics of polylingual wordnet", "max_recall": 0.7272727272727273, "max_precision": 1.0, "max_f1": 0.8421052631578948, "max_recall_np": "2.2.2", "max_precision_np": "2.2.2", "max_f1_np": "2.2.2"}
+{"true_np": "1.2.1.2.3", "true_header": "Bridging the language barrier", "max_recall": 0.75, "max_precision": 1.0, "max_f1": 0.8571428571428571, "max_recall_np": "2.2.3", "max_precision_np": "2.2.3", "max_f1_np": "2.2.3"}
+{"true_np": "1.2.1.2.3.1", "true_header": "Statistical machine translation", "max_recall": 0.8, "max_precision": 1.0, "max_f1": 0.888888888888889, "max_recall_np": "2.2.3.1", "max_precision_np": "2", "max_f1_np": "2.2.3.1"}
+{"true_np": "1.2.1.2.3.2", "true_header": "Translation evaluation metrics", "max_recall": 0.8, "max_precision": 1.0, "max_f1": 0.888888888888889, "max_recall_np": "2.2.3.2", "max_precision_np": "2.2.3.2", "max_f1_np": "2.2.3.2"}
+{"true_np": "1.2.1.2.3.3", "true_header": "Automatic translation evaluation", "max_recall": 0.8, "max_precision": 1.0, "max_f1": 0.888888888888889, "max_recall_np": "2.2.3.3", "max_precision_np": "2.2.3.3", "max_f1_np": "2.2.3.3"}
+{"true_np": "1.2.1.2.4", "true_header": "Links to external resources", "max_recall": 0.7692307692307693, "max_precision": 1.0, "max_f1": 0.8695652173913044, "max_recall_np": "2.2.4", "max_precision_np": "2.2.4", "max_f1_np": "2.2.4"}
+{"true_np": "1.2.1.2.4.1", "true_header": "Automatic linking", "max_recall": 0.8, "max_precision": 1.0, "max_f1": 0.888888888888889, "max_recall_np": "2.2.4.1", "max_precision_np": "2.2.4.1", "max_f1_np": "2.2.4.1"}
+{"true_np": "1.2.1.3", "true_header": "Related work", "max_recall": 0.4, "max_precision": 0.5, "max_f1": 0.4444444444444445, "max_recall_np": "1.3", "max_precision_np": "2.3", "max_f1_np": "2.3"}
+{"true_np": "1.2.1.4", "true_header": "Discussion and future plans", "max_recall": 0.5714285714285714, "max_precision": 0.6666666666666666, "max_f1": 0.6153846153846153, "max_recall_np": "2.4", "max_precision_np": "2.4", "max_f1_np": "2.4"}
+{"true_np": "1.2.1.5", "true_header": "References", "max_recall": 0.25, "max_precision": 0.3333333333333333, "max_f1": 0.28571428571428575, "max_recall_np": "1.10", "max_precision_np": "2.5", "max_f1_np": "2.5"}
+{"true_np": "1.3", "true_header": "Character-Level Models versus Morphology in Semantic Role Labeling", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "3", "max_precision_np": "3", "max_f1_np": "3"}
+{"true_np": "1.3.1", "true_header": "Character-level models versus morphology in semantic role labeling", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "3", "max_precision_np": "3", "max_f1_np": "3"}
+{"true_np": "1.3.1.1", "true_header": "Abstract", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "3.1", "max_precision_np": "3.1", "max_f1_np": "3.1"}
+{"true_np": "1.3.1.2", "true_header": "Introduction", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "3.2", "max_precision_np": "3.2", "max_f1_np": "3.2"}
+{"true_np": "1.3.1.3", "true_header": "Related work", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "3.3", "max_precision_np": "3.3", "max_f1_np": "3.3"}
+{"true_np": "1.3.1.4", "true_header": "Method", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "3.4", "max_precision_np": "3.4", "max_f1_np": "3.4"}
+{"true_np": "1.3.1.4.1", "true_header": "Subword units", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "3.4.1", "max_precision_np": "3.4", "max_f1_np": "3.4.1"}
+{"true_np": "1.3.1.5", "true_header": "Experiments", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "3.5", "max_precision_np": "3.5", "max_f1_np": "3.5"}
+{"true_np": "1.3.1.5.1", "true_header": "Experimental setup", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "3.5.1", "max_precision_np": "3.5.1", "max_f1_np": "3.5.1"}
+{"true_np": "1.3.1.6", "true_header": "Results and analysis", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "3.6", "max_precision_np": "3.6", "max_f1_np": "3.6"}
+{"true_np": "1.3.1.6.1", "true_header": "Similarity between models", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "3.6.1", "max_precision_np": "3.6.1", "max_f1_np": "3.6.1"}
+{"true_np": "1.3.1.7", "true_header": "Limitations and strengths", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "3.7", "max_precision_np": "3.7", "max_f1_np": "3.7"}
+{"true_np": "1.3.1.7.1", "true_header": "Long range dependencies", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "3.7.1", "max_precision_np": "3.7", "max_f1_np": "3.7.1"}
+{"true_np": "1.3.1.7.2", "true_header": "Training data size", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "3.7.2", "max_precision_np": "3.7.2", "max_f1_np": "3.7.2"}
+{"true_np": "1.3.1.7.3", "true_header": "Out-of-domain (ood) data", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "3.7.3", "max_precision_np": "3.7.3", "max_f1_np": "3.7.3"}
+{"true_np": "1.3.1.7.4", "true_header": "Model size", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "3.7.4", "max_precision_np": "3.7", "max_f1_np": "3.7.4"}
+{"true_np": "1.3.1.7.5", "true_header": "Predicted morphological tags", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "3.7.5", "max_precision_np": "3.7.5", "max_f1_np": "3.7.5"}
+{"true_np": "1.3.1.8", "true_header": "Conclusion", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "3.8", "max_precision_np": "3.8", "max_f1_np": "3.8"}
+{"true_np": "1.3.1.9", "true_header": "Acknowledgements", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "3.9", "max_precision_np": "3.9", "max_f1_np": "3.9"}
+{"true_np": "1.3.1.10", "true_header": "References", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "3.10", "max_precision_np": "3.10", "max_f1_np": "3.10"}

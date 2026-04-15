@@ -1,0 +1,49 @@
+{"true_np": "1.1", "true_header": "Question Generation from a Knowledge Base with Web Exploration", "max_recall": 0.9881656804733728, "max_precision": 0.9862204724409449, "max_f1": 0.9871921182266011, "max_recall_np": "1", "max_precision_np": "1", "max_f1_np": "1"}
+{"true_np": "1.1.1", "true_header": "Question generation from a knowledge base with web exploration", "max_recall": 0.9751737835153923, "max_precision": 0.9665354330708661, "max_f1": 0.9708353929807216, "max_recall_np": "1", "max_precision_np": "1", "max_f1_np": "1"}
+{"true_np": "1.1.1.1", "true_header": "Abstract", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.1", "max_precision_np": "1.1", "max_f1_np": "1.1"}
+{"true_np": "1.1.1.2", "true_header": "Introduction", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.2", "max_precision_np": "1.2", "max_f1_np": "1.2"}
+{"true_np": "1.1.1.3", "true_header": "Knowledge base", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1", "max_precision_np": "1.3", "max_f1_np": "1.3"}
+{"true_np": "1.1.1.4", "true_header": "System", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.4", "max_precision_np": "1.4", "max_f1_np": "1.4"}
+{"true_np": "1.1.1.4.1", "true_header": "Question expansion and selection", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.4.1", "max_precision_np": "1.4.1", "max_f1_np": "1.4.1"}
+{"true_np": "1.1.1.5", "true_header": "Experiments", "max_recall": 0.9974619289340102, "max_precision": 1.0, "max_f1": 0.9987293519695045, "max_recall_np": "1.5", "max_precision_np": "1.5", "max_f1_np": "1.5"}
+{"true_np": "1.1.1.5.1", "true_header": "Evaluation on freebase", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.5.1", "max_precision_np": "1.5.1", "max_f1_np": "1.5.1"}
+{"true_np": "1.1.1.5.2", "true_header": "Domain relevance", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.5", "max_precision_np": "1.5.2", "max_f1_np": "1.5.2"}
+{"true_np": "1.1.1.5.3", "true_header": "Evaluation on the domain-specific kb", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.5.3", "max_precision_np": "1.5.3", "max_f1_np": "1.5.3"}
+{"true_np": "1.1.1.6", "true_header": "Conclusion", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.6", "max_precision_np": "1.6", "max_f1_np": "1.6"}
+{"true_np": "1.1.1.7", "true_header": "References", "max_recall": 0.9188311688311688, "max_precision": 1.0, "max_f1": 0.9041533546325877, "max_recall_np": "1.7", "max_precision_np": "3.13", "max_f1_np": "1.7"}
+{"true_np": "1.2", "true_header": "Improving Fine-grained Entity Typing with Entity Linking", "max_recall": 0.9771863117870723, "max_precision": 0.9846743295019157, "max_f1": 0.9809160305343512, "max_recall_np": "2", "max_precision_np": "2", "max_f1_np": "2"}
+{"true_np": "1.2.1", "true_header": "Improving fine-grained entity typing with entity linking hongliang dai 1 , donghong du 1,3 , xin li 2 , and yangqiu song 1 1 department of cse, hkust", "max_recall": 0.0, "max_precision": 0.0, "max_f1": 0.0, "max_recall_np": null, "max_precision_np": null, "max_f1_np": null}
+{"true_np": "1.2.1.1", "true_header": "Abstract", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "2.1", "max_precision_np": "2.1", "max_f1_np": "2.1"}
+{"true_np": "1.2.1.2", "true_header": "Introduction", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "2.2", "max_precision_np": "2.2", "max_f1_np": "2.2"}
+{"true_np": "1.2.1.3", "true_header": "Related work", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "2.3", "max_precision_np": "2.3", "max_f1_np": "2.3"}
+{"true_np": "1.2.1.4", "true_header": "Method", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "2.4", "max_precision_np": "2.4", "max_f1_np": "2.4"}
+{"true_np": "1.2.1.4.1", "true_header": "Fine-grained entity typing model", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "2.4.1", "max_precision_np": "2.4.1", "max_f1_np": "2.4.1"}
+{"true_np": "1.2.1.4.2", "true_header": "Model training", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "2.4.2", "max_precision_np": "2.4.2", "max_f1_np": "2.4.2"}
+{"true_np": "1.2.1.4.3", "true_header": "Entity linking algorithm", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "2.4", "max_precision_np": "2.4.3", "max_f1_np": "2.4.3"}
+{"true_np": "1.2.1.5", "true_header": "Experiments", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "2.5", "max_precision_np": "2.5", "max_f1_np": "2.5"}
+{"true_np": "1.2.1.5.1", "true_header": "Setup", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "2.5.1", "max_precision_np": "2.5.1", "max_f1_np": "2.5.1"}
+{"true_np": "1.2.1.5.2", "true_header": "Compared methods", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "2.5.2", "max_precision_np": "2.5.2", "max_f1_np": "2.5.2"}
+{"true_np": "1.2.1.5.3", "true_header": "Results", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "2.5.3", "max_precision_np": "2.5.3", "max_f1_np": "2.5.3"}
+{"true_np": "1.2.1.6", "true_header": "Conclusions", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "2.6", "max_precision_np": "2.6", "max_f1_np": "2.6"}
+{"true_np": "1.2.1.7", "true_header": "Acknowledgments", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "2.7", "max_precision_np": "2.7", "max_f1_np": "2.7"}
+{"true_np": "1.2.1.8", "true_header": "References", "max_recall": 0.8636363636363636, "max_precision": 1.0, "max_f1": 0.875, "max_recall_np": "2.8", "max_precision_np": "3.13", "max_f1_np": "2.8"}
+{"true_np": "1.3", "true_header": "Enhanced Twitter Sentiment Classification Using Contextual Information", "max_recall": 0.7942386831275721, "max_precision": 1.0, "max_f1": 0.8853211009174312, "max_recall_np": "3", "max_precision_np": "3", "max_f1_np": "3"}
+{"true_np": "1.3.1", "true_header": "Enhanced twitter sentiment classification using contextual information", "max_recall": 0.7898699520876112, "max_precision": 0.9965457685664939, "max_f1": 0.8812523864070256, "max_recall_np": "3", "max_precision_np": "3", "max_f1_np": "3"}
+{"true_np": "1.3.1.1", "true_header": "Abstract", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "3.1", "max_precision_np": "3.1", "max_f1_np": "3.1"}
+{"true_np": "1.3.1.2", "true_header": "Introduction", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "3.2", "max_precision_np": "3.2", "max_f1_np": "3.2"}
+{"true_np": "1.3.1.3", "true_header": "Related work", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "3.3", "max_precision_np": "3.3", "max_f1_np": "3.3"}
+{"true_np": "1.3.1.4", "true_header": "Approach", "max_recall": 0.9962121212121212, "max_precision": 1.0, "max_f1": 0.9981024667931689, "max_recall_np": "3.4", "max_precision_np": "3.4", "max_f1_np": "3.4"}
+{"true_np": "1.3.1.5", "true_header": "Data collection and datasets", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "3.5", "max_precision_np": "3.5", "max_f1_np": "3.5"}
+{"true_np": "1.3.1.5.1", "true_header": "Emoticon-based labelled dataset", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "3.5.1", "max_precision_np": "3.5.1", "max_f1_np": "3.5.1"}
+{"true_np": "1.3.1.5.2", "true_header": "Human labelled dataset", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "3.5.2", "max_precision_np": "3.5.2", "max_f1_np": "3.5.2"}
+{"true_np": "1.3.1.5.3", "true_header": "Data preparation", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "3.5.3", "max_precision_np": "3.5.3", "max_f1_np": "3.5.3"}
+{"true_np": "1.3.1.6", "true_header": "Baseline model", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "3.6", "max_precision_np": "3.6", "max_f1_np": "3.6"}
+{"true_np": "1.3.1.7", "true_header": "Contextual model", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "3.7", "max_precision_np": "3.7", "max_f1_np": "3.7"}
+{"true_np": "1.3.1.8", "true_header": "Sentiment in context", "max_recall": 0.9970501474926253, "max_precision": 1.0, "max_f1": 0.9985228951255538, "max_recall_np": "3.8", "max_precision_np": "3.8", "max_f1_np": "3.8"}
+{"true_np": "1.3.1.8.1", "true_header": "Spatial", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "3.8", "max_precision_np": "3.8.1", "max_f1_np": "3.8.1"}
+{"true_np": "1.3.1.8.2", "true_header": "Temporal", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "3.8", "max_precision_np": "3.8.2", "max_f1_np": "3.8.2"}
+{"true_np": "1.3.1.8.3", "true_header": "Authorial", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "3.8", "max_precision_np": "3.8.3", "max_f1_np": "3.8.3"}
+{"true_np": "1.3.1.9", "true_header": "Results", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "3.9", "max_precision_np": "3.9", "max_f1_np": "3.9"}
+{"true_np": "1.3.1.10", "true_header": "Discussions", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "3.10", "max_precision_np": "3.10", "max_f1_np": "3.10"}
+{"true_np": "1.3.1.11", "true_header": "Conclusions and future work", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "3.11", "max_precision_np": "3.11", "max_f1_np": "3.11"}
+{"true_np": "1.3.1.12", "true_header": "Acknowledgements", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "3.12", "max_precision_np": "3.12", "max_f1_np": "3.12"}

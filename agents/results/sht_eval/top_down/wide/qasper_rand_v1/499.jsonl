@@ -1,0 +1,73 @@
+{"true_np": "1.1", "true_header": "SWDE : A Sub-Word And Document Embedding Based Engine for Clickbait Detection *", "max_recall": 0.03771849126034959, "max_precision": 1.0, "max_f1": 0.07269503546099292, "max_recall_np": "1.2", "max_precision_np": "1.1", "max_f1_np": "1.2"}
+{"true_np": "1.1.1", "true_header": "Swde : a sub-word and document embedding based engine for clickbait detection \u2217", "max_recall": 0.03768382352941176, "max_precision": 1.0, "max_f1": 0.07263064658990256, "max_recall_np": "1.2", "max_precision_np": "1.1", "max_f1_np": "1.2"}
+{"true_np": "1.1.1.1", "true_header": "Abstract", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.3", "max_precision_np": "1.3", "max_f1_np": "1.3"}
+{"true_np": "1.1.1.2", "true_header": "Introduction", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.4", "max_precision_np": "1.4", "max_f1_np": "1.4"}
+{"true_np": "1.1.1.3", "true_header": "Related work", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.5", "max_precision_np": "1.5", "max_f1_np": "1.5"}
+{"true_np": "1.1.1.4", "true_header": "Model architecture", "max_recall": 0.13488372093023257, "max_precision": 1.0, "max_f1": 0.23770491803278693, "max_recall_np": "1.6", "max_precision_np": "1.6", "max_f1_np": "1.6"}
+{"true_np": "1.1.1.4.1", "true_header": "Sub-word level representation", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.7", "max_precision_np": "1.7", "max_f1_np": "1.7"}
+{"true_np": "1.1.1.4.2", "true_header": "Document embeddings", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.8", "max_precision_np": "1.8", "max_f1_np": "1.8"}
+{"true_np": "1.1.1.4.3", "true_header": "Bidirectional lstm with attention", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.9", "max_precision_np": "1.9", "max_f1_np": "1.9"}
+{"true_np": "1.1.1.4.4", "true_header": "Doc2vec enrichment", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.10", "max_precision_np": "1.10", "max_f1_np": "1.10"}
+{"true_np": "1.1.1.4.5", "true_header": "Fusion of components", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.11", "max_precision_np": "1.11", "max_f1_np": "1.11"}
+{"true_np": "1.1.1.4.6", "true_header": "Learning the parameters", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.12", "max_precision_np": "1.12", "max_f1_np": "1.12"}
+{"true_np": "1.1.1.5", "true_header": "Evaluation results", "max_recall": 0.3317757009345794, "max_precision": 1.0, "max_f1": 0.4982456140350877, "max_recall_np": "1.13", "max_precision_np": "1.13", "max_f1_np": "1.13"}
+{"true_np": "1.1.1.5.1", "true_header": "Training", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.14", "max_precision_np": "1.14", "max_f1_np": "1.14"}
+{"true_np": "1.1.1.5.2", "true_header": "Model comparison", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.15", "max_precision_np": "1.15", "max_f1_np": "1.15"}
+{"true_np": "1.1.1.6", "true_header": "Conclusion", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.16", "max_precision_np": "1.16", "max_f1_np": "1.16"}
+{"true_np": "1.1.1.7", "true_header": "References", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.17", "max_precision_np": "1.17", "max_f1_np": "1.17"}
+{"true_np": "1.2", "true_header": "Transforming Wikipedia into Augmented Data for Query-Focused Summarization", "max_recall": 0.06458123107971746, "max_precision": 1.0, "max_f1": 0.1213270142180095, "max_recall_np": "1.19", "max_precision_np": "1.18", "max_f1_np": "1.19"}
+{"true_np": "1.2.1", "true_header": "Transforming wikipedia into augmented data for query-focused summarization", "max_recall": 0.0636182902584493, "max_precision": 1.0, "max_f1": 0.11962616822429906, "max_recall_np": "1.19", "max_precision_np": "1.18", "max_f1_np": "1.19"}
+{"true_np": "1.2.1.1", "true_header": "Ntroduction", "max_recall": 0.9974358974358974, "max_precision": 0.9974358974358974, "max_f1": 0.9974358974358974, "max_recall_np": "1.20", "max_precision_np": "1.20", "max_f1_np": "1.20"}
+{"true_np": "1.2.1.2", "true_header": "Iki r ef : t ransforming w ikipedia into q uery -f ocused s ummarization d ataset", "max_recall": 0.0, "max_precision": 0.0, "max_f1": 0.0, "max_recall_np": null, "max_precision_np": null, "max_f1_np": null}
+{"true_np": "1.2.1.2.1", "true_header": "Data creation", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.22", "max_precision_np": "1.22", "max_f1_np": "1.22"}
+{"true_np": "1.2.1.2.2", "true_header": "Data statistics", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.23", "max_precision_np": "1.23", "max_f1_np": "1.23"}
+{"true_np": "1.2.1.2.3", "true_header": "Human evaluation", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.24", "max_precision_np": "1.24", "max_f1_np": "1.24"}
+{"true_np": "1.2.1.3", "true_header": "Ethodology", "max_recall": 0.15466666666666667, "max_precision": 0.9830508474576272, "max_f1": 0.2672811059907834, "max_recall_np": "1.25", "max_precision_np": "1.25", "max_f1_np": "1.25"}
+{"true_np": "1.2.1.3.1", "true_header": "Input representation", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.26", "max_precision_np": "1.26", "max_f1_np": "1.26"}
+{"true_np": "1.2.1.3.2", "true_header": "Bert encoding layer", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.27", "max_precision_np": "1.27", "max_f1_np": "1.27"}
+{"true_np": "1.2.1.3.3", "true_header": "Query-focused pooling layer", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.28", "max_precision_np": "1.28", "max_f1_np": "1.28"}
+{"true_np": "1.2.1.3.4", "true_header": "Output layer", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.29", "max_precision_np": "1.29", "max_f1_np": "1.29"}
+{"true_np": "1.2.1.3.5", "true_header": "Model training and inference", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.30", "max_precision_np": "1.30", "max_f1_np": "1.30"}
+{"true_np": "1.2.1.3.6", "true_header": "Sparse subnetwork fine-tuning (st)", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.31", "max_precision_np": "1.31", "max_f1_np": "1.31"}
+{"true_np": "1.2.1.4", "true_header": "Xperiments on w iki r ef", "max_recall": 0.0, "max_precision": 0.0, "max_f1": 0.0, "max_recall_np": null, "max_precision_np": null, "max_f1_np": null}
+{"true_np": "1.2.1.4.1", "true_header": "Implementation details", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.33", "max_precision_np": "1.33", "max_f1_np": "1.33"}
+{"true_np": "1.2.1.4.2", "true_header": "Evaluation metrics", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.34", "max_precision_np": "1.34", "max_f1_np": "1.34"}
+{"true_np": "1.2.1.4.3", "true_header": "Settings", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.35", "max_precision_np": "1.35", "max_f1_np": "1.35"}
+{"true_np": "1.2.1.4.4", "true_header": "Baselines", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.36", "max_precision_np": "1.36", "max_f1_np": "1.36"}
+{"true_np": "1.2.1.4.5", "true_header": "Results", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.37", "max_precision_np": "1.37", "max_f1_np": "1.37"}
+{"true_np": "1.2.1.5", "true_header": "Xperiments on duc b enchmarks", "max_recall": 0.0, "max_precision": 0.0, "max_f1": 0.0, "max_recall_np": null, "max_precision_np": null, "max_f1_np": null}
+{"true_np": "1.2.1.5.1", "true_header": "Dataset", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.39", "max_precision_np": "1.39", "max_f1_np": "1.39"}
+{"true_np": "1.2.1.5.2", "true_header": "Settings", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.40", "max_precision_np": "1.40", "max_f1_np": "1.40"}
+{"true_np": "1.2.1.5.3", "true_header": "Baselines", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.41", "max_precision_np": "1.41", "max_f1_np": "1.41"}
+{"true_np": "1.2.1.5.4", "true_header": "Results", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.42", "max_precision_np": "1.42", "max_f1_np": "1.42"}
+{"true_np": "1.2.1.5.5", "true_header": "Human evaluation", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.43", "max_precision_np": "1.43", "max_f1_np": "1.43"}
+{"true_np": "1.2.1.6", "true_header": "Nalyses and d iscussion", "max_recall": 0.0, "max_precision": 0.0, "max_f1": 0.0, "max_recall_np": null, "max_precision_np": null, "max_f1_np": null}
+{"true_np": "1.2.1.6.1", "true_header": "The effectiveness of data augmentation", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.45", "max_precision_np": "1.45", "max_f1_np": "1.45"}
+{"true_np": "1.2.1.6.2", "true_header": "Impact of augmentation data size and quality", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.46", "max_precision_np": "1.46", "max_f1_np": "1.46"}
+{"true_np": "1.2.1.6.3", "true_header": "Effect of pooling methods", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.47", "max_precision_np": "1.47", "max_f1_np": "1.47"}
+{"true_np": "1.2.1.6.4", "true_header": "Subnetwork identification methods", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.48", "max_precision_np": "1.48", "max_f1_np": "1.48"}
+{"true_np": "1.2.1.7", "true_header": "Elated w ork", "max_recall": 0.0, "max_precision": 0.0, "max_f1": 0.0, "max_recall_np": null, "max_precision_np": null, "max_f1_np": null}
+{"true_np": "1.2.1.8", "true_header": "Onclusions", "max_recall": 0.9894736842105263, "max_precision": 0.9894736842105263, "max_f1": 0.9894736842105263, "max_recall_np": "1.50", "max_precision_np": "1.50", "max_f1_np": "1.50"}
+{"true_np": "1.2.1.9", "true_header": "Eferences", "max_recall": 0.998533724340176, "max_precision": 0.998533724340176, "max_f1": 0.998533724340176, "max_recall_np": "1.51", "max_precision_np": "1.51", "max_f1_np": "1.51"}
+{"true_np": "1.3", "true_header": "A Fine-Grained Sentiment Dataset for Norwegian", "max_recall": 0.10679611650485436, "max_precision": 1.0, "max_f1": 0.19298245614035087, "max_recall_np": "1.55", "max_precision_np": "1.52", "max_f1_np": "1.55"}
+{"true_np": "1.3.1", "true_header": "Fine-grained sentiment dataset for norwegian lilja \u00f8vrelid, petter m\u00e6hlum, jeremy barnes, erik velldal", "max_recall": 0.010133333333333333, "max_precision": 1.0, "max_f1": 0.02006335797254488, "max_recall_np": "1.53", "max_precision_np": "1.53", "max_f1_np": "1.53"}
+{"true_np": "1.3.1.1", "true_header": "Abstract", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.54", "max_precision_np": "1.54", "max_f1_np": "1.54"}
+{"true_np": "1.3.1.2", "true_header": "Introduction", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.55", "max_precision_np": "1.55", "max_f1_np": "1.55"}
+{"true_np": "1.3.1.3", "true_header": "Related work", "max_recall": 0.22996515679442509, "max_precision": 1.0, "max_f1": 0.3739376770538244, "max_recall_np": "1.56", "max_precision_np": "1.56", "max_f1_np": "1.56"}
+{"true_np": "1.3.1.3.1", "true_header": "Datasets", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.57", "max_precision_np": "1.57", "max_f1_np": "1.57"}
+{"true_np": "1.3.1.3.2", "true_header": "Modeling", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.58", "max_precision_np": "1.58", "max_f1_np": "1.58"}
+{"true_np": "1.3.1.4", "true_header": "Annotations", "max_recall": 0.2836484983314794, "max_precision": 1.0, "max_f1": 0.44194107452339687, "max_recall_np": "1.65", "max_precision_np": "1.59", "max_f1_np": "1.65"}
+{"true_np": "1.3.1.4.1", "true_header": "Polar expressions", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.60", "max_precision_np": "1.60", "max_f1_np": "1.60"}
+{"true_np": "1.3.1.4.2", "true_header": "Targets", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.61", "max_precision_np": "1.61", "max_f1_np": "1.61"}
+{"true_np": "1.3.1.4.3", "true_header": "Holders", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.62", "max_precision_np": "1.62", "max_f1_np": "1.62"}
+{"true_np": "1.3.1.4.4", "true_header": "General", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.63", "max_precision_np": "1.63", "max_f1_np": "1.63"}
+{"true_np": "1.3.1.4.5", "true_header": "Annotation procedure", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.64", "max_precision_np": "1.64", "max_f1_np": "1.64"}
+{"true_np": "1.3.1.4.6", "true_header": "Inter-annotator agreement", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.65", "max_precision_np": "1.65", "max_f1_np": "1.65"}
+{"true_np": "1.3.1.5", "true_header": "Corpus statistics", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.66", "max_precision_np": "1.66", "max_f1_np": "1.66"}
+{"true_np": "1.3.1.6", "true_header": "Experiments", "max_recall": 0.23552123552123552, "max_precision": 1.0, "max_f1": 0.3071895424836601, "max_recall_np": "1.55", "max_precision_np": "1.67", "max_f1_np": "1.67"}
+{"true_np": "1.3.1.6.1", "true_header": "Experimental setup", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.68", "max_precision_np": "1.68", "max_f1_np": "1.68"}
+{"true_np": "1.3.1.6.2", "true_header": "Results", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.69", "max_precision_np": "1.69", "max_f1_np": "1.69"}
+{"true_np": "1.3.1.7", "true_header": "Future work", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.70", "max_precision_np": "1.70", "max_f1_np": "1.70"}
+{"true_np": "1.3.1.8", "true_header": "Summary", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.71", "max_precision_np": "1.71", "max_f1_np": "1.71"}
+{"true_np": "1.3.1.9", "true_header": "Acknowledgements", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.72", "max_precision_np": "1.72", "max_f1_np": "1.72"}
+{"true_np": "1.3.1.10", "true_header": "Bibliographical references", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.73", "max_precision_np": "1.73", "max_f1_np": "1.73"}

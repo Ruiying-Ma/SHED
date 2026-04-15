@@ -1,0 +1,41 @@
+{"true_np": "1.1", "true_header": "BUILDING A ROBUST SENTIMENT LEXICON WITH (ALMOST) NO RESOURCE", "max_recall": 0.007328990228013029, "max_precision": 1.0, "max_f1": 0.014551333872271626, "max_recall_np": "1.1", "max_precision_np": "1.1", "max_f1_np": "1.1"}
+{"true_np": "1.1.1", "true_header": "Building a robust sentiment lexicon with (almost) no resource mickael rouvier benoit favre", "max_recall": 0.0, "max_precision": 0.0, "max_f1": 0.0, "max_recall_np": null, "max_precision_np": null, "max_f1_np": null}
+{"true_np": "1.1.1.1", "true_header": "Abstract", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.3", "max_precision_np": "1.3", "max_f1_np": "1.3"}
+{"true_np": "1.1.1.2", "true_header": "Introduction", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.4", "max_precision_np": "1.4", "max_f1_np": "1.4"}
+{"true_np": "1.1.1.3", "true_header": "Related work", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.5", "max_precision_np": "1.5", "max_f1_np": "1.5"}
+{"true_np": "1.1.1.4", "true_header": "Approach", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.6", "max_precision_np": "1.6", "max_f1_np": "1.6"}
+{"true_np": "1.1.1.5", "true_header": "Experiments", "max_recall": 0.22388059701492538, "max_precision": 1.0, "max_f1": 0.2987197724039829, "max_recall_np": "1.4", "max_precision_np": "1.7", "max_f1_np": "1.4"}
+{"true_np": "1.1.1.5.1", "true_header": "Corpus and metrics", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.8", "max_precision_np": "1.8", "max_f1_np": "1.8"}
+{"true_np": "1.1.1.5.2", "true_header": "System", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.9", "max_precision_np": "1.9", "max_f1_np": "1.9"}
+{"true_np": "1.1.1.5.3", "true_header": "Results", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.10", "max_precision_np": "1.10", "max_f1_np": "1.10"}
+{"true_np": "1.1.1.6", "true_header": "Conclusions", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.11", "max_precision_np": "1.11", "max_f1_np": "1.11"}
+{"true_np": "1.1.1.7", "true_header": "Acknowledgments", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.12", "max_precision_np": "1.12", "max_f1_np": "1.12"}
+{"true_np": "1.1.1.8", "true_header": "References", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.13", "max_precision_np": "1.13", "max_f1_np": "1.13"}
+{"true_np": "1.2", "true_header": "Rethinking Attribute Representation and Injection for Sentiment Classification", "max_recall": 0.0113882863340564, "max_precision": 1.0, "max_f1": 0.0225201072386059, "max_recall_np": "1.15", "max_precision_np": "1.14", "max_f1_np": "1.15"}
+{"true_np": "1.2.1", "true_header": "Rethinking attribute representation and injection for sentiment classification", "max_recall": 0.011278195488721804, "max_precision": 1.0, "max_f1": 0.022304832713754646, "max_recall_np": "1.15", "max_precision_np": "1.14", "max_f1_np": "1.15"}
+{"true_np": "1.2.1.1", "true_header": "Abstract", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.16", "max_precision_np": "1.16", "max_f1_np": "1.16"}
+{"true_np": "1.2.1.2", "true_header": "Introduction", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.17", "max_precision_np": "1.17", "max_f1_np": "1.17"}
+{"true_np": "1.2.1.3", "true_header": "How and where to inject attributes?", "max_recall": 0.03204047217537943, "max_precision": 1.0, "max_f1": 0.06209150326797385, "max_recall_np": "1.18", "max_precision_np": "1.18", "max_f1_np": "1.18"}
+{"true_np": "1.2.1.3.1", "true_header": "The base model", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.19", "max_precision_np": "1.19", "max_f1_np": "1.19"}
+{"true_np": "1.2.1.3.2", "true_header": "How: attribute representation", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.20", "max_precision_np": "1.20", "max_f1_np": "1.20"}
+{"true_np": "1.2.1.3.3", "true_header": "Where: attribute injection", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.21", "max_precision_np": "1.21", "max_f1_np": "1.21"}
+{"true_np": "1.2.1.4", "true_header": "Experiments", "max_recall": 0.22883597883597884, "max_precision": 1.0, "max_f1": 0.37244348762109797, "max_recall_np": "1.26", "max_precision_np": "1.7", "max_f1_np": "1.26"}
+{"true_np": "1.2.1.4.1", "true_header": "General setup", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.23", "max_precision_np": "1.23", "max_f1_np": "1.23"}
+{"true_np": "1.2.1.4.2", "true_header": "Sentiment classification", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.24", "max_precision_np": "1.24", "max_f1_np": "1.24"}
+{"true_np": "1.2.1.4.3", "true_header": "Attribute transfer", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.25", "max_precision_np": "1.25", "max_f1_np": "1.25"}
+{"true_np": "1.2.1.4.4", "true_header": "Where should attributes be injected?", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.26", "max_precision_np": "1.26", "max_f1_np": "1.26"}
+{"true_np": "1.2.1.5", "true_header": "Related work", "max_recall": 0.3333333333333333, "max_precision": 1.0, "max_f1": 0.24747474747474746, "max_recall_np": "1.38", "max_precision_np": "1.27", "max_f1_np": "1.4"}
+{"true_np": "1.2.1.5.1", "true_header": "Attributes for sentiment classification", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.28", "max_precision_np": "1.28", "max_f1_np": "1.28"}
+{"true_np": "1.2.1.5.2", "true_header": "User/product attributes for nlp tasks", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.29", "max_precision_np": "1.29", "max_f1_np": "1.29"}
+{"true_np": "1.2.1.6", "true_header": "Conclusions", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.30", "max_precision_np": "1.30", "max_f1_np": "1.30"}
+{"true_np": "1.2.1.7", "true_header": "Acknowledgments", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.31", "max_precision_np": "1.31", "max_f1_np": "1.31"}
+{"true_np": "1.2.1.8", "true_header": "References", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.32", "max_precision_np": "1.32", "max_f1_np": "1.32"}
+{"true_np": "1.3", "true_header": "Human-like machine thinking: Language guided imagination", "max_recall": 0.012903225806451613, "max_precision": 1.0, "max_f1": 0.025477707006369425, "max_recall_np": "1.34", "max_precision_np": "1.33", "max_f1_np": "1.34"}
+{"true_np": "1.3.1", "true_header": "Human-like machine thinking: language guided imagination", "max_recall": 0.01288244766505636, "max_precision": 1.0, "max_f1": 0.02543720190779014, "max_recall_np": "1.34", "max_precision_np": "1.33", "max_f1_np": "1.34"}
+{"true_np": "1.3.1.1", "true_header": "Abstract", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.36", "max_precision_np": "1.36", "max_f1_np": "1.36"}
+{"true_np": "1.3.1.2", "true_header": "Introduction", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.37", "max_precision_np": "1.37", "max_f1_np": "1.37"}
+{"true_np": "1.3.1.3", "true_header": "Related work", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.38", "max_precision_np": "1.27", "max_f1_np": "1.38"}
+{"true_np": "1.3.1.4", "true_header": "Experiment", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.39", "max_precision_np": "1.39", "max_f1_np": "1.39"}
+{"true_np": "1.3.1.5", "true_header": "Discussion", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.40", "max_precision_np": "1.40", "max_f1_np": "1.40"}
+{"true_np": "1.3.1.6", "true_header": "Conclusion", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.41", "max_precision_np": "1.41", "max_f1_np": "1.41"}
+{"true_np": "1.3.1.7", "true_header": "References", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.42", "max_precision_np": "1.42", "max_f1_np": "1.42"}

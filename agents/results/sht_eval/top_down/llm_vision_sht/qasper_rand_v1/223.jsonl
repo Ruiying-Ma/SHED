@@ -1,0 +1,48 @@
+{"true_np": "1.1", "true_header": "Offensive Language Identification in Greek", "max_recall": 0.9959100204498977, "max_precision": 0.9945541184479237, "max_f1": 0.9952316076294278, "max_recall_np": "1", "max_precision_np": "1", "max_f1_np": "1"}
+{"true_np": "1.1.1", "true_header": "Offensive language identification in greek", "max_recall": 0.9777327935222672, "max_precision": 0.9863852961198094, "max_f1": 0.9820399864452728, "max_recall_np": "1", "max_precision_np": "1", "max_f1_np": "1"}
+{"true_np": "1.1.1.1", "true_header": "Abstract", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.1", "max_precision_np": "1.1", "max_f1_np": "1.1"}
+{"true_np": "1.1.1.2", "true_header": "Introduction", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.2", "max_precision_np": "1.2", "max_f1_np": "1.2"}
+{"true_np": "1.1.1.3", "true_header": "Related work", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.3", "max_precision_np": "1.3", "max_f1_np": "1.3"}
+{"true_np": "1.1.1.3.1", "true_header": "Non-english datasets", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.3.1", "max_precision_np": "1.3.1", "max_f1_np": "1.3.1"}
+{"true_np": "1.1.1.4", "true_header": "The ogtd dataset", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.4", "max_precision_np": "1.4", "max_f1_np": "1.4"}
+{"true_np": "1.1.1.4.1", "true_header": "Pre-processing and annotation", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.4.1", "max_precision_np": "1.4.1", "max_f1_np": "1.4.1"}
+{"true_np": "1.1.1.5", "true_header": "Methods", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.5", "max_precision_np": "1.5", "max_f1_np": "1.5"}
+{"true_np": "1.1.1.5.1", "true_header": "Models", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.5", "max_precision_np": "1.5.1", "max_f1_np": "1.5.1"}
+{"true_np": "1.1.1.5.1.1", "true_header": "Classical machine learning models", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.5.1.1", "max_precision_np": "1.5.1.1", "max_f1_np": "1.5.1.1"}
+{"true_np": "1.1.1.5.1.2", "true_header": "Deep learning models", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.5", "max_precision_np": "1.5.1.2", "max_f1_np": "1.5.1.2"}
+{"true_np": "1.1.1.5.2", "true_header": "Results", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.5", "max_precision_np": "1.5.2", "max_f1_np": "1.5.2"}
+{"true_np": "1.1.1.5.3", "true_header": "Discussion", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.5.3", "max_precision_np": "1.5.3", "max_f1_np": "1.5.3"}
+{"true_np": "1.1.1.6", "true_header": "Conclusion", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.6", "max_precision_np": "1.6", "max_f1_np": "1.6"}
+{"true_np": "1.1.1.6.1", "true_header": "Ongoing - ogtd v2.0 and offenseval 2020", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.6.1", "max_precision_np": "1.6.1", "max_f1_np": "1.6.1"}
+{"true_np": "1.1.1.7", "true_header": "Acknowledgements", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.7", "max_precision_np": "1.7", "max_f1_np": "1.7"}
+{"true_np": "1.1.1.8", "true_header": "Bibliographical references", "max_recall": 0.8942857142857142, "max_precision": 0.9513677811550152, "max_f1": 0.9219440353460971, "max_recall_np": "1.8", "max_precision_np": "1.8", "max_f1_np": "1.8"}
+{"true_np": "1.2", "true_header": "r/Fakeddit: A New Multimodal Benchmark Dataset for Fine-grained Fake News Detection", "max_recall": 0.9908779931584949, "max_precision": 0.9847025495750709, "max_f1": 0.9877806194941745, "max_recall_np": "4", "max_precision_np": "4", "max_f1_np": "4"}
+{"true_np": "1.2.1", "true_header": "R/fakeddit: a new multimodal benchmark dataset for fine-grained fake news detection", "max_recall": 0.9739524348810872, "max_precision": 0.9745042492917847, "max_f1": 0.9742282639478901, "max_recall_np": "4", "max_precision_np": "4", "max_f1_np": "4"}
+{"true_np": "1.2.1.1", "true_header": "Abstract", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "4.1", "max_precision_np": "4.1", "max_f1_np": "4.1"}
+{"true_np": "1.2.1.2", "true_header": "Introduction", "max_recall": 0.9937304075235109, "max_precision": 0.9968553459119497, "max_f1": 0.9952904238618524, "max_recall_np": "4.2", "max_precision_np": "4.2", "max_f1_np": "4.2"}
+{"true_np": "1.2.1.3", "true_header": "Related work", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "4.3", "max_precision_np": "4.3", "max_f1_np": "4.3"}
+{"true_np": "1.2.1.3.1", "true_header": "Text datasets", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "4.3.1", "max_precision_np": "4.3.1", "max_f1_np": "4.3.1"}
+{"true_np": "1.2.1.3.2", "true_header": "Image datasets", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "4.3.2", "max_precision_np": "4.3.2", "max_f1_np": "4.3.2"}
+{"true_np": "1.2.1.3.3", "true_header": "Fact-checking", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "4.3.3", "max_precision_np": "4.3.3", "max_f1_np": "4.3.3"}
+{"true_np": "1.2.1.4", "true_header": "Fakeddit", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "4", "max_precision_np": "4.4", "max_f1_np": "4.4"}
+{"true_np": "1.2.1.4.1", "true_header": "Data collection", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "4.4.1", "max_precision_np": "4.4.1", "max_f1_np": "4.4.1"}
+{"true_np": "1.2.1.4.2", "true_header": "Quality assurance", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "4.4.2", "max_precision_np": "4.4.2", "max_f1_np": "4.4.2"}
+{"true_np": "1.2.1.4.3", "true_header": "Labeling", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "4.4.3", "max_precision_np": "4.4.3", "max_f1_np": "4.4.3"}
+{"true_np": "1.2.1.4.4", "true_header": "Dataset analysis", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "4.4.4", "max_precision_np": "4.4.4", "max_f1_np": "4.4.4"}
+{"true_np": "1.2.1.5", "true_header": "Experiments 4.1. fake news detection", "max_recall": 0.0, "max_precision": 0.0, "max_f1": 0.0, "max_recall_np": null, "max_precision_np": null, "max_f1_np": null}
+{"true_np": "1.2.1.5.1", "true_header": "Experiment settings", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "4.5.2", "max_precision_np": "4.5.2", "max_f1_np": "4.5.2"}
+{"true_np": "1.2.1.5.2", "true_header": "Results", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "4.5.3", "max_precision_np": "4.5.3", "max_f1_np": "4.5.3"}
+{"true_np": "1.2.1.6", "true_header": "Error analysis", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "4.6", "max_precision_np": "4.6", "max_f1_np": "4.6"}
+{"true_np": "1.2.1.7", "true_header": "Conclusion", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "4.7", "max_precision_np": "4.7", "max_f1_np": "4.7"}
+{"true_np": "1.2.1.8", "true_header": "Acknowledgments", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "4.8", "max_precision_np": "4.8", "max_f1_np": "4.8"}
+{"true_np": "1.2.1.9", "true_header": "Bibliographical references", "max_recall": 0.8778004073319755, "max_precision": 0.8979166666666667, "max_f1": 0.8877445932028837, "max_recall_np": "4.9", "max_precision_np": "4.9", "max_f1_np": "4.9"}
+{"true_np": "1.2.1.10", "true_header": "Appendix", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "4.10", "max_precision_np": "4.10", "max_f1_np": "4.10"}
+{"true_np": "1.3", "true_header": "Extrapolation in NLP", "max_recall": 0.8074127906976745, "max_precision": 1.0, "max_f1": 0.8934459187776438, "max_recall_np": "5", "max_precision_np": "5", "max_f1_np": "5"}
+{"true_np": "1.3.1", "true_header": "Extrapolation in nlp", "max_recall": 0.8056562726613488, "max_precision": 1.0, "max_f1": 0.8923694779116466, "max_recall_np": "5", "max_precision_np": "5", "max_f1_np": "5"}
+{"true_np": "1.3.1.1", "true_header": "Abstract", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "5.1", "max_precision_np": "5.1", "max_f1_np": "5.1"}
+{"true_np": "1.3.1.2", "true_header": "Introduction", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "5.2", "max_precision_np": "5.2", "max_f1_np": "5.2"}
+{"true_np": "1.3.1.3", "true_header": "Four ways to learn the identity function", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "5.3", "max_precision_np": "5.3", "max_f1_np": "5.3"}
+{"true_np": "1.3.1.4", "true_header": "Global symmetries in natural language inference", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "5.4", "max_precision_np": "5.4", "max_f1_np": "5.4"}
+{"true_np": "1.3.1.5", "true_header": "Global structure in word embeddings", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "5.5", "max_precision_np": "5.5", "max_f1_np": "5.5"}
+{"true_np": "1.3.1.6", "true_header": "Conclusions", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "5.6", "max_precision_np": "5.6", "max_f1_np": "5.6"}
+{"true_np": "1.3.1.7", "true_header": "Acknowledgments", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "5.7", "max_precision_np": "5.7", "max_f1_np": "5.7"}

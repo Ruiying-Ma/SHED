@@ -1,0 +1,48 @@
+{"true_np": "1.1", "true_header": "Generating Major Types of Chinese Classical Poetry in a Uniformed Framework", "max_recall": 0.99122106943336, "max_precision": 0.99122106943336, "max_f1": 0.99122106943336, "max_recall_np": "1", "max_precision_np": "1", "max_f1_np": "1"}
+{"true_np": "1.1.1", "true_header": "Generating major types of chinese classical poetry in a uniformed framework", "max_recall": 0.9817893903404592, "max_precision": 0.9896249002394254, "max_f1": 0.985691573926868, "max_recall_np": "1", "max_precision_np": "1", "max_f1_np": "1"}
+{"true_np": "1.1.1.1", "true_header": "Abstract", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.1", "max_precision_np": "1.1", "max_f1_np": "1.1"}
+{"true_np": "1.1.1.2", "true_header": "Introduction", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.2", "max_precision_np": "1.2", "max_f1_np": "1.2"}
+{"true_np": "1.1.1.2.1", "true_header": "Shi", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.2", "max_precision_np": "1.2.1", "max_f1_np": "1.2.1"}
+{"true_np": "1.1.1.2.2", "true_header": "Ci", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1", "max_precision_np": "1.2.2", "max_f1_np": "1.2.2"}
+{"true_np": "1.1.1.3", "true_header": "Related work", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.3", "max_precision_np": "1.3", "max_f1_np": "1.3"}
+{"true_np": "1.1.1.4", "true_header": "Model", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.4", "max_precision_np": "1.4", "max_f1_np": "1.4"}
+{"true_np": "1.1.1.4.1", "true_header": "Pre-processing", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.4.1", "max_precision_np": "1.4.1", "max_f1_np": "1.4.1"}
+{"true_np": "1.1.1.4.2", "true_header": "Basic model", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.4.2", "max_precision_np": "1.4.2", "max_f1_np": "1.4.2"}
+{"true_np": "1.1.1.4.3", "true_header": "Enhanced model", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.4.3", "max_precision_np": "1.4.3", "max_f1_np": "1.4.3"}
+{"true_np": "1.1.1.5", "true_header": "Experiment", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.5", "max_precision_np": "1.5", "max_f1_np": "1.5"}
+{"true_np": "1.1.1.5.1", "true_header": "Experiment setup", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.5.1", "max_precision_np": "1.5.1", "max_f1_np": "1.5.1"}
+{"true_np": "1.1.1.5.2", "true_header": "Performance comparison of the two models in form", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.5.2", "max_precision_np": "1.5.2", "max_f1_np": "1.5.2"}
+{"true_np": "1.1.1.5.3", "true_header": "Effect of the stanza separation", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.5.3", "max_precision_np": "1.5.3", "max_f1_np": "1.5.3"}
+{"true_np": "1.1.1.5.4", "true_header": "Case observation", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.5.4", "max_precision_np": "1.5.4", "max_f1_np": "1.5.4"}
+{"true_np": "1.1.1.6", "true_header": "Conclusion and future works", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.6", "max_precision_np": "1.6", "max_f1_np": "1.6"}
+{"true_np": "1.1.1.7", "true_header": "Acknowledgements", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.7", "max_precision_np": "1.7", "max_f1_np": "1.7"}
+{"true_np": "1.1.1.8", "true_header": "References", "max_recall": 0.8798449612403101, "max_precision": 1.0, "max_f1": 0.9061876247504989, "max_recall_np": "1.8", "max_precision_np": "3.11", "max_f1_np": "1.8"}
+{"true_np": "1.2", "true_header": "On NMT Search Errors and Model Errors: Cat Got Your Tongue?", "max_recall": 0.9915611814345991, "max_precision": 0.9915611814345991, "max_f1": 0.9915611814345991, "max_recall_np": "2", "max_precision_np": "2", "max_f1_np": "2"}
+{"true_np": "1.2.1", "true_header": "On nmt search errors and model errors: cat got your tongue?", "max_recall": 0.9731993299832495, "max_precision": 0.980590717299578, "max_f1": 0.9768810424548129, "max_recall_np": "2", "max_precision_np": "2", "max_f1_np": "2"}
+{"true_np": "1.2.1.1", "true_header": "Abstract", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "2.1", "max_precision_np": "2.1", "max_f1_np": "2.1"}
+{"true_np": "1.2.1.2", "true_header": "Introduction", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "2.2", "max_precision_np": "2.2", "max_f1_np": "2.2"}
+{"true_np": "1.2.1.3", "true_header": "Exact inference for neural models", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "2.3", "max_precision_np": "2.3", "max_f1_np": "2.3"}
+{"true_np": "1.2.1.4", "true_header": "Results without length constraints", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "2.4", "max_precision_np": "2.4", "max_f1_np": "2.4"}
+{"true_np": "1.2.1.5", "true_header": "Results with length constraints", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "2.5", "max_precision_np": "2.5", "max_f1_np": "2.5"}
+{"true_np": "1.2.1.6", "true_header": "Related work", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "2.6", "max_precision_np": "2.6", "max_f1_np": "2.6"}
+{"true_np": "1.2.1.7", "true_header": "Conclusion", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "2.7", "max_precision_np": "2.7", "max_f1_np": "2.7"}
+{"true_np": "1.2.1.8", "true_header": "Acknowledgments", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "2.8", "max_precision_np": "2.8", "max_f1_np": "2.8"}
+{"true_np": "1.2.1.9", "true_header": "References", "max_recall": 0.9145077720207254, "max_precision": 1.0, "max_f1": 0.9216710182767625, "max_recall_np": "2.9", "max_precision_np": "3.11", "max_f1_np": "2.9"}
+{"true_np": "1.3", "true_header": "The Rapidly Changing Landscape of Conversational Agents", "max_recall": 0.9100383982446517, "max_precision": 1.0, "max_f1": 0.9529006318207928, "max_recall_np": "3", "max_precision_np": "3", "max_f1_np": "3"}
+{"true_np": "1.3.1", "true_header": "The rapidly changing landscape of conversational agents", "max_recall": 0.9031028851388133, "max_precision": 1.0, "max_f1": 0.9490846681922196, "max_recall_np": "3", "max_precision_np": "3", "max_f1_np": "3"}
+{"true_np": "1.3.1.1", "true_header": "Abstract", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "3.1", "max_precision_np": "3.1", "max_f1_np": "3.1"}
+{"true_np": "1.3.1.2", "true_header": "Introduction", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "3.2", "max_precision_np": "3.2", "max_f1_np": "3.2"}
+{"true_np": "1.3.1.3", "true_header": "Early techniques", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "3.3", "max_precision_np": "3.3", "max_f1_np": "3.3"}
+{"true_np": "1.3.1.4", "true_header": "Machine learning methods", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "3.4", "max_precision_np": "3.4", "max_f1_np": "3.4"}
+{"true_np": "1.3.1.5", "true_header": "Neural models", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "3.5", "max_precision_np": "3.5", "max_f1_np": "3.5"}
+{"true_np": "1.3.1.5.1", "true_header": "Sequence to sequence approaches for dialogue modelling", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "3.5.1", "max_precision_np": "3.5.1", "max_f1_np": "3.5.1"}
+{"true_np": "1.3.1.5.2", "true_header": "Language model based approaches for dialogue modelling", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "3.5.2", "max_precision_np": "3.5.2", "max_f1_np": "3.5.2"}
+{"true_np": "1.3.1.6", "true_header": "Knowledge augmented models", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "3.6", "max_precision_np": "3.6", "max_f1_np": "3.6"}
+{"true_np": "1.3.1.7", "true_header": "Reinforcement learning based models", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "3.7", "max_precision_np": "3.7", "max_f1_np": "3.7"}
+{"true_np": "1.3.1.7.1", "true_header": "Initial reinforcement methods", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "3.7.1", "max_precision_np": "3.7.1", "max_f1_np": "3.7.1"}
+{"true_np": "1.3.1.7.2", "true_header": "End-to-end reinforcement learning of dialogue agents for information access", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "3.7.2", "max_precision_np": "3.7.2", "max_f1_np": "3.7.2"}
+{"true_np": "1.3.1.7.3", "true_header": "Actor-critic algorithm", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "3.7.3", "max_precision_np": "3.7.3", "max_f1_np": "3.7.3"}
+{"true_np": "1.3.1.7.4", "true_header": "Using generative adversarial network", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "3.7.4", "max_precision_np": "3.7.4", "max_f1_np": "3.7.4"}
+{"true_np": "1.3.1.8", "true_header": "Approaches to human-ize agents", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "3.8", "max_precision_np": "3.8", "max_f1_np": "3.8"}
+{"true_np": "1.3.1.9", "true_header": "Evaluation methods", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "3.9", "max_precision_np": "3.9", "max_f1_np": "3.9"}
+{"true_np": "1.3.1.10", "true_header": "Conclusion", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "3.10", "max_precision_np": "3.10", "max_f1_np": "3.10"}

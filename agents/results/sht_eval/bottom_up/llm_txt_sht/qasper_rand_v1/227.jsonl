@@ -1,0 +1,49 @@
+{"true_np": "1.1", "true_header": "Scaling in Words on Twitter", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1", "max_precision_np": "1", "max_f1_np": "1"}
+{"true_np": "1.1.1", "true_header": "Scaling in words on twitter", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1", "max_precision_np": "1", "max_f1_np": "1"}
+{"true_np": "1.1.1.1", "true_header": "Abstract", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.1", "max_precision_np": "1.1", "max_f1_np": "1.1"}
+{"true_np": "1.1.1.2", "true_header": "Introduction", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.2", "max_precision_np": "1.2", "max_f1_np": "1.2"}
+{"true_np": "1.1.1.3", "true_header": "Methods", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.3", "max_precision_np": "1.3", "max_f1_np": "1.3"}
+{"true_np": "1.1.1.3.1", "true_header": "Twitter and census data", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.3.1", "max_precision_np": "1.3.1", "max_f1_np": "1.3.1"}
+{"true_np": "1.1.1.3.2", "true_header": "Urban scaling", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.3.2", "max_precision_np": "1.3.2", "max_f1_np": "1.3.2"}
+{"true_np": "1.1.1.3.3", "true_header": "Zipf \u2019s law", "max_recall": 0.0, "max_precision": 0.0, "max_f1": 0.0, "max_recall_np": null, "max_precision_np": null, "max_f1_np": null}
+{"true_np": "1.1.1.4", "true_header": "Results and discussion", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.4", "max_precision_np": "1.4", "max_f1_np": "1.4"}
+{"true_np": "1.1.1.4.1", "true_header": "Scaling of aggregate metrics", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.4.1", "max_precision_np": "1.4.1", "max_f1_np": "1.4.1"}
+{"true_np": "1.1.1.4.2", "true_header": "Individual scaling of words", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.4.2", "max_precision_np": "1.4.2", "max_f1_np": "1.4.2"}
+{"true_np": "1.1.1.4.3", "true_header": "Zipf \u2019s law on twitter", "max_recall": 0.0, "max_precision": 0.0, "max_f1": 0.0, "max_recall_np": null, "max_precision_np": null, "max_f1_np": null}
+{"true_np": "1.1.1.4.4", "true_header": "Vocabulary size change", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.4.4", "max_precision_np": "1.4.4", "max_f1_np": "1.4.4"}
+{"true_np": "1.1.1.5", "true_header": "Conclusion", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.5", "max_precision_np": "1.5", "max_f1_np": "1.5"}
+{"true_np": "1.1.1.5.1", "true_header": "Data availability", "max_recall": 0.875, "max_precision": 1.0, "max_f1": 0.9333333333333333, "max_recall_np": "1.6", "max_precision_np": "1.6", "max_f1_np": "1.6"}
+{"true_np": "1.1.1.5.2", "true_header": "Competing interests", "max_recall": 0.875, "max_precision": 1.0, "max_f1": 0.9333333333333333, "max_recall_np": "1.7", "max_precision_np": "1.7", "max_f1_np": "1.7"}
+{"true_np": "1.1.1.5.3", "true_header": "Author contributions", "max_recall": 0.875, "max_precision": 1.0, "max_f1": 0.9333333333333333, "max_recall_np": "1.8", "max_precision_np": "1.8", "max_f1_np": "1.8"}
+{"true_np": "1.1.1.5.4", "true_header": "Funding", "max_recall": 0.8571428571428571, "max_precision": 1.0, "max_f1": 0.923076923076923, "max_recall_np": "1.9", "max_precision_np": "1.9", "max_f1_np": "1.9"}
+{"true_np": "1.1.1.5.5", "true_header": "Research ethics", "max_recall": 0.875, "max_precision": 1.0, "max_f1": 0.9333333333333333, "max_recall_np": "1.10", "max_precision_np": "1.10", "max_f1_np": "1.10"}
+{"true_np": "1.1.1.5.6", "true_header": "Animal ethics", "max_recall": 0.875, "max_precision": 1.0, "max_f1": 0.9333333333333333, "max_recall_np": "1.11", "max_precision_np": "1.11", "max_f1_np": "1.11"}
+{"true_np": "1.1.1.5.7", "true_header": "Permission to carry out fieldwork", "max_recall": 0.9090909090909091, "max_precision": 1.0, "max_f1": 0.9523809523809523, "max_recall_np": "1.12", "max_precision_np": "1.12", "max_f1_np": "1.12"}
+{"true_np": "1.1.1.5.8", "true_header": "Acknowledgements", "max_recall": 0.8571428571428571, "max_precision": 1.0, "max_f1": 0.923076923076923, "max_recall_np": "1.13", "max_precision_np": "1.13", "max_f1_np": "1.13"}
+{"true_np": "1.1.1.6", "true_header": "References", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "1.14", "max_precision_np": "1.14", "max_f1_np": "1.14"}
+{"true_np": "1.2", "true_header": "Lexical Bias In Essay Level Prediction", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "2", "max_precision_np": "2", "max_f1_np": "2"}
+{"true_np": "1.2.1", "true_header": "Lexical bias in essay level prediction", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "2", "max_precision_np": "2", "max_f1_np": "2"}
+{"true_np": "1.2.1.1", "true_header": "Abstract", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "2.1", "max_precision_np": "2.1", "max_f1_np": "2.1"}
+{"true_np": "1.2.1.2", "true_header": "Introduction", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "2.2", "max_precision_np": "2.2", "max_f1_np": "2.2"}
+{"true_np": "1.2.1.3", "true_header": "Problem definition", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "2.3", "max_precision_np": "2.3", "max_f1_np": "2.3"}
+{"true_np": "1.2.1.4", "true_header": "Feature extaction", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "2.4", "max_precision_np": "2.4", "max_f1_np": "2.4"}
+{"true_np": "1.2.1.5", "true_header": "Model selection and evaluation", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "2.5", "max_precision_np": "2.5", "max_f1_np": "2.5"}
+{"true_np": "1.2.1.6", "true_header": "Conclusion", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "2.6", "max_precision_np": "2.6", "max_f1_np": "2.6"}
+{"true_np": "1.2.1.7", "true_header": "Acknoledgements", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "2.7", "max_precision_np": "2.7", "max_f1_np": "2.7"}
+{"true_np": "1.2.1.8", "true_header": "References", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "2.8", "max_precision_np": "2.8", "max_f1_np": "2.8"}
+{"true_np": "1.3", "true_header": "MultiBooked: A Corpus of Basque and Catalan Hotel Reviews Annotated for Aspect-level Sentiment Classification", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "3", "max_precision_np": "3", "max_f1_np": "3"}
+{"true_np": "1.3.1", "true_header": "Multibooked: a corpus of basque and catalan hotel reviews annotated for aspect-level sentiment classification.", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "3", "max_precision_np": "3", "max_f1_np": "3"}
+{"true_np": "1.3.1.1", "true_header": "Abstract", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "3.1", "max_precision_np": "3.1", "max_f1_np": "3.1"}
+{"true_np": "1.3.1.2", "true_header": "Introduction", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "3.2", "max_precision_np": "3.2", "max_f1_np": "3.2"}
+{"true_np": "1.3.1.3", "true_header": "Related work", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "3.3", "max_precision_np": "3.3", "max_f1_np": "3.3"}
+{"true_np": "1.3.1.4", "true_header": "Data collection", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "3.4", "max_precision_np": "3.4", "max_f1_np": "3.4"}
+{"true_np": "1.3.1.5", "true_header": "Annotation", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "3.5", "max_precision_np": "3.5", "max_f1_np": "3.5"}
+{"true_np": "1.3.1.5.1", "true_header": "Guidelines", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "3.5.1", "max_precision_np": "3.5.1", "max_f1_np": "3.5.1"}
+{"true_np": "1.3.1.5.2", "true_header": "Process", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "3.5.2", "max_precision_np": "3.5.2", "max_f1_np": "3.5.2"}
+{"true_np": "1.3.1.5.3", "true_header": "Dataset characteristics", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "3.5.3", "max_precision_np": "3.5.3", "max_f1_np": "3.5.3"}
+{"true_np": "1.3.1.5.4", "true_header": "Agreement scores", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "3.5.4", "max_precision_np": "3.5.4", "max_f1_np": "3.5.4"}
+{"true_np": "1.3.1.6", "true_header": "Difficult examples", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "3.6", "max_precision_np": "3.6", "max_f1_np": "3.6"}
+{"true_np": "1.3.1.7", "true_header": "Benchmarks", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "3.7", "max_precision_np": "3.7", "max_f1_np": "3.7"}
+{"true_np": "1.3.1.8", "true_header": "Conclusion", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "3.8", "max_precision_np": "3.8", "max_f1_np": "3.8"}
+{"true_np": "1.3.1.9", "true_header": "Bibliographical references", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "3.9", "max_precision_np": "3.9", "max_f1_np": "3.9"}
+{"true_np": "1.3.1.10", "true_header": "Language resource references", "max_recall": 1.0, "max_precision": 1.0, "max_f1": 1.0, "max_recall_np": "3.10", "max_precision_np": "3.10", "max_f1_np": "3.10"}
