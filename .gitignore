@@ -3,6 +3,13 @@ data/*
 data.tar.gz
 !data/example
 run_zendb.py
+agents/results
+batches*/
+graphrag-pypi/
+graphrag/pypi/
+hipporag/*
+!hipporag/query_solution/
+*.error
 ### Python
 
 # Byte-compiled / optimized / DLL files

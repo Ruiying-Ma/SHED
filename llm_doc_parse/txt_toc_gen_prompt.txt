@@ -1,0 +1,29 @@
+Task:
+Generate a detailed and structured Table of Contents (ToC) for the given document. The ToC must accurately capture **all headers** (including the document title, section headers, subsection headers, sub-subsection headers, etc.) and clearly represent their **hierarchical structure**.
+
+Instructions:
+1. Do not modify any headers.
+   - Use the exact text of each header as it appears in the document.
+2. Use the following Markdown format to show hierarchy:
+
+   ```markdown
+   # Title  
+   ## Section Header  
+   ### Subsection Header  
+   #### Sub-subsection Header  
+   ...
+   ```
+
+   - The number of `#` symbols indicates the hierarchy level.
+   - Include one space between the `#` symbols and the header text.
+   - Preserve the order in which the headers appear in the document.
+
+3. Output only the Table of Contents, with nothing else.
+
+You are given the following document:
+[Begin of the document]
+{doc}  
+[End of the document]
+
+Your Table of Contents:
+<your ToC here>

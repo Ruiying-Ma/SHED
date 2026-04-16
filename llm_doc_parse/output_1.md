@@ -1,0 +1,438 @@
+<figure>
+
+CITY OF MALIBU
+Incorporated March 28, 1991
+
+</figure>
+
+
+# Public Works Commission Agenda Report
+
+Public Works
+Commission Meeting
+01-27-21
+
+Item
+4.A.
+
+
+<table>
+<tr>
+<td>To:</td>
+<td>Chair Merrick and Members of the Public Works Commission</td>
+</tr>
+<tr>
+<td>Prepared by:</td>
+<td>Robert DuBoux, Public Works Director/City Engineer</td>
+</tr>
+<tr>
+<td>Date prepared:</td>
+<td>January 22, 2021 Meeting date: January 27, 2021</td>
+</tr>
+<tr>
+<td>Subject:</td>
+<td>Capital Improvement Projects and Disaster Recovery Projects Status Report</td>
+</tr>
+</table>
+
+
+RECOMMENDED ACTION: Receive and file report on the status of the City's current and
+upcoming Capital Improvements Projects and Disaster Recovery Projects.
+
+DISCUSSION: Staff will provide a status update on the following active projects in the
+Fiscal Year 2020-2021 Capital Improvement Program:
+
+
+## Capital Improvement Projects (Design)
+
+Marie Canyon Green Streets
+
+\> Updates:
+
+· The City has recently received Measure W funds to complete this
+project. Staff is working on the project plans to prepare for public
+bidding.
+
+\> Project Schedule:
+
+· Complete Design: April 2021
+
+· Begin Construction: Summer 2021
+
+PCH Median Improvements Project
+
+\> Updates:
+
+· Consultant is working on the final design. In March, the City be
+seeking proposals from consultants to perform construction
+management.
+
+\> Project Schedule:
+
+· Complete Design: February 2021
+
+· Begin Construction: Fall 2021
+
+<!-- PageFooter="Agenda Item # 4.A." -->
+<!-- PageNumber="Page 1 of 6" -->
+<!-- PageBreak -->
+
+
+## PCH Signal Synchronization System Improvements Project
+
+\> Updates:
+
+· 65% design package was submitted to Caltrans in November 2020.
+
+· Consultant is working on final design documents.
+
+\> Project Schedule:
+
+· Complete Final Design: May 2021
+
+· Advertise: July 2021
+
+· Award Contract and Begin Construction: September 2021
+
+
+## Civic Center Stormwater Diversion Structure
+
+\> Updates:
+
+· A Los Angeles County Flood Control maintenance agreement is
+required for this project. Staff is waiting for the County's approval of
+the agreement.
+
+\> Project Schedule:
+
+· Complete Design: Completed. Awaiting maintenance agreement from
+the County.
+
+" Begin Construction: Estimated Summer 2021
+
+
+## Westward Beach Road Improvements Project
+
+\> Updates:
+
+· The project requires coordination with Los Angeles County Beaches
+and Harbor. Staff is working out the final details of the project with
+the County and will be finalizing the design.
+
+\> Project Schedule:
+
+· Complete Design: Spring 2021
+
+· Begin Construction: Fall 2021
+
+
+## Civic Center Water Treatment Facility Phase 2
+
+\> Updates:
+
+· Project is at the 65% design phase.
+
+· Working with the Planning Department to send project to Planning
+Commission in February.
+
+" City has submitted a project application for the State Revolving Fund
+program.
+
+" An assessment engineer has been hired by the City and a new
+assessment district will be created.
+
+\> Project Schedule:
+
+· Complete Design: December 2021
+
+· Begin Construction: March 2022
+
+
+## Malibu Park Drainage Improvements
+
+\> Updates:
+
+· Staff is making minor corrections to the project plans to reduce the
+overall project costs.
+
+<!-- PageFooter="Agenda Item # 4.A." -->
+<!-- PageNumber="Page 2 of 6" -->
+<!-- PageBreak -->
+
+Project Schedule:
+
+· Complete Design: Spring 2021
+
+" Begin Construction: Summer 2021
+
+
+## Capital Improvement Projects (Construction)
+
+
+### City Hall Roof Replacement
+
+\> Updates: Bids were received on November 18, 2020 and Council awarded
+the project to the low bidder on January 11, 2021.
+
+\> Project Schedule: February - April 2021
+
+
+### Bluffs Park Workout Station
+
+\> Updates: The contractor is waiting for the delivery of the new workout
+station equipment.
+
+\> Project Schedule: November 2020 - March 2021
+
+
+### Civic Center Way Improvements
+
+Updates:
+
+· Work Hours: Monday through Friday 7:00AM to 4:00PM, Saturdays
+7:00AM to 4:00PM
+
+" The contractor is currently working at the section between Vista
+Pacifica and the condos on Civic Center Way. This phase of work will
+require the temporary closure of Civic Center Way. Portions of the
+curb and gutter have been placed and the contactor is working on the
+proposed retaining wall. This portion of work is anticipated to be
+completed in early February 2021.
+
+" The contractor is also working on the curb, gutter and storm drain
+installation on Civic Center Way from Webb Way to the condos. This
+portion of the work may require temporary road closures. However, it
+is anticipated that this phase of the project will be completed at the
+end of February 2021.
+
+Project Schedule: August 2020 through March 2021
+
+
+## Capital Improvement Projects (Completed)
+
+
+### Storm Drain Trash Screens
+
+\> Project Description: This project consisted of installing trash screens in City
+owned catch basins. The proposed trash screens will reduce the amount of
+trash from being discharged into the ocean.
+
+
+### Dume Drive and Fernhill Drive Speed Humps Project
+
+Project Description: This project consists of installation of speed humps on
+Dume Drive and Fernhill Drive from Grayfox Street to Cliffside Drive.
+
+<!-- PageFooter="Agenda Item # 4.A." -->
+<!-- PageNumber="Page 3 of 6" -->
+<!-- PageBreak -->
+
+
+## Capital Improvement Projects (Not Started)
+
+Annual Street Maintenance
+
+\> Project Description: This project provides for the reconstruction and
+maintenance of City streets.
+
+\> Estimated Schedule:
+
+· Complete Design: Spring 2021
+
+· Begin Construction: Summer 2021
+
+Bluffs Park Shade Structure
+
+\> Project Description: This project consists of the installation of four single-
+post shade structures at Malibu Bluffs Park
+
+\> Estimated Schedule:
+
+· Complete Design: Summer 2021
+
+· Begin Construction: Fall 2021
+
+
+### Vehicle Protection Devices
+
+\> Project Description: Per Malibu Municipal Code Section 17.48.070 requires
+vehicle impact protection devices to be installed for all parking spaces
+located adjacent to any outdoor pedestrian seating area. There are two
+locations within the City's right-of-way and City-owned property that would
+require a vehicle impact protection device.
+
+Estimated Schedule:
+
+· Complete Design: Summer 2021
+
+· Begin Construction: Fall 2021
+
+Malibu Road Slope Repairs
+
+\> Project Description: The existing slope adjacent to the beach access stairs
+at 24712 Malibu Road has been eroded and caused damage to Malibu
+Road.
+
+\> Estimated Schedule:
+
+· Complete Design: Fall 2021
+
+· Begin Construction: Winter 2021
+
+
+### Disaster Projects (Design)
+
+Broad Beach Road Water Quality Infrastructure Repairs
+
+\> Updates:
+
+· The project consultant has started the design of the project.
+
+\> Project Schedule:
+
+· Complete Design: Summer 2021
+
+· Begin Construction: Fall 2021
+
+<!-- PageFooter="Agenda Item # 4.A." -->
+<!-- PageNumber="Page 4 of 6" -->
+<!-- PageBreak -->
+
+
+### Latigo Canyon Road Roadway/Retaining Wall Improvements (FEMA/CalOES Project)
+
+Updates:
+
+· Staff is finalizing the design of this project.
+
+· Staff is also working with FEMA/CalOES to substitute the existing
+timber with non-combustible materials.
+
+\> Project Schedule
+
+· Complete Design: Spring 2021
+
+· Begin Construction: Summer 2021
+
+Trancas Canyon Park Planting and Irrigation Repairs (FEMA/CalOES Project)
+
+\> Updates:
+
+· The project consultant has started the design of this project.
+
+\> Project Schedule
+
+· Complete Design: Summer 2021
+
+· Begin Construction: Summer/Fall 2021
+
+Trancas Canyon Park Slope Stabilization Project (CalOES Project)
+
+\> Updates:
+
+· The project consultant has started the design of this project.
+
+\> Project Schedule
+
+· Complete Design: Spring 2021
+
+· Begin Construction: Summer/Fall 2021
+
+Birdview Avenue Improvements (FEMA/CalOES Project)
+
+\> Updates:
+
+· The design of this project has been included in the Malibu Park
+Drainage Improvements project.
+
+\> Project Schedule
+
+· Complete Design: Spring 2021
+
+· Begin Construction: Summer 2021
+
+Disaster Projects (Construction)
+
+None at this time
+
+
+## Disaster Projects (Completed)
+
+Guardrail Replacement Citywide (FEMA/CalOES Project)
+
+\> Project Description: This project consisted of replacing the damaged
+guardrail throughout the City as a result of the Woolsey Fire.
+
+Corral Canyon Road Bridge Repairs (FEMA/CalOES Project)
+
+\> Project Description: This project consisted of replacing fire damaged
+existing fencing and repairing the damaged embankment adjacent to the
+bridge.
+
+<!-- PageFooter="Agenda Item # 4.A." -->
+<!-- PageNumber="Page 5 of 6" -->
+<!-- PageBreak -->
+
+
+## Corral Canyon Culvert Repairs (FEMA/CalOES Project)
+
+Project Description: This project consisted of replacing a portion of Corral
+Canyon Road that was damaged from a failed storm drain.
+
+
+## Disaster Projects (Not Started)
+
+
+### Clover Heights Storm Drain (FEMA Project)
+
+\> Project Description: This project consists of design and construction of a
+few storm drain on Clover Heights. The existing storm drain facility ends at
+the intersection of Clover Heights and Harvester Road. During storms, this
+intersection floods and causes debris to block the road. An extended storm
+drain towards the end of Clover Heights will help eliminate this issue.
+
+\> Estimated Schedule:
+
+· Complete Design: Spring 2022
+
+· Begin Construction: Summer 2022
+
+
+### Latigo Canyon Road Culvert Repairs (FEMA/CalOES Project)
+
+\> Project Description: This project consists of repairing the existing storm
+drain on Latigo Canyon Road located approximately 2,500 feet from PCH
+that was damaged by the Woolsey Fire.
+
+\> Estimated Schedule:
+
+· Complete Design: Winter 2021
+
+· Begin Construction: Spring 2022
+
+
+### Encinal Canyon Road Drainage Improvements (FEMA/CalOES Project)
+
+\> Project Description: This project consists of repairing damage storm drain
+facilities and roadway embankments that were damaged by the Woolsey
+Fire.
+
+\> Estimated Schedule:
+
+· Complete Design: Winter 2021
+
+" Begin Construction: Spring 2022
+
+
+### Outdoor Warning Sirens (FEMA)
+
+\> Project Description: This project will be funded through a grant from FEMA
+after the Wooley Fire. The project consists o hiring a consultant to develop
+a plan that includes the evaluation of a siren system and possible locations.
+
+\> Estimated Schedule:
+
+· Complete Design: Dependent upon final grant approval from FEMA
+
+<!-- PageFooter="Agenda Item # 4.A." -->
+<!-- PageNumber="Page 6 of 6" -->
