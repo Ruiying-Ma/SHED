@@ -70,7 +70,7 @@ if __name__ == "__main__":
         # 'gpt-5-mini'
     ]:
 
-        for dataset in DATASET_LIST[2:]:
+        for dataset in DATASET_LIST[3:]:
             print(f"Baseline: {dataset}")
             queries_path = Path(DATA_ROOT_FOLDER) / dataset / "queries.json"
             with open(queries_path, 'r') as file:

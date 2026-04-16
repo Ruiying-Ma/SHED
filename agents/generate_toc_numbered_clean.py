@@ -10,6 +10,8 @@ import time
 from config import DATASET_LIST, DATA_ROOT_FOLDER
 from structured_rag.utils import get_nondummy_ancestors
 from agents.utils import get_toc_level
+from agents.listing import strip_leading_numbering
+from agents.merge_toc_numbered_clean import remove_company_name
 
 MAX_OUTPUT_TOKENS = 150
 
@@ -58,7 +60,19 @@ def toc_format(dataset, toc_nodes):
             else:
                 heading = raw_heading
 
-        toc_lines += f"{level_str} | {heading.strip()}\n"
+        if dataset == "civic_rand_v1":
+            formatted_heading = heading.strip()
+        elif dataset == "contract_rand_v0_1":
+            formatted_heading = strip_leading_numbering(heading.strip())
+        elif dataset == "finance_rand_v1":
+            formatted_heading = remove_company_name(file_name, strip_leading_numbering(heading.strip()))
+        elif dataset == "qasper_rand_v1":
+            formatted_heading = strip_leading_numbering(heading.strip())
+        else:
+            raise ValueError(f"Unknown dataset: {dataset}")
+
+
+        toc_lines += f"{level_str} | {formatted_heading}\n"
 
     return toc_lines.strip()
 
@@ -87,7 +101,7 @@ def generate_toc_in_context(dataset, file_name, sht_type):
         DATA_ROOT_FOLDER,
         dataset,
         sht_type,
-        "toc_numbered",
+        "toc_numbered_clean",
     )
     os.makedirs(dst_path, exist_ok=True)
     with open(os.path.join(dst_path, file_name + ".txt"), "w") as f:
@@ -100,15 +114,31 @@ if __name__ == "__main__":
         # 'wide', 
         # 'grobid', 
         # '',
-        "llm_txt_sht"
+        "llm_txt_sht",
+        'llm_vision_sht',
+        # "intrinsic"
         ]:
-        for dataset in DATASET_LIST:
-        # for dataset in ['office']:
+        for dataset in DATASET_LIST[2:]:
             print(f"{dataset}")
+
+            node_clutsering_folder = os.path.join(
+                DATA_ROOT_FOLDER,
+                dataset,
+                sht_type,
+                "node_clustering",
+            )
+
+            if dataset == 'finance_rand_v1':
+                start_id = 74
+                end_id = 100
+            elif dataset == 'qasper_rand_v1':
+                start_id = 290
+                end_id = 500
             
-            # pdf_folder = os.path.join(DATA_ROOT_FOLDER, dataset, "pdf")
-            for file_name in sorted(os.listdir(pdf_folder)):
-                file_name = file_name.replace(".pdf", "")
+            # for file_name in sorted(os.listdir(node_clutsering_folder)):
+            for file_id in range(start_id, end_id):
+                file_name = str(file_id)
+                # file_name = file_name.replace(".json", "")
                 print(f"\t{file_name}")
                 generate_toc_in_context(dataset, file_name, sht_type)
         

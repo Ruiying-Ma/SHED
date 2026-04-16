@@ -14,7 +14,7 @@ import re
 import operator
 
 from config import DATASET_LIST, DATA_ROOT_FOLDER, get_max_window
-from agents.utils import get_system_message, get_timestamp, get_toc_textspan, get_toc_numbered, get_result_path, LLMResponse, grep_search
+from agents.utils import get_system_message, get_result_path
 
 from langchain.agents import create_agent
 from langchain.agents.middleware import ModelRetryMiddleware, ModelCallLimitMiddleware, ToolRetryMiddleware, AgentMiddleware, AgentState 
@@ -138,6 +138,7 @@ If there are no more matching chunks to return for the given `pattern`, the tool
     matches = list(re.finditer(pattern, doc_txt))
     matched_chunks = []
     last_chunk_end = -1
+    window_len = 500
     for m in matches:
         start_idx = m.start()
         end_idx = m.end()
@@ -146,11 +147,14 @@ If there are no more matching chunks to return for the given `pattern`, the tool
             continue # skip matches that are fully contained within the previously returned chunk to avoid redundancy
 
         # expand to include surrounding context, with the match near the center
-        chunk_start = max(0, start_idx - 1000)
-        chunk_end = min(len(doc_txt), end_idx + 1000)
+        chunk_start = max(0, start_idx - window_len)
+        chunk_end = min(len(doc_txt), end_idx + window_len)
         matched_chunk = doc_txt[chunk_start:chunk_end]
         matched_chunks.append(matched_chunk)
         last_chunk_end = chunk_end
+
+    if len(matched_chunks) == 0:
+        return "No more matches found."
     
     new_patterns_cursor = [[p, c] for p, c in patterns_cursor] + [[pattern, 0]]
     return Command(
@@ -259,30 +263,31 @@ if __name__ == "__main__":
     for sht_type in [
         'intrinsic',
     ]:
-        for model in ["gpt-5.4", 'gpt-5-mini']:
-            for dataset in DATASET_LIST:
+        for model in ["gpt-5.4"]:
+            for dataset in DATASET_LIST[2:]:
                 print(f"{AGENT_NAME} ({model}, {sht_type}): {dataset}")
                 queries_path = Path(DATA_ROOT_FOLDER) / dataset / "queries.json"
                 with open(queries_path, 'r') as file:
                     queries = json.load(file)
                 
-                num_queries = int(len(queries) * 0.2)
 
                 result_jsonl_path = get_result_path(dataset, model, AGENT_NAME, sht_type)
 
-                if dataset == "civic":
-                    start_id = 1
+                if dataset == "civic_rand_v1":
+                    start_id = 12
                     end_id = len(queries)
-                elif dataset == 'finance':
+                elif dataset == 'finance_rand_v1':
+                    start_id = 74
+                    end_id = 100
+                elif dataset == 'contract_rand_v0_1':
                     start_id = 0
-                    end_id = 74
+                    end_id = 248
+                elif dataset == 'qasper_rand_v1':
+                    start_id = 290
+                    end_id = 500
                 else:
-                    start_id = 0
-                    end_id = num_queries
+                    raise ValueError(f"Unknown dataset: {dataset}")
 
                 for qinfo in queries[start_id:end_id]:
-                    if dataset == "civic" and qinfo['id'] in INVALID_CIVIC_QUERY_IDS:
-                        print(f"\tquery id: {qinfo['id']}: SKIPPED")
-                        continue
                     print(f"\tquery id: {qinfo['id']}")
                     run_agent_per_query(dataset, qinfo, model, sht_type)

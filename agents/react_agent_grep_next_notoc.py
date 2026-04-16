@@ -34,7 +34,7 @@ from agents.react_agent import(
 )
 from agents.accuracy import INVALID_CIVIC_QUERY_IDS
 
-DEBUG = False
+DEBUG = True
 
 AGENT_NAME = "react_agent_grep_next_notoc"
 
@@ -148,10 +148,10 @@ If there are no more minimum matching sections to return for the given `pattern`
     )
 
 
-def run_agent_per_query(dataset, qinfo, model):
+def run_agent_per_query(dataset, qinfo, model, sht_type):
     query = qinfo["query"]
-    toc_numbered : str = get_toc_numbered(dataset, qinfo["file_name"])
-    toc_textspan = get_toc_textspan(dataset, qinfo["file_name"])
+    toc_numbered : str = get_toc_numbered(dataset, qinfo["file_name"], sht_type)
+    toc_textspan = get_toc_textspan(dataset, qinfo["file_name"], sht_type)
     assert len(toc_numbered.strip().splitlines()) == len(toc_textspan)
 
     if DEBUG == True:
@@ -178,7 +178,7 @@ def run_agent_per_query(dataset, qinfo, model):
 
     runnable_config = {"configurable": {"thread_id": "1"}, "recursion_limit": 10000} 
 
-    answer_path = get_result_path(dataset, model, AGENT_NAME)
+    answer_path = get_result_path(dataset, model, AGENT_NAME, sht_type)
     msg_path = Path(str(answer_path).replace("/core/", "/other/messages/")).parent / dataset / f"query{qinfo['id']}.txt"
     os.makedirs(msg_path.parent, exist_ok=True)
     checkpoint_path = Path(str(msg_path).replace("/messages/", "/checkpoints/").replace(".txt", ".pkl"))
@@ -242,30 +242,40 @@ def run_agent_per_query(dataset, qinfo, model):
 
         
 if __name__ == "__main__":
-    for model in ["gpt-5.4", "gpt-5-mini"]:
-        for dataset in DATASET_LIST[3:4]:
-            print(f"{AGENT_NAME} ({model}): {dataset}")
-            queries_path = Path(DATA_ROOT_FOLDER) / dataset / "queries.json"
-            with open(queries_path, 'r') as file:
-                queries = json.load(file)
-            
-            num_queries = int(len(queries) * 0.2)
+    # for sht_type in [
+    #     'intrinsic'
+    # ]:
+    #     for model in ["gpt-5.4", "gpt-5-mini"]:
+    #         for dataset in DATASET_LIST[-1:]:
+    #             print(f"{AGENT_NAME} ({model}, {sht_type}): {dataset}")
+    #             queries_path = Path(DATA_ROOT_FOLDER) / dataset / "queries.json"
+    #             with open(queries_path, 'r') as file:
+    #                 queries = json.load(file)
+                
+    #             num_queries = int(len(queries) * 0.2)
 
-            result_jsonl_path = get_result_path(dataset, model, AGENT_NAME)
+    #             result_jsonl_path = get_result_path(dataset, model, AGENT_NAME, sht_type)
 
-            if dataset == "civic":
-                start_id = 0
-                end_id = len(queries)
-            elif dataset == 'finance':
-                start_id = 30
-                end_id = 74
-            else:
-                start_id = 0
-                end_id = num_queries
+    #             if dataset in ["civic", "civic_new"]:
+    #                 start_id = 0
+    #                 end_id = len(queries)
+    #             elif dataset == 'finance':
+    #                 start_id = 0
+    #                 end_id = 74
+    #             else:
+    #                 start_id = 0
+    #                 end_id = num_queries
 
-            for qinfo in queries[start_id:end_id]:
-                if dataset == "civic" and qinfo['id'] in INVALID_CIVIC_QUERY_IDS:
-                    print(f"\tquery id: {qinfo['id']}: SKIPPED")
-                    continue
-                print(f"\tquery id: {qinfo['id']}")
-                run_agent_per_query(dataset, qinfo, model)
+    #             for qinfo in queries[:1]:
+    #                 if dataset == "civic" and qinfo['id'] in INVALID_CIVIC_QUERY_IDS:
+    #                     print(f"\tquery id: {qinfo['id']}: SKIPPED")
+    #                     continue
+    #                 print(f"\tquery id: {qinfo['id']}")
+    #                 run_agent_per_query(dataset, qinfo, model, sht_type)
+
+
+    pattern = "type|capital|disaster"
+    with open("/home/ruiying/SHTRAG/data/civic/intrinsic/toc_textspan/01262022-1835.json", 'r') as file:
+        toc_textspan = json.load(file)
+    matched_section_ids = grep_search(pattern, toc_textspan)
+    print(matched_section_ids)

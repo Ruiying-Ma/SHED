@@ -14,7 +14,7 @@ import re
 import operator
 
 from config import DATASET_LIST, DATA_ROOT_FOLDER, get_max_window
-from agents.utils import get_toc_system_message, get_system_message, get_timestamp, get_toc_textspan, get_toc_numbered, get_result_path, LLMResponse, grep_search, get_toc_greptext
+from agents.utils import get_toc_system_message, get_system_message, get_timestamp, get_toc_textspan_clean, get_toc_numbered_clean, get_result_path, LLMResponse, grep_search, get_toc_greptext_clean
 
 from langchain.agents import create_agent
 from langchain.agents.middleware import ModelRetryMiddleware, ModelCallLimitMiddleware, ToolRetryMiddleware, AgentMiddleware, AgentState 

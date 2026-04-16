@@ -26,6 +26,8 @@ from langgraph.types import Command
 
 DEBUG = False
 
+AGENT_NAME = "react_agent"
+
 class DocAgentContext(TypedDict):
     toc_textspan: dict
 
@@ -154,11 +156,11 @@ def create_model(model_name):
         raise NotImplementedError(f"Model provider {model_provider} is not supported.")
     return model
 
-def run_agent_per_query(dataset, qinfo, model):
+def run_agent_per_query(dataset, qinfo, model, sht_type):
     query = qinfo["query"]
-    toc_numbered : str = get_toc_numbered(dataset, qinfo["file_name"])
-    toc_textspan = get_toc_textspan(dataset, qinfo["file_name"])
-    assert len(toc_numbered.strip().splitlines()) == len(toc_textspan)
+    toc_numbered : str = get_toc_numbered(dataset, qinfo["file_name"], sht_type)
+    toc_textspan = get_toc_textspan(dataset, qinfo["file_name"], sht_type)
+    # assert len(toc_numbered.strip().splitlines()) == len(toc_textspan)
 
     if DEBUG == True:
         print(get_agent_system_message(dataset).content)
@@ -167,7 +169,7 @@ def run_agent_per_query(dataset, qinfo, model):
         model=create_model(model),
         tools=[read_section],
         middleware=[
-            ModelCallLimitMiddleware(thread_limit=len(toc_textspan), exit_behavior="error"),
+            ModelCallLimitMiddleware(thread_limit=100, exit_behavior="error"),
             DocAgentModelCallTimestampMiddleware(),
             ModelRetryMiddleware(on_failure='error'),
             DocAgentToolArtifactMiddleware(),
@@ -181,7 +183,7 @@ def run_agent_per_query(dataset, qinfo, model):
 
     runnable_config = {"configurable": {"thread_id": "1"}, "recursion_limit": 10000} 
 
-    answer_path = get_result_path(dataset, model, "react_agent")
+    answer_path = get_result_path(dataset, model, AGENT_NAME, sht_type)
     msg_path = Path(str(answer_path).replace("/core/", "/other/messages/")).parent / dataset / f"query{qinfo['id']}.txt"
     os.makedirs(msg_path.parent, exist_ok=True)
     checkpoint_path = Path(str(msg_path).replace("/messages/", "/checkpoints/").replace(".txt", ".pkl"))
@@ -244,30 +246,49 @@ def run_agent_per_query(dataset, qinfo, model):
 
         
 if __name__ == "__main__":
-    for model in ['gpt-5.4', 'gpt-5-mini']:
-        for dataset in DATASET_LIST[3:4]:
-            print(f"ReAct DocAgent: {dataset}")
-            queries_path = Path(DATA_ROOT_FOLDER) / dataset / "queries.json"
-            with open(queries_path, 'r') as file:
-                queries = json.load(file)
-            
-            num_queries = int(len(queries) * 0.2)
+    for sht_type in [
+        # 'deep',
+        'wide',
+        # 'grobid',
+        '',
+        # 'llm_txt_sht',
+        # 'intrinsic'
+    ]:
+        for model in ['gpt-5.4']:
+            for dataset in DATASET_LIST[1:-1]:
+            # for dataset in ['office']:
+                print(f"{AGENT_NAME} ({model}, {sht_type}): {dataset}")
+                queries_path = Path(DATA_ROOT_FOLDER) / dataset / "queries.json"
+                with open(queries_path, 'r') as file:
+                    queries = json.load(file)
+                
+                num_queries = int(len(queries) * 0.2)
 
-            result_jsonl_path = get_result_path(dataset, model, "react_agent")
+                result_jsonl_path = get_result_path(dataset, model, AGENT_NAME, sht_type)
+                
+                # failed_query_ids = []
+                # with open(result_jsonl_path, 'r') as file:
+                #     for l in file:
+                #         record = json.loads(l.strip())
+                #         if record['is_success'] == False and "ModelCallLimitExceededError" in record['message']:
+                #             failed_query_ids.append(record['id'])
 
-            if dataset == "civic":
-                start_id = 1
-                end_id = len(queries)
-            elif dataset == "finance":
-                start_id = 30
-                end_id = 74
-            else:
-                start_id = 0
-                end_id = num_queries
+                # print(len(failed_query_ids))
+                # for qinfo in queries:
+                #     if qinfo['id'] in failed_query_ids:
+                #         print(f"\tquery id: {qinfo['id']}")
+                #         run_agent_per_query(dataset, qinfo, model, sht_type)
 
-            for qinfo in queries[start_id:end_id]:
-                print(f"\tquery id: {qinfo['id']}")
-                run_agent_per_query(dataset, qinfo, model)
+                if dataset in ['civic', "civic_new", 'office']:
+                    start_id = 0
+                    end_id = len(queries)
+                elif dataset == "finance":
+                    start_id = 0
+                    end_id = 74
+                else:
+                    start_id = 0
+                    end_id = num_queries
 
-
-    # print(get_agent_system_message("qasper").content)
+                for qinfo in queries[start_id:end_id]:
+                    print(f"\tquery id: {qinfo['id']}")
+                    run_agent_per_query(dataset, qinfo, model, sht_type)

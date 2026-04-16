@@ -29,8 +29,21 @@ CLIENT = AzureOpenAI(
 
 RESULTS_DIR = Path(__file__).parent / "results"
 
-def get_result_path(dataset, model, method):
-    result_path = RESULTS_DIR / "core" / model / method / f"{dataset}.jsonl"
+def get_result_path(dataset, model, method, sht_type):
+    M_SHT_NAME = {
+        'intrinsic': 'true_sht',
+        'deep': 'deep_sht',
+        'wide': 'wide_sht',
+        'grobid': 'grobid_sht',
+        '': 'shed_sht',
+        'llm_txt_sht': "llm_txt_sht",
+        'llm_vision_sht': "llm_vision_sht",
+    }
+    assert sht_type in M_SHT_NAME, f"{sht_type} is not a valid sht_type"
+    if method == "baseline":
+        result_path = RESULTS_DIR / "core" / model / method / f"{dataset}.jsonl"
+    else:
+        result_path = RESULTS_DIR / "core" / model / M_SHT_NAME[sht_type] / method / f"{dataset}.jsonl"
     os.makedirs(result_path.parent, exist_ok=True)
     return result_path
 
@@ -87,37 +100,94 @@ def get_llm_response(messages, model, reasoning_effort=None) -> LLMResponse:
     )
 
 def get_system_message(dataset):
-    if dataset == "civic":
-        msg = "You are an assistant for analyzing government agenda reports on civic projects. Your task is to answer a query using only the information provided in the document.\n\n" \
-        "HINTS:\n" \
-        "- The status of a project must be one of the following: 'not started', design', 'construction', 'completed'.\n" \
-        "- The type of a project must be one of the following: 'capital', 'disaster'.\n\n" \
-        "INSTRUCTIONS:\n" \
-        "- If the query cannot be answered based on the provided document, respond with 'none'.\n" \
-        "- Use only the information in the document.\n" \
-        "- Return only the exact answer to the query; do not include any additional text."
-    elif dataset == "contract":
-        msg = "You are a helpful assistant for analyzing Non-Disclosure Agreement (NDA) contracts. Your task is to determine whether a given hypothesis is supported by the contract.\n\n" \
-        "INSTRUCTIONS:\n" \
-        "- If the hypothesis is supported by the contract, respond with: `Entailment`\n" \
-        "- If the hypothesis is contradicted by the contract, respond with: `Contradiction`\n" \
-        "- If the hypothesis is not mentioned in the contract, respond with: `NotMentioned`\n" \
-        "- Use only the information provided in the contract.\n" \
-        "- Return only the exact answer to the query; do not include any additional text."
-    elif dataset == "finance":
+    # if dataset == "civic":
+    #     msg = "You are an assistant for analyzing government agenda reports on civic projects. Your task is to answer a query using only the information provided in the document.\n\n" \
+    #     "HINTS:\n" \
+    #     "- The status of a project must be one of the following: 'not started', design', 'construction', 'completed'.\n" \
+    #     "- The type of a project must be one of the following: 'capital', 'disaster'.\n\n" \
+    #     "INSTRUCTIONS:\n" \
+    #     "- If the query cannot be answered based on the provided document, respond with 'none'.\n" \
+    #     "- Use only the information in the document.\n" \
+    #     "- Return only the exact answer to the query; do not include any additional text."
+    # elif dataset == "contract":
+    #     msg = "You are a helpful assistant for analyzing Non-Disclosure Agreement (NDA) contracts. Your task is to determine whether a given hypothesis is supported by the contract.\n\n" \
+    #     "INSTRUCTIONS:\n" \
+    #     "- If the hypothesis is supported by the contract, respond with: `Entailment`\n" \
+    #     "- If the hypothesis is contradicted by the contract, respond with: `Contradiction`\n" \
+    #     "- If the hypothesis is not mentioned in the contract, respond with: `NotMentioned`\n" \
+    #     "- Use only the information provided in the contract.\n" \
+    #     "- Return only the exact answer to the query; do not include any additional text."
+    # elif dataset == "finance":
+    #     msg = "You are a helpful assistant for analyzing financial documents. Your task is to answer a query using only the information provided in the documents.\n\n" \
+    #     "INSTRUCTIONS:\n" \
+    #     "- Your answer must contain no more than 3 sentences.\n" \
+    #     "- Use only the information in the documents.\n" \
+    #     "- Return only the exact answer to the query; do not include any additional text."
+    # elif dataset == "finance_rand":
+    #     msg = "You are a helpful assistant for analyzing financial documents. Your task is to answer a query using only the information provided in the document.\n\n" \
+    #     "INSTRUCTIONS:\n" \
+    #     "- Your answer must contain no more than 3 sentences.\n" \
+    #     "- Use only the information in the document.\n" \
+    #     "- Return only the exact answer to the query; do not include any additional text."
+    if dataset == "finance_rand_v1":
         msg = "You are a helpful assistant for analyzing financial documents. Your task is to answer a query using only the information provided in the document.\n\n" \
         "INSTRUCTIONS:\n" \
         "- Your answer must contain no more than 3 sentences.\n" \
         "- Use only the information in the document.\n" \
         "- Return only the exact answer to the query; do not include any additional text."
-    elif dataset == "qasper":
+    # elif dataset == "qasper":
+    #     msg = "You are a helpful assistant for analyzing research papers in Natural Language Processing (NLP). Your task is to answer a query using only the information provided in the document.\n\n" \
+    #     "INSTRUCTIONS:\n" \
+    #     "- Your answer must contain no more than 3 sentences.\n" \
+    #     "- If the query cannot be answered based on the provided document, respond with 'Unanswerable'.\n" \
+    #     "- Use only the information in the document.\n" \
+    #     "- Return only the exact answer to the query; do not include any additional text."
+    elif dataset == "qasper_rand_v1":
         msg = "You are a helpful assistant for analyzing research papers in Natural Language Processing (NLP). Your task is to answer a query using only the information provided in the document.\n\n" \
         "INSTRUCTIONS:\n" \
         "- Your answer must contain no more than 3 sentences.\n" \
         "- If the query cannot be answered based on the provided document, respond with 'Unanswerable'.\n" \
         "- Use only the information in the document.\n" \
         "- Return only the exact answer to the query; do not include any additional text."
-
+    # elif dataset == "civic_new":
+    #     msg = "You are an helpful assistant for analyzing government agenda reports on civic projects. Your task is to answer a query using only the information provided in the document.\n\n" \
+    #     # "HINTS:\n" \
+    #     # "- The status of a project must be one of the following: 'not started', design', 'construction', 'completed'.\n" \
+    #     # "- The type of a project must be one of the following: 'capital', 'disaster'.\n\n" \
+    #     "INSTRUCTIONS:\n" \
+    #     "- If the query cannot be answered based on the provided document, respond with 'none'.\n" \
+    #     "- Use only the information in the document.\n" \
+    #     "- Return only the exact answer to the query; do not include any additional text."
+    # elif dataset == 'office':
+    #     msg = "You are a helpful assistant for analyzing treasury bulletins. Your task is to answer a query using only the information provided in the document.\n\n" \
+    #     "INSTRUCTIONS:\n" \
+    #     "- Your answer must contain no more than 3 sentences.\n" \
+    #     "- Use only the information in the document.\n" \
+    #     "- Return only the exact answer to the query; do not include any additional text."
+    # elif dataset in ["contract_new", 'contract_rand', 'contract_rand_v1', 'contract_rand_v2', 'contract_rand_v3']:
+    #     msg = "You are a helpful assistant for analyzing Non-Disclosure Agreement (NDA) contracts. Your task is to answer a query using only the information provided in the document.\n\n" \
+    #     "INSTRUCTIONS:\n" \
+    #     "- You response must be one of the following three options: `Entailment`, `Contradiction` or `NotMentioned`.\n" \
+    #     "- Use only the information provided in the contract.\n" \
+    #     "- Return only the exact answer to the query; do not include any additional text."
+    elif dataset in ['contract_rand_v0_1']:
+        msg = "You are a helpful assistant for analyzing Non-Disclosure Agreement (NDA) contracts. Your task is to answer a query using only the information provided in the document.\n\n" \
+        "INSTRUCTIONS:\n" \
+        "- If the query cannot be answered based on the provided document, respond with 'none'.\n" \
+        "- Use only the information in the document.\n" \
+        "- Return only the exact answer to the query; do not include any additional text."
+    # elif dataset == "civic_rand":
+    #     msg = "You are an helpful assistant for analyzing government agenda reports on civic projects. Your task is to answer a query using only the information provided in the document.\n\n" \
+    #     "INSTRUCTIONS:\n" \
+    #     "- If the query cannot be answered based on the provided document, respond with 'none'.\n" \
+    #     "- Use only the information in the document.\n" \
+    #     "- Return only the exact answer to the query; do not include any additional text."
+    elif dataset == "civic_rand_v1":
+        msg = "You are an helpful assistant for analyzing government agenda reports on civic projects. Your task is to answer a query using only the information provided in the document.\n\n" \
+        "INSTRUCTIONS:\n" \
+        "- If the query cannot be answered based on the provided document, respond with 'none'.\n" \
+        "- Use only the information in the document.\n" \
+        "- Return only the exact answer to the query; do not include any additional text."
     else:
         raise NotImplementedError(f"dataset {dataset} is not supported")
     
@@ -244,11 +314,63 @@ def pretty_repr(messages):
 
 
 def get_doc_txt(dataset, filename):
+    # if dataset == 'contract_new':
+    #     with open(Path(DATA_ROOT_FOLDER) / "contract_new" / "toc_textspan_clean" / (filename + ".json"), 'r') as file:
+    #         full_text = json.load(file)['1'].strip()
+    #         return full_text
+    # if dataset == 'contract_rand':
+    #     with open(Path(DATA_ROOT_FOLDER) / "contract_rand" / "toc_textspan_clean" / (filename + ".json"), 'r') as file:
+    #         full_text = json.load(file)['1'].strip()
+    #         return full_text
+    # if dataset == 'contract_rand_v1':
+    #     with open(Path(DATA_ROOT_FOLDER) / "contract_rand_v1" / "toc_textspan_clean" / (filename + ".json"), 'r') as file:
+    #         full_text = json.load(file)['1'].strip()
+    #         return full_text
+    # if dataset == 'contract_rand_v2':
+    #     with open(Path(DATA_ROOT_FOLDER) / "contract_rand_v2" / "toc_textspan_clean" / (filename + ".json"), 'r') as file:
+    #         full_text = json.load(file)['1'].strip()
+    #         return full_text
+    # if dataset == 'contract_rand_v3':
+    #     with open(Path(DATA_ROOT_FOLDER) / "contract_rand_v3" / "toc_textspan_clean" / (filename + ".json"), 'r') as file:
+    #         full_text = json.load(file)['1'].strip()
+    #         return full_text
+    if dataset == 'contract_rand_v0_1':
+        with open(Path(DATA_ROOT_FOLDER) / "contract_rand_v0_1" / "intrinsic" / "toc_textspan_clean" / (filename + ".json"), 'r') as file:
+            full_text = json.load(file)['1'].strip()
+            return full_text
+    # if dataset == 'finance_rand':
+    #     with open(Path(DATA_ROOT_FOLDER) / "finance_rand" / "toc_textspan_clean" / (filename + ".json"), 'r') as file:
+    #         full_text = json.load(file)['1'].strip()
+    #         return full_text
+    if dataset == 'finance_rand_v1':
+        with open(Path(DATA_ROOT_FOLDER) / "finance_rand_v1" / "intrinsic" / "toc_textspan_clean" / (filename + ".json"), 'r') as file:
+            full_text = json.load(file)['1'].strip()
+            return full_text
+    if dataset == 'qasper_rand_v1':
+        with open(Path(DATA_ROOT_FOLDER) / "qasper_rand_v1" / "intrinsic" / "toc_textspan_clean" / (filename + ".json"), 'r') as file:
+            full_text = json.load(file)['1'].strip()
+            return full_text
     if dataset == "finance":
         with open(Path(DATA_ROOT_FOLDER) / dataset / "doc_txt_reform_table" / (filename + ".txt"), 'r') as file:
             full_text = file.read().strip()
             return full_text
-    
+    # if dataset == 'civic_rand':
+    #     with open(Path(DATA_ROOT_FOLDER) / "civic_rand" / "toc_textspan_clean" / (filename + ".json"), 'r') as file:
+            # full_text = json.load(file)['1'].strip()
+            # return full_text
+    if dataset == 'civic_rand_v1':
+        with open(Path(DATA_ROOT_FOLDER) / "civic_rand_v1" / "intrinsic" / "toc_textspan_clean" / (filename + ".json"), 'r') as file:
+            full_text = json.load(file)['1'].strip()
+            return full_text
+
+
+    # if dataset == 'civic_new':
+    #     sht_path = Path(DATA_ROOT_FOLDER) / "civic" / "sbert.gpt-4o-mini.c100.s100" / "sht" / (filename + ".json")
+    # elif dataset == 'office':
+    #     sht_path = Path(DATA_ROOT_FOLDER) / dataset / "sbert.gpt-4o-mini.c100.s100" / "sht_skeleton" / (filename + ".json")
+    # else:
+    #     sht_path = Path(DATA_ROOT_FOLDER) / dataset / "sbert.gpt-4o-mini.c100.s100" / "sht" / (filename + ".json")
+
     sht_path = Path(DATA_ROOT_FOLDER) / dataset / "sbert.gpt-4o-mini.c100.s100" / "sht" / (filename + ".json")
 
     with open(sht_path, 'r') as file:
@@ -259,15 +381,57 @@ def get_doc_txt(dataset, filename):
 
     return full_text.strip()
 
-def get_toc_numbered(dataset, filename):
-    toc_path = Path(DATA_ROOT_FOLDER) / dataset / "intrinsic" / "toc_numbered" / (filename + ".txt")
+def get_toc_numbered(dataset, filename, sht_type):
+    if dataset == "civic_new":
+        toc_path = Path(DATA_ROOT_FOLDER) / "civic" / sht_type / "toc_numbered" / (filename + ".txt")
+    else:
+        toc_path = Path(DATA_ROOT_FOLDER) / dataset / sht_type / "toc_numbered" / (filename + ".txt")
     return toc_path.read_text().strip()
 
-def get_toc_textspan(dataset, filename):
-    toc_textspan_path = Path(DATA_ROOT_FOLDER) / dataset / "intrinsic" / "toc_textspan" / (filename + ".json")
+def get_toc_numbered_clean(dataset, filename, sht_type):
+    if dataset == "civic_new":
+        toc_path = Path(DATA_ROOT_FOLDER) / "civic" / sht_type / "toc_numbered_clean" / (filename + ".txt")
+    else:
+        toc_path = Path(DATA_ROOT_FOLDER) / dataset / sht_type / "toc_numbered_clean" / (filename + ".txt")
+    return toc_path.read_text().strip()
+
+def get_toc_textspan(dataset, filename, sht_type):
+    if dataset == "civic_new":
+        toc_textspan_path = Path(DATA_ROOT_FOLDER) / "civic" / sht_type / "toc_textspan" / (filename + ".json")
+    else:
+        toc_textspan_path = Path(DATA_ROOT_FOLDER) / dataset / sht_type / "toc_textspan" / (filename + ".json")
     with open(toc_textspan_path, 'r') as file:
         toc_textspan = json.load(file)
     return toc_textspan
+
+
+def get_toc_textspan_clean(dataset, filename, sht_type):
+    if dataset == "civic_new":
+        toc_textspan_path = Path(DATA_ROOT_FOLDER) / "civic" / sht_type / "toc_textspan_clean" / (filename + ".json")
+    else:
+        toc_textspan_path = Path(DATA_ROOT_FOLDER) / dataset / sht_type / "toc_textspan_clean" / (filename + ".json")
+    with open(toc_textspan_path, 'r') as file:
+        toc_textspan = json.load(file)
+    return toc_textspan
+
+def get_toc_greptext(dataset, filename, sht_type):
+    if dataset == "civic_new":
+        toc_textspan_path = Path(DATA_ROOT_FOLDER) / "civic" / sht_type / "toc_greptext" / (filename + ".json")
+    else:
+        toc_textspan_path = Path(DATA_ROOT_FOLDER) / dataset / sht_type / "toc_greptext" / (filename + ".json")
+    with open(toc_textspan_path, 'r') as file:
+        toc_textspan = json.load(file)
+    return toc_textspan
+
+def get_toc_greptext_clean(dataset, filename, sht_type):
+    if dataset == "civic_new":
+        toc_textspan_path = Path(DATA_ROOT_FOLDER) / "civic" / sht_type / "toc_greptext_clean" / (filename + ".json")
+    else:
+        toc_textspan_path = Path(DATA_ROOT_FOLDER) / dataset / sht_type / "toc_greptext_clean" / (filename + ".json")
+    with open(toc_textspan_path, 'r') as file:
+        toc_textspan = json.load(file)
+    return toc_textspan
+
 
 def get_timestamp():
     """Return: yyyy-mm-dd__hh-mm-ss"""
@@ -280,7 +444,7 @@ def get_simple_qasper_docs():
     pdf_folder = Path(DATA_ROOT_FOLDER) / dataset / "pdf"
     for pdf_filename in sorted(pdf_folder.glob("*.pdf")):
         filename = pdf_filename.stem
-        toc_numbered = get_toc_numbered(dataset, filename)
+        toc_numbered = get_toc_numbered(dataset, filename, 'intrinsic')
         numbered_title_cnt = 0
         for line in toc_numbered.splitlines():
             if line.strip() == "":
@@ -343,3 +507,18 @@ def grep_search(pattern: str, toc_textspan: dict):
             matched_section_ids.append(section_id)
 
     return sorted(matched_section_ids)
+
+def get_hard_queries(dataset):
+    query_hard_level_info_path = Path(__file__).resolve().parent.parent / "eval" / 'struct_demanding_questions' / f"{dataset}.jsonl"
+    if dataset in ['civic', 'civic_new']:
+        with open(Path(DATA_ROOT_FOLDER) / dataset / "queries.json", 'r') as f:
+            queries = json.load(f)
+            return set(q['id'] for q in queries)
+    hard_qids = set()
+    with open(query_hard_level_info_path, 'r') as f:
+        for line in f:
+            info = json.loads(line)
+            if len(info['clusters']) > 0 and info['hard_level'] == 0:
+                hard_qids.add(info['id'])
+
+    return hard_qids

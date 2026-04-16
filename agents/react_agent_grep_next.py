@@ -153,11 +153,11 @@ If there are no more minimum matching sections to return for the given `pattern`
     )
 
 
-def run_agent_per_query(dataset, qinfo, model):
+def run_agent_per_query(dataset, qinfo, model, sht_type):
     query = qinfo["query"]
-    toc_numbered : str = get_toc_numbered(dataset, qinfo["file_name"])
-    toc_textspan = get_toc_textspan(dataset, qinfo["file_name"])
-    assert len(toc_numbered.strip().splitlines()) == len(toc_textspan)
+    toc_numbered : str = get_toc_numbered(dataset, qinfo["file_name"], sht_type)
+    toc_textspan = get_toc_textspan(dataset, qinfo["file_name"], sht_type)
+    # assert len(toc_numbered.strip().splitlines()) == len(toc_textspan)
 
     if DEBUG == True:
         print(get_agent_system_message(dataset).content)
@@ -183,7 +183,7 @@ def run_agent_per_query(dataset, qinfo, model):
 
     runnable_config = {"configurable": {"thread_id": "1"}, "recursion_limit": 10000} 
 
-    answer_path = get_result_path(dataset, model, AGENT_NAME)
+    answer_path = get_result_path(dataset, model, AGENT_NAME, sht_type)
     msg_path = Path(str(answer_path).replace("/core/", "/other/messages/")).parent / dataset / f"query{qinfo['id']}.txt"
     os.makedirs(msg_path.parent, exist_ok=True)
     checkpoint_path = Path(str(msg_path).replace("/messages/", "/checkpoints/").replace(".txt", ".pkl"))
@@ -250,33 +250,47 @@ def run_agent_per_query(dataset, qinfo, model):
 
         
 if __name__ == "__main__":
-    for model in ["gpt-5-mini"]:
-        for dataset in DATASET_LIST[0:2]:
-            print(f"{AGENT_NAME} ({model}): {dataset}")
-            queries_path = Path(DATA_ROOT_FOLDER) / dataset / "queries.json"
-            with open(queries_path, 'r') as file:
-                queries = json.load(file)
-            
-            num_queries = int(len(queries) * 0.2)
+    for sht_type in [
+        # 'deep',
+        # 'wide',
+        # 'grobid',
+        '',
+        # 'llm_txt_sht',
+        # 'intrinsic',
+    ]:
+        for model in [
+            "gpt-5.4", 
+            # "gpt-5-mini"
+        ]:
+            # for dataset in DATASET_LIST[-1:]:
+            for dataset in ['office']:
+                # if sht_type == 'grobid' and dataset in ['civic', 'contract']:
+                #     continue
 
-            result_jsonl_path = get_result_path(dataset, model, AGENT_NAME)
+                print(f"{AGENT_NAME} ({model}, {sht_type}): {dataset}")
+                queries_path = Path(DATA_ROOT_FOLDER) / dataset / "queries.json"
+                with open(queries_path, 'r') as file:
+                    queries = json.load(file)
+                
+                num_queries = int(len(queries) * 0.2)
 
-            if dataset == "civic":
-                start_id = 0
-                end_id = len(queries)
-            elif dataset == 'finance':
-                start_id = 30
-                end_id = 74
-            elif dataset == 'contract':
-                start_id = 11
-                end_id = num_queries
-            else:
-                start_id = 0
-                end_id = num_queries
+                result_jsonl_path = get_result_path(dataset, model, AGENT_NAME, sht_type)
 
-            for qinfo in queries[start_id:end_id]:
-                if dataset == "civic" and qinfo['id'] in INVALID_CIVIC_QUERY_IDS:
-                    print(f"\tquery id: {qinfo['id']}: SKIPPED")
-                    continue
-                print(f"\tquery id: {qinfo['id']}")
-                run_agent_per_query(dataset, qinfo, model)
+                if dataset in ['civic', 'civic_new', 'office']:
+                    start_id = 4
+                    end_id = len(queries)
+                elif dataset == 'finance':
+                    start_id = 0
+                    end_id = 74
+                else:
+                    start_id = 0
+                    end_id = num_queries
+                    # if sht_type == "grobid" and dataset == 'qasper':
+                    #     start_id = 128
+
+                for qinfo in queries[start_id:end_id]:
+                    if dataset == "civic" and qinfo['id'] in INVALID_CIVIC_QUERY_IDS:
+                        # print(f"\tquery id: {qinfo['id']}: SKIPPED")
+                        continue
+                    # print(f"\tquery id: {qinfo['id']}")
+                    run_agent_per_query(dataset, qinfo, model, sht_type)

@@ -17,7 +17,7 @@ from agents.utils import CLIENT, get_result_path, llm
 
 DEBUG = False
 
-def llm_judge_per_query(dataset, qid, query, gt_answer, llm_answer, answer_gen_model, judge_model, method):
+def llm_judge_per_query(dataset, qid, query, gt_answer, llm_answer, answer_gen_model, judge_model, method, sht_type):
     prompt = (Path(__file__).parent / "llm_judge_prompt_finance.txt").read_text()
     
     messages = [
@@ -43,7 +43,7 @@ def llm_judge_per_query(dataset, qid, query, gt_answer, llm_answer, answer_gen_m
         score = None
 
     # log the response for debugging
-    llm_judge_response_path = str(get_result_path(dataset, answer_gen_model, method)).replace("/core/", "/llm_judge_response/")
+    llm_judge_response_path = str(get_result_path(dataset, answer_gen_model, method, sht_type)).replace("/core/", "/llm_judge_response/")
     os.makedirs(os.path.dirname(llm_judge_response_path), exist_ok=True)
     with open(llm_judge_response_path, 'a') as file:
         contents = json.dumps({
@@ -62,42 +62,64 @@ def llm_judge_per_query(dataset, qid, query, gt_answer, llm_answer, answer_gen_m
 
 
 if __name__ == "__main__":
-    for answer_gen_model in ["gpt-5.4", "gpt-5-mini"]:
-        for method in ['baseline', 'toc_in_context', 'react_agent' , 'react_agent_grep_all', 'react_agent_grep_id', 'react_agent_grep_next', 'react_agent_grep_next_notoc']:
-            judge_model = "gpt-4o-mini"
-            dataset = 'finance'
+    for answer_gen_model in [
+        "gpt-5.4",
+        # "gpt-5-mini"
+    ]:
+        for sht_type in [
+            # 'deep', 
+            # 'wide', 
+            # 'grobid', 
+            # '',
+            # 'llm_txt_sht',
+            # 'llm_vision_sht',
+            'intrinsic'
+        ]:
+            for method in [
+                # "baseline",
+                # "toc_in_context",
+                # "react_agent_clean",
+                # 'react_agent_grep_next_chunk_clean',
+                "react_agent_grep_next_chunk_notoc",
+            ]:
+                judge_model = "gpt-4o-mini"
+                # dataset = 'finance'
+                dataset = 'finance_rand_v1'
 
-            print(f"LLM Judge: {dataset}")
-            queries_path = Path(DATA_ROOT_FOLDER) / dataset / "queries.json"
-            with open(queries_path, 'r') as file:
-                queries = json.load(file)
+                print(f"LLM Judge ({method}, {sht_type}): {dataset}")
+                queries_path = Path(DATA_ROOT_FOLDER) / dataset / "queries.json"
+                with open(queries_path, 'r') as file:
+                    queries = json.load(file)
 
-            result_jsonl_path = get_result_path(dataset, answer_gen_model, method)
-            with open(result_jsonl_path, 'r') as file:
-                results = [json.loads(line) for line in file]
-            
-            assert len(results) <= len(queries)
+                result_jsonl_path = get_result_path(dataset, answer_gen_model, method, sht_type)
+                with open(result_jsonl_path, 'r') as file:
+                    results = [json.loads(line) for line in file]
+                
+                assert len(results) <= len(queries)
 
 
-            score_list = []
+                score_list = []
 
-            for result, qinfo in zip(results, queries):
-                assert result['id'] == qinfo['id']
-                if result['id'] < 30:
-                    continue
-                if result['is_success'] == False:
-                    logging.warning(f"Skipping query id {qinfo['id']} due to unsuccessful answer generation")
-                    continue
-                assert result['is_success'] == True
+                start_id = 74
+                end_id = 100
 
-                print(f"\tquery id: {qinfo['id']}")
+                for result, qinfo in zip(results, queries):
+                    assert result['id'] == qinfo['id']
+                    if result['id'] < start_id or result['id'] >= end_id:
+                        continue
+                    if result['is_success'] == False:
+                        logging.warning(f"Skipping query id {qinfo['id']} due to unsuccessful answer generation")
+                        continue
+                    assert result['is_success'] == True
 
-                score = llm_judge_per_query(dataset, qinfo['id'], qinfo['query'], qinfo['answer'][0], result['message'], answer_gen_model, judge_model, method)
+                    # print(f"\tquery id: {qinfo['id']}")
 
-                if score is not None:
-                    score_list.append(score)
-                    print(f"query id {qinfo['id']}: {score}")
-                else:
-                    logging.warning(f"Score not found for query id {qinfo['id']}")
+                    score = llm_judge_per_query(dataset, qinfo['id'], qinfo['query'], qinfo['answer'][0], result['message'], answer_gen_model, judge_model, method, sht_type)
 
-            print(f"Average score: {sum(score_list) / len(score_list) if score_list else 'N/A'}")
+                    if score is not None:
+                        score_list.append(score)
+                        print(f"query id {qinfo['id']}: {score}")
+                    else:
+                        logging.warning(f"Score not found for query id {qinfo['id']}")
+
+                print(f"Average score: {sum(score_list) / len(score_list) if score_list else 'N/A'}")

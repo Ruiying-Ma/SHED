@@ -69,7 +69,7 @@ if __name__ == "__main__":
             'gpt-5.4', 
                     #   'gpt-5-mini'
         ]:
-            for dataset in DATASET_LIST[-1:]:
+            for dataset in DATASET_LIST[3:]:
                 print(f"toc_in_context ({model}, {sht_type}): {dataset}")
                 queries_path = Path(DATA_ROOT_FOLDER) / dataset / "queries.json"
                 with open(queries_path, 'r') as file:
@@ -81,14 +81,14 @@ if __name__ == "__main__":
                     start_id = 0
                     end_id = len(queries)
                 elif dataset == 'finance_rand_v1':
-                    start_id = 0
-                    end_id = 74
+                    start_id = 74
+                    end_id = 100
                 elif dataset == 'contract_rand_v0_1':
                     start_id = 0
                     end_id = 248
                 elif dataset == 'qasper_rand_v1':
-                    start_id = 0
-                    end_id = 290
+                    start_id = 290
+                    end_id = 500
                 else:
                     raise ValueError(f"Invalid dataset: {dataset}")
 

@@ -311,7 +311,7 @@ if __name__ == "__main__":
     # assert sht_type in ['deep', 'wide', 'grobid', 'llm_txt_sht', 'intrinsic', ''], f"Invalid sht type {sht_type}. Supported sht types are: 'deep', 'wide', 'grobid', 'llm_txt_sht', 'intrinsic', or ''."
 
         for model in ['gpt-5.4']:
-            for dataset in DATASET_LIST:
+            for dataset in DATASET_LIST[2:]:
             # for dataset in ['contract_rand_v0_1']:
             # for dataset in ['office']:
                 print(f"{AGENT_NAME} ({model}, {sht_type}): {dataset}")
@@ -339,14 +339,14 @@ if __name__ == "__main__":
                     start_id = 0
                     end_id = len(queries)
                 elif dataset == 'finance_rand_v1':
-                    start_id = 0
-                    end_id = 74
+                    start_id = 74
+                    end_id = 100
                 elif dataset == 'contract_rand_v0_1':
                     start_id = 0
                     end_id = 248
                 elif dataset == 'qasper_rand_v1':
-                    start_id = 0
-                    end_id = 290
+                    start_id = 290
+                    end_id = 500
                 else:
                     raise ValueError(f"Invalid dataset: {dataset}")
 

@@ -39,8 +39,8 @@ def compute_latency(start_str, end_str):
     latency = end - start
     return latency.total_seconds()
 
-def get_trajectory_call_num(dataset, query_id, model, method):
-    answer_path = get_result_path(dataset, model, method)
+def get_trajectory_call_num(dataset, query_id, model, method, sht_type):
+    answer_path = get_result_path(dataset, model, method, sht_type)
     msg_path = Path(str(answer_path).replace("/core/", "/other/messages/")).parent / dataset / f"query{query_id}.txt"
     checkpoint_path = Path(str(msg_path).replace("/messages/", "/checkpoints/").replace(".txt", ".pkl"))
     with open(checkpoint_path, 'rb') as f:
@@ -70,18 +70,17 @@ def get_trajectory_call_num(dataset, query_id, model, method):
 
 
 if __name__ == "__main__":
-    # model = "gpt-5.4"
-    model = "gpt-5-mini"
+    model = "gpt-5.4"
+    # model = "gpt-5-mini"
     method_list = [
-        # "react_agent", 
-        # "react_agent_grep_all", 
-        # "react_agent_grep_id"
-        "react_agent_grep_next",
-        "react_agent_grep_next_notoc"
+        "react_agent_grep_next_chunk_notoc",
+        "react_agent_clean", 
+        "react_agent_grep_next_chunk_clean",
     ]
+    sht_type = 'intrinsic'
     results = []
     for method in method_list:
-        for dataset in DATASET_LIST:
+        for dataset in DATASET_LIST[:-1]:
             queries_path = Path(DATA_ROOT_FOLDER) / dataset / "queries.json"
             with open(queries_path, 'r') as file:
                 queries = json.load(file)
@@ -95,7 +94,7 @@ if __name__ == "__main__":
             avg_tool_call_latency_list = []
             for query_id in query_id_list:
                 try:
-                    tc_num, md_call_num, rs_tc_num, avg_md_call_lat, avg_tc_lat = get_trajectory_call_num(dataset, query_id, model, method)
+                    tc_num, md_call_num, rs_tc_num, avg_md_call_lat, avg_tc_lat = get_trajectory_call_num(dataset, query_id, model, method, sht_type)
                     tool_call_num_list.append(tc_num)
                     model_call_num_list.append(md_call_num)
                     read_section_tool_call_num_list.append(rs_tc_num)

@@ -8,7 +8,7 @@ import logging_config
 import time
 
 from config import DATASET_LIST, DATA_ROOT_FOLDER
-from structured_rag.utils import get_nondummy_ancestors, get_textspan
+from structured_rag.utils import get_nondummy_ancestors, get_grep_text
 from agents.utils import get_toc_level
 import traceback
 
@@ -16,13 +16,13 @@ MAX_OUTPUT_TOKENS = 150
 
 DEBUG = True
 
-def toc_textspan(dataset, file_name, sht_type):
+def toc_grep_text(dataset, file_name, sht_type):
     true_sht_path = os.path.join(
         DATA_ROOT_FOLDER,
         dataset,
         sht_type, #"intrinsic",
         "sbert.gpt-4o-mini.c100.s100", 
-        "sht", 
+        "sht" if dataset != 'office' else "sht_skeleton",
         file_name + ".json"
     )
     if not os.path.exists(true_sht_path):
@@ -42,14 +42,14 @@ def toc_textspan(dataset, file_name, sht_type):
             continue
         level_str = ".".join(str(num).strip() for num in level)
         assert str(level_str) not in m_level_textspan
-        text_span = get_textspan(toc_nodes, node_id, dataset)
+        text_span = get_grep_text(toc_nodes, node_id, dataset)
         m_level_textspan[level_str] = text_span
     
     dst_path = os.path.join(
         DATA_ROOT_FOLDER,
         dataset,
         sht_type,
-        "toc_textspan",
+        "toc_greptext",
         file_name + ".json"
     )
     os.makedirs(os.path.dirname(dst_path), exist_ok=True)
@@ -58,14 +58,13 @@ def toc_textspan(dataset, file_name, sht_type):
 
 if __name__ == "__main__":
     for sht_type in [
-        # 'deep', 
-        'wide', 
         # 'grobid', 
         # '',
-        # "llm_txt_sht"
+        # "llm_txt_sht",
+        'intrinsic'
     ]:
-        # for dataset in DATASET_LIST[1:]: # finance
-        for dataset in ['office']:
+        for dataset in DATASET_LIST[:-1]: # finance
+        # for dataset in ['office']:
             print(f"{dataset}")
             
             pdf_folder = os.path.join(DATA_ROOT_FOLDER, dataset, "pdf")
@@ -73,6 +72,6 @@ if __name__ == "__main__":
                 file_name = file_name.replace(".pdf", "")
                 print(f"\t{file_name}")
                 try:
-                    toc_textspan(dataset, file_name, sht_type)
+                    toc_grep_text(dataset, file_name, sht_type)
                 except Exception as e:
                     logging.warning(f"{sht_type} {dataset} {file_name} failed; Traceback:\n{traceback.format_exc()}")

@@ -297,7 +297,7 @@ if __name__ == "__main__":
             "gpt-5.4", 
             # "gpt-5-mini"
         ]:
-            for dataset in DATASET_LIST[2:]:
+            for dataset in DATASET_LIST[3:]:
             # for dataset in ['office']:
                 # if sht_type == 'grobid' and dataset in ['civic', 'contract']:
                 #     continue

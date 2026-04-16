@@ -311,15 +311,16 @@ if __name__ == "__main__":
         queries = json.load(file)
     
     for sht_type in [
-        # 'deep', 
+        'deep', 
         'wide', 
         'grobid', 
         '',
         # "llm_txt_sht",
-        # "intrinsic"
+        # "llm_vision_sht",
+        "intrinsic"
     ]:
         existing_file_names = set()
-        for qinfo in queries[:290]:
+        for qinfo in queries[290:500]:
             file_name = qinfo['file_name']
             assert file_name not in existing_file_names, f"Duplicate file name {file_name} in queries.json"
             existing_file_names.add(file_name)

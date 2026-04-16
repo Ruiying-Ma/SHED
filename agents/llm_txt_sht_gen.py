@@ -54,6 +54,7 @@ Formatting requirements:
 
 
 def llm_txt_sht_gen_per_doc(dataset, filename, toc_gen_model):
+    print(f"{dataset}: {filename}")
     doc_txt = get_doc_txt(dataset, filename)
     messages = [
         {"role": "system", "content": system_prompt},
