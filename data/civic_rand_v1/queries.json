@@ -1,0 +1,2625 @@
+[
+  {
+    "id": 0,
+    "query": "According to the report for the meeting on January 26, 2022: Return a list of project names for all projects whose status matches the status of project 'Outdoor Warningn Sirens - Design (FEMA Project)'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "0",
+    "answer": [
+      "Marie Canyon Green Streets",
+      "PCH Median Improvements Project",
+      "PCH Signal Synchronization System Improvements Project",
+      "Westward Beach Road Improvements Project",
+      "Civic Center Water Treatment Facility Phase 2",
+      "Bluffs Park Shade Structure",
+      "Permanent Skate Park",
+      "PCH at Trancas Canyon Road Right Turn Lane",
+      "Broad Beach Road Water Quality Infrastructure Repairs (CalJPIA Project)",
+      "Latigo Canyon Road Roadway/Retaining Wall Improvements (FEMA Project)",
+      "Trancas Canyon Park Planting and Irrigation Repairs (CalJPIA/FEMA Project)",
+      "Trancas Canyon Park Slope Stabilization Project (CalJPIA Project)",
+      "Storm Drain Master Plan (FEMA Project)",
+      "Guardrail Replacement Citywide (FEMA Project)",
+      "Corral Canyon Road Bridge Repairs (FEMA Project)",
+      "Corral Canyon Culvert Repairs (FEMA Project)",
+      "Birdview Avenue Improvements (CalOES Project)",
+      "Malibu Park Drainage Improvements",
+      "Clover Heights Storm Drain (FEMA Project)",
+      "Latigo Canyon Road Culvert Repairs (FEMA Project)",
+      "Encinal Canyon Road Drainage Improvements (CalOES Project)",
+      "Malibu Road Slope Repairs (CalOES Project)",
+      "Westward Beach Road Shoulder Repairs (CalOES Project)",
+      "Outdoor Warningn Sirens - Design (FEMA Project)"
+    ],
+    "new_file_names": [
+      "11102022-1995",
+      "01262022-1835",
+      "10272021-1779",
+      "06232021-1714"
+    ],
+    "orig_file_name": "01262022-1835"
+  },
+  {
+    "id": 1,
+    "query": "According to the report for the meeting on January 26, 2022: Return a list of project names for all projects whose status matches the status of project 'Westward Beach Road Shoulder Repairs (CalOES Project)'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "1",
+    "answer": [
+      "Marie Canyon Green Streets",
+      "PCH Median Improvements Project",
+      "PCH Signal Synchronization System Improvements Project",
+      "Westward Beach Road Improvements Project",
+      "Civic Center Water Treatment Facility Phase 2",
+      "Bluffs Park Shade Structure",
+      "Permanent Skate Park",
+      "PCH at Trancas Canyon Road Right Turn Lane",
+      "Broad Beach Road Water Quality Infrastructure Repairs (CalJPIA Project)",
+      "Latigo Canyon Road Roadway/Retaining Wall Improvements (FEMA Project)",
+      "Trancas Canyon Park Planting and Irrigation Repairs (CalJPIA/FEMA Project)",
+      "Trancas Canyon Park Slope Stabilization Project (CalJPIA Project)",
+      "Storm Drain Master Plan (FEMA Project)",
+      "Guardrail Replacement Citywide (FEMA Project)",
+      "Corral Canyon Road Bridge Repairs (FEMA Project)",
+      "Corral Canyon Culvert Repairs (FEMA Project)",
+      "Birdview Avenue Improvements (CalOES Project)",
+      "Malibu Park Drainage Improvements",
+      "Clover Heights Storm Drain (FEMA Project)",
+      "Latigo Canyon Road Culvert Repairs (FEMA Project)",
+      "Encinal Canyon Road Drainage Improvements (CalOES Project)",
+      "Malibu Road Slope Repairs (CalOES Project)",
+      "Westward Beach Road Shoulder Repairs (CalOES Project)",
+      "Outdoor Warningn Sirens - Design (FEMA Project)"
+    ],
+    "new_file_names": [
+      "01262022-1835",
+      "03232022-1869",
+      "06232021-1714",
+      "08252021-1746"
+    ],
+    "orig_file_name": "01262022-1835"
+  },
+  {
+    "id": 2,
+    "query": "According to the report for the meeting on January 26, 2022: Return a list of project names for all projects whose status matches the status of project 'Malibu Road Slope Repairs (CalOES Project)'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "2",
+    "answer": [
+      "Marie Canyon Green Streets",
+      "PCH Median Improvements Project",
+      "PCH Signal Synchronization System Improvements Project",
+      "Westward Beach Road Improvements Project",
+      "Civic Center Water Treatment Facility Phase 2",
+      "Bluffs Park Shade Structure",
+      "Permanent Skate Park",
+      "PCH at Trancas Canyon Road Right Turn Lane",
+      "Broad Beach Road Water Quality Infrastructure Repairs (CalJPIA Project)",
+      "Latigo Canyon Road Roadway/Retaining Wall Improvements (FEMA Project)",
+      "Trancas Canyon Park Planting and Irrigation Repairs (CalJPIA/FEMA Project)",
+      "Trancas Canyon Park Slope Stabilization Project (CalJPIA Project)",
+      "Storm Drain Master Plan (FEMA Project)",
+      "Guardrail Replacement Citywide (FEMA Project)",
+      "Corral Canyon Road Bridge Repairs (FEMA Project)",
+      "Corral Canyon Culvert Repairs (FEMA Project)",
+      "Birdview Avenue Improvements (CalOES Project)",
+      "Malibu Park Drainage Improvements",
+      "Clover Heights Storm Drain (FEMA Project)",
+      "Latigo Canyon Road Culvert Repairs (FEMA Project)",
+      "Encinal Canyon Road Drainage Improvements (CalOES Project)",
+      "Malibu Road Slope Repairs (CalOES Project)",
+      "Westward Beach Road Shoulder Repairs (CalOES Project)",
+      "Outdoor Warningn Sirens - Design (FEMA Project)"
+    ],
+    "new_file_names": [
+      "10272021-1779",
+      "09222021-1765",
+      "06222022-1919",
+      "01262022-1835"
+    ],
+    "orig_file_name": "01262022-1835"
+  },
+  {
+    "id": 3,
+    "query": "According to the report for the meeting on January 26, 2022: Return a list of project names for all projects whose status matches the status of project 'Malibu Park Storm Drain Repairs'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "3",
+    "answer": [
+      "Civic Center Way Improvements",
+      "Civic Center Stormwater Diversion Structure",
+      "2021 Annual Street Maintenance",
+      "Citywide Guardrail Replacement",
+      "Malibu Park Storm Drain Repairs"
+    ],
+    "new_file_names": [
+      "01272021-1626",
+      "01262022-1835",
+      "12142021-1808",
+      "03232022-1869"
+    ],
+    "orig_file_name": "01262022-1835"
+  },
+  {
+    "id": 4,
+    "query": "According to the report for the meeting on January 26, 2022: Return a list of project names for all projects whose status matches the status of project 'Citywide Guardrail Replacement'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "4",
+    "answer": [
+      "Civic Center Way Improvements",
+      "Civic Center Stormwater Diversion Structure",
+      "2021 Annual Street Maintenance",
+      "Citywide Guardrail Replacement",
+      "Malibu Park Storm Drain Repairs"
+    ],
+    "new_file_names": [
+      "01262022-1835",
+      "12142021-1808",
+      "05262021-1701",
+      "07282021-1732"
+    ],
+    "orig_file_name": "01262022-1835"
+  },
+  {
+    "id": 5,
+    "query": "According to the report for the meeting on January 26, 2022: Return a list of project names for all projects whose status matches the status of project '2021 Annual Street Maintenance'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "5",
+    "answer": [
+      "Civic Center Way Improvements",
+      "Civic Center Stormwater Diversion Structure",
+      "2021 Annual Street Maintenance",
+      "Citywide Guardrail Replacement",
+      "Malibu Park Storm Drain Repairs"
+    ],
+    "new_file_names": [
+      "01262022-1835",
+      "03232022-1869",
+      "07282021-1732",
+      "04282021-1687"
+    ],
+    "orig_file_name": "01262022-1835"
+  },
+  {
+    "id": 6,
+    "query": "According to the report for the meeting on January 27, 2021: Return a list of project names for all projects whose status matches the status of project 'Birdview Avenue Improvements (FEMA/CalOES Project)'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "6",
+    "answer": [
+      "Marie Canyon Green Streets",
+      "PCH Median Improvements Project",
+      "PCH Signal Synchronization System Improvements Project",
+      "Civic Center Stormwater Diversion Structure",
+      "Westward Beach Road Improvements Project",
+      "Civic Center Water Treatment Facility Phase 2",
+      "Malibu Park Drainage Improvements",
+      "Broad Beach Road Water Quality Infrastructure Repairs",
+      "Latigo Canyon Road Roadway/Retaining Wall Improvements (FEMA/CalOES Project)",
+      "Trancas Canyon Park Planting and Irrigation Repairs (FEMA/CalOES Project)",
+      "Trancas Canyon Park Slope Stabilization Project (CalOES Project)",
+      "Birdview Avenue Improvements (FEMA/CalOES Project)"
+    ],
+    "new_file_names": [
+      "01272021-1626",
+      "05262021-1701",
+      "06232021-1714",
+      "03232022-1869"
+    ],
+    "orig_file_name": "01272021-1626"
+  },
+  {
+    "id": 7,
+    "query": "According to the report for the meeting on January 27, 2021: Return a list of project names for all projects whose status matches the status of project 'Trancas Canyon Park Slope Stabilization Project (CalOES Project)'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "7",
+    "answer": [
+      "Marie Canyon Green Streets",
+      "PCH Median Improvements Project",
+      "PCH Signal Synchronization System Improvements Project",
+      "Civic Center Stormwater Diversion Structure",
+      "Westward Beach Road Improvements Project",
+      "Civic Center Water Treatment Facility Phase 2",
+      "Malibu Park Drainage Improvements",
+      "Broad Beach Road Water Quality Infrastructure Repairs",
+      "Latigo Canyon Road Roadway/Retaining Wall Improvements (FEMA/CalOES Project)",
+      "Trancas Canyon Park Planting and Irrigation Repairs (FEMA/CalOES Project)",
+      "Trancas Canyon Park Slope Stabilization Project (CalOES Project)",
+      "Birdview Avenue Improvements (FEMA/CalOES Project)"
+    ],
+    "new_file_names": [
+      "08252021-1746",
+      "01262022-1835",
+      "01272021-1626",
+      "03022021-1648"
+    ],
+    "orig_file_name": "01272021-1626"
+  },
+  {
+    "id": 8,
+    "query": "According to the report for the meeting on January 27, 2021: Return a list of project names for all projects whose status matches the status of project 'Trancas Canyon Park Planting and Irrigation Repairs (FEMA/CalOES Project)'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "8",
+    "answer": [
+      "Marie Canyon Green Streets",
+      "PCH Median Improvements Project",
+      "PCH Signal Synchronization System Improvements Project",
+      "Civic Center Stormwater Diversion Structure",
+      "Westward Beach Road Improvements Project",
+      "Civic Center Water Treatment Facility Phase 2",
+      "Malibu Park Drainage Improvements",
+      "Broad Beach Road Water Quality Infrastructure Repairs",
+      "Latigo Canyon Road Roadway/Retaining Wall Improvements (FEMA/CalOES Project)",
+      "Trancas Canyon Park Planting and Irrigation Repairs (FEMA/CalOES Project)",
+      "Trancas Canyon Park Slope Stabilization Project (CalOES Project)",
+      "Birdview Avenue Improvements (FEMA/CalOES Project)"
+    ],
+    "new_file_names": [
+      "12142021-1808",
+      "01272021-1626",
+      "03022021-1648",
+      "01262022-1835"
+    ],
+    "orig_file_name": "01272021-1626"
+  },
+  {
+    "id": 9,
+    "query": "According to the report for the meeting on January 27, 2021: Return a list of project names for all projects whose status matches the status of project 'Corral Canyon Culvert Repairs (FEMA/CalOES Project)'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "9",
+    "answer": [
+      "Storm Drain Trash Screens",
+      "Dume Drive and Fernhill Drive Speed Humps Project",
+      "Guardrail Replacement Citywide (FEMA/CalOES Project)",
+      "Corral Canyon Road Bridge Repairs (FEMA/CalOES Project)",
+      "Corral Canyon Culvert Repairs (FEMA/CalOES Project)"
+    ],
+    "new_file_names": [
+      "03232022-1869",
+      "01272021-1626",
+      "03022021-1648",
+      "11102022-1995"
+    ],
+    "orig_file_name": "01272021-1626"
+  },
+  {
+    "id": 10,
+    "query": "According to the report for the meeting on January 27, 2021: Return a list of project names for all projects whose status matches the status of project 'Corral Canyon Road Bridge Repairs (FEMA/CalOES Project)'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "10",
+    "answer": [
+      "Storm Drain Trash Screens",
+      "Dume Drive and Fernhill Drive Speed Humps Project",
+      "Guardrail Replacement Citywide (FEMA/CalOES Project)",
+      "Corral Canyon Road Bridge Repairs (FEMA/CalOES Project)",
+      "Corral Canyon Culvert Repairs (FEMA/CalOES Project)"
+    ],
+    "new_file_names": [
+      "03232022-1869",
+      "01272021-1626",
+      "06222022-1919",
+      "01262022-1835"
+    ],
+    "orig_file_name": "01272021-1626"
+  },
+  {
+    "id": 11,
+    "query": "According to the report for the meeting on January 27, 2021: Return a list of project names for all projects whose status matches the status of project 'Guardrail Replacement Citywide (FEMA/CalOES Project)'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "11",
+    "answer": [
+      "Storm Drain Trash Screens",
+      "Dume Drive and Fernhill Drive Speed Humps Project",
+      "Guardrail Replacement Citywide (FEMA/CalOES Project)",
+      "Corral Canyon Road Bridge Repairs (FEMA/CalOES Project)",
+      "Corral Canyon Culvert Repairs (FEMA/CalOES Project)"
+    ],
+    "new_file_names": [
+      "11102022-1995",
+      "07272022-1939",
+      "10272021-1779",
+      "01272021-1626"
+    ],
+    "orig_file_name": "01272021-1626"
+  },
+  {
+    "id": 12,
+    "query": "According to the report for the meeting on January 27, 2021: Return a list of project names for all projects whose status matches the status of project 'Outdoor Warning Sirens (FEMA)'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "12",
+    "answer": [
+      "Annual Street Maintenance",
+      "Bluffs Park Shade Structure",
+      "Vehicle Protection Devices",
+      "Malibu Road Slope Repairs",
+      "Clover Heights Storm Drain (FEMA Project)",
+      "Latigo Canyon Road Culvert Repairs (FEMA/CalOES Project)",
+      "Encinal Canyon Road Drainage Improvements (FEMA/CalOES Project)",
+      "Outdoor Warning Sirens (FEMA)"
+    ],
+    "new_file_names": [
+      "01272021-1626",
+      "11102022-1995",
+      "03242021-1665",
+      "07282021-1732"
+    ],
+    "orig_file_name": "01272021-1626"
+  },
+  {
+    "id": 13,
+    "query": "According to the report for the meeting on January 27, 2021: Return a list of project names for all projects whose status matches the status of project 'Encinal Canyon Road Drainage Improvements (FEMA/CalOES Project)'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "13",
+    "answer": [
+      "Annual Street Maintenance",
+      "Bluffs Park Shade Structure",
+      "Vehicle Protection Devices",
+      "Malibu Road Slope Repairs",
+      "Clover Heights Storm Drain (FEMA Project)",
+      "Latigo Canyon Road Culvert Repairs (FEMA/CalOES Project)",
+      "Encinal Canyon Road Drainage Improvements (FEMA/CalOES Project)",
+      "Outdoor Warning Sirens (FEMA)"
+    ],
+    "new_file_names": [
+      "01272021-1626",
+      "03242021-1665",
+      "07282021-1732",
+      "09222021-1765"
+    ],
+    "orig_file_name": "01272021-1626"
+  },
+  {
+    "id": 14,
+    "query": "According to the report for the meeting on January 27, 2021: Return a list of project names for all projects whose status matches the status of project 'Latigo Canyon Road Culvert Repairs (FEMA/CalOES Project)'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "14",
+    "answer": [
+      "Annual Street Maintenance",
+      "Bluffs Park Shade Structure",
+      "Vehicle Protection Devices",
+      "Malibu Road Slope Repairs",
+      "Clover Heights Storm Drain (FEMA Project)",
+      "Latigo Canyon Road Culvert Repairs (FEMA/CalOES Project)",
+      "Encinal Canyon Road Drainage Improvements (FEMA/CalOES Project)",
+      "Outdoor Warning Sirens (FEMA)"
+    ],
+    "new_file_names": [
+      "01272021-1626",
+      "04282021-1687",
+      "03232022-1869",
+      "05262021-1701"
+    ],
+    "orig_file_name": "01272021-1626"
+  },
+  {
+    "id": 15,
+    "query": "According to the report for the meeting on March 2, 2021: Return a list of project names for all projects whose status matches the status of project 'Birdview Avenue Improvements (FEMA/CalOES Project)'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "15",
+    "answer": [
+      "Marie Canyon Green Streets",
+      "PCH Median Improvements Project",
+      "PCH Signal Synchronization System Improvements Project",
+      "Civic Center Stormwater Diversion Structure",
+      "Westward Beach Road Improvements Project",
+      "Civic Center Water Treatment Facility Phase 2",
+      "Malibu Park Drainage Improvements",
+      "Broad Beach Road Water Quality Infrastructure Repairs",
+      "Latigo Canyon Road Roadway/Retaining Wall Improvements (FEMA/CalOES Project)",
+      "Trancas Canyon Park Planting and Irrigation Repairs (FEMA/CalOES Project)",
+      "Trancas Canyon Park Slope Stabilization Project (CalOES Project)",
+      "Birdview Avenue Improvements (FEMA/CalOES Project)"
+    ],
+    "new_file_names": [
+      "01272021-1626",
+      "12142021-1808",
+      "03022021-1648",
+      "06222022-1919"
+    ],
+    "orig_file_name": "03022021-1648"
+  },
+  {
+    "id": 16,
+    "query": "According to the report for the meeting on March 2, 2021: Return a list of project names for all projects whose status matches the status of project 'Trancas Canyon Park Slope Stabilization Project (CalOES Project)'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "16",
+    "answer": [
+      "Marie Canyon Green Streets",
+      "PCH Median Improvements Project",
+      "PCH Signal Synchronization System Improvements Project",
+      "Civic Center Stormwater Diversion Structure",
+      "Westward Beach Road Improvements Project",
+      "Civic Center Water Treatment Facility Phase 2",
+      "Malibu Park Drainage Improvements",
+      "Broad Beach Road Water Quality Infrastructure Repairs",
+      "Latigo Canyon Road Roadway/Retaining Wall Improvements (FEMA/CalOES Project)",
+      "Trancas Canyon Park Planting and Irrigation Repairs (FEMA/CalOES Project)",
+      "Trancas Canyon Park Slope Stabilization Project (CalOES Project)",
+      "Birdview Avenue Improvements (FEMA/CalOES Project)"
+    ],
+    "new_file_names": [
+      "07272022-1939",
+      "10272021-1779",
+      "01262022-1835",
+      "03022021-1648"
+    ],
+    "orig_file_name": "03022021-1648"
+  },
+  {
+    "id": 17,
+    "query": "According to the report for the meeting on March 2, 2021: Return a list of project names for all projects whose status matches the status of project 'Trancas Canyon Park Planting and Irrigation Repairs (FEMA/CalOES Project)'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "17",
+    "answer": [
+      "Marie Canyon Green Streets",
+      "PCH Median Improvements Project",
+      "PCH Signal Synchronization System Improvements Project",
+      "Civic Center Stormwater Diversion Structure",
+      "Westward Beach Road Improvements Project",
+      "Civic Center Water Treatment Facility Phase 2",
+      "Malibu Park Drainage Improvements",
+      "Broad Beach Road Water Quality Infrastructure Repairs",
+      "Latigo Canyon Road Roadway/Retaining Wall Improvements (FEMA/CalOES Project)",
+      "Trancas Canyon Park Planting and Irrigation Repairs (FEMA/CalOES Project)",
+      "Trancas Canyon Park Slope Stabilization Project (CalOES Project)",
+      "Birdview Avenue Improvements (FEMA/CalOES Project)"
+    ],
+    "new_file_names": [
+      "11102022-1995",
+      "01272021-1626",
+      "03022021-1648",
+      "06232021-1714"
+    ],
+    "orig_file_name": "03022021-1648"
+  },
+  {
+    "id": 18,
+    "query": "According to the report for the meeting on March 2, 2021: Return a list of project names for all projects whose status matches the status of project 'Storm Drain Master Plan (FEMA Project)'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "18",
+    "answer": [
+      "Annual Street Maintenance",
+      "Bluffs Park Shade Structure",
+      "Vehicle Protection Devices",
+      "Malibu Road Slope Repairs",
+      "Clover Heights Storm Drain (FEMA Project)",
+      "Latigo Canyon Road Culvert Repairs (FEMA/CalOES Project)",
+      "Encinal Canyon Road Drainage Improvements (FEMA/CalOES Project)",
+      "Outdoor Warning Sirens (FEMA Project)",
+      "Storm Drain Master Plan (FEMA Project)"
+    ],
+    "new_file_names": [
+      "08252021-1746",
+      "03022021-1648",
+      "03242021-1665",
+      "05262021-1701"
+    ],
+    "orig_file_name": "03022021-1648"
+  },
+  {
+    "id": 19,
+    "query": "According to the report for the meeting on March 2, 2021: Return a list of project names for all projects whose status matches the status of project 'Outdoor Warning Sirens (FEMA Project)'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "19",
+    "answer": [
+      "Annual Street Maintenance",
+      "Bluffs Park Shade Structure",
+      "Vehicle Protection Devices",
+      "Malibu Road Slope Repairs",
+      "Clover Heights Storm Drain (FEMA Project)",
+      "Latigo Canyon Road Culvert Repairs (FEMA/CalOES Project)",
+      "Encinal Canyon Road Drainage Improvements (FEMA/CalOES Project)",
+      "Outdoor Warning Sirens (FEMA Project)",
+      "Storm Drain Master Plan (FEMA Project)"
+    ],
+    "new_file_names": [
+      "06222022-1919",
+      "06232021-1714",
+      "03242021-1665",
+      "03022021-1648"
+    ],
+    "orig_file_name": "03022021-1648"
+  },
+  {
+    "id": 20,
+    "query": "According to the report for the meeting on March 2, 2021: Return a list of project names for all projects whose status matches the status of project 'Encinal Canyon Road Drainage Improvements (FEMA/CalOES Project)'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "20",
+    "answer": [
+      "Annual Street Maintenance",
+      "Bluffs Park Shade Structure",
+      "Vehicle Protection Devices",
+      "Malibu Road Slope Repairs",
+      "Clover Heights Storm Drain (FEMA Project)",
+      "Latigo Canyon Road Culvert Repairs (FEMA/CalOES Project)",
+      "Encinal Canyon Road Drainage Improvements (FEMA/CalOES Project)",
+      "Outdoor Warning Sirens (FEMA Project)",
+      "Storm Drain Master Plan (FEMA Project)"
+    ],
+    "new_file_names": [
+      "04282021-1687",
+      "09222021-1765",
+      "03022021-1648",
+      "03242021-1665"
+    ],
+    "orig_file_name": "03022021-1648"
+  },
+  {
+    "id": 21,
+    "query": "According to the report for the meeting on March 23, 2022: Return a list of project names for all projects whose status matches the status of project 'Outdoor Warning Sirens - Design (FEMA Project)'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "21",
+    "answer": [
+      "Marie Canyon Green Streets",
+      "PCH Median Improvements Project",
+      "PCH Signal Synchronization System Improvements Project",
+      "Westward Beach Road Improvements Project",
+      "Civic Center Water Treatment Facility Phase 2",
+      "Bluffs Park Shade Structure",
+      "Permanent Skate Park",
+      "PCH at Trancas Canyon Road Right Turn Lane",
+      "Broad Beach Road Water Quality Infrastructure Repairs (CalJPIA Project)",
+      "Latigo Canyon Road Roadway/Retaining Wall Improvements (FEMA Project)",
+      "Trancas Canyon Park Planting and Irrigation Repairs (CalJPIA/FEMA Project)",
+      "Trancas Canyon Park Slope Stabilization Project (CalJPIA Project)",
+      "Storm Drain Master Plan (FEMA Project)",
+      "Corral Canyon Road Bridge Repairs (FEMA Project)",
+      "Clover Heights Storm Drain (FEMA Project)",
+      "Latigo Canyon Road Culvert Repairs (FEMA Project)",
+      "Encinal Canyon Road Drainage Improvements (CalOES Project)",
+      "Malibu Road Slope Repairs (CalOES Project)",
+      "Westward Beach Road Shoulder Repairs (CalOES Project)",
+      "Outdoor Warning Sirens - Design (FEMA Project)"
+    ],
+    "new_file_names": [
+      "04282021-1687",
+      "03232022-1869",
+      "08252021-1746",
+      "01262022-1835"
+    ],
+    "orig_file_name": "03232022-1869"
+  },
+  {
+    "id": 22,
+    "query": "According to the report for the meeting on March 23, 2022: Return a list of project names for all projects whose status matches the status of project 'Westward Beach Road Shoulder Repairs (CalOES Project)'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "22",
+    "answer": [
+      "Marie Canyon Green Streets",
+      "PCH Median Improvements Project",
+      "PCH Signal Synchronization System Improvements Project",
+      "Westward Beach Road Improvements Project",
+      "Civic Center Water Treatment Facility Phase 2",
+      "Bluffs Park Shade Structure",
+      "Permanent Skate Park",
+      "PCH at Trancas Canyon Road Right Turn Lane",
+      "Broad Beach Road Water Quality Infrastructure Repairs (CalJPIA Project)",
+      "Latigo Canyon Road Roadway/Retaining Wall Improvements (FEMA Project)",
+      "Trancas Canyon Park Planting and Irrigation Repairs (CalJPIA/FEMA Project)",
+      "Trancas Canyon Park Slope Stabilization Project (CalJPIA Project)",
+      "Storm Drain Master Plan (FEMA Project)",
+      "Corral Canyon Road Bridge Repairs (FEMA Project)",
+      "Clover Heights Storm Drain (FEMA Project)",
+      "Latigo Canyon Road Culvert Repairs (FEMA Project)",
+      "Encinal Canyon Road Drainage Improvements (CalOES Project)",
+      "Malibu Road Slope Repairs (CalOES Project)",
+      "Westward Beach Road Shoulder Repairs (CalOES Project)",
+      "Outdoor Warning Sirens - Design (FEMA Project)"
+    ],
+    "new_file_names": [
+      "12142021-1808",
+      "09222021-1765",
+      "03232022-1869",
+      "08252021-1746"
+    ],
+    "orig_file_name": "03232022-1869"
+  },
+  {
+    "id": 23,
+    "query": "According to the report for the meeting on March 23, 2022: Return a list of project names for all projects whose status matches the status of project 'Malibu Road Slope Repairs (CalOES Project)'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "23",
+    "answer": [
+      "Marie Canyon Green Streets",
+      "PCH Median Improvements Project",
+      "PCH Signal Synchronization System Improvements Project",
+      "Westward Beach Road Improvements Project",
+      "Civic Center Water Treatment Facility Phase 2",
+      "Bluffs Park Shade Structure",
+      "Permanent Skate Park",
+      "PCH at Trancas Canyon Road Right Turn Lane",
+      "Broad Beach Road Water Quality Infrastructure Repairs (CalJPIA Project)",
+      "Latigo Canyon Road Roadway/Retaining Wall Improvements (FEMA Project)",
+      "Trancas Canyon Park Planting and Irrigation Repairs (CalJPIA/FEMA Project)",
+      "Trancas Canyon Park Slope Stabilization Project (CalJPIA Project)",
+      "Storm Drain Master Plan (FEMA Project)",
+      "Corral Canyon Road Bridge Repairs (FEMA Project)",
+      "Clover Heights Storm Drain (FEMA Project)",
+      "Latigo Canyon Road Culvert Repairs (FEMA Project)",
+      "Encinal Canyon Road Drainage Improvements (CalOES Project)",
+      "Malibu Road Slope Repairs (CalOES Project)",
+      "Westward Beach Road Shoulder Repairs (CalOES Project)",
+      "Outdoor Warning Sirens - Design (FEMA Project)"
+    ],
+    "new_file_names": [
+      "03232022-1869",
+      "06232021-1714",
+      "09222021-1765",
+      "07282021-1732"
+    ],
+    "orig_file_name": "03232022-1869"
+  },
+  {
+    "id": 24,
+    "query": "According to the report for the meeting on March 23, 2022: Return a list of project names for all projects whose status matches the status of project 'Birdview Avenue Improvements (CalOES Project)'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "24",
+    "answer": [
+      "Civic Center Way Improvements",
+      "Civic Center Stormwater Diversion Structure",
+      "2021 Annual Street Maintenance",
+      "Citywide Guardrail Replacement",
+      "Malibu Park Storm Drain Repairs",
+      "Corral Canyon Culvert Repairs (FEMA Project)",
+      "Birdview Avenue Improvements (CalOES Project)"
+    ],
+    "new_file_names": [
+      "01262022-1835",
+      "04282021-1687",
+      "01272021-1626",
+      "03232022-1869"
+    ],
+    "orig_file_name": "03232022-1869"
+  },
+  {
+    "id": 25,
+    "query": "According to the report for the meeting on March 23, 2022: Return a list of project names for all projects whose status matches the status of project 'Corral Canyon Culvert Repairs (FEMA Project)'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "25",
+    "answer": [
+      "Civic Center Way Improvements",
+      "Civic Center Stormwater Diversion Structure",
+      "2021 Annual Street Maintenance",
+      "Citywide Guardrail Replacement",
+      "Malibu Park Storm Drain Repairs",
+      "Corral Canyon Culvert Repairs (FEMA Project)",
+      "Birdview Avenue Improvements (CalOES Project)"
+    ],
+    "new_file_names": [
+      "06232021-1714",
+      "01262022-1835",
+      "06222022-1919",
+      "03232022-1869"
+    ],
+    "orig_file_name": "03232022-1869"
+  },
+  {
+    "id": 26,
+    "query": "According to the report for the meeting on March 23, 2022: Return a list of project names for all projects whose status matches the status of project 'Malibu Park Storm Drain Repairs'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "26",
+    "answer": [
+      "Civic Center Way Improvements",
+      "Civic Center Stormwater Diversion Structure",
+      "2021 Annual Street Maintenance",
+      "Citywide Guardrail Replacement",
+      "Malibu Park Storm Drain Repairs",
+      "Corral Canyon Culvert Repairs (FEMA Project)",
+      "Birdview Avenue Improvements (CalOES Project)"
+    ],
+    "new_file_names": [
+      "12142021-1808",
+      "04282021-1687",
+      "03232022-1869",
+      "03242021-1665"
+    ],
+    "orig_file_name": "03232022-1869"
+  },
+  {
+    "id": 27,
+    "query": "According to the report for the meeting on March 24, 2021: Return a list of project names for all projects whose status matches the status of project 'Outdoor Warning Sirens'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "27",
+    "answer": [
+      "Marie Canyon Green Streets",
+      "PCH Median Improvements Project",
+      "PCH Signal Synchronization System Improvements Project",
+      "Civic Center Stormwater Diversion Structure",
+      "Westward Beach Road Improvements Project",
+      "Civic Center Water Treatment Facility Phase 2",
+      "Malibu Park Drainage Improvements",
+      "Broad Beach Road Water Quality Infrastructure Repairs",
+      "Latigo Canyon Road Roadway/Retaining Wall Improvements",
+      "Trancas Canyon Park Planting and Irrigation Repairs",
+      "Trancas Canyon Park Slope Stabilization Project",
+      "Birdview Avenue Improvements",
+      "Outdoor Warning Sirens"
+    ],
+    "new_file_names": [
+      "03242021-1665",
+      "04282021-1687",
+      "11102022-1995",
+      "03232022-1869"
+    ],
+    "orig_file_name": "03242021-1665"
+  },
+  {
+    "id": 28,
+    "query": "According to the report for the meeting on March 24, 2021: Return a list of project names for all projects whose status matches the status of project 'Birdview Avenue Improvements'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "28",
+    "answer": [
+      "Marie Canyon Green Streets",
+      "PCH Median Improvements Project",
+      "PCH Signal Synchronization System Improvements Project",
+      "Civic Center Stormwater Diversion Structure",
+      "Westward Beach Road Improvements Project",
+      "Civic Center Water Treatment Facility Phase 2",
+      "Malibu Park Drainage Improvements",
+      "Broad Beach Road Water Quality Infrastructure Repairs",
+      "Latigo Canyon Road Roadway/Retaining Wall Improvements",
+      "Trancas Canyon Park Planting and Irrigation Repairs",
+      "Trancas Canyon Park Slope Stabilization Project",
+      "Birdview Avenue Improvements",
+      "Outdoor Warning Sirens"
+    ],
+    "new_file_names": [
+      "03242021-1665",
+      "08252021-1746",
+      "05262021-1701",
+      "04282021-1687"
+    ],
+    "orig_file_name": "03242021-1665"
+  },
+  {
+    "id": 29,
+    "query": "According to the report for the meeting on March 24, 2021: Return a list of project names for all projects whose status matches the status of project 'Trancas Canyon Park Slope Stabilization Project'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "29",
+    "answer": [
+      "Marie Canyon Green Streets",
+      "PCH Median Improvements Project",
+      "PCH Signal Synchronization System Improvements Project",
+      "Civic Center Stormwater Diversion Structure",
+      "Westward Beach Road Improvements Project",
+      "Civic Center Water Treatment Facility Phase 2",
+      "Malibu Park Drainage Improvements",
+      "Broad Beach Road Water Quality Infrastructure Repairs",
+      "Latigo Canyon Road Roadway/Retaining Wall Improvements",
+      "Trancas Canyon Park Planting and Irrigation Repairs",
+      "Trancas Canyon Park Slope Stabilization Project",
+      "Birdview Avenue Improvements",
+      "Outdoor Warning Sirens"
+    ],
+    "new_file_names": [
+      "03022021-1648",
+      "07272022-1939",
+      "03242021-1665",
+      "05262021-1701"
+    ],
+    "orig_file_name": "03242021-1665"
+  },
+  {
+    "id": 30,
+    "query": "According to the report for the meeting on March 24, 2021: Return a list of project names for all projects whose status matches the status of project 'Storm Drain Master Plan'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "30",
+    "answer": [
+      "Annual Street Maintenance",
+      "Bluffs Park Shade Structure",
+      "Vehicle Protection Devices",
+      "Malibu Road Slope Repairs",
+      "Clover Heights Storm Drain",
+      "Latigo Canyon Road Culvert Repairs",
+      "Encinal Canyon Road Drainage Improvements",
+      "Storm Drain Master Plan"
+    ],
+    "new_file_names": [
+      "06232021-1714",
+      "03242021-1665",
+      "07282021-1732",
+      "07272022-1939"
+    ],
+    "orig_file_name": "03242021-1665"
+  },
+  {
+    "id": 31,
+    "query": "According to the report for the meeting on March 24, 2021: Return a list of project names for all projects whose status matches the status of project 'Encinal Canyon Road Drainage Improvements'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "31",
+    "answer": [
+      "Annual Street Maintenance",
+      "Bluffs Park Shade Structure",
+      "Vehicle Protection Devices",
+      "Malibu Road Slope Repairs",
+      "Clover Heights Storm Drain",
+      "Latigo Canyon Road Culvert Repairs",
+      "Encinal Canyon Road Drainage Improvements",
+      "Storm Drain Master Plan"
+    ],
+    "new_file_names": [
+      "06222022-1919",
+      "03242021-1665",
+      "11102022-1995",
+      "05262021-1701"
+    ],
+    "orig_file_name": "03242021-1665"
+  },
+  {
+    "id": 32,
+    "query": "According to the report for the meeting on March 24, 2021: Return a list of project names for all projects whose status matches the status of project 'Latigo Canyon Road Culvert Repairs'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "32",
+    "answer": [
+      "Annual Street Maintenance",
+      "Bluffs Park Shade Structure",
+      "Vehicle Protection Devices",
+      "Malibu Road Slope Repairs",
+      "Clover Heights Storm Drain",
+      "Latigo Canyon Road Culvert Repairs",
+      "Encinal Canyon Road Drainage Improvements",
+      "Storm Drain Master Plan"
+    ],
+    "new_file_names": [
+      "03242021-1665",
+      "12142021-1808",
+      "08252021-1746",
+      "05262021-1701"
+    ],
+    "orig_file_name": "03242021-1665"
+  },
+  {
+    "id": 33,
+    "query": "According to the report for the meeting on April 28, 2021: Return a list of project names for all projects whose status matches the status of project 'Outdoor Warning Sirens (FEMA Project)'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "33",
+    "answer": [
+      "Marie Canyon Green Streets",
+      "PCH Median Improvements Project",
+      "PCH Signal Synchronization System Improvements Project",
+      "Civic Center Stormwater Diversion Structure",
+      "Westward Beach Road Improvements Project",
+      "Civic Center Water Treatment Facility Phase 2",
+      "Malibu Park Drainage Improvements",
+      "Annual Street Maintenance",
+      "Broad Beach Road Water Quality Infrastructure Repairs (CalJPIA Project)",
+      "Latigo Canyon Road Roadway/Retaining Wall Improvements (FEMA Project)",
+      "Trancas Canyon Park Planting and Irrigation Repairs (CalJPIA/FEMA Project)",
+      "Trancas Canyon Park Slope Stabilization Project (CalJPIA Project)",
+      "Birdview Avenue Improvements (CalOES Project)",
+      "Outdoor Warning Sirens (FEMA Project)"
+    ],
+    "new_file_names": [
+      "01272021-1626",
+      "04282021-1687",
+      "08252021-1746",
+      "03232022-1869"
+    ],
+    "orig_file_name": "04282021-1687"
+  },
+  {
+    "id": 34,
+    "query": "According to the report for the meeting on April 28, 2021: Return a list of project names for all projects whose status matches the status of project 'Birdview Avenue Improvements (CalOES Project)'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "34",
+    "answer": [
+      "Marie Canyon Green Streets",
+      "PCH Median Improvements Project",
+      "PCH Signal Synchronization System Improvements Project",
+      "Civic Center Stormwater Diversion Structure",
+      "Westward Beach Road Improvements Project",
+      "Civic Center Water Treatment Facility Phase 2",
+      "Malibu Park Drainage Improvements",
+      "Annual Street Maintenance",
+      "Broad Beach Road Water Quality Infrastructure Repairs (CalJPIA Project)",
+      "Latigo Canyon Road Roadway/Retaining Wall Improvements (FEMA Project)",
+      "Trancas Canyon Park Planting and Irrigation Repairs (CalJPIA/FEMA Project)",
+      "Trancas Canyon Park Slope Stabilization Project (CalJPIA Project)",
+      "Birdview Avenue Improvements (CalOES Project)",
+      "Outdoor Warning Sirens (FEMA Project)"
+    ],
+    "new_file_names": [
+      "04282021-1687",
+      "07272022-1939",
+      "03022021-1648",
+      "01272021-1626"
+    ],
+    "orig_file_name": "04282021-1687"
+  },
+  {
+    "id": 35,
+    "query": "According to the report for the meeting on April 28, 2021: Return a list of project names for all projects whose status matches the status of project 'Trancas Canyon Park Slope Stabilization Project (CalJPIA Project)'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "35",
+    "answer": [
+      "Marie Canyon Green Streets",
+      "PCH Median Improvements Project",
+      "PCH Signal Synchronization System Improvements Project",
+      "Civic Center Stormwater Diversion Structure",
+      "Westward Beach Road Improvements Project",
+      "Civic Center Water Treatment Facility Phase 2",
+      "Malibu Park Drainage Improvements",
+      "Annual Street Maintenance",
+      "Broad Beach Road Water Quality Infrastructure Repairs (CalJPIA Project)",
+      "Latigo Canyon Road Roadway/Retaining Wall Improvements (FEMA Project)",
+      "Trancas Canyon Park Planting and Irrigation Repairs (CalJPIA/FEMA Project)",
+      "Trancas Canyon Park Slope Stabilization Project (CalJPIA Project)",
+      "Birdview Avenue Improvements (CalOES Project)",
+      "Outdoor Warning Sirens (FEMA Project)"
+    ],
+    "new_file_names": [
+      "07272022-1939",
+      "04282021-1687",
+      "03022021-1648",
+      "06232021-1714"
+    ],
+    "orig_file_name": "04282021-1687"
+  },
+  {
+    "id": 36,
+    "query": "According to the report for the meeting on April 28, 2021: Return a list of project names for all projects whose status matches the status of project 'Storm Drain Master Plan (FEMA Project)'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "36",
+    "answer": [
+      "Bluffs Park Shade Structure",
+      "Vehicle Protection Devices",
+      "Malibu Road Slope Repairs",
+      "Clover Heights Storm Drain (FEMA Project)",
+      "Latigo Canyon Road Culvert Repairs (FEMA Project)",
+      "Encinal Canyon Road Drainage Improvements (CalOES Project)",
+      "Storm Drain Master Plan (FEMA Project)"
+    ],
+    "new_file_names": [
+      "10272021-1779",
+      "04282021-1687",
+      "06222022-1919",
+      "03022021-1648"
+    ],
+    "orig_file_name": "04282021-1687"
+  },
+  {
+    "id": 37,
+    "query": "According to the report for the meeting on April 28, 2021: Return a list of project names for all projects whose status matches the status of project 'Encinal Canyon Road Drainage Improvements (CalOES Project)'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "37",
+    "answer": [
+      "Bluffs Park Shade Structure",
+      "Vehicle Protection Devices",
+      "Malibu Road Slope Repairs",
+      "Clover Heights Storm Drain (FEMA Project)",
+      "Latigo Canyon Road Culvert Repairs (FEMA Project)",
+      "Encinal Canyon Road Drainage Improvements (CalOES Project)",
+      "Storm Drain Master Plan (FEMA Project)"
+    ],
+    "new_file_names": [
+      "05262021-1701",
+      "01272021-1626",
+      "03232022-1869",
+      "04282021-1687"
+    ],
+    "orig_file_name": "04282021-1687"
+  },
+  {
+    "id": 38,
+    "query": "According to the report for the meeting on April 28, 2021: Return a list of project names for all projects whose status matches the status of project 'Latigo Canyon Road Culvert Repairs (FEMA Project)'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "38",
+    "answer": [
+      "Bluffs Park Shade Structure",
+      "Vehicle Protection Devices",
+      "Malibu Road Slope Repairs",
+      "Clover Heights Storm Drain (FEMA Project)",
+      "Latigo Canyon Road Culvert Repairs (FEMA Project)",
+      "Encinal Canyon Road Drainage Improvements (CalOES Project)",
+      "Storm Drain Master Plan (FEMA Project)"
+    ],
+    "new_file_names": [
+      "04282021-1687",
+      "03232022-1869",
+      "10272021-1779",
+      "01262022-1835"
+    ],
+    "orig_file_name": "04282021-1687"
+  },
+  {
+    "id": 39,
+    "query": "According to the report for the meeting on May 26, 2021: Return a list of project names for all projects whose status matches the status of project 'Outdoor Warning Sirens (FEMA Project)'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "39",
+    "answer": [
+      "Marie Canyon Green Streets",
+      "PCH Median Improvements Project",
+      "PCH Signal Synchronization System Improvements Project",
+      "Civic Center Stormwater Diversion Structure",
+      "Westward Beach Road Improvements Project",
+      "Civic Center Water Treatment Facility Phase 2",
+      "Malibu Park Drainage Improvements",
+      "2021 Annual Street Maintenance",
+      "Broad Beach Road Water Quality Infrastructure Repairs (CalJPIA Project)",
+      "Latigo Canyon Road Roadway/Retaining Wall Improvements (FEMA Project)",
+      "Trancas Canyon Park Planting and Irrigation Repairs (CalJPIA/FEMA Project)",
+      "Trancas Canyon Park Slope Stabilization Project (CalJPIA Project)",
+      "Birdview Avenue Improvements (CalOES Project)",
+      "Outdoor Warning Sirens (FEMA Project)"
+    ],
+    "new_file_names": [
+      "03022021-1648",
+      "11102022-1995",
+      "07282021-1732",
+      "05262021-1701"
+    ],
+    "orig_file_name": "05262021-1701"
+  },
+  {
+    "id": 40,
+    "query": "According to the report for the meeting on May 26, 2021: Return a list of project names for all projects whose status matches the status of project 'Birdview Avenue Improvements (CalOES Project)'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "40",
+    "answer": [
+      "Marie Canyon Green Streets",
+      "PCH Median Improvements Project",
+      "PCH Signal Synchronization System Improvements Project",
+      "Civic Center Stormwater Diversion Structure",
+      "Westward Beach Road Improvements Project",
+      "Civic Center Water Treatment Facility Phase 2",
+      "Malibu Park Drainage Improvements",
+      "2021 Annual Street Maintenance",
+      "Broad Beach Road Water Quality Infrastructure Repairs (CalJPIA Project)",
+      "Latigo Canyon Road Roadway/Retaining Wall Improvements (FEMA Project)",
+      "Trancas Canyon Park Planting and Irrigation Repairs (CalJPIA/FEMA Project)",
+      "Trancas Canyon Park Slope Stabilization Project (CalJPIA Project)",
+      "Birdview Avenue Improvements (CalOES Project)",
+      "Outdoor Warning Sirens (FEMA Project)"
+    ],
+    "new_file_names": [
+      "05262021-1701",
+      "03232022-1869",
+      "07272022-1939",
+      "01272021-1626"
+    ],
+    "orig_file_name": "05262021-1701"
+  },
+  {
+    "id": 41,
+    "query": "According to the report for the meeting on May 26, 2021: Return a list of project names for all projects whose status matches the status of project 'Trancas Canyon Park Slope Stabilization Project (CalJPIA Project)'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "41",
+    "answer": [
+      "Marie Canyon Green Streets",
+      "PCH Median Improvements Project",
+      "PCH Signal Synchronization System Improvements Project",
+      "Civic Center Stormwater Diversion Structure",
+      "Westward Beach Road Improvements Project",
+      "Civic Center Water Treatment Facility Phase 2",
+      "Malibu Park Drainage Improvements",
+      "2021 Annual Street Maintenance",
+      "Broad Beach Road Water Quality Infrastructure Repairs (CalJPIA Project)",
+      "Latigo Canyon Road Roadway/Retaining Wall Improvements (FEMA Project)",
+      "Trancas Canyon Park Planting and Irrigation Repairs (CalJPIA/FEMA Project)",
+      "Trancas Canyon Park Slope Stabilization Project (CalJPIA Project)",
+      "Birdview Avenue Improvements (CalOES Project)",
+      "Outdoor Warning Sirens (FEMA Project)"
+    ],
+    "new_file_names": [
+      "11102022-1995",
+      "05262021-1701",
+      "07282021-1732",
+      "01262022-1835"
+    ],
+    "orig_file_name": "05262021-1701"
+  },
+  {
+    "id": 42,
+    "query": "According to the report for the meeting on May 26, 2021: Return a list of project names for all projects whose status matches the status of project 'Storm Drain Master Plan (FEMA Project)'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "42",
+    "answer": [
+      "Bluffs Park Shade Structure",
+      "Vehicle Protection Devices",
+      "Malibu Road Slope Repairs",
+      "Clover Heights Storm Drain (FEMA Project)",
+      "Latigo Canyon Road Culvert Repairs (FEMA Project)",
+      "Encinal Canyon Road Drainage Improvements (CalOES Project)",
+      "Storm Drain Master Plan (FEMA Project)"
+    ],
+    "new_file_names": [
+      "08252021-1746",
+      "05262021-1701",
+      "06222022-1919",
+      "03242021-1665"
+    ],
+    "orig_file_name": "05262021-1701"
+  },
+  {
+    "id": 43,
+    "query": "According to the report for the meeting on May 26, 2021: Return a list of project names for all projects whose status matches the status of project 'Encinal Canyon Road Drainage Improvements (CalOES Project)'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "43",
+    "answer": [
+      "Bluffs Park Shade Structure",
+      "Vehicle Protection Devices",
+      "Malibu Road Slope Repairs",
+      "Clover Heights Storm Drain (FEMA Project)",
+      "Latigo Canyon Road Culvert Repairs (FEMA Project)",
+      "Encinal Canyon Road Drainage Improvements (CalOES Project)",
+      "Storm Drain Master Plan (FEMA Project)"
+    ],
+    "new_file_names": [
+      "03022021-1648",
+      "06222022-1919",
+      "05262021-1701",
+      "04282021-1687"
+    ],
+    "orig_file_name": "05262021-1701"
+  },
+  {
+    "id": 44,
+    "query": "According to the report for the meeting on May 26, 2021: Return a list of project names for all projects whose status matches the status of project 'Latigo Canyon Road Culvert Repairs (FEMA Project)'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "44",
+    "answer": [
+      "Bluffs Park Shade Structure",
+      "Vehicle Protection Devices",
+      "Malibu Road Slope Repairs",
+      "Clover Heights Storm Drain (FEMA Project)",
+      "Latigo Canyon Road Culvert Repairs (FEMA Project)",
+      "Encinal Canyon Road Drainage Improvements (CalOES Project)",
+      "Storm Drain Master Plan (FEMA Project)"
+    ],
+    "new_file_names": [
+      "11102022-1995",
+      "10272021-1779",
+      "01272021-1626",
+      "05262021-1701"
+    ],
+    "orig_file_name": "05262021-1701"
+  },
+  {
+    "id": 45,
+    "query": "According to the report for the meeting on June 22, 2022: Return a list of project names for all projects whose status matches the status of project 'Outdoor Warning Sirens - Design (FEMA Project)'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "45",
+    "answer": [
+      "Marie Canyon Green Streets",
+      "PCH Median Improvements Project",
+      "PCH Signal Synchronization System Improvements Project",
+      "Westward Beach Road Repair Project",
+      "Civic Center Water Treatment Facility Phase 2",
+      "Permanent Skate Park",
+      "PCH at Trancas Canyon Road Right Turn Lane",
+      "Michael Landon Center Roof Replacement Project",
+      "Latigo Canyon Road Roadway/Retaining Wall Improvements (FEMA Project)",
+      "Trancas Canyon Park Planting and Irrigation Repairs (CalJPIA/FEMA Project)",
+      "Trancas Canyon Park Slope Stabilization Project (CalJPIA Project)",
+      "Storm Drain Master Plan (FEMA Project)",
+      "Clover Heights Storm Drain (FEMA Project)",
+      "Encinal Canyon Road Drainage Improvements (CalOES Project)",
+      "Malibu Road Slope Repairs (CalOES Project)",
+      "Westward Beach Road Shoulder Repairs (CalOES Project)",
+      "Outdoor Warning Sirens - Design (FEMA Project)"
+    ],
+    "new_file_names": [
+      "11102022-1995",
+      "06222022-1919",
+      "03022021-1648",
+      "07272022-1939"
+    ],
+    "orig_file_name": "06222022-1919"
+  },
+  {
+    "id": 46,
+    "query": "According to the report for the meeting on June 22, 2022: Return a list of project names for all projects whose status matches the status of project 'Westward Beach Road Shoulder Repairs (CalOES Project)'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "46",
+    "answer": [
+      "Marie Canyon Green Streets",
+      "PCH Median Improvements Project",
+      "PCH Signal Synchronization System Improvements Project",
+      "Westward Beach Road Repair Project",
+      "Civic Center Water Treatment Facility Phase 2",
+      "Permanent Skate Park",
+      "PCH at Trancas Canyon Road Right Turn Lane",
+      "Michael Landon Center Roof Replacement Project",
+      "Latigo Canyon Road Roadway/Retaining Wall Improvements (FEMA Project)",
+      "Trancas Canyon Park Planting and Irrigation Repairs (CalJPIA/FEMA Project)",
+      "Trancas Canyon Park Slope Stabilization Project (CalJPIA Project)",
+      "Storm Drain Master Plan (FEMA Project)",
+      "Clover Heights Storm Drain (FEMA Project)",
+      "Encinal Canyon Road Drainage Improvements (CalOES Project)",
+      "Malibu Road Slope Repairs (CalOES Project)",
+      "Westward Beach Road Shoulder Repairs (CalOES Project)",
+      "Outdoor Warning Sirens - Design (FEMA Project)"
+    ],
+    "new_file_names": [
+      "09222021-1765",
+      "06222022-1919",
+      "11102022-1995",
+      "08252021-1746"
+    ],
+    "orig_file_name": "06222022-1919"
+  },
+  {
+    "id": 47,
+    "query": "According to the report for the meeting on June 22, 2022: Return a list of project names for all projects whose status matches the status of project 'Malibu Road Slope Repairs (CalOES Project)'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "47",
+    "answer": [
+      "Marie Canyon Green Streets",
+      "PCH Median Improvements Project",
+      "PCH Signal Synchronization System Improvements Project",
+      "Westward Beach Road Repair Project",
+      "Civic Center Water Treatment Facility Phase 2",
+      "Permanent Skate Park",
+      "PCH at Trancas Canyon Road Right Turn Lane",
+      "Michael Landon Center Roof Replacement Project",
+      "Latigo Canyon Road Roadway/Retaining Wall Improvements (FEMA Project)",
+      "Trancas Canyon Park Planting and Irrigation Repairs (CalJPIA/FEMA Project)",
+      "Trancas Canyon Park Slope Stabilization Project (CalJPIA Project)",
+      "Storm Drain Master Plan (FEMA Project)",
+      "Clover Heights Storm Drain (FEMA Project)",
+      "Encinal Canyon Road Drainage Improvements (CalOES Project)",
+      "Malibu Road Slope Repairs (CalOES Project)",
+      "Westward Beach Road Shoulder Repairs (CalOES Project)",
+      "Outdoor Warning Sirens - Design (FEMA Project)"
+    ],
+    "new_file_names": [
+      "11102022-1995",
+      "08252021-1746",
+      "01262022-1835",
+      "06222022-1919"
+    ],
+    "orig_file_name": "06222022-1919"
+  },
+  {
+    "id": 48,
+    "query": "According to the report for the meeting on June 22, 2022: Return a list of project names for all projects whose status matches the status of project 'Broad Beach Road Water Quality Infrastructure Repairs (CalJPIA Project)'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "48",
+    "answer": [
+      "Bluffs Park Shade Structure",
+      "Michael Landon Center HVAC Replacement Project",
+      "Broad Beach Road Water Quality Infrastructure Repairs (CalJPIA Project)"
+    ],
+    "new_file_names": [
+      "01262022-1835",
+      "01272021-1626",
+      "06222022-1919",
+      "12142021-1808"
+    ],
+    "orig_file_name": "06222022-1919"
+  },
+  {
+    "id": 49,
+    "query": "According to the report for the meeting on June 22, 2022: Return a list of project names for all projects whose status matches the status of project 'Michael Landon Center HVAC Replacement Project'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "49",
+    "answer": [
+      "Bluffs Park Shade Structure",
+      "Michael Landon Center HVAC Replacement Project",
+      "Broad Beach Road Water Quality Infrastructure Repairs (CalJPIA Project)"
+    ],
+    "new_file_names": [
+      "06222022-1919",
+      "11102022-1995",
+      "08252021-1746",
+      "01262022-1835"
+    ],
+    "orig_file_name": "06222022-1919"
+  },
+  {
+    "id": 50,
+    "query": "According to the report for the meeting on June 23, 2021: Return a list of project names for all projects whose status matches the status of project 'Outdoor Warning Sirens (FEMA Project)'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "50",
+    "answer": [
+      "Marie Canyon Green Streets",
+      "PCH Median Improvements Project",
+      "PCH Signal Synchronization System Improvements Project",
+      "Civic Center Stormwater Diversion Structure",
+      "Westward Beach Road Improvements Project",
+      "Civic Center Water Treatment Facility Phase 2",
+      "Broad Beach Road Water Quality Infrastructure Repairs (CalJPIA Project)",
+      "Latigo Canyon Road Roadway/Retaining Wall Improvements (FEMA Project)",
+      "Trancas Canyon Park Planting and Irrigation Repairs (CalJPIA/FEMA Project)",
+      "Trancas Canyon Park Slope Stabilization Project (CalJPIA Project)",
+      "Birdview Avenue Improvements (CalOES Project)",
+      "Outdoor Warning Sirens (FEMA Project)"
+    ],
+    "new_file_names": [
+      "06232021-1714",
+      "10272021-1779",
+      "07282021-1732",
+      "11102022-1995"
+    ],
+    "orig_file_name": "06232021-1714"
+  },
+  {
+    "id": 51,
+    "query": "According to the report for the meeting on June 23, 2021: Return a list of project names for all projects whose status matches the status of project 'Birdview Avenue Improvements (CalOES Project)'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "51",
+    "answer": [
+      "Marie Canyon Green Streets",
+      "PCH Median Improvements Project",
+      "PCH Signal Synchronization System Improvements Project",
+      "Civic Center Stormwater Diversion Structure",
+      "Westward Beach Road Improvements Project",
+      "Civic Center Water Treatment Facility Phase 2",
+      "Broad Beach Road Water Quality Infrastructure Repairs (CalJPIA Project)",
+      "Latigo Canyon Road Roadway/Retaining Wall Improvements (FEMA Project)",
+      "Trancas Canyon Park Planting and Irrigation Repairs (CalJPIA/FEMA Project)",
+      "Trancas Canyon Park Slope Stabilization Project (CalJPIA Project)",
+      "Birdview Avenue Improvements (CalOES Project)",
+      "Outdoor Warning Sirens (FEMA Project)"
+    ],
+    "new_file_names": [
+      "06232021-1714",
+      "10272021-1779",
+      "07272022-1939",
+      "12142021-1808"
+    ],
+    "orig_file_name": "06232021-1714"
+  },
+  {
+    "id": 52,
+    "query": "According to the report for the meeting on June 23, 2021: Return a list of project names for all projects whose status matches the status of project 'Trancas Canyon Park Slope Stabilization Project (CalJPIA Project)'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "52",
+    "answer": [
+      "Marie Canyon Green Streets",
+      "PCH Median Improvements Project",
+      "PCH Signal Synchronization System Improvements Project",
+      "Civic Center Stormwater Diversion Structure",
+      "Westward Beach Road Improvements Project",
+      "Civic Center Water Treatment Facility Phase 2",
+      "Broad Beach Road Water Quality Infrastructure Repairs (CalJPIA Project)",
+      "Latigo Canyon Road Roadway/Retaining Wall Improvements (FEMA Project)",
+      "Trancas Canyon Park Planting and Irrigation Repairs (CalJPIA/FEMA Project)",
+      "Trancas Canyon Park Slope Stabilization Project (CalJPIA Project)",
+      "Birdview Avenue Improvements (CalOES Project)",
+      "Outdoor Warning Sirens (FEMA Project)"
+    ],
+    "new_file_names": [
+      "07282021-1732",
+      "06222022-1919",
+      "06232021-1714",
+      "03242021-1665"
+    ],
+    "orig_file_name": "06232021-1714"
+  },
+  {
+    "id": 53,
+    "query": "According to the report for the meeting on June 23, 2021: Return a list of project names for all projects whose status matches the status of project 'Storm Drain Master Plan (FEMA Project)'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "53",
+    "answer": [
+      "Bluffs Park Shade Structure",
+      "Vehicle Protection Devices",
+      "Malibu Road Slope Repairs",
+      "Clover Heights Storm Drain (FEMA Project)",
+      "Latigo Canyon Road Culvert Repairs (FEMA Project)",
+      "Encinal Canyon Road Drainage Improvements (CalOES Project)",
+      "Storm Drain Master Plan (FEMA Project)"
+    ],
+    "new_file_names": [
+      "12142021-1808",
+      "01272021-1626",
+      "10272021-1779",
+      "06232021-1714"
+    ],
+    "orig_file_name": "06232021-1714"
+  },
+  {
+    "id": 54,
+    "query": "According to the report for the meeting on June 23, 2021: Return a list of project names for all projects whose status matches the status of project 'Encinal Canyon Road Drainage Improvements (CalOES Project)'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "54",
+    "answer": [
+      "Bluffs Park Shade Structure",
+      "Vehicle Protection Devices",
+      "Malibu Road Slope Repairs",
+      "Clover Heights Storm Drain (FEMA Project)",
+      "Latigo Canyon Road Culvert Repairs (FEMA Project)",
+      "Encinal Canyon Road Drainage Improvements (CalOES Project)",
+      "Storm Drain Master Plan (FEMA Project)"
+    ],
+    "new_file_names": [
+      "08252021-1746",
+      "09222021-1765",
+      "06232021-1714",
+      "11102022-1995"
+    ],
+    "orig_file_name": "06232021-1714"
+  },
+  {
+    "id": 55,
+    "query": "According to the report for the meeting on June 23, 2021: Return a list of project names for all projects whose status matches the status of project 'Latigo Canyon Road Culvert Repairs (FEMA Project)'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "55",
+    "answer": [
+      "Bluffs Park Shade Structure",
+      "Vehicle Protection Devices",
+      "Malibu Road Slope Repairs",
+      "Clover Heights Storm Drain (FEMA Project)",
+      "Latigo Canyon Road Culvert Repairs (FEMA Project)",
+      "Encinal Canyon Road Drainage Improvements (CalOES Project)",
+      "Storm Drain Master Plan (FEMA Project)"
+    ],
+    "new_file_names": [
+      "08252021-1746",
+      "06232021-1714",
+      "12142021-1808",
+      "05262021-1701"
+    ],
+    "orig_file_name": "06232021-1714"
+  },
+  {
+    "id": 56,
+    "query": "According to the report for the meeting on July 27, 2022: Return a list of project names for all projects whose status matches the status of project 'Outdoor Warning Sirens - Design (FEMA Project)'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "56",
+    "answer": [
+      "2022 Annual Street Maintenance",
+      "Marie Canyon Green Streets",
+      "PCH Median Improvements Project",
+      "PCH Signal Synchronization System Improvements Project",
+      "Westward Beach Road Repair Project",
+      "Civic Center Water Treatment Facility Phase 2",
+      "Permanent Skate Park",
+      "PCH at Trancas Canyon Road Right Turn Lane",
+      "Michael Landon Center Roof Replacement Project",
+      "Latigo Canyon Road Roadway/Retaining Wall Improvements (FEMA Project)",
+      "Trancas Canyon Park Planting and Irrigation Repairs (CalJPIA/FEMA Project)",
+      "Trancas Canyon Park Slope Stabilization Project (CalJPIA Project)",
+      "Storm Drain Master Plan (FEMA Project)",
+      "Clover Heights Storm Drain (FEMA Project)",
+      "Encinal Canyon Road Drainage Improvements (CalOES Project)",
+      "Malibu Road Slope Repairs (CalOES Project)",
+      "Westward Beach Road Shoulder Repairs (CalOES Project)",
+      "Outdoor Warning Sirens - Design (FEMA Project)"
+    ],
+    "new_file_names": [
+      "10272021-1779",
+      "07272022-1939",
+      "01272021-1626",
+      "06222022-1919"
+    ],
+    "orig_file_name": "07272022-1939"
+  },
+  {
+    "id": 57,
+    "query": "According to the report for the meeting on July 27, 2022: Return a list of project names for all projects whose status matches the status of project 'Westward Beach Road Shoulder Repairs (CalOES Project)'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "57",
+    "answer": [
+      "2022 Annual Street Maintenance",
+      "Marie Canyon Green Streets",
+      "PCH Median Improvements Project",
+      "PCH Signal Synchronization System Improvements Project",
+      "Westward Beach Road Repair Project",
+      "Civic Center Water Treatment Facility Phase 2",
+      "Permanent Skate Park",
+      "PCH at Trancas Canyon Road Right Turn Lane",
+      "Michael Landon Center Roof Replacement Project",
+      "Latigo Canyon Road Roadway/Retaining Wall Improvements (FEMA Project)",
+      "Trancas Canyon Park Planting and Irrigation Repairs (CalJPIA/FEMA Project)",
+      "Trancas Canyon Park Slope Stabilization Project (CalJPIA Project)",
+      "Storm Drain Master Plan (FEMA Project)",
+      "Clover Heights Storm Drain (FEMA Project)",
+      "Encinal Canyon Road Drainage Improvements (CalOES Project)",
+      "Malibu Road Slope Repairs (CalOES Project)",
+      "Westward Beach Road Shoulder Repairs (CalOES Project)",
+      "Outdoor Warning Sirens - Design (FEMA Project)"
+    ],
+    "new_file_names": [
+      "03022021-1648",
+      "06222022-1919",
+      "07272022-1939",
+      "03232022-1869"
+    ],
+    "orig_file_name": "07272022-1939"
+  },
+  {
+    "id": 58,
+    "query": "According to the report for the meeting on July 27, 2022: Return a list of project names for all projects whose status matches the status of project 'Malibu Road Slope Repairs (CalOES Project)'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "58",
+    "answer": [
+      "2022 Annual Street Maintenance",
+      "Marie Canyon Green Streets",
+      "PCH Median Improvements Project",
+      "PCH Signal Synchronization System Improvements Project",
+      "Westward Beach Road Repair Project",
+      "Civic Center Water Treatment Facility Phase 2",
+      "Permanent Skate Park",
+      "PCH at Trancas Canyon Road Right Turn Lane",
+      "Michael Landon Center Roof Replacement Project",
+      "Latigo Canyon Road Roadway/Retaining Wall Improvements (FEMA Project)",
+      "Trancas Canyon Park Planting and Irrigation Repairs (CalJPIA/FEMA Project)",
+      "Trancas Canyon Park Slope Stabilization Project (CalJPIA Project)",
+      "Storm Drain Master Plan (FEMA Project)",
+      "Clover Heights Storm Drain (FEMA Project)",
+      "Encinal Canyon Road Drainage Improvements (CalOES Project)",
+      "Malibu Road Slope Repairs (CalOES Project)",
+      "Westward Beach Road Shoulder Repairs (CalOES Project)",
+      "Outdoor Warning Sirens - Design (FEMA Project)"
+    ],
+    "new_file_names": [
+      "12142021-1808",
+      "07272022-1939",
+      "10272021-1779",
+      "03232022-1869"
+    ],
+    "orig_file_name": "07272022-1939"
+  },
+  {
+    "id": 59,
+    "query": "According to the report for the meeting on July 27, 2022: Return a list of project names for all projects whose status matches the status of project 'Point Dume Decomposed Granite Walkway Repair Project'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "59",
+    "answer": [
+      "Bluffs Park Shade Structure",
+      "Michael Landon Center HVAC Replacement Project",
+      "Broad Beach Road Water Quality Infrastructure Repairs (CalJPIA Project)",
+      "Point Dume Decomposed Granite Walkway Repair Project"
+    ],
+    "new_file_names": [
+      "05262021-1701",
+      "12142021-1808",
+      "07272022-1939",
+      "03242021-1665"
+    ],
+    "orig_file_name": "07272022-1939"
+  },
+  {
+    "id": 60,
+    "query": "According to the report for the meeting on July 27, 2022: Return a list of project names for all projects whose status matches the status of project 'Broad Beach Road Water Quality Infrastructure Repairs (CalJPIA Project)'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "60",
+    "answer": [
+      "Bluffs Park Shade Structure",
+      "Michael Landon Center HVAC Replacement Project",
+      "Broad Beach Road Water Quality Infrastructure Repairs (CalJPIA Project)",
+      "Point Dume Decomposed Granite Walkway Repair Project"
+    ],
+    "new_file_names": [
+      "09222021-1765",
+      "07272022-1939",
+      "03232022-1869",
+      "07282021-1732"
+    ],
+    "orig_file_name": "07272022-1939"
+  },
+  {
+    "id": 61,
+    "query": "According to the report for the meeting on July 27, 2022: Return a list of project names for all projects whose status matches the status of project 'Michael Landon Center HVAC Replacement Project'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "61",
+    "answer": [
+      "Bluffs Park Shade Structure",
+      "Michael Landon Center HVAC Replacement Project",
+      "Broad Beach Road Water Quality Infrastructure Repairs (CalJPIA Project)",
+      "Point Dume Decomposed Granite Walkway Repair Project"
+    ],
+    "new_file_names": [
+      "11102022-1995",
+      "08252021-1746",
+      "07272022-1939",
+      "01272021-1626"
+    ],
+    "orig_file_name": "07272022-1939"
+  },
+  {
+    "id": 62,
+    "query": "According to the report for the meeting on July 28, 2021: Return a list of project names for all projects whose status matches the status of project 'Outdoor Warning Sirens (FEMA Project)'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "62",
+    "answer": [
+      "Marie Canyon Green Streets",
+      "PCH Median Improvements Project",
+      "PCH Signal Synchronization System Improvements Project",
+      "Civic Center Stormwater Diversion Structure",
+      "Westward Beach Road Improvements Project",
+      "Civic Center Water Treatment Facility Phase 2",
+      "Broad Beach Road Water Quality Infrastructure Repairs (CalJPIA Project)",
+      "Latigo Canyon Road Roadway/Retaining Wall Improvements (FEMA Project)",
+      "Trancas Canyon Park Planting and Irrigation Repairs (CalJPIA/FEMA Project)",
+      "Trancas Canyon Park Slope Stabilization Project (CalJPIA Project)",
+      "Birdview Avenue Improvements (CalOES Project)",
+      "Outdoor Warning Sirens (FEMA Project)"
+    ],
+    "new_file_names": [
+      "08252021-1746",
+      "03232022-1869",
+      "07282021-1732",
+      "09222021-1765"
+    ],
+    "orig_file_name": "07282021-1732"
+  },
+  {
+    "id": 63,
+    "query": "According to the report for the meeting on July 28, 2021: Return a list of project names for all projects whose status matches the status of project 'Birdview Avenue Improvements (CalOES Project)'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "63",
+    "answer": [
+      "Marie Canyon Green Streets",
+      "PCH Median Improvements Project",
+      "PCH Signal Synchronization System Improvements Project",
+      "Civic Center Stormwater Diversion Structure",
+      "Westward Beach Road Improvements Project",
+      "Civic Center Water Treatment Facility Phase 2",
+      "Broad Beach Road Water Quality Infrastructure Repairs (CalJPIA Project)",
+      "Latigo Canyon Road Roadway/Retaining Wall Improvements (FEMA Project)",
+      "Trancas Canyon Park Planting and Irrigation Repairs (CalJPIA/FEMA Project)",
+      "Trancas Canyon Park Slope Stabilization Project (CalJPIA Project)",
+      "Birdview Avenue Improvements (CalOES Project)",
+      "Outdoor Warning Sirens (FEMA Project)"
+    ],
+    "new_file_names": [
+      "03022021-1648",
+      "09222021-1765",
+      "07282021-1732",
+      "07272022-1939"
+    ],
+    "orig_file_name": "07282021-1732"
+  },
+  {
+    "id": 64,
+    "query": "According to the report for the meeting on July 28, 2021: Return a list of project names for all projects whose status matches the status of project 'Trancas Canyon Park Slope Stabilization Project (CalJPIA Project)'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "64",
+    "answer": [
+      "Marie Canyon Green Streets",
+      "PCH Median Improvements Project",
+      "PCH Signal Synchronization System Improvements Project",
+      "Civic Center Stormwater Diversion Structure",
+      "Westward Beach Road Improvements Project",
+      "Civic Center Water Treatment Facility Phase 2",
+      "Broad Beach Road Water Quality Infrastructure Repairs (CalJPIA Project)",
+      "Latigo Canyon Road Roadway/Retaining Wall Improvements (FEMA Project)",
+      "Trancas Canyon Park Planting and Irrigation Repairs (CalJPIA/FEMA Project)",
+      "Trancas Canyon Park Slope Stabilization Project (CalJPIA Project)",
+      "Birdview Avenue Improvements (CalOES Project)",
+      "Outdoor Warning Sirens (FEMA Project)"
+    ],
+    "new_file_names": [
+      "03242021-1665",
+      "05262021-1701",
+      "07282021-1732",
+      "07272022-1939"
+    ],
+    "orig_file_name": "07282021-1732"
+  },
+  {
+    "id": 65,
+    "query": "According to the report for the meeting on July 28, 2021: Return a list of project names for all projects whose status matches the status of project 'Storm Drain Master Plan (FEMA Project)'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "65",
+    "answer": [
+      "Bluffs Park Shade Structure",
+      "Vehicle Protection Devices",
+      "Malibu Road Slope Repairs",
+      "Clover Heights Storm Drain (FEMA Project)",
+      "Latigo Canyon Road Culvert Repairs (FEMA Project)",
+      "Encinal Canyon Road Drainage Improvements (CalOES Project)",
+      "Storm Drain Master Plan (FEMA Project)"
+    ],
+    "new_file_names": [
+      "10272021-1779",
+      "11102022-1995",
+      "07282021-1732",
+      "03022021-1648"
+    ],
+    "orig_file_name": "07282021-1732"
+  },
+  {
+    "id": 66,
+    "query": "According to the report for the meeting on July 28, 2021: Return a list of project names for all projects whose status matches the status of project 'Encinal Canyon Road Drainage Improvements (CalOES Project)'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "66",
+    "answer": [
+      "Bluffs Park Shade Structure",
+      "Vehicle Protection Devices",
+      "Malibu Road Slope Repairs",
+      "Clover Heights Storm Drain (FEMA Project)",
+      "Latigo Canyon Road Culvert Repairs (FEMA Project)",
+      "Encinal Canyon Road Drainage Improvements (CalOES Project)",
+      "Storm Drain Master Plan (FEMA Project)"
+    ],
+    "new_file_names": [
+      "07282021-1732",
+      "05262021-1701",
+      "03022021-1648",
+      "11102022-1995"
+    ],
+    "orig_file_name": "07282021-1732"
+  },
+  {
+    "id": 67,
+    "query": "According to the report for the meeting on July 28, 2021: Return a list of project names for all projects whose status matches the status of project 'Latigo Canyon Road Culvert Repairs (FEMA Project)'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "67",
+    "answer": [
+      "Bluffs Park Shade Structure",
+      "Vehicle Protection Devices",
+      "Malibu Road Slope Repairs",
+      "Clover Heights Storm Drain (FEMA Project)",
+      "Latigo Canyon Road Culvert Repairs (FEMA Project)",
+      "Encinal Canyon Road Drainage Improvements (CalOES Project)",
+      "Storm Drain Master Plan (FEMA Project)"
+    ],
+    "new_file_names": [
+      "05262021-1701",
+      "06232021-1714",
+      "09222021-1765",
+      "07282021-1732"
+    ],
+    "orig_file_name": "07282021-1732"
+  },
+  {
+    "id": 68,
+    "query": "According to the report for the meeting on August 25, 2021: Return a list of project names for all projects whose status matches the status of project 'Storm Drain Master Plan (FEMA Project)'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "68",
+    "answer": [
+      "Marie Canyon Green Streets",
+      "PCH Median Improvements Project",
+      "PCH Signal Synchronization System Improvements Project",
+      "Civic Center Stormwater Diversion Structure",
+      "Westward Beach Road Improvements Project",
+      "Civic Center Water Treatment Facility Phase 2",
+      "Broad Beach Road Water Quality Infrastructure Repairs (CalJPIA Project)",
+      "Latigo Canyon Road Roadway/Retaining Wall Improvements (FEMA Project)",
+      "Trancas Canyon Park Planting and Irrigation Repairs (CalJPIA/FEMA Project)",
+      "Trancas Canyon Park Slope Stabilization Project (CalJPIA Project)",
+      "Birdview Avenue Improvements (CalOES Project)",
+      "Outdoor Warning Sirens (FEMA Project)",
+      "Storm Drain Master Plan (FEMA Project)"
+    ],
+    "new_file_names": [
+      "07272022-1939",
+      "09222021-1765",
+      "04282021-1687",
+      "08252021-1746"
+    ],
+    "orig_file_name": "08252021-1746"
+  },
+  {
+    "id": 69,
+    "query": "According to the report for the meeting on August 25, 2021: Return a list of project names for all projects whose status matches the status of project 'Outdoor Warning Sirens (FEMA Project)'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "69",
+    "answer": [
+      "Marie Canyon Green Streets",
+      "PCH Median Improvements Project",
+      "PCH Signal Synchronization System Improvements Project",
+      "Civic Center Stormwater Diversion Structure",
+      "Westward Beach Road Improvements Project",
+      "Civic Center Water Treatment Facility Phase 2",
+      "Broad Beach Road Water Quality Infrastructure Repairs (CalJPIA Project)",
+      "Latigo Canyon Road Roadway/Retaining Wall Improvements (FEMA Project)",
+      "Trancas Canyon Park Planting and Irrigation Repairs (CalJPIA/FEMA Project)",
+      "Trancas Canyon Park Slope Stabilization Project (CalJPIA Project)",
+      "Birdview Avenue Improvements (CalOES Project)",
+      "Outdoor Warning Sirens (FEMA Project)",
+      "Storm Drain Master Plan (FEMA Project)"
+    ],
+    "new_file_names": [
+      "08252021-1746",
+      "05262021-1701",
+      "03242021-1665",
+      "06222022-1919"
+    ],
+    "orig_file_name": "08252021-1746"
+  },
+  {
+    "id": 70,
+    "query": "According to the report for the meeting on August 25, 2021: Return a list of project names for all projects whose status matches the status of project 'Birdview Avenue Improvements (CalOES Project)'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "70",
+    "answer": [
+      "Marie Canyon Green Streets",
+      "PCH Median Improvements Project",
+      "PCH Signal Synchronization System Improvements Project",
+      "Civic Center Stormwater Diversion Structure",
+      "Westward Beach Road Improvements Project",
+      "Civic Center Water Treatment Facility Phase 2",
+      "Broad Beach Road Water Quality Infrastructure Repairs (CalJPIA Project)",
+      "Latigo Canyon Road Roadway/Retaining Wall Improvements (FEMA Project)",
+      "Trancas Canyon Park Planting and Irrigation Repairs (CalJPIA/FEMA Project)",
+      "Trancas Canyon Park Slope Stabilization Project (CalJPIA Project)",
+      "Birdview Avenue Improvements (CalOES Project)",
+      "Outdoor Warning Sirens (FEMA Project)",
+      "Storm Drain Master Plan (FEMA Project)"
+    ],
+    "new_file_names": [
+      "03022021-1648",
+      "09222021-1765",
+      "08252021-1746",
+      "05262021-1701"
+    ],
+    "orig_file_name": "08252021-1746"
+  },
+  {
+    "id": 71,
+    "query": "According to the report for the meeting on August 25, 2021: Return a list of project names for all projects whose status matches the status of project 'Malibu Road Slope Repairs (CalOES Project)'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "71",
+    "answer": [
+      "Bluffs Park Shade Structure",
+      "Vehicle Protection Devices",
+      "Clover Heights Storm Drain (FEMA Project)",
+      "Latigo Canyon Road Culvert Repairs (FEMA Project)",
+      "Encinal Canyon Road Drainage Improvements (CalOES Project)",
+      "Malibu Road Slope Repairs (CalOES Project)"
+    ],
+    "new_file_names": [
+      "01262022-1835",
+      "08252021-1746",
+      "01272021-1626",
+      "03232022-1869"
+    ],
+    "orig_file_name": "08252021-1746"
+  },
+  {
+    "id": 72,
+    "query": "According to the report for the meeting on August 25, 2021: Return a list of project names for all projects whose status matches the status of project 'Encinal Canyon Road Drainage Improvements (CalOES Project)'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "72",
+    "answer": [
+      "Bluffs Park Shade Structure",
+      "Vehicle Protection Devices",
+      "Clover Heights Storm Drain (FEMA Project)",
+      "Latigo Canyon Road Culvert Repairs (FEMA Project)",
+      "Encinal Canyon Road Drainage Improvements (CalOES Project)",
+      "Malibu Road Slope Repairs (CalOES Project)"
+    ],
+    "new_file_names": [
+      "08252021-1746",
+      "05262021-1701",
+      "03232022-1869",
+      "06232021-1714"
+    ],
+    "orig_file_name": "08252021-1746"
+  },
+  {
+    "id": 73,
+    "query": "According to the report for the meeting on August 25, 2021: Return a list of project names for all projects whose status matches the status of project 'Latigo Canyon Road Culvert Repairs (FEMA Project)'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "73",
+    "answer": [
+      "Bluffs Park Shade Structure",
+      "Vehicle Protection Devices",
+      "Clover Heights Storm Drain (FEMA Project)",
+      "Latigo Canyon Road Culvert Repairs (FEMA Project)",
+      "Encinal Canyon Road Drainage Improvements (CalOES Project)",
+      "Malibu Road Slope Repairs (CalOES Project)"
+    ],
+    "new_file_names": [
+      "08252021-1746",
+      "05262021-1701",
+      "01272021-1626",
+      "03022021-1648"
+    ],
+    "orig_file_name": "08252021-1746"
+  },
+  {
+    "id": 74,
+    "query": "According to the report for the meeting on September 22, 2021: Return a list of project names for all projects whose status matches the status of project 'Storm Drain Master Plan (FEMA Project)'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "74",
+    "answer": [
+      "Marie Canyon Green Streets",
+      "PCH Median Improvements Project",
+      "PCH Signal Synchronization System Improvements Project",
+      "Civic Center Stormwater Diversion Structure",
+      "Westward Beach Road Improvements Project",
+      "Civic Center Water Treatment Facility Phase 2",
+      "Bluffs Park Shade Structure",
+      "Permanent Skate Park",
+      "Broad Beach Road Water Quality Infrastructure Repairs (CalJPIA Project)",
+      "Latigo Canyon Road Roadway/Retaining Wall Improvements (FEMA Project)",
+      "Trancas Canyon Park Planting and Irrigation Repairs (CalJPIA/FEMA Project)",
+      "Trancas Canyon Park Slope Stabilization Project (CalJPIA Project)",
+      "Birdview Avenue Improvements (CalOES Project)",
+      "Outdoor Warning Sirens (FEMA Project)",
+      "Storm Drain Master Plan (FEMA Project)"
+    ],
+    "new_file_names": [
+      "01272021-1626",
+      "09222021-1765",
+      "07272022-1939",
+      "06232021-1714"
+    ],
+    "orig_file_name": "09222021-1765"
+  },
+  {
+    "id": 75,
+    "query": "According to the report for the meeting on September 22, 2021: Return a list of project names for all projects whose status matches the status of project 'Outdoor Warning Sirens (FEMA Project)'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "75",
+    "answer": [
+      "Marie Canyon Green Streets",
+      "PCH Median Improvements Project",
+      "PCH Signal Synchronization System Improvements Project",
+      "Civic Center Stormwater Diversion Structure",
+      "Westward Beach Road Improvements Project",
+      "Civic Center Water Treatment Facility Phase 2",
+      "Bluffs Park Shade Structure",
+      "Permanent Skate Park",
+      "Broad Beach Road Water Quality Infrastructure Repairs (CalJPIA Project)",
+      "Latigo Canyon Road Roadway/Retaining Wall Improvements (FEMA Project)",
+      "Trancas Canyon Park Planting and Irrigation Repairs (CalJPIA/FEMA Project)",
+      "Trancas Canyon Park Slope Stabilization Project (CalJPIA Project)",
+      "Birdview Avenue Improvements (CalOES Project)",
+      "Outdoor Warning Sirens (FEMA Project)",
+      "Storm Drain Master Plan (FEMA Project)"
+    ],
+    "new_file_names": [
+      "01262022-1835",
+      "09222021-1765",
+      "01272021-1626",
+      "11102022-1995"
+    ],
+    "orig_file_name": "09222021-1765"
+  },
+  {
+    "id": 76,
+    "query": "According to the report for the meeting on September 22, 2021: Return a list of project names for all projects whose status matches the status of project 'Birdview Avenue Improvements (CalOES Project)'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "76",
+    "answer": [
+      "Marie Canyon Green Streets",
+      "PCH Median Improvements Project",
+      "PCH Signal Synchronization System Improvements Project",
+      "Civic Center Stormwater Diversion Structure",
+      "Westward Beach Road Improvements Project",
+      "Civic Center Water Treatment Facility Phase 2",
+      "Bluffs Park Shade Structure",
+      "Permanent Skate Park",
+      "Broad Beach Road Water Quality Infrastructure Repairs (CalJPIA Project)",
+      "Latigo Canyon Road Roadway/Retaining Wall Improvements (FEMA Project)",
+      "Trancas Canyon Park Planting and Irrigation Repairs (CalJPIA/FEMA Project)",
+      "Trancas Canyon Park Slope Stabilization Project (CalJPIA Project)",
+      "Birdview Avenue Improvements (CalOES Project)",
+      "Outdoor Warning Sirens (FEMA Project)",
+      "Storm Drain Master Plan (FEMA Project)"
+    ],
+    "new_file_names": [
+      "03022021-1648",
+      "11102022-1995",
+      "01262022-1835",
+      "09222021-1765"
+    ],
+    "orig_file_name": "09222021-1765"
+  },
+  {
+    "id": 77,
+    "query": "According to the report for the meeting on September 22, 2021: Return a list of project names for all projects whose status matches the status of project 'Westward Beach Road Shoulder Repairs (CalOES Project)'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "77",
+    "answer": [
+      "Vehicle Protection Devices",
+      "Legacy Park Paver Repair Project",
+      "Malibu Bluffs Park South Walkway",
+      "Trancas Playground Resurfacing",
+      "PCH Overhead Warning Signs",
+      "PCH at Trancas Canyon Road Right Turn Lane",
+      "Clover Heights Storm Drain (FEMA Project)",
+      "Latigo Canyon Road Culvert Repairs (FEMA Project)",
+      "Encinal Canyon Road Drainage Improvements (CalOES Project)",
+      "Malibu Road Slope Repairs (CalOES Project)",
+      "Westward Beach Road Shoulder Repairs (CalOES Project)"
+    ],
+    "new_file_names": [
+      "04282021-1687",
+      "07282021-1732",
+      "09222021-1765",
+      "03022021-1648"
+    ],
+    "orig_file_name": "09222021-1765"
+  },
+  {
+    "id": 78,
+    "query": "According to the report for the meeting on September 22, 2021: Return a list of project names for all projects whose status matches the status of project 'Malibu Road Slope Repairs (CalOES Project)'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "78",
+    "answer": [
+      "Vehicle Protection Devices",
+      "Legacy Park Paver Repair Project",
+      "Malibu Bluffs Park South Walkway",
+      "Trancas Playground Resurfacing",
+      "PCH Overhead Warning Signs",
+      "PCH at Trancas Canyon Road Right Turn Lane",
+      "Clover Heights Storm Drain (FEMA Project)",
+      "Latigo Canyon Road Culvert Repairs (FEMA Project)",
+      "Encinal Canyon Road Drainage Improvements (CalOES Project)",
+      "Malibu Road Slope Repairs (CalOES Project)",
+      "Westward Beach Road Shoulder Repairs (CalOES Project)"
+    ],
+    "new_file_names": [
+      "09222021-1765",
+      "05262021-1701",
+      "12142021-1808",
+      "06232021-1714"
+    ],
+    "orig_file_name": "09222021-1765"
+  },
+  {
+    "id": 79,
+    "query": "According to the report for the meeting on September 22, 2021: Return a list of project names for all projects whose status matches the status of project 'Encinal Canyon Road Drainage Improvements (CalOES Project)'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "79",
+    "answer": [
+      "Vehicle Protection Devices",
+      "Legacy Park Paver Repair Project",
+      "Malibu Bluffs Park South Walkway",
+      "Trancas Playground Resurfacing",
+      "PCH Overhead Warning Signs",
+      "PCH at Trancas Canyon Road Right Turn Lane",
+      "Clover Heights Storm Drain (FEMA Project)",
+      "Latigo Canyon Road Culvert Repairs (FEMA Project)",
+      "Encinal Canyon Road Drainage Improvements (CalOES Project)",
+      "Malibu Road Slope Repairs (CalOES Project)",
+      "Westward Beach Road Shoulder Repairs (CalOES Project)"
+    ],
+    "new_file_names": [
+      "03022021-1648",
+      "09222021-1765",
+      "11102022-1995",
+      "08252021-1746"
+    ],
+    "orig_file_name": "09222021-1765"
+  },
+  {
+    "id": 80,
+    "query": "According to the report for the meeting on September 22, 2021: Return a list of project names for all projects whose status matches the status of project 'Corral Canyon Culvert Repairs (FEMA Project)'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "80",
+    "answer": [
+      "Civic Center Way Improvements",
+      "Guardrail Replacement Citywide (FEMA Project)",
+      "Corral Canyon Road Bridge Repairs (FEMA Project)",
+      "Corral Canyon Culvert Repairs (FEMA Project)"
+    ],
+    "new_file_names": [
+      "07272022-1939",
+      "07282021-1732",
+      "09222021-1765",
+      "01262022-1835"
+    ],
+    "orig_file_name": "09222021-1765"
+  },
+  {
+    "id": 81,
+    "query": "According to the report for the meeting on September 22, 2021: Return a list of project names for all projects whose status matches the status of project 'Corral Canyon Road Bridge Repairs (FEMA Project)'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "81",
+    "answer": [
+      "Civic Center Way Improvements",
+      "Guardrail Replacement Citywide (FEMA Project)",
+      "Corral Canyon Road Bridge Repairs (FEMA Project)",
+      "Corral Canyon Culvert Repairs (FEMA Project)"
+    ],
+    "new_file_names": [
+      "09222021-1765",
+      "07272022-1939",
+      "06232021-1714",
+      "11102022-1995"
+    ],
+    "orig_file_name": "09222021-1765"
+  },
+  {
+    "id": 82,
+    "query": "According to the report for the meeting on September 22, 2021: Return a list of project names for all projects whose status matches the status of project 'Guardrail Replacement Citywide (FEMA Project)'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "82",
+    "answer": [
+      "Civic Center Way Improvements",
+      "Guardrail Replacement Citywide (FEMA Project)",
+      "Corral Canyon Road Bridge Repairs (FEMA Project)",
+      "Corral Canyon Culvert Repairs (FEMA Project)"
+    ],
+    "new_file_names": [
+      "11102022-1995",
+      "08252021-1746",
+      "04282021-1687",
+      "09222021-1765"
+    ],
+    "orig_file_name": "09222021-1765"
+  },
+  {
+    "id": 83,
+    "query": "According to the report for the meeting on October 27, 2021: Return a list of project names for all projects whose status matches the status of project 'Storm Drain Master Plan (FEMA Project)'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "83",
+    "answer": [
+      "Marie Canyon Green Streets",
+      "PCH Median Improvements Project",
+      "PCH Signal Synchronization System Improvements Project",
+      "Civic Center Stormwater Diversion Structure",
+      "Westward Beach Road Improvements Project",
+      "Civic Center Water Treatment Facility Phase 2",
+      "Bluffs Park Shade Structure",
+      "Permanent Skate Park",
+      "PCH at Trancas Canyon Road Right Turn Lane",
+      "Broad Beach Road Water Quality Infrastructure Repairs (CalJPIA Project)",
+      "Latigo Canyon Road Roadway/Retaining Wall Improvements (FEMA Project)",
+      "Trancas Canyon Park Planting and Irrigation Repairs (CalJPIA/FEMA Project)",
+      "Trancas Canyon Park Slope Stabilization Project (CalJPIA Project)",
+      "Birdview Avenue Improvements (CalOES Project)",
+      "Outdoor Warning Sirens (FEMA Project)",
+      "Storm Drain Master Plan (FEMA Project)"
+    ],
+    "new_file_names": [
+      "11102022-1995",
+      "06232021-1714",
+      "09222021-1765",
+      "10272021-1779"
+    ],
+    "orig_file_name": "10272021-1779"
+  },
+  {
+    "id": 84,
+    "query": "According to the report for the meeting on October 27, 2021: Return a list of project names for all projects whose status matches the status of project 'Outdoor Warning Sirens (FEMA Project)'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "84",
+    "answer": [
+      "Marie Canyon Green Streets",
+      "PCH Median Improvements Project",
+      "PCH Signal Synchronization System Improvements Project",
+      "Civic Center Stormwater Diversion Structure",
+      "Westward Beach Road Improvements Project",
+      "Civic Center Water Treatment Facility Phase 2",
+      "Bluffs Park Shade Structure",
+      "Permanent Skate Park",
+      "PCH at Trancas Canyon Road Right Turn Lane",
+      "Broad Beach Road Water Quality Infrastructure Repairs (CalJPIA Project)",
+      "Latigo Canyon Road Roadway/Retaining Wall Improvements (FEMA Project)",
+      "Trancas Canyon Park Planting and Irrigation Repairs (CalJPIA/FEMA Project)",
+      "Trancas Canyon Park Slope Stabilization Project (CalJPIA Project)",
+      "Birdview Avenue Improvements (CalOES Project)",
+      "Outdoor Warning Sirens (FEMA Project)",
+      "Storm Drain Master Plan (FEMA Project)"
+    ],
+    "new_file_names": [
+      "07282021-1732",
+      "03242021-1665",
+      "04282021-1687",
+      "10272021-1779"
+    ],
+    "orig_file_name": "10272021-1779"
+  },
+  {
+    "id": 85,
+    "query": "According to the report for the meeting on October 27, 2021: Return a list of project names for all projects whose status matches the status of project 'Birdview Avenue Improvements (CalOES Project)'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "85",
+    "answer": [
+      "Marie Canyon Green Streets",
+      "PCH Median Improvements Project",
+      "PCH Signal Synchronization System Improvements Project",
+      "Civic Center Stormwater Diversion Structure",
+      "Westward Beach Road Improvements Project",
+      "Civic Center Water Treatment Facility Phase 2",
+      "Bluffs Park Shade Structure",
+      "Permanent Skate Park",
+      "PCH at Trancas Canyon Road Right Turn Lane",
+      "Broad Beach Road Water Quality Infrastructure Repairs (CalJPIA Project)",
+      "Latigo Canyon Road Roadway/Retaining Wall Improvements (FEMA Project)",
+      "Trancas Canyon Park Planting and Irrigation Repairs (CalJPIA/FEMA Project)",
+      "Trancas Canyon Park Slope Stabilization Project (CalJPIA Project)",
+      "Birdview Avenue Improvements (CalOES Project)",
+      "Outdoor Warning Sirens (FEMA Project)",
+      "Storm Drain Master Plan (FEMA Project)"
+    ],
+    "new_file_names": [
+      "12142021-1808",
+      "03242021-1665",
+      "01272021-1626",
+      "10272021-1779"
+    ],
+    "orig_file_name": "10272021-1779"
+  },
+  {
+    "id": 86,
+    "query": "According to the report for the meeting on October 27, 2021: Return a list of project names for all projects whose status matches the status of project 'Westward Beach Road Shoulder Repairs (CalOES Project)'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "86",
+    "answer": [
+      "Vehicle Protection Devices",
+      "Legacy Park Paver Repair Project",
+      "Malibu Bluffs Park South Walkway",
+      "Trancas Playground Resurfacing",
+      "PCH Overhead Warning Signs",
+      "Clover Heights Storm Drain (FEMA Project)",
+      "Latigo Canyon Road Culvert Repairs (FEMA Project)",
+      "Encinal Canyon Road Drainage Improvements (CalOES Project)",
+      "Malibu Road Slope Repairs (CalOES Project)",
+      "Westward Beach Road Shoulder Repairs (CalOES Project)"
+    ],
+    "new_file_names": [
+      "09222021-1765",
+      "06222022-1919",
+      "04282021-1687",
+      "10272021-1779"
+    ],
+    "orig_file_name": "10272021-1779"
+  },
+  {
+    "id": 87,
+    "query": "According to the report for the meeting on October 27, 2021: Return a list of project names for all projects whose status matches the status of project 'Malibu Road Slope Repairs (CalOES Project)'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "87",
+    "answer": [
+      "Vehicle Protection Devices",
+      "Legacy Park Paver Repair Project",
+      "Malibu Bluffs Park South Walkway",
+      "Trancas Playground Resurfacing",
+      "PCH Overhead Warning Signs",
+      "Clover Heights Storm Drain (FEMA Project)",
+      "Latigo Canyon Road Culvert Repairs (FEMA Project)",
+      "Encinal Canyon Road Drainage Improvements (CalOES Project)",
+      "Malibu Road Slope Repairs (CalOES Project)",
+      "Westward Beach Road Shoulder Repairs (CalOES Project)"
+    ],
+    "new_file_names": [
+      "03242021-1665",
+      "12142021-1808",
+      "08252021-1746",
+      "10272021-1779"
+    ],
+    "orig_file_name": "10272021-1779"
+  },
+  {
+    "id": 88,
+    "query": "According to the report for the meeting on October 27, 2021: Return a list of project names for all projects whose status matches the status of project 'Encinal Canyon Road Drainage Improvements (CalOES Project)'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "88",
+    "answer": [
+      "Vehicle Protection Devices",
+      "Legacy Park Paver Repair Project",
+      "Malibu Bluffs Park South Walkway",
+      "Trancas Playground Resurfacing",
+      "PCH Overhead Warning Signs",
+      "Clover Heights Storm Drain (FEMA Project)",
+      "Latigo Canyon Road Culvert Repairs (FEMA Project)",
+      "Encinal Canyon Road Drainage Improvements (CalOES Project)",
+      "Malibu Road Slope Repairs (CalOES Project)",
+      "Westward Beach Road Shoulder Repairs (CalOES Project)"
+    ],
+    "new_file_names": [
+      "12142021-1808",
+      "03022021-1648",
+      "01262022-1835",
+      "10272021-1779"
+    ],
+    "orig_file_name": "10272021-1779"
+  },
+  {
+    "id": 89,
+    "query": "According to the report for the meeting on October 27, 2021: Return a list of project names for all projects whose status matches the status of project 'Corral Canyon Culvert Repairs (FEMA Project)'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "89",
+    "answer": [
+      "Civic Center Way Improvements",
+      "Guardrail Replacement Citywide (FEMA Project)",
+      "Corral Canyon Road Bridge Repairs (FEMA Project)",
+      "Corral Canyon Culvert Repairs (FEMA Project)"
+    ],
+    "new_file_names": [
+      "01272021-1626",
+      "05262021-1701",
+      "10272021-1779",
+      "04282021-1687"
+    ],
+    "orig_file_name": "10272021-1779"
+  },
+  {
+    "id": 90,
+    "query": "According to the report for the meeting on October 27, 2021: Return a list of project names for all projects whose status matches the status of project 'Corral Canyon Road Bridge Repairs (FEMA Project)'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "90",
+    "answer": [
+      "Civic Center Way Improvements",
+      "Guardrail Replacement Citywide (FEMA Project)",
+      "Corral Canyon Road Bridge Repairs (FEMA Project)",
+      "Corral Canyon Culvert Repairs (FEMA Project)"
+    ],
+    "new_file_names": [
+      "05262021-1701",
+      "10272021-1779",
+      "12142021-1808",
+      "03242021-1665"
+    ],
+    "orig_file_name": "10272021-1779"
+  },
+  {
+    "id": 91,
+    "query": "According to the report for the meeting on October 27, 2021: Return a list of project names for all projects whose status matches the status of project 'Guardrail Replacement Citywide (FEMA Project)'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "91",
+    "answer": [
+      "Civic Center Way Improvements",
+      "Guardrail Replacement Citywide (FEMA Project)",
+      "Corral Canyon Road Bridge Repairs (FEMA Project)",
+      "Corral Canyon Culvert Repairs (FEMA Project)"
+    ],
+    "new_file_names": [
+      "08252021-1746",
+      "05262021-1701",
+      "01272021-1626",
+      "10272021-1779"
+    ],
+    "orig_file_name": "10272021-1779"
+  },
+  {
+    "id": 92,
+    "query": "According to the report for the meeting on November 10, 2022: Return a list of project names for all projects whose status matches the status of project 'Outdoor Warning Sirens - Design (FEMA Project)'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "92",
+    "answer": [
+      "2022 Annual Street Maintenance",
+      "Marie Canyon Green Streets",
+      "PCH Median Improvements Project",
+      "PCH Signal Synchronization System Improvements Project",
+      "Westward Beach Road Repair Project",
+      "Civic Center Water Treatment Facility Phase 2",
+      "Permanent Skate Park",
+      "PCH at Trancas Canyon Road Right Turn Lane",
+      "Michael Landon Center Roof Replacement Project",
+      "Latigo Canyon Road Roadway/Retaining Wall Improvements (FEMA Project)",
+      "Trancas Canyon Park Planting and Irrigation Repairs (CalJPIA/FEMA Project)",
+      "Trancas Canyon Park Slope Stabilization Project (CalJPIA Project)",
+      "Storm Drain Master Plan (FEMA Project)",
+      "Clover Heights Storm Drain (FEMA Project)",
+      "Encinal Canyon Road Drainage Improvements (CalOES Project)",
+      "Malibu Road Slope Repairs (CalOES Project)",
+      "Westward Beach Road Shoulder Repairs (CalOES Project)",
+      "Outdoor Warning Sirens - Design (FEMA Project)"
+    ],
+    "new_file_names": [
+      "01262022-1835",
+      "01272021-1626",
+      "11102022-1995",
+      "03232022-1869"
+    ],
+    "orig_file_name": "11102022-1995"
+  },
+  {
+    "id": 93,
+    "query": "According to the report for the meeting on November 10, 2022: Return a list of project names for all projects whose status matches the status of project 'Westward Beach Road Shoulder Repairs (CalOES Project)'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "93",
+    "answer": [
+      "2022 Annual Street Maintenance",
+      "Marie Canyon Green Streets",
+      "PCH Median Improvements Project",
+      "PCH Signal Synchronization System Improvements Project",
+      "Westward Beach Road Repair Project",
+      "Civic Center Water Treatment Facility Phase 2",
+      "Permanent Skate Park",
+      "PCH at Trancas Canyon Road Right Turn Lane",
+      "Michael Landon Center Roof Replacement Project",
+      "Latigo Canyon Road Roadway/Retaining Wall Improvements (FEMA Project)",
+      "Trancas Canyon Park Planting and Irrigation Repairs (CalJPIA/FEMA Project)",
+      "Trancas Canyon Park Slope Stabilization Project (CalJPIA Project)",
+      "Storm Drain Master Plan (FEMA Project)",
+      "Clover Heights Storm Drain (FEMA Project)",
+      "Encinal Canyon Road Drainage Improvements (CalOES Project)",
+      "Malibu Road Slope Repairs (CalOES Project)",
+      "Westward Beach Road Shoulder Repairs (CalOES Project)",
+      "Outdoor Warning Sirens - Design (FEMA Project)"
+    ],
+    "new_file_names": [
+      "07272022-1939",
+      "09222021-1765",
+      "11102022-1995",
+      "10272021-1779"
+    ],
+    "orig_file_name": "11102022-1995"
+  },
+  {
+    "id": 94,
+    "query": "According to the report for the meeting on November 10, 2022: Return a list of project names for all projects whose status matches the status of project 'Malibu Road Slope Repairs (CalOES Project)'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "94",
+    "answer": [
+      "2022 Annual Street Maintenance",
+      "Marie Canyon Green Streets",
+      "PCH Median Improvements Project",
+      "PCH Signal Synchronization System Improvements Project",
+      "Westward Beach Road Repair Project",
+      "Civic Center Water Treatment Facility Phase 2",
+      "Permanent Skate Park",
+      "PCH at Trancas Canyon Road Right Turn Lane",
+      "Michael Landon Center Roof Replacement Project",
+      "Latigo Canyon Road Roadway/Retaining Wall Improvements (FEMA Project)",
+      "Trancas Canyon Park Planting and Irrigation Repairs (CalJPIA/FEMA Project)",
+      "Trancas Canyon Park Slope Stabilization Project (CalJPIA Project)",
+      "Storm Drain Master Plan (FEMA Project)",
+      "Clover Heights Storm Drain (FEMA Project)",
+      "Encinal Canyon Road Drainage Improvements (CalOES Project)",
+      "Malibu Road Slope Repairs (CalOES Project)",
+      "Westward Beach Road Shoulder Repairs (CalOES Project)",
+      "Outdoor Warning Sirens - Design (FEMA Project)"
+    ],
+    "new_file_names": [
+      "11102022-1995",
+      "05262021-1701",
+      "08252021-1746",
+      "01272021-1626"
+    ],
+    "orig_file_name": "11102022-1995"
+  },
+  {
+    "id": 95,
+    "query": "According to the report for the meeting on November 10, 2022: Return a list of project names for all projects whose status matches the status of project 'Point Dume Decomposed Granite Walkway Repair Project'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "95",
+    "answer": [
+      "Bluffs Park Shade Structure",
+      "Michael Landon Center HVAC Replacement Project",
+      "Broad Beach Road Water Quality Infrastructure Repairs (CalJPIA Project)",
+      "Point Dume Decomposed Granite Walkway Repair Project"
+    ],
+    "new_file_names": [
+      "06232021-1714",
+      "10272021-1779",
+      "11102022-1995",
+      "01272021-1626"
+    ],
+    "orig_file_name": "11102022-1995"
+  },
+  {
+    "id": 96,
+    "query": "According to the report for the meeting on November 10, 2022: Return a list of project names for all projects whose status matches the status of project 'Broad Beach Road Water Quality Infrastructure Repairs (CalJPIA Project)'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "96",
+    "answer": [
+      "Bluffs Park Shade Structure",
+      "Michael Landon Center HVAC Replacement Project",
+      "Broad Beach Road Water Quality Infrastructure Repairs (CalJPIA Project)",
+      "Point Dume Decomposed Granite Walkway Repair Project"
+    ],
+    "new_file_names": [
+      "11102022-1995",
+      "03022021-1648",
+      "09222021-1765",
+      "03242021-1665"
+    ],
+    "orig_file_name": "11102022-1995"
+  },
+  {
+    "id": 97,
+    "query": "According to the report for the meeting on November 10, 2022: Return a list of project names for all projects whose status matches the status of project 'Michael Landon Center HVAC Replacement Project'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "97",
+    "answer": [
+      "Bluffs Park Shade Structure",
+      "Michael Landon Center HVAC Replacement Project",
+      "Broad Beach Road Water Quality Infrastructure Repairs (CalJPIA Project)",
+      "Point Dume Decomposed Granite Walkway Repair Project"
+    ],
+    "new_file_names": [
+      "12142021-1808",
+      "01262022-1835",
+      "06232021-1714",
+      "11102022-1995"
+    ],
+    "orig_file_name": "11102022-1995"
+  },
+  {
+    "id": 98,
+    "query": "According to the report for the meeting on December 14, 2021: Return a list of project names for all projects whose status matches the status of project 'Clover Heights Storm Drain (FEMA Project)'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "98",
+    "answer": [
+      "Marie Canyon Green Streets",
+      "PCH Median Improvements Project",
+      "PCH Signal Synchronization System Improvements Project",
+      "Westward Beach Road Improvements Project",
+      "Civic Center Water Treatment Facility Phase 2",
+      "Bluffs Park Shade Structure",
+      "Permanent Skate Park",
+      "PCH at Trancas Canyon Road Right Turn Lane",
+      "Broad Beach Road Water Quality Infrastructure Repairs (CalJPIA Project)",
+      "Latigo Canyon Road Roadway/Retaining Wall Improvements (FEMA Project)",
+      "Trancas Canyon Park Planting and Irrigation Repairs (CalJPIA/FEMA Project)",
+      "Trancas Canyon Park Slope Stabilization Project (CalJPIA Project)",
+      "Birdview Avenue Improvements (CalOES Project)",
+      "Westward Beach Road Shoulder Repairs (CalOES Project)",
+      "Outdoor Warning Sirens (FEMA Project)",
+      "Storm Drain Master Plan (FEMA Project)",
+      "Clover Heights Storm Drain (FEMA Project)"
+    ],
+    "new_file_names": [
+      "01262022-1835",
+      "03232022-1869",
+      "06222022-1919",
+      "12142021-1808"
+    ],
+    "orig_file_name": "12142021-1808"
+  },
+  {
+    "id": 99,
+    "query": "According to the report for the meeting on December 14, 2021: Return a list of project names for all projects whose status matches the status of project 'Storm Drain Master Plan (FEMA Project)'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "99",
+    "answer": [
+      "Marie Canyon Green Streets",
+      "PCH Median Improvements Project",
+      "PCH Signal Synchronization System Improvements Project",
+      "Westward Beach Road Improvements Project",
+      "Civic Center Water Treatment Facility Phase 2",
+      "Bluffs Park Shade Structure",
+      "Permanent Skate Park",
+      "PCH at Trancas Canyon Road Right Turn Lane",
+      "Broad Beach Road Water Quality Infrastructure Repairs (CalJPIA Project)",
+      "Latigo Canyon Road Roadway/Retaining Wall Improvements (FEMA Project)",
+      "Trancas Canyon Park Planting and Irrigation Repairs (CalJPIA/FEMA Project)",
+      "Trancas Canyon Park Slope Stabilization Project (CalJPIA Project)",
+      "Birdview Avenue Improvements (CalOES Project)",
+      "Westward Beach Road Shoulder Repairs (CalOES Project)",
+      "Outdoor Warning Sirens (FEMA Project)",
+      "Storm Drain Master Plan (FEMA Project)",
+      "Clover Heights Storm Drain (FEMA Project)"
+    ],
+    "new_file_names": [
+      "12142021-1808",
+      "07282021-1732",
+      "09222021-1765",
+      "11102022-1995"
+    ],
+    "orig_file_name": "12142021-1808"
+  },
+  {
+    "id": 100,
+    "query": "According to the report for the meeting on December 14, 2021: Return a list of project names for all projects whose status matches the status of project 'Outdoor Warning Sirens (FEMA Project)'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "100",
+    "answer": [
+      "Marie Canyon Green Streets",
+      "PCH Median Improvements Project",
+      "PCH Signal Synchronization System Improvements Project",
+      "Westward Beach Road Improvements Project",
+      "Civic Center Water Treatment Facility Phase 2",
+      "Bluffs Park Shade Structure",
+      "Permanent Skate Park",
+      "PCH at Trancas Canyon Road Right Turn Lane",
+      "Broad Beach Road Water Quality Infrastructure Repairs (CalJPIA Project)",
+      "Latigo Canyon Road Roadway/Retaining Wall Improvements (FEMA Project)",
+      "Trancas Canyon Park Planting and Irrigation Repairs (CalJPIA/FEMA Project)",
+      "Trancas Canyon Park Slope Stabilization Project (CalJPIA Project)",
+      "Birdview Avenue Improvements (CalOES Project)",
+      "Westward Beach Road Shoulder Repairs (CalOES Project)",
+      "Outdoor Warning Sirens (FEMA Project)",
+      "Storm Drain Master Plan (FEMA Project)",
+      "Clover Heights Storm Drain (FEMA Project)"
+    ],
+    "new_file_names": [
+      "08252021-1746",
+      "10272021-1779",
+      "12142021-1808",
+      "07272022-1939"
+    ],
+    "orig_file_name": "12142021-1808"
+  },
+  {
+    "id": 101,
+    "query": "According to the report for the meeting on December 14, 2021: Return a list of project names for all projects whose status matches the status of project 'Malibu Road Slope Repairs (CalOES Project)'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "101",
+    "answer": [
+      "Vehicle Protection Devices",
+      "Legacy Park Paver Repair Project",
+      "Malibu Bluffs Park South Walkway",
+      "Trancas Playground Resurfacing",
+      "PCH Overhead Warning Signs",
+      "Latigo Canyon Road Culvert Repairs (FEMA Project)",
+      "Encinal Canyon Road Drainage Improvements (CalOES Project)",
+      "Malibu Road Slope Repairs (CalOES Project)"
+    ],
+    "new_file_names": [
+      "07282021-1732",
+      "03232022-1869",
+      "12142021-1808",
+      "10272021-1779"
+    ],
+    "orig_file_name": "12142021-1808"
+  },
+  {
+    "id": 102,
+    "query": "According to the report for the meeting on December 14, 2021: Return a list of project names for all projects whose status matches the status of project 'Encinal Canyon Road Drainage Improvements (CalOES Project)'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "102",
+    "answer": [
+      "Vehicle Protection Devices",
+      "Legacy Park Paver Repair Project",
+      "Malibu Bluffs Park South Walkway",
+      "Trancas Playground Resurfacing",
+      "PCH Overhead Warning Signs",
+      "Latigo Canyon Road Culvert Repairs (FEMA Project)",
+      "Encinal Canyon Road Drainage Improvements (CalOES Project)",
+      "Malibu Road Slope Repairs (CalOES Project)"
+    ],
+    "new_file_names": [
+      "03232022-1869",
+      "08252021-1746",
+      "12142021-1808",
+      "03242021-1665"
+    ],
+    "orig_file_name": "12142021-1808"
+  },
+  {
+    "id": 103,
+    "query": "According to the report for the meeting on December 14, 2021: Return a list of project names for all projects whose status matches the status of project 'Latigo Canyon Road Culvert Repairs (FEMA Project)'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "103",
+    "answer": [
+      "Vehicle Protection Devices",
+      "Legacy Park Paver Repair Project",
+      "Malibu Bluffs Park South Walkway",
+      "Trancas Playground Resurfacing",
+      "PCH Overhead Warning Signs",
+      "Latigo Canyon Road Culvert Repairs (FEMA Project)",
+      "Encinal Canyon Road Drainage Improvements (CalOES Project)",
+      "Malibu Road Slope Repairs (CalOES Project)"
+    ],
+    "new_file_names": [
+      "07272022-1939",
+      "04282021-1687",
+      "12142021-1808",
+      "09222021-1765"
+    ],
+    "orig_file_name": "12142021-1808"
+  },
+  {
+    "id": 104,
+    "query": "According to the report for the meeting on December 14, 2021: Return a list of project names for all projects whose status matches the status of project 'Corral Canyon Culvert Repairs (FEMA Project)'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "104",
+    "answer": [
+      "Civic Center Stormwater Diversion Structure",
+      "Civic Center Way Improvements",
+      "Guardrail Replacement Citywide (FEMA Project)",
+      "Corral Canyon Road Bridge Repairs (FEMA Project)",
+      "Corral Canyon Culvert Repairs (FEMA Project)"
+    ],
+    "new_file_names": [
+      "07282021-1732",
+      "10272021-1779",
+      "06222022-1919",
+      "12142021-1808"
+    ],
+    "orig_file_name": "12142021-1808"
+  },
+  {
+    "id": 105,
+    "query": "According to the report for the meeting on December 14, 2021: Return a list of project names for all projects whose status matches the status of project 'Corral Canyon Road Bridge Repairs (FEMA Project)'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "105",
+    "answer": [
+      "Civic Center Stormwater Diversion Structure",
+      "Civic Center Way Improvements",
+      "Guardrail Replacement Citywide (FEMA Project)",
+      "Corral Canyon Road Bridge Repairs (FEMA Project)",
+      "Corral Canyon Culvert Repairs (FEMA Project)"
+    ],
+    "new_file_names": [
+      "03232022-1869",
+      "09222021-1765",
+      "01262022-1835",
+      "12142021-1808"
+    ],
+    "orig_file_name": "12142021-1808"
+  },
+  {
+    "id": 106,
+    "query": "According to the report for the meeting on December 14, 2021: Return a list of project names for all projects whose status matches the status of project 'Guardrail Replacement Citywide (FEMA Project)'. You need to first identify the report on the queried meeting date. You must then return projects of ALL types that have the same status as the queried project in that report. Make sure the queried project itself is included in the list. You must only answer based on the report for the meeting on that date, and you should not use any information from other meetings.",
+    "file_name": "106",
+    "answer": [
+      "Civic Center Stormwater Diversion Structure",
+      "Civic Center Way Improvements",
+      "Guardrail Replacement Citywide (FEMA Project)",
+      "Corral Canyon Road Bridge Repairs (FEMA Project)",
+      "Corral Canyon Culvert Repairs (FEMA Project)"
+    ],
+    "new_file_names": [
+      "12142021-1808",
+      "04282021-1687",
+      "06222022-1919",
+      "07272022-1939"
+    ],
+    "orig_file_name": "12142021-1808"
+  }
+]
