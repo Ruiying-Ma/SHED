@@ -16,7 +16,7 @@ $ conda create --file environment.yaml
 Python version used in our experiment: 3.10.18
 
 ### Setup API credentials
-Create a `.env` file under the root and add (we use Azure):
+Create a `.env` file under the root and add. For example, if you use Azure:
 ```
 AZURE_ENDPOINT=xxx
 AZURE_API_KEY=xxx
